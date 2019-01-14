@@ -1,0 +1,44 @@
+/** HTML5/CSS3, EDGE/CHROME                            *** StylesPosRel.css ***
+
+ ******************************************************************************
+ *                     Работает position:relative, но не всегда               *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 12.01.2019
+*/
+
+.container
+{
+   display:flex;
+   //margin:3rem 15rem 3rem 15rem; 
+   background:#f2d5f3;
+   width:180rem;
+   height:5rem;
+   
+   flex-flow: row-reverse;
+}
+.card--content
+{
+   margin:0.3rem 0.15rem 0.3rem 0.15rem; 
+   padding:0.15rem 0.3rem 0.15rem 0.3rem;
+   //flex:1; 
+   width:7rem;
+   background:#3989c9;
+}
+.container div:nth-of-type(1)
+{ 
+   margin-right:0.3rem; 
+}
+.container div:nth-of-type(10)
+{ 
+   margin-left:0.3rem; 
+}
+   
+
+/*
+ ********************************************************* StylesPosRel.css ***
+*/	
+	
+
