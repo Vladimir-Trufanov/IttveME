@@ -30,6 +30,7 @@ www
 0=www\index.php
 1=www\Styles\Styles.css
 2=www\Main.php
+3=www\IndFlex.html
 [Selected Project Files]
 Main=
 Selected=www\Main.php
@@ -37,8 +38,11 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Styles\Styles.css]
-TopLine=1
-Caret=1,12
+TopLine=25
+Caret=9,42
 [www\Main.php]
-TopLine=141
-Caret=39,165
+TopLine=46
+Caret=44,72
+[www\IndFlex.html]
+TopLine=3
+Caret=1,1

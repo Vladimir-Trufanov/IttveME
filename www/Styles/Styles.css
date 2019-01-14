@@ -9,6 +9,96 @@
  Copyright © 2019 tve                                Посл.изменение: 12.01.2019
 */
 
+   body { margin: 0; /* Убираем отступы */ }
+   .sidebar, .content { 
+    //position: absolute; /* Абсолютное позиционирование */
+    position: fixed; /* Абсолютное позиционирование */
+    overflow: auto; /* Полосы прокрутки при необходимости */
+    padding: 10px; /* Поля вокруг текста */
+    top: 61px; /* Расстояние от верхнего края */
+    bottom: 0; /* Расстояние от нижнего края */
+   }
+   
+   
+   
+   
+.Gallery 
+   {
+    height: 60px; /* Высота */
+    //background: #FEDFC0; /* Цвет фона */
+    border-bottom: 1px solid #7B5427; /* Линия снизу */
+   }
+.Gallery
+{
+   display:flex;
+   //margin:3rem 15rem 3rem 15rem; 
+   background:#f2d5f3;
+   //width:150rem;
+   width:100%;
+   //height:5rem;
+   
+   flex-flow: row-reverse;
+}
+   .Card
+{
+   //margin:0.3rem 0.15rem 0.3rem 0.15rem; 
+   //padding:0.15rem 0.3rem 0.15rem 0.3rem;
+   flex:1; // width:7rem;
+   background:#3989c9;
+}
+.Gallery div:nth-of-type(1)
+{ 
+   //margin-right:0.3rem; 
+}
+.Gallery div:nth-of-type(10)
+{ 
+   //margin-left:0.3rem; 
+}
+
+   
+   
+   
+   
+   
+   
+   
+   
+   //header h1 { 
+   // line-height: 60px; /* Выравниваем по середине */
+   // margin: 0 10px; /* Сдвигаем заголовок */
+   //}
+   .sidebar { 
+    width: 150px; /* Ширина */
+    //width: 50%; 
+    background: #ECF5E4; /* Цвет фона */
+    border-right: 1px solid #231F20; /* Линия справа */
+   }
+   .content {
+    left: 171px; /* Расстояние от левого края */ 
+    right: 0; /* Расстояние справа */
+   }
+   
+      .btn
+   {
+    position: fixed; /* Абсолютное позиционирование */
+    //position: absolute; /* Абсолютное позиционирование */
+    //overflow: auto; /* Полосы прокрутки при необходимости */
+    //padding: 10px; /* Поля вокруг текста */
+    bottom: 0; /* Расстояние от нижнего края */
+   z-index: 101;
+   left:180px;
+   margin 1px 1px 1px 1px; 
+   }
+   .btni
+   {
+   width: 2rem;
+   height: 2.2rem;
+   font-size: 1.4rem;  
+   padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
+   float:left;
+   }
+
+   
 
 /*
  *************************************************************** Styles.css ***
