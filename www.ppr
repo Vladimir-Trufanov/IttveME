@@ -19,35 +19,26 @@ www
 	+www
 		+Styles
 			www\Styles\Styles.css
-			www\Styles\StylesDiv.css
-			www\Styles\StylesPosAbs.css
+			www\Styles\StylesFlex.css
 			www\Styles\StylesPosRel.css
-		www\fil.html
-		www\flex-no-wrap.html
-		www\indDiv.html
 		www\index.php
+		www\IndFlex.html
 		www\indPosAbs.html
 		www\indPosRel.html
-		www\indProba.html
-		www\indProba2.html
-		www\indProbaOld.html
+		www\Main.php
 [Open project files]
 0=www\index.php
-1=www\indDiv.html
-2=www\Styles\StylesDiv.css
-3=www\indProba2.html
+1=www\Styles\Styles.css
+2=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\indProba2.html
+Selected=www\Main.php
 [www\index.php]
 TopLine=1
-Caret=1,16
-[www\indDiv.html]
-TopLine=3
-Caret=31,30
-[www\Styles\StylesDiv.css]
+Caret=1,18
+[www\Styles\Styles.css]
 TopLine=1
-Caret=4,27
-[www\indProba2.html]
-TopLine=61
-Caret=17,72
+Caret=1,12
+[www\Main.php]
+TopLine=141
+Caret=39,165

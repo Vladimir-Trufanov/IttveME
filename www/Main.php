@@ -1,8 +1,29 @@
+<?php
+// PHP7/HTML5, EDGE/CHROME                                     *** Main.php ***
+
+// ****************************************************************************
+// * ittve.me                          Обо мне, путешествиях и ... Черногории *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  13.01.2019
+// Copyright © 2019 tve                              Посл.изменение: 14.01.2019
+
+?>
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>Фреймы</title>
+<html lang="ru">
+<head>
+   <title>Обо мне, путешествиях и ... Черногории</title>
+   <meta charset="utf-8">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+   <meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и жизнь его близких">
+   <meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">
+   <link href='https://fonts.googleapis.com/css?family=Kurale' rel='stylesheet'>
+   <link href="https://fonts.googleapis.com/css?family=Pattaya&subset=cyrillic" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Podkova&subset=cyrillic" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="Styles/Styles.css"/>
+</head>
+
   <style>
    body { margin: 0; /* Убираем отступы */ }
    .sidebar, .content { 
@@ -127,7 +148,7 @@
    <p>Плов по-индейски</p>
   </section>
   <section class="content">
-   <h2>Уже плов по-фергански</h2>
+   <h2>Уже и плов по-фергански</h2>
    <p>Положить в казан нарезанное кусочками мясо и поджарить его до 
    образования корочки. Нашинкованный кольцами лук жарить вместе 
    с мясом до красноватого цвета, затем добавить морковь, нарезанную 
@@ -149,3 +170,6 @@
 
  </body>
 </html>
+
+<?php
+// *************************************************************** Main.php ***

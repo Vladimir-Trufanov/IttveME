@@ -1,7 +1,7 @@
 /** HTML5/CSS3, EDGE/CHROME                                  *** Styles.css ***
 
  ******************************************************************************
- *                     Работает position:relative, но не всегда               *
+ *                                   *
  ******************************************************************************
 
                                                      Автор:       Труфанов В.Е.
@@ -9,92 +9,6 @@
  Copyright © 2019 tve                                Посл.изменение: 12.01.2019
 */
 
-body
-{
-   margin: 1rem 35rem 1rem 15rem; 
-}
-div
-{
-   padding: 0.2rem 0.5rem 0.2rem 0.5rem; 
-}
-
-h1 
-{
-   font:normal 2em Arial,Tahome,sans-serif; 
-   background:#3989c9; /* Синий цвет фона */
-   color:#fff; /* Белый цвет текста */
-   padding:0 1rem; /* Поля вокруг заголовка */
-   overflow:scroll; /* Скрываем всё за пределами заголовка */
-}
-h1 span 
-{
-   position:relative; /* Относительное позиционирование */
-   top:1rem;  /* Сдвигаем вниз */
-   left:3rem; /* Сдвигаем вправо */
-}
-#header 
-{
-   background: #2e213f;
-}
-#content
-{
-   //overflow: hidden;   /* Скрываем всё за пределами заголовка */
-   overflow-x: scroll; /* Скроллируем #content */
-}
-#content 
-{
-   //padding: 3rem 35rem 3rem 15rem; 
-   height: 23rem;
-   background: #f2d5f3;
-   
-   // =1     не получилось
-   //position: relative; /* Относительное позиционирование */
-   //top: 0.3rem; /* Сдвигаем вниз */
-   //left: 5.4rem;
-
-   // =4
-   //position: relative;
-}
-#div1-a 
-{
-   //margin: 2rem 5rem 0 5rem; 
-   height: 5.5rem;
-   background: #d8806c;
-   
-   // =2 или 4
-   //position:fixed;
-   //top:0;
-   //right:0;
-   //width:200px;
-   
-   // =3
-   //position:fixed;
-   //top:0;
-   //right:0;
-   //width:200px;
-}
-#div1-b 
-{
-   position: relative; /* Относительное позиционирование */
-   top: 0.3rem; /* Сдвигаем вниз */
-   left: 17rem; /* Сдвигаем вghfdj */
-}
-#div1-b 
-{
-   //margin: 0 5rem 0 5rem; 
-   //height: 11rem;
-   background: #a74b64;
-}
-#div1-c 
-{
-   //margin: 0 5rem 0 5rem; 
-   height: 6.6rem;
-   background: #6d5380;
-}
-#footer 
-{
-   background: #2e213f;
-}
 
 /*
  *************************************************************** Styles.css ***
