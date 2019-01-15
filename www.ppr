@@ -17,7 +17,13 @@ Extensions=*.*
 [Project tree]
 www
 	+www
-		+Styles
+		+Pages
+			+tveArc1
+				www\Pages\tveArc1\tve1-1-îsobennosti-ustrojstva-vintikov-v-moej-golove.html
+			-tveArc2
+			+tveArt
+				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
+		-Styles
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
 			www\Styles\StylesPosRel.css
@@ -38,10 +44,10 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Styles\Styles.css]
-TopLine=1
+TopLine=55
 Caret=1,82
 [www\Main.php]
-TopLine=48
+TopLine=32
 Caret=236,53
 [www\IndFlex.html]
 TopLine=3
