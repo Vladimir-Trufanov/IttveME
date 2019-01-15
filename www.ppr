@@ -23,7 +23,7 @@ www
 			-tveArc2
 			+tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		-Styles
+		+Styles
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
 			www\Styles\StylesPosRel.css
@@ -34,21 +34,17 @@ www
 		www\Main.php
 [Open project files]
 0=www\index.php
-1=www\Styles\Styles.css
-2=www\Main.php
-3=www\IndFlex.html
+1=www\Main.php
+2=www\Styles\Styles.css
 [Selected Project Files]
 Main=
 Selected=www\Main.php
 [www\index.php]
 TopLine=1
 Caret=1,18
-[www\Styles\Styles.css]
-TopLine=55
-Caret=1,82
 [www\Main.php]
-TopLine=32
-Caret=236,53
-[www\IndFlex.html]
-TopLine=3
-Caret=1,1
+TopLine=38
+Caret=21,51
+[www\Styles\Styles.css]
+TopLine=43
+Caret=6,62

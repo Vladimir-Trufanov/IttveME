@@ -16,23 +16,19 @@ body
    margin: 0;
    padding: 0;
 }
-   .sidebar, .content { 
-    position: fixed; /* Абсолютное позиционирование */
-    overflow: auto; /* Полосы прокрутки при необходимости */
-    //padding: 10px; /* Поля вокруг текста */
-    top: 61px; /* Расстояние от верхнего края */
-    bottom: 0; /* Расстояние от нижнего края */
-   }
-   
-   
-   
-   
+.sidebar, .content 
+{ 
+   position: fixed; 
+   overflow: auto; /* Полосы прокрутки при необходимости */
+   top: 61px; /* Расстояние от верхнего края */
+   bottom: 0; /* Расстояние от нижнего края */
+}
 .Gallery 
-   {
-    height: 60px; /* Высота */
-    //background: #FEDFC0; /* Цвет фона */
-    border-bottom: 1px solid #7B5427; /* Линия снизу */
-   }
+{
+   height: 60px; /* Высота */
+   //background: #FEDFC0; /* Цвет фона */
+   border-bottom: 1px solid #7B5427; /* Линия снизу */
+}
 .Gallery
 {
    display:flex;
@@ -41,10 +37,9 @@ body
    //width:150rem;
    width:100%;
    //height:5rem;
-   
-   flex-flow: row-reverse;
+   //flex-flow: row-reverse;
 }
-   .Card
+.Card
 {
    //margin:0.3rem 0.15rem 0.3rem 0.15rem; 
    //padding:0.15rem 0.3rem 0.15rem 0.3rem;
@@ -59,50 +54,38 @@ body
 { 
    //margin-left:0.3rem; 
 }
-
-   
-   
-   
-   
-   
-   
-   
-   
-   .sidebar { 
-    //width: 150px; /* Ширина */
-    width: 50%; 
-    background: #ECF5E4; /* Цвет фона */
-    border-right: 1px solid #231F20; /* Линия справа */
-   }
+.sidebar 
+{ 
+   //width: 150px; /* Ширина */
+   width: 50%; 
+   //background: #ECF5E4; /* Цвет фона */
+   //border-right: 1px solid #231F20; /* Линия справа */
+   border-right: dashed 1px rgb(153,153,153);
+}
 .content 
 {
    left: 50%;
    //left: 150px; /* Расстояние от левого края */ 
    right: 0; /* Расстояние справа */
 }
-   
-      .btn
-   {
-    position: fixed; /* Абсолютное позиционирование */
-    //position: absolute; /* Абсолютное позиционирование */
-    //overflow: auto; /* Полосы прокрутки при необходимости */
-    //padding: 10px; /* Поля вокруг текста */
-    bottom: 0; /* Расстояние от нижнего края */
+.btn
+{
+   position: fixed; /* Абсолютное позиционирование */
+   //position: absolute; /* Абсолютное позиционирование */
+   //padding: 10px; /* Поля вокруг текста */
+   bottom: 0; /* Расстояние от нижнего края */
    z-index: 101;
    left:180px;
    margin 1px 1px 1px 1px; 
-   }
-   .btni
-   {
+}
+.btni
+{
    width: 2rem;
    height: 2.2rem;
    font-size: 1.4rem;  
    padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
    float:left;
-   }
-
-   
-
+}
 /*
  *************************************************************** Styles.css ***
 */	
