@@ -48,11 +48,11 @@ Selected=www\Styles\Styles.css
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=28
-Caret=45,39
+TopLine=52
+Caret=48,38
 [www\Styles\Styles.css]
-TopLine=55
-Caret=1,81
+TopLine=101
+Caret=12,117
 [www\Styles\Reset.css]
 TopLine=19
 Caret=1,1

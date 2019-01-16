@@ -35,8 +35,11 @@
       <div class="Card">2</div>
       <div class="Card">3</div>
       <img class="ii" src="/Java.svg">
-      <div class="Card">11 First</div>
-      <img class="ii" src="/Images/dozhd.JPG">
+      <img class="ii" src="/Images/nakorme.png">
+      <img class="ii" src="/Images/dozhd.JPG" alt="lorem">
+   <!-- 
+      <img class="ii" src="/Images/dozhd.JPG" width="20" height="15" alt="lorem">
+   -->
       <div class="Card">13</div>
       <div class="Card">14</div>
       <div class="Card">21 First</div>
