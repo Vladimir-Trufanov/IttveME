@@ -34,9 +34,9 @@
       <div class="Card">1 Open First</div>
       <div class="Card">2</div>
       <div class="Card">3</div>
-      <div class="Card">4</div>
+      <img class="ii" src="/Java.svg">
       <div class="Card">11 First</div>
-      <div class="Card">12</div>
+      <img class="ii" src="/Images/dozhd.JPG">
       <div class="Card">13</div>
       <div class="Card">14</div>
       <div class="Card">21 First</div>

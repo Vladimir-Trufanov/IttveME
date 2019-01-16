@@ -69,13 +69,15 @@ body
 }
 .News 
 { 
-   width: 50%; 
+   left: 11%;
+   width: 30%; 
    //background: #ECF5E4; /* Цвет фона */
    border-right: dashed 1px rgb(153,153,153);
 }
 .Life 
 {
-   left: 50%;
+   left: 51%;
+   width: 30%; 
    right: 0; /* Расстояние справа */
 }
 .Footer
@@ -104,6 +106,10 @@ body
    font-size: 1.4rem;  
    padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
    float:left;
+}
+.ii
+{
+   height: 8rem;
 }
 /*
  *************************************************************** Styles.css ***

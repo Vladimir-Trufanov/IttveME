@@ -49,10 +49,10 @@ TopLine=1
 Caret=1,18
 [www\Main.php]
 TopLine=28
-Caret=1,43
+Caret=45,39
 [www\Styles\Styles.css]
-TopLine=43
-Caret=16,68
+TopLine=55
+Caret=1,81
 [www\Styles\Reset.css]
 TopLine=19
 Caret=1,1
