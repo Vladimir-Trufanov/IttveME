@@ -16,7 +16,7 @@ body
    margin: 0;
    padding: 0;
 }
-.sidebar, .content 
+.News, .Life 
 { 
    position: fixed; 
    overflow: auto; /* Полосы прокрутки при необходимости */
@@ -54,25 +54,20 @@ body
 { 
    //margin-left:0.3rem; 
 }
-.sidebar 
+.News 
 { 
-   //width: 150px; /* Ширина */
    width: 50%; 
    //background: #ECF5E4; /* Цвет фона */
-   //border-right: 1px solid #231F20; /* Линия справа */
    border-right: dashed 1px rgb(153,153,153);
 }
-.content 
+.Life 
 {
    left: 50%;
-   //left: 150px; /* Расстояние от левого края */ 
    right: 0; /* Расстояние справа */
 }
 .btn
 {
    position: fixed; /* Абсолютное позиционирование */
-   //position: absolute; /* Абсолютное позиционирование */
-   //padding: 10px; /* Поля вокруг текста */
    bottom: 0; /* Расстояние от нижнего края */
    z-index: 101;
    left:180px;

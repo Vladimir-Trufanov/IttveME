@@ -43,8 +43,8 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=38
-Caret=21,51
+TopLine=30
+Caret=21,57
 [www\Styles\Styles.css]
-TopLine=43
-Caret=6,62
+TopLine=65
+Caret=1,61

@@ -46,13 +46,13 @@
       <div class="Card">35</div>
    </div>
 
-   <section class="sidebar">
+   <section class="News">
       <?php
       require_once "Pages/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html";
       ?>
    </section>
 
-   <section class="content">
+   <section class="Life">
       <?php
       require_once "Pages/tveArc1/tve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html";
       ?>
