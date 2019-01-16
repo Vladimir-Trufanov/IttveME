@@ -58,6 +58,10 @@
       ?>
    </section>
   
+   <div class="Footer">
+      Ащщеук
+   </div>
+  
    <div class="btn">
       <p style="text-align:center"><button class="btni">&#9996;</button>
    </div>
