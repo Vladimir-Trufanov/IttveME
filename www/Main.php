@@ -21,6 +21,9 @@
    <link href='https://fonts.googleapis.com/css?family=Kurale' rel='stylesheet'>
    <link href="https://fonts.googleapis.com/css?family=Pattaya&subset=cyrillic" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Podkova&subset=cyrillic" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;subset=cyrillic" 
+      rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
    <link rel="stylesheet" type="text/css" href="Styles/Styles.css"/>
 </head>
 
@@ -37,12 +40,6 @@
       <div class="Card">13</div>
       <div class="Card">14</div>
       <div class="Card">21 First</div>
-      <div class="Card">22</div>
-      <div class="Card">23</div>
-      <div class="Card">24</div>
-      <div class="Card">31 First</div>
-      <div class="Card">32</div>
-      <div class="Card">33</div>
       <div class="Card">35</div>
    </div>
 

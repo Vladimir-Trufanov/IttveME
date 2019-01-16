@@ -17,13 +17,17 @@ Extensions=*.*
 [Project tree]
 www
 	+www
-		+Pages
-			+tveArc1
+		-Images
+			-Buttons
+				www\Images\Buttons\Menu.svg
+		-Pages
+			-tveArc1
 				www\Pages\tveArc1\tve1-1-îsobennosti-ustrojstva-vintikov-v-moej-golove.html
 			-tveArc2
-			+tveArt
+			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
 		+Styles
+			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
 			www\Styles\StylesPosRel.css
@@ -36,6 +40,7 @@ www
 0=www\index.php
 1=www\Main.php
 2=www\Styles\Styles.css
+3=www\Styles\Reset.css
 [Selected Project Files]
 Main=
 Selected=www\Styles\Styles.css
@@ -43,8 +48,11 @@ Selected=www\Styles\Styles.css
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=44
-Caret=22,61
+TopLine=28
+Caret=1,43
 [www\Styles\Styles.css]
-TopLine=51
-Caret=14,76
+TopLine=43
+Caret=16,68
+[www\Styles\Reset.css]
+TopLine=19
+Caret=1,1
