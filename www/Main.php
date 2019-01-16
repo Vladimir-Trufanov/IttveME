@@ -36,7 +36,7 @@
       <div class="Card">3</div>
       <img class="ii" src="/Java.svg">
       <img class="ii" src="/Images/nakorme.png">
-      <img class="ii" src="/Images/dozhd.JPG" alt="lorem">
+      <img class="ii" src="/Images/do~-zhd'^.JPG" alt="lorem">
    <!-- 
       <img class="ii" src="/Images/dozhd.JPG" width="20" height="15" alt="lorem">
    -->
