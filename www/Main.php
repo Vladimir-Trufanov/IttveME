@@ -59,7 +59,6 @@
    </section>
   
    <div class="Footer">
-      Ащщеук
    </div>
   
    <div class="btn">

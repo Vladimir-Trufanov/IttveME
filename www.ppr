@@ -16,17 +16,28 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	+www
+	-www
 		-Images
 			-Buttons
 				www\Images\Buttons\Menu.svg
+			www\Images\do~-zhd'^.JPG
+			www\Images\dozhd'-prazdniku-ne-pomeha.JPG
+			www\Images\fil.jpg
+			www\Images\Java.svg
+			www\Images\kl.JPG
+			www\Images\nakorme.jpg
+			www\Images\na-korme.jpg
+			www\Images\nakorme.png
+			www\Images\na-sampo.JPG
+			www\Images\uyolochki.png
+			www\Images\uyolochki.svg
 		-Pages
 			-tveArc1
 				www\Pages\tveArc1\tve1-1-îsobennosti-ustrojstva-vintikov-v-moej-golove.html
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		+Styles
+		-Styles
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
@@ -35,6 +46,7 @@ www
 		www\IndFlex.html
 		www\indPosAbs.html
 		www\indPosRel.html
+		www\Java.svg
 		www\Main.php
 [Open project files]
 0=www\index.php
@@ -43,16 +55,16 @@ www
 3=www\Styles\Reset.css
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Styles\Styles.css
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=38
-Caret=45,39
+TopLine=44
+Caret=1,62
 [www\Styles\Styles.css]
-TopLine=90
-Caret=12,117
+TopLine=34
+Caret=1,58
 [www\Styles\Reset.css]
 TopLine=19
 Caret=1,1
