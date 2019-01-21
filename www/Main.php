@@ -35,7 +35,11 @@
          <img class="ii" 
          src="/Pages/tveArc1/tve1-1-pod^yom-nastroeniya.jpg" 
          alt="Подъём настроения">
-         <p class="pppi">ifgh ifgh utttrtyui ifgh ifgh ifgh fgh fgh fgh fgh fgh fgh </p>
+         <p class="pppi"> 
+            <?php
+            require_once "Pages/tveArc1/tve1-1-comm.txt";
+            ?> 
+         </p>
       </div>
       <div class="Card">2</div>
       <div class="Card">3</div>
