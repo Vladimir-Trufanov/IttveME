@@ -52,15 +52,15 @@ body
    //margin-bottom: 4rem; 
    //padding-bottom: 4.3rem; 
    background: #FEDFC0; /* Цвет фона */
-   width:19%;
+   width:24%;
    //width:100%;
    //height:5rem;
    flex-flow: column;
 }
 .Card
 {
-   margin:0.3rem 0.15rem 0.3rem 0.15rem; 
-   padding:0.15rem 0.3rem 0.15rem 0.3rem;
+   //margin:0.3rem 0.15rem 0.3rem 0.15rem; 
+   //padding:0.15rem 0.3rem 0.15rem 0.3rem;
    //flex:1; // 
    //width:18%;
    //height:20rem;
@@ -68,30 +68,30 @@ body
 }
 .Gallery div:nth-of-type(1)
 { 
-   margin-left:0.3rem; 
+   //margin-left:0.3rem; 
 }
 .Gallery div:nth-of-type(10)
 { 
-   margin-right:0.3rem; 
+   //margin-right:0.3rem; 
 }
 .News 
 { 
-   left: 20%;
-   width: 30%; 
+   left: 24%;
+   width: 38%; 
    //background: #ECF5E4; /* Цвет фона */
    border-right: dashed 1px rgb(153,153,153);
 }
 .Life 
 {
-   left: 51%;
-   width: 30%; 
+   left: 62%;
+   width: 38%; 
    right: 0; /* Расстояние справа */
 }
 .Footer
 {
    position: fixed; 
    bottom: 0; 
-   left: 20%;
+   left: 24%;
    width: 100%;
    height: 4rem;
    z-index: 73;
@@ -104,20 +104,20 @@ body
    bottom: 0; /* Расстояние от нижнего края */
    z-index: 101;
    left:180px;
-   margin 1px 1px 1px 1px; 
+   //margin 1px 1px 1px 1px; 
 }
 .btni
 {
    width: 2rem;
    height: 2.2rem;
    font-size: 1.4rem;  
-   padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
+   //padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
    float:left;
 }
 .ii
 {
    //width:20rem;
-   width:90%;
+   width:100%;
 //   height: 8rem;
 }
 /*
