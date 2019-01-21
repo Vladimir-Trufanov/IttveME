@@ -31,7 +31,12 @@
    <!-- 
    -->
    <div class="Gallery">
-      <div class="Card">1 Open First</div>
+      <div class="Card">
+         <img class="ii" 
+         src="/Pages/tveArc1/tve1-1-pod^yom-nastroeniya.jpg" 
+         alt="Подъём настроения">
+         <p class="pppi">ifgh ifgh utttrtyui ifgh ifgh ifgh fgh fgh fgh fgh fgh fgh </p>
+      </div>
       <div class="Card">2</div>
       <div class="Card">3</div>
       <img class="ii" src="/Java.svg">
@@ -40,7 +45,7 @@
    <!-- 
       <img class="ii" src="/Images/dozhd.JPG" width="20" height="15" alt="lorem">
    -->
-      <div class="Card">13</div>
+      <div class="Card">1 Open First 1 Open First 1 Open First 1 Open First</div>
       <div class="Card">14</div>
       <div class="Card">21 First</div>
       <div class="Card">35</div>

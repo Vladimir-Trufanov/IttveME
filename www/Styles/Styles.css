@@ -103,7 +103,7 @@ body
    position: fixed; /* Абсолютное позиционирование */
    bottom: 0; /* Расстояние от нижнего края */
    z-index: 101;
-   left:180px;
+   left: 61%;
    //margin 1px 1px 1px 1px; 
 }
 .btni
@@ -119,6 +119,15 @@ body
    //width:20rem;
    width:100%;
 //   height: 8rem;
+}
+.sp
+{
+   //text-align: center;
+   //font-size: 2.4rem;
+}
+.pppi
+{
+   text-align: center;
 }
 /*
  *************************************************************** Styles.css ***

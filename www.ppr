@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	-www
+	+www
 		-Images
 			-Buttons
 				www\Images\Buttons\Menu.svg
@@ -37,7 +37,7 @@ www
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		-Styles
+		+Styles
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
@@ -55,16 +55,16 @@ www
 3=www\Styles\Reset.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\Main.php
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=44
-Caret=1,62
+TopLine=30
+Caret=1,38
 [www\Styles\Styles.css]
-TopLine=29
-Caret=13,80
+TopLine=108
+Caret=1,131
 [www\Styles\Reset.css]
 TopLine=19
 Caret=1,1
