@@ -43,31 +43,48 @@ body
 { 
    position: fixed; 
    overflow: auto; 
+}
+.Gallery
+{
+   display:flex;
+   align-items: center;
+   background: #FEDFC0; /* Цвет фона */
+   flex-flow: column;
+}
+.Footer
+{
+   position: fixed; 
+   border-top: dashed 1px rgb(153,153,153);
+}
+.btnMenu
+{
+   position: fixed; /* Абсолютное позиционирование */
+}
+/* 
+ Позиционируем основные секции сайта: галерею новостных изображений, 
+ секцию новых материалов, секцию архивных статей, подвал и кнопку меню 
+ материалов
+*/
+.News, .Life 
+{ 
    top: 0; 
    bottom: 4.2rem; 
 }
 .Gallery
 {
    bottom: 4.2rem; 
-   display:flex;
-   align-items: center;
-   background: #FEDFC0; /* Цвет фона */
    width:24%;
-   flex-flow: column;
 }
 .Footer
 {
-   position: fixed; 
    bottom: 0; 
    left: 24%;
-   width: 100%;
+   width: 76%;
    height: 4rem;
    z-index: 73;
-   border-top: dashed 1px rgb(153,153,153);
 }
 .btnMenu
 {
-   position: fixed; /* Абсолютное позиционирование */
    bottom: 0; /* Расстояние от нижнего края */
    z-index: 101;
    left: 61%;

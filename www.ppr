@@ -55,7 +55,7 @@ www
 3=www\Styles\Reset.css
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Styles\Styles.css
 [www\index.php]
 TopLine=1
 Caret=1,18
@@ -63,8 +63,8 @@ Caret=1,18
 TopLine=55
 Caret=23,69
 [www\Styles\Styles.css]
-TopLine=46
-Caret=1,76
+TopLine=41
+Caret=1,62
 [www\Styles\Reset.css]
 TopLine=11
 Caret=1,1
