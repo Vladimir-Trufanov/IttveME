@@ -46,10 +46,6 @@
       <img class="ii" src="/Java.svg">
       <img class="ii" src="/Images/nakorme.png">
       <img class="ii" src="/Images/do~-zhd'^.JPG" alt="lorem">
-   <!-- 
-      <img class="ii" src="/Images/dozhd.JPG" width="20" height="15" alt="lorem">
-   -->
-      <div class="Card">1 Open First 1 Open First 1 Open First 1 Open First</div>
       <div class="Card">14</div>
       <div class="Card">21 First</div>
       <div class="Card">35</div>

@@ -60,10 +60,10 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=27
-Caret=56,40
+TopLine=25
+Caret=1,49
 [www\Styles\Styles.css]
-TopLine=108
+TopLine=104
 Caret=1,131
 [www\Styles\Reset.css]
 TopLine=19
