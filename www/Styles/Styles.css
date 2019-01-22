@@ -30,14 +30,11 @@ body
    height: 100%;
    //background: yellow;
 }
-
-
-
 .News, .Life 
 { 
    position: fixed; 
-   overflow: auto; /* Полосы прокрутки при необходимости */
-   top: 0; //10.1rem; //61px; 
+   overflow: auto; 
+   top: 0; 
    bottom: 4.2rem; 
 }
 .Gallery
