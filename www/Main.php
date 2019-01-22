@@ -66,7 +66,7 @@
    <div class="Footer">
    </div>
   
-   <div class="btn">
+   <div class="btnMenu">
       <p style="text-align:center"><button class="btni">&#9996;</button>
    </div>
 

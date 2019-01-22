@@ -34,7 +34,11 @@ body
    height: 100%;
    //background: yellow;
 }
-/* */
+/* 
+ Определяем параметры основных секций сайта: галереи новостных изображений, 
+ секции новых материалов, секции архивных статей, подвала и кнопки меню 
+ материалов
+*/
 .News, .Life 
 { 
    position: fixed; 
@@ -51,6 +55,24 @@ body
    width:24%;
    flex-flow: column;
 }
+.Footer
+{
+   position: fixed; 
+   bottom: 0; 
+   left: 24%;
+   width: 100%;
+   height: 4rem;
+   z-index: 73;
+   border-top: dashed 1px rgb(153,153,153);
+}
+.btnMenu
+{
+   position: fixed; /* Абсолютное позиционирование */
+   bottom: 0; /* Расстояние от нижнего края */
+   z-index: 101;
+   left: 61%;
+}
+/*    */
 .Card
 {
    //margin:0.3rem 0.15rem 0.3rem 0.15rem; 
@@ -77,25 +99,6 @@ body
    left: 62%;
    width: 38%; 
    right: 0; /* Расстояние справа */
-}
-.Footer
-{
-   position: fixed; 
-   bottom: 0; 
-   left: 24%;
-   width: 100%;
-   height: 4rem;
-   z-index: 73;
-   border-top: dashed 1px rgb(153,153,153);
-
-}
-.btn
-{
-   position: fixed; /* Абсолютное позиционирование */
-   bottom: 0; /* Расстояние от нижнего края */
-   z-index: 101;
-   left: 61%;
-   //margin 1px 1px 1px 1px; 
 }
 .btni
 {
