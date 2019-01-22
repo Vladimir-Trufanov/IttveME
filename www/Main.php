@@ -18,13 +18,11 @@
    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
    <meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и жизнь его близких">
    <meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">
-   <link href='https://fonts.googleapis.com/css?family=Kurale' rel='stylesheet'>
-   <link href="https://fonts.googleapis.com/css?family=Pattaya&subset=cyrillic" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Podkova&subset=cyrillic" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;subset=cyrillic" 
-      rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;subset=cyrillic">
    <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
-   <link rel="stylesheet" type="text/css" href="Styles/Styles.css"/>
+   <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
+   <link rel="stylesheet" type="text/css" href="Styles/ImgLeft.css">
 </head>
 
 <body>

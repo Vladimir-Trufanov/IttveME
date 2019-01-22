@@ -33,11 +33,15 @@ www
 			www\Images\uyolochki.svg
 		-Pages
 			-tveArc1
+				www\Pages\tveArc1\tve1-1-comm.txt
+				www\Pages\tveArc1\tve1-1-pod^yom-nastroeniya.jpg
 				www\Pages\tveArc1\tve1-1-îsobennosti-ustrojstva-vintikov-v-moej-golove.html
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
 		+Styles
+			www\Styles\ImgLeft.css
+			www\Styles\ImgRight.css
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
@@ -51,20 +55,24 @@ www
 [Open project files]
 0=www\index.php
 1=www\Main.php
-2=www\Styles\Styles.css
+2=www\Styles\ImgRight.css
 3=www\Styles\Reset.css
+4=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\Styles\ImgRight.css
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=55
-Caret=23,69
-[www\Styles\Styles.css]
-TopLine=41
-Caret=1,62
+TopLine=7
+Caret=33,27
+[www\Styles\ImgRight.css]
+TopLine=1
+Caret=25,4
 [www\Styles\Reset.css]
 TopLine=11
 Caret=1,1
+[www\Styles\Styles.css]
+TopLine=45
+Caret=25,51
