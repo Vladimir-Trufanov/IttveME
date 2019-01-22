@@ -19,6 +19,17 @@
    top: 0; 
    bottom: 4.2rem; 
 }
+.News
+{ 
+   left: 24%;
+   width: 38%; 
+   border-right: dashed 1px rgb(153,153,153);
+}
+.Life 
+{ 
+   left: 62%;
+   width: 38%; 
+}
 .Gallery
 {
    bottom: 4.2rem; 
@@ -31,10 +42,11 @@
    width: 76%;
    height: 4rem;
    z-index: 73;
+   border-top: dashed 1px rgb(153,153,153);
 }
-.btnMenu
+.LifeMenu
 {
-   bottom: 0; /* Расстояние от нижнего края */
+   bottom: 0; 
    z-index: 101;
    left: 61%;
 }

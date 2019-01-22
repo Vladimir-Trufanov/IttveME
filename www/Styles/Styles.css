@@ -54,9 +54,8 @@ body
 .Footer
 {
    position: fixed; 
-   border-top: dashed 1px rgb(153,153,153);
 }
-.btnMenu
+.LifeMenu
 {
    position: fixed; /* Абсолютное позиционирование */
 }
@@ -74,19 +73,6 @@ body
 .Gallery div:nth-of-type(10)
 { 
    //margin-right:0.3rem; 
-}
-.News 
-{ 
-   left: 24%;
-   width: 38%; 
-   //background: #ECF5E4; /* Цвет фона */
-   border-right: dashed 1px rgb(153,153,153);
-}
-.Life 
-{
-   left: 62%;
-   width: 38%; 
-   right: 0; /* Расстояние справа */
 }
 .btni
 {

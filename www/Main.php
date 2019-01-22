@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;subset=cyrillic">
    <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
    <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
-   <link rel="stylesheet" type="text/css" href="Styles/ImgLeft.css">
+   <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
 </head>
 
 <body>
@@ -64,7 +64,7 @@
    <div class="Footer">
    </div>
   
-   <div class="btnMenu">
+   <div class="LifeMenu">
       <p style="text-align:center"><button class="btni">&#9996;</button>
    </div>
 
