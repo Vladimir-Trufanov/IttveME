@@ -76,11 +76,11 @@ body
 }
 .btni
 {
-   width: 2rem;
-   height: 2.2rem;
-   font-size: 1.4rem;  
+   width: 12rem;
+   height: 12.2rem;
+   //font-size: 1.4rem;  
    //padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
-   float:left;
+   //float:left;
 }
 .ii
 {

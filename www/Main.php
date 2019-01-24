@@ -42,14 +42,18 @@
       <div class="Card">2</div>
       <div class="Card">3</div>
       <img class="ii" src="/Java.svg">
-      <img class="ii" src="/Images/nakorme.png">
-      <img class="ii" src="/Images/do~-zhd'^.JPG" alt="lorem">
+      <img class="ii" src="/Images/na-sampo.jpg">
+      <img class="ii" src="/Images/Buttons/tveMenuC.svg" alt="tveMenuC">
       <div class="Card">14</div>
       <div class="Card">21 First</div>
       <div class="Card">35</div>
    </div>
 
    <section class="News">
+         <button class="btni">
+         <img src="/Images/Buttons/tveMenuC.svg" alt="Зонтик">
+      </button>
+
       <?php
       require_once "Pages/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html";
       ?>
@@ -65,7 +69,6 @@
    </div>
   
    <div class="LifeMenu">
-      <p style="text-align:center"><button class="btni">&#9996;</button>
    </div>
 
 </body>
