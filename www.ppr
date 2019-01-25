@@ -19,18 +19,12 @@ www
 	+www
 		-Images
 			-Buttons
-				www\Images\Buttons\Menu.svg
-			www\Images\do~-zhd'^.JPG
+				www\Images\Buttons\tveMenuC.svg
 			www\Images\dozhd'-prazdniku-ne-pomeha.JPG
-			www\Images\fil.jpg
-			www\Images\Java.svg
 			www\Images\kl.JPG
-			www\Images\nakorme.jpg
-			www\Images\na-korme.jpg
-			www\Images\nakorme.png
+			www\Images\na.jpg
 			www\Images\na-sampo.JPG
 			www\Images\uyolochki.png
-			www\Images\uyolochki.svg
 		-Pages
 			-tveArc1
 				www\Pages\tveArc1\tve1-1-comm.txt
@@ -46,6 +40,10 @@ www
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
 			www\Styles\StylesPosRel.css
+		+TJsPrown
+			www\TJsPrown\TJsPrown.css
+			www\TJsPrown\TJsPrown.js
+		www\favicon.ico
 		www\index.php
 		www\IndFlex.html
 		www\indPosAbs.html
@@ -55,28 +53,29 @@ www
 [Open project files]
 0=www\index.php
 1=www\Main.php
-2=www\Styles\ImgRight.css
-3=www\Styles\Reset.css
+2=www\TJsPrown\TJsPrown.js
+3=www\TJsPrown\TJsPrown.css
 4=www\Styles\Styles.css
-5=www\Styles\ImgLeft.css
+5=www\Styles\ImgRight.css
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Styles\Styles.css
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=38
-Caret=1,46
+TopLine=66
+Caret=1,39
+Mark1=1,51
+[www\TJsPrown\TJsPrown.js]
+TopLine=1
+Caret=28,1
+[www\TJsPrown\TJsPrown.css]
+TopLine=1
+Caret=1,25
+[www\Styles\Styles.css]
+TopLine=23
+Caret=1,40
 [www\Styles\ImgRight.css]
-TopLine=37
-Caret=4,46
-[www\Styles\Reset.css]
 TopLine=11
 Caret=1,1
-[www\Styles\Styles.css]
-TopLine=13
-Caret=13,80
-[www\Styles\ImgLeft.css]
-TopLine=21
-Caret=1,46
