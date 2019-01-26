@@ -61,19 +61,13 @@
       </div>
       <div class="Card">2</div>
       <div class="Card">3</div>
-      <img class="ii" src="/Java.svg">
       <img class="ii" src="/Images/na-sampo.jpg">
-      <img class="ii" src="/Images/Buttons/tveMenuC.svg" alt="tveMenuC">
       <div class="Card">14</div>
       <div class="Card">21 First</div>
       <div class="Card">35</div>
    </div>
 
    <section class="News">
-         <button class="btni">
-         <img src="/Images/Buttons/tveMenuC.svg" alt="Зонтик">
-      </button>
-
       <?php
       require_once "Pages/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html";
       ?>
@@ -86,10 +80,19 @@
    </section>
   
    <div class="Footer">
+      <div class="LeftFooter">
+      </div>
+      <div class="LifeMenu">
+         <button class="btnLifeMenu">
+            <img class="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
+         <!-- 
+         -->
+         </button>
+      </div>
+      <div class="RightFooter">
+      </div>
    </div>
   
-   <div class="LifeMenu">
-   </div>
 
 </body>
 </html>

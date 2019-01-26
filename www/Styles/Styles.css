@@ -60,11 +60,40 @@ h1
 {
    position: fixed; 
 }
+.LeftFooter
+{
+   width: calc(50% - 2.68rem);
+   height: 100%;
+   background: yellow; 
+   float: left;
+}
 .LifeMenu
 {
-   position: fixed; /* Абсолютное позиционирование */
+   width: 5.36rem;
+   height: 100%;
+   //background: red;
+   float: left;
+ 
 }
-/*    */
+.RightFooter
+{
+   width: calc(50% - 2.68rem);
+   height: 100%;
+   background: green; 
+   float: right;
+}
+
+
+.btnLifeMenu
+{
+   width: 100%;
+   height: 100%;
+}
+.imgLifeMenu
+{
+   width: 100%;
+   height: 100%;
+}
 .Card
 {
    //margin:0.3rem 0.15rem 0.3rem 0.15rem; 

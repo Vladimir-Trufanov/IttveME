@@ -19,7 +19,7 @@ www
 	+www
 		-Images
 			-Buttons
-				www\Images\Buttons\tveMenuC.svg
+				www\Images\Buttons\tveMenuD.png
 			www\Images\dozhd'-prazdniku-ne-pomeha.JPG
 			www\Images\kl.JPG
 			www\Images\na.jpg
@@ -40,7 +40,7 @@ www
 			www\Styles\Styles.css
 			www\Styles\StylesFlex.css
 			www\Styles\StylesPosRel.css
-		+TJsPrown
+		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\favicon.ico
@@ -48,7 +48,6 @@ www
 		www\IndFlex.html
 		www\indPosAbs.html
 		www\indPosRel.html
-		www\Java.svg
 		www\Main.php
 [Open project files]
 0=www\index.php
@@ -57,25 +56,34 @@ www
 3=www\TJsPrown\TJsPrown.css
 4=www\Styles\Styles.css
 5=www\Styles\ImgRight.css
+6=www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
+7=www\Styles\StylesFlex.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\Main.php
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=66
-Caret=1,39
+TopLine=78
+Caret=1,89
 Mark1=1,51
+Mark2=1,73
 [www\TJsPrown\TJsPrown.js]
 TopLine=1
 Caret=28,1
 [www\TJsPrown\TJsPrown.css]
-TopLine=1
-Caret=1,25
+TopLine=7
+Caret=1,7
 [www\Styles\Styles.css]
-TopLine=23
-Caret=1,40
+TopLine=57
+Caret=6,74
 [www\Styles\ImgRight.css]
-TopLine=11
+TopLine=27
+Caret=1,47
+[www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html]
+TopLine=15
+Caret=1050,4
+[www\Styles\StylesFlex.css]
+TopLine=17
 Caret=1,1
