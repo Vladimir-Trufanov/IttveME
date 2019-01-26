@@ -64,7 +64,7 @@ h1
 {
    width: calc(50% - 2.68rem);
    height: 100%;
-   background: yellow; 
+   //background: yellow; 
    float: left;
 }
 .LifeMenu
@@ -79,15 +79,14 @@ h1
 {
    width: calc(50% - 2.68rem);
    height: 100%;
-   background: green; 
+   //background: green; 
    float: right;
 }
-
-
 .btnLifeMenu
 {
    width: 100%;
    height: 100%;
+   z-index: 101;
 }
 .imgLifeMenu
 {
@@ -108,29 +107,39 @@ h1
 { 
    //margin-right:0.3rem; 
 }
-.btni
+.imgCard
 {
-   width: 12rem;
-   height: 12.2rem;
-   //font-size: 1.4rem;  
-   //padding: 0.1px 1px 1px 1px; /* Поля вокруг текста */
-   //float:left;
-}
-.ii
-{
-   //width:20rem;
    width:100%;
-//   height: 8rem;
 }
-.sp
-{
-   //text-align: center;
-   //font-size: 2.4rem;
-}
-.pppi
+.pCard
 {
    text-align: center;
 }
+
+/* Подсвечиваем кнопку меню материалов */
+.btnLifeMenu 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #fff,  #ededed);
+}
+.btnLifeMenu:hover 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #fff,  #dcdcdc);
+}
+.btnLifeMenu:active 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #ededed,  #fff);
+   /*
+   background: -webkit-gradient(radial,farthest-side ellipse at top left, from(#f47a20), to(#faa51a));
+   background: -moz-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background: -ms-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background-image: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   */
+}
+
+
+
+
 /*
  *************************************************************** Styles.css ***
 */	

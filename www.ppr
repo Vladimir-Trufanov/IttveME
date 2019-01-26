@@ -17,15 +17,15 @@ Extensions=*.*
 [Project tree]
 www
 	+www
-		-Images
-			-Buttons
+		+Images
+			+Buttons
 				www\Images\Buttons\tveMenuD.png
-			www\Images\dozhd'-prazdniku-ne-pomeha.JPG
-			www\Images\kl.JPG
-			www\Images\na.jpg
-			www\Images\na-sampo.JPG
+			www\Images\dozhd'-prazdniku-ne-pomeha.jpg
+			www\Images\hochesh'-kvasku.jpg
+			www\Images\nasampo.jpg
 			www\Images\uyolochki.png
-		-Pages
+			www\Images\С заботой и к мамам.jpg
+		+Pages
 			-tveArc1
 				www\Pages\tveArc1\tve1-1-comm.txt
 				www\Pages\tveArc1\tve1-1-pod^yom-nastroeniya.jpg
@@ -38,52 +38,47 @@ www
 			www\Styles\ImgRight.css
 			www\Styles\Reset.css
 			www\Styles\Styles.css
-			www\Styles\StylesFlex.css
-			www\Styles\StylesPosRel.css
-		-TJsPrown
+		+TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\favicon.ico
 		www\index.php
-		www\IndFlex.html
-		www\indPosAbs.html
-		www\indPosRel.html
 		www\Main.php
 [Open project files]
 0=www\index.php
 1=www\Main.php
 2=www\TJsPrown\TJsPrown.js
 3=www\TJsPrown\TJsPrown.css
-4=www\Styles\Styles.css
-5=www\Styles\ImgRight.css
-6=www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-7=www\Styles\StylesFlex.css
+4=www\Styles\ImgRight.css
+5=www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
+6=www\Styles\StylesFlex.css
+7=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Styles\Styles.css
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=78
-Caret=1,89
-Mark1=1,51
-Mark2=1,73
+TopLine=55
+Caret=53,64
+Mark1=1,41
+Mark2=1,82
 [www\TJsPrown\TJsPrown.js]
 TopLine=1
 Caret=28,1
 [www\TJsPrown\TJsPrown.css]
 TopLine=7
 Caret=1,7
-[www\Styles\Styles.css]
-TopLine=57
-Caret=6,74
 [www\Styles\ImgRight.css]
 TopLine=27
-Caret=1,47
+Caret=1,46
 [www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html]
 TopLine=15
 Caret=1050,4
 [www\Styles\StylesFlex.css]
 TopLine=17
 Caret=1,1
+[www\Styles\Styles.css]
+TopLine=27
+Caret=6,82
