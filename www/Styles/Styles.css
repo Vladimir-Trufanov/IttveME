@@ -21,7 +21,7 @@
 html
 {
    font-family: 'Anonymous Pro', monospace;
-   font-size: 14px;
+   font-size: 12px;
 }
 /* 
  Устанавливаем размеры шрифтов по умолчанию и
@@ -137,6 +137,28 @@ h1
    */
 }
 
+.btnLead
+{
+   width: 2rem;
+   height: 2rem;
+}
+.imgLead
+{
+   width: 2rem;
+   height: 2rem;
+   background: radial-gradient(farthest-side ellipse at top left, #fff,  #ededed);
+   border: 0.05rem solid black; 
+   margin-left: calc(100% - 2.75rem);
+   margin-top: 1rem;
+}
+.imgLead:hover 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #fff,  #dcdcdc);
+}
+.imgLead:active 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #ededed,  #fff);
+}
 
 
 

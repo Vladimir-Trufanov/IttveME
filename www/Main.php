@@ -94,11 +94,16 @@
       <div class="LifeMenu">
          <button class="btnLifeMenu">
             <img class="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
-         <!-- 
-         -->
          </button>
       </div>
       <div class="RightFooter">
+         <img class="imgLead" src="/Images/Buttons/tveTiny2.png" alt="tveTiny">
+         <!-- 
+         <button class="btnLead" id="btnTiny">
+         </button>
+         -->
+
+      
       </div>
    </div>
   
