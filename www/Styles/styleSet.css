@@ -1,22 +1,22 @@
-/*
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-*/
-.nav {
+.navset 
+{
   position: absolute;
   top: 50%;
   left: 50%;
   width: 500px;
-  height: 80px;
-  margin-top: -40px;
+  height: 4rem; //80px;
+  margin-top: -2rem; //-40px;
   margin-left: -250px;
   background: #fff;
+  //background: yellow;
   transform: translateZ(0);
 }
-.nav:hover .link {
+.navset:hover .link 
+{
   width: 5%;
 }
-.nav .link {
+.navset .link 
+{
   position: relative;
   float: left;
   width: 20%;
@@ -27,14 +27,16 @@
   overflow: hidden;
   cursor: pointer;
 }
-.nav .link:last-child {
+.navset .link:last-child {
   border-right: 0;
 }
-.nav .link:hover {
+.navset .link:hover 
+{
   width: 80%;
   color: #555;
 }
-.nav .link .small {
+.navset .link .small 
+{
   position: absolute;
   top: 0;
   left: 0;
@@ -44,34 +46,46 @@
   font-family: fontawesome;
   font-size: 24px;
 }
-.nav .link .full {
+/* 
+  Форматируем текст пункта меню правее иконки
+*/
+.navset .link .full 
+{
   position: absolute;
-  top: 22px;
+  top: 2px; // Отодвинули от верха колонки меню 22px;
   left: 100px;
   text-transform: uppercase;
 }
-.nav .link .full .f1, .nav .link .full .f2 {
+.navset .link .full .f1, .nav .link .full .f2 
+{
   font-size: 16px;
   font-weight: 700;
   white-space: nowrap;
 }
-.nav .link .full .f2 {
-  margin-top: 8px;
-  font-size: 12px;
+/* 
+  Форматируем информационный текст пункта меню 
+*/
+.navset .link .full .f2 
+{
+   margin-top: 0.5rem;
+   font-size: 1.4rem;
 }
-.nav .link .prev {
+.navset .link .prev 
+{
   position: absolute;
   top: 0;
   left: 7px;
   font-family: fontawesome;
   font-size: 12px;
-  line-height: 78px;
+  line-height: 2rem; //78px;
   transition: .5s opacity;
   opacity: 0;
 }
-.nav .link:hover .prev {
+.navset .link:hover .prev 
+{
   opacity: 0;
 }
-.nav:hover .prev {
+.navset:hover .prev 
+{
   opacity: 1;
 }

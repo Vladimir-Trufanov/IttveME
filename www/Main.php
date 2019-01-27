@@ -96,62 +96,6 @@
   
    <div class="Footer">
       <div class="LeftFooter">
-      
-      
-        <div class='nav'>
-  <div class='link'>
-    <div class='prev'>&#xf1cb;</div>
-    <div class='small'>&#xf1cb;</div>
-    <div class='full'>
-      <div class='f1'>headline</div>
-      <div class='f2'>some additional info to this link</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf17d;</div>
-    <div class='small'>&#xf17d;</div>
-    <div class='full'>
-      <div class='f1'>headline</div>
-      <div class='f2'>some additional info to this link</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf240;</div>
-    <div class='small'>&#xf240;</div>
-    
-    
-    
-    <div class='full'>
-      <div class='f1'>headline</div>
-      <div class='f2'>some additional info to this link</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf09b;</div>
-    <div class='small'>&#xf09b;</div>
-    <div class='full'>
-      <div class='f1'>headline</div>
-      <div class='f2'>some additional info to this link</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf171;</div>
-    <div class='small'>&#xf171;</div>
-    <div class='full'>
-      <div class='f1'>headline</div>
-      <div class='f2'>some additional info to this link</div>
-    </div>
-  </div>
-</div>
-
-      
-      
-      
-      
-      
-      
-      
-      
       </div>
       <div class="LifeMenu">
          <button class="btnLifeMenu">
@@ -159,13 +103,9 @@
          </button>
       </div>
       <div class="RightFooter">
-         <img class="imgLead" src="/Images/Buttons/tveTiny2.png" alt="tveTiny">
-         <!-- 
-         <button class="btnLead" id="btnTiny">
-         </button>
-         -->
-
-      
+         <?php
+         require_once "NavSet.php";
+         ?>
       </div>
    </div>
   
