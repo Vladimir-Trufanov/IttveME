@@ -21,11 +21,17 @@
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;
       subset=cyrillic">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+   <link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
    <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
    <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
    <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
+   <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
 
    <link rel="stylesheet" type="text/css" href="TJsPrown/TJsPrown.css">
+   
    <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -90,6 +96,62 @@
   
    <div class="Footer">
       <div class="LeftFooter">
+      
+      
+        <div class='nav'>
+  <div class='link'>
+    <div class='prev'>&#xf1cb;</div>
+    <div class='small'>&#xf1cb;</div>
+    <div class='full'>
+      <div class='f1'>headline</div>
+      <div class='f2'>some additional info to this link</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf17d;</div>
+    <div class='small'>&#xf17d;</div>
+    <div class='full'>
+      <div class='f1'>headline</div>
+      <div class='f2'>some additional info to this link</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf240;</div>
+    <div class='small'>&#xf240;</div>
+    
+    
+    
+    <div class='full'>
+      <div class='f1'>headline</div>
+      <div class='f2'>some additional info to this link</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf09b;</div>
+    <div class='small'>&#xf09b;</div>
+    <div class='full'>
+      <div class='f1'>headline</div>
+      <div class='f2'>some additional info to this link</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf171;</div>
+    <div class='small'>&#xf171;</div>
+    <div class='full'>
+      <div class='f1'>headline</div>
+      <div class='f2'>some additional info to this link</div>
+    </div>
+  </div>
+</div>
+
+      
+      
+      
+      
+      
+      
+      
+      
       </div>
       <div class="LifeMenu">
          <button class="btnLifeMenu">
