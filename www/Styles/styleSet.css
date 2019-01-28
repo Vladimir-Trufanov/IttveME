@@ -1,12 +1,14 @@
+/* 
+  Определяем общее позиционирование панели конфигурационного меню
+*/
 .navset 
 {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 4rem; //80px;
-  margin-top: -2rem; //-40px;
-  margin-left: -250px;
+  width: calc(50% - 2.68rem);  
+  height: 4rem; 
+  margin-top: -2rem; 
+  z-index: 98;
   background: #fff;
   //background: yellow;
   transform: translateZ(0);
@@ -35,16 +37,20 @@
   width: 80%;
   color: #555;
 }
+/* 
+  Форматируем большие иконки в меню
+  (начальное состояние меню)
+*/
 .navset .link .small 
 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100px;
-  line-height: 78px;
+  line-height: 4rem; 
   text-align: center;
   font-family: fontawesome;
-  font-size: 24px;
+  font-size: 3rem; 
 }
 /* 
   Форматируем текст пункта меню правее иконки
@@ -52,13 +58,13 @@
 .navset .link .full 
 {
   position: absolute;
-  top: 2px; // Отодвинули от верха колонки меню 22px;
-  left: 100px;
+  top: 2px;     // Отодвинули от верха колонки меню 22px;
+  left: 10rem;  // Загнали текст правее значка
   text-transform: uppercase;
 }
 .navset .link .full .f1, .nav .link .full .f2 
 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   white-space: nowrap;
 }

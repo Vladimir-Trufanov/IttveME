@@ -79,6 +79,7 @@ www
 3=www\Styles\styleSet.css
 4=www\Styles\Styles.css
 5=www\TJsPrown\TJsPrown.css
+6=www\Styles\ImgRight.css
 [Selected Project Files]
 Main=
 Selected=www\Styles\styleSet.css
@@ -94,11 +95,14 @@ Mark2=1,88
 TopLine=8
 Caret=19,13
 [www\Styles\styleSet.css]
-TopLine=73
-Caret=3,66
+TopLine=45
+Caret=47,62
 [www\Styles\Styles.css]
-TopLine=5
-Caret=18,32
+TopLine=15
+Caret=31,80
 [www\TJsPrown\TJsPrown.css]
 TopLine=1
 Caret=16,19
+[www\Styles\ImgRight.css]
+TopLine=23
+Caret=1,46
