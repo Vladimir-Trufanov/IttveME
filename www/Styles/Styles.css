@@ -138,30 +138,18 @@ h1
    */
 }
 
-.btnLead
+.Ext
 {
-   width: 2rem;
-   height: 2rem;
+   position: fixed; 
+   bottom: 6rem; 
+   left: 20%;
+   width: 60%;
+   top: 6rem;
+   z-index: 99;
+   background: yellow;
+   display: none;
 }
-.imgLead
-{
-   width: 2rem;
-   height: 2rem;
-   background: radial-gradient(farthest-side ellipse at top left, #fff,  #ededed);
-   border: 0.05rem solid black; 
-   margin-left: calc(100% - 2.75rem);
-   margin-top: 1rem;
-}
-.imgLead:hover 
-{
-   background: radial-gradient(farthest-side ellipse at top left, #fff,  #dcdcdc);
-}
-.imgLead:active 
-{
-   background: radial-gradient(farthest-side ellipse at top left, #ededed,  #fff);
-}
-
-
+/
 
 /*
  *************************************************************** Styles.css ***
