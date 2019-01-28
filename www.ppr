@@ -16,36 +16,10 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	+www
-		-accordion-navigation160817
-			-css
-				www\accordion-navigation160817\css\style.css
-				www\accordion-navigation160817\css\styleSet.css
-			www\accordion-navigation160817\accordion-navigation160817.zip
-			www\accordion-navigation160817\index.html
-			www\accordion-navigation160817\license.txt
-			www\accordion-navigation160817\README.txt
+	-www
 		-Images
 			-Buttons
-				www\Images\Buttons\TinyMCE.png
 				www\Images\Buttons\tveMenuD.png
-				www\Images\Buttons\tveTiny.png
-				www\Images\Buttons\tveTiny.svg
-				www\Images\Buttons\tveTiny2.png
-				www\Images\Buttons\tveTiny21.png
-				www\Images\Buttons\tveTiny22.png
-				www\Images\Buttons\tveTiny23.png
-				www\Images\Buttons\tveTiny24.png
-				www\Images\Buttons\tveTiny31.png
-				www\Images\Buttons\tveTiny32.png
-				www\Images\Buttons\tveTiny33.png
-				www\Images\Buttons\tveTiny34.png
-				www\Images\Buttons\tveTiny35.png
-				www\Images\Buttons\tveTiny36.png
-				www\Images\Buttons\tveTiny37.png
-				www\Images\Buttons\tveTiny38.png
-				www\Images\Buttons\tveTiny39.png
-				www\Images\Buttons\tveTiny40.png
 			www\Images\dozhd'-prazdniku-ne-pomeha.jpg
 			www\Images\hochesh'-kvasku.jpg
 			www\Images\nasampo.jpg
@@ -59,13 +33,13 @@ www
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		+Styles
+		-Styles
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
-		+TJsPrown
+		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\favicon.ico
@@ -82,24 +56,24 @@ www
 6=www\Styles\ImgRight.css
 [Selected Project Files]
 Main=
-Selected=www\NavSet.php
+Selected=www\Main.php
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=67
-Caret=34,107
+TopLine=92
+Caret=1,99
 Mark1=1,47
 Mark2=1,88
 [www\NavSet.php]
-TopLine=28
-Caret=33,53
+TopLine=70
+Caret=1,26
 [www\Styles\styleSet.css]
 TopLine=45
 Caret=47,62
 [www\Styles\Styles.css]
-TopLine=83
-Caret=31,80
+TopLine=5
+Caret=20,69
 [www\TJsPrown\TJsPrown.css]
 TopLine=1
 Caret=16,19

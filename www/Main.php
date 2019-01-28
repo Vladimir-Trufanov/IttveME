@@ -96,6 +96,8 @@
   
    <div class="Footer">
       <div class="LeftFooter">
+         Copyright (c) 2019 Труфанов Владимир <br>
+         tve58@inbox.ru
       </div>
       <div class="LifeMenu">
          <button class="btnLifeMenu">
