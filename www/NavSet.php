@@ -13,47 +13,47 @@
 <div class='navset'>
 
    <div class='link'>
-      <div class='prev'>&#xf1cb;</div>
-      <div class='small'>&#xf1cb;</div>
+      <div class='prev'>&#xf044;</div>
+      <div class='small'>&#xf044;</div>
       <div class='full'>
-         <div class='f1'>headline</div>
-         <div class='f2'>some additional info to this link</div>
+         <div class='f1'>Edit</div>
+         <div class='f2'>Создать, редактировать материал</div>
       </div>
    </div>
    
    <div class='link'>
-      <div class='prev'>&#xf17d;</div>
-      <div class='small'>&#xf17d;</div>
+      <div class='prev'>&#xf090;</div>
+      <div class='small'>&#xf090;</div>
       <div class='full'>
-         <div class='f1'>headline</div>
-         <div class='f2'>some additional info to this link</div>
+         <div class='f1'>Login</div>
+         <div class='f2'>Зарегистрироваться на сайте, войти</div>
       </div>
    </div>
    
    <div class='link'>
-      <div class='prev'>&#xf240;</div>
-      <div class='small'>&#xf240;</div>
+      <div class='prev'>&#xf013;</div>
+      <div class='small'>&#xf013;</div>
       <div class='full'>
-         <div class='f1'>headline</div>
-         <div class='f2'>some additional info to this link</div>
+         <div class='f1'>Tuning</div>
+         <div class='f2'>Изменить настройки сайта</div>
       </div>
    </div>
    
    <div class='link'>
-      <div class='prev'>&#xf09b;</div>
-      <div class='small'>&#xf09b;</div>
+      <div class='prev'>&#xf01c;</div>
+      <div class='small'>&#xf01c;</div>
       <div class='full'>
-         <div class='f1'>headline</div>
-         <div class='f2'>some additional info to this link</div>
+         <div class='f1'>Inbox</div>
+         <div class='f2'>Отправить сообщение автору</div>
       </div>
    </div>
   
    <div class='link'>
-      <div class='prev'>&#xf171;</div>
-      <div class='small'>&#xf171;</div>
+      <div class='prev'>&#xf08b;</div>
+      <div class='small'>&#xf08b;</div>
       <div class='full'>
-         <div class='f1'>headline</div>
-         <div class='f2'>some additional info to this link</div>
+         <div class='f1'>Logout</div>
+         <div class='f2'>Войти на сайт, как гость</div>
       </div>
    </div>
 
