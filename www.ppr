@@ -33,6 +33,9 @@ www
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
+		+Reset
+			www\Reset\e404.php
+			www\Reset\index.php
 		-Styles
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
@@ -42,6 +45,8 @@ www
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
+		www\.htaccess
+		www\.user.ini
 		www\favicon.ico
 		www\iGetAbove.php
 		www\index.php
@@ -64,10 +69,10 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=167
-Caret=13,190
-Mark1=1,101
-Mark2=1,142
+TopLine=49
+Caret=1,56
+Mark1=1,90
+Mark2=1,131
 [www\NavSet.php]
 TopLine=35
 Caret=1,26

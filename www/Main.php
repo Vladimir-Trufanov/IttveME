@@ -52,18 +52,7 @@ if ($PersName<>$UserName)
 //require_once "iHtmlBegin.php";
 
 ?>
-   <!-- -->
 
-
-
-
-
-
-
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
