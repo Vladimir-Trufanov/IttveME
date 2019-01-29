@@ -33,7 +33,7 @@ www
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		+Styles
+		-Styles
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\Reset.css
@@ -43,7 +43,9 @@ www
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\favicon.ico
+		www\iGetAbove.php
 		www\index.php
+		www\Inimem.php
 		www\Main.php
 		www\NavSet.php
 [Open project files]
@@ -54,6 +56,7 @@ www
 4=www\Styles\Styles.css
 5=www\TJsPrown\TJsPrown.css
 6=www\Styles\ImgRight.css
+7=www\Inimem.php
 [Selected Project Files]
 Main=
 Selected=www\Main.php
@@ -61,15 +64,15 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=97
-Caret=1,120
-Mark1=1,47
-Mark2=1,88
+TopLine=167
+Caret=13,190
+Mark1=1,101
+Mark2=1,142
 [www\NavSet.php]
 TopLine=35
 Caret=1,26
 [www\Styles\styleSet.css]
-TopLine=85
+TopLine=69
 Caret=1,69
 [www\Styles\Styles.css]
 TopLine=170
@@ -80,3 +83,6 @@ Caret=16,19
 [www\Styles\ImgRight.css]
 TopLine=15
 Caret=13,20
+[www\Inimem.php]
+TopLine=3
+Caret=14,5
