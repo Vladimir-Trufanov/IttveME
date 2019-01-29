@@ -96,7 +96,6 @@
   
    <div class="Footer">
       <div class="LeftFooter">
-         Copyright (c) 2019 Труфанов Владимир <br>
          tve58@inbox.ru
       </div>
       <div class="LifeMenu">
@@ -113,6 +112,15 @@
   
    <div class="Ext">
       Main
+   </div>
+  
+   <div class="Info">
+      <div class="InfoLeft">
+         Copyright (c) 2019 Труфанов Владимир <br>
+      </div>
+      <div class="InfoRight">
+         InfoRight
+      </div>
    </div>
 
 </body>

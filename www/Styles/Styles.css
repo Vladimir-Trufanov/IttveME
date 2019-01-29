@@ -59,6 +59,7 @@ h1
 .Footer
 {
    position: fixed; 
+   margin-bottom: 1rem;
 }
 .LeftFooter
 {
@@ -74,7 +75,7 @@ h1
    height: 100%;
    //background: red;
    float: left;
- 
+   margin-top: 0.4rem;
 }
 .RightFooter
 {
@@ -149,7 +150,38 @@ h1
    background: yellow;
    display: none;
 }
-/
+
+.Info
+{
+   position: fixed; 
+   bottom: 0; 
+   left: 0;
+   width: 76%;
+   height: 1rem;
+   z-index: 100;
+   //background: red;
+}
+.InfoLeft
+{
+   float: left;
+   width: 50%;
+   //background: yellow;
+}
+.InfoRight
+{
+   float: right;
+   text-align: right;
+   width: 50%;
+   //background: blue;
+}
+.InfoLeft, .InfoRight
+{
+   height: 100%;
+   font-size: 1.2rem;
+   font-weight: 700;
+   color: red;
+   margin-top: -0.4rem;
+}
 
 /*
  *************************************************************** Styles.css ***
