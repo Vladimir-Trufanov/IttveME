@@ -143,7 +143,7 @@ if ($PersName<>$UserName)
          tve58@inbox.ru
          -->
          <?php 
-            // echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
+            //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
             echo $uagent.'<br>';
          ?>
       </div>

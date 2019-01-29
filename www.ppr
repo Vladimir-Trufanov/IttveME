@@ -62,6 +62,7 @@ www
 5=www\TJsPrown\TJsPrown.css
 6=www\Styles\ImgRight.css
 7=www\Inimem.php
+8=www\Reset\e404.php
 [Selected Project Files]
 Main=
 Selected=www\Main.php
@@ -69,8 +70,8 @@ Selected=www\Main.php
 TopLine=1
 Caret=1,18
 [www\Main.php]
-TopLine=49
-Caret=1,56
+TopLine=155
+Caret=12,179
 Mark1=1,90
 Mark2=1,131
 [www\NavSet.php]
@@ -91,3 +92,6 @@ Caret=13,20
 [www\Inimem.php]
 TopLine=3
 Caret=14,5
+[www\Reset\e404.php]
+TopLine=25
+Caret=1,27

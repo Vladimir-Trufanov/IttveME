@@ -23,6 +23,11 @@ if (IsSet($_GET['err']))
 }
 // echo '$status='.$status.' ';
 
+// БЫЛИ ОШИБКИ !!!
+
+// 500: 29.01.2019 - определялось подключение require_once $SiteHost."/TPhpPrown/getTranslit.php";
+//                   но файла не было в библиотеке
+
 // Формируем массивы сообщений
 $codes = array
 (
