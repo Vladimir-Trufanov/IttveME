@@ -33,12 +33,13 @@ www
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		+Reset
+		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
 		-Styles
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
+			www\Styles\mLeadImg.css
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
@@ -48,50 +49,20 @@ www
 		www\.htaccess
 		www\.user.ini
 		www\favicon.ico
+		www\GalleryView.php
 		www\iGetAbove.php
+		www\iHtmlBegin.php
+		www\iHtmlEnd.php
+		www\iMobileStyles.php
 		www\index.php
 		www\Inimem.php
 		www\Main.php
 		www\NavSet.php
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\NavSet.php
-3=www\Styles\styleSet.css
-4=www\Styles\Styles.css
-5=www\TJsPrown\TJsPrown.css
-6=www\Styles\ImgRight.css
-7=www\Inimem.php
-8=www\Reset\e404.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\index.php
 [www\index.php]
 TopLine=1
 Caret=1,18
-[www\Main.php]
-TopLine=155
-Caret=12,179
-Mark1=1,90
-Mark2=1,131
-[www\NavSet.php]
-TopLine=35
-Caret=1,26
-[www\Styles\styleSet.css]
-TopLine=69
-Caret=1,69
-[www\Styles\Styles.css]
-TopLine=170
-Caret=20,183
-[www\TJsPrown\TJsPrown.css]
-TopLine=1
-Caret=16,19
-[www\Styles\ImgRight.css]
-TopLine=15
-Caret=13,20
-[www\Inimem.php]
-TopLine=3
-Caret=14,5
-[www\Reset\e404.php]
-TopLine=25
-Caret=1,27
