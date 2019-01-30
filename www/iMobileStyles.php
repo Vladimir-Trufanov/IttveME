@@ -10,9 +10,6 @@
 // Copyright © 2019 tve                              Посл.изменение: 30.01.2019
 ?>
 
-<link rel="stylesheet" type="text/css" href="Styles/Styles.css">
-<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
-<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
 <link rel="stylesheet" type="text/css" href="Styles/mLeadImg.css">
 
 <!--

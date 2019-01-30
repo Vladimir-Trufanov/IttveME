@@ -29,6 +29,8 @@ if ($SiteDevice==Mobile)
          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    
       <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
+      <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
+      <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
       <?php require_once "iMobileStyles.php"; ?> 
       <link rel="stylesheet" type="text/css" href="TJsPrown/TJsPrown.css">
    
@@ -64,8 +66,8 @@ else
    
       <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
       <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
-      <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
       <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
+      <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
 
       <link rel="stylesheet" type="text/css" href="TJsPrown/TJsPrown.css">
    

@@ -33,7 +33,6 @@
 .Gallery
 {
    margin-left: 76%;
-   bottom: 4.2rem; 
    width: 24%;
 }
 .Footer
@@ -45,6 +44,11 @@
    z-index: 73;
    border-top: dashed 1px rgb(153,153,153);
 }
+.navset 
+{
+  width: calc(50% - 2.68rem);  
+}
+
 /*
  ************************************************************* ImgRight.css ***
 */	

@@ -36,7 +36,7 @@ www
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		-Styles
+		+Styles
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\mLeadImg.css
@@ -60,9 +60,41 @@ www
 		www\NavSet.php
 [Open project files]
 0=www\index.php
+1=www\Styles\Styles.css
+2=www\Styles\ImgRight.css
+3=www\Styles\ImgLeft.css
+4=www\iHtmlBegin.php
+5=www\iMobileStyles.php
+6=www\Styles\mLeadImg.css
+7=www\Main.php
+8=www\Styles\styleSet.css
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\Styles\mLeadImg.css
 [www\index.php]
 TopLine=1
 Caret=1,18
+[www\Styles\Styles.css]
+TopLine=147
+Caret=27,159
+[www\Styles\ImgRight.css]
+TopLine=31
+Caret=1,50
+[www\Styles\ImgLeft.css]
+TopLine=17
+Caret=1,1
+[www\iHtmlBegin.php]
+TopLine=15
+Caret=1,34
+[www\iMobileStyles.php]
+TopLine=1
+Caret=1,13
+[www\Styles\mLeadImg.css]
+TopLine=21
+Caret=1,41
+[www\Main.php]
+TopLine=67
+Caret=26,75
+[www\Styles\styleSet.css]
+TopLine=1
+Caret=1,8

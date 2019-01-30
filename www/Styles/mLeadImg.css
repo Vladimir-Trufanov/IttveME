@@ -11,6 +11,8 @@
 
 .Gallery
 {
+   width: 100%;
+   margin-bottom: 5.2rem;
 }
 .News 
 { 
@@ -22,7 +24,20 @@
 }
 .Footer
 {
-   display: none; 
+   bottom: 1rem; 
+   width: 100%;
+   height: 4 rem;
+   z-index: 73;
+}
+.LeftFooter
+{
+   display: none;
+}
+.navset 
+{
+  //width: calc(50% - 2.68rem);  
+  //width: 500рх;
+  width: calc(50% - 2.68rem);  
 }
 .Ext
 {
