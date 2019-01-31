@@ -50,7 +50,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       <div class='small'>&#xf013;</div>
       <div class='full'>
          <div class='f1'>Tuning</div>
-         <div class='f2'>Изменить настройки сайта</div>
+         <div class='f2'>Изменить настройки сайта в браузере</div>
       </div>
    </div>
    

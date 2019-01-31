@@ -51,10 +51,10 @@ h1
 }
 .Gallery
 {
-   display:flex;
+   //display:flex;
    align-items: center;
    background: #FEDFC0; 
-   flex-flow: column;
+   //flex-flow: column;
 }
 .Footer
 {

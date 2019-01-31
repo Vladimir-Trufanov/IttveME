@@ -68,18 +68,20 @@ www
 6=www\Styles\mLeadImg.css
 7=www\Main.php
 8=www\Styles\styleSet.css
+9=www\NavSet.php
+10=www\Inimem.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\mLeadImg.css
+Selected=www\Styles\Styles.css
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Styles\Styles.css]
-TopLine=147
-Caret=27,159
+TopLine=53
+Caret=6,57
 [www\Styles\ImgRight.css]
-TopLine=31
-Caret=1,50
+TopLine=21
+Caret=20,37
 [www\Styles\ImgLeft.css]
 TopLine=17
 Caret=1,1
@@ -98,3 +100,9 @@ Caret=26,75
 [www\Styles\styleSet.css]
 TopLine=1
 Caret=1,8
+[www\NavSet.php]
+TopLine=47
+Caret=61,53
+[www\Inimem.php]
+TopLine=5
+Caret=7,32
