@@ -177,10 +177,10 @@ h1
 .InfoLeft, .InfoRight
 {
    height: 100%;
-   font-size: 1.2rem;
-   font-weight: 700;
+   //font-size: 1.2rem;
+   //font-weight: 700;
    color: red;
-   margin-top: -0.4rem;
+   //margin-top: -0.4rem;
 }
 
 /*
