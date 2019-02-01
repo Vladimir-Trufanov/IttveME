@@ -44,6 +44,7 @@
    height: 15rem;
    z-index: 73;
    border-top: dashed 1px rgb(153,153,153);
+   background: yellow;
 }
 .navset 
 {

@@ -62,8 +62,8 @@ www
 0=www\index.php
 1=www\Styles\Styles.css
 2=www\Styles\ImgRight.css
-3=www\Styles\styleSet.css
-4=www\NavSet.php
+3=www\NavSet.php
+4=www\Styles\styleSet.css
 [Selected Project Files]
 Main=
 Selected=www\Styles\styleSet.css
@@ -71,14 +71,14 @@ Selected=www\Styles\styleSet.css
 TopLine=1
 Caret=1,18
 [www\Styles\Styles.css]
-TopLine=33
+TopLine=154
 Caret=6,181
 [www\Styles\ImgRight.css]
-TopLine=13
-Caret=14,20
-[www\Styles\styleSet.css]
-TopLine=5
-Caret=3,37
+TopLine=25
+Caret=4,47
 [www\NavSet.php]
 TopLine=55
 Caret=61,53
+[www\Styles\styleSet.css]
+TopLine=15
+Caret=65,37

@@ -6,6 +6,10 @@
     - 5 элементов 10rem x 10rem занимают полосу меню 50rem
 */
 
+/*
+  Определяем размеры панели конфигурационного меню, пунктов меню в "состоянии 
+  ожидания" и позиций для значков
+*/
 .navset 
 {
    width: 50rem;   // calc(50% - 2.68rem); 
@@ -22,6 +26,20 @@
    width: 100%;    /* значок по ширине всю область .link */
    height: 100%;   /* всю высоту родителя .link */
    //font-size: 5rem; 
+}
+/*
+  Определяем размеры пунктов меню при "наезде мышкой" (в том числе и пункта
+  меню, который станет активным), а затем переопределяем размер и цвет 
+  активного пункта меню
+*/
+.navset:hover .link 
+{
+  width: 5%;
+}
+.navset .link:hover 
+{
+  width: 80%;
+  color: #555;
 }
 
 
@@ -49,17 +67,8 @@
   cursor: pointer;
   //background: green;
 }
-.navset:hover .link 
-{
-  width: 5%;
-}
 .navset .link:last-child {
   border-right: 0;
-}
-.navset .link:hover 
-{
-  width: 80%;
-  color: #555;
 }
 /* 
   Форматируем большие иконки в меню
@@ -75,7 +84,7 @@
   text-align: center;
   font-family: fontawesome;
   font-size: 3rem; 
-  //background: red;
+  // background: red;
 }
 /* 
   Форматируем текст пункта меню правее иконки
