@@ -2,30 +2,42 @@
 /*
   Исходные ориентиры:
   - меню состоит из "n" квадратных элементов, содержащих иконки шрифта 
-    (например, Amesone);
+    (например, Awesome);
   - 5 элементов 10rem x 10rem занимают полосу меню 50rem
 */
 
 /*
   Определяем размеры панели конфигурационного меню, пунктов меню в "состоянии 
-  ожидания" и позиций для значков
+  ожидания" и позиций для значков,
+  а также шрифты их цвета и размеры
 */
 .navset 
 {
-   width: 50rem;   // calc(50% - 2.68rem); 
-   height: 10rem; 
+   width: 50rem;   /* calc(50% - 2.68rem); */
+   height: 10rem;
+   color: #aaa;    /* обычный серый цвет элементов панели меню */
 }
+/*
+   color: #ab4a16;  приятный коричневый цвет 
+*/
 .navset .link 
 {
    width: 20%;     /* "1/n" часть ширины полоски меню */
    height: 100%;   /* всю высоту родителя .navset */
-   //font-size: 5rem; 
+}
+.navset .link .prev 
+{
+   font-family: fontawesome;
+   /* font-size: 1.2rem; */
+   /* line-height: 2rem; //78px;  */
 }
 .navset .link .small 
 {
    width: 100%;    /* значок по ширине всю область .link */
    height: 100%;   /* всю высоту родителя .link */
-   //font-size: 5rem; 
+   font-family: fontawesome;
+   /*font-size: 5rem; */
+   /* line-height: 9rem; */
 }
 /*
   Определяем размеры пунктов меню при "наезде мышкой" (в том числе и пункта
@@ -39,7 +51,7 @@
 .navset .link:hover 
 {
    width: 80%;
-   color: #555;
+   color: red; /*#555; */
 }
 /* 
   Определяем общее позиционирование панели конфигурационного меню
@@ -61,21 +73,21 @@
 {
    position: absolute;
    background: #fff;
-   //background: yellow;
+   /* background: yellow; */
    transform: translateZ(0);
 }
 .navset .link 
 {
    position: relative;
    float: left;
-   color: #aaa;
    border-right: 1px solid #ddd;
    transition: .5s width;
    overflow: hidden;
    cursor: pointer;
-   //background: green;
+   /* background: green; */
 }
-.navset .link:last-child {
+.navset .link:last-child 
+{
    border-right: 0;
 }
 /* 
@@ -87,11 +99,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  //line-height: 4rem; 
   text-align: center;
-  font-family: fontawesome;
-  font-size: 3rem; 
-  // background: red;
+  /* background: red; */
 }
 /* 
   Форматируем текст пункта меню правее иконки
@@ -99,32 +108,40 @@
 .navset .link .full 
 {
   position: absolute;
-  top: 2px;     // Отодвинули от верха колонки меню 22px;
-  left: 10rem;  // Загнали текст правее значка
-  text-transform: uppercase;
+  top: 2px;     /* Отодвинули от верха колонки меню 22px; */
+  left: 10rem;  /* Загнали текст правее значка */
+  /* text-transform: uppercase; */
+  /* line-height: 3rem; */
 }
-.navset .link .full .f1, .nav .link .full .f2 
+/* определяет минимальную высоту строки текста */
+.navset .link .full .f1 
 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  white-space: nowrap;
+   font-size: 2rem; 
+  /* font-weight: 700; */
+  /* white-space: nowrap; */
+  /* line-height: 2rem; */
+}
+/* определяет минимальную высоту строки текста */
+.navset .link .full .f2 
+{
+   font-size: 2rem; 
+  /* font-weight: 700; */
+  /* white-space: nowrap; */
+  /* line-height: 2rem; */
 }
 /* 
   Форматируем информационный текст пункта меню 
 */
 .navset .link .full .f2 
 {
-   margin-top: 0.5rem;
-   font-size: 1.4rem;
+   /* margin-top: 0.5rem; */
+   /* font-size: 1.4rem; */
 }
 .navset .link .prev 
 {
   position: absolute;
   top: 0;
   left: 7px;
-  font-family: fontawesome;
-  font-size: 12px;
-  //line-height: 2rem; //78px;
   transition: .5s opacity;
   opacity: 0;
 }

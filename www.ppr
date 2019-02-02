@@ -64,9 +64,10 @@ www
 2=www\Styles\ImgRight.css
 3=www\NavSet.php
 4=www\Styles\styleSet.css
+5=www\iHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\styleSet.css
+Selected=www\Styles\ImgRight.css
 [www\index.php]
 TopLine=1
 Caret=1,18
@@ -77,8 +78,11 @@ Caret=6,181
 TopLine=25
 Caret=4,47
 [www\NavSet.php]
-TopLine=55
+TopLine=43
 Caret=61,53
 [www\Styles\styleSet.css]
-TopLine=51
-Caret=4,79
+TopLine=1
+Caret=15,28
+[www\iHtmlBegin.php]
+TopLine=3
+Caret=1,1
