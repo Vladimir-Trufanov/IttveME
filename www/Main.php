@@ -99,9 +99,7 @@ require_once "iHtmlBegin.php";
   
 <div class="Info">
    <div class="InfoLeft">
-      <!--
       Copyright (c) 2019 Труфанов Владимир <br>
-      -->
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
          //echo $uagent.'<br>';
