@@ -73,8 +73,8 @@ Selected=www\Styles\styleSet.css
 TopLine=1
 Caret=1,18
 [www\Styles\Styles.css]
-TopLine=35
-Caret=18,70
+TopLine=179
+Caret=1,187
 Mark1=1,80
 [www\Styles\ImgRight.css]
 TopLine=24
@@ -89,5 +89,5 @@ Caret=1,1
 TopLine=103
 Caret=1,103
 [www\Styles\styleSet.css]
-TopLine=113
-Caret=18,129
+TopLine=177
+Caret=16,180
