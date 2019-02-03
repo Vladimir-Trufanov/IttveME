@@ -3,18 +3,20 @@
   Исходные ориентиры:
   - меню состоит из "n" элементов, содержащих иконки шрифта (например, Awesome);
   - 5 элементов 10rem x 10rem занимают полосу меню 50rem
+  - для браузеров, где работает calc, центрируются все элементы внутри пункта
+    меню; для других браузеров элементы прижимаются к левому краю с padding
 */
 
 /*
   Определяем размеры панели конфигурационного меню, пунктов меню в "состоянии 
-  ожидания" и позиций для значков,
-  а также шрифты их цвета и размеры
+  ожидания" и позиций для значков, шрифты значков и пунктов меню,
+  а также их цвета и размеры
 */
 .navset 
 {
    width: calc(50% - 2.68rem); /* 50rem; */
-   height: 100%;   /* 10rem; */
-   color: #aaa;    /* обычный серый цвет элементов панели меню */
+   height: 100%;               /* 10rem; */
+   color: #aaa;                /* обычный серый цвет элементов панели меню */
 }
 /*
    color: #ab4a16;  приятный коричневый цвет 
@@ -27,8 +29,7 @@
 .navset .link .prev 
 {
    font-family: fontawesome;
-   /* font-size: 1.2rem; */
-   /* line-height: 2rem; //78px;  */
+   font-size: 2rem; 
 }
 .navset .link .small 
 {
@@ -36,6 +37,17 @@
    height: 100%;   /* всю высоту родителя .link */
    font-family: fontawesome;
    font-size: 3.6rem; 
+}
+.navset .link .full .f1
+{
+   font-size: 1.6rem; 
+   font-weight: 700; 
+}
+.navset .link .full .f2
+{
+   font-size: 1.4rem; 
+   font-weight: 700; 
+   white-space: nowrap;  /* показали весь текст в одной строке */
 }
 /*
   Определяем размеры пунктов меню при "наезде мышкой" (в том числе и пункта
@@ -71,8 +83,8 @@
 {
    position: absolute;
    background: #fff;
-   /* background: yellow; */
    transform: translateZ(0);
+   /* background: yellow; */
 }
 .navset .link 
 {
@@ -80,7 +92,7 @@
    float: left;
    border-right: 1px solid #ddd;
    transition: .5s width;
-   overflow: hidden;
+   overflow: hidden;    /* закрыли текст вне пункта меню */
    cursor: pointer;
    /* background: green; */
 }
@@ -88,45 +100,82 @@
 {
    border-right: 0;
 }
-/* 
-  Форматируем большие иконки в меню
-  (начальное состояние меню)
+/*
+  Позиционируем элементы внутри пункта меню
 */
+.navset .link .prev, .navset .link .small, .navset .link .full
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+} 
+/* 
+  Форматируем начальное состояние пунктов меню: для маленьких иконок, больших и
+  текстов в полных изображениях пунктов
+*/
+.navset .link .prev 
+{
+  padding-top: 0.2rem; 
+  padding-left: 0.2rem;
+  transition: .5s opacity;
+  opacity: 0;     /* скрыли маленькие иконки в начальных условиях */
+  /* left: 7px; */
+}
 .navset .link .small 
 {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
-  text-align: center;
+  left: 0; */
+  padding-left: 0;
+  text-align: center; 
+  
   /* background: red; */
 }
-/* 
-  Форматируем текст пункта меню правее иконки
-*/
 .navset .link .full 
 {
-  position: absolute;
-  top: 2px;     /* Отодвинули от верха колонки меню 22px; */
-  left: 10rem;  /* Загнали текст правее значка */
+  transition: .5s opacity;
+  opacity: 0;     /* скрыли тексты пунктов меню в начальных условиях */
+  /* position: absolute;
+  left: 10rem;   загнали текст правее значка */
+  /* top: 2px;      отодвинули от верха колонки меню 22px; */
   /* text-transform: uppercase; */
   /* line-height: 3rem; */
 }
-/* определяет минимальную высоту строки текста */
-.navset .link .full .f1 
+/* 
+  Зажигаем маленькие иконки, гасим большие и тексты меню, 
+  когда наезжаем на панель меню  
+*/
+.navset:hover .prev 
 {
-   font-size: 2rem; 
-  /* font-weight: 700; */
-  /* white-space: nowrap; */
-  /* line-height: 2rem; */
+   opacity: 1;
 }
-/* определяет минимальную высоту строки текста */
-.navset .link .full .f2 
+.navset:hover .small, .navset .link:hover .full 
 {
-   font-size: 2rem; 
-  /* font-weight: 700; */
-  /* white-space: nowrap; */
-  /* line-height: 2rem; */
+   opacity: 0;
 }
+/* 
+  Гасим маленькую иконку, зажигаем большую и пункт меню, когда наезжаем на него  
+*/
+.navset .link:hover .prev 
+{
+   opacity: 0;
+}
+.navset .link:hover .small, .navset .link:hover .full 
+{
+   opacity: 1;
+   text-align: left; 
+   /* padding-left: 0.2rem;
+    margin-left: 0.4rem; */
+}
+.navset .link:hover .small 
+{
+  padding-left: 0.4rem;
+}
+.navset .link:hover .full 
+{
+  padding-left: 4.2rem;
+}
+
 /* 
   Форматируем информационный текст пункта меню 
 */
@@ -134,26 +183,4 @@
 {
    /* margin-top: 0.5rem; */
    /* font-size: 1.4rem; */
-}
-.navset .link .prev 
-{
-  position: absolute;
-  top: 0;
-  left: 7px;
-  transition: .5s opacity;
-  opacity: 0;     /* скрыли маленькие иконки в начальных условиях */
-}
-/* 
-  Гасим маленькую иконку, когда наезжаем на пункт меню  
-*/
-.navset .link:hover .prev 
-{
-   opacity: 0;
-}
-/* 
-  Зажигаем маленькие иконки, когда наезжаем на панель меню  
-*/
-.navset:hover .prev 
-{
-   opacity: 1;
 }
