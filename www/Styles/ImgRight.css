@@ -37,18 +37,13 @@
 }
 .Footer
 {
+   width: 76%;
    bottom: 0; 
    right: 24%;
-   width: 76%;
    height: 4rem;
    z-index: 73;
    border-top: dashed 1px rgb(153,153,153);
-   background: yellow;
-}
-.navset 
-{
-  // display: none;
-  // width: calc(50% - 2.68rem);  
+   /* background: yellow; */
 }
 
 /*

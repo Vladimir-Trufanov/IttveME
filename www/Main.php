@@ -73,9 +73,6 @@ require_once "iHtmlBegin.php";
   
 <div class="Footer">
    <div class="LeftFooter">
-      <!--
-      tve58@inbox.ru
-      -->
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
          echo $uagent.'<br>';
@@ -99,7 +96,7 @@ require_once "iHtmlBegin.php";
   
 <div class="Info">
    <div class="InfoLeft">
-      Copyright (c) 2019 Труфанов Владимир <br>
+      Copyright (c) 2019 Труфанов Владимир   tve58@inbox.ru<br>
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
          //echo $uagent.'<br>';

@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	+www
+	-www
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -36,7 +36,9 @@ www
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		+Styles
+		-Styles
+			www\Styles\CalcNo.css
+			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\mLeadImg.css
@@ -60,34 +62,42 @@ www
 		www\NavSet.php
 [Open project files]
 0=www\index.php
-1=www\Styles\Styles.css
-2=www\Styles\ImgRight.css
-3=www\NavSet.php
-4=www\iHtmlBegin.php
-5=www\Main.php
-6=www\Styles\styleSet.css
+1=www\Styles\ImgRight.css
+2=www\NavSet.php
+3=www\iHtmlBegin.php
+4=www\Main.php
+5=www\Styles\styleSet.css
+6=www\Styles\Styles.css
+7=www\Styles\CalcNo.css
+8=www\Styles\CalcYes.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\styleSet.css
+Selected=www\iHtmlBegin.php
 [www\index.php]
 TopLine=1
 Caret=1,18
-[www\Styles\Styles.css]
-TopLine=179
-Caret=1,187
-Mark1=1,80
 [www\Styles\ImgRight.css]
-TopLine=24
-Caret=6,51
+TopLine=19
+Caret=29,46
 [www\NavSet.php]
 TopLine=45
 Caret=61,53
 [www\iHtmlBegin.php]
-TopLine=3
-Caret=1,1
+TopLine=63
+Caret=33,79
 [www\Main.php]
-TopLine=103
-Caret=1,103
+TopLine=57
+Caret=12,77
 [www\Styles\styleSet.css]
-TopLine=177
-Caret=16,180
+TopLine=83
+Caret=1,93
+Mark1=1,93
+[www\Styles\Styles.css]
+TopLine=49
+Caret=1,61
+[www\Styles\CalcNo.css]
+TopLine=13
+Caret=17,30
+[www\Styles\CalcYes.css]
+TopLine=15
+Caret=1,29

@@ -51,10 +51,8 @@ h1
 }
 .Gallery
 {
-   //display:flex;
    align-items: center;
    background: #FEDFC0; 
-   //flex-flow: column;
 }
 .Footer
 {
@@ -63,7 +61,6 @@ h1
 }
 .LeftFooter
 {
-   width: calc(50% - 2.68rem);
    height: 100%;
    float: left;
    padding-top: 0.6rem;
@@ -81,9 +78,7 @@ h1
 }
 .RightFooter
 {
-   width: calc(50% - 2.68rem);
    height: 100%;
-   float: right;
    //background: green; 
 }
 .btnLifeMenu

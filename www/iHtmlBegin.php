@@ -68,6 +68,7 @@ else
       <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
       <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
       <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
+      <link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">
 
       <link rel="stylesheet" type="text/css" href="TJsPrown/TJsPrown.css">
    

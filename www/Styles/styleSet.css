@@ -24,7 +24,6 @@
 */
 .navset 
 {
-   width: calc(50% - 2.68rem); /* 50rem; */
    height: 100%;               /* 10rem; */
    color: #aaa;                /* обычный серый цвет элементов панели меню */
 }
@@ -91,7 +90,6 @@
 */
 .navset 
 {
-   position: absolute;
    background: #fff;
    transform: translateZ(0);
    /* background: yellow; */
