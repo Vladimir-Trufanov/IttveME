@@ -7,8 +7,8 @@
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  05.12.2018
-// Copyright © 2019 tve                              Посл.изменение: 11.12.2018
+//                                                   Дата создания:  07.01.2019
+// Copyright © 2019 tve                              Посл.изменение: 06.02.2019
 
 if ($SiteDevice==Mobile) 
 {   
@@ -32,15 +32,7 @@ if ($SiteDevice==Mobile)
       <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
       <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
       <?php require_once "iMobileStyles.php"; ?> 
-      <link rel="stylesheet" type="text/css" href="TJsPrown/TJsPrown.css">
-   
-      <script
-         src="https://code.jquery.com/jquery-3.3.1.min.js"
-         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-         crossorigin="anonymous">
-      </script>
-      <script src="/TJsPrown/TJsPrown.js"></script>
-      <script> MakeCatchyQuotes() </script>
+      <?php require_once "iJsJquery.php"; ?> 
    </head>
 
    <body>
@@ -69,16 +61,7 @@ else
       <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
       <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
       <link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">
-
-      <link rel="stylesheet" type="text/css" href="TJsPrown/TJsPrown.css">
-   
-      <script
-         src="https://code.jquery.com/jquery-3.3.1.min.js"
-         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-         crossorigin="anonymous">
-      </script>
-      <script src="/TJsPrown/TJsPrown.js"></script>
-      <script> MakeCatchyQuotes() </script>
+      <?php require_once "iJsJquery.php"; ?> 
    </head>
 
    <body>
