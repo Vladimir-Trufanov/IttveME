@@ -25,11 +25,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
 
+<!--
+
+<button class='small' form="frmTiny">&#xf044;</button>
+-->
+
+
 <div class='navset'>
+
+
+
+   
+   <!--
+   <button class="btnItPW" id="btnTiny" form="frmTiny">
+      <img class="imgItPW" src="Images/Buttons/Tiny.svg" height="32">
+      Tiny
+   </button>
+   -->
 
    <div class='link'>
       <div class='prev'>&#xf044;</div>
-      <div class='small'>&#xf044;</div>
+
+      <form id="frmTiny" method="get" action="/TinyMCE/Tiny.php">    
+         <button class='small' type='submit' form='frmTiny'>&#xf044;</button>
+      </form>
+
       <div class='full'>
          <div class='f1'>Edit</div>
          <div class='f2'>Создать, редактировать материал</div>
@@ -71,8 +91,6 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
          <div class='f2'>Войти на сайт, как гость</div>
       </div>
    </div>
-
 </div>
-
 <?php
 // ************************************************************* NavSet.php ***
