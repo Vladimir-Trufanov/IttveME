@@ -46,7 +46,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
    
    <div class='link'>
       <div class='prev'>&#xf013;</div>
-      <div class='small'>&#xf013;</div>
+      <button class='small' type='submit' form='frmTiny'>&#xf013;</button>
       <div class='full'>
          <div class='f1'>Tuning</div>
          <div class='f2'>Изменить настройки сайта в браузере</div>
@@ -55,7 +55,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
    
    <div class='link'>
       <div class='prev'>&#xf01c;</div>
-      <div class='small'>&#xf01c;</div>
+      <button class='small' type='submit' form='frmTiny'>&#xf01c;</button>
       <div class='full'>
          <div class='f1'>Inbox</div>
          <div class='f2'>Отправить сообщение автору</div>
@@ -64,7 +64,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
   
    <div class='link'>
       <div class='prev'>&#xf08b;</div>
-      <div class='small'>&#xf08b;</div>
+      <button class='small' type='submit' form='frmTiny'>&#xf08b;</button>
       <div class='full'>
          <div class='f1'>Logout</div>
          <div class='f2'>Войти на сайт, как гость</div>

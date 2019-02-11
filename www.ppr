@@ -320,8 +320,8 @@ Selected=www\Styles\styleSet.css
 TopLine=1
 Caret=1,18
 [www\Styles\styleSet.css]
-TopLine=163
-Caret=17,181
+TopLine=169
+Caret=1,187
 [www\iHtmlBegin.php]
 TopLine=47
 Caret=7,62
@@ -332,5 +332,5 @@ Caret=1,1
 TopLine=31
 Caret=4,44
 [www\NavSet.php]
-TopLine=25
-Caret=1,40
+TopLine=69
+Caret=1,67
