@@ -25,7 +25,6 @@
 .navset 
 {
    height:100%;   /* 10rem; */
-   color:#aaa;    /* обычный серый цвет элементов панели меню */
 }
 /*
    color: #ab4a16;  приятный коричневый цвет 
@@ -47,7 +46,8 @@
    font-family:fontawesome;
    font-size:3.6rem; 
    border-width:0;
-   /*border-right:1px solid red; //#ddd; */
+   color:#aaa;    /* обычный серый цвет элементов панели меню */
+   background:#fff;
 }
 .navset .link .full .f1
 {
@@ -68,9 +68,9 @@
  Поднимаем кнопки над остальными элементами меню для того, чтобы 
  они не были скрыты другими элементами и, таким образом, могли бы нажиматься
 */
-.navset .link .small 
+.navset .link .small  
 {
-   z-index:101;
+  /* z-index:101; */
 }
 /** 
   Определяем общее позиционирование панели конфигурационного меню
@@ -90,6 +90,7 @@
 */
 .navset 
 {
+   color:#aaa;    /* обычный серый цвет элементов панели меню */
    background:#fff;
    transform:translateZ(0);
 }
@@ -100,7 +101,6 @@
    border-right:1px solid #ddd;
    transition:.5s width;
    overflow:hidden;    /* закрыли текст вне пункта меню */
-   /* cursor:pointer; */ 
 }
 /**
   Позиционируем элементы внутри пункта меню
@@ -160,14 +160,8 @@
 {
    opacity:0;
 }
-.navset:active .small 
-{
-   /*background: red; 
-	position: relative;*/
-	top:1px;
-}
 /** 
-  Гасим маленькую иконку, зажигаем большую и пункт меню, когда наезжаем на него  
+  Гасим маленькую иконку, зажигаем большую и пункт меню, когда наезжаем на них  
 */
 .navset .link:hover .prev 
 {
@@ -178,13 +172,31 @@
    opacity:1;
    text-align:left; 
 }
+/** 
+  Показываем наезд на большую кнопку перед нажатием на неё
+  изменением курсора, положения и формы кнопки
+*/
 .navset .link:hover .small 
 {
+   color:#333333; 
    padding-left:0.4rem;
+   cursor:pointer;
 }
+/** 
+  Отодвигаем тексты меню и открываем большую кнопку для того,
+  чтобы можно было нажать на неё
+*/
 .navset .link:hover .full 
 {
-   padding-left:4.4rem;
+   margin-left:4.4rem;
+}
+/** 
+  Отодвигаем тексты меню и открываем большую кнопку для того,
+  чтобы можно было нажать на неё
+*/
+.navset:active .small 
+{
+	top:1px;
 }
 /*
  ************************************************************* styleSet.css ***
