@@ -58,9 +58,9 @@ else
    
       <link rel="stylesheet" type="text/css" href="Styles/Reset.css">
       <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
-         <!--
-<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
--->
+         
+      <link rel="stylesheet" type="text/css" href="Styles/styleSet.css">
+
       <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
       <link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">
       <?php require_once "iJsJquery.php"; ?> 
@@ -69,5 +69,5 @@ else
    <body>
   <?php
 }
-
+// <!-- -->
 // ********************************************************* iHtmlBegin.php ***

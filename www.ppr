@@ -22,6 +22,7 @@ www
 				www\Images\Buttons\tveMenuD.png
 			www\Images\dozhd'-prazdniku-ne-pomeha.jpg
 			www\Images\hochesh'-kvasku.jpg
+			www\Images\Kwinflat.jpg
 			www\Images\nasampo.jpg
 			www\Images\uyolochki.png
 			www\Images\С заботой и к мамам.jpg
@@ -44,12 +45,14 @@ www
 		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
+			www\Styles\fil.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\mLeadImg.css
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
+			www\Styles\styleSetOld.css
 		-TinyMCE
 			-langs
 				www\TinyMCE\langs\readme.md
@@ -287,7 +290,7 @@ www
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		+Кнопки из элементов HTML
+		-Кнопки из элементов HTML
 			www\Кнопки из элементов HTML\demo.html
 			www\Кнопки из элементов HTML\style.css
 		www\.htaccess
@@ -305,58 +308,29 @@ www
 		www\NavSet.php
 [Open project files]
 0=www\index.php
-1=www\Styles\ImgRight.css
-2=www\NavSet.php
-3=www\Main.php
-4=www\Styles\styleSet.css
-5=www\Styles\Styles.css
-6=www\Styles\CalcNo.css
-7=www\Styles\CalcYes.css
-8=www\iJsJquery.php
-9=www\iHtmlBegin.php
-10=www\TinyMCE\Tiny.php
-11=www\Кнопки из элементов HTML\demo.html
-12=www\Кнопки из элементов HTML\style.css
+1=www\Styles\styleSet.css
+2=www\iHtmlBegin.php
+3=www\Styles\Styles.css
+4=www\Styles\ImgRight.css
+5=www\NavSet.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\ImgRight.css
+Selected=www\NavSet.php
 [www\index.php]
 TopLine=1
 Caret=1,18
-[www\Styles\ImgRight.css]
-TopLine=23
-Caret=13,43
-[www\NavSet.php]
-TopLine=43
-Caret=1,40
-[www\Main.php]
-TopLine=28
-Caret=1,55
 [www\Styles\styleSet.css]
-TopLine=137
-Caret=22,156
-Mark1=1,93
-[www\Styles\Styles.css]
-TopLine=49
-Caret=1,61
-[www\Styles\CalcNo.css]
-TopLine=13
-Caret=17,30
-[www\Styles\CalcYes.css]
-TopLine=15
-Caret=1,29
-[www\iJsJquery.php]
-TopLine=2
-Caret=40,10
+TopLine=91
+Caret=1,73
 [www\iHtmlBegin.php]
-TopLine=49
-Caret=4,63
-[www\TinyMCE\Tiny.php]
+TopLine=47
+Caret=7,62
+[www\Styles\Styles.css]
 TopLine=65
 Caret=1,1
-[www\Кнопки из элементов HTML\demo.html]
-TopLine=19
-Caret=1,1
-[www\Кнопки из элементов HTML\style.css]
-TopLine=103
-Caret=1,121
+[www\Styles\ImgRight.css]
+TopLine=31
+Caret=4,44
+[www\NavSet.php]
+TopLine=25
+Caret=1,31
