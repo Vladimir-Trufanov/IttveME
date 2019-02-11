@@ -29,7 +29,6 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
    <div class='link'>
       <div class='prev'>&#xf044;</div>
       <button class='small' type='submit' form='frmTiny'>&#xf044;</button>
-
       <div class='full'>
          <div class='f1'>Edit</div>
          <div class='f2'>Создать, редактировать материал</div>
@@ -38,7 +37,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
    
    <div class='link'>
       <div class='prev'>&#xf090;</div>
-      <div class='small'>&#xf090;</div>
+      <button class='small' type='submit' form='frmTiny'>&#xf090;</button>
       <div class='full'>
          <div class='f1'>Login</div>
          <div class='f2'>Зарегистрироваться на сайте, войти</div>

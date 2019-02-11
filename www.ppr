@@ -315,13 +315,13 @@ www
 5=www\NavSet.php
 [Selected Project Files]
 Main=
-Selected=www\NavSet.php
+Selected=www\Styles\styleSet.css
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Styles\styleSet.css]
-TopLine=91
-Caret=1,73
+TopLine=53
+Caret=1,56
 [www\iHtmlBegin.php]
 TopLine=47
 Caret=7,62
@@ -333,4 +333,4 @@ TopLine=31
 Caret=4,44
 [www\NavSet.php]
 TopLine=25
-Caret=1,31
+Caret=1,40

@@ -46,6 +46,8 @@
    height:100%;   /* всю высоту родителя .link */
    font-family:fontawesome;
    font-size:3.6rem; 
+   border-width:0;
+   /*border-right:1px solid red; //#ddd; */
 }
 .navset .link .full .f1
 {
@@ -68,7 +70,7 @@
 */
 .navset .link .small 
 {
-   z-index: 101;
+   z-index:101;
 }
 /** 
   Определяем общее позиционирование панели конфигурационного меню
@@ -109,96 +111,81 @@
    top:0.2rem;
    left:0;
 }
- 
-
-
-
-
-
-
-
-
-
-/*
+/**
   Определяем размеры пунктов меню при "наезде мышкой" (в том числе и пункта
   меню, который станет активным), а затем переопределяем размер и цвет 
   активного пункта меню
-
+*/
 .navset:hover .link 
 {
-   width: 5%;
+   width:5%;
 }
 .navset .link:hover 
 {
-   width: 80%;
-   color: #555; 
+   width:80%;
+   color:#555; 
 }
-*/
-/* 
+
+/** 
   Форматируем начальное состояние пунктов меню: для маленьких иконок, больших и
   текстов в полных изображениях пунктов
-
+*/
 .navset .link .prev 
 {
-  padding-top: 0.4rem; 
-  padding-left: 0.2rem;
-  transition: .5s opacity;
-  opacity: 0;  */   /* скрыли маленькие иконки в начальных условиях 
-} */
-/*
+   padding-top:0.4rem; 
+   padding-left:0.2rem;
+   transition:.5s opacity;
+   opacity:0;     /* скрыли маленькие иконки в начальных условиях */
+} 
 .navset .link .small 
 {
-  padding-left: 0;
-  text-align: center; 
-  border-width: 0;
-   background: red; 
-} */
-/*
+   padding-left:0;
+   text-align:center; 
+} 
 .navset .link .full 
 {
-  padding-top: 0.2rem; 
-  transition: .5s opacity;
-  opacity: 0;     /* скрыли тексты пунктов меню в начальных условиях 
-} */
-/* 
+   padding-top:0.2rem; 
+   transition:.5s opacity;
+   opacity:0;     /* скрыли тексты пунктов меню в начальных условиях */
+} 
+/** 
   Зажигаем маленькие иконки, гасим большие и тексты меню, 
   когда наезжаем на панель меню  
-
+*/
 .navset:hover .prev 
 {
-   opacity: 1;
+   opacity:1;
 }
 .navset:hover .small, .navset .link:hover .full 
 {
-  opacity: 0;
+   opacity:0;
 }
 .navset:active .small 
 {
-   background: red; */
-	/*position: relative;
-	top: 1px;
+   /*background: red; 
+	position: relative;*/
+	top:1px;
 }
-*/
-/* 
+/** 
   Гасим маленькую иконку, зажигаем большую и пункт меню, когда наезжаем на него  
-
+*/
 .navset .link:hover .prev 
 {
-   opacity: 0;
+   opacity:0;
 }
 .navset .link:hover .small, .navset .link:hover .full 
 {
-   opacity: 1;
-   text-align: left; 
+   opacity:1;
+   text-align:left; 
 }
 .navset .link:hover .small 
 {
-   padding-left: 0.4rem;
+   padding-left:0.4rem;
 }
 .navset .link:hover .full 
 {
-   padding-left: 4.4rem;
-}*/
+   padding-left:4.4rem;
+}
 /*
  ************************************************************* styleSet.css ***
 */	
