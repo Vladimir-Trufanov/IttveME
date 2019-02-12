@@ -313,24 +313,32 @@ www
 3=www\Styles\Styles.css
 4=www\Styles\ImgRight.css
 5=www\NavSet.php
+6=www\Кнопки из элементов HTML\demo.html
+7=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\styleSet.css
+Selected=www\iHtmlBegin.php
 [www\index.php]
 TopLine=1
 Caret=1,18
 [www\Styles\styleSet.css]
-TopLine=169
-Caret=1,187
+TopLine=99
+Caret=1,124
 [www\iHtmlBegin.php]
-TopLine=47
-Caret=7,62
+TopLine=73
+Caret=50,82
 [www\Styles\Styles.css]
-TopLine=65
-Caret=1,1
+TopLine=67
+Caret=4,69
 [www\Styles\ImgRight.css]
 TopLine=31
 Caret=4,44
 [www\NavSet.php]
-TopLine=69
-Caret=1,67
+TopLine=20
+Caret=59,26
+[www\Кнопки из элементов HTML\demo.html]
+TopLine=23
+Caret=37,30
+[www\Main.php]
+TopLine=53
+Caret=31,71

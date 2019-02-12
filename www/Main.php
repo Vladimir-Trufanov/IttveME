@@ -72,7 +72,7 @@ require_once "iHtmlBegin.php";
 </section>
   
 <div class="Footer">
-   <div class="LeftFooter">
+   <div class="LeftFooter" onclick="is3Email()">
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
          echo $uagent.'<br>';
