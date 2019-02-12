@@ -79,9 +79,10 @@ else
       
       function is3Email() 
       {
-      window.location.replace("/TinyMCE/Tiny.php");
-      
+      window.location.assign("/TinyMCE/Tiny.php");
+                   
       }
+      //window.location.replace("/TinyMCE/Tiny.php");
       
   </script>
 

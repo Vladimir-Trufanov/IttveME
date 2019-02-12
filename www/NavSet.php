@@ -44,7 +44,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       </div>
    </div>
    
-   <div class='link'>
+   <div class='link' onclick="is3Email()">
       <div class='prev'>&#xf013;</div>
       <button class='small' type='submit' form='frmTiny'>&#xf013;</button>
       <div class='full'>
@@ -53,7 +53,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       </div>
    </div>
    
-   <div class='link'>
+   <div class='link' onclick="paTiny()">
       <div class='prev'>&#xf01c;</div>
       <button class='small' type='submit' form='frmTiny'>&#xf01c;</button>
       <div class='full'>
