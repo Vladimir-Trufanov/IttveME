@@ -66,13 +66,8 @@ h1
    padding-top: 0.6rem;
    font-size: 1.2rem;
    font-weight: bold; 
-   background: yellow; 
+   //background: yellow; 
 }
-.LeftFooter:active 
-{
-   background:red;
-}
-
 .LifeMenu
 {
    width: 5.36rem;

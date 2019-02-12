@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  06.02.2019
-// Copyright © 2019 tve                              Посл.изменение: 06.02.2019
+// Copyright © 2019 tve                              Посл.изменение: 12.02.2019
 
 // <!-- 
 // -->
@@ -21,6 +21,9 @@
    </script>
    <script 
       src="/TJsPrown/TJsPrown.js">
+   </script>
+   <script 
+      src="IttveME.js">
    </script>
    <script> 
       MakeCatchyQuotes() 

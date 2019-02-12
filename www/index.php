@@ -9,9 +9,6 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 14.01.2019
 
-//require_once "indPosRel.html";
-//require_once "indPosAbs.html";
-//require_once "indFlex.html";
 require_once "Main.php";
 
 // ************************************************************** index.php ***

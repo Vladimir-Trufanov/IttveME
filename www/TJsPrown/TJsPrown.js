@@ -14,20 +14,6 @@ function MakeCatchyQuotes()
    return Result;
 }
 
-function PageAssign(c)
-{
-   var Result=0;
-   window.location.assign(c);
-   
-   return Result;
-}
-
-      function paTiny() 
-      {
-         window.location.assign("/TinyMCE/Tiny.php");
-      }
-
-
 function getTime(secs) {
 	var sep = ':'; //separator character
 	var hours,minutes,seconds,time,am_pm;
@@ -57,4 +43,51 @@ function getTime(secs) {
 	} 
 	return time + ' ' + am_pm;
 }
+        
+  function TurnOnHotkeys(){
+  
+      document.onkeydown = function(e) {
+
+      // Ctrl+I  Показать установленные настройки сайта
+      if (e.ctrlKey && e.keyCode == 'I'.charCodeAt(0)) 
+      {
+        document.location.replace("index.php?Com=Sett");
+        return false;
+      }
+
+      // Ctrl+K  Показать кукисы
+      else if (e.ctrlKey && e.keyCode == 'K'.charCodeAt(0)) 
+      {
+        document.location.replace("index.php?Com=Cook");
+        return false;
+      }
+      
+      // Ctrl+P  Распечатать страницу (функцию предоставляет браузер)
+ 
+      // Ctrl+Q  Показать параметры запроса к сайту
+      else if (e.ctrlKey && e.keyCode == 'Q'.charCodeAt(0)) 
+      {
+        document.location.replace("index.php?Com=Parm");
+        return false;
+      }
+
+      // Ctrl+R  Перегрузить сайт без параметров
+      else if (e.ctrlKey && e.keyCode == 'R'.charCodeAt(0)) 
+      {
+        document.location.replace("index.php?Com=Remv");
+        return false;
+      }
+
+      // Ctrl+S  Сохранить страницу сайта (функцию предоставляет браузер Chrome‎)
+
+      // Ctrl+Z  Передать значение переменной в PHP
+      else if (e.ctrlKey && e.keyCode == 'Z'.charCodeAt(0)) 
+      {
+        var idi = 1352;
+        document.location.replace("index.php?idi="+idi);
+        return false;
+      }
+      
+    }
+  }
 

@@ -6,7 +6,7 @@
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 11.02.2019
+ Copyright © 2019 tve                                Посл.изменение: 12.02.2019
 */
 
 /**
@@ -26,7 +26,7 @@
 {
    height:100%;   /* 10rem; */
 }
-/*
+/**
    color: #ab4a16;  приятный коричневый цвет 
 */
 .navset .link 
@@ -45,9 +45,6 @@
    height:100%;   /* всю высоту родителя .link */
    font-family:fontawesome;
    font-size:3.6rem; 
-   border-width:0;
-   color:#aaa;    /* обычный серый цвет элементов панели меню */
-   background:#fff;
 }
 .navset .link .full .f1
 {
@@ -119,7 +116,7 @@
 }
 .navset .link:active 
 {
-   background:red;
+   background:radial-gradient(farthest-side ellipse at top left,#ededed, #fff);
 }
 
 /** 
@@ -170,11 +167,10 @@
 }
 /** 
   Показываем наезд на большую кнопку перед нажатием на неё
-  изменением курсора, положения и формы кнопки
+  изменением курсора и положения
 */
 .navset .link:hover .small 
 {
-   color:#333333; 
    padding-left:0.4rem;
    cursor:pointer;
 }
@@ -185,13 +181,7 @@
 .navset .link:hover .full 
 {
    margin-left:4.4rem;
-}
-/** 
-  Обрабатываем нажатие на кнопку
-*/
-.navset .link .small:active 
-{
-	top:1px;
+   cursor:pointer;
 }
 /*
  ************************************************************* styleSet.css ***

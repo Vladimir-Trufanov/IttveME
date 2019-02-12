@@ -23,13 +23,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
 
-<form id="frmTiny" method="get" action="/TinyMCE/Tiny.php"> </form>
-
 <div class='navset'>
    <div class='link'>
       <div class='prev'>&#xf044;</div>
-      <button class='small' type='submit' form='frmTiny'>&#xf044;</button>
-      <div class='full'>
+      <div class='small' onclick="paTiny()">&#xf044;</div>
+      <div class='full'  onclick="paTiny()">
          <div class='f1'>Edit</div>
          <div class='f2'>Создать, редактировать материал</div>
       </div>
@@ -37,26 +35,26 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
    
    <div class='link'>
       <div class='prev'>&#xf090;</div>
-      <button class='small' type='submit' form='frmTiny'>&#xf090;</button>
-      <div class='full'>
+      <div class='small' onclick="paTiny()">&#xf090;</div>
+      <div class='full'  onclick="paTiny()">
          <div class='f1'>Login</div>
          <div class='f2'>Зарегистрироваться на сайте, войти</div>
       </div>
    </div>
    
-   <div class='link' onclick="is3Email()">
+   <div class='link'>
       <div class='prev'>&#xf013;</div>
-      <button class='small' type='submit' form='frmTiny'>&#xf013;</button>
-      <div class='full'>
+      <div class='small' onclick="paTiny()">&#xf013;</div>
+      <div class='full'  onclick="paTiny()">
          <div class='f1'>Tuning</div>
          <div class='f2'>Изменить настройки сайта в браузере</div>
       </div>
    </div>
    
-   <div class='link' onclick="paTiny()">
+   <div class='link'>
       <div class='prev'>&#xf01c;</div>
-      <button class='small' type='submit' form='frmTiny'>&#xf01c;</button>
-      <div class='full'>
+      <div class='small' onclick="paTiny()">&#xf01c;</div>
+      <div class='full'  onclick="paTiny()">
          <div class='f1'>Inbox</div>
          <div class='f2'>Отправить сообщение автору</div>
       </div>
@@ -64,8 +62,8 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
   
    <div class='link'>
       <div class='prev'>&#xf08b;</div>
-      <button class='small' type='submit' form='frmTiny'>&#xf08b;</button>
-      <div class='full'>
+      <div class='small' onclick="paTiny()">&#xf08b;</div>
+      <div class='full'  onclick="paTiny()">
          <div class='f1'>Logout</div>
          <div class='f2'>Войти на сайт, как гость</div>
       </div>
