@@ -64,30 +64,6 @@ else
       <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
       <link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">
       <?php require_once "iJsJquery.php"; ?> 
-      
-      <script>
-      
-      function isiEmail() 
-      {
-         var window = window.open(url, 'windowName');
-      }
-      
-      function is2Email() 
-      {
-         window.open('?','_self');
-      }
-      
-      function is3Email() 
-      {
-      window.location.assign("/TinyMCE/Tiny.php");
-                   
-      }
-      //window.location.replace("/TinyMCE/Tiny.php");
-      
-  </script>
-
-      
-      
    </head>
 
    <body>

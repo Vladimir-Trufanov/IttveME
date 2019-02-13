@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	-www
+	+www
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -304,24 +304,20 @@ www
 		www\NavSet.php
 [Open project files]
 0=www\index.php
-1=www\iJsJquery.php
-2=www\NavSet.php
-3=www\Styles\styleSet.css
-4=www\Styles\Styles.css
-5=www\iHtmlBegin.php
-6=www\TJsPrown\TJsPrown.js
-7=www\IttveME.js
-8=www\Main.php
-9=www\TJsPrown\TJsPrown.css
+1=www\NavSet.php
+2=www\Styles\styleSet.css
+3=www\Styles\Styles.css
+4=www\iHtmlBegin.php
+5=www\TJsPrown\TJsPrown.js
+6=www\IttveME.js
+7=www\Main.php
+8=www\TJsPrown\TJsPrown.css
 [Selected Project Files]
 Main=
-Selected=www\iJsJquery.php
+Selected=www\iHtmlBegin.php
 [www\index.php]
 TopLine=1
 Caret=1,12
-[www\iJsJquery.php]
-TopLine=5
-Caret=41,23
 [www\NavSet.php]
 TopLine=25
 Caret=1,26
@@ -332,8 +328,8 @@ Caret=73,119
 TopLine=57
 Caret=1,69
 [www\iHtmlBegin.php]
-TopLine=45
-Caret=1,1
+TopLine=43
+Caret=1,67
 [www\TJsPrown\TJsPrown.js]
 TopLine=67
 Caret=1,93
@@ -341,7 +337,7 @@ Caret=1,93
 TopLine=1
 Caret=1,5
 [www\Main.php]
-TopLine=75
+TopLine=49
 Caret=27,75
 [www\TJsPrown\TJsPrown.css]
 TopLine=1
