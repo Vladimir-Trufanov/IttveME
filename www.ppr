@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	+www
+	-www
 		-_css
 			-images
 				www\_css\images\animated-overlay.gif
@@ -378,45 +378,21 @@ www
 		www\Site.php
 [Open project files]
 0=www\index.php
-1=www\NavSet.php
-2=www\Styles\styleSet.css
-3=www\Styles\Styles.css
-4=www\iHtmlBegin.php
-5=www\TJsPrown\TJsPrown.js
-6=www\IttveME.js
-7=www\Site.php
-8=www\TJsPrown\TJsPrown.css
-9=www\Main.php
+1=www\Site.php
+2=www\Main.php
+3=www\iHtmlBegin.php
 [Selected Project Files]
 Main=
 Selected=www\Main.php
 [www\index.php]
 TopLine=1
 Caret=1,12
-[www\NavSet.php]
-TopLine=25
-Caret=1,26
-[www\Styles\styleSet.css]
-TopLine=119
-Caret=73,119
-[www\Styles\Styles.css]
-TopLine=141
-Caret=1,147
-[www\iHtmlBegin.php]
-TopLine=53
-Caret=23,79
-[www\TJsPrown\TJsPrown.js]
-TopLine=67
-Caret=1,93
-[www\IttveME.js]
-TopLine=1
-Caret=1,5
 [www\Site.php]
-TopLine=65
-Caret=1,18
-[www\TJsPrown\TJsPrown.css]
 TopLine=1
-Caret=1,1
+Caret=1,31
 [www\Main.php]
-TopLine=39
-Caret=1,59
+TopLine=55
+Caret=42,60
+[www\iHtmlBegin.php]
+TopLine=65
+Caret=1,74

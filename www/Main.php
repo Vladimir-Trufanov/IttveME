@@ -24,6 +24,10 @@ require_once $SiteHost."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 require_once $SiteHost."/TPhpPrown/MakeUserError.php";
 
+
+//echo $SiteHost."/TPhpTools/TException/ExceptionClass.php"."<br>";
+require_once $SiteHost."/TPhpTools/TException/ExceptionClass.php";
+
 // Выполняем начальную инициализацию
 require_once "Inimem.php";
 
@@ -49,13 +53,27 @@ if ($PersName<>$UserName)
    \prown\MakeCookie('PersName',$PersName); 
 }
 
-// Разворачиваем страницу
-require_once "iHtmlBegin.php";
-\prown\MakeUserError('PersEntry1214',1);
-
-// Выполняем начальную инициализацию
-require_once "Site.php";
-
-require_once "iHtmlEnd.php";
+$w2e = new Exceptionizer(E_ALL);
+try 
+{
+   require_once "iHtmlBegin.php";
+   \prown\MakeUserError('PersEntry1214',2);
+   require_once "Site.php";
+   require_once "iHtmlEnd.php";
+}
+catch (E_EXCEPTION $e) 
+{
+   
+   echo "Системное исключение: {$e->getMessage()}";
+   echo '<pre>';
+   echo $e->getTraceAsString();
+   echo '</pre>';
+   
+   // При необходимости выводим дополнительную информацию
+   // Header("Content-type: text/plain");
+   // $headers = getallheaders();
+   // print_r($headers);
+   // print_r($_SERVER);
+}
 
 // *************************************************************** Main.php ***

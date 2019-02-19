@@ -9,14 +9,30 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 19.02.2019
 
-?>
-<!-- 
--->
+
+/*
 
 <div id="hello" title="Привет, Мир!">
 	<p>Это диалоговое окно на самом деле является тегом div, размещенным на странице с помощью абсолютного позиционирования.</p>
 	<p>Попробуйте перетащить диалоговое окно по экрану. Вы можете это сделать!</p>
 </div>
+      
+      <script>
+         $(document).ready(function() {
+         $('#hello').dialog
+         ({
+            width: 600,
+            position: 'left top',
+            show: {effect:'slideDown'},
+            hide: {effect:'explode', delay:250, duration:1000, easing:'easeInQuad'}
+         });
+         }); // end ready
+      </script>
+
+*/
+?>
+<!-- 
+-->
 
 <div class="Gallery">
    <?php
@@ -74,6 +90,8 @@
       ?>
    </div>
 </div>
+
+
 
 <?php
 

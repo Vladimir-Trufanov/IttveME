@@ -71,18 +71,6 @@ else
       
       <script src="../_js/jquery-ui.min.js"></script>
       
-      
-      <script>
-         $(document).ready(function() {
-         $('#hello').dialog
-         ({
-            width: 600,
-            position: 'left top',
-            show: {effect:'slideDown'},
-            hide: {effect:'explode', delay:250, duration:1000, easing:'easeInQuad'}
-         });
-         }); // end ready
-      </script>
 
    </head>
 
