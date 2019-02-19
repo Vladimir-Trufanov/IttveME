@@ -42,7 +42,7 @@ www
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -325,11 +325,11 @@ Caret=1,26
 TopLine=119
 Caret=73,119
 [www\Styles\Styles.css]
-TopLine=57
-Caret=1,69
+TopLine=141
+Caret=1,147
 [www\iHtmlBegin.php]
-TopLine=43
-Caret=1,67
+TopLine=57
+Caret=23,79
 [www\TJsPrown\TJsPrown.js]
 TopLine=67
 Caret=1,93
@@ -338,7 +338,7 @@ TopLine=1
 Caret=1,5
 [www\Main.php]
 TopLine=49
-Caret=27,75
+Caret=1,55
 [www\TJsPrown\TJsPrown.css]
 TopLine=1
 Caret=1,1

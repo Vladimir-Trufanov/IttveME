@@ -22,6 +22,7 @@ require_once $SiteHost."/TPhpPrown/getTranslit.php";
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 require_once $SiteHost."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
+require_once $SiteHost."/TPhpPrown/MakeUserError.php";
 
 // Выполняем начальную инициализацию
 require_once "Inimem.php";
@@ -50,9 +51,25 @@ if ($PersName<>$UserName)
 
 // Разворачиваем страницу
 require_once "iHtmlBegin.php";
+
+\prown\MakeUserError('PersEntry121');
+
+
 ?>
 <!-- 
 -->
+
+
+
+<div id="hello" title="Привет, Мир!">
+				<p>Это диалоговое окно на самом деле является тегом div, размещенным на странице с помощью абсолютного позиционирования.</p>
+				<p>Попробуйте перетащить диалоговое окно по экрану. Вы можете это сделать!</p>
+			</div>
+  
+<div class="Ers">
+   Это появившаяся b ошибка!
+</div>
+
 <div class="Gallery">
    <?php
    require_once "GalleryView.php";
@@ -111,6 +128,7 @@ require_once "iHtmlBegin.php";
 </div>
 
 <?php
+
 require_once "iHtmlEnd.php";
 
 // *************************************************************** Main.php ***

@@ -49,6 +49,9 @@ else
       <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
       <meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и жизнь его близких">
       <meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">
+
+      <link href="../_css/jquery-ui.min.css" rel="stylesheet">
+
       <link rel="stylesheet"
          href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;
          subset=cyrillic">
@@ -64,6 +67,23 @@ else
       <link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">
       <link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">
       <?php require_once "iJsJquery.php"; ?> 
+      
+      
+      <script src="../_js/jquery-ui.min.js"></script>
+      
+      
+      <script>
+         $(document).ready(function() {
+         $('#hello').dialog
+         ({
+            width: 600,
+            position: 'left top',
+            show: {effect:'slideDown'},
+            hide: {effect:'explode', delay:250, duration:1000, easing:'easeInQuad'}
+         });
+         }); // end ready
+      </script>
+
    </head>
 
    <body>
