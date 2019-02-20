@@ -372,25 +372,17 @@ www
 		www\Site.php
 [Open project files]
 0=www\index.php
-1=www\Site.php
-2=www\Main.php
-3=www\iHtmlBegin.php
-4=www\iJsJquery.php
+1=www\Main.php
+2=..\TPhpPrown\MakeUserError.php
 [Selected Project Files]
 Main=
-Selected=www\iJsJquery.php
+Selected=..\TPhpPrown\MakeUserError.php
 [www\index.php]
 TopLine=1
 Caret=1,12
-[www\Site.php]
-TopLine=26
-Caret=1,31
 [www\Main.php]
-TopLine=29
-Caret=30,60
-[www\iHtmlBegin.php]
-TopLine=5
-Caret=1,68
-[www\iJsJquery.php]
-TopLine=28
-Caret=1,12
+TopLine=10
+Caret=59,60
+[..\TPhpPrown\MakeUserError.php]
+TopLine=75
+Caret=17,50

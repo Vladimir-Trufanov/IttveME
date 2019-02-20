@@ -57,14 +57,14 @@ $w2e = new Exceptionizer(E_ALL);
 try 
 {
    require_once "iHtmlBegin.php";
-   \prown\MakeUserError('PersEntry1214',2);
+   \prown\MakeUserError('Это пользовательское сообщение',2,'ITtveME');
    require_once "Site.php";
    require_once "iHtmlEnd.php";
 }
 catch (E_EXCEPTION $e) 
 {
    
-   echo "Системное исключение: {$e->getMessage()}";
+   echo "{$e->getMessage()}";
    echo '<pre>';
    echo $e->getTraceAsString();
    echo '</pre>';
