@@ -17,8 +17,9 @@ define ("Tablet", "Tablet");     // "Устройство, запросивше�
 
 // Инициализируем общесайтовые переменные
 $uagent=$_SERVER['HTTP_USER_AGENT'];        // HTTP_USER_AGENT
-$SiteDevice=prown\getSiteDevice();          // 'Computer','Mobile','Tablet'
+$SiteDevice=prown\getSiteDevice();          // 'Computer','Mobile','Tablet'      
 $UserName=$_COOKIE['PersName'] ?? "Гость";  // Логин посетителя для авторизации
+$ModeError=2;                               // Режим вывода сообщений об ошибках
 
 // Инициализируем сессионные переменные
 if (!isset($_SESSION['Counter'])) $_SESSION['Counter']=0; // Посещения за сессию

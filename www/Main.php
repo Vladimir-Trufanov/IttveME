@@ -57,7 +57,9 @@ $w2e = new Exceptionizer(E_ALL);
 try 
 {
    require_once "iHtmlBegin.php";
-   \prown\MakeUserError('Это пользовательское сообщение',2,'ITtveME');
+   \prown\MakeUserError('Это пользовательское сообщение','ITtveME');
+   //$i=0;
+   //$j=1/$i;
    require_once "Site.php";
    require_once "iHtmlEnd.php";
 }
