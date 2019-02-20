@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 www
-	-www
+	+www
 		-_css
 			-images
 				www\_css\images\animated-overlay.gif
@@ -352,12 +352,6 @@ www
 			www\TinyMCE\tinymce.js
 			www\TinyMCE\tinymce.min.js
 		-TJsPrown
-			www\TJsPrown\jquery.min.js
-			www\TJsPrown\jquery-1.11.0.min.js
-			www\TJsPrown\jquery-ui.js
-			www\TJsPrown\jquery-ui.min.css
-			www\TJsPrown\jquery-ui.min.js
-			www\TJsPrown\site.js
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
@@ -381,18 +375,22 @@ www
 1=www\Site.php
 2=www\Main.php
 3=www\iHtmlBegin.php
+4=www\iJsJquery.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\iJsJquery.php
 [www\index.php]
 TopLine=1
 Caret=1,12
 [www\Site.php]
-TopLine=1
+TopLine=26
 Caret=1,31
 [www\Main.php]
-TopLine=55
-Caret=42,60
+TopLine=29
+Caret=30,60
 [www\iHtmlBegin.php]
-TopLine=65
-Caret=1,74
+TopLine=5
+Caret=1,68
+[www\iJsJquery.php]
+TopLine=28
+Caret=1,12
