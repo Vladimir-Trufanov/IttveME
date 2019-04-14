@@ -1,12 +1,12 @@
 [Config]
 Compilator.SaveAll=0
 Compilator.Capture=0
-Compilator.HideOutput=0
+Compilator.CompileOnBackground=0
 Compilator.ProgSaveAll=0
 Compilator.ProgRunSelection=0
 Compilator.LogType=0
 DefaultDir=C:\IttveME\www
-DefaultCPIndex=0
+DefaultCP=0
 LogtoEnd=1
 DontOpen=0
 AbsolutePath=0
@@ -15,73 +15,8 @@ ProjectFilesOnly=0
 HTServer=localhost
 Extensions=*.*
 [Project tree]
-www
+IttveME
 	+www
-		-_css
-			-images
-				www\_css\images\animated-overlay.gif
-				www\_css\images\ui-bg_diagonals-thick_18_b81900_40x40.png
-				www\_css\images\ui-bg_diagonals-thick_20_666666_40x40.png
-				www\_css\images\ui-bg_flat_10_000000_40x100.png
-				www\_css\images\ui-bg_glass_100_f6f6f6_1x400.png
-				www\_css\images\ui-bg_glass_100_fdf5ce_1x400.png
-				www\_css\images\ui-bg_glass_65_ffffff_1x400.png
-				www\_css\images\ui-bg_gloss-wave_35_f6a828_500x100.png
-				www\_css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png
-				www\_css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png
-				www\_css\images\ui-icons_222222_256x240.png
-				www\_css\images\ui-icons_228ef1_256x240.png
-				www\_css\images\ui-icons_ef8c08_256x240.png
-				www\_css\images\ui-icons_ffd27a_256x240.png
-				www\_css\images\ui-icons_ffffff_256x240.png
-			www\_css\ColabBol-webfont.eot
-			www\_css\ColabBol-webfont.svg
-			www\_css\ColabBol-webfont.ttf
-			www\_css\ColabBol-webfont.woff
-			www\_css\ColabLig-webfont.eot
-			www\_css\ColabLig-webfont.svg
-			www\_css\ColabLig-webfont.ttf
-			www\_css\ColabLig-webfont.woff
-			www\_css\ColabMed-webfont.eot
-			www\_css\ColabMed-webfont.svg
-			www\_css\ColabMed-webfont.ttf
-			www\_css\ColabMed-webfont.woff
-			www\_css\ColabReg-webfont.eot
-			www\_css\ColabReg-webfont.svg
-			www\_css\ColabReg-webfont.ttf
-			www\_css\ColabReg-webfont.woff
-			www\_css\ColabThi-webfont.eot
-			www\_css\ColabThi-webfont.svg
-			www\_css\ColabThi-webfont.ttf
-			www\_css\ColabThi-webfont.woff
-			www\_css\Inconsolata-webfont.eot
-			www\_css\Inconsolata-webfont.svg
-			www\_css\Inconsolata-webfont.ttf
-			www\_css\Inconsolata-webfont.woff
-			www\_css\jquery-ui.min.css
-			www\_css\leaguegothic-condensed-italic-webfont.eot
-			www\_css\leaguegothic-condensed-italic-webfont.svg
-			www\_css\leaguegothic-condensed-italic-webfont.ttf
-			www\_css\leaguegothic-condensed-italic-webfont.woff
-			www\_css\leaguegothic-condensed-regular-webfont.eot
-			www\_css\leaguegothic-condensed-regular-webfont.svg
-			www\_css\leaguegothic-condensed-regular-webfont.ttf
-			www\_css\leaguegothic-condensed-regular-webfont.woff
-			www\_css\leaguegothic-italic-webfont.eot
-			www\_css\leaguegothic-italic-webfont.svg
-			www\_css\leaguegothic-italic-webfont.ttf
-			www\_css\leaguegothic-italic-webfont.woff
-			www\_css\leaguegothic-regular-webfont.eot
-			www\_css\leaguegothic-regular-webfont.svg
-			www\_css\leaguegothic-regular-webfont.ttf
-			www\_css\leaguegothic-regular-webfont.woff
-			www\_css\site.css
-		-_js
-			www\_js\jquery.min.js
-			www\_js\jquery-1.11.0.min.js
-			www\_js\jquery-ui.js
-			www\_js\jquery-ui.min.js
-			www\_js\site.js
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -104,6 +39,8 @@ www
 			-tveArc2
 			-tveArt
 				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
+		+PHP
+			www\PHP\Exceptionizer.php
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
@@ -363,6 +300,7 @@ www
 		www\iHtmlEnd.php
 		www\iJsJquery.php
 		www\iMobileStyles.php
+		www\includErrs.php
 		www\index.php
 		www\Inimem.php
 		www\IttveME.js
@@ -375,18 +313,38 @@ www
 1=www\Main.php
 2=..\TPhpPrown\MakeUserError.php
 3=www\Inimem.php
+4=www\iHtmlBegin.php
+5=www\NavSet.php
+6=www\Styles\styleSet.css
+7=www\PHP\Exceptionizer.php
+8=www\includErrs.php
 [Selected Project Files]
 Main=
-Selected=www\Inimem.php
+Selected=www\includErrs.php
 [www\index.php]
 TopLine=1
 Caret=1,12
 [www\Main.php]
-TopLine=7
-Caret=6,62
+TopLine=57
+Caret=28,66
 [..\TPhpPrown\MakeUserError.php]
 TopLine=63
 Caret=21,71
 [www\Inimem.php]
 TopLine=17
 Caret=13,22
+[www\iHtmlBegin.php]
+TopLine=16
+Caret=19,41
+[www\NavSet.php]
+TopLine=23
+Caret=33,37
+[www\Styles\styleSet.css]
+TopLine=27
+Caret=1,41
+[www\PHP\Exceptionizer.php]
+TopLine=3
+Caret=7,11
+[www\includErrs.php]
+TopLine=23
+Caret=1,28

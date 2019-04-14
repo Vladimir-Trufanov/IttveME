@@ -26,7 +26,9 @@ require_once $SiteHost."/TPhpPrown/MakeUserError.php";
 
 
 //echo $SiteHost."/TPhpTools/TException/ExceptionClass.php"."<br>";
-require_once $SiteHost."/TPhpTools/TException/ExceptionClass.php";
+//require_once $SiteHost."/TPhpTools/TException/ExceptionClass.php";
+//require_once $SiteRoot."/PHP/Exceptionizer.php";
+require_once "PHP/Exceptionizer.php";
 
 // Выполняем начальную инициализацию
 require_once "Inimem.php";
@@ -53,13 +55,15 @@ if ($PersName<>$UserName)
    \prown\MakeCookie('PersName',$PersName); 
 }
 
-$w2e = new Exceptionizer(E_ALL);
+//$w2e = new Exceptionizer(E_ALL);
+$w2e = new PHP_Exceptionizer(E_ALL);
 try 
 {
    require_once "iHtmlBegin.php";
-   \prown\MakeUserError('Это пользовательское сообщение','ITtveME');
+   //\prown\MakeUserError('Это пользовательское сообщение','ITtveME');
    //$i=0;
    //$j=1/$i;
+   require_once "includErrs.php";
    require_once "Site.php";
    require_once "iHtmlEnd.php";
 }
