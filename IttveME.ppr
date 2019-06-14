@@ -311,13 +311,7 @@ IttveME
 [Open project files]
 0=www\index.php
 1=www\Main.php
-2=..\TPhpPrown\MakeUserError.php
-3=www\Inimem.php
-4=www\iHtmlBegin.php
-5=www\NavSet.php
-6=www\Styles\styleSet.css
-7=www\PHP\Exceptionizer.php
-8=www\includErrs.php
+2=www\includErrs.php
 [Selected Project Files]
 Main=
 Selected=www\includErrs.php
@@ -325,26 +319,8 @@ Selected=www\includErrs.php
 TopLine=1
 Caret=1,12
 [www\Main.php]
-TopLine=57
-Caret=28,66
-[..\TPhpPrown\MakeUserError.php]
-TopLine=63
-Caret=21,71
-[www\Inimem.php]
-TopLine=17
-Caret=13,22
-[www\iHtmlBegin.php]
-TopLine=16
-Caret=19,41
-[www\NavSet.php]
-TopLine=23
-Caret=33,37
-[www\Styles\styleSet.css]
-TopLine=27
-Caret=1,41
-[www\PHP\Exceptionizer.php]
-TopLine=3
-Caret=7,11
+TopLine=45
+Caret=1,1
 [www\includErrs.php]
-TopLine=23
-Caret=1,28
+TopLine=71
+Caret=3,50

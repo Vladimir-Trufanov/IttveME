@@ -69,9 +69,9 @@ try
 }
 catch (E_EXCEPTION $e) 
 {
-   
+   echo '<pre>195';
    echo "{$e->getMessage()}";
-   echo '<pre>';
+   echo '<br>195<br>';
    echo $e->getTraceAsString();
    echo '</pre>';
    
