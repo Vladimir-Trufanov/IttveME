@@ -33,7 +33,7 @@
 ?>
 <!-- 
 -->
-
+<div id="Content">
 <div class="Gallery">
    <?php
    require_once "GalleryView.php";
@@ -51,6 +51,16 @@
    require_once "Pages/tveArc1/tve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html";
    ?>
 </section>
+
+<div>
+   <img class="imgCard" id="Rocary" 
+   src="/Images/nasampo.jpg" 
+   alt="Хочешь кваску">
+</div>
+
+
+</div>
+
   
 <div class="Footer">
    <div class="LeftFooter">

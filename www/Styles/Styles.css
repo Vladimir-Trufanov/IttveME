@@ -176,6 +176,11 @@ h1
    font-weight: bold; 
    color: red;
 }
+
+#Rocary
+{
+   display: none;
+}
 /*
  *************************************************************** Styles.css ***
 */	

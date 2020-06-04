@@ -11,13 +11,8 @@
 
 // Определяем сайтовые константы
 define ("ChangeSize", "chs");    // "Изменить размер базового шрифта"  
-define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
-define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
-define ("Tablet", "Tablet");     // "Устройство, запросившее сайт - планшет"  
 
 // Инициализируем общесайтовые переменные
-$uagent=$_SERVER['HTTP_USER_AGENT'];        // HTTP_USER_AGENT
-$SiteDevice=prown\getSiteDevice();          // 'Computer','Mobile','Tablet'      
 $UserName=$_COOKIE['PersName'] ?? "Гость";  // Логин посетителя для авторизации
 $ModeError=2;                               // Режим вывода сообщений об ошибках
 

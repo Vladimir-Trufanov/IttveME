@@ -1,0 +1,13 @@
+[04-Jun-2020 17:16:03 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/TPhpPrown/getSiteDevice.php' (include_path='.;C:\php\pear') in C:\IttveME\www\Main.php on line 18
+[04-Jun-2020 17:16:32 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\IttveME\www\Inimem.php:20
+Stack trace:
+#0 C:\IttveME\www\Main.php(23): require_once()
+#1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
+#2 {main}
+  thrown in C:\IttveME\www\Inimem.php on line 20
+[04-Jun-2020 17:17:05 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\IttveME\www\Inimem.php:17
+Stack trace:
+#0 C:\IttveME\www\Main.php(23): require_once()
+#1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
+#2 {main}
+  thrown in C:\IttveME\www\Inimem.php on line 17

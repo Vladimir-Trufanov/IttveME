@@ -48,7 +48,7 @@
 </div>
 
 <div class="Card">
-   <img class="imgCard" 
+   <img class="imgCard" id="hochesh" 
    src="/Images/hochesh'-kvasku.jpg" 
    alt="Хочешь кваску">
 </div>
