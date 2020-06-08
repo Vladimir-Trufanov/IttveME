@@ -11,23 +11,35 @@ function clickHandler(event)
   console.log(event.target.id);
   if  (event.target.id=='hochesh')
   {
+      /* 
+      // первый вариант
       $('.Gallery').css('display','none');
       $('.News').css('display','none');
       $('.Life').css('display','none');
 
       $('#Rocary').css('display','block');
-  
+      */
+      var elem = document.getElementById("Rocary1");
+      elem.innerHTML = '<div> <img class="imgCard2" id="Rocary2" '+
+                       'src="/Images/nasampo.jpg" '+ 
+                       'alt="Хочешь кваску"> </div>';
   }
   else if  (event.target.id=='Rocary')
   {
+      /*
+      // первый вариант
       $('.Gallery').css('display','block');
       $('.News').css('display','block');
       $('.Life').css('display','block');
 
       $('#Rocary').css('display','none');
-  
+      */
   
   }
+
+
+  /*
+*/
   
   
   
@@ -50,3 +62,17 @@ function clickHandler(event)
    */
 }
 
+/*
+$(document).ready(function()
+{
+$('img').each(function(){
+$(this).error(function(){ $(this).attr('src', 'noimg.png'); });
+});
+});
+*/
+
+$('#Rocary').on('error', function () 
+{
+  console.log('Rocary on error');
+  //$(this).attr('src', 'path_to_default_image.png');
+});

@@ -40,7 +40,7 @@
    ?> 
 </div>
 
-<section class="News">
+<section class="News" id="Rocary1">
    <?php
    require_once "Pages/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html";
    ?>
@@ -55,6 +55,10 @@
 <div>
    <img class="imgCard" id="Rocary" 
    src="/Images/nasampo.jpg" 
+   <!-- 
+   src="https://3.downloader.disk.yandex.ru/preview/72929e9c7c66f597b4f92c15b812cc3dbf08221c0e969a6663f79a4ece7ef206/inf/DhLO1VNSy6snhnvOdCmJUcSnXDlNO2C_9P8eTvVJCRrdN8LxBBo8Z_Uz8bPLQj88iGyLe-r0UBJ9MmzptJzqSw==?uid=195746226&filename=IMG_2548.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&tknv=v2&owner_uid=195746226&size=1600x762"
+   src="/Images/nasampo.jpg" 
+   -->
    alt="Хочешь кваску">
 </div>
 
