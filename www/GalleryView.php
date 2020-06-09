@@ -14,11 +14,11 @@
 -->
 <div class="Card">
    <img class="imgCard" 
-   src="/Pages/tveArc1/tve1-1-pod^yom-nastroeniya.jpg" 
+   src="tveArc/tveArc1/tve1-1-pod^yom-nastroeniya.jpg" 
    alt="Подъём настроения">
    <p class="pCard"> 
       <?php
-      require_once "Pages/tveArc1/tve1-1-comm.txt";
+      require_once "tveArc/tveArc1/tve1-1-comm.txt";
       ?> 
    </p>
 </div>

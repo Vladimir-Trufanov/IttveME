@@ -11,3 +11,6 @@ Stack trace:
 #1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
 #2 {main}
   thrown in C:\IttveME\www\Inimem.php on line 17
+[09-Jun-2020 20:45:46 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
+[09-Jun-2020 20:58:29 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/tveArc1/tve1-1-comm.txt' (include_path='.;C:\php\pear') in C:\IttveME\www\GalleryView.php on line 21
+[09-Jun-2020 20:59:27 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
