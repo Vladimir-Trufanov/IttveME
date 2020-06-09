@@ -320,7 +320,7 @@ IttveME
 7=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\GalleryView.php
 [www\index.php]
 TopLine=11
 Caret=12,20
@@ -328,10 +328,10 @@ Caret=12,20
 TopLine=23
 Caret=19,23
 [www\Site.php]
-TopLine=39
+TopLine=31
 Caret=1,55
 [www\GalleryView.php]
-TopLine=31
+TopLine=46
 Caret=28,34
 [www\iHtmlBegin.php]
 TopLine=43
@@ -343,5 +343,5 @@ Caret=1,1
 TopLine=9
 Caret=64,23
 [www\Styles\Styles.css]
-TopLine=39
+TopLine=17
 Caret=25,51
