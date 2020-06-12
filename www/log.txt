@@ -20,3 +20,6 @@ Stack trace:
 [12-Jun-2020 17:46:41 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'GalleryView.php' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 39
 [12-Jun-2020 17:49:45 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'GalleryArt.php' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 39
 [12-Jun-2020 17:50:25 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'tveArc/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
+[12-Jun-2020 19:55:22 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\IttveME\www\iniHtmlBegin.php on line 42
+[12-Jun-2020 21:58:29 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Art/ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
+[12-Jun-2020 21:59:49 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Art/ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45

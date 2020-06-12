@@ -14,43 +14,56 @@
 -->
 <div class="Card">
    <img class="imgCard" 
-   src="tveArc/tveArc1/tve1-1-pod^yom-nastroeniya.jpg" 
+   src="Art/ittve1-1-Подъём-настроения.jpg" 
    alt="Подъём настроения">
    <p class="pCard"> 
-      <?php
-      //require_once "tveArc/tveArc1/tve1-1-comm.txt";
-      ?> 
+   Это текст комментария под картинкой! И здесь тоже текст комментария под картинкой!    
    </p>
 </div>
 
 <div class="Card">
    <img class="imgCard" 
-   src="/Images/С заботой и к мамам.jpg" 
+   src="Art/ittve1-1-С-заботой-и-к-мамам.jpg" 
    alt="С заботой и к мамам">
+   <p class="pCard"> 
+   С заботой и к мамам   
+   </p>
 </div>
 
 <div class="Card">
    <img class="imgCard" 
-   src="/Images/nasampo.jpg" 
+   src="Art/ittve1-1-На-Сампо.jpg" 
    alt="На горе Сампо">
+   <p class="pCard"> 
+   На горе Сампо   
+   </p>
 </div>
 
 <div class="Card">
    <img class="imgCard" 
-   src="/Images/dozhd'-prazdniku-ne-pomeha.jpg" 
+   src="Art/ittve1-1-Дождь-празднику-не-помеха.jpg" 
    alt="Дождь празднику не помеха">
+   <p class="pCard"> 
+   Дождь празднику не помеха   
+   </p>
 </div>
 
 <div class="Card">
    <img class="imgCard" 
-   src="/Images/uyolochki.png" 
+   src="Art/ittve1-1-У-ёлочки.png" 
    alt="У ёлочки">
+   <p class="pCard"> 
+   У ёлочки   
+   </p>
 </div>
 
 <div class="Card">
    <img class="imgCard" id="hochesh" 
-   src="/Images/hochesh'-kvasku.jpg" 
+   src="Art/ittve1-1-Хочешь-кваску.jpg" 
    alt="Хочешь кваску">
+   <p class="pCard"> 
+   Хочешь кваску  
+   </p>
 </div>
 
 <?php

@@ -4,7 +4,7 @@ function paTiny()
 }
 
 
-// Обрабатываем клики на кнопках 'настройка' и 'назад'
+// РћР±СЂР°Р±Р°С‚С‹РІР°РµРј РєР»РёРєРё РЅР° РєРЅРѕРїРєР°С… 'РЅР°СЃС‚СЂРѕР№РєР°' Рё 'РЅР°Р·Р°Рґ'
 document.addEventListener("click",clickHandler,false);
 function clickHandler(event)
 {
@@ -12,7 +12,7 @@ function clickHandler(event)
   if  (event.target.id=='hochesh')
   {
       /* 
-      // первый вариант
+      // РїРµСЂРІС‹Р№ РІР°СЂРёР°РЅС‚
       $('.Gallery').css('display','none');
       $('.News').css('display','none');
       $('.Life').css('display','none');
@@ -20,14 +20,16 @@ function clickHandler(event)
       $('#Rocary').css('display','block');
       */
       var elem = document.getElementById("Rocary1");
+      
       elem.innerHTML = '<div> <img class="imgCard2" id="Rocary2" '+
-                       'src="/Images/nasampo.jpg" '+ 
-                       'alt="Хочешь кваску"> </div>';
+                       'src="Art/ittve1-1-РќР°-РЎР°РјРїРѕ.jpg" '+ 
+                       'alt="РќР° РіРѕСЂРµ РЎР°РјРїРѕ"> </div>';
+      
   }
   else if  (event.target.id=='Rocary')
   {
       /*
-      // первый вариант
+      // РїРµСЂРІС‹Р№ РІР°СЂРёР°РЅС‚
       $('.Gallery').css('display','block');
       $('.News').css('display','block');
       $('.Life').css('display','block');

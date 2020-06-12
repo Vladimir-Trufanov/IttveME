@@ -17,9 +17,10 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
-		+Arc
+		-Arc
 			www\Arc\GalleryArc.php
 			www\Arc\ittve2-114-po-trope-k-karnizu-reki-bzerp'.html
+			www\Arc\ittve2-65-20140822-Этюд-из-аптекарского-сада.html
 			www\Arc\ittve2-65-Автомобиль-что-позабавит-и-повеселит.jpg
 			www\Arc\ittve2-65-В-город-c-молоком.jpg
 			www\Arc\ittve2-65-Вокруг-прудика.jpg
@@ -34,13 +35,16 @@ IttveME
 			www\Arc\ittve2-65-Привет-сад.jpg
 			www\Arc\ittve2-65-Фонтанчик.jpg
 			www\Arc\ittve2-65-Чай-и-блины-с-медом-это-вкусно.jpg
-			www\Arc\ittve2-65-Этюд-из-аптекарского-сада-20140822.html
 		+Art
 			www\Art\GalleryArt.php
-			www\Art\ittve1-1-comm.txt
-			www\Art\ittve1-1-pod^yom-nastroeniya.jpg
-			www\Art\ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html
-		+Images
+			www\Art\ittve1-1-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+			www\Art\ittve1-1-Дождь-празднику-не-помеха.jpg
+			www\Art\ittve1-1-На-Сампо.jpg
+			www\Art\ittve1-1-Подъём-настроения.jpg
+			www\Art\ittve1-1-С-заботой-и-к-мамам.jpg
+			www\Art\ittve1-1-У-ёлочки.png
+			www\Art\ittve1-1-Хочешь-кваску.jpg
+		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
 			www\Images\Kwinflat.jpg
@@ -52,7 +56,7 @@ IttveME
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		+Styles
+		-Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -302,13 +306,11 @@ IttveME
 		www\.htaccess
 		www\.user.ini
 		www\favicon.ico
-		www\iGetAbove.php
-		www\iHtmlBegin.php
-		www\iHtmlEnd.php
-		www\iJsJquery.php
 		www\iMobileStyles.php
 		www\includErrs.php
 		www\index.php
+		www\iniHtmlBegin.php
+		www\iniHtmlEnd.php
 		www\iniMem.php
 		www\iniWorkSpace.php
 		www\IttveME.js
@@ -323,15 +325,19 @@ IttveME
 2=www\Styles\Styles.css
 3=www\Styles\ImgLeft.css
 4=www\Styles\ImgRight.css
+5=www\Main.php
+6=www\iniHtmlBegin.php
+7=www\Art\GalleryArt.php
+8=www\IttveME.js
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\IttveME.js
 [www\index.php]
 TopLine=15
 Caret=12,20
 [www\Site.php]
-TopLine=25
-Caret=24,51
+TopLine=45
+Caret=22,58
 [www\Styles\Styles.css]
 TopLine=123
 Caret=1,1
@@ -341,3 +347,15 @@ Caret=1,1
 [www\Styles\ImgRight.css]
 TopLine=3
 Caret=1,1
+[www\Main.php]
+TopLine=27
+Caret=21,53
+[www\iniHtmlBegin.php]
+TopLine=40
+Caret=1,68
+[www\Art\GalleryArt.php]
+TopLine=29
+Caret=1,37
+[www\IttveME.js]
+TopLine=17
+Caret=1,28
