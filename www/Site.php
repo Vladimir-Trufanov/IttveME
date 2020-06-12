@@ -36,19 +36,19 @@
 <div id="Content">
 <div class="Gallery">
    <?php
-   require_once "GalleryView.php";
+   require_once "Art/GalleryArt.php";
    ?> 
 </div>
 
 <section class="News" id="Rocary1">
    <?php
-   require_once "tveArc/tveArt/tve2-114-po-trope-k-karnizu-reki-bzerp'.html";
+   require_once "Art/ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html";
    ?>
 </section>
 
 <section class="Life">
    <?php
-   require_once "tveArc/tveArc1/tve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html";
+   require_once "Arc/ittve2-114-po-trope-k-karnizu-reki-bzerp'.html";
    ?>
 </section>
 

@@ -18,7 +18,7 @@
    alt="Подъём настроения">
    <p class="pCard"> 
       <?php
-      require_once "tveArc/tveArc1/tve1-1-comm.txt";
+      //require_once "tveArc/tveArc1/tve1-1-comm.txt";
       ?> 
    </p>
 </div>

@@ -17,30 +17,38 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
-		-Images
+		+Arc
+			www\Arc\GalleryArc.php
+			www\Arc\ittve2-114-po-trope-k-karnizu-reki-bzerp'.html
+			www\Arc\ittve2-65-Автомобиль-что-позабавит-и-повеселит.jpg
+			www\Arc\ittve2-65-В-город-c-молоком.jpg
+			www\Arc\ittve2-65-Вокруг-прудика.jpg
+			www\Arc\ittve2-65-Всем-солнечного-лета.jpg
+			www\Arc\ittve2-65-Едем-по-грибку.jpg
+			www\Arc\ittve2-65-Здесь-здоровье.jpg
+			www\Arc\ittve2-65-На-мостике.jpg
+			www\Arc\ittve2-65-Островок.jpg
+			www\Arc\ittve2-65-Первое-впечатление-от-Беларуси.jpg
+			www\Arc\ittve2-65-Первое-впечатление-от-Беларуси.txt
+			www\Arc\ittve2-65-Пока-аптекарский-садик.jpg
+			www\Arc\ittve2-65-Привет-сад.jpg
+			www\Arc\ittve2-65-Фонтанчик.jpg
+			www\Arc\ittve2-65-Чай-и-блины-с-медом-это-вкусно.jpg
+			www\Arc\ittve2-65-Этюд-из-аптекарского-сада-20140822.html
+		+Art
+			www\Art\GalleryArt.php
+			www\Art\ittve1-1-comm.txt
+			www\Art\ittve1-1-pod^yom-nastroeniya.jpg
+			www\Art\ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html
+		+Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
-			www\Images\dozhd'-prazdniku-ne-pomeha.jpg
-			www\Images\hochesh'-kvasku.jpg
 			www\Images\Kwinflat.jpg
-			www\Images\nasampo.jpg
-			www\Images\uyolochki.png
-			www\Images\С заботой и к мамам.jpg
 		-KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
 			-Temp
-		-Pages
-			-tveArc1
-				www\Pages\tveArc1\tve1-1-comm.txt
-				www\Pages\tveArc1\tve1-1-pod^yom-nastroeniya.jpg
-				www\Pages\tveArc1\tve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html
-			-tveArc2
-			-tveArt
-				www\Pages\tveArt\tve2-114-po-trope-k-karnizu-reki-bzerp'.html
-		-PHP
-			www\PHP\Exceptionizer.php
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
@@ -294,7 +302,6 @@ IttveME
 		www\.htaccess
 		www\.user.ini
 		www\favicon.ico
-		www\GalleryView.php
 		www\iGetAbove.php
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
@@ -302,46 +309,35 @@ IttveME
 		www\iMobileStyles.php
 		www\includErrs.php
 		www\index.php
-		www\Inimem.php
+		www\iniMem.php
 		www\iniWorkSpace.php
 		www\IttveME.js
 		www\iUserError.php
+		www\log.txt
 		www\Main.php
 		www\NavSet.php
 		www\Site.php
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\Site.php
-3=www\GalleryView.php
-4=www\iHtmlBegin.php
-5=www\iJsJquery.php
-6=www\IttveME.js
-7=www\Styles\Styles.css
+1=www\Site.php
+2=www\Styles\Styles.css
+3=www\Styles\ImgLeft.css
+4=www\Styles\ImgRight.css
 [Selected Project Files]
 Main=
 Selected=www\Site.php
 [www\index.php]
-TopLine=11
+TopLine=15
 Caret=12,20
-[www\Main.php]
-TopLine=23
-Caret=19,23
 [www\Site.php]
-TopLine=37
+TopLine=25
 Caret=24,51
-[www\GalleryView.php]
-TopLine=5
-Caret=9,17
-[www\iHtmlBegin.php]
-TopLine=43
-Caret=1,1
-[www\iJsJquery.php]
-TopLine=51
-Caret=1,1
-[www\IttveME.js]
-TopLine=9
-Caret=64,23
 [www\Styles\Styles.css]
-TopLine=23
-Caret=25,51
+TopLine=123
+Caret=1,1
+[www\Styles\ImgLeft.css]
+TopLine=3
+Caret=1,1
+[www\Styles\ImgRight.css]
+TopLine=3
+Caret=1,1
