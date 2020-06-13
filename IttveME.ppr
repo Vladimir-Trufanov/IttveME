@@ -35,7 +35,7 @@ IttveME
 			www\Arc\ittve2-65-Привет-сад.jpg
 			www\Arc\ittve2-65-Фонтанчик.jpg
 			www\Arc\ittve2-65-Чай-и-блины-с-медом-это-вкусно.jpg
-		+Art
+		-Art
 			www\Art\GalleryArt.php
 			www\Art\ittve1-1-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\Art\ittve1-1-Дождь-празднику-не-помеха.jpg
@@ -48,7 +48,7 @@ IttveME
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
 			www\Images\Kwinflat.jpg
-		-KwinTiny
+		+KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
@@ -331,13 +331,13 @@ IttveME
 8=www\IttveME.js
 [Selected Project Files]
 Main=
-Selected=www\IttveME.js
+Selected=www\Site.php
 [www\index.php]
 TopLine=15
 Caret=12,20
 [www\Site.php]
-TopLine=45
-Caret=22,58
+TopLine=29
+Caret=73,51
 [www\Styles\Styles.css]
 TopLine=123
 Caret=1,1
@@ -351,11 +351,11 @@ Caret=1,1
 TopLine=27
 Caret=21,53
 [www\iniHtmlBegin.php]
-TopLine=40
+TopLine=41
 Caret=1,68
 [www\Art\GalleryArt.php]
-TopLine=29
-Caret=1,37
+TopLine=47
+Caret=23,62
 [www\IttveME.js]
-TopLine=17
+TopLine=1
 Caret=1,28
