@@ -24,3 +24,21 @@ Stack trace:
 [12-Jun-2020 21:58:29 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Art/ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
 [12-Jun-2020 21:59:49 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Art/ittve1-1-оsobennosti-ustrojstva-vintikov-v-moej-golove.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
 [13-Jun-2020 22:08:27 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Art/ittve1-1-20130201-Особенности-устройства-винтиков-в-моей-голове.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 45
+[14-Jun-2020 20:03:18 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MarkSite() in C:\IttveME\www\UpSite.php:12
+Stack trace:
+#0 C:\IttveME\www\Main.php(49): require_once()
+#1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
+#2 {main}
+  thrown in C:\IttveME\www\UpSite.php on line 12
+[14-Jun-2020 20:03:18 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MarkSite() in C:\IttveME\www\UpSite.php:12
+Stack trace:
+#0 C:\IttveME\www\Main.php(49): require_once()
+#1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
+#2 {main}
+  thrown in C:\IttveME\www\UpSite.php on line 12
+[15-Jun-2020 19:15:32 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MarkSite() in C:\IttveME\www\UpSite.php:12
+Stack trace:
+#0 C:\IttveME\www\Main.php(49): require_once()
+#1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
+#2 {main}
+  thrown in C:\IttveME\www\UpSite.php on line 12

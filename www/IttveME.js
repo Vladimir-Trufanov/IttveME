@@ -1,6 +1,6 @@
 function paTiny() 
 {
-   window.location.assign("/TinyMCE/Tiny.php");
+   //window.location.assign("/TinyMCE/Tiny.php");
 }
 
 
@@ -22,7 +22,7 @@ function clickHandler(event)
       var elem = document.getElementById("Rocary1");
       
       elem.innerHTML = '<div> <img class="imgCard2" id="Rocary2" '+
-                       'src="Art/ittve1-1-На-Сампо.jpg" '+ 
+                       'src="Art/ittve01-001-На-Сампо.jpg" '+ 
                        'alt="На горе Сампо"> </div>';
       
   }

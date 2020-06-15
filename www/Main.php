@@ -45,11 +45,7 @@ if ($PersName<>$UserName)
 }
 
    require_once "iniHtmlBegin.php";
-   //\prown\MakeUserError('Это пользовательское сообщение','ITtveME');
-   //$i=0;
-   //$j=1/$i;
-   require_once "includErrs.php";
-   require_once "Site.php";
+   require_once "UpSite.php";
    require_once "iniHtmlEnd.php";
    
    // При необходимости выводим дополнительную информацию

@@ -19,36 +19,36 @@ IttveME
 	+www
 		-Arc
 			www\Arc\GalleryArc.php
-			www\Arc\ittve2-114-po-trope-k-karnizu-reki-bzerp'.html
-			www\Arc\ittve2-65-20140822-Этюд-из-аптекарского-сада.html
-			www\Arc\ittve2-65-Автомобиль-что-позабавит-и-повеселит.jpg
-			www\Arc\ittve2-65-В-город-c-молоком.jpg
-			www\Arc\ittve2-65-Вокруг-прудика.jpg
-			www\Arc\ittve2-65-Всем-солнечного-лета.jpg
-			www\Arc\ittve2-65-Едем-по-грибку.jpg
-			www\Arc\ittve2-65-Здесь-здоровье.jpg
-			www\Arc\ittve2-65-На-мостике.jpg
-			www\Arc\ittve2-65-Островок.jpg
-			www\Arc\ittve2-65-Первое-впечатление-от-Беларуси.jpg
-			www\Arc\ittve2-65-Первое-впечатление-от-Беларуси.txt
-			www\Arc\ittve2-65-Пока-аптекарский-садик.jpg
-			www\Arc\ittve2-65-Привет-сад.jpg
-			www\Arc\ittve2-65-Фонтанчик.jpg
-			www\Arc\ittve2-65-Чай-и-блины-с-медом-это-вкусно.jpg
+			www\Arc\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
+			www\Arc\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
+			www\Arc\ittve02-065-В-город-c-молоком.jpg
+			www\Arc\ittve02-065-Вокруг-прудика.jpg
+			www\Arc\ittve02-065-Всем-солнечного-лета.jpg
+			www\Arc\ittve02-065-Едем-по-грибку.jpg
+			www\Arc\ittve02-065-Здесь-здоровье.jpg
+			www\Arc\ittve02-065-На-мостике.jpg
+			www\Arc\ittve02-065-Островок.jpg
+			www\Arc\ittve02-065-Первое-впечатление-от-Беларуси.jpg
+			www\Arc\ittve02-065-Первое-впечатление-от-Беларуси.txt
+			www\Arc\ittve02-065-Пока-аптекарский-садик.jpg
+			www\Arc\ittve02-065-Привет-сад.jpg
+			www\Arc\ittve02-065-Фонтанчик.jpg
+			www\Arc\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
+			www\Arc\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 		-Art
 			www\Art\GalleryArt.php
-			www\Art\ittve1-1-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\Art\ittve1-1-Дождь-празднику-не-помеха.jpg
-			www\Art\ittve1-1-На-Сампо.jpg
-			www\Art\ittve1-1-Подъём-настроения.jpg
-			www\Art\ittve1-1-С-заботой-и-к-мамам.jpg
-			www\Art\ittve1-1-У-ёлочки.png
-			www\Art\ittve1-1-Хочешь-кваску.jpg
+			www\Art\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+			www\Art\ittve01-001-Дождь-празднику-не-помеха.jpg
+			www\Art\ittve01-001-На-Сампо.jpg
+			www\Art\ittve01-001-Подъём-настроения.jpg
+			www\Art\ittve01-001-С-заботой-и-к-мамам.jpg
+			www\Art\ittve01-001-У-ёлочки.png
+			www\Art\ittve01-001-Хочешь-кваску.jpg
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
 			www\Images\Kwinflat.jpg
-		+KwinTiny
+		-KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
@@ -56,7 +56,7 @@ IttveME
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -300,14 +300,13 @@ IttveME
 			www\TinyMCE\TinyMCE.css
 			www\TinyMCE\tinymce.js
 			www\TinyMCE\tinymce.min.js
-		-TJsPrown
+		+TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
 		www\favicon.ico
 		www\iMobileStyles.php
-		www\includErrs.php
 		www\index.php
 		www\iniHtmlBegin.php
 		www\iniHtmlEnd.php
@@ -319,9 +318,10 @@ IttveME
 		www\Main.php
 		www\NavSet.php
 		www\Site.php
+		www\UpSite.php
 [Open project files]
 0=www\index.php
-1=www\Site.php
+1=www\UpSite.php
 2=www\Styles\Styles.css
 3=www\Styles\ImgLeft.css
 4=www\Styles\ImgRight.css
@@ -329,15 +329,16 @@ IttveME
 6=www\iniHtmlBegin.php
 7=www\Art\GalleryArt.php
 8=www\IttveME.js
+9=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\IttveME.js
 [www\index.php]
 TopLine=15
 Caret=12,20
-[www\Site.php]
-TopLine=29
-Caret=73,51
+[www\UpSite.php]
+TopLine=1
+Caret=1,11
 [www\Styles\Styles.css]
 TopLine=123
 Caret=1,1
@@ -348,14 +349,17 @@ Caret=1,1
 TopLine=3
 Caret=1,1
 [www\Main.php]
-TopLine=27
-Caret=21,53
+TopLine=31
+Caret=1,48
 [www\iniHtmlBegin.php]
-TopLine=41
-Caret=1,68
+TopLine=54
+Caret=4,65
 [www\Art\GalleryArt.php]
 TopLine=47
 Caret=23,62
 [www\IttveME.js]
 TopLine=1
-Caret=1,28
+Caret=6,3
+[www\Site.php]
+TopLine=1
+Caret=1,15
