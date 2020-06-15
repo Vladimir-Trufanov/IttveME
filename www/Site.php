@@ -56,7 +56,7 @@
       ?>
    </div>
    <div class="LifeMenu">
-      <button class="btnLifeMenu">
+      <button title="Жизнь и путешествия!" class="btnLifeMenu">
          <img class="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
       </button>
    </div>

@@ -1,3 +1,11 @@
+$(document).ready(function() 
+{
+   $('[title]').tooltip();
+});
+
+
+
+
 function paTiny() 
 {
    //window.location.assign("/TinyMCE/Tiny.php");

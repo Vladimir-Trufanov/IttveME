@@ -332,7 +332,7 @@ IttveME
 9=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\IttveME.js
+Selected=www\Styles\Styles.css
 [www\index.php]
 TopLine=15
 Caret=12,20
@@ -340,10 +340,10 @@ Caret=12,20
 TopLine=1
 Caret=1,11
 [www\Styles\Styles.css]
-TopLine=123
-Caret=1,1
+TopLine=17
+Caret=23,91
 [www\Styles\ImgLeft.css]
-TopLine=3
+TopLine=43
 Caret=1,1
 [www\Styles\ImgRight.css]
 TopLine=3
@@ -358,8 +358,8 @@ Caret=4,65
 TopLine=47
 Caret=23,62
 [www\IttveME.js]
-TopLine=1
-Caret=6,3
+TopLine=74
+Caret=18,76
 [www\Site.php]
-TopLine=1
-Caret=1,15
+TopLine=53
+Caret=42,59
