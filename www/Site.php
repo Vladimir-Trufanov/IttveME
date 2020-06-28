@@ -15,7 +15,30 @@
 ?>
 <!-- 
 -->
+
+<header>
+<div class="MainMenu">
+   <ul class="sm sm-blue">
+      <li><a href="http://localhost:82/">Отладка меню сайта doortry.ru</a></li>
+      <li><a href="#">Новости</a></li>
+      <li><a href="#">Микропутешествия</a>
+      <ul>
+         <li><a href="#">Голубые озера</a></li>
+         <li><a href="#">Аптекарский сад</a>
+            <ul>
+               <li><a href="###">'Тысячелистник в декоре'</a></li>
+               <li><a href="###">Гербарий</a></li>
+            </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="#">Простая жизнь</a></li>
+   </ul>	
+</div>
+</header>
+
 <div id="Content">
+
 <div class="Gallery">
    <?php
    require_once "Art/GalleryArt.php";

@@ -65,6 +65,69 @@ else
    echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+   /*
+   echo "
+   
+   <style>
+   #menu 
+   {
+      float: left;
+   }
+   #menu > li 
+   {
+      width: 200px;
+      float: left;
+   }
+   .ui-menu .ui-menu 
+   {
+      width: 200px;
+      float: none;
+   }
+   </style>
+
+   <script>
+   $(document).ready(function() {
+      $('#menu').menu({
+      position: 
+      {
+         my: 'center top',
+         at: 'center bottom'
+      },
+      icons: 
+      { 
+         submenu: 'ui-icon-triangle-1-s'
+      }
+      });
+   }); 
+   </script>
+   ";
+   */
+
+   
+   echo '
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="smartmenus/sm-core-css.css">
+<link rel="stylesheet" href="smartmenus/sm-blue.css">
+<script src="smartmenus/jquery.smartmenus.min.js"></script>';
+
+   ?>
+   <script>
+   $(document).ready(function() 
+   {
+      $('.sm').smartmenus({
+         showFunction: function($ul, complete) 
+         {
+            $ul.slideDown(250, complete);
+         },
+         hideFunction: function($ul, complete) 
+         {
+            $ul.slideUp(250, complete); 
+         }
+      });
+   });
+   </script>
+   <?php
+
 }
 echo '</head>';
 echo '<body>';

@@ -46,6 +46,9 @@ h1
 */
 .News, .Life 
 { 
+   display: none;
+
+   padding-top: 6rem;
    position: fixed; 
    overflow: auto; 
    /*background: blue;*/ 
@@ -191,6 +194,13 @@ h1
    padding-left:5%;
    width: 90%;
 }
+
+/*
+.MainMenu
+{
+   z-index: 1;
+}
+*/
 /*
  *************************************************************** Styles.css ***
 */	

@@ -42,3 +42,4 @@ Stack trace:
 #1 C:\IttveME\www\index.php(32): require_once('C:\\IttveME\\www\\...')
 #2 {main}
   thrown in C:\IttveME\www\UpSite.php on line 12
+[28-Jun-2020 09:08:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\IttveME\www\iniHtmlBegin.php on line 104
