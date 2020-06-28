@@ -16,13 +16,13 @@
 <!-- 
 -->
 
-<header>
 <div class="MainMenu">
    <ul class="sm sm-blue">
       <li><a href="http://localhost:82/">Отладка меню сайта doortry.ru</a></li>
       <li><a href="#">Новости</a></li>
       <li><a href="#">Микропутешествия</a>
       <ul>
+         <li><a href="#">По тропе к карнизу реки Бзерпь</a></li>
          <li><a href="#">Голубые озера</a></li>
          <li><a href="#">Аптекарский сад</a>
             <ul>
@@ -35,9 +35,10 @@
       <li><a href="#">Простая жизнь</a></li>
    </ul>	
 </div>
-</header>
 
+<!-- 
 <div id="Content">
+-->
 
 <div class="Gallery">
    <?php
@@ -68,7 +69,9 @@
 </div>
 
 
+<!-- 
 </div>
+-->
 
   
 <div class="Footer">
@@ -79,9 +82,12 @@
       ?>
    </div>
    <div class="LifeMenu">
-      <button title="Жизнь и путешествия!" class="btnLifeMenu">
-         <img class="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
+      <form action="http://localhost:83/index.php">
+      <button title="Жизнь и путешествия!" id="btnLifeMenu" onclick="clickLifeMenu()"
+         name="Com" value="LifeMenu">
+         <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
       </button>
+      </form> 
    </div>
    <div class="RightFooter">
       <?php

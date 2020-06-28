@@ -1,3 +1,9 @@
+// Обрабатываем нажатия на кнопки (HTML5-JS)
+function clickLifeMenu() 
+{
+   console.log('Кнопа LifeMenu');
+}
+
 $(document).ready(function() 
 {
    $('[title]').tooltip();
@@ -12,13 +18,13 @@ function paTiny()
 }
 
 
-// Обрабатываем клики на кнопках 'настройка' и 'назад'
+// Обрабатываем клики на кнопках 
 document.addEventListener("click",clickHandler,false);
 function clickHandler(event)
 {
-  console.log(event.target.id);
-  if  (event.target.id=='hochesh')
-  {
+   console.log(event.target.id);
+   if  (event.target.id=='hochesh')
+   {
       /* 
       // первый вариант
       $('.Gallery').css('display','none');
@@ -33,9 +39,9 @@ function clickHandler(event)
                        'src="Art/ittve01-001-На-Сампо.jpg" '+ 
                        'alt="На горе Сампо"> </div>';
       
-  }
-  else if  (event.target.id=='Rocary')
-  {
+   }
+   else if  (event.target.id=='Rocary')
+   {
       /*
       // первый вариант
       $('.Gallery').css('display','block');
@@ -45,7 +51,13 @@ function clickHandler(event)
       $('#Rocary').css('display','none');
       */
   
-  }
+   }
+   // Если нажата кнопка 'tve'
+   else if ((event.target.id=='btnLifeMenu')||(event.target.id=='imgLifeMenu'))
+   {
+      // Обрабатывается через HTML5
+      // clickLifeMenu(); 
+   }
 
 
   /*

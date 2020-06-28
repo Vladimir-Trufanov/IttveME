@@ -106,9 +106,9 @@ else
    
    echo '
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="smartmenus/sm-core-css.css">
-<link rel="stylesheet" href="smartmenus/sm-blue.css">
-<script src="smartmenus/jquery.smartmenus.min.js"></script>';
+<link rel="stylesheet" href="SmartMenus/sm-core-css.css">
+<link rel="stylesheet" href="SmartMenus/sm-blue.css">
+<script src="SmartMenus/jquery.smartmenus.min.js"></script>';
 
    ?>
    <script>

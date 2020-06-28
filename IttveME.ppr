@@ -56,6 +56,11 @@ IttveME
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
+		+smartmenus
+			www\smartmenus\jquery.min.js
+			www\smartmenus\jquery.smartmenus.min.js
+			www\smartmenus\sm-blue.css
+			www\smartmenus\sm-core-css.css
 		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
@@ -64,7 +69,6 @@ IttveME
 			www\Styles\jquery-ui.min.css
 			www\Styles\mLeadImg.css
 			www\Styles\Reset.css
-			www\Styles\site.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
 		-TinyMCE
@@ -301,7 +305,7 @@ IttveME
 			www\TinyMCE\TinyMCE.css
 			www\TinyMCE\tinymce.js
 			www\TinyMCE\tinymce.min.js
-		-TJsPrown
+		+TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
@@ -327,6 +331,7 @@ IttveME
 3=www\Site.php
 4=www\iniHtmlBegin.php
 5=www\Styles\Styles.css
+6=www\IttveME.js
 [Selected Project Files]
 Main=
 Selected=www\Site.php
@@ -340,11 +345,14 @@ Caret=79,5
 TopLine=35
 Caret=1,48
 [www\Site.php]
-TopLine=16
-Caret=41,29
+TopLine=74
+Caret=51,85
 [www\iniHtmlBegin.php]
-TopLine=105
-Caret=6,113
+TopLine=19
+Caret=20,111
 [www\Styles\Styles.css]
-TopLine=29
-Caret=4,49
+TopLine=110
+Caret=6,148
+[www\IttveME.js]
+TopLine=1
+Caret=10,59
