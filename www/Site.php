@@ -78,7 +78,12 @@
    <div class="LeftFooter">
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
-         echo $uagent.'<br>';
+         // echo $UserAgent.'<br>';
+         //echo '$IsScript='.prown\sayLogic($IsScript).'<br>';
+         
+         echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
+         $browser = get_browser(null, true);
+         print_r($browser);
       ?>
    </div>
    <div class="LifeMenu">
@@ -105,7 +110,7 @@
       Copyright (c) 2019 Труфанов Владимир   tve58@inbox.ru<br>
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
-         //echo $uagent.'<br>';
+         //echo $UserAgent.'<br>';
       ?>
    </div>
    <div class="InfoRight">

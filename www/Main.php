@@ -28,7 +28,7 @@ $BrowEntry = $BrowEntry+1;
 prown\MakeCookie('BrowEntry',$BrowEntry); 
 // Изменяем счетчик посещений текущим посетителем      
 $PersEntry = $PersEntry+1;
-\prown\MakeCookie('PersEntry',$PersEntry); 
+prown\MakeCookie('PersEntry',$PersEntry); 
 // Изменяем счетчик посещений за сессию                 
 $_SESSION['Counter']++;
 // echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
@@ -39,9 +39,9 @@ $_SESSION['Counter']++;
 if ($PersName<>$UserName)
 {
    $PersEntry = 1;
-   \prown\MakeCookie('PersEntry',$PersEntry); 
+   prown\MakeCookie('PersEntry',$PersEntry); 
    $PersName=$UserName;
-   \prown\MakeCookie('PersName',$PersName); 
+   prown\MakeCookie('PersName',$PersName); 
 }
 
    require_once "iniHtmlBegin.php";

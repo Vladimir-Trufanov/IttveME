@@ -43,3 +43,9 @@ Stack trace:
 #2 {main}
   thrown in C:\IttveME\www\UpSite.php on line 12
 [28-Jun-2020 09:08:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\IttveME\www\iniHtmlBegin.php on line 104
+[28-Jun-2020 19:35:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\iniHtmlBegin.php on line 61
+[28-Jun-2020 20:07:35 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function sayLogic() in C:\IttveME\www\Main.php:56
+Stack trace:
+#0 C:\IttveME\www\index.php(35): require_once()
+#1 {main}
+  thrown in C:\IttveME\www\Main.php on line 56

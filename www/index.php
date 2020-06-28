@@ -19,7 +19,8 @@ $SiteRoot    = $_WORKSPACE[wsSiteRoot];     // Корневой каталог �
 $SiteAbove   = $_WORKSPACE[wsSiteAbove];    // Надсайтовый каталог
 $SiteHost    = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
 $SiteDevice  = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
-$uagent      = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
+$UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
+$IsScript    = $_WORKSPACE[wsIsScript];     // true - JavaScript включен
 /*
 $TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта
 $Ip          = $_WORKSPACE[wsRemoteAddr];   // IP-адрес запроса сайта
