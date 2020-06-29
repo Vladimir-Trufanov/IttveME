@@ -114,6 +114,11 @@ else
    <script>
    $(document).ready(function() 
    {
+
+
+   
+   //MakeDiv();
+
       $('.sm').smartmenus({
          showFunction: function($ul, complete) 
          {
@@ -124,6 +129,9 @@ else
             $ul.slideUp(250, complete); 
          }
       });
+      
+   //isDiv();   
+      
    });
    </script>
    <?php

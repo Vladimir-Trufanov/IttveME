@@ -1,3 +1,32 @@
+
+// Создать DIV для проверки включенности JavaScript
+function MakeDiv()
+{
+   var $el = document.createElement('div');
+   $el.id='prob';
+   $el.style.display = 'none';
+   /*
+   $el.innerHTML = 'name';
+   $el.style.width = '10cm';
+   $el.style.height = '1cm';
+   $el.style.backgroundColor = '#ff00ff'; // показали выстроенный DIV
+   $el.style.bottom = 0;
+   */
+   document.body.appendChild($el);
+}
+// Проверить через DIV включенность JavaScript
+function isDiv()
+{
+   var element=document.getElementById('prob');
+   if (!element)
+   {
+      console.log('Меня нет на странице');
+   } 
+   else 
+   {
+      console.log('Я присутствую');
+   }
+}
 // Обрабатываем нажатия на кнопки (HTML5-JS)
 function clickLifeMenu() 
 {

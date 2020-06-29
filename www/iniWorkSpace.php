@@ -18,7 +18,6 @@ define ("wsTimeRequest", 5);          // Время запроса сайта
 define ("wsRemoteAddr",  6);          // IP-адрес запроса сайта
 define ("wsSiteName",    7);          // Доменное имя сайта
 define ("wsPhpVersion",  8);          // Версия PHP
-define ("wsIsScript",    9);          // true - JavaScript включен
 // Формируем массив параметров рабочего пространства сайта 
 // и соответствующие глобальные переменные
 function iniWorkSpace()
@@ -39,7 +38,6 @@ function iniWorkSpace()
       wsRemoteAddr  => $_SERVER['REMOTE_ADDR'],    
       wsSiteName    => $_SERVER['HTTP_HOST'],    
       wsPhpVersion  => prown\getPhpVersion(), 
-      wsIsScript    => isScript(),      
    );
    return $_WORKSPACE;
 }   
@@ -99,25 +97,6 @@ function isMatches($aMatches)
          $Result=true;
       }
    }
-   return $Result;
-}
-// ****************************************************************************
-// *                      Определить включен ли JavaScript                    *
-// ****************************************************************************
-function isScript()
-{
-   ?>
-   <script>
-      <?php
-         $Result=true;
-      ?>
-   </script>
-   <noscript>
-      <?php
-         $Result=false;
-      ?>
-   </noscript>
-   <?php
    return $Result;
 }
 // ******************************************************* iniWorkSpace.php ***

@@ -12,8 +12,20 @@
 //function MarkSite()
 //{
 
+
 ?>
 <!-- 
+-->
+
+<!-- 
+Создаем DIV для проверки включенности JavaScript
+<script> MakeDiv(); </script>
+-->
+<?php
+?>
+<!-- 
+Проверяем через DIV включенность JavaScript
+<script> isDiv(); </script>
 -->
 
 <div class="MainMenu">
@@ -78,7 +90,7 @@
    <div class="LeftFooter">
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
-         // echo $UserAgent.'<br>';
+         //echo $UserAgent.'<br>';
          //echo '$IsScript='.prown\sayLogic($IsScript).'<br>';
          
          /*
@@ -86,29 +98,12 @@
          $browser = get_browser(null, true);
          print_r($browser);
          */
-         
-         
-         /*
-         <script type="text/javascript">
-            document.write("У Вас включён JavaScript!");
-         </script>
-         <noscript><span>У Вас отключён JavaScript...</span></noscript>
-         */
       ?>
          
-         <script type="text/javascript">
-            document.write("У Вас включён JavaScripti!");
-         </script>
-         <noscript>У Вас отключён JavaScript!</noscript>
-         
-         <div id="isJavaScript">
-         <span>
-         <script> document.write("isJavaScript"); </script>
-         <noscript>noJavaScript</noscript>
-         </span>
-         </div>
-
-         
+      <script>
+         document.write("У Вас включён JavaScript!");
+      </script>
+      <noscript>У Вас отключён JavaScript!</noscript>
          
    </div>
    <div class="LifeMenu">
