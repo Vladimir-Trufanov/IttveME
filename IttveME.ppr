@@ -343,11 +343,11 @@ Caret=11,22
 TopLine=1
 Caret=79,5
 [www\Main.php]
-TopLine=15
+TopLine=21
 Caret=1,49
 [www\Site.php]
-TopLine=79
-Caret=1,87
+TopLine=93
+Caret=12,108
 [www\iniHtmlBegin.php]
 TopLine=43
 Caret=1,49
@@ -355,7 +355,7 @@ Caret=1,49
 TopLine=120
 Caret=6,148
 [www\IttveME.js]
-TopLine=81
+TopLine=5
 Caret=1,5
 [www\iniWorkSpace.php]
 TopLine=91

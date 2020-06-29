@@ -81,10 +81,35 @@
          // echo $UserAgent.'<br>';
          //echo '$IsScript='.prown\sayLogic($IsScript).'<br>';
          
+         /*
          echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
          $browser = get_browser(null, true);
          print_r($browser);
+         */
+         
+         
+         /*
+         <script type="text/javascript">
+            document.write("У Вас включён JavaScript!");
+         </script>
+         <noscript><span>У Вас отключён JavaScript...</span></noscript>
+         */
       ?>
+         
+         <script type="text/javascript">
+            document.write("У Вас включён JavaScripti!");
+         </script>
+         <noscript>У Вас отключён JavaScript!</noscript>
+         
+         <div id="isJavaScript">
+         <span>
+         <script> document.write("isJavaScript"); </script>
+         <noscript>noJavaScript</noscript>
+         </span>
+         </div>
+
+         
+         
    </div>
    <div class="LifeMenu">
       <form action="http://localhost:83/index.php">
