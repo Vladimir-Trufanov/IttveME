@@ -14,28 +14,28 @@
  секцию новых материалов, секцию архивных статей, подвал и кнопку меню 
  материалов
 */
-.News, .Life 
+#News, #Life 
 { 
    top: 0; 
    bottom: 4.2rem; 
 }
-.News
+#News
 { 
    left: 24%;
    width: 38%; 
    border-right: dashed 1px rgb(153,153,153);
 }
-.Life 
+#Life 
 { 
    left: 62%;
    width: 38%; 
 }
-.Gallery
+#Gallery
 {
    bottom: 4.2rem; 
    width:24%;
 }
-.Footer
+#Footer
 {
    bottom: 0; 
    left: 24%;
@@ -44,7 +44,7 @@
    z-index: 73;
    border-top: dashed 1px rgb(153,153,153);
 }
-.LifeMenu
+#LifeMenu
 {
    bottom: 0; 
    z-index: 101;

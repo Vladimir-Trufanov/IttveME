@@ -27,7 +27,7 @@ function isDiv()
       console.log('Я присутствую');
    }
 }
-// Обрабатываем нажатия на кнопки (HTML5-JS)
+// Обрабатываем нажатия на кнопки (HTML5-JS)             
 function clickLifeMenu() 
 {
    console.log('Кнопа LifeMenu');
@@ -56,28 +56,28 @@ function clickHandler(event)
    {
       /* 
       // первый вариант
-      $('.Gallery').css('display','none');
-      $('.News').css('display','none');
-      $('.Life').css('display','none');
+      $('#Gallery').css('display','none');
+      $('#News').css('display','none');
+      $('#Life').css('display','none');
 
-      $('#Rocary').css('display','block');
+      $('#imgFull').css('display','block');
       */
-      var elem = document.getElementById("Rocary1");
+      var elem = document.getElementById("News");
       
       elem.innerHTML = '<div> <img class="imgCard2" id="Rocary2" '+
                        'src="Art/ittve01-001-На-Сампо.jpg" '+ 
                        'alt="На горе Сампо"> </div>';
       
    }
-   else if  (event.target.id=='Rocary')
+   else if  (event.target.id=='imgFull')
    {
       /*
       // первый вариант
-      $('.Gallery').css('display','block');
-      $('.News').css('display','block');
-      $('.Life').css('display','block');
+      $('#Gallery').css('display','block');
+      $('#News').css('display','block');
+      $('#Life').css('display','block');
 
-      $('#Rocary').css('display','none');
+      $('#imgFull').css('display','none');
       */
   
    }
@@ -122,8 +122,8 @@ $(this).error(function(){ $(this).attr('src', 'noimg.png'); });
 });
 */
 
-$('#Rocary').on('error', function () 
+$('#imgFull').on('error', function () 
 {
-  console.log('Rocary on error');
+  console.log('imgFull on error');
   //$(this).attr('src', 'path_to_default_image.png');
 });

@@ -60,9 +60,9 @@ if(isset($_POST['enter']))
 </head>
 
 <body>
-<div class="Info">
+<div id="Info">
 
-   <div class="InfoLeft">
+   <div id="InfoLeft">
       <?php
       // Извлекаем прежнее содержимое материала в переменную
       $filename="../KwinTiny/Arc/textfile.html";
@@ -82,16 +82,16 @@ if(isset($_POST['enter']))
       </form>
    </div>
    
-   <div class="InfoRight">
+   <div id="InfoRight">
       <input type="submit" name='enter' value="Сохранить материал" form="frmTinyText">
    </div>
 </div>
 
-<div class="Footer">
-   <div class="LeftFooter">
+<div id="Footer">
+   <div id="LeftFooter">
       <img id="KwinLogo" src="../Images/Kwinflat.jpg" alt="Kwinflat-близкий всем!"/>
    </div>
-   <div class="RightFooter">
+   <div id="RightFooter">
       Copyright &copy; Владимир Труфанов
    </div>
 </div>

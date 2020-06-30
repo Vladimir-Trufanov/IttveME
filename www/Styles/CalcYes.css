@@ -15,14 +15,14 @@
  2 слэша перед директивой CSS блокирует выполнение директивы и выполняется 
  только внутри фигурных скобок!
 */
-.Footer
+#Footer
 {
 }
-.LeftFooter
+#LeftFooter
 {
    width: calc(50% - 2.68rem);
 }
-.RightFooter
+#RightFooter
 {
    width: calc(50% - 2.68rem);
    float: right;

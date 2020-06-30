@@ -15,17 +15,17 @@
  2 слэша перед директивой CSS блокирует выполнение директивы и выполняется 
  только внутри фигурных скобок!
 */
-.Footer
+#Footer
 {
    margin-left: auto;
    margin-right: auto; 
 }
-.LeftFooter
+#LeftFooter
 {
    display: none;
    overflow: hidden;    /* закрыли текст вне дива */
 }
-.RightFooter
+#RightFooter
 {
    float: left; 
    width: 50rem;

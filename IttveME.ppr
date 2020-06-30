@@ -17,7 +17,7 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
-		-Arc
+		+Arc
 			www\Arc\GalleryArc.php
 			www\Arc\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
 			www\Arc\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
@@ -35,7 +35,7 @@ IttveME
 			www\Arc\ittve02-065-Фонтанчик.jpg
 			www\Arc\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\Arc\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		-Art
+		+Art
 			www\Art\GalleryArt.php
 			www\Art\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\Art\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -44,16 +44,16 @@ IttveME
 			www\Art\ittve01-001-С-заботой-и-к-мамам.jpg
 			www\Art\ittve01-001-У-ёлочки.png
 			www\Art\ittve01-001-Хочешь-кваску.jpg
-		-Images
-			-Buttons
+		+Images
+			+Buttons
 				www\Images\Buttons\tveMenuD.png
 			www\Images\Kwinflat.jpg
-		-KwinTiny
-			-Arc
+		+KwinTiny
+			+Arc
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
 			-Temp
-		-Reset
+		+Reset
 			www\Reset\e404.php
 			www\Reset\index.php
 		+smartmenus
@@ -71,7 +71,7 @@ IttveME
 			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
-		-TinyMCE
+		+TinyMCE
 			-langs
 				www\TinyMCE\langs\readme.md
 				www\TinyMCE\langs\ru.js
@@ -326,33 +326,29 @@ IttveME
 		www\UpSite.php
 [Open project files]
 0=www\index.php
-1=www\UpSite.php
-2=www\Main.php
-3=www\Site.php
-4=www\iniHtmlBegin.php
-5=www\Styles\Styles.css
-6=www\IttveME.js
+1=www\Site.php
+2=www\Arc\GalleryArc.php
+3=www\Styles\Styles.css
+4=www\Art\GalleryArt.php
+5=www\IttveME.js
 [Selected Project Files]
 Main=
 Selected=www\Site.php
 [www\index.php]
 TopLine=1
 Caret=1,23
-[www\UpSite.php]
-TopLine=1
-Caret=79,5
-[www\Main.php]
-TopLine=21
-Caret=1,49
 [www\Site.php]
-TopLine=97
-Caret=50,104
-[www\iniHtmlBegin.php]
-TopLine=109
-Caret=1,134
+TopLine=72
+Caret=1,75
+[www\Arc\GalleryArc.php]
+TopLine=24
+Caret=1,27
 [www\Styles\Styles.css]
-TopLine=120
-Caret=6,148
+TopLine=188
+Caret=9,191
+[www\Art\GalleryArt.php]
+TopLine=13
+Caret=1,16
 [www\IttveME.js]
-TopLine=1
-Caret=4,17
+TopLine=124
+Caret=1,127

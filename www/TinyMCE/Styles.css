@@ -33,24 +33,24 @@ body
    height:92%;
    /*background:red;*/     
 }
-.InfoLeft
+#InfoLeft
 {
    float:left;
    /*background:green;*/ 
 }
-.InfoRight
+#InfoRight
 {
    float:right;
    text-align:right;
    /*background:blue;*/ 
 }
-.InfoLeft, .InfoRight
+#InfoLeft, #InfoRight
 {
 }
 /**
   Позиционируем секции подвала
 */
-.Footer
+#Footer
 {
    height:8%;
    width:100%;
@@ -61,14 +61,14 @@ body
 {
    height:100%;
 }
-.LeftFooter
+#LeftFooter
 {
    height:100%;
    width:24%;
    float:left;
    /*background:yellow;*/ 
 }
-.RightFooter
+#RightFooter
 {
    height:100%;
    width:76%;

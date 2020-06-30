@@ -45,33 +45,34 @@
       </ul>
       </li>
       <li><a href="#">Простая жизнь</a></li>
+      <li><a href="#">Хронология</a></li>
+      <li><a href="#">Карты</a></li>
    </ul>	
 </div>
 
-<!-- 
+ 
 <div id="Content">
--->
 
-<div class="Gallery">
+<div id="Gallery">
    <?php
    require_once "Art/GalleryArt.php";
    ?> 
 </div>
 
-<section class="News" id="Rocary1">
+<section id="News">
    <?php
    require_once "Art/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
    ?>
 </section>
 
-<section class="Life">
+<section id="Life">
    <?php
    require_once "Arc/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
    ?>
 </section>
 
 <div>
-   <img class="imgCard" id="Rocary" 
+   <img id="imgFull" class="imgCard" 
    src="Art/ittve01-001-На-Сампо.jpg" 
    alt="На горе Сампо">
    <!-- 
@@ -81,13 +82,13 @@
 </div>
 
 
-<!-- 
+ 
 </div>
--->
+
 
   
-<div class="Footer">
-   <div class="LeftFooter">
+<div id="Footer">
+   <div id="LeftFooter">
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
          //echo $UserAgent.'<br>';
@@ -106,34 +107,34 @@
       <noscript>У Вас отключён JavaScript!</noscript>
          
    </div>
-   <div class="LifeMenu">
-      <form action="http://localhost:83/index.php">
+   <div id="LifeMenu">
+      <!-- <form action="http://localhost:83/index.php"> -->
       <button title="Жизнь и путешествия!" id="btnLifeMenu" onclick="clickLifeMenu()"
          name="Com" value="LifeMenu">
          <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
       </button>
-      </form> 
+      <!-- </form> --> 
    </div>
-   <div class="RightFooter">
+   <div id="RightFooter">
       <?php
       require_once "NavSet.php";
       ?>
    </div>
 </div>
   
-<div class="Ext">
+<div id="Ext">
    Main
 </div>
   
-<div class="Info">
-   <div class="InfoLeft">
+<div id="Info">
+   <div id="InfoLeft">
       Copyright (c) 2019 Труфанов Владимир   tve58@inbox.ru<br>
       <?php 
          //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
          //echo $UserAgent.'<br>';
       ?>
    </div>
-   <div class="InfoRight">
+   <div id="InfoRight">
       <?php 
          echo $SiteDevice.
          " ".$PersName." ".$_SESSION['Counter'].".".$PersEntry."[".$BrowEntry."]"; 
