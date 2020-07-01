@@ -36,12 +36,12 @@ $_SESSION['Counter']++;
 
 // Если после авторизации изменилось имя пользователя,
 // то перенастраиваем счетчики
-if ($PersName<>$UserName)
+if ($c_PersName<>$c_UserName)
 {
    $PersEntry = 1;
    prown\MakeCookie('PersEntry',$PersEntry); 
-   $PersName=$UserName;
-   prown\MakeCookie('PersName',$PersName); 
+   $c_PersName=$c_UserName;
+   prown\MakeCookie('PersName',$c_PersName); 
 }
 
    require_once "iniHtmlBegin.php";
