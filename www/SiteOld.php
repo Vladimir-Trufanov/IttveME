@@ -9,9 +9,26 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 14.06.2020
 
+//function MarkSite()
+//{
+
+
 ?>
 <!-- 
 -->
+
+<!-- 
+Создаем DIV для проверки включенности JavaScript
+<script> MakeDiv(); </script>
+-->
+<?php
+?>
+<!-- 
+Проверяем через DIV включенность JavaScript
+<script> isDiv(); </script>
+-->
+ 
+<div id="Content">
 
 <div id="Gallery">
    <?php
@@ -19,24 +36,32 @@
    ?> 
 </div>
 
-<div id="Content">
-   <section id="News">
-      <?php
-         require_once "Art/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
-      ?>
-   </section>
-   <section id="Life">
-      <?php
-         require_once "Arc/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
-      ?>
-   </section>
-</div>
+<section id="News">
+   <?php
+   require_once "Art/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
+   ?>
+</section>
 
-<div id=imgDiv>
+<section id="Life">
+   <?php
+   require_once "Arc/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
+   ?>
+</section>
+
+<div>
    <img id="imgFull" class="imgCard" 
    src="Art/ittve01-001-На-Сампо.jpg" 
    alt="На горе Сампо">
+   <!-- 
+   src="https://3.downloader.disk.yandex.ru/preview/72929e9c7c66f597b4f92c15b812cc3dbf08221c0e969a6663f79a4ece7ef206/inf/DhLO1VNSy6snhnvOdCmJUcSnXDlNO2C_9P8eTvVJCRrdN8LxBBo8Z_Uz8bPLQj88iGyLe-r0UBJ9MmzptJzqSw==?uid=195746226&filename=IMG_2548.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&tknv=v2&owner_uid=195746226&size=1600x762"
+   src="/Images/nasampo.jpg" 
+   -->
 </div>
+
+
+ 
+</div>
+
 
 <div id="MainMenu">
    <ul class="sm sm-blue">
@@ -59,6 +84,7 @@
       <li><a href="#">Карты</a></li>
    </ul>	
 </div>
+
   
 <div id="Footer">
    <div id="LeftFooter">

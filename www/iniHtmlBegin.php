@@ -53,14 +53,12 @@ echo '<link rel="stylesheet" type="text/css"
    
 if ($SiteDevice==Mobile) 
 {   
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Reset.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
    require_once "iMobileStyles.php";
 }
 else 
 {   
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Reset.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';

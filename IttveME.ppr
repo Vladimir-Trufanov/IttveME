@@ -16,8 +16,8 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	+www
-		+Arc
+	-www
+		-Arc
 			www\Arc\GalleryArc.php
 			www\Arc\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
 			www\Arc\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
@@ -35,7 +35,7 @@ IttveME
 			www\Arc\ittve02-065-Фонтанчик.jpg
 			www\Arc\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\Arc\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+Art
+		-Art
 			www\Art\GalleryArt.php
 			www\Art\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\Art\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -44,34 +44,32 @@ IttveME
 			www\Art\ittve01-001-С-заботой-и-к-мамам.jpg
 			www\Art\ittve01-001-У-ёлочки.png
 			www\Art\ittve01-001-Хочешь-кваску.jpg
-		+Images
-			+Buttons
+		-Images
+			-Buttons
 				www\Images\Buttons\tveMenuD.png
 			www\Images\Kwinflat.jpg
-		+KwinTiny
-			+Arc
+		-KwinTiny
+			-Arc
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
 			-Temp
-		+Reset
+		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		+smartmenus
-			www\smartmenus\jquery.min.js
-			www\smartmenus\jquery.smartmenus.min.js
-			www\smartmenus\sm-blue.css
-			www\smartmenus\sm-core-css.css
-		+Styles
+		-SmartMenus
+			www\SmartMenus\jquery.smartmenus.min.js
+			www\SmartMenus\sm-blue.css
+			www\SmartMenus\sm-core-css.css
+		-Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\jquery-ui.min.css
 			www\Styles\mLeadImg.css
-			www\Styles\Reset.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
-		+TinyMCE
+		-TinyMCE
 			-langs
 				www\TinyMCE\langs\readme.md
 				www\TinyMCE\langs\ru.js
@@ -305,7 +303,7 @@ IttveME
 			www\TinyMCE\TinyMCE.css
 			www\TinyMCE\tinymce.js
 			www\TinyMCE\tinymce.min.js
-		+TJsPrown
+		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
@@ -317,38 +315,48 @@ IttveME
 		www\iniHtmlEnd.php
 		www\iniMem.php
 		www\iniWorkSpace.php
+		www\iniWorkSpace.phpo
 		www\IttveME.js
 		www\iUserError.php
 		www\log.txt
 		www\Main.php
 		www\NavSet.php
 		www\Site.php
+		www\SiteOld.php
 		www\UpSite.php
 [Open project files]
 0=www\index.php
-1=www\Site.php
-2=www\Arc\GalleryArc.php
-3=www\Styles\Styles.css
-4=www\Art\GalleryArt.php
-5=www\IttveME.js
+1=www\Arc\GalleryArc.php
+2=www\Styles\Styles.css
+3=www\Art\GalleryArt.php
+4=www\IttveME.js
+5=www\SiteOld.php
+6=www\Site.php
+7=www\iniHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\iniHtmlBegin.php
 [www\index.php]
 TopLine=1
 Caret=1,23
-[www\Site.php]
-TopLine=72
-Caret=1,75
 [www\Arc\GalleryArc.php]
-TopLine=24
+TopLine=7
 Caret=1,27
 [www\Styles\Styles.css]
-TopLine=188
-Caret=9,191
+TopLine=49
+Caret=1,69
 [www\Art\GalleryArt.php]
-TopLine=13
-Caret=1,16
+TopLine=7
+Caret=48,31
 [www\IttveME.js]
 TopLine=124
 Caret=1,127
+[www\SiteOld.php]
+TopLine=9
+Caret=1,32
+[www\Site.php]
+TopLine=1
+Caret=6,91
+[www\iniHtmlBegin.php]
+TopLine=41
+Caret=1,62
