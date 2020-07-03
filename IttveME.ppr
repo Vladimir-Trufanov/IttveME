@@ -60,7 +60,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -320,51 +320,28 @@ IttveME
 		www\iUserError.php
 		www\log.txt
 		www\Main.php
+		www\Nastr.php
 		www\NavSet.php
 		www\Site.php
 		www\SiteOld.php
 		www\UpSite.php
 [Open project files]
-0=www\index.php
-1=www\Arc\GalleryArc.php
-2=www\Styles\Styles.css
-3=www\Art\GalleryArt.php
-4=www\IttveME.js
-5=www\SiteOld.php
-6=www\Site.php
-7=www\iniHtmlBegin.php
-8=www\iniMem.php
-9=www\Main.php
+0=www\Nastr.php
+1=www\index.php
+2=www\Site.php
+3=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\SiteOld.php
+Selected=www\Site.php
+[www\Nastr.php]
+TopLine=4
+Caret=18,12
 [www\index.php]
-TopLine=1
-Caret=1,23
-[www\Arc\GalleryArc.php]
-TopLine=7
-Caret=1,27
-[www\Styles\Styles.css]
-TopLine=135
-Caret=1,69
-[www\Art\GalleryArt.php]
-TopLine=7
-Caret=48,31
-[www\IttveME.js]
-TopLine=124
-Caret=1,127
-[www\SiteOld.php]
-TopLine=114
-Caret=17,139
+TopLine=13
+Caret=88,20
 [www\Site.php]
-TopLine=110
-Caret=17,113
-[www\iniHtmlBegin.php]
-TopLine=41
-Caret=1,62
-[www\iniMem.php]
-TopLine=17
-Caret=1,20
-[www\Main.php]
-TopLine=38
-Caret=16,39
+TopLine=89
+Caret=49,102
+[www\Styles\Styles.css]
+TopLine=201
+Caret=22,220

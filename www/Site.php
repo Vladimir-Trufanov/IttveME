@@ -97,6 +97,20 @@
   
 <div id="Ext">
    Main
+   <!-- 
+   -->
+   <form name="test" method="post" action="Nastr.php">
+   <p><b>Ваше имя:</b><br>
+   <input type="text" size="40">
+   </p>
+   <p><input type="submit" value="Отправить">
+   <input type="reset" value="Очистить"></p>
+   </form>
+   <!-- 
+   <div  onclick="paNastr()">
+   <div>Изменить настройки сайта в браузере</div>
+   </div>
+   -->
 </div>
   
 <div id="Info">

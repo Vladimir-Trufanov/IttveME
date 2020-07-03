@@ -217,7 +217,7 @@ h1
    top: 6rem;
    z-index: 99;
    background: yellow;
-   display: none;
+   /*display: none;*/
 }
 #Info
 {

@@ -46,6 +46,11 @@ function paTiny()
    //window.location.assign("/TinyMCE/Tiny.php");
 }
 
+function paNastr() 
+{
+   window.location.assign("/Nastr.php");
+}
+
 
 // Обрабатываем клики на кнопках 
 document.addEventListener("click",clickHandler,false);
