@@ -44,6 +44,17 @@ IttveME
 			www\Art\ittve01-001-С-заботой-и-к-мамам.jpg
 			www\Art\ittve01-001-У-ёлочки.png
 			www\Art\ittve01-001-Хочешь-кваску.jpg
+		-favicon260x260
+			www\favicon260x260\android-chrome-192x192.png
+			www\favicon260x260\android-chrome-256x256.png
+			www\favicon260x260\apple-touch-icon.png
+			www\favicon260x260\browserconfig.xml
+			www\favicon260x260\favicon.ico
+			www\favicon260x260\favicon-16x16.png
+			www\favicon260x260\favicon-32x32.png
+			www\favicon260x260\mstile-150x150.png
+			www\favicon260x260\safari-pinned-tab.svg
+			www\favicon260x260\site.webmanifest
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -60,7 +71,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -308,7 +319,6 @@ IttveME
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
-		www\favicon.ico
 		www\iMobileStyles.php
 		www\index.php
 		www\iniHtmlBegin.php
@@ -320,28 +330,29 @@ IttveME
 		www\iUserError.php
 		www\log.txt
 		www\Main.php
+		www\manifest.json
 		www\Nastr.php
 		www\NavSet.php
 		www\Site.php
 		www\SiteOld.php
 		www\UpSite.php
 [Open project files]
-0=www\Nastr.php
-1=www\index.php
-2=www\Site.php
-3=www\Styles\Styles.css
+0=www\index.php
+1=www\Site.php
+2=www\Styles\Styles.css
+3=www\manifest.json
 [Selected Project Files]
 Main=
-Selected=www\Site.php
-[www\Nastr.php]
-TopLine=4
-Caret=18,12
+Selected=www\manifest.json
 [www\index.php]
 TopLine=13
 Caret=88,20
 [www\Site.php]
-TopLine=89
+TopLine=102
 Caret=49,102
 [www\Styles\Styles.css]
 TopLine=201
 Caret=22,220
+[www\manifest.json]
+TopLine=1
+Caret=1,1
