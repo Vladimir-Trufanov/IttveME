@@ -71,7 +71,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -341,18 +341,26 @@ IttveME
 1=www\Site.php
 2=www\Styles\Styles.css
 3=www\manifest.json
+4=www\NavSet.php
+5=www\Styles\styleSet.css
 [Selected Project Files]
 Main=
-Selected=www\manifest.json
+Selected=www\Site.php
 [www\index.php]
 TopLine=13
 Caret=88,20
 [www\Site.php]
-TopLine=102
-Caret=49,102
+TopLine=135
+Caret=7,165
 [www\Styles\Styles.css]
-TopLine=201
+TopLine=111
 Caret=22,220
 [www\manifest.json]
 TopLine=1
 Caret=1,1
+[www\NavSet.php]
+TopLine=42
+Caret=32,55
+[www\Styles\styleSet.css]
+TopLine=15
+Caret=23,54

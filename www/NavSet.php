@@ -25,20 +25,20 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 
 <div class='navset'>
    <div class='link'>
+      <div class='prev'>&#xf01c;</div>
+      <div class='small' onclick="paTiny()">&#xf01c;</div>
+      <div class='full'  onclick="paTiny()">
+         <div class='k1'>Inbox</div>
+         <div class='k2'>Отправить сообщение автору</div>
+      </div>
+   </div>
+
+   <div class='link'>
       <div class='prev'>&#xf044;</div>
       <div class='small' onclick="paTiny()">&#xf044;</div>
       <div class='full'  onclick="paTiny()">
-         <div class='f1'>Edit</div>
-         <div class='f2'>Создать, редактировать материал</div>
-      </div>
-   </div>
-   
-   <div class='link'>
-      <div class='prev'>&#xf090;</div>
-      <div class='small' onclick="paTiny()">&#xf090;</div>
-      <div class='full'  onclick="paTiny()">
-         <div class='f1'>Login</div>
-         <div class='f2'>Зарегистрироваться на сайте, войти</div>
+         <div class='k1'>Edit</div>
+         <div class='k2'>Создать, редактировать материал</div>
       </div>
    </div>
    
@@ -46,26 +46,17 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       <div class='prev'>&#xf013;</div>
       <div class='small' onclick="paNastr()">&#xf013;</div>
       <div class='full'  onclick="paNastr()">
-         <div class='f1'>Tuning</div>
-         <div class='f2'>Изменить настройки сайта в браузере</div>
+         <div class='k1'>Tuning</div>
+         <div class='k2'>Изменить настройки сайта в браузере</div>
       </div>
    </div>
-   
+
    <div class='link'>
-      <div class='prev'>&#xf01c;</div>
-      <div class='small' onclick="paTiny()">&#xf01c;</div>
+      <div class='prev'>&#xf007;</div>
+      <div class='small' onclick="paTiny()">&#xf007;</div>
       <div class='full'  onclick="paTiny()">
-         <div class='f1'>Inbox</div>
-         <div class='f2'>Отправить сообщение автору</div>
-      </div>
-   </div>
-  
-   <div class='link'>
-      <div class='prev'>&#xf08b;</div>
-      <div class='small' onclick="paTiny()">&#xf08b;</div>
-      <div class='full'  onclick="paTiny()">
-         <div class='f1'>Logout</div>
-         <div class='f2'>Войти на сайт, как гость</div>
+         <div class='k1'>Signup</div>
+         <div class='k2'>Зарегистрироваться</div>
       </div>
    </div>
 </div>

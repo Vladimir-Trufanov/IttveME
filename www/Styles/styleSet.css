@@ -31,7 +31,7 @@
 */
 .navset .link 
 {
-   width:20%;     /* "1/n" часть ширины полоски меню */
+   width:25%;     /* "1/n" часть ширины полоски меню */
    height:100%;   /* всю высоту родителя .navset */
 }
 .navset .link .prev 
@@ -46,12 +46,12 @@
    font-family:fontawesome;
    font-size:3.6rem; 
 }
-.navset .link .full .f1
+.navset .link .full .k1
 {
    font-size:1.6rem; 
    font-weight:700; 
 }
-.navset .link .full .f2
+.navset .link .full .k2
 {
    font-size:1.4rem; 
    font-weight:700; 

@@ -100,17 +100,70 @@
    <!-- 
    -->
    <form name="test" method="post" action="Nastr.php">
+   <!-- 
    <p><b>Ваше имя:</b><br>
    <input type="text" size="40">
    </p>
-   <p><input type="submit" value="Отправить">
-   <input type="reset" value="Очистить"></p>
+   <p>
+   -->
+   <input type="submit" value="Отправить">
+   <!-- 
+   <input type="reset" value="Очистить">
+   </p>
+   -->
    </form>
    <!-- 
    <div  onclick="paNastr()">
    <div>Изменить настройки сайта в браузере</div>
    </div>
    -->
+   
+<a class="btn btn-danger" href="#">
+  <i class="fa fa-trash-o fa-lg"></i> Удалить</a>
+<a class="btn btn-default btn-sm" href="#">
+  <i class="fa fa-cog"></i> Настройки</a>
+
+<a class="btn btn-lg btn-success" href="#">
+  <i class="fa fa-flag fa-2x pull-left"></i> Font Awesome<br>Версия 4.7.0</a>
+
+<div class="btn-group">
+  <a class="btn btn-default" href="#">
+    <i class="fa fa-align-left" title="Align Left"></i>
+  </a>
+  <a class="btn btn-default" href="#">
+    <i class="fa fa-align-center" title="Align Center"></i>
+  </a>
+  <a class="btn btn-default" href="#">
+    <i class="fa fa-align-right" title="Align Right"></i>
+  </a>
+  <a class="btn btn-default" href="#">
+    <i class="fa fa-align-justify" title="Align Justify"></i>
+  </a>
+</div>
+
+<div class="input-group margin-bottom-sm">
+  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+  <input class="form-control" type="text" placeholder="Ваш Email">
+</div>
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+  <input class="form-control" type="password" placeholder="Пароль">
+</div>
+
+<div class="btn-group open">
+  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> Пользователь</a>
+  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+    <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Редактировать</a></li>
+    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Удалить</a></li>
+    <li><a href="#"><i class="fa fa-ban fa-fw"></i> Забанить</a></li>
+    <li class="divider"></li>
+    <li><a href="#"><i class="fa fa-unlock"></i> Дать права администратора</a></li>
+  </ul>
+</div>
+   
 </div>
   
 <div id="Info">
