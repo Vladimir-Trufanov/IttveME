@@ -23,6 +23,8 @@
    <section id="News">
       <?php
          require_once "Art/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
+         //$browser = get_browser(null, true);
+         //print_r($browser);
       ?>
    </section>
    <section id="Life">
@@ -41,8 +43,8 @@
 <div id="MainMenu">
    <ul class="sm sm-blue">
       <li><a href="http://localhost:82/">Отладка меню сайта doortry.ru</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="#">Микропутешествия</a>
+      <li class="DoubleRight"><a href="#">Новости</a></li>
+      <li class="DoubleLeft"><a href="#">Микропутешествия</a>
       <ul>
          <li><a href="#">По тропе к карнизу реки Бзерпь</a></li>
          <li><a href="#">Голубые озера</a></li>
@@ -54,9 +56,9 @@
          </li>
       </ul>
       </li>
-      <li><a href="#">Простая жизнь</a></li>
-      <li><a href="#">Хронология</a></li>
-      <li><a href="#">Карты</a></li>
+      <li class="DoubleRight"><a href="#">Простая жизнь</a></li>
+      <li class="OneRight"><a href="#">Хронология</a></li>
+      <li class="OneRight"><a href="#">Карты</a></li>
    </ul>	
 </div>
   
@@ -94,63 +96,12 @@
       ?>
    </div>
 </div>
-  
-<div id="Ext">
+
+<div align="center" id="Ext">
    <?php
-   //prown\ViewGlobal(avgSESSION);
-   //prown\ViewGlobal(avgGLOBALS);
-   //prown\ViewGlobal(avgCOOKIE);
-   $ImageFile='Images/'.$с_PageImg;
-   echo $ImageFile.'<br>';
-   list($width, $height, $type, $attr) = getimagesize($ImageFile);
-   echo $width.'=='.$height.'=='.$type.'=='.$attr.'==<br>';
-   //echo '<img src="'.$ImageFile.'" $attr alt="пример getimagesize()" />'.'<br>';
-   
-   /*
-   echo '
-   <img id="ImaId" src="'.$ImageFile.'" width="100%" />
-   '.'<br>';
-   */
-   echo '
-   <img id="ImaId" src="'.$ImageFile.'" height="100%" />
-   '.'<br>';
+   require_once "ViewExt.php";
+   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
    ?>
-   <!-- Пример кнопки для перехода на другую страницу PHP
-   <form name="test" method="post" action="Nastr.php">
-   <input type="submit" value="Отправить">
-   </form>
-   -->
-   <!-- 
-   <div  onclick="paNastr()">
-   <div>Изменить настройки сайта в браузере</div>
-   </div>
-   -->
-   
-
-<div id="Info">
-   <div id="InfoLeft">
-      Copyright (c) 2019 Труфанов Владимир   tve58@inbox.ru<br>
-      <?php 
-         //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
-         //echo $UserAgent.'<br>';
-      ?>
-   </div>
-   
-   <!-- 
-   <a class="btn btn-default" href="#">
-   -->
-   <a href="Nastr.php">
-      <i class="fa fa-align-left" title="Align Left"></i>
-   </a>
-
-   <div id="InfoRight">
-      <?php 
-         echo $SiteDevice.
-         " ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
-      ?>
-   </div>
-</div>
-
 </div>
   
 <?php
