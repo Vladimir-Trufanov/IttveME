@@ -219,6 +219,7 @@ h1
    background: yellow;
    /*display: none;*/
 }
+/*
 #Info
 {
    position: fixed; 
@@ -227,20 +228,17 @@ h1
    width: 76%;
    height: 1.4rem;
    z-index: 100;
-   /* background: red; */
 }
 #InfoLeft
 {
    float: left;
    width: 50%;
-   /* background: green; */
 }
 #InfoRight
 {
    float: right;
    text-align: right;
    width: 50%;
-   /* background: blue; */
 }
 #InfoLeft, #InfoRight
 {
@@ -249,6 +247,7 @@ h1
    font-weight: bold; 
    color: red;
 }
+*/
 
 #imgFull
 {

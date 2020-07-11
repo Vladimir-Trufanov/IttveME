@@ -136,7 +136,7 @@
    <div id="InfoRight">
       <?php 
          echo $SiteDevice.
-         " ".$c_PersName." ".$_SESSION['Counter'].".".$PersEntry."[".$BrowEntry."]"; 
+         " ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
       ?>
    </div>
 </div>

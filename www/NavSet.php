@@ -32,15 +32,6 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
          <div class='k2'>Отправить сообщение автору</div>
       </div>
    </div>
-
-   <div class='link'>
-      <div class='prev'>&#xf044;</div>
-      <div class='small' onclick="paTiny()">&#xf044;</div>
-      <div class='full'  onclick="paTiny()">
-         <div class='k1'>Edit</div>
-         <div class='k2'>Создать, редактировать материал</div>
-      </div>
-   </div>
    
    <div class='link'>
       <div class='prev'>&#xf013;</div>
@@ -57,6 +48,15 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       <div class='full'  onclick="paTiny()">
          <div class='k1'>Signup</div>
          <div class='k2'>Зарегистрироваться</div>
+      </div>
+   </div>
+
+   <div class='link'>
+      <div class='prev'>&#xf044;</div>
+      <div class='small' onclick="paTiny()">&#xf044;</div>
+      <div class='full'  onclick="paTiny()">
+         <div class='k1'>Edit</div>
+         <div class='k2'>Создать, редактировать материал</div>
       </div>
    </div>
 </div>

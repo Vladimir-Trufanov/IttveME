@@ -106,7 +106,9 @@
    </p>
    <p>
    -->
+   <br>
    <input type="submit" value="Отправить">
+   <br>
    <!-- 
    <input type="reset" value="Очистить">
    </p>
@@ -118,54 +120,7 @@
    </div>
    -->
    
-<a class="btn btn-danger" href="#">
-  <i class="fa fa-trash-o fa-lg"></i> Удалить</a>
-<a class="btn btn-default btn-sm" href="#">
-  <i class="fa fa-cog"></i> Настройки</a>
 
-<a class="btn btn-lg btn-success" href="#">
-  <i class="fa fa-flag fa-2x pull-left"></i> Font Awesome<br>Версия 4.7.0</a>
-
-<div class="btn-group">
-  <a class="btn btn-default" href="#">
-    <i class="fa fa-align-left" title="Align Left"></i>
-  </a>
-  <a class="btn btn-default" href="#">
-    <i class="fa fa-align-center" title="Align Center"></i>
-  </a>
-  <a class="btn btn-default" href="#">
-    <i class="fa fa-align-right" title="Align Right"></i>
-  </a>
-  <a class="btn btn-default" href="#">
-    <i class="fa fa-align-justify" title="Align Justify"></i>
-  </a>
-</div>
-
-<div class="input-group margin-bottom-sm">
-  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-  <input class="form-control" type="text" placeholder="Ваш Email">
-</div>
-<div class="input-group">
-  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-  <input class="form-control" type="password" placeholder="Пароль">
-</div>
-
-<div class="btn-group open">
-  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> Пользователь</a>
-  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-    <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
-  </a>
-  <ul class="dropdown-menu">
-    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Редактировать</a></li>
-    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Удалить</a></li>
-    <li><a href="#"><i class="fa fa-ban fa-fw"></i> Забанить</a></li>
-    <li class="divider"></li>
-    <li><a href="#"><i class="fa fa-unlock"></i> Дать права администратора</a></li>
-  </ul>
-</div>
-   
-</div>
-  
 <div id="Info">
    <div id="InfoLeft">
       Copyright (c) 2019 Труфанов Владимир   tve58@inbox.ru<br>
@@ -174,13 +129,24 @@
          //echo $UserAgent.'<br>';
       ?>
    </div>
+   
+   <!-- 
+   <a class="btn btn-default" href="#">
+   -->
+   <a href="#">
+      <i class="fa fa-align-left" title="Align Left"></i>
+   </a>
+
    <div id="InfoRight">
       <?php 
          echo $SiteDevice.
-         " ".$c_PersName." ".$_SESSION['Counter'].".".$PersEntry."[".$BrowEntry."]"; 
+         " ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
       ?>
    </div>
 </div>
+
+</div>
+  
 <?php
 //}
 // *************************************************************** Site.php ***
