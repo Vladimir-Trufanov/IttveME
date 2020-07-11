@@ -96,24 +96,30 @@
 </div>
   
 <div id="Ext">
-   Main
-   <!-- 
-   -->
+   <?php
+   //prown\ViewGlobal(avgSESSION);
+   //prown\ViewGlobal(avgGLOBALS);
+   //prown\ViewGlobal(avgCOOKIE);
+   $ImageFile='Images/'.$с_PageImg;
+   echo $ImageFile.'<br>';
+   list($width, $height, $type, $attr) = getimagesize($ImageFile);
+   echo $width.'=='.$height.'=='.$type.'=='.$attr.'==<br>';
+   //echo '<img src="'.$ImageFile.'" $attr alt="пример getimagesize()" />'.'<br>';
+   
+   /*
+   echo '
+   <img id="ImaId" src="'.$ImageFile.'" width="100%" />
+   '.'<br>';
+   */
+   echo '
+   <img id="ImaId" src="'.$ImageFile.'" height="100%" />
+   '.'<br>';
+   ?>
+   <!-- Пример кнопки для перехода на другую страницу PHP
    <form name="test" method="post" action="Nastr.php">
-   <!-- 
-   <p><b>Ваше имя:</b><br>
-   <input type="text" size="40">
-   </p>
-   <p>
-   -->
-   <br>
    <input type="submit" value="Отправить">
-   <br>
-   <!-- 
-   <input type="reset" value="Очистить">
-   </p>
-   -->
    </form>
+   -->
    <!-- 
    <div  onclick="paNastr()">
    <div>Изменить настройки сайта в браузере</div>
@@ -133,7 +139,7 @@
    <!-- 
    <a class="btn btn-default" href="#">
    -->
-   <a href="#">
+   <a href="Nastr.php">
       <i class="fa fa-align-left" title="Align Left"></i>
    </a>
 

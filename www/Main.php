@@ -40,9 +40,7 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
-//\prown\ViewGlobal(avgSESSION);
-//\prown\ViewGlobal(avgGLOBALS);
-
+   
    require_once "iniHtmlBegin.php";
    require_once "UpSite.php";
    require_once "iniHtmlEnd.php";
