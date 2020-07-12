@@ -57,8 +57,8 @@ IttveME
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
-			www\Images\ittveme-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
+			www\Images\oni.jpg
 		-KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
@@ -71,7 +71,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -321,6 +321,7 @@ IttveME
 		www\.user.ini
 		www\iMobileStyles.php
 		www\index.php
+		www\iniHtml1.php
 		www\iniHtmlBegin.php
 		www\iniHtmlEnd.php
 		www\iniMem.php
@@ -347,38 +348,48 @@ IttveME
 6=www\Styles\Styles.css
 7=www\Nastr.php
 8=www\UpSite.php
-9=www\iniHtmlBegin.php
+9=www\iniHtml1.php
+10=www\iniHtmlEnd.php
+11=www\iniHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\Nastr.php
+Selected=www\iniHtmlBegin.php
 [www\index.php]
 TopLine=12
 Caret=1,23
 [www\Site.php]
-TopLine=77
-Caret=18,61
+TopLine=1
+Caret=6,105
 [www\ViewExt.php]
-TopLine=59
-Caret=1,73
+TopLine=43
+Caret=1,57
 Mark1=1,85
+Mark2=1,56
 [www\Styles\styleSet.css]
 TopLine=39
 Caret=23,54
 [www\Main.php]
-TopLine=32
-Caret=1,22
+TopLine=22
+Caret=4,44
 [www\iniMem.php]
 TopLine=5
 Caret=21,21
 [www\Styles\Styles.css]
-TopLine=209
-Caret=24,213
+TopLine=208
+Caret=18,227
 [www\Nastr.php]
-TopLine=45
-Caret=4,66
+TopLine=33
+Caret=19,61
+Mark1=1,140
 [www\UpSite.php]
 TopLine=1
-Caret=23,12
-[www\iniHtmlBegin.php]
-TopLine=143
+Caret=4,11
+[www\iniHtml1.php]
+TopLine=26
+Caret=5,36
+[www\iniHtmlEnd.php]
+TopLine=1
 Caret=1,1
+[www\iniHtmlBegin.php]
+TopLine=67
+Caret=4,65

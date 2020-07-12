@@ -8,7 +8,7 @@
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 28.06.2020
-   //require_once "Site.php";
-   require_once "Nastr.php";
+   require_once "Site.php";
+   //require_once "Nastr.php";
 
 // *************************************************************** Site.php ***

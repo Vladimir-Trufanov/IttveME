@@ -99,8 +99,10 @@
 
 <div align="center" id="Ext">
    <?php
+   /*
    require_once "ViewExt.php";
    ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+   */
    ?>
 </div>
   

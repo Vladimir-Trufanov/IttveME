@@ -42,6 +42,7 @@ if ($c_PersName<>$c_UserName)
 }
    
    require_once "iniHtmlBegin.php";
+   //require_once "iniHtml1.php";
    require_once "UpSite.php";
    require_once "iniHtmlEnd.php";
    
