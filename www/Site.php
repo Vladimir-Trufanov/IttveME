@@ -15,40 +15,43 @@
 
 <div id="Gallery">
    <?php
-   require_once "Art/GalleryArt.php";
+   require_once "ittveNews/GalleryNews.php";
    ?> 
 </div>
 
 <div id="Content">
    <section id="News">
       <?php
-         require_once "Art/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
+         require_once "ittveNews/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
          //$browser = get_browser(null, true);
          //print_r($browser);
       ?>
    </section>
    <section id="Life">
       <?php
-         require_once "Arc/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
+         require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
       ?>
    </section>
 </div>
 
 <div id=imgDiv>
    <img id="imgFull" class="imgCard" 
-   src="Art/ittve01-001-На-Сампо.jpg" 
+   src="ittveNews/ittve01-001-На-Сампо.jpg" 
    alt="На горе Сампо">
 </div>
 
 <div id="MainMenu">
    <ul class="sm sm-blue">
       <li><a href="http://localhost:82/">Отладка меню сайта doortry.ru</a></li>
-      <li class="DoubleRight"><a href="#">Новости</a></li>
-      <li class="DoubleLeft"><a href="#">Микропутешествия</a>
+      <!-- 
+      <li><a href="#">Новости</a></li>
+      -->
+      <li><a href="#">Простая жизнь</a></li>
+      <li><a href="#">Микропутешествия</a>
       <ul>
          <li><a href="#">По тропе к карнизу реки Бзерпь</a></li>
          <li><a href="#">Голубые озера</a></li>
-         <li><a href="#">Аптекарский сад</a>
+         <li><a href="#">Этюд из аптекарского сада</a>
             <ul>
                <li><a href="###">'Тысячелистник в декоре'</a></li>
                <li><a href="###">Гербарий</a></li>
@@ -56,9 +59,8 @@
          </li>
       </ul>
       </li>
-      <li class="DoubleRight"><a href="#">Простая жизнь</a></li>
-      <li class="OneRight"><a href="#">Хронология</a></li>
-      <li class="OneRight"><a href="#">Карты</a></li>
+      <li><a href="#">Хронология</a></li>
+      <li><a href="#">Карты</a></li>
    </ul>	
 </div>
   
