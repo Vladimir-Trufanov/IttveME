@@ -10,10 +10,7 @@
 //                                                   Дата создания:  07.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 14.07.2020
 
-// SeoTags()
-echo '<title>Обо мне, путешествиях и ... Черногории</title>';
-echo '<meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и жизнь его близких">';
-echo '<meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">';
+/*
 // Шрифты и jquery.com/ui
 echo '<link rel="stylesheet"'.
    'href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&amp;'.
@@ -45,7 +42,7 @@ echo '<link rel="stylesheet" type="text/css"
    <script> 
       MakeCatchyQuotes() 
    </script>';
-   
+*/   
    
 if ($SiteDevice==Mobile) 
 {   
@@ -131,9 +128,38 @@ else
    <?php
 
 }
-
 echo '</head>';
 echo '<body>';
 
-// <!-- -->
+?>
+<!-- 
+-->
+
+<div id="MainMenu">
+   <ul class="sm sm-blue">
+      <li><a href="http://localhost:82/">Отладка меню сайта doortry.ru</a></li>
+      <!-- 
+      <li><a href="#">Новости</a></li>
+      -->
+      <li><a href="#">Простая жизнь</a></li>
+      <li><a href="#">Микропутешествия</a>
+      <ul>
+         <li><a href="#">По тропе к карнизу реки Бзерпь</a></li>
+         <li><a href="#">Голубые озера</a></li>
+         <li><a href="#">Этюд из аптекарского сада</a>
+            <ul>
+               <li><a href="###">'Тысячелистник в декоре'</a></li>
+               <li><a href="###">Гербарий</a></li>
+            </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="#">Хронология</a></li>
+      <li><a href="#">Карты</a></li>
+   </ul>	
+</div>
+<?php
+
+
+
 // ******************************************************* iniHtmlBegin.php ***

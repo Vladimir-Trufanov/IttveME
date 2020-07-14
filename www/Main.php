@@ -41,10 +41,7 @@ if ($c_PersName<>$c_UserName)
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
    
-   require_once "iniHtmlBegin.php";
-   //require_once "iniHtml1.php";
    require_once "UpSite.php";
-   require_once "iniHtmlEnd.php";
    
    // При необходимости выводим дополнительную информацию
    // Header("Content-type: text/plain");

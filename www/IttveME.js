@@ -70,7 +70,7 @@ function clickHandler(event)
       var elem = document.getElementById("News");
       
       elem.innerHTML = '<div> <img class="imgCard2" id="Rocary2" '+
-                       'src="Art/ittve01-001-На-Сампо.jpg" '+ 
+                       'src="ittveNews/ittve01-001-На-Сампо.jpg" '+ 
                        'alt="На горе Сампо"> </div>';
       
    }

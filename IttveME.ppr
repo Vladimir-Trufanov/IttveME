@@ -17,33 +17,6 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
-		-Arc
-			www\Arc\GalleryArc.php
-			www\Arc\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
-			www\Arc\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
-			www\Arc\ittve02-065-В-город-c-молоком.jpg
-			www\Arc\ittve02-065-Вокруг-прудика.jpg
-			www\Arc\ittve02-065-Всем-солнечного-лета.jpg
-			www\Arc\ittve02-065-Едем-по-грибку.jpg
-			www\Arc\ittve02-065-Здесь-здоровье.jpg
-			www\Arc\ittve02-065-На-мостике.jpg
-			www\Arc\ittve02-065-Островок.jpg
-			www\Arc\ittve02-065-Первое-впечатление-от-Беларуси.jpg
-			www\Arc\ittve02-065-Первое-впечатление-от-Беларуси.txt
-			www\Arc\ittve02-065-Пока-аптекарский-садик.jpg
-			www\Arc\ittve02-065-Привет-сад.jpg
-			www\Arc\ittve02-065-Фонтанчик.jpg
-			www\Arc\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
-			www\Arc\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		-Art
-			www\Art\GalleryArt.php
-			www\Art\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\Art\ittve01-001-Дождь-празднику-не-помеха.jpg
-			www\Art\ittve01-001-На-Сампо.jpg
-			www\Art\ittve01-001-Подъём-настроения.jpg
-			www\Art\ittve01-001-С-заботой-и-к-мамам.jpg
-			www\Art\ittve01-001-У-ёлочки.png
-			www\Art\ittve01-001-Хочешь-кваску.jpg
 		-favicon260x260
 			www\favicon260x260\android-chrome-192x192.png
 			www\favicon260x260\android-chrome-256x256.png
@@ -54,11 +27,40 @@ IttveME
 			www\favicon260x260\favicon-32x32.png
 			www\favicon260x260\mstile-150x150.png
 			www\favicon260x260\safari-pinned-tab.svg
+		-Html
+			www\Html\iniHtmlLifeMenu.php
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
 			www\Images\Kwinflat.jpg
 			www\Images\oni.jpg
+		-ittveLife
+			www\ittveLife\GalleryLife.php
+			www\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
+			www\ittveLife\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
+			www\ittveLife\ittve02-065-В-город-c-молоком.jpg
+			www\ittveLife\ittve02-065-Вокруг-прудика.jpg
+			www\ittveLife\ittve02-065-Всем-солнечного-лета.jpg
+			www\ittveLife\ittve02-065-Едем-по-грибку.jpg
+			www\ittveLife\ittve02-065-Здесь-здоровье.jpg
+			www\ittveLife\ittve02-065-На-мостике.jpg
+			www\ittveLife\ittve02-065-Островок.jpg
+			www\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.jpg
+			www\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.txt
+			www\ittveLife\ittve02-065-Пока-аптекарский-садик.jpg
+			www\ittveLife\ittve02-065-Привет-сад.jpg
+			www\ittveLife\ittve02-065-Фонтанчик.jpg
+			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
+			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
+		+ittveNews
+			www\ittveNews\GalleryNews.php
+			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+			www\ittveNews\ittve01-001-Дождь-празднику-не-помеха.jpg
+			www\ittveNews\ittve01-001-На-Сампо.jpg
+			www\ittveNews\ittve01-001-Подъём-настроения.jpg
+			www\ittveNews\ittve01-001-С-заботой-и-к-мамам.jpg
+			www\ittveNews\ittve01-001-У-ёлочки.png
+			www\ittveNews\ittve01-001-Хочешь-кваску.jpg
 		-KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
@@ -67,11 +69,12 @@ IttveME
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
+		-Scripts
 		-SmartMenus
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
@@ -80,6 +83,7 @@ IttveME
 			www\Styles\mLeadImg.css
 			www\Styles\Styles.css
 			www\Styles\styleSet.css
+			www\Styles\StylesLifeMenu.css
 		-TinyMCE
 			-langs
 				www\TinyMCE\langs\readme.md
@@ -323,7 +327,6 @@ IttveME
 		www\index.php
 		www\iniHtml1.php
 		www\iniHtmlBegin.php
-		www\iniHtmlEnd.php
 		www\iniMem.php
 		www\iniWorkSpace.php
 		www\iniWorkSpace.phpo
@@ -344,17 +347,16 @@ IttveME
 2=www\Styles\styleSet.css
 3=www\Main.php
 4=www\iniMem.php
-5=www\Styles\Styles.css
-6=www\Nastr.php
-7=www\UpSite.php
-8=www\iniHtml1.php
-9=www\iniHtmlEnd.php
-10=www\iniHtmlBegin.php
+5=www\Styles\StylesLifeMenu.css
+6=www\UpSite.php
+7=www\iniHtmlBegin.php
+8=www\Site.php
+9=www\Html\iniHtmlLifeMenu.php
+10=www\ittveNews\GalleryNews.php
 11=www\IttveME.js
-12=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\IttveME.js
 [www\index.php]
 TopLine=12
 Caret=1,23
@@ -367,34 +369,30 @@ Mark2=1,56
 TopLine=39
 Caret=23,54
 [www\Main.php]
-TopLine=22
-Caret=4,44
-[www\iniMem.php]
-TopLine=7
-Caret=29,26
-[www\Styles\Styles.css]
-TopLine=198
-Caret=18,227
-[www\Nastr.php]
-TopLine=33
-Caret=19,61
-Mark1=1,140
-[www\UpSite.php]
-TopLine=1
-Caret=4,11
-[www\iniHtml1.php]
 TopLine=26
-Caret=5,36
-[www\iniHtmlEnd.php]
+Caret=1,45
+[www\iniMem.php]
 TopLine=1
-Caret=1,1
+Caret=29,26
+[www\Styles\StylesLifeMenu.css]
+TopLine=104
+Caret=22,113
+[www\UpSite.php]
+TopLine=35
+Caret=1,45
 [www\iniHtmlBegin.php]
-TopLine=65
-Caret=4,65
-[www\IttveME.js]
-TopLine=69
-Caret=1,1
+TopLine=67
+Caret=1,135
 [www\Site.php]
-TopLine=48
-Caret=18,39
-Mark1=1,49
+TopLine=9
+Caret=1,15
+Mark1=1,42
+[www\Html\iniHtmlLifeMenu.php]
+TopLine=128
+Caret=64,55
+[www\ittveNews\GalleryNews.php]
+TopLine=45
+Caret=18,62
+[www\IttveME.js]
+TopLine=49
+Caret=39,73

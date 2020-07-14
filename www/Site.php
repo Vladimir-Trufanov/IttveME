@@ -39,30 +39,6 @@
    src="ittveNews/ittve01-001-На-Сампо.jpg" 
    alt="На горе Сампо">
 </div>
-
-<div id="MainMenu">
-   <ul class="sm sm-blue">
-      <li><a href="http://localhost:82/">Отладка меню сайта doortry.ru</a></li>
-      <!-- 
-      <li><a href="#">Новости</a></li>
-      -->
-      <li><a href="#">Простая жизнь</a></li>
-      <li><a href="#">Микропутешествия</a>
-      <ul>
-         <li><a href="#">По тропе к карнизу реки Бзерпь</a></li>
-         <li><a href="#">Голубые озера</a></li>
-         <li><a href="#">Этюд из аптекарского сада</a>
-            <ul>
-               <li><a href="###">'Тысячелистник в декоре'</a></li>
-               <li><a href="###">Гербарий</a></li>
-            </ul>
-         </li>
-      </ul>
-      </li>
-      <li><a href="#">Хронология</a></li>
-      <li><a href="#">Карты</a></li>
-   </ul>	
-</div>
   
 <div id="Footer">
    <div id="LeftFooter">
