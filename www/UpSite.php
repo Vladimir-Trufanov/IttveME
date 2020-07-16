@@ -30,28 +30,41 @@ echo '
 <meta name="msapplication-config" content="/favicon260x260/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 ';
+// font-awesome/4.7.0
+echo '<link rel="stylesheet"'.
+   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
+// Общие стили
+echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 
-
-
-
-
-
-// Выбираем страницу с меню и рекламой
-if (prown\isComRequest('LifeMenu','Com'))
+// Выбираем страницу входа на сайт
+$Requ=prown\getComRequest('Com'); 
+if ($Requ==NULL)
 {
-   require_once "Html/iniHtmlLifeMenu.php";
-   //require_once "iniHtml1.php";
-   echo 'LifeMenu'.'<br>';
-   //require_once "Nastr.php";
+   //echo 'NULL';
+   require_once "ViewExt.php";
+   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
 }
-// Запускаем страницу с активным материалом
 else
 {
-   require_once "iniHtmlBegin.php";
-   //require_once "iniHtml1.php";
-   echo 'Привет'.'<br>';
-   require_once "Site.php";
-   //require_once "Nastr.php";
+  // Выбираем страницу с меню и рекламой
+   if (prown\isComRequest('LifeMenu','Com'))
+   {
+      require_once "Html/iniHtmlLifeMenu.php";
+      //require_once "iniHtml1.php";
+      prown\ViewGlobal(avgSESSION);
+      prown\ViewGlobal(avgCOOKIE);
+      echo 'LifeMenu'.'<br>';
+      //require_once "Nastr.php";
+   }
+   // Запускаем страницу с активным материалом
+   else
+   {
+      require_once "iniHtmlBegin.php";
+      //require_once "iniHtml1.php";
+      echo 'Привет'.'<br>';
+      require_once "Site.php";
+      //require_once "Nastr.php";
+   }
 }
 // Выводим завершающие теги страницы
 echo '</body>'; 

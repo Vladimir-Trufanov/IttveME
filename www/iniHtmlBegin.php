@@ -20,8 +20,6 @@ echo '<link rel="stylesheet"'.
    'subset=cyrillic">';
 echo '<link rel="stylesheet"'.
    'href="https://fonts.googleapis.com/css?family=Open+Sans:700">';
-echo '<link rel="stylesheet"'.
-   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 echo '<link rel="stylesheet" type="text/css"
    href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
    <script

@@ -27,11 +27,13 @@ IttveME
 			www\favicon260x260\favicon-32x32.png
 			www\favicon260x260\mstile-150x150.png
 			www\favicon260x260\safari-pinned-tab.svg
-		-Html
+		+Html
 			www\Html\iniHtmlLifeMenu.php
+			www\Html\iniHtmlLogin.php
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
+			www\Images\ittve01-001-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
 			www\Images\oni.jpg
 		-ittveLife
@@ -52,7 +54,7 @@ IttveME
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+ittveNews
+		-ittveNews
 			www\ittveNews\GalleryNews.php
 			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\ittveNews\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -74,11 +76,12 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
+			www\Styles\iniStyles.css
 			www\Styles\jquery-ui.min.css
 			www\Styles\mLeadImg.css
 			www\Styles\Styles.css
@@ -343,56 +346,42 @@ IttveME
 		www\ViewExt.php
 [Open project files]
 0=www\index.php
-1=www\ViewExt.php
-2=www\Styles\styleSet.css
-3=www\Main.php
-4=www\iniMem.php
-5=www\Styles\StylesLifeMenu.css
-6=www\UpSite.php
-7=www\iniHtmlBegin.php
-8=www\Site.php
-9=www\Html\iniHtmlLifeMenu.php
-10=www\ittveNews\GalleryNews.php
-11=www\IttveME.js
+1=www\Main.php
+2=www\iniMem.php
+3=www\Styles\StylesLifeMenu.css
+4=www\UpSite.php
+5=www\iniHtmlBegin.php
+6=www\Site.php
+7=www\ViewExt.php
+8=www\Html\iniHtmlLifeMenu.php
 [Selected Project Files]
 Main=
-Selected=www\IttveME.js
+Selected=www\ViewExt.php
 [www\index.php]
-TopLine=12
+TopLine=31
 Caret=1,23
-[www\ViewExt.php]
-TopLine=43
-Caret=1,57
-Mark1=1,85
-Mark2=1,56
-[www\Styles\styleSet.css]
-TopLine=39
-Caret=23,54
 [www\Main.php]
-TopLine=26
-Caret=1,45
+TopLine=7
+Caret=1,22
 [www\iniMem.php]
-TopLine=1
-Caret=29,26
+TopLine=11
+Caret=1,36
 [www\Styles\StylesLifeMenu.css]
-TopLine=104
-Caret=22,113
-[www\UpSite.php]
-TopLine=35
-Caret=1,45
-[www\iniHtmlBegin.php]
 TopLine=67
-Caret=1,135
+Caret=69,67
+[www\UpSite.php]
+TopLine=41
+Caret=7,55
+[www\iniHtmlBegin.php]
+TopLine=14
+Caret=1,23
 [www\Site.php]
-TopLine=9
-Caret=1,15
+TopLine=38
+Caret=1,60
 Mark1=1,42
+[www\ViewExt.php]
+TopLine=101
+Caret=32,46
 [www\Html\iniHtmlLifeMenu.php]
-TopLine=128
-Caret=64,55
-[www\ittveNews\GalleryNews.php]
-TopLine=45
-Caret=18,62
-[www\IttveME.js]
-TopLine=49
-Caret=39,73
+TopLine=155
+Caret=1,1

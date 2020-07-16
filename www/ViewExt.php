@@ -27,7 +27,13 @@ function ViewInfo($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
       <!-- 
       <a class="btn btn-default" href="#">
       -->
+      
+      
+      
+      <!-- 
       <a href="Nastr.php">
+      -->
+      <a href="http://localhost:83/index.php?Com=LifeMenu">
          <i class="fa fa-align-left" title="Align Left"></i>
       </a>
 
@@ -47,39 +53,52 @@ function ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
    //prown\ViewGlobal(avgSESSION);
    //prown\ViewGlobal(avgGLOBALS);
    //prown\ViewGlobal(avgCOOKIE);
-   
-   $ImageFile='Images/'.$с_PageImg;
 
-   /*
-   echo $ImageFile.'<br>';
+   //$с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,false); 
+
+
+
+   $ImageFile='Images/'.$с_PageImg;
+   ViewInfo($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
    list($width, $height, $type, $attr) = getimagesize($ImageFile);
-   echo $width.'=='.$height.'=='.$type.'=='.$attr.'==<br>';
-   */
-   
-   /*
-   echo '
-   <img id="ImaId" src="'.$ImageFile.'" width="100%" />
-   '.'<br>';
-   */
-   
-   echo '
-   <style type="text/css">
+   if ($width>$height)
+   {
+      // по ширине
+      echo '
+      <style type="text/css">
       #Ext
       {
-         top: 5%;
-         height: 70%;
+         width: 60vw;
+         margin-top: 2vw;
+         margin-left: 5vw;
+         background: red;
       }
-   </style>
+      #ExtImg
+      {
+         width: 60vw;
+      }
+      </style>
+      ';
+   }
+   else
+   {
+      // по высоте
+      echo '
+      <style type="text/css">
+      #Ext
+      {
+         height: 90vh;
+         background: red;
+      }
+      #ExtImg
+      {
+         height: 90vh;
+      }
+      </style>
+      ';
+   }
 
-   ';
-   
-   
 
-   echo '
-   <img src="'.$ImageFile.'" height="100%" />
-   '.'<br>';
-   
-   ViewInfo($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
 
    ?>
    <!-- Пример кнопки для перехода на другую страницу PHP
@@ -92,9 +111,23 @@ function ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
    <div>Изменить настройки сайта в браузере</div>
    </div>
    -->
+   <script>
+      document.write("У Вас включён JavaScript!");
+   </script>
+   <noscript>У Вас отключён JavaScript!</noscript>
+   <noscript>
+   <?php 
+      echo '-----';
+      $s_isJScript=prown\MakeSession('isJScript',1,tInt,false);  
+      $c_isJScript=prown\MakeCookie('isJScript',1,tInt,false);        // JavaScript не включен
+   ?>
+   </noscript>
+   <?php
+   echo '<div id="Ext" align="center">';
+   echo '<img id="ExtImg" src="'.$ImageFile.'">';
+   echo '</div>';
+   
 
-
-
-<?php
+   
 }
 // ************************************************************* NavSet.php ***

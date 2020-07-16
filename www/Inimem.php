@@ -31,10 +31,12 @@ $c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);          // число �
 $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчик посещений текущим посетителем
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов 
 
-$с_PageImg=prown\MakeCookie('PageImg','ittveme-Подъём-настроения.jpg',tStr,true); 
+$с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,false); 
+$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);        // JavaScript не включен
     
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
+$s_isJScript=prown\MakeSession('isJScript',7,tInt,false);        // JavaScript не включен
 
 
 /*
