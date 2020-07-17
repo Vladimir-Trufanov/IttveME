@@ -20,18 +20,6 @@ echo '<link rel="stylesheet"'.
    'subset=cyrillic">';
 echo '<link rel="stylesheet"'.
    'href="https://fonts.googleapis.com/css?family=Open+Sans:700">';
-echo '<link rel="stylesheet" type="text/css"
-   href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
-   <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous">
-   </script>
-   <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous">
-   </script>';
 echo '<link rel="stylesheet" type="text/css" 
    href="TJsPrown/TJsPrown.css">
    <script 

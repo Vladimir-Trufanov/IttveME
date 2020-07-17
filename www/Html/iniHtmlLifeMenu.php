@@ -96,23 +96,21 @@ else
    ";
    */
 
-  /* 
+   /* 
    echo '
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="SmartMenus/sm-core-css.css">
 <link rel="stylesheet" href="SmartMenus/sm-blue.css">
 <script src="SmartMenus/jquery.smartmenus.min.js"></script>
    ';
-*/
+   */
+
+   /*
    ?>
    <script>
    $(document).ready(function() 
    {
-   /*
-
-   
-   //MakeDiv();
-
+      MakeDiv();
       $('.sm').smartmenus({
          showFunction: function($ul, complete) 
          {
@@ -123,14 +121,11 @@ else
             $ul.slideUp(250, complete); 
          }
       });
-      
-   //isDiv();   
-      
+      isDiv();   
    });
-   */
    </script>
    <?php
-
+   */
 }
 echo '</head>';
 echo '<body>';
