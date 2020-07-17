@@ -111,17 +111,6 @@ function ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
    <div>Изменить настройки сайта в браузере</div>
    </div>
    -->
-   <script>
-      document.write("У Вас включён JavaScript!");
-   </script>
-   <noscript>У Вас отключён JavaScript!</noscript>
-   <noscript>
-   <?php 
-      echo '-----';
-      $s_isJScript=prown\MakeSession('isJScript',1,tInt,false);  
-      $c_isJScript=prown\MakeCookie('isJScript',1,tInt,false);        // JavaScript не включен
-   ?>
-   </noscript>
    <?php
    echo '<div id="Ext" align="center">';
    echo '<img id="ExtImg" src="'.$ImageFile.'">';

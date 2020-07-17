@@ -35,12 +35,28 @@ echo '<link rel="stylesheet"'.
    'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 // Общие стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
+// Начинаем html-страницу
+echo '<body>'; 
+
+?>
+<noscript>
+   У Вас отключён JavaScript!
+</noscript>
+<script>
+   document.write("У Вас включён JavaScript!");
+</script>
+<?php 
 
 // Выбираем страницу входа на сайт
 $Requ=prown\getComRequest('Com'); 
 if ($Requ==NULL)
 {
    //echo 'NULL';
+   
+   
+   
+   
+   
    require_once "ViewExt.php";
    ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
 }
