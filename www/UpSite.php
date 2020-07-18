@@ -43,7 +43,6 @@ echo '<link rel="stylesheet" type="text/css"
       integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
       crossorigin="anonymous">
    </script>';
-
 // font-awesome/4.7.0
 echo '<link rel="stylesheet"'.
    'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
@@ -57,101 +56,50 @@ echo '
       src="/TJsPrown/TJsPrown.js">
    </script>
 ';
-
-
-  ?>
-  <script type="text/javascript"> 
-    $(document).ready(function()
-    { 
-      $.get("myPage.php"); 
-    });
-  </script> 
-
+// При необходимости инициируем в сессии проверку JS
+if (!isset($_SESSION['js']))
+{
+?>
+<script> 
+   $(document).ready(function()
+   { 
+      $.get("DefineJs.php"); 
+   });
+</script> 
 <?php
+}
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
-?>
-<noscript>
-   У Вас отключён JavaScript!
-</noscript>
-<script>
-   document.write("У Вас включён JavaScript!");
-</script>
-
-<!-- -->
-
-<?php
-   /* 
-   if(!isset($_SESSION['js'])||$_SESSION['js']=="")
-   { 
-      //echo "<noscript><meta http-equiv='refresh' content='0;url=/get-javascript-status.php&js=0'> </noscript>";
-      //echo "<noscript><meta http-equiv='refresh' content='0;url=/gj.php&js=0'></noscript>";
-      echo "<noscript><meta http-equiv='refresh' content='0; url=/gj.php'></noscript>";
-      $js = true; 
-   }
-   elseif(isset($_SESSION['js'])&& $_SESSION['js']=="0")
-   { 
-      $js = false; 
-      $_SESSION['js']=""; 
-   }
-   elseif(isset($_SESSION['js'])&& $_SESSION['js']=="1")
-   { 
-      $js = true; 
-      $_SESSION['js']=""; 
-   } 
-   if ($js) 
-   { 
-      echo 'Javascript is enabled'; 
-   } 
-   else 
-   { 
-      echo 'Javascript is disabled'; 
-   } 
-   */
-?> 
-
-
-<?php
-
-
- 
 
 // Выбираем страницу входа на сайт
-$Requ=prown\getComRequest('Com'); 
-if ($Requ==NULL)
+if (prown\getComRequest('Com')==NULL)
 {
-   //echo 'NULL';
    require_once "ViewExt.php";
    ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
 }
 else
 {
-  // Выбираем страницу с меню и рекламой
+   // Для всех страниц, кроме начальной при отладке показываем возможность JS
+   if (isset($_SESSION['js']))
+   {
+      echo 'Есть JS'.'<br>';
+   }
+   else
+   {
+      echo 'Нет JS неТ'.'<br>';
+   }
+   /*
+   // При необходимости показываем кукисы и переменные сессий
+   prown\ViewGlobal(avgSESSION);
+   prown\ViewGlobal(avgCOOKIE);
+   */
+   
+   // Выбираем страницу с меню и рекламой
    if (prown\isComRequest('LifeMenu','Com'))
    {
-      if (isset($_SESSION['js']))
-      {
-         echo 'Есть JS'.'<br>';
-      }
-      else
-      {
-         echo 'Нет JS неТ'.'<br>';
-      }
       require_once "Html/iniHtmlLifeMenu.php";
       //require_once "iniHtml1.php";
-      /*
-      if (isset($_SESSION['js']))
-      {
-         echo 'Есть JS'.'<br>';
-      }
-      else
-      {
-         echo 'Нет JS неТ'.'<br>';
-      }
-      */
-      prown\ViewGlobal(avgSESSION);
-      prown\ViewGlobal(avgCOOKIE);
       echo 'LifeMenu'.'<br>';
       //require_once "Nastr.php";
    }
@@ -168,5 +116,5 @@ else
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';
-
+// <!-- -->  ?>  <?php
 // ************************************************************* UpSite.php ***

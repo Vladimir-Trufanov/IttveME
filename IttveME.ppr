@@ -326,8 +326,7 @@ IttveME
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
-		www\get-javascript-status.php
-		www\gj.php
+		www\DefineJs.php
 		www\iMobileStyles.php
 		www\index.php
 		www\iniHtml1.php
@@ -340,7 +339,6 @@ IttveME
 		www\log.txt
 		www\Main.php
 		www\manifest.json
-		www\myPage.php
 		www\Nastr.php
 		www\NavSet.php
 		www\Site.php
@@ -358,15 +356,15 @@ IttveME
 7=www\ViewExt.php
 8=www\Html\iniHtmlLifeMenu.php
 9=www\TJsPrown\TJsPrown.js
-10=www\myPage.php
+10=www\DefineJs.php
 [Selected Project Files]
 Main=
-Selected=www\myPage.php
+Selected=www\UpSite.php
 [www\index.php]
 TopLine=23
 Caret=1,23
 [www\Main.php]
-TopLine=2
+TopLine=22
 Caret=1,22
 [www\iniMem.php]
 TopLine=33
@@ -375,12 +373,11 @@ Caret=1,35
 TopLine=67
 Caret=69,67
 [www\UpSite.php]
-TopLine=47
-Caret=1,127
-Mark1=1,62
+TopLine=67
+Caret=1,46
+Mark1=1,63
 Mark2=1,71
-Mark3=1,78
-Mark4=1,79
+Mark3=1,74
 [www\iniHtmlBegin.php]
 TopLine=14
 Caret=1,23
@@ -389,15 +386,15 @@ TopLine=60
 Caret=1,60
 Mark1=1,42
 [www\ViewExt.php]
-TopLine=86
-Caret=1,114
+TopLine=48
+Caret=1,127
 [www\Html\iniHtmlLifeMenu.php]
-TopLine=107
-Caret=20,107
-Mark1=1,113
+TopLine=20
+Caret=1,20
+Mark1=1,99
 [www\TJsPrown\TJsPrown.js]
 TopLine=133
 Caret=4,133
-[www\myPage.php]
+[www\DefineJs.php]
 TopLine=1
-Caret=26,3
+Caret=1,7

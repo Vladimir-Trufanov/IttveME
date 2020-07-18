@@ -50,13 +50,19 @@ function ViewInfo($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
 
 function ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
 {
-   //prown\ViewGlobal(avgSESSION);
-   //prown\ViewGlobal(avgGLOBALS);
-   //prown\ViewGlobal(avgCOOKIE);
+   // При отладке выводим возможность работы JavaScript
+   /*
+   ?>
+   <noscript>
+      У Вас отключён JavaScript!
+   </noscript>
+   <script>
+      document.write("У Вас включён JavaScript!");
+   </script>
+   <?php
+   */
 
    //$с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,false); 
-
-
 
    $ImageFile='Images/'.$с_PageImg;
    ViewInfo($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
@@ -116,7 +122,5 @@ function ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
    echo '<img id="ExtImg" src="'.$ImageFile.'">';
    echo '</div>';
    
-
-   
 }
-// ************************************************************* NavSet.php ***
+// ************************************************************ ViewExt.php ***

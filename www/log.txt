@@ -62,3 +62,6 @@ Stack trace:
 [11-Jul-2020 23:20:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*', expecting end of file in C:\IttveME\www\Nastr.php on line 74
 [17-Jul-2020 22:57:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '{' in C:\IttveME\www\UpSite.php on line 134
 [17-Jul-2020 22:59:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '{' in C:\IttveME\www\UpSite.php on line 134
+[18-Jul-2020 08:01:04 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\IttveME\www\UpSite.php on line 167
+[18-Jul-2020 08:01:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\IttveME\www\UpSite.php on line 167
+[18-Jul-2020 08:12:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSite.php on line 77
