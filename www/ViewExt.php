@@ -32,8 +32,9 @@ function ViewInfo($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
       
       <!-- 
       <a href="Nastr.php">
-      -->
       <a href="http://localhost:83/index.php?Com=LifeMenu">
+      -->
+      <a href="index.php?Com=LifeMenu">
          <i class="fa fa-align-left" title="Align Left"></i>
       </a>
 
