@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	-www
+	+www
 		-favicon260x260
 			www\favicon260x260\android-chrome-192x192.png
 			www\favicon260x260\android-chrome-256x256.png
@@ -321,7 +321,7 @@ IttveME
 			www\TinyMCE\TinyMCE.css
 			www\TinyMCE\tinymce.js
 			www\TinyMCE\tinymce.min.js
-		-TJsPrown
+		+TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
@@ -347,54 +347,33 @@ IttveME
 		www\ViewExt.php
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\iniMem.php
-3=www\Styles\StylesLifeMenu.css
-4=www\UpSite.php
+1=www\iniMem.php
+2=www\Main.php
+3=www\UpSite.php
+4=www\DefineJs.php
 5=www\iniHtmlBegin.php
-6=www\Site.php
-7=www\ViewExt.php
-8=www\Html\iniHtmlLifeMenu.php
-9=www\TJsPrown\TJsPrown.js
-10=www\DefineJs.php
+6=www\ViewExt.php
 [Selected Project Files]
 Main=
-Selected=www\ViewExt.php
+Selected=www\UpSite.php
 [www\index.php]
-TopLine=23
-Caret=1,23
-[www\Main.php]
-TopLine=22
-Caret=1,22
+TopLine=25
+Caret=3,23
 [www\iniMem.php]
 TopLine=33
-Caret=1,35
-[www\Styles\StylesLifeMenu.css]
-TopLine=67
-Caret=69,67
+Caret=3,39
+[www\Main.php]
+TopLine=21
+Caret=81,61
 [www\UpSite.php]
-TopLine=46
-Caret=1,46
-Mark1=1,63
-Mark2=1,71
-Mark3=1,74
-[www\iniHtmlBegin.php]
-TopLine=14
-Caret=1,23
-[www\Site.php]
-TopLine=60
-Caret=1,60
-Mark1=1,42
-[www\ViewExt.php]
-TopLine=29
-Caret=16,37
-[www\Html\iniHtmlLifeMenu.php]
-TopLine=20
-Caret=1,20
-Mark1=1,99
-[www\TJsPrown\TJsPrown.js]
-TopLine=133
-Caret=4,133
+TopLine=39
+Caret=1,64
 [www\DefineJs.php]
 TopLine=1
-Caret=1,7
+Caret=14,9
+[www\iniHtmlBegin.php]
+TopLine=31
+Caret=1,48
+[www\ViewExt.php]
+TopLine=1
+Caret=1,1

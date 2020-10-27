@@ -32,11 +32,11 @@ $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчи
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов 
 
 $с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,false); 
-$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);        // JavaScript не включен
+//$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);        // JavaScript не включен
     
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
-$s_isJScript=prown\MakeSession('isJScript',7,tInt,false);        // JavaScript не включен
+//$s_isJScript=prown\MakeSession('isJScript','no',tInt,false);     // JavaScript не включен
 
 
 /*

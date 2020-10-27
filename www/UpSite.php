@@ -18,7 +18,7 @@ echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<title>Обо мне, путешествиях и ... Черногории</title>';
 echo '<meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и жизнь его близких">';
 echo '<meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">';
-// Данные о favicon
+// Выводим данные о favicon
 echo '
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon260x260/apple-touch-icon.png">
@@ -56,9 +56,20 @@ echo '
       src="/TJsPrown/TJsPrown.js">
    </script>
 ';
+
+   echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+
+
+
 // При необходимости инициируем в сессии проверку JS
-if (!isset($_SESSION['js']))
-{
+//
+//$_SESSION['js'] = 'no'; 
+
+//if (!isset($_SESSION['js']))
+//{
 ?>
 <script> 
    $(document).ready(function()
@@ -67,28 +78,38 @@ if (!isset($_SESSION['js']))
    });
 </script> 
 <?php
-}
+//}
+
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
+//echo '$_SESSION["js"]='.$_SESSION['js'].'<br>'; 
 
+/*
 // Выбираем страницу входа на сайт
 if (prown\getComRequest('Com')==NULL)
 {
-   require_once "ViewExt.php";
-   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+   //echo 'Начальная страница!'.'<br>';
+
+   //require_once "ViewExt.php";
+   //ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
 }
 else
 {
+*/
+   //echo 'Страница: Com='.prown\getComRequest('Com').'<br>';
+
+
+
    // Для всех страниц, кроме начальной при отладке показываем возможность JS
-   if (isset($_SESSION['js']))
-   {
-      echo 'Есть JS'.'<br>';
-   }
-   else
-   {
-      echo 'Нет JS неТ'.'<br>';
-   }
+   //if (isset($_SESSION['js']))
+   //{
+   //   echo 'Есть JS'.'<br>';
+   //}
+   //else
+   //{
+   //   echo 'Нет JS неТ'.'<br>';
+   //}
    /*
    // При необходимости показываем кукисы и переменные сессий
    prown\ViewGlobal(avgSESSION);
@@ -106,13 +127,15 @@ else
    // Запускаем страницу с активным материалом
    else
    {
-      require_once "iniHtmlBegin.php";
+      //require_once "iniHtmlBegin.php";
       //require_once "iniHtml1.php";
-      echo 'Привет'.'<br>';
+      echo 'Привет!'.'<br>';
       require_once "Site.php";
       //require_once "Nastr.php";
    }
+/*
 }
+*/
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';

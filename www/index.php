@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 04.06.2020
+// Copyright © 2019 tve                              Посл.изменение: 27.10.2020
 
 // Цель: все на jQuery и его плагинах (во вторую очередь без скриптов - на CSS)
 
@@ -20,11 +20,13 @@ $SiteAbove   = $_WORKSPACE[wsSiteAbove];    // Надсайтовый катал
 $SiteHost    = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
 $SiteDevice  = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
 $UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
+//echo '***'.$SiteHost.'***'.'<br>';
 /*
 $TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта
 $Ip          = $_WORKSPACE[wsRemoteAddr];   // IP-адрес запроса сайта
 $SiteName    = $_WORKSPACE[wsSiteName];     // Доменное имя сайта
 */
+
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
