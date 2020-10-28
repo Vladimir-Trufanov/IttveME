@@ -129,7 +129,6 @@ else
    {
       //require_once "iniHtmlBegin.php";
       //require_once "iniHtml1.php";
-      echo 'Привет!'.'<br>';
       require_once "Site.php";
       //require_once "Nastr.php";
    }

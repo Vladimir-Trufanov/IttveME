@@ -7,83 +7,86 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 14.06.2020
+// Copyright © 2019 tve                              Посл.изменение: 28.10.2020
 
-?>
-<!-- 
--->
+// Выводим div с галереей изображений
+echo '<div id="Gallery">';
+require_once "ittveNews/GalleryNews.php";
+echo '</div>';
 
-<div id="Gallery">
-   <?php
-   require_once "ittveNews/GalleryNews.php";
-   ?> 
-</div>
+// Выводим текстовый контент сайта: колонку новостей, колонку моей жизни
+echo '<div id="Content">';
+echo '<section id="News">';
+require_once "ittveNews/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
+echo '</section>';
+echo '<section id="Life">';
 
-<div id="Content">
-   <section id="News">
-      <?php
-         require_once "ittveNews/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
-         //$browser = get_browser(null, true);
-         //print_r($browser);
-      ?>
-   </section>
-   <section id="Life">
-      <?php
-         require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
-      ?>
-   </section>
-</div>
+   // При отладке можем вывести различные сообщения
+   
+   // 1. Характеристики браузера по UserAgent
+   // $browser = get_browser(null, true);
+   // print_r($browser);
 
-<div id=imgDiv>
+   // 2. Тип устройства, корневой каталог, надсайтовый и катлог хостинга
+   // echo $SiteDevice.': '.$SiteRoot.' -> '.$SiteAbove.' -> '.$SiteHost.'<br>'; 
+   
+   // 3. Сообщение о включенных или выключенных шрифтах
+   echo '
+   <script>
+      document.write("У Вас включён JavaScript!");
+   </script>
+   <noscript>У Вас отключён JavaScript!</noscript>
+   ';
+   
+require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
+echo '</section>';
+echo '</div>';
+
+// Это использовать при выводе одного из вариантов показа выделенной фотографии?
+/*
+echo '<div id="imgDiv">';
+echo '
    <img id="imgFull" class="imgCard" 
    src="ittveNews/ittve01-001-На-Сампо.jpg" 
    alt="На горе Сампо">
-</div>
-  
-<div id="Footer">
-   <div id="LeftFooter">
-      <?php 
-         //echo $SiteDevice/*.': '.$SiteRoot.'-'.$SiteAbove.'-'.$SiteHost*/; 
-         //echo $UserAgent.'<br>';
-         //echo '$IsScript='.prown\sayLogic($IsScript).'<br>';
-         
-         /*
-         echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
-         $browser = get_browser(null, true);
-         print_r($browser);
-         */
-      ?>
-         
-      <script>
-         document.write("У Вас включён JavaScript!");
-      </script>
-      <noscript>У Вас отключён JavaScript!</noscript>
-         
-   </div>
-   <div id="LifeMenu">
-      <form action="http://localhost:83/index.php">
-      <button title="Жизнь и путешествия!" id="btnLifeMenu" onclick="clickLifeMenu()"
-         name="Com" value="LifeMenu">
-         <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
-      </button>
-      </form>  
-   </div>
-   <div id="RightFooter">
-      <?php
-      require_once "NavSet.php";
-      ?>
-   </div>
-</div>
+';
+echo '</div>';
+*/
 
-<div align="center" id="Ext">
-   <?php
-   /*
-   require_once "ViewExt.php";
-   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
-   */
-   ?>
-</div>
-  
-<?php
-//}
+// Выводим подвал сайта
+echo '<div id="Footer">';
+   // Левая часть подвала для сообщений, разворачиваемых в три строки
+   echo '<div id="LeftFooter">';
+   echo $UserAgent.'<br>';
+   //echo '$IsScript='.prown\sayLogic($IsScript).'<br>';
+   echo '</div>';
+
+   // Главное меню - центральная часть подвала
+   echo '<div id="LifeMenu">';
+   echo '<form action="http://localhost:83/index.php">';
+   echo 
+   '
+   <button title="Жизнь и путешествия!" id="btnLifeMenu" 
+      onclick="clickLifeMenu()"
+      name="Com" value="LifeMenu">
+      <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
+   </button>
+   ';
+   echo '</form>';  
+   echo '</div>';
+   
+   // Правая часть подвала, меню управления
+   echo '<div id="RightFooter">';
+   require_once "NavSet.php";
+   echo '</div>';
+echo '</div>';
+
+// Выводим окно расширения (для главного меню, для выделенной картинки)
+echo '<div align="center" id="Ext">';
+/*
+require_once "ViewExt.php";
+ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+*/
+echo '</div>';
+
 // *************************************************************** Site.php ***
