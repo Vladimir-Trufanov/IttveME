@@ -364,11 +364,11 @@ Selected=www\iniMem.php
 TopLine=20
 Caret=68,20
 [www\iniMem.php]
-TopLine=29
-Caret=10,34
+TopLine=57
+Caret=84,77
 [www\Main.php]
-TopLine=58
-Caret=1,86
+TopLine=62
+Caret=57,76
 [www\UpSite.php]
 TopLine=97
 Caret=1,108
