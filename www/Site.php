@@ -57,8 +57,7 @@ echo '</div>';
 echo '<div id="Footer">';
    // Левая часть подвала для сообщений, разворачиваемых в три строки
    echo '<div id="LeftFooter">';
-   echo $UserAgent.'<br>';
-   //echo '$IsScript='.prown\sayLogic($IsScript).'<br>';
+   require_once "MessLeftFooter.php";
    echo '</div>';
 
    // Главное меню - центральная часть подвала
@@ -88,5 +87,21 @@ require_once "ViewExt.php";
 ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
 */
 echo '</div>';
+
+?>
+<div id="Info">
+   <div id="InfoLeft">
+      Copyright (c) 2019 v2.0  Труфанов Владимир   tve58@inbox.ru<br>
+   </div>
+   <div id="InfoRight">
+      <?php 
+         echo $SiteDevice.
+         " ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
+      ?>
+   </div>
+</div>
+<?php 
+
+
 
 // *************************************************************** Site.php ***

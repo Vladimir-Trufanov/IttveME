@@ -65,3 +65,5 @@ Stack trace:
 [18-Jul-2020 08:01:04 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\IttveME\www\UpSite.php on line 167
 [18-Jul-2020 08:01:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\IttveME\www\UpSite.php on line 167
 [18-Jul-2020 08:12:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSite.php on line 77
+[02-Nov-2020 16:28:36 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'MessLeftFooter' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 60
+[02-Nov-2020 18:55:42 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\Site.php on line 92
