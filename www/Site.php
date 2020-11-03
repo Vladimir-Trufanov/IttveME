@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 28.10.2020
+// Copyright © 2019 tve                              Посл.изменение: 02.11.2020
 
 // Выводим div с галереей изображений
 echo '<div id="Gallery">';
@@ -17,7 +17,7 @@ echo '</div>';
 // Выводим текстовый контент сайта: колонку новостей, колонку моей жизни
 echo '<div id="Content">';
 echo '<section id="News">';
-require_once "ittveNews/ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
+require_once "ittveNews/".$p_ittveNews;
 echo '</section>';
 echo '<section id="Life">';
 
@@ -76,7 +76,7 @@ echo '<div id="Footer">';
    
    // Правая часть подвала, меню управления
    echo '<div id="RightFooter">';
-   require_once "NavSet.php";
+   require_once "NavSetCss.php";
    echo '</div>';
 echo '</div>';
 

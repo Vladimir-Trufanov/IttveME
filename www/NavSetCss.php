@@ -22,12 +22,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!--
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
-
 <div class='navset'>
    <div class='link'>
       <div class='prev'>&#xf01c;</div>
-      <div class='small' onclick="paTiny()">&#xf01c;</div>
-      <div class='full'  onclick="paTiny()">
+      <div class='small'>&#xf01c;</div>
+      <div class='full'>
          <div class='k1'>Inbox</div>
          <div class='k2'>Отправить сообщение автору</div>
       </div>
@@ -35,8 +34,8 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
    
    <div class='link'>
       <div class='prev'>&#xf013;</div>
-      <div class='small' onclick="paNastr()">&#xf013;</div>
-      <div class='full'  onclick="paNastr()">
+      <div class='small'>&#xf013;</div>
+      <div class='full'>
          <div class='k1'>Tuning</div>
          <div class='k2'>Изменить настройки сайта в браузере</div>
       </div>
@@ -44,8 +43,8 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 
    <div class='link'>
       <div class='prev'>&#xf007;</div>
-      <div class='small' onclick="paTiny()">&#xf007;</div>
-      <div class='full'  onclick="paTiny()">
+      <div class='small'>&#xf007;</div>
+      <div class='full'>
          <div class='k1'>Signup</div>
          <div class='k2'>Зарегистрироваться</div>
       </div>
@@ -53,8 +52,8 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 
    <div class='link'>
       <div class='prev'>&#xf044;</div>
-      <div class='small' onclick="paTiny()">&#xf044;</div>
-      <div class='full'  onclick="paTiny()">
+      <div class='small'>&#xf044;</div>
+      <div class='full'>
          <div class='k1'>Edit</div>
          <div class='k2'>Создать, редактировать материал</div>
       </div>

@@ -67,3 +67,5 @@ Stack trace:
 [18-Jul-2020 08:12:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSite.php on line 77
 [02-Nov-2020 16:28:36 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'MessLeftFooter' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 60
 [02-Nov-2020 18:55:42 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\Site.php on line 92
+[03-Nov-2020 15:21:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\IttveME\www\iniMem.php on line 152
+[03-Nov-2020 15:25:00 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html' (include_path='.;C:\php\pear') in C:\IttveME\www\Site.php on line 21

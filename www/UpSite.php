@@ -30,6 +30,7 @@ echo '
 <meta name="msapplication-config" content="/favicon260x260/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 ';
+/*
 // Подключаем jQuery и jQuery-ui
 echo '<link rel="stylesheet" type="text/css"
    href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
@@ -43,11 +44,19 @@ echo '<link rel="stylesheet" type="text/css"
       integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
       crossorigin="anonymous">
    </script>';
+*/
 // font-awesome/4.7.0
 echo '<link rel="stylesheet"'.
    'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 // Общие стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
+
+echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+
+/*
 // Подключаем TJsPrown и TJsTools
 echo '
    <link rel="stylesheet" type="text/css" 
@@ -56,11 +65,7 @@ echo '
       src="/TJsPrown/TJsPrown.js">
    </script>
 ';
-
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+*/
 
 
 
@@ -71,12 +76,14 @@ echo '
 //if (!isset($_SESSION['js']))
 //{
 ?>
+<!-- 
 <script> 
    $(document).ready(function()
    { 
       $.get("DefineJs.php"); 
    });
 </script> 
+-->
 <?php
 //}
 
@@ -119,7 +126,7 @@ else
    // Выбираем страницу с меню и рекламой
    if (prown\isComRequest('LifeMenu','Com'))
    {
-      require_once "Html/iniHtmlLifeMenu.php";
+      //require_once "Html/iniHtmlLifeMenu.php";
       //require_once "iniHtml1.php";
       echo 'LifeMenu'.'<br>';
       //require_once "Nastr.php";
