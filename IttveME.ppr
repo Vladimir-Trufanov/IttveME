@@ -362,7 +362,7 @@ IttveME
 10=www\Styles\Img2Right.css
 [Selected Project Files]
 Main=
-Selected=www\ViewExt.php
+Selected=www\UpSite.php
 [www\index.php]
 TopLine=6
 Caret=68,20
@@ -379,8 +379,8 @@ Caret=23,112
 TopLine=63
 Caret=1,1
 [www\UpSite.php]
-TopLine=53
-Caret=3,50
+TopLine=42
+Caret=24,52
 [www\Site.php]
 TopLine=11
 Caret=4,26

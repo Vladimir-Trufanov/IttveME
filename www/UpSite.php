@@ -48,6 +48,8 @@ echo '<link rel="stylesheet" type="text/css"
 // font-awesome/4.7.0
 //echo '<link rel="stylesheet"'.
 //   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
+echo '<link rel="stylesheet"'.
+   'href="font-awesome-4.7.0/css/font-awesome.min.css">';
 // Общие стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 
