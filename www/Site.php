@@ -16,9 +16,29 @@ echo '</div>';
 
 // Выводим текстовый контент сайта: колонку новостей, колонку моей жизни
 echo '<div id="Content">';
-echo '<section id="News">';
-require_once "ittveNews/".$p_ittveNews;
-echo '</section>';
+
+echo '<div id="News">';
+
+if (prown\isComRequest('FullImage','Com'))
+{
+   //echo 'FullImage'.'<br>';
+   require_once "ViewExt.php";
+   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+}
+else
+{
+   require_once "ittveNews/".$p_ittveNews;
+}
+//echo '<div align="center" id="Ext">';
+/*
+require_once "ViewExt.php";
+ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+*/
+//echo '</div>';
+
+
+echo '</div>';
+
 echo '<section id="Life">';
 
    // При отладке можем вывести различные сообщения

@@ -131,14 +131,6 @@ else
       echo 'LifeMenu'.'<br>';
       //require_once "Nastr.php";
    }
-   // Выбираем страницу для разворачивания изображения в большем размере
-   else if (prown\isComRequest('FullImage','Com'))
-   {
-      //require_once "Html/iniHtmlLifeMenu.php";
-      //require_once "iniHtml1.php";
-      echo 'FullImage'.'<br>';
-      //require_once "Nastr.php";
-   }
    // Запускаем страницу с активным материалом
    else
    {
