@@ -53,7 +53,7 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 
 echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
 
 /*
@@ -129,6 +129,14 @@ else
       //require_once "Html/iniHtmlLifeMenu.php";
       //require_once "iniHtml1.php";
       echo 'LifeMenu'.'<br>';
+      //require_once "Nastr.php";
+   }
+   // Выбираем страницу для разворачивания изображения в большем размере
+   else if (prown\isComRequest('FullImage','Com'))
+   {
+      //require_once "Html/iniHtmlLifeMenu.php";
+      //require_once "iniHtml1.php";
+      echo 'FullImage'.'<br>';
       //require_once "Nastr.php";
    }
    // Запускаем страницу с активным материалом

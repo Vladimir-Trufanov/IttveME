@@ -54,7 +54,7 @@ IttveME
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		-ittveNews
+		+ittveNews
 			www\ittveNews\GalleryNews.php
 			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\ittveNews\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -76,9 +76,10 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
+			www\Styles\Img2Right.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\iniStyles.css
@@ -351,18 +352,17 @@ IttveME
 0=www\index.php
 1=www\iniMem.php
 2=www\Main.php
-3=www\iniHtmlBegin.php
-4=www\ViewExt.php
-5=www\Styles\iniStyles.css
-6=www\Styles\Styles.css
-7=www\UpSite.php
-8=www\Html\iniHtmlLifeMenu.php
-9=www\Html\iniHtmlLogin.php
-10=www\Site.php
-11=www\NavSetCss.php
+3=www\ViewExt.php
+4=www\Styles\iniStyles.css
+5=www\UpSite.php
+6=www\Site.php
+7=www\ittveNews\GalleryNews.php
+8=www\Styles\StylesLifeMenu.css
+9=www\Styles\styleSet.css
+10=www\Styles\Img2Right.css
 [Selected Project Files]
 Main=
-Selected=www\NavSetCss.php
+Selected=www\ittveNews\GalleryNews.php
 [www\index.php]
 TopLine=6
 Caret=68,20
@@ -370,32 +370,29 @@ Caret=68,20
 TopLine=135
 Caret=1,152
 [www\Main.php]
-TopLine=69
+TopLine=39
 Caret=64,57
-[www\iniHtmlBegin.php]
-TopLine=1
-Caret=1,29
 [www\ViewExt.php]
-TopLine=1
+TopLine=19
 Caret=1,1
 [www\Styles\iniStyles.css]
-TopLine=61
+TopLine=63
 Caret=1,1
-[www\Styles\Styles.css]
-TopLine=175
-Caret=18,181
 [www\UpSite.php]
-TopLine=45
-Caret=1,55
-[www\Html\iniHtmlLifeMenu.php]
-TopLine=21
-Caret=1,26
-[www\Html\iniHtmlLogin.php]
-TopLine=37
-Caret=1,40
+TopLine=121
+Caret=73,134
 [www\Site.php]
-TopLine=73
-Caret=27,79
-[www\NavSetCss.php]
-TopLine=39
-Caret=24,56
+TopLine=5
+Caret=35,73
+[www\ittveNews\GalleryNews.php]
+TopLine=16
+Caret=34,15
+[www\Styles\StylesLifeMenu.css]
+TopLine=1
+Caret=1,169
+[www\Styles\styleSet.css]
+TopLine=27
+Caret=15,114
+[www\Styles\Img2Right.css]
+TopLine=64
+Caret=48,84

@@ -99,6 +99,12 @@
 {
    text-align: center;
 }
+.bCard
+{
+   border:0; 
+   padding:0; 
+   background:#3989c9;
+}
 
 /* Обслуживаем кнопку меню материалов */
 #btnLifeMenu
@@ -150,35 +156,6 @@
    z-index: 99;
    background: yellow;
    display: none;
-}
-
-#Info
-{
-   position: fixed; 
-   bottom: 0; 
-   left: 0;
-   width: 76%;
-   height: 1.4rem;
-   z-index: 100;
-}
-#InfoLeft
-{
-   float: left;
-   width: 50%;
-}
-#InfoRight
-{
-   float: right;
-   text-align: right;
-   width: 50%;
-}
-#InfoLeft, #InfoRight
-{
-   height: 100%;
-   font-size: 1.4rem;
-   font-weight: bold; 
-   /*color: red;*/
-   color: #A4A4A4;
 }
 
 
