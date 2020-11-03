@@ -109,9 +109,9 @@ function ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry)
    </div>
    -->
    <?php
-   //echo '<div id="Ext" align="center">';
+   echo '<div id="Exti" align="center">';
    echo '<img id="ExtImg" src="'.$ImageFile.'">';
-   //echo '</div>';
+   echo '</div>';
    
 }
 // ************************************************************ ViewExt.php ***
