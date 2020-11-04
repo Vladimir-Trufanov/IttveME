@@ -100,6 +100,7 @@ echo '
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
+
 //echo '$_SESSION["js"]='.$_SESSION['js'].'<br>'; 
 
 /*

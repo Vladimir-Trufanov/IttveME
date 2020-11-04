@@ -25,7 +25,7 @@
 </div>
 
 <div class="Card">
-   <button class="bCard" type="submit" name="Com" value="FullImage">
+   <button class="bCard" type="submit" name="Image" value="ittveNews/ittve01-001-С-заботой-и-к-мамам.jpg">
    <img class="imgCard" 
    src="ittveNews/ittve01-001-С-заботой-и-к-мамам.jpg" 
    alt="С заботой и к мамам">
