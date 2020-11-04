@@ -79,7 +79,7 @@ IttveME
 		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
-			www\Styles\Img2Right.css
+			www\Styles\FullImage.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\iniStyles.css
@@ -359,10 +359,10 @@ IttveME
 7=www\ittveNews\GalleryNews.php
 8=www\Styles\StylesLifeMenu.css
 9=www\Styles\styleSet.css
-10=www\Styles\Img2Right.css
+10=www\Styles\FullImage.css
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\Styles\FullImage.css
 [www\index.php]
 TopLine=6
 Caret=68,20
@@ -373,17 +373,17 @@ Caret=11,143
 TopLine=39
 Caret=64,57
 [www\ViewExt.php]
-TopLine=99
-Caret=23,112
+TopLine=69
+Caret=20,92
 [www\Styles\iniStyles.css]
 TopLine=63
 Caret=1,1
 [www\UpSite.php]
-TopLine=42
-Caret=24,52
+TopLine=46
+Caret=1,59
 [www\Site.php]
-TopLine=11
-Caret=4,26
+TopLine=85
+Caret=4,109
 [www\ittveNews\GalleryNews.php]
 TopLine=15
 Caret=34,15
@@ -393,6 +393,6 @@ Caret=1,169
 [www\Styles\styleSet.css]
 TopLine=86
 Caret=15,114
-[www\Styles\Img2Right.css]
-TopLine=56
-Caret=48,84
+[www\Styles\FullImage.css]
+TopLine=49
+Caret=12,55

@@ -55,8 +55,16 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 
 echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+
+if (prown\isComRequest('FullImage','Com'))
+{
+   echo '<link rel="stylesheet" type="text/css" href="Styles/FullImage.css">';
+}
+else
+{
+   echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
+}
 
 /*
 // Подключаем TJsPrown и TJsTools

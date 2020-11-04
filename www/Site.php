@@ -19,16 +19,16 @@ echo '<div id="Content">';
 
 echo '<div id="News">';
 
-if (prown\isComRequest('FullImage','Com'))
-{
+//if (prown\isComRequest('FullImage','Com'))
+//{
    //echo 'FullImage'.'<br>';
-   require_once "ViewExt.php";
-   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
-}
-else
-{
+   //require_once "ViewExt.php";
+   //ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+//}
+//else
+//{
    require_once "ittveNews/".$p_ittveNews;
-}
+//}
 //echo '<div align="center" id="Ext">';
 /*
 require_once "ViewExt.php";
@@ -102,12 +102,13 @@ echo '</div>';
 
 // Выводим окно расширения (для главного меню, для выделенной картинки)
 echo '<div align="center" id="Ext">';
-/*
-require_once "ViewExt.php";
-ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
-*/
+if (prown\isComRequest('FullImage','Com'))
+{
+   //echo 'FullImage'.'<br>';
+   require_once "ViewExt.php";
+   ViewExt($с_PageImg,$SiteDevice,$c_PersName,$c_PersEntry,$c_BrowEntry);
+}
 echo '</div>';
-
 ?>
 <div id="Info">
    <div id="InfoLeft">
