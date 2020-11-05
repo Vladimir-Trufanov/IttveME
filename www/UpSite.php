@@ -97,6 +97,130 @@ echo '
 echo '</head>'; 
 echo '<body>'; 
 
+// Проверяем не требуется ли просто вывести изображение и выводим его
+$ImagePass=prown\getComRequest('Image');
+if (!($ImagePass===NULL))
+{
+
+// 1. ----- 2 курсора, можно будет переключаться  
+/*
+   //echo '$ImagePass='.$ImagePass.'<br>';
+   //echo("Location: http://".$_SERVER['HTTP_HOST'].'/'.$ImagePass).'<br>';
+   //Header("Location: http://".$_SERVER['HTTP_HOST'].'/'.$ImagePass);
+   //echo '<img src="'.$ImagePass.'" alt="'.$ImagePass.'">';
+
+
+list($width, $height, $type, $attr) = getimagesize($ImagePass);
+   if ($width>$height)
+   {
+      // по ширине
+      echo '
+      <style type="text/css">
+      #Ext
+      {
+         width: 60vw;
+         margin-top: 2vw;
+         margin-left: 5vw;
+         background: red;
+      }
+      #ExtImg
+      {
+         width: 60vw;
+      }
+      </style>
+      ';
+   }
+   else
+   {
+      // по высоте
+      echo '
+      <style type="text/css">
+      #Ext
+      {
+         height: 90vh;
+         background: red;
+      }
+      #ExtImg
+      {
+         height: 98vh;
+      }
+      </style>
+      ';
+   }
+
+   echo '   
+   <style type="text/css">
+   body 
+   { 
+      cursor: url("Person.cur"), text;
+   }
+   a:hover 
+   {
+      cursor : url("Pin.cur"), auto;
+   }
+   </style>
+   ';
+   
+  
+    echo '   
+   <li><a href="#">наведи курсор </a></li>
+   <li><a href="#">наведи курсор</a></li>
+   ';
+
+   
+   echo '<div id="Ext" align="center">';
+   echo '<img id="ExtImg" src="'.$ImagePass.'">';
+   echo '</div>';
+*/
+
+// 2. --------- фоны
+
+/*
+echo 'фоны='.$ImagePass.'<br>';
+$ImagePass='example/image/a3.png';
+echo 'фоны='.$ImagePass.'<br>';
+echo '<img src="'.$ImagePass.'" alt="'.$ImagePass.'">';
+*/
+   /*
+   echo '   
+   <style type="text/css"> 
+   body
+   {
+      background: url(example/image/a1.jpg) 90% 90% no-repeat fixed; 
+      background-size: auto, auto, cover;
+   }
+   </style>
+   ';
+   */
+   
+      /*
+      background: url(/example/image/a3.png) 90% 90% no-repeat fixed, 
+                  url(/example/image/a2.png) 40% 40% no-repeat fixed, 
+                  url(/example/image/a1.jpg) no-repeat fixed;
+      background-size: auto, auto, cover;
+      */
+
+   echo '   
+   <style type="text/css">
+   body 
+   {
+      background: 
+         url(/example/image/a3.png) 90% 90% no-repeat fixed, 
+         url(/example/image/a2.png) 40% 40% no-repeat fixed, 
+         url(/example/image/a1.jpg) no-repeat fixed;
+         background-size: auto, auto, cover;
+      animation: ball 40s linear infinite;
+   }
+   @keyframes ball 
+   {
+      from { background-position: 3000px 90%, 180% 40%, 0 0; }
+      to { background-position: -2000px 90%, -300px 20%, 0 0; }
+   }
+   </style>
+   ';
+ 
+
+// 3. ----------
 //echo '$_SESSION["js"]='.$_SESSION['js'].'<br>'; 
 
 /*
@@ -130,14 +254,7 @@ else
    prown\ViewGlobal(avgCOOKIE);
    */
 
-   
-// Проверяем не требуется ли просто вывести изображение и выводим его
-$ImagePass=prown\getComRequest('Image');
-if (!($ImagePass===NULL))
-{
-   //echo '$ImagePass='.$ImagePass.'<br>';
-   //echo("Location: http://".$_SERVER['HTTP_HOST'].'/'.$ImagePass).'<br>';
-   Header("Location: http://".$_SERVER['HTTP_HOST'].'/'.$ImagePass);
+
 }
 // Выводим другие страницы сайта
 else
