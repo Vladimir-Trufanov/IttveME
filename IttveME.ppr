@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	+www
+	-www
 		-favicon260x260
 			www\favicon260x260\android-chrome-192x192.png
 			www\favicon260x260\android-chrome-256x256.png
@@ -27,6 +27,48 @@ IttveME
 			www\favicon260x260\favicon-32x32.png
 			www\favicon260x260\mstile-150x150.png
 			www\favicon260x260\safari-pinned-tab.svg
+		-font-awesome-4.7.0
+			-css
+				www\font-awesome-4.7.0\css\font-awesome.css
+				www\font-awesome-4.7.0\css\font-awesome.min.css
+			-fonts
+				www\font-awesome-4.7.0\fonts\FontAwesome.otf
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
+			-less
+				www\font-awesome-4.7.0\less\animated.less
+				www\font-awesome-4.7.0\less\bordered-pulled.less
+				www\font-awesome-4.7.0\less\core.less
+				www\font-awesome-4.7.0\less\fixed-width.less
+				www\font-awesome-4.7.0\less\font-awesome.less
+				www\font-awesome-4.7.0\less\icons.less
+				www\font-awesome-4.7.0\less\larger.less
+				www\font-awesome-4.7.0\less\list.less
+				www\font-awesome-4.7.0\less\mixins.less
+				www\font-awesome-4.7.0\less\path.less
+				www\font-awesome-4.7.0\less\rotated-flipped.less
+				www\font-awesome-4.7.0\less\screen-reader.less
+				www\font-awesome-4.7.0\less\stacked.less
+				www\font-awesome-4.7.0\less\variables.less
+			-scss
+				www\font-awesome-4.7.0\scss\_animated.scss
+				www\font-awesome-4.7.0\scss\_bordered-pulled.scss
+				www\font-awesome-4.7.0\scss\_core.scss
+				www\font-awesome-4.7.0\scss\_fixed-width.scss
+				www\font-awesome-4.7.0\scss\_icons.scss
+				www\font-awesome-4.7.0\scss\_larger.scss
+				www\font-awesome-4.7.0\scss\_list.scss
+				www\font-awesome-4.7.0\scss\_mixins.scss
+				www\font-awesome-4.7.0\scss\_path.scss
+				www\font-awesome-4.7.0\scss\_rotated-flipped.scss
+				www\font-awesome-4.7.0\scss\_screen-reader.scss
+				www\font-awesome-4.7.0\scss\_stacked.scss
+				www\font-awesome-4.7.0\scss\_variables.scss
+				www\font-awesome-4.7.0\scss\font-awesome.scss
+			www\font-awesome-4.7.0\HELP-US-OUT.txt
 		-Html
 			www\Html\iniHtmlLifeMenu.php
 			www\Html\iniHtmlLogin.php
@@ -54,7 +96,7 @@ IttveME
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+ittveNews
+		-ittveNews
 			www\ittveNews\GalleryNews.php
 			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\ittveNews\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -76,10 +118,10 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
-			www\Styles\FullImage.css
+			www\Styles\Img2Right.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
 			www\Styles\iniStyles.css
@@ -359,12 +401,11 @@ IttveME
 7=www\ittveNews\GalleryNews.php
 8=www\Styles\StylesLifeMenu.css
 9=www\Styles\styleSet.css
-10=www\Styles\FullImage.css
-11=..\TPhpPrown\TPhpPrown\FromRequest.php
-12=..\TPhpPrown\TPhpPrown\CommonPrown.php
+10=..\TPhpPrown\TPhpPrown\FromRequest.php
+11=..\TPhpPrown\TPhpPrown\CommonPrown.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\UpSite.php
 [www\index.php]
 TopLine=6
 Caret=68,20
@@ -381,26 +422,24 @@ Caret=20,92
 TopLine=63
 Caret=1,1
 [www\UpSite.php]
-TopLine=90
-Caret=1,103
+TopLine=124
+Caret=1,141
+Mark1=1,68
 [www\Site.php]
-TopLine=13
-Caret=6,30
+TopLine=15
+Caret=1,30
 [www\ittveNews\GalleryNews.php]
-TopLine=9
-Caret=51,28
+TopLine=34
+Caret=1,51
 [www\Styles\StylesLifeMenu.css]
 TopLine=141
 Caret=1,169
 [www\Styles\styleSet.css]
 TopLine=86
 Caret=15,114
-[www\Styles\FullImage.css]
-TopLine=38
-Caret=54,66
 [..\TPhpPrown\TPhpPrown\FromRequest.php]
 TopLine=45
 Caret=80,60
 [..\TPhpPrown\TPhpPrown\CommonPrown.php]
-TopLine=111
+TopLine=98
 Caret=10,127

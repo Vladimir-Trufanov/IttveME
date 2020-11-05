@@ -78,3 +78,5 @@ Stack trace:
 #1 C:\IttveME\www\index.php(37): require_once('C:\\IttveME\\www\\...')
 #2 {main}
   thrown in C:\IttveME\www\UpSite.php on line 104
+[05-Nov-2020 15:20:29 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\ittveNews\GalleryNews.php on line 38
+[05-Nov-2020 16:20:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '**' (T_POW), expecting end of file in C:\IttveME\www\UpSite.php on line 166

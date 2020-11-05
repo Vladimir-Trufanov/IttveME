@@ -28,9 +28,6 @@ echo '<div id="News">';
 //else
 //{
 
-$ccc=prown\getComRequest('Image');
-echo '$ccc='.$ccc.'***<br>';
-
    require_once "ittveNews/".$p_ittveNews;
 //}
 //echo '<div align="center" id="Ext">';

@@ -50,22 +50,21 @@ echo '<link rel="stylesheet" type="text/css"
 //   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 echo '<link rel="stylesheet"'.
    'href="font-awesome-4.7.0/css/font-awesome.min.css">';
-// Общие стили
-echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
-
-echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
-
-if (prown\isComRequest('FullImage','Com'))
+   
+// Проверяем не требуется ли просто вывести изображение и подключаем стили для него
+$ImagePass=prown\getComRequest('Image');
+if (!($ImagePass===NULL))
 {
-   echo '<link rel="stylesheet" type="text/css" href="Styles/FullImage.css">';
 }
+// Подключаем общие стили при показе статей
 else
 {
+   echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 }
-
 /*
 // Подключаем TJsPrown и TJsTools
 echo '
@@ -76,9 +75,6 @@ echo '
    </script>
 ';
 */
-
-
-
 // При необходимости инициируем в сессии проверку JS
 //
 //$_SESSION['js'] = 'no'; 
@@ -133,7 +129,19 @@ else
    prown\ViewGlobal(avgSESSION);
    prown\ViewGlobal(avgCOOKIE);
    */
+
    
+// Проверяем не требуется ли просто вывести изображение и выводим его
+$ImagePass=prown\getComRequest('Image');
+if (!($ImagePass===NULL))
+{
+   //echo '$ImagePass='.$ImagePass.'<br>';
+   //echo("Location: http://".$_SERVER['HTTP_HOST'].'/'.$ImagePass).'<br>';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].'/'.$ImagePass);
+}
+// Выводим другие страницы сайта
+else
+{
    // Выбираем страницу с меню и рекламой
    if (prown\isComRequest('LifeMenu','Com'))
    {
@@ -150,11 +158,11 @@ else
       require_once "Site.php";
       //require_once "Nastr.php";
    }
+}
 /*
 }
 */
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';
-// <!-- -->  ?>  <?php
-// ************************************************************* UpSite.php ***
+// <!-- --> **************************************************** UpSite.php ***
