@@ -77,12 +77,18 @@ IttveME
 		-Html
 			www\Html\iniHtmlLifeMenu.php
 			www\Html\iniHtmlLogin.php
-		+Images
+		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
-			+Cursors
-				www\Images\Cursors\UpArrow.cur
-				www\Images\Cursors\Wait.ani
+			-Cursors
+				www\Images\Cursors\Less10.cur
+				www\Images\Cursors\Less-anoop.cur
+				www\Images\Cursors\Less-cross.cur
+				www\Images\Cursors\More10.cur
+				www\Images\Cursors\More-anoop.cur
+				www\Images\Cursors\More-move.cur
+				www\Images\Cursors\Move.cur
+				www\Images\Cursors\Unavailable.cur
 			www\Images\ittve01-001-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
 			www\Images\oni.jpg
@@ -126,7 +132,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
 			www\Styles\Img2Right.css
@@ -377,6 +383,7 @@ IttveME
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
+		www\DebugNews.php
 		www\DefineJs.php
 		www\iMobileStyles.php
 		www\index.php
@@ -394,46 +401,40 @@ IttveME
 		www\Nastr.php
 		www\NavSetCss.php
 		www\NavSetJs.php
-		www\Person.cur
-		www\Pin.cur
 		www\Site.php
 		www\SiteOld.php
 		www\UpSite.php
-		www\ViewExt.php
+		www\ViewImage.php
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
 2=www\Main.php
-3=www\ViewExt.php
+3=www\ViewImage.php
 4=www\Styles\iniStyles.css
-5=www\Site.php
-6=www\ittveNews\GalleryNews.php
-7=www\Styles\StylesLifeMenu.css
-8=www\Styles\styleSet.css
-9=..\TPhpPrown\TPhpPrown\FromRequest.php
-10=..\TPhpPrown\TPhpPrown\CommonPrown.php
-11=www\UpSite.php
+5=www\ittveNews\GalleryNews.php
+6=www\Styles\StylesLifeMenu.css
+7=www\Styles\styleSet.css
+8=www\UpSite.php
+9=www\Site.php
+10=www\DebugNews.php
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\DebugNews.php
 [www\index.php]
 TopLine=6
 Caret=68,20
 [www\iniMem.php]
-TopLine=143
-Caret=11,143
+TopLine=29
+Caret=1,36
 [www\Main.php]
 TopLine=39
 Caret=64,57
-[www\ViewExt.php]
-TopLine=88
-Caret=1,115
+[www\ViewImage.php]
+TopLine=1
+Caret=1,166
 [www\Styles\iniStyles.css]
 TopLine=63
 Caret=1,1
-[www\Site.php]
-TopLine=30
-Caret=1,30
 [www\ittveNews\GalleryNews.php]
 TopLine=8
 Caret=1,18
@@ -443,12 +444,12 @@ Caret=1,169
 [www\Styles\styleSet.css]
 TopLine=86
 Caret=15,114
-[..\TPhpPrown\TPhpPrown\FromRequest.php]
-TopLine=45
-Caret=80,60
-[..\TPhpPrown\TPhpPrown\CommonPrown.php]
-TopLine=99
-Caret=10,127
 [www\UpSite.php]
-TopLine=229
-Caret=1,185
+TopLine=91
+Caret=1,144
+[www\Site.php]
+TopLine=49
+Caret=1,18
+[www\DebugNews.php]
+TopLine=25
+Caret=13,42

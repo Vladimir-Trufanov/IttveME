@@ -84,3 +84,6 @@ Stack trace:
 [05-Nov-2020 20:04:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\IttveME\www\UpSite.php on line 194
 [05-Nov-2020 20:07:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\IttveME\www\UpSite.php on line 207
 [06-Nov-2020 23:59:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '.90' (T_DNUMBER), expecting ',' or ';' in C:\IttveME\www\UpSite.php on line 150
+[07-Nov-2020 08:23:30 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\IttveME\www\Site.php on line 22
+[07-Nov-2020 08:24:07 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '{', expecting '(' in C:\IttveME\www\DebugNews.php on line 18
+[07-Nov-2020 08:25:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\IttveME\www\DebugNews.php on line 40
