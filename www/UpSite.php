@@ -50,16 +50,19 @@ echo '<link rel="stylesheet" type="text/css"
 //   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 echo '<link rel="stylesheet"'.
    'href="font-awesome-4.7.0/css/font-awesome.min.css">';
+
+// Подключаем общие стили
+echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
    
 // Проверяем не требуется ли просто вывести изображение и подключаем стили для него
 $ImagePass=prown\getComRequest('Image');
 if (!($ImagePass===NULL))
 {
+   echo '<link rel="stylesheet" type="text/css" href="Styles/ViewImage.css">';
 }
 // Подключаем общие стили при показе статей
 else
 {
-   echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';

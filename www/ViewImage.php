@@ -9,22 +9,8 @@
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  11.07.2020
 // Copyright © 2020 tve                              Посл.изменение: 07.11.2020
-
-   echo '   
-   <style type="text/css">
-   body 
-   {
-      cursor: url("Images/Cursors/Less-anoop.cur"), auto;
-   }
-   #ExtImg:hover 
-   { 
-      cursor: url("Images/Cursors/More-anoop.cur"), text;
-   }
-   </style>
-   ';
-
-   //echo '$ImagePass='.$ImagePass.'<br>';
-   
+  
+   /*
    list($width, $height, $type, $attr) = getimagesize($ImagePass);
    if ($width>$height)
    {
@@ -85,8 +71,10 @@
    }
    </style>
    ';
+   */
 
-   echo '<div id="Ext" align="center">';
+   //echo '<div id="Ext" align="center">';
+   echo '<div id="Ext">';
    echo '<img id="ExtImg" src="'.$ImagePass.'">';
    echo '</div>';
 
