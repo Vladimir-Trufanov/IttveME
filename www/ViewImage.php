@@ -9,7 +9,76 @@
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  11.07.2020
 // Copyright © 2020 tve                              Посл.изменение: 07.11.2020
-  
+
+// Если кукис существует и он указывает на вывод картинки в рамках страницы
+// (по высоте), то так картинку и выводим
+if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
+{
+   echo '
+   <style type="text/css">
+      html,body,#ExtImg
+      {
+         height: 100%;
+      }
+   </style>
+   ';
+   echo '<img id="ExtImg" src="'.$ImagePass.'">';
+}
+// Иначе выводим полноразмерное изображение, 
+// то есть в натуральную величину в пикселах
+{
+   // Устанавливаем курсор для переключения изображения на уменьшенный размер
+   echo '
+   <style type="text/css">
+      #ExtImg:hover 
+      { 
+         cursor: url("/Images/Cursors/Less-anoop.cur"), auto;
+      }
+   </style>
+   ';
+   echo '<form action="http://localhost:83">';
+   echo '<button id="bImg" type="submit" name="ImageSmall" value="'.$ImagePass.'">';
+   echo '<img id="ExtImg" src="'.$ImagePass.'" alt="'.$ImagePass.'">';
+   echo '</button>';
+   echo '</form>';
+}
+
+
+
+/*
+echo '
+   <style type="text/css">
+   #Ext
+   {
+      height: 90vh;
+   }
+   #ExtImg
+   {
+      height: 90vh;
+   }
+   </style>
+   ';
+*/  
+
+
+
+
+
+
+/*
+echo '
+   <style type="text/css">
+   #Ext
+   {
+      height: 90vh;
+   }
+   #ExtImg
+   {
+      height: 90vh;
+   }
+   </style>
+   ';
+*/  
    /*
    list($width, $height, $type, $attr) = getimagesize($ImagePass);
    if ($width>$height)
@@ -74,9 +143,8 @@
    */
 
    //echo '<div id="Ext" align="center">';
-   echo '<div id="Ext">';
-   echo '<img id="ExtImg" src="'.$ImagePass.'">';
-   echo '</div>';
+   //echo '<img id="ExtImg" src="'.$ImagePass.'">';
+   //echo '</div>';
 
 /*
    //echo '$ImagePass='.$ImagePass.'<br>';

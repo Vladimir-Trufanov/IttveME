@@ -7,7 +7,36 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 14.07.2020
+// Copyright © 2019 tve                              Посл.изменение: 09.11.2020
+
+// Проверяем, есть ли запрос на вывод картинки
+function isViewImage(&$ImagePass,$MakeCookie=false)
+{
+   // Проверяем не требуется ли вывести полноразмерное изображение 
+   $ImagePass=prown\getComRequest('Image');
+   if (!($ImagePass===NULL))
+   {
+      if ($MakeCookie) $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize); 
+      $Result=true;
+   }
+   else
+   {
+      // Проверяем не требуется ли вывести изображение на странице
+      $ImagePass=prown\getComRequest('ImageSmall');
+      if (!($ImagePass===NULL))
+      {
+         if ($MakeCookie) $с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage); 
+         $Result=true;
+      }
+      // Отмечаем, что нет запроса на вывод картинки
+      else
+      {
+         $ImagePass=NULL;
+         $Result=false;
+      }
+   }
+return $Result;
+}
 
 // Выводим начальные теги страницы
 echo '<!DOCTYPE html>';
@@ -54,20 +83,17 @@ echo '<link rel="stylesheet"'.
 // Подключаем общие стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
    
-// Проверяем не требуется ли просто вывести изображение и подключаем стили для него
-$ImagePass=prown\getComRequest('Image');
-if (!($ImagePass===NULL))
+// Если не требуется вывести полноразмерное изображение,
+// то подключаем общие стили при показе статей
+$ImagePass=NULL; 
+if (!(isViewImage($ImagePass)))
 {
-   echo '<link rel="stylesheet" type="text/css" href="Styles/ViewImage.css">';
+      echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
+      echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+      echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+      echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 }
-// Подключаем общие стили при показе статей
-else
-{
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
-}
+
 /*
 // Подключаем TJsPrown и TJsTools
 echo '
@@ -101,8 +127,7 @@ echo '</head>';
 echo '<body>'; 
 
 // Проверяем не требуется ли просто вывести изображение и выводим его
-$ImagePass=prown\getComRequest('Image');
-if (!($ImagePass===NULL))
+if (isViewImage($ImagePass,true))
 {
    require_once "ViewImage.php";
 

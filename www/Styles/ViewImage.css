@@ -14,14 +14,35 @@
   Определяем курсоры для переключения межну страничным изображением 
   и полноразмерным
 */
+html,body,#ExtImg
+{
+   height: 100%;
+}
 body 
 {
+   background: yellow;
    cursor: url("/Images/Cursors/Less-anoop.cur"), auto;
 }
 #ExtImg:hover 
 { 
    cursor: url("/Images/Cursors/More-anoop.cur"), text;
 }
+/*
+#Ext
+{
+   height: 96vh;
+   margin-top: 2vw;
+   margin-bottom: 2vw;
+   background: #fc3; 
+}
+*/
+#ExtImg
+{
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+   background-color: transparent;
+}
+
 /*
  ************************************************************ ViewImage.css ***
 */	

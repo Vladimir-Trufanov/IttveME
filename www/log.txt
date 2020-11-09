@@ -87,3 +87,11 @@ Stack trace:
 [07-Nov-2020 08:23:30 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\IttveME\www\Site.php on line 22
 [07-Nov-2020 08:24:07 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '{', expecting '(' in C:\IttveME\www\DebugNews.php on line 18
 [07-Nov-2020 08:25:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\IttveME\www\DebugNews.php on line 40
+[09-Nov-2020 22:52:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\IttveME\www\UpSite.php on line 40
+[09-Nov-2020 22:53:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
+[09-Nov-2020 22:53:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
+[09-Nov-2020 22:53:15 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
+[09-Nov-2020 22:53:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
+[09-Nov-2020 22:53:31 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
+[09-Nov-2020 22:54:36 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
+[09-Nov-2020 22:55:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\IttveME\www\UpSite.php on line 132
