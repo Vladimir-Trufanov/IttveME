@@ -9,36 +9,21 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 09.11.2020
 
-// Проверяем, есть ли запрос на вывод картинки
-function isViewImage(&$ImagePass,$MakeCookie=false)
+// ****************************************************************************
+// *     Выбрать имя файла, если был запрос к сайту на вывод изображения,     *
+// *       переключить переменную-кукис на другой формат изображения:         *
+// *              на странице или полноформатное изображение                  *
+// ****************************************************************************
+function isViewImage()
 {
-   // Проверяем не требуется ли вывести полноразмерное изображение 
-   $ImagePass=prown\getComRequest('Image');
-   if (!($ImagePass===NULL))
-   {
-      if ($MakeCookie) $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize); 
-      $Result=true;
-   }
-   else
-   {
-      // Проверяем не требуется ли вывести изображение на странице
-      $ImagePass=prown\getComRequest('ImageSmall');
-      if (!($ImagePass===NULL))
-      {
-         if ($MakeCookie) $с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage); 
-         $Result=true;
-      }
-      // Отмечаем, что нет запроса на вывод картинки
-      else
-      {
-         $ImagePass=NULL;
-         $Result=false;
-      }
-   }
-return $Result;
+   // Выбираем спецификацию файла изображения 
+   $ImageFile=prown\getComRequest('Image');
+   return $ImageFile;
 }
-
-// Выводим начальные теги страницы
+// ****************************************************************************
+// *              Формируем общие начальные теги разметки страницы,           *
+// *           разбираем параметры запроса и открываем страницу сайта         *
+// ****************************************************************************
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
@@ -79,21 +64,21 @@ echo '<link rel="stylesheet" type="text/css"
 //   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 echo '<link rel="stylesheet"'.
    'href="font-awesome-4.7.0/css/font-awesome.min.css">';
-
 // Подключаем общие стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
-   
+// Выбираем имя файла, если был запрос к сайту на вывод изображения,
+// переключаем переменную-кукис на другой формат изображения: на странице 
+// или полноформатное изображение                  
+$ImageFile=isViewImage();
 // Если не требуется вывести полноразмерное изображение,
 // то подключаем общие стили при показе статей
-$ImagePass=NULL; 
-if (!(isViewImage($ImagePass)))
+if ($ImageFile===NULL)
 {
-      echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
-      echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-      echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
-      echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
+   echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 }
-
 /*
 // Подключаем TJsPrown и TJsTools
 echo '
@@ -121,16 +106,13 @@ echo '
 -->
 <?php
 //}
-
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
-
 // Проверяем не требуется ли просто вывести изображение и выводим его
-if (isViewImage($ImagePass,true))
+if ($ImageFile<>NULL)
 {
    require_once "ViewImage.php";
-
    // Показываем возможность JS
    //if (isset($_SESSION['js']))
    //{

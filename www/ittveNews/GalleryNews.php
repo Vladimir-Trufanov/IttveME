@@ -9,7 +9,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 05.11.2020
 
-function ViewImage($FileName,$Comment)
+function GViewImage($FileName,$Comment)
 {
    echo 
       '<div class="Card"> '.
@@ -24,28 +24,30 @@ echo '<form action="http://localhost:83">';
 
 $FileName="ittveNews/ittve01-001-Подъём-настроения.jpg";
 $Comment="Это текст комментария под картинкой! И здесь тоже текст комментария под картинкой!";
-ViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-С-заботой-и-к-мамам.jpg";
 $Comment="С заботой и к мамам";
-ViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-На-Сампо.jpg";
 $Comment="На горе Сампо";
-ViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-Дождь-празднику-не-помеха.jpg";
 $Comment="Дождь празднику не помеха";
-ViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-У-ёлочки.png";
 $Comment="У ёлочки";
-ViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-Хочешь-кваску.jpg";
 $Comment="Хочешь кваску";
-ViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment);
 
 echo '</form>';
+$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);     // режим представления выбранной картинки
+
 
 // <!-- --> *********************************************** GalleryView.php ***

@@ -141,7 +141,7 @@ $c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);          // число �
 $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчик посещений текущим посетителем
 
 $с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
-$с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize,tInt,true);     // режим представления выбранной картинки
+$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage,tInt,true);     // режим представления выбранной картинки
 //$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);        // JavaScript не включен
     
 // Инициализируем сессионные переменные
