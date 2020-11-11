@@ -18,14 +18,42 @@
  * меняется режим страничного вывода на полноформатный и наоборот.
 */
 
-echo '$с_ModeImg='.$с_ModeImg.'<br>';
-echo '$_COOKIE["ModeImg"]='.$_COOKIE["ModeImg"].'<br>';
+//echo 'Пришло $с_ModeImg='.$с_ModeImg.'<br>';
+//echo '$_COOKIE["ModeImg"]='.$_COOKIE["ModeImg"].'<br>';
 
 // Если кукис существует и он указывает на вывод картинки в рамках страницы
 // (по высоте), то так картинку и выводим
 if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
 {
-   echo '$с_ModeImg 2 ='.$с_ModeImg.'<br>';
+   //echo 'vimOnPage='.vimOnPage.' ';
+   //echo '$с_ModeImg 2 ='.$с_ModeImg.'<br>';
+   echo '
+   <style type="text/css">
+      #ExtImg
+      {
+         height: 90vh;;
+         padding-top: 5vh;
+         padding-bottom: 5vh;
+         background-color: blue; /*transparent;*/
+      }
+      #ExtImg:hover 
+      { 
+         cursor: url("/Images/Cursors/More-anoop.cur"), auto;
+      }
+      #bImg 
+      { 
+         color: yellow;
+         background-color: red;
+      }
+   </style>
+   ';
+}
+// Иначе выводим полноразмерное изображение, 
+// то есть в натуральную величину в пикселах
+else
+{
+   //echo '$с_ModeImg 21 ='.$с_ModeImg.'<br>';
+   // Устанавливаем курсор для переключения изображения на уменьшенный размер
    echo '
    <style type="text/css">
       html,body,#ExtImg
@@ -34,36 +62,21 @@ if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
       }
       #ExtImg:hover 
       { 
-         cursor: url("/Images/Cursors/More-anoop.cur"), auto;
-      }
-   </style>
-   ';
-   echo '<form action="http://localhost:83">';
-   echo '<button id="bImg" type="submit" name="Image-vimOnPage" value="'.$ImageFile.'">';
-   echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
-   echo '</button>';
-   echo '</form>';
-}
-// Иначе выводим полноразмерное изображение, 
-// то есть в натуральную величину в пикселах
-else
-{
-   // Устанавливаем курсор для переключения изображения на уменьшенный размер
-   echo '
-   <style type="text/css">
-      #ExtImg:hover 
-      { 
          cursor: url("/Images/Cursors/Less-anoop.cur"), auto;
       }
+      #bImg 
+      { 
+         color: yellow;
+      }
    </style>
    ';
-   echo '<form action="http://localhost:83">';
-   echo '<button id="bImg" type="submit" name="Image-vimExiSize" value="'.$ImageFile.'">';
-   echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
-   echo '</button>';
-   echo '</form>';
 }
-/*
+// Готовим форму для перевывода картинки
+echo '<form action="http://localhost:83">';
+echo '<button id="bImg" type="submit" name="Image" value="'.$ImageFile.'">';
+echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
+echo '</button>';
+echo '</form>';
 // Меняем режим страничного вывода на полноформатный и наоборот,
 // то усть через переменную-кукис переопределяем тип изображения
 if (isset($_COOKIE['ModeImg'])&&($_COOKIE['ModeImg']==vimOnPage))
@@ -74,11 +87,6 @@ else
 {
    $с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);
 }
-*/
-   $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize); 
-echo '$с_ModeImg3='.$с_ModeImg.'<br>';
-echo '$_COOKIE["ModeImg"]3='.$_COOKIE["ModeImg"].'<br>';
-
 
 
 /*
