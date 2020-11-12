@@ -9,16 +9,38 @@
                                                      Дата создания:  07.01.2019
  Copyright © 2019 tve                                Посл.изменение: 09.11.2020
 */
+html
+{
+   background:transparent; /*yellow;*/
+}
+body 
+{
+   background:transparent; /*gray;*/
+}
+form
+{
+   background:transparent; /*green;*/
+} 
+html,body,#bImg
+{
+   height:100%;
+}
+#ExtImg
+{
+   background-color:transparent; /*red;*/
+}
+#bImg 
+{ 
+   border:0;
+   background-color:transparent; /*blue*/;
+}
+
 
 /** 
   Определяем курсоры для переключения межну страничным изображением 
   и полноразмерным
 */
 /*
-html,body,#ExtImg
-{
-   height: 100%;
-}
 body 
 {
    background: yellow;

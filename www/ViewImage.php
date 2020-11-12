@@ -18,9 +18,7 @@
  * меняется режим страничного вывода на полноформатный и наоборот.
 */
 
-//echo 'Пришло $с_ModeImg='.$с_ModeImg.'<br>';
-//echo '$_COOKIE["ModeImg"]='.$_COOKIE["ModeImg"].'<br>';
-echo '<form action="http://localhost:83">';
+echo '<form action="http://localhost:83" align="center">';
 
 // Если кукис существует и он указывает на вывод картинки в рамках страницы
 // (по высоте), то так картинку и выводим
@@ -28,22 +26,11 @@ if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
 {
    echo '
    <style type="text/css">
-      #ExtImg
-      {
-         height: 90vh;;
-         padding-top: 5vh;
-         padding-bottom: 5vh;
-         background-color: blue; /*transparent;*/
-      }
       #ExtImg 
       { 
-        cursor: url("/Images/Cursors/More-anoop.cur"), auto;
-      }
-      #bImg 
-      { 
-         height: 90vh;;
-         color: yellow;
-         background-color: red;
+         cursor: url("/Images/Cursors/More-anoop.cur"), auto;
+         padding-top:.8vh;
+         height:99vh;
       }
    </style>
    ';
@@ -55,17 +42,14 @@ else
    // Устанавливаем курсор для переключения изображения на уменьшенный размер
    echo '
    <style type="text/css">
-      html,body,#ExtImg
+      
+      /*html,body,#ExtImg
       {
-         height: 100%;
-      }
+      }*/
       #ExtImg 
       { 
          cursor: url("/Images/Cursors/Less-anoop.cur"), auto;
-      }
-      #bImg 
-      { 
-         color: yellow;
+         height: 100%;
       }
    </style>
    ';
@@ -184,7 +168,7 @@ echo '
    ';
    */
 
-   //echo '<div id="Ext" align="center">';
+   //echo '<div id="Ext" align="center">';        
    //echo '<img id="ExtImg" src="'.$ImagePass.'">';
    //echo '</div>';
 
