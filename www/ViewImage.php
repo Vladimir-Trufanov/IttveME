@@ -20,13 +20,12 @@
 
 //echo 'Пришло $с_ModeImg='.$с_ModeImg.'<br>';
 //echo '$_COOKIE["ModeImg"]='.$_COOKIE["ModeImg"].'<br>';
+echo '<form action="http://localhost:83">';
 
 // Если кукис существует и он указывает на вывод картинки в рамках страницы
 // (по высоте), то так картинку и выводим
 if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
 {
-   //echo 'vimOnPage='.vimOnPage.' ';
-   //echo '$с_ModeImg 2 ='.$с_ModeImg.'<br>';
    echo '
    <style type="text/css">
       #ExtImg
@@ -36,12 +35,13 @@ if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
          padding-bottom: 5vh;
          background-color: blue; /*transparent;*/
       }
-      #ExtImg:hover 
+      #ExtImg 
       { 
-         cursor: url("/Images/Cursors/More-anoop.cur"), auto;
+        cursor: url("/Images/Cursors/More-anoop.cur"), auto;
       }
       #bImg 
       { 
+         height: 90vh;;
          color: yellow;
          background-color: red;
       }
@@ -52,7 +52,6 @@ if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
 // то есть в натуральную величину в пикселах
 else
 {
-   //echo '$с_ModeImg 21 ='.$с_ModeImg.'<br>';
    // Устанавливаем курсор для переключения изображения на уменьшенный размер
    echo '
    <style type="text/css">
@@ -60,7 +59,7 @@ else
       {
          height: 100%;
       }
-      #ExtImg:hover 
+      #ExtImg 
       { 
          cursor: url("/Images/Cursors/Less-anoop.cur"), auto;
       }
@@ -72,13 +71,12 @@ else
    ';
 }
 // Готовим форму для перевывода картинки
-echo '<form action="http://localhost:83">';
 echo '<button id="bImg" type="submit" name="Image" value="'.$ImageFile.'">';
 echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
 echo '</button>';
 echo '</form>';
 // Меняем режим страничного вывода на полноформатный и наоборот,
-// то усть через переменную-кукис переопределяем тип изображения
+// то есть через переменную-кукис переопределяем тип изображения
 if (isset($_COOKIE['ModeImg'])&&($_COOKIE['ModeImg']==vimOnPage))
 {
    $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize); 

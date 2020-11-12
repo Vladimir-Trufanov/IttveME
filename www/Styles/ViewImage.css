@@ -14,6 +14,7 @@
   Определяем курсоры для переключения межну страничным изображением 
   и полноразмерным
 */
+/*
 html,body,#ExtImg
 {
    height: 100%;
@@ -27,6 +28,7 @@ body
 { 
    cursor: url("/Images/Cursors/More-anoop.cur"), text;
 }
+*/
 /*
 #Ext
 {
@@ -36,13 +38,14 @@ body
    background: #fc3; 
 }
 */
+/*
 #ExtImg
 {
    padding-top: 2vh;
    padding-bottom: 2vh;
    background-color: transparent;
 }
-
+*/
 /*
  ************************************************************ ViewImage.css ***
 */	

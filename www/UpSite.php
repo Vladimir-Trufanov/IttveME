@@ -59,9 +59,14 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
 $ImageFile=prown\getComRequest('Image');
+// Подключаем стили для показа отдельного изображения
+if (!($ImageFile===NULL))
+{
+   echo '<link rel="stylesheet" type="text/css" href="Styles/ViewImage.css">';
+}
 // Если не требуется вывести полноразмерное изображение,
 // то подключаем общие стили при показе статей
-if ($ImageFile===NULL)
+else if ($ImageFile===NULL)
 {
    echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
    echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';

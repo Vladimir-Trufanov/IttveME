@@ -47,10 +47,7 @@ $Comment="Хочешь кваску";
 GViewImage($FileName,$Comment);
 
 echo '</form>';
-//echo 'из галереи $с_ModeImg='.$с_ModeImg.' ';
 // Всегда из галереи определяем вывод картинки в рамках окна браузера
 $с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);  // режим картинки представления выбранной картинки
-//echo '$с_ModeImg='.$с_ModeImg.'<br>';
-
 
 // <!-- --> *********************************************** GalleryView.php ***
