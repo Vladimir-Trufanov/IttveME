@@ -21,7 +21,7 @@ $SiteAbove   = $_WORKSPACE[wsSiteAbove];    // Надсайтовый катал
 $SiteHost    = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
 $SiteDevice  = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
 $UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
-//echo '***'.$SiteHost.'***'.'<br>';
+//echo '***'.$SiteRoot.'***'.'<br>';
 /*
 $TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта
 $Ip          = $_WORKSPACE[wsRemoteAddr];   // IP-адрес запроса сайта

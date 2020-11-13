@@ -83,12 +83,14 @@ echo '
    </script>
 ';
 */
-// При необходимости инициируем в сессии проверку JS
-//
-//$_SESSION['js'] = 'no'; 
 
-//if (!isset($_SESSION['js']))
-//{
+/*
+// При необходимости инициируем в сессии проверку JS
+
+$_SESSION['js'] = 'no'; 
+
+if (!isset($_SESSION['js']))
+{
 ?>
 <!-- 
 <script> 
@@ -99,7 +101,9 @@ echo '
 </script> 
 -->
 <?php
-//}
+}
+*/
+
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 

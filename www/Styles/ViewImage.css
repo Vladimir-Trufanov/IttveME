@@ -7,7 +7,7 @@
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 09.11.2020
+ Copyright © 2019 tve                                Посл.изменение: 13.11.2020
 */
 html
 {
@@ -21,10 +21,12 @@ form
 {
    background:transparent; /*green;*/
 } 
+/* убрано 13.11.2020 мешало qupzille переключать между размерами изображений
 html,body,#bImg
 {
    height:100%;
 }
+*/
 #ExtImg
 {
    background-color:transparent; /*red;*/
@@ -34,40 +36,6 @@ html,body,#bImg
    border:0;
    background-color:transparent; /*blue*/;
 }
-
-
-/** 
-  Определяем курсоры для переключения межну страничным изображением 
-  и полноразмерным
-*/
-/*
-body 
-{
-   background: yellow;
-   cursor: url("/Images/Cursors/Less-anoop.cur"), auto;
-}
-#ExtImg:hover 
-{ 
-   cursor: url("/Images/Cursors/More-anoop.cur"), text;
-}
-*/
-/*
-#Ext
-{
-   height: 96vh;
-   margin-top: 2vw;
-   margin-bottom: 2vw;
-   background: #fc3; 
-}
-*/
-/*
-#ExtImg
-{
-   padding-top: 2vh;
-   padding-bottom: 2vh;
-   background-color: transparent;
-}
-*/
 /*
  ************************************************************ ViewImage.css ***
 */	

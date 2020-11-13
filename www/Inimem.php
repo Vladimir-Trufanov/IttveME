@@ -41,6 +41,10 @@ define ("rpmOneLeft",     4);    // одноколоночный с левост
 // -------------------------------- Режимы представления выбранной картинки ---
 define ("vimExiSize",     1);    // в заданном размере в пикселах 
 define ("vimOnPage",      2);    // на странице по высоте
+// --------------------------------- Фоны показываемых картинок/изображений ---
+define ("fimWhiteGround", 1);    // обычный белый фон 
+define ("fimColorGround", 2);    // фон с помощью цветной картинки
+define ("fimAnimation",   3);    // анимационный фон
 
 // ****************************************************************************
 // *             Проинициализировать порядок использования кукисов            *
@@ -137,18 +141,20 @@ $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // поряд�
 
 
 // Инициализируем переменные-кукисы
-$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
-$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
-$c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);          // число запросов сайта из браузера
-$c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчик посещений текущим посетителем
+$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);            // логин авторизованного посетителя
+$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);            // логин посетителя
+$c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);                // число запросов сайта из браузера
+$c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);                // счетчик посещений текущим посетителем
 
 $с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
-$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage,tInt,true);     // режим представления выбранной картинки
-//$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);        // JavaScript не включен
+$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage,tInt,true);            // режим представления выбранной картинки
+//$c_MakeGround=prown\MakeCookie('MakeGround',fimWhiteGround,tInt,true); // фон показываемых картинок/изображений
+$c_MakeGround=prown\MakeCookie('MakeGround',fimAnimation,tInt); // фон показываемых картинок/изображений
+//$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);             // JavaScript не включен
     
 // Инициализируем сессионные переменные
-$s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
-//$s_isJScript=prown\MakeSession('isJScript','no',tInt,false);     // JavaScript не включен
+$s_Counter=prown\MakeSession('Counter',0,tInt,true);              // посещения за сессию
+//$s_isJScript=prown\MakeSession('isJScript','no',tInt,false);    // JavaScript не включен
 
 
 // Инициализируем параметры страницы сайта 
@@ -170,6 +176,16 @@ $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - ра�
 
 
 // Инициализируем общесайтовые переменные
-$ModeError=2;                               // Режим вывода сообщений об ошибках
 
+// Режим вывода сообщений об ошибках
+$ModeError=2;  
+// Спецификация сайта: "http://ittve.me" или "http://localhost:83"                                 
+if (isNichost())
+{
+   $SpecSite="http://".$_SERVER['HTTP_HOST'];  
+}
+else
+{
+   $SpecSite="http://localhost:83";  
+}
 // ************************************************************* iniMem.php *** 

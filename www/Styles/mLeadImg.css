@@ -39,11 +39,6 @@
   //width: 500рх;
   width: calc(50% - 2.68rem);  
 }
-#Ext
-{
-   display: none;
-}
-
 #Info
 {
 }

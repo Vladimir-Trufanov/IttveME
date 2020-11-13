@@ -57,7 +57,7 @@ echo '<div id="Footer">';
 echo '</div>';
 
 // Выводим нижнюю информационную строку
-echo '<div id="Info"';
+echo '<div id="Info">';
    echo '
    <div id="InfoLeft">
       Copyright (c) 2019 v2.0  Труфанов Владимир   tve58@inbox.ru<br>

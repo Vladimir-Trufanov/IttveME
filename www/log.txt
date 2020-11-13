@@ -95,3 +95,14 @@ Stack trace:
 [09-Nov-2020 22:53:31 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
 [09-Nov-2020 22:54:36 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\IttveME\www\UpSite.php on line 89
 [09-Nov-2020 22:55:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\IttveME\www\UpSite.php on line 132
+[13-Nov-2020 15:54:16 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\ViewArray() in C:\IttveME\www\DebugNews.php:20
+Stack trace:
+#0 C:\IttveME\www\DebugNews.php(45): fgb()
+#1 C:\IttveME\www\Site.php(21): ViewDebug('Computer', 'C:\\IttveME\\www', 'C:\\IttveME', 'C:')
+#2 C:\IttveME\www\UpSite.php(141): require_once('C:\\IttveME\\www\\...')
+#3 C:\IttveME\www\Main.php(44): require_once('C:\\IttveME\\www\\...')
+#4 C:\IttveME\www\index.php(37): require_once('C:\\IttveME\\www\\...')
+#5 {main}
+  thrown in C:\IttveME\www\DebugNews.php on line 20
+[13-Nov-2020 20:34:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\IttveME\www\iniMem.php on line 183
+[13-Nov-2020 21:48:28 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\IttveME\www\iniMem.php on line 183

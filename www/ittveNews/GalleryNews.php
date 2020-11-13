@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                              *** GalleryView.php ***
+// PHP7/HTML5, EDGE/CHROME                              *** GalleryNews.php ***
 
 // ****************************************************************************
 // * ittve.me                                   Развернуть новостную галлерею *
@@ -20,7 +20,7 @@ function GViewImage($FileName,$Comment)
       '</div>';
 }
 
-echo '<form action="http://localhost:83">';
+echo '<form id="fGallery" action="'.$SpecSite.'">';
 
 $FileName="ittveNews/ittve01-001-Подъём-настроения.jpg";
 $Comment="Это текст комментария под картинкой! И здесь тоже текст комментария под картинкой!";
@@ -47,7 +47,5 @@ $Comment="Хочешь кваску";
 GViewImage($FileName,$Comment);
 
 echo '</form>';
-// Всегда из галереи определяем вывод картинки в рамках окна браузера
-$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);  // режим картинки представления выбранной картинки
 
-// <!-- --> *********************************************** GalleryView.php ***
+// <!-- --> *********************************************** GalleryNews.php ***

@@ -46,20 +46,6 @@ table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
 	border: 0;
 	vertical-align: baseline;
 }
-
-   
-      #Ext
-      {
-         width: 60vw;
-         margin-top: 2vw;
-         margin-left: 5vw;
-         background: red;
-      }
-
-      #ExtImg
-      {
-         width: 60vw;
-      }
    </style>
    ';
 
@@ -90,18 +76,6 @@ table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
 	border: 0;
 	vertical-align: baseline;
 }
-
-   
-      #Ext
-      {
-         height: 90vh;
-         background: red;
-      }
-
-      #ExtImg
-      {
-         height: 90vh;
-      }
    </style>
    ';
    }
@@ -130,20 +104,6 @@ table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
 	border: 0;
 	vertical-align: baseline;
 }
-
-   
-      #Ext
-      {
-         width: 90vw;
-         margin-top: 2vw;
-         margin-left: 5vw;
-         background: red;
-      }
-
-      #ExtImg
-      {
-         width: 90vw;
-      }
    </style>
    ';
 */
@@ -173,43 +133,12 @@ table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
 	border: 0;
 	vertical-align: baseline;
 }
-
-   
-      #Ext
-      {
-         height: 90vh;
-         background: red;
-      }
-
-      #ExtImg
-      {
-         height: 90vh;
-      }
    </style>
    ';
 */
-
    /*
    echo '
    <style type="text/css">
-      #Ext
-      {
-         width: 684px;
-         height: 512px;
-         background: red;
-      }
-   </style>
-   ';
-   */
-  
-   /*
-   echo '
-   <style type="text/css">
-      #Ext
-      {
-         height: 512px;
-         background: red;
-      }
    </style>
    ';
    */

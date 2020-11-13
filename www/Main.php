@@ -19,8 +19,10 @@ require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/MakeUserError.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
+require_once $TPhpPrown."/TPhpPrown/ViewSimpleArray.php";
 
 // Выполняем начальную инициализацию
+require_once "Common.php";
 require_once "iniMem.php";
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
@@ -40,14 +42,16 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
+// Из галереи определяем вывод картинки в рамках окна браузера
+//$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);  
    
-   require_once "UpSite.php";
+require_once "UpSite.php";
    
-   // При необходимости выводим дополнительную информацию
-   // Header("Content-type: text/plain");
-   // $headers = getallheaders();
-   // print_r($headers);
-   // print_r($_SERVER);
+// При необходимости выводим дополнительную информацию
+// Header("Content-type: text/plain");
+// $headers = getallheaders();
+// print_r($headers);
+// print_r($_SERVER);
 
 /**
  * Сайт работает следующим образом:
