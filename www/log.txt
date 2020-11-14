@@ -106,3 +106,12 @@ Stack trace:
   thrown in C:\IttveME\www\DebugNews.php on line 20
 [13-Nov-2020 20:34:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\IttveME\www\iniMem.php on line 183
 [13-Nov-2020 21:48:28 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\IttveME\www\iniMem.php on line 183
+[13-Nov-2020 23:07:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in C:\IttveME\www\UpSite.php on line 112
+[14-Nov-2020 08:25:17 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function prown\MakeSession(), 2 passed in C:\IttveME\www\ViewImage.php on line 104 and at least 3 expected in C:\TPhpPrown\TPhpPrown\MakeSession.php:72
+Stack trace:
+#0 C:\IttveME\www\ViewImage.php(104): prown\MakeSession('ModeImg', 1)
+#1 C:\IttveME\www\UpSite.php(122): require_once('C:\\IttveME\\www\\...')
+#2 C:\IttveME\www\Main.php(48): require_once('C:\\IttveME\\www\\...')
+#3 C:\IttveME\www\index.php(37): require_once('C:\\IttveME\\www\\...')
+#4 {main}
+  thrown in C:\TPhpPrown\TPhpPrown\MakeSession.php on line 72

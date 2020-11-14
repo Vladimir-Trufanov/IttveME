@@ -48,4 +48,7 @@ GViewImage($FileName,$Comment);
 
 echo '</form>';
 
+// Из галереи задаем режим представления выбранной картинки - "на высоту страницы"
+$s_ModeImg=prown\MakeSession('ModeImg',vimOnPage,tInt);           
+
 // <!-- --> *********************************************** GalleryNews.php ***

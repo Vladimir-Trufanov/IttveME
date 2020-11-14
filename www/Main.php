@@ -42,8 +42,6 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
-// Из галереи определяем вывод картинки в рамках окна браузера
-//$с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);  
    
 require_once "UpSite.php";
    

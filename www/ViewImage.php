@@ -17,7 +17,6 @@
  *   Для возможного вызова картинки их данного модуля, в конце этого модуля 
  * меняется режим страничного вывода на полноформатный и наоборот.
 */
-echo "http://localhost:83=".$SpecSite;
 // Определяем переключаемые стили
 echo '<style type="text/css">';
    // Если задан цветной фон, то его и готовим
@@ -57,26 +56,11 @@ echo '<style type="text/css">';
    }
 echo '</style>';
 
-// Если кукис существует и он указывает на вывод картинки в рамках страницы
-// (по высоте), то так картинку и выводим
-if (isset($_COOKIE['ModeImg'])&&($с_ModeImg==vimOnPage))
+// Если сессионная переменнаяс существует и она указывает на вывод  
+// полноразмерного изображения, то есть в натуральную величину в пикселах,
+// так его и выводим
+if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimExiSize))
 {
-   echo '
-   <style type="text/css">
-      #ExtImg 
-      {
-         cursor: url("/Images/Cursors/More-anoop.cur"),zoom-in;
-         padding-top:.8vh;
-         height:99vh;
-      }
-   </style>
-   ';
-}
-// Иначе выводим полноразмерное изображение, 
-// то есть в натуральную величину в пикселах
-else
-{
-   // Устанавливаем курсор для переключения изображения на уменьшенный размер
    echo '
    <style type="text/css">
       #ExtImg 
@@ -90,24 +74,35 @@ else
    </style>
    ';
 }
+// Иначе (в большинстве случаев) выводим картинку в рамках страницы (по высоте)
+else
+{
+   echo '
+   <style type="text/css">
+      #ExtImg 
+      {
+         cursor: url("/Images/Cursors/More-anoop.cur"),zoom-in;
+         padding-top:.8vh;
+         height:99vh;
+      }
+   </style>
+   ';
+}
 // Готовим форму для перевывода картинки
-//echo '<form action="http://localhost:83" align="center">';
 echo '<form action="'.$SpecSite.'" align="center">';
-
-
 echo '<button id="bImg" type="submit" name="Image" value="'.$ImageFile.'">';
 echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
 echo '</button>';
 echo '</form>';
 // Меняем режим страничного вывода на полноформатный и наоборот,
-// то есть через переменную-кукис переопределяем тип изображения
-if (isset($_COOKIE['ModeImg'])&&($_COOKIE['ModeImg']==vimOnPage))
+// то есть через сессионную переменную переопределяем тип изображения
+if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimOnPage))
 {
-   $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize); 
+   $s_ModeImg=prown\MakeSession('ModeImg',vimExiSize,tInt); 
 }
 else
 {
-   $с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage);
+   $s_ModeImg=prown\MakeSession('ModeImg',vimOnPage,tInt); 
 }
 
    /*
