@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 11.11.2020
+// Copyright © 2019 tve                              Посл.изменение: 16.11.2020
 
 // ****************************************************************************
 // *              Формируем общие начальные теги разметки страницы,           *
@@ -34,7 +34,6 @@ echo '
 <meta name="theme-color" content="#ffffff">
 ';
 /*
-// Подключаем jQuery и jQuery-ui
 echo '<link rel="stylesheet" type="text/css"
    href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
    <script
@@ -48,31 +47,39 @@ echo '<link rel="stylesheet" type="text/css"
       crossorigin="anonymous">
    </script>';
 */
+
+// Подключаем jQuery для jQuery Mobile
+
+echo '
+<script src=                "https://doortry.ru/JqueryFW/deploy/jquery-2.2.4.min.js"></script>
+';
+
+/*
+echo '
+<link rel="stylesheet" href="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.4.5.min.css" />
+<script src="https://doortry.ru/JqueryFW/deploy/jquery-2.2.4.min.js"></script>
+<script src="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.4.5.min.js"></script>
+';
+*/
+
+/*
+echo '
+<link rel="stylesheet" href="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.3.2.css" />
+<script src="https://doortry.ru/JqueryFW/deploy/jquery-3.5.1.min.js"></script>
+<script src="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.3.2.js"></script>
+';
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+*/
+
 // Подключаем font-awesome/4.7.0
 //echo '<link rel="stylesheet"'.
 //   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 echo '<link rel="stylesheet"'.
    'href="font-awesome-4.7.0/css/font-awesome.min.css">';
-// Подключаем общие стили
-echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
-// Выбираем имя файла, если был запрос к сайту на вывод изображения,
-// переключаем переменную-кукис на другой формат изображения: на странице 
-// или полноформатное изображение                  
-$ImageFile=prown\getComRequest('Image');
-// Подключаем стили для показа отдельного изображения
-if (!($ImageFile===NULL))
-{
-   echo '<link rel="stylesheet" type="text/css" href="Styles/ViewImage.css">';
-}
-// Если не требуется вывести полноразмерное изображение,
-// то подключаем общие стили при показе статей
-else if ($ImageFile===NULL)
-{
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
-   echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
-}
+   
 /*
 // Подключаем TJsPrown и TJsTools
 echo '
@@ -84,72 +91,14 @@ echo '
 ';
 */
 
-/*
-// При необходимости инициируем в сессии проверку JS
-
-$_SESSION['js'] = 'no'; 
-
-if (!isset($_SESSION['js']))
-{
-?>
-<!-- 
-<script> 
-   $(document).ready(function()
-   { 
-      $.get("DefineJs.php"); 
-   });
-</script> 
--->
-<?php
-}
-*/
-
-// Начинаем html-страницу
-echo '</head>'; 
-echo '<body>'; 
-// Проверяем не требуется ли просто вывести изображение и выводим его
-if ($ImageFile<>NULL)
-{
-   require_once "ViewImage.php";
-   // Показываем возможность JS
-   //if (isset($_SESSION['js']))
-   //{
-   //   echo 'Есть JS'.'<br>';
-   //}
-   //else
-   //{
-   //   echo 'Нет JS неТ'.'<br>';
-   //}
-   /*
-   // При необходимости показываем кукисы и переменные сессий
-   prown\ViewGlobal(avgSESSION);
-   prown\ViewGlobal(avgCOOKIE);
-   */
-}
-// Выводим другие страницы сайта
-else
-{
-   // Выбираем страницу с меню и рекламой
-   if (prown\isComRequest('LifeMenu','Com'))
-   {
-      //require_once "Html/iniHtmlLifeMenu.php";
-      //require_once "iniHtml1.php";
-      echo 'LifeMenu'.'<br>';
-      //require_once "Nastr.php";
-   }
-   // Запускаем страницу с активным материалом
-   else
-   {
-      //require_once "iniHtmlBegin.php";
-      //require_once "iniHtml1.php";
-      require_once "Site.php";
-      //require_once "Nastr.php";
-   }
-}
-/*
-}
-*/
-// Выводим завершающие теги страницы
-echo '</body>'; 
-echo '</html>';
+// Делаем страницу для смартфона
+//if ($SiteDevice==Mobile) 
+//{ 
+//   require_once "UpSiteMobi.php";
+//}
+// Делаем страницу для компьютера
+//else 
+//{   
+   require_once "UpSiteComp.php";
+//}
 // <!-- --> **************************************************** UpSite.php ***

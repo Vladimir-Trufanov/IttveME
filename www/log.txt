@@ -115,3 +115,5 @@ Stack trace:
 #3 C:\IttveME\www\index.php(37): require_once('C:\\IttveME\\www\\...')
 #4 {main}
   thrown in C:\TPhpPrown\TPhpPrown\MakeSession.php on line 72
+[16-Nov-2020 20:28:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSite.php on line 52
+[16-Nov-2020 22:22:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSiteMobi.php on line 24
