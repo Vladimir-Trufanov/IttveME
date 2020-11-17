@@ -33,6 +33,11 @@ echo '
 <meta name="msapplication-config" content="/favicon260x260/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 ';
+// Подключаем font-awesome/4.7.0
+//echo '<link rel="stylesheet"'.
+//   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
+echo '<link rel="stylesheet"'.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
+
 /*
 echo '<link rel="stylesheet" type="text/css"
    href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
@@ -47,38 +52,18 @@ echo '<link rel="stylesheet" type="text/css"
       crossorigin="anonymous">
    </script>';
 */
-
 // Подключаем jQuery для jQuery Mobile
-
 echo '
-<script src=                "https://doortry.ru/JqueryFW/deploy/jquery-2.2.4.min.js"></script>
+   <script src="https://doortry.ru/JqueryFW/deploy/jquery-2.2.4.min.js">
+   </script>
 ';
-
 /*
-echo '
-<link rel="stylesheet" href="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.4.5.min.css" />
-<script src="https://doortry.ru/JqueryFW/deploy/jquery-2.2.4.min.js"></script>
-<script src="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.4.5.min.js"></script>
-';
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"
+  ></script>
 */
-
-/*
-echo '
-<link rel="stylesheet" href="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.3.2.css" />
-<script src="https://doortry.ru/JqueryFW/deploy/jquery-3.5.1.min.js"></script>
-<script src="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.3.2.js"></script>
-';
-
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-*/
-
-// Подключаем font-awesome/4.7.0
-//echo '<link rel="stylesheet"'.
-//   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
-echo '<link rel="stylesheet"'.
-   'href="font-awesome-4.7.0/css/font-awesome.min.css">';
    
 /*
 // Подключаем TJsPrown и TJsTools
