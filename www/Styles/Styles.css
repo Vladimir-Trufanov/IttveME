@@ -45,11 +45,6 @@
    /*background: blue;*/ 
 
 }
-#Gallery
-{
-   align-items: center;
-   background: #FEDFC0; 
-}
 #Footer
 {
    position: fixed; 
@@ -77,36 +72,6 @@
    height: 100%;
    //background: green; 
 }
-.Card
-{
-   background:#3989c9;
-   //margin:0.3rem 0.15rem 0.3rem 0.15rem; 
-   //padding:0.15rem 0.3rem 0.15rem 0.3rem;
-}
-#Gallery div:nth-of-type(1)
-{ 
-   //margin-left:0.3rem; 
-}
-#Gallery div:nth-of-type(10)
-{ 
-   //margin-right:0.3rem; 
-}
-.imgCard
-{
-   width:100%;
-}
-.pCard
-{
-   text-align: center;
-}
-.bCard
-{
-   cursor: pointer;
-   border:0; 
-   padding:0; 
-   background:#3989c9;
-}
-
 /* Обслуживаем кнопку меню материалов */
 #btnLifeMenu
 {

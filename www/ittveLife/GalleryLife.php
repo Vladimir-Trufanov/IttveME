@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                              *** GalleryView.php ***
+// PHP7/HTML5, EDGE/CHROME                              *** GalleryLife.php ***
 
 // ****************************************************************************
 // * ittve.me                                   Развернуть новостную галлерею *

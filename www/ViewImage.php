@@ -89,16 +89,42 @@ else
    ';
 }
 // Готовим форму для перевывода картинки
-echo '<form action="'.$SpecSite.'" align="center">';
-echo '<button id="bImg" type="submit" name="Image" value="'.$ImageFile.'">';
+echo '<form id="fImg"  action="'.$SpecSite.'" align="center">';
+if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimOnPage))
+{
+   // На страничном изображении готовим возвращение "домой" для мобильного
+   if ($SiteDevice==Mobile) 
+   {
+      echo '<button id="bImg" type="submit">';
+   }
+   // На страничном изображении готовим вызов полноформатного изображения
+   // для настольного компьютера
+   else 
+   {   
+      echo '<button id="bImg" type="submit" name="Image" value="'.$ImageFile.'">';
+   }
+}
+else
+{
+   // На полноформатном готовим возвращение "домой"
+   echo '<button id="bImg" type="submit">';
+}
 echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
 echo '</button>';
 echo '</form>';
+
 // Меняем режим страничного вывода на полноформатный и наоборот,
 // то есть через сессионную переменную переопределяем тип изображения
 if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimOnPage))
 {
-   $s_ModeImg=prown\MakeSession('ModeImg',vimExiSize,tInt); 
+   if ($SiteDevice==Mobile) 
+   {
+      $s_ModeImg=prown\MakeSession('ModeImg',vimOnPage,tInt); 
+   }
+   else
+   {
+      $s_ModeImg=prown\MakeSession('ModeImg',vimExiSize,tInt);
+   } 
 }
 else
 {

@@ -76,14 +76,76 @@ echo '
 ';
 */
 
-// Делаем страницу для смартфона
-//if ($SiteDevice==Mobile) 
-//{ 
-//   require_once "UpSiteMobi.php";
-//}
-// Делаем страницу для компьютера
-//else 
-//{   
-   require_once "UpSiteComp.php";
-//}
+// Подключаем персональные стили для настольной и мобильной версий
+require_once "UpSiteCSS.php";
+
+/*
+// При необходимости инициируем в сессии проверку JS
+
+$_SESSION['js'] = 'no'; 
+
+if (!isset($_SESSION['js']))
+{
+?>
+<!-- 
+<script> 
+   $(document).ready(function()
+   { 
+      $.get("DefineJs.php"); 
+   });
+</script> 
+-->
+<?php
+}
+*/
+
+// Начинаем html-страницу
+echo '</head>'; 
+echo '<body>'; 
+// Проверяем не требуется ли просто вывести изображение и выводим его
+if ($ImageFile<>NULL)
+{
+   require_once "ViewImage.php";
+   // Показываем возможность JS
+   //if (isset($_SESSION['js']))
+   //{
+   //   echo 'Есть JS'.'<br>';
+   //}
+   //else
+   //{
+   //   echo 'Нет JS неТ'.'<br>';
+   //}
+   /*
+   // При необходимости показываем кукисы и переменные сессий
+   prown\ViewGlobal(avgSESSION);
+   prown\ViewGlobal(avgCOOKIE);
+   */
+}
+// Выводим другие страницы сайта
+else
+{
+   // Выбираем страницу с меню и рекламой
+   if (prown\isComRequest('LifeMenu','Com'))
+   {
+      //require_once "Html/iniHtmlLifeMenu.php";
+      //require_once "iniHtml1.php";
+      echo 'LifeMenu'.'<br>';
+      //require_once "Nastr.php";
+   }
+   // Запускаем страницу с активным материалом
+   else
+   {
+      //require_once "iniHtmlBegin.php";
+      //require_once "iniHtml1.php";
+      require_once "Site.php";
+      //require_once "Nastr.php";
+   }
+}
+/*
+}
+*/
+// Выводим завершающие теги страницы
+echo '</body>'; 
+echo '</html>';
+
 // <!-- --> **************************************************** UpSite.php ***

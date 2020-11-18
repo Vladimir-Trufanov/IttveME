@@ -132,9 +132,10 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\CalcNo.css
 			www\Styles\CalcYes.css
+			www\Styles\Gallery-Image.css
 			www\Styles\Img2Right.css
 			www\Styles\ImgLeft.css
 			www\Styles\ImgRight.css
@@ -403,62 +404,28 @@ IttveME
 		www\Nastr.php
 		www\NavSetCss.php
 		www\NavSetJs.php
-		www\SiteComp.php
-		www\SiteMobi.php
+		www\Site.php
 		www\SiteOld.php
 		www\UpSite.php
-		www\UpSiteComp.php
-		www\UpSiteMobi.php
+		www\UpSiteCSS.php
 		www\ViewImage.php
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
 2=www\Main.php
-3=www\ViewImage.php
-4=www\ittveNews\GalleryNews.php
-5=www\Styles\ViewImage.css
-6=www\Styles\iniStyles.css
-7=www\Common.php
-8=www\UpSite.php
-9=www\SiteComp.php
-10=www\UpSiteComp.php
-11=www\UpSiteMobi.php
+3=www\UpSite.php
 [Selected Project Files]
 Main=
-Selected=www\UpSiteComp.php
+Selected=www\UpSite.php
 [www\index.php]
-TopLine=16
+TopLine=1
 Caret=10,19
 [www\iniMem.php]
-TopLine=131
+TopLine=159
 Caret=1,159
 [www\Main.php]
-TopLine=18
-Caret=1,26
-[www\ViewImage.php]
-TopLine=90
-Caret=1,90
-[www\ittveNews\GalleryNews.php]
-TopLine=33
-Caret=1,53
-[www\Styles\ViewImage.css]
-TopLine=22
-Caret=1,30
-[www\Styles\iniStyles.css]
-TopLine=9
-Caret=75,9
-[www\Common.php]
-TopLine=17
-Caret=1,34
+TopLine=63
+Caret=51,63
 [www\UpSite.php]
-TopLine=61
-Caret=1,67
-[www\SiteComp.php]
-TopLine=1
-Caret=19,5
-[www\UpSiteComp.php]
-TopLine=85
-Caret=1,1
-[www\UpSiteMobi.php]
-TopLine=3
-Caret=89,17
+TopLine=118
+Caret=25,140

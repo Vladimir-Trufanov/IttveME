@@ -23,27 +23,27 @@ function GViewImage($FileName,$Comment)
 echo '<form id="fGallery" action="'.$SpecSite.'">';
 
 $FileName="ittveNews/ittve01-001-Подъём-настроения.jpg";
-$Comment="Это текст комментария под картинкой! И здесь тоже текст комментария под картинкой!";
+$Comment="Ночная прогулка по Ладоге до рассвета и подъёма настроения.";
 GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-С-заботой-и-к-мамам.jpg";
-$Comment="С заботой и к мамам";
+$Comment="'С заботой и к мамам' - такой мамочкин хвостик.";
 GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-На-Сампо.jpg";
-$Comment="На горе Сампо";
+$Comment="На горе Сампо всем хорошо!";
 GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-Дождь-празднику-не-помеха.jpg";
-$Comment="Дождь празднику не помеха";
+$Comment="'Дождь празднику не помеха' - в Киндасово на шуточном празднике.";
 GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-У-ёлочки.png";
-$Comment="У ёлочки";
+$Comment="'У ёлочки' В Карельском лесу на каменистой гряде - наследии ледника.";
 GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-Хочешь-кваску.jpg";
-$Comment="Хочешь кваску";
+$Comment="'Хочешь кваску' - Рича притомился бегать по Марциальным водам.";
 GViewImage($FileName,$Comment);
 
 echo '</form>';
