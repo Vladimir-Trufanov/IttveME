@@ -133,19 +133,17 @@ IttveME
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
 		+Styles
-			www\Styles\CalcNo.css
-			www\Styles\CalcYes.css
+			-res
+				www\Styles\res\ImgLeft.css
+				www\Styles\res\ImgRight.css
+				www\Styles\res\jquery-ui.min.css
+				www\Styles\res\mLeadImg.css
+				www\Styles\res\StylesLifeMenu.css
+			www\Styles\Footer-Info.css
 			www\Styles\Gallery-Image.css
 			www\Styles\Img2Right.css
-			www\Styles\ImgLeft.css
-			www\Styles\ImgRight.css
 			www\Styles\iniStyles.css
-			www\Styles\jquery-ui.min.css
-			www\Styles\mLeadImg.css
-			www\Styles\Styles.css
 			www\Styles\styleSet.css
-			www\Styles\StylesLifeMenu.css
-			www\Styles\ViewImage.css
 		-TinyMCE
 			-langs
 				www\TinyMCE\langs\readme.md
@@ -414,9 +412,14 @@ IttveME
 1=www\iniMem.php
 2=www\Main.php
 3=www\UpSite.php
+4=www\UpSiteCSS.php
+5=www\Styles\Footer-Info.css
+6=www\Site.php
+7=www\ViewImage.php
+8=www\Styles\Img2Right.css
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\Styles\Footer-Info.css
 [www\index.php]
 TopLine=1
 Caret=10,19
@@ -427,5 +430,20 @@ Caret=1,159
 TopLine=63
 Caret=51,63
 [www\UpSite.php]
-TopLine=118
+TopLine=112
 Caret=25,140
+[www\UpSiteCSS.php]
+TopLine=9
+Caret=57,21
+[www\Styles\Footer-Info.css]
+TopLine=85
+Caret=21,31
+[www\Site.php]
+TopLine=43
+Caret=6,55
+[www\ViewImage.php]
+TopLine=131
+Caret=43,141
+[www\Styles\Img2Right.css]
+TopLine=35
+Caret=28,56

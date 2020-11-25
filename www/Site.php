@@ -38,10 +38,10 @@ echo '<div id="Footer">';
 
    // Главное меню - центральная часть подвала
    echo '<div id="LifeMenu">';
-   echo '<form action="http://localhost:83/index.php">';
+   echo '<form id="frmLifeMenu" action="http://localhost:83/index.php">';
    echo 
    '
-   <button title="Жизнь и путешествия!" id="btnLifeMenu" 
+   <button id="btnLifeMenu" title="Жизнь и путешествия!" 
       onclick="clickLifeMenu()"
       name="Com" value="LifeMenu">
       <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
@@ -52,7 +52,7 @@ echo '<div id="Footer">';
 
    // Правая часть подвала, меню управления
    echo '<div id="RightFooter">';
-   require_once "NavSetCss.php";
+   //require_once "NavSetCss.php";
    echo '</div>';
 echo '</div>';
 

@@ -1,81 +1,72 @@
-/** HTML5/CSS3, EDGE/CHROME                                *** ImgRight.css ***
+/** HTML5/CSS3, EDGE/CHROME                               *** Img2Right.css ***
 
  ******************************************************************************
- * ittve.me                       Спозиционировать справа галерею изображений *
+ * ittve.me             Спозиционировать справа галерею изображений и сделать *
+ *            только одну колонку для статей (как правило, новостных статей). * 
+ *         Сделать общие настройки по внутренним фонтам и их позиционированю. *
  ******************************************************************************
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 22.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 25.11.2020
 */
 
 /* 
  Позиционируем основные секции сайта: галерею новостных изображений, 
- секцию новых материалов, секцию архивных статей, подвал и кнопку меню 
- материалов
+ секцию новых материалов, подвал, секцию архивных статей скрываем
 */
-#News, #Life 
+#News,#Life 
 { 
-   top: 0; 
-   bottom: 5.8rem;
+   position:fixed; 
+   overflow:auto; 
+   top:0; 
+   bottom:5.8rem;
+   padding:0 .5rem 0 .5rem;
+   text-align:justify;
 }
 #News
 { 
-   right: 33%;
-   width: 67%; 
-   border-left: dashed 1px rgb(153,153,153);
+   right:33%;
+   width:67%; 
+   background:transparent; /*blue;*/ 
 }
 #Life                                                                   
 { 
-   display: none; 
+   display:none; 
+   background:teal; 
 }
 #Gallery
 {
-   margin-left: 67%;
-   width: 33%;
+   margin-left:67%;
+   width:33%;
 }
 #Footer
 {
-   width: 67%;
-   right: 33%;
-   bottom: 0; 
-   height: 4rem;
-   z-index: 73;
-   border-top: dashed 1px rgb(153,153,153);
-   /* background: yellow; */
+   position:fixed; 
+   width:67%;
+   right:33%;
+   height:4.4rem;
+   bottom:0; 
+   margin-bottom:1.4rem;
+   /*
+   border-top:dashed 1px rgb(153,153,153);
+   border-bottom:dashed 1px rgb(153,153,153);
+   */
+   overflow:hidden; 
+   background:transparent; /*green;*/ 
 }
-
 #Info
 {
-   position: fixed; 
-   width: 67%;
-   right: 33%;
-   bottom: 0; 
-   height: 1.4rem;
-   z-index: 100;
+   position:fixed; 
+   width:67%;
+   right:33%;
+   bottom:0; 
+   height:1.4rem;
+   margin-bottom:0;
+   background:yellow; 
 }
-#InfoLeft
-{
-   float: left;
-   width: 50%;
-}
-#InfoRight
-{
-   float: right;
-   text-align: right;
-   width: 50%;
-}
-#InfoLeft, #InfoRight
-{
-   height: 100%;
-   font-size: 1.4rem;
-   font-weight: bold; 
-   /*color: red;*/
-   color: #A4A4A4;
-}
-
 /*
- ************************************************************* ImgRight.css ***
+ ************************************************************ Img2Right.css ***
 */	
 	
 

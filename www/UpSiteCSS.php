@@ -12,11 +12,10 @@
 
 // Подключаем общие стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/CalcYes.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
