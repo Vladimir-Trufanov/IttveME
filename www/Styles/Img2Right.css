@@ -48,11 +48,6 @@
    height:4.4rem;
    bottom:0; 
    margin-bottom:1.4rem;
-   /*
-   border-top:dashed 1px rgb(153,153,153);
-   border-bottom:dashed 1px rgb(153,153,153);
-   */
-   overflow:hidden; 
    background:transparent; /*green;*/ 
 }
 #Info
@@ -63,7 +58,7 @@
    bottom:0; 
    height:1.4rem;
    margin-bottom:0;
-   background:yellow; 
+   background:transparent; /*yellow*/; 
 }
 /*
  ************************************************************ Img2Right.css ***

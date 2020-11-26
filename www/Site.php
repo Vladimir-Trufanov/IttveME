@@ -34,7 +34,6 @@ echo '<div id="Footer">';
 
    // Главное меню 
    echo '<div id="LifeMenu">';
-   /*
    echo '<form id="frmLifeMenu" action="http://localhost:83/index.php">';
    echo 
    '
@@ -45,17 +44,16 @@ echo '<div id="Footer">';
    </button>
    ';
    echo '</form>';  
-   */
    echo '</div>';
 
    // Левая часть подвала для сообщений, разворачиваемых в три строки
    echo '<div id="LeftFooter">';
-   //require_once "MessLeftFooter.php";
+   require_once "MessLeftFooter.php";
    echo '</div>';
 
    // Правая часть подвала, меню управления
    echo '<div id="RightFooter">';
-   //require_once "NavSetCss.php";
+   require_once "NavSetCss.php";
    echo '</div>';
 echo '</div>';
 

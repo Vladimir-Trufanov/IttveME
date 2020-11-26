@@ -1,4 +1,4 @@
-/** HTML5/CSS3, EDGE/CHROME                                  *** Footer.css ***
+/** HTML5/CSS3, EDGE/CHROME                             *** Footer-Info.css ***
 
  ******************************************************************************
  * ittve.me                                   Построить стили подвала сайта и *
@@ -16,14 +16,8 @@
    width:5rem;
    left:0;
    bottom:1.4rem; 
-
-   /*
-   height:100%;
-   margin-left:0rem;
-   */
-   background:lime;/*transparent;*/ /**/
+   background:transparent; /*lime;*/
 }
-/*
 #frmLifeMenu
 {
    width: 100%;
@@ -36,35 +30,26 @@
 {
    width: 100%;
 }
-*/
 #LeftFooter
 {
    height:100%;
-   /*float:left;*/
-   margin-left:15rem;
-   margin-right:25rem;
-   /*width:auto;*/
-   padding-top:.6rem;
+   margin-left:5rem;
+   margin-right:17.6rem;
+   padding:.1rem .3rem .1rem .3rem;
    font-size:1.2rem;
    font-weight:bold; 
-   background:orange; 
+   border-top:dashed 1px rgb(153,153,153);
+   border-bottom:dashed 1px rgb(153,153,153);
+   background:transparent; /*orange;*/
 }
 #RightFooter
 {
    position:fixed; 
    height:4.4rem;
-   width:5rem;
+   width:17.6rem;
    right:33%;
    bottom:1.4rem; 
-
-
-   /*
-   height:100%;
-   float:right;
-   margin-right:0;
-   width:10rem;
-   */
-   background:olive; 
+   background:transparent; /*olive;*/
 }
 /* Обслуживаем кнопку меню материалов 
 #btnLifeMenu
@@ -95,46 +80,9 @@
    */
 }
 
-/* CalcNo: когда calc в CSS не работает */
-/*
-#Footer
-{
-   margin-left: auto;
-   margin-right: auto; 
-}
-#LeftFooter
-{
-   display: none;
-   overflow: hidden;   
-}
-#RightFooter
-{
-   float: left; 
-   width: 50rem;
-}
-.navset 
-{
-   position: relative;
-   width: 50rem; 
-}
-*/
 
-/* CalcYes: когда calc в CSS РАБОТАЕТ */
-/*
-#LeftFooter
-{
-   width: calc(50% - 2.68rem);
-}
-#RightFooter
-{
-   width: calc(50% - 2.68rem);
-}
-.navset 
-{
-   position: absolute;
-   width: calc(50% - 2.68rem); 
-}
-*/
+
+
 #InfoLeft
 {
    float: left;
@@ -148,15 +96,12 @@
 }
 #InfoLeft, #InfoRight
 {
-   height: 100%;
-   font-size: 1.4rem;
+   height:100%;
+   font-size:1rem;
    font-weight: bold; 
+   padding:0rem .3rem .2rem .3rem;
    color: #A4A4A4;
 }
-
-
 /*
- *************************************************************** Footer.css ***
+ ********************************************************** Footer-Info.css ***
 */	
-	
-
