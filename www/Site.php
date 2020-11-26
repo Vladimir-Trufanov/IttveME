@@ -31,13 +31,10 @@ echo '</div>';
 
 // Выводим подвал сайта
 echo '<div id="Footer">';
-   // Левая часть подвала для сообщений, разворачиваемых в три строки
-   echo '<div id="LeftFooter">';
-   require_once "MessLeftFooter.php";
-   echo '</div>';
 
-   // Главное меню - центральная часть подвала
+   // Главное меню 
    echo '<div id="LifeMenu">';
+   /*
    echo '<form id="frmLifeMenu" action="http://localhost:83/index.php">';
    echo 
    '
@@ -48,6 +45,12 @@ echo '<div id="Footer">';
    </button>
    ';
    echo '</form>';  
+   */
+   echo '</div>';
+
+   // Левая часть подвала для сообщений, разворачиваемых в три строки
+   echo '<div id="LeftFooter">';
+   //require_once "MessLeftFooter.php";
    echo '</div>';
 
    // Правая часть подвала, меню управления
