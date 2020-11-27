@@ -23,41 +23,41 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
 <div class='navset'>
-   <div class='link'>
+   <button class='link' name="Com" value="Inbox">
       <div class='prev'>&#xf01c;</div>
       <div class='small'>&#xf01c;</div>
       <div class='full'>
          <div class='k1'>Отправить</div>
          <div class='k2'>сообщение</div>
       </div>
-   </div>
+   </button>
    
-   <div class='link'>
+   <button class='link' name="Com" value="Tuning">
       <div class='prev'>&#xf013;</div>
       <div class='small'>&#xf013;</div>
       <div class='full'>
-         <div class='k1'>Изменить</div>
-         <div class='k2'>настройки</div>
+         <div class='k1'>Изменить настройки</div>
+         <div class='k2'>сайта в браузере</div>
       </div>
-   </div>
+   </button>
 
-   <div class='link'>
+   <button class='link' name="Com" value="Signup">
       <div class='prev'>&#xf007;</div>
       <div class='small'>&#xf007;</div>
       <div class='full'>
          <div class='k1'>Войти или</div>
          <div class='k2'>зарегистрироваться</div>
       </div>
-   </div>
+   </button>
 
-   <div class='link'>
+   <button class='link' name="Com" value="ЕditМaterial">
       <div class='prev'>&#xf044;</div>
       <div class='small'>&#xf044;</div>
       <div class='full'>
-         <div class='k1'>Создать или</div>
-         <div class='k2'>редактировать текст</div>
+         <div class='k1'>Создать материал</div>
+         <div class='k2'>или редактировать</div>
       </div>
-   </div>
+   </button>
 </div>
 <?php
 // ************************************************************* NavSet.php ***

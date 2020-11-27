@@ -34,15 +34,22 @@ echo '<div id="Footer">';
 
    // Главное меню 
    echo '<div id="LifeMenu">';
-   echo '<form id="frmLifeMenu" action="http://localhost:83/index.php">';
-   echo 
-   '
+   echo '<form id="frmLifeMenu" action="'.$SpecSite.'">';
+   echo '
+   <button id="btnLifeMenu" btn-title="Жизнь и путешествия!" 
+      name="Com" value="LifeMenu">
+      <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
+   </button>
+   ';
+   /*
+   echo '
    <button id="btnLifeMenu" btn-title="Жизнь и путешествия!" 
       onclick="clickLifeMenu()"
       name="Com" value="LifeMenu">
       <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
    </button>
    ';
+   */
    echo '</form>';  
    echo '</div>';
 
@@ -53,7 +60,9 @@ echo '<div id="Footer">';
 
    // Правая часть подвала, меню управления
    echo '<div id="RightFooter">';
+   echo '<form id="frmNavset" action="'.$SpecSite.'">';
    require_once "NavSetCss.php";
+   echo '</form>';  
    echo '</div>';
 echo '</div>';
 

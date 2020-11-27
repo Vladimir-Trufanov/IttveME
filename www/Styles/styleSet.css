@@ -20,6 +20,10 @@
 
  color: #ab4a16;  приятный коричневый цвет 
 */
+#frmNavset
+{
+   height:100%;
+}
 .navset 
 {
    height:100%;
@@ -43,8 +47,6 @@
 }
 .navset .link .full .k1, .navset .link .full .k2
 {
-   font-size:1.4rem; 
-   font-weight:700; 
    white-space:nowrap; 
 }
 /** 
@@ -63,11 +65,13 @@
   элемента, которые могут быть определены с помощью псевдоклассов :hover 
   или :active)
 **/
-.navset 
+button, .navset 
 {
    color:#aaa;    /* обычный серый цвет элементов панели меню */
    background:#fff;
    transform:translateZ(0);
+   font-size:1.3rem;
+   font-weight:600; 
 }
 .navset .link 
 {
@@ -109,7 +113,7 @@
 }
 .navset .link:active 
 {
-   background:radial-gradient(farthest-side ellipse at top left,#ededed, #fff);
+   color: #ab4a16;  /* Приятный коричневый цвет */ 
 }
 /** 
   Форматируем начальное состояние пунктов меню: для маленьких иконок, больших и
