@@ -37,7 +37,7 @@ echo '<div id="Footer">';
    echo '<form id="frmLifeMenu" action="http://localhost:83/index.php">';
    echo 
    '
-   <button id="btnLifeMenu" title="Жизнь и путешествия!" 
+   <button id="btnLifeMenu" btn-title="Жизнь и путешествия!" 
       onclick="clickLifeMenu()"
       name="Com" value="LifeMenu">
       <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
