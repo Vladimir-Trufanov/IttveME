@@ -117,3 +117,16 @@ Stack trace:
   thrown in C:\TPhpPrown\TPhpPrown\MakeSession.php on line 72
 [16-Nov-2020 20:28:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSite.php on line 52
 [16-Nov-2020 22:22:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveME\www\UpSiteMobi.php on line 24
+[30-Nov-2020 18:25:55 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '/' in C:\IttveME\www\ittveNews\GalleryNews.php on line 29
+[30-Nov-2020 20:46:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting ',' or ';' in C:\IttveME\www\EditText.php on line 23
+[30-Nov-2020 20:54:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\IttveME\www\EditText.php on line 22
+[30-Nov-2020 20:55:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\IttveME\www\EditText.php on line 22
+[30-Nov-2020 20:56:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\IttveME\www\EditText.php on line 24
+[30-Nov-2020 20:57:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''' (T_ENCAPSED_AND_WHITESPACE), expecting ',' or ';' in C:\IttveME\www\EditText.php on line 41
+[30-Nov-2020 21:07:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\IttveME\www\EditText.php on line 26
+[30-Nov-2020 22:33:06 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in C:\IttveME\www\Site.php on line 36
+[30-Nov-2020 22:34:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\IttveME\www\Site.php on line 36
+[30-Nov-2020 22:38:33 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function file_force_download() in C:\IttveME\www\index.php:40
+Stack trace:
+#0 {main}
+  thrown in C:\IttveME\www\index.php on line 40

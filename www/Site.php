@@ -9,6 +9,8 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 17.11.2020
 
+ 
+
 // Выводим div с галереей изображений
 echo '<div id="Gallery">';
 require_once "ittveNews/GalleryNews.php";
@@ -19,6 +21,11 @@ echo '<div id="Content">';
    echo '<div id="News">';
       require_once "DebugNews.php";
       ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+      //echo 'mkdir<br>';
+      //mkdir('mydir');
+      //echo getcwd().'<br>';
+      
+      
       require_once "ittveNews/".$p_ittveNews;
    echo '</div>';
 

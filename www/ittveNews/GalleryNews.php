@@ -7,16 +7,25 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 05.11.2020
+// Copyright © 2019 tve                              Посл.изменение: 30.11.2020
 
-function GViewImage($FileName,$Comment)
+function GViewImage($FileName,$Comment,$AreaText=false)
 {
    echo 
       '<div class="Card"> '.
       '<button class="bCard" type="submit" name="Image" value="'.$FileName.'">'.
       '<img class="imgCard" src="'.$FileName.'" alt="'.$FileName.'">'.
-      '</button>'.
-      '<p class="pCard">'.$Comment.'</p>'.
+      '</button>';
+   // Выводим существующий комментарий или 
+   // текст для редактирования
+   if ($AreaText) 
+   {
+      echo '
+         <textarea class="taCard" name="aream">Текст комментария к картинке</textarea>
+         ';
+   }
+   else echo '<p class="pCard">'.$Comment.'</p>';
+   echo 
       '</div>';
 }
 
@@ -28,7 +37,7 @@ GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-С-заботой-и-к-мамам.jpg";
 $Comment="'С заботой и к мамам' - такой мамочкин хвостик.";
-GViewImage($FileName,$Comment);
+GViewImage($FileName,$Comment,true);
 
 $FileName="ittveNews/ittve01-001-На-Сампо.jpg";
 $Comment="На горе Сампо всем хорошо!";
