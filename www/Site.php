@@ -9,8 +9,6 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 17.11.2020
 
- 
-
 // Выводим div с галереей изображений
 echo '<div id="Gallery">';
 require_once "ittveNews/GalleryNews.php";
@@ -21,11 +19,6 @@ echo '<div id="Content">';
    echo '<div id="News">';
       require_once "DebugNews.php";
       ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-      //echo 'mkdir<br>';
-      //mkdir('mydir');
-      //echo getcwd().'<br>';
-      
-      
       require_once "ittveNews/".$p_ittveNews;
    echo '</div>';
 
@@ -33,8 +26,6 @@ echo '<div id="Content">';
       require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
    echo '</div>';
 echo '</div>';
-
-
 
 // Выводим подвал сайта
 echo '<div id="Footer">';

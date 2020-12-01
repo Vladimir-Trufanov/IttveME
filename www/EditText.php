@@ -17,42 +17,6 @@
  * меняется режим страничного вывода на полноформатный и наоборот.
 */
 
- $iMess='***';
-/*
-try 
-{
-   if (mkdir("file://ittve",0700)) 
-   {
-      $iMess=' Нет ошибки каталога';
-   }
-   else 
-   {
-      $iMess=' Ошибка и каталога';
-   }  
-} 
-catch (Exception $e) 
-{
-    $iMess="Не получилось: ".$e->getMessage();
-}
-*/
-
-
-
-//echo 'Создать материал или редактировать его'.'<br>';
-
-//if (mkdir("file://ittve/draft",0700)) 
-//if (mkdir("ittve/draft",0700)) 
-/*
-if (mkdir($_SERVER['PUBLIC']."/ittve"))
-{
-  $iMess=' Нет ошибки каталога';
-}
-else 
-{
-   $iMess=' Ошибка каталога';
-}
-*/
-
 ?>
 <form action="textarea1.php" method="post">
 
@@ -64,11 +28,8 @@ else
 
    <?php
       //echo '<p><b>Создать материал или редактировать его</b>'.'</p>';
-      echo '<p><textarea id="TitleArea" name="areat">Заголовок'.$iMess.'</textarea></p>';
-      //echo '<p><textarea id="ContentArea" name="areac">Текст нового материала</textarea></p>';
-      //echo '<p><textarea id="ContentArea" name="areac">Текст нового материала<br>';
-      //echo '</textarea></p>';
-      //phpinfo();
+      echo '<p><textarea id="TitleArea" name="areat">Заголовок</textarea></p>';
+      echo '<p><textarea id="ContentArea" name="areac">Текст нового материала</textarea></p>';
    ?>
    <p><input id="InputArea" type="submit" value="Отправить"></p>
 </form>
