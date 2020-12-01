@@ -140,7 +140,10 @@ else
    // Выбираем страницу для изменения настроек
    else if (prown\isComRequest('Tuning','Com'))
    {
-      echo 'Изменить настройки сайта в браузере'.'<br>';
+      //echo 'Изменить настройки сайта в браузере'.'<br>';
+      $page='/DownUpLoad/index_01.php';
+      $page='/DownUpLoad/ProbaTest.php';
+      Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    }
    // Выбираем страницу для входа по логину или для регистрации
    else if (prown\isComRequest('Signup','Com'))

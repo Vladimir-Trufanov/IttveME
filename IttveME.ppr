@@ -17,6 +17,37 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
+		+DownUpLoad
+			-images
+				-thumbs
+					www\DownUpLoad\images\thumbs\basin.jpg
+					www\DownUpLoad\images\thumbs\fountains.jpg
+					www\DownUpLoad\images\thumbs\kinkakuji.jpg
+					www\DownUpLoad\images\thumbs\maiko.jpg
+					www\DownUpLoad\images\thumbs\maiko_phone.jpg
+					www\DownUpLoad\images\thumbs\menu.jpg
+					www\DownUpLoad\images\thumbs\monk.jpg
+					www\DownUpLoad\images\thumbs\ryoanji.jpg
+				www\DownUpLoad\images\basin.jpg
+				www\DownUpLoad\images\fountains.jpg
+				www\DownUpLoad\images\fuji.jpg
+				www\DownUpLoad\images\getTranslit.php
+				www\DownUpLoad\images\kinkakuji.jpg
+				www\DownUpLoad\images\logis.txt
+				www\DownUpLoad\images\maiko.jpg
+				www\DownUpLoad\images\maiko_phone.jpg
+				www\DownUpLoad\images\maiko_phone_1.jpg
+				www\DownUpLoad\images\menu.jpg
+				www\DownUpLoad\images\monk.jpg
+				www\DownUpLoad\images\ryoanji.jpg
+				www\DownUpLoad\images\ryoanji_1.jpg
+			www\DownUpLoad\blog.php
+			www\DownUpLoad\contact.php
+			www\DownUpLoad\download.php
+			www\DownUpLoad\error.php
+			www\DownUpLoad\gallery.php
+			www\DownUpLoad\index_01.php
+			www\DownUpLoad\ProbaTest.php
 		-example
 			-image
 				www\example\image\a1.jpg
@@ -92,6 +123,8 @@ IttveME
 			www\Images\ittve01-001-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
 			www\Images\oni.jpg
+		-ittvei
+			-draft
 		-ittveLife
 			www\ittveLife\GalleryLife.php
 			www\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
@@ -110,7 +143,7 @@ IttveME
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+ittveNews
+		-ittveNews
 			www\ittveNews\GalleryNews.php
 			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 			www\ittveNews\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -124,6 +157,7 @@ IttveME
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
 			-Temp
+		-mydir
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
@@ -132,7 +166,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		+Styles
+		-Styles
 			-res
 				www\Styles\res\ImgLeft.css
 				www\Styles\res\ImgRight.css
@@ -403,6 +437,7 @@ IttveME
 		www\Nastr.php
 		www\NavSetCss.php
 		www\NavSetJs.php
+		www\pic.png
 		www\Site.php
 		www\SiteOld.php
 		www\UpSite.php
@@ -413,18 +448,13 @@ IttveME
 1=www\iniMem.php
 2=www\Main.php
 3=www\UpSite.php
-4=www\UpSiteCSS.php
-5=www\Site.php
-6=www\EditText.php
-7=www\Styles\Img2Right.css
-8=www\Styles\Gallery-Image.css
-9=www\ittveNews\GalleryNews.php
+4=www\DownUpLoad\ProbaTest.php
 [Selected Project Files]
 Main=
-Selected=www\ittveNews\GalleryNews.php
+Selected=www\DownUpLoad\ProbaTest.php
 [www\index.php]
-TopLine=125
-Caret=1,129
+TopLine=135
+Caret=4,152
 [www\iniMem.php]
 TopLine=179
 Caret=13,187
@@ -432,23 +462,8 @@ Caret=13,187
 TopLine=37
 Caret=51,63
 [www\UpSite.php]
-TopLine=1
-Caret=1,89
-[www\UpSiteCSS.php]
-TopLine=7
-Caret=1,18
-[www\Site.php]
-TopLine=63
-Caret=1,29
-[www\EditText.php]
-TopLine=21
-Caret=1,33
-[www\Styles\Img2Right.css]
-TopLine=38
-Caret=22,38
-[www\Styles\Gallery-Image.css]
-TopLine=35
-Caret=13,49
-[www\ittveNews\GalleryNews.php]
-TopLine=15
-Caret=33,24
+TopLine=135
+Caret=35,145
+[www\DownUpLoad\ProbaTest.php]
+TopLine=47
+Caret=9,60
