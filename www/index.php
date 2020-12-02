@@ -127,6 +127,11 @@ $file='pic.png';
 file_force_download2();
 */
 
+      $page='/DownUpLoad/ProbaTest.php';
+      Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+
+
+
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once 'iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();

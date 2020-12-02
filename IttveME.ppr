@@ -453,8 +453,8 @@ IttveME
 Main=
 Selected=www\DownUpLoad\ProbaTest.php
 [www\index.php]
-TopLine=135
-Caret=4,152
+TopLine=117
+Caret=1,132
 [www\iniMem.php]
 TopLine=179
 Caret=13,187
@@ -462,8 +462,8 @@ Caret=13,187
 TopLine=37
 Caret=51,63
 [www\UpSite.php]
-TopLine=135
-Caret=35,145
+TopLine=131
+Caret=1,147
 [www\DownUpLoad\ProbaTest.php]
-TopLine=47
-Caret=9,60
+TopLine=126
+Caret=1,63
