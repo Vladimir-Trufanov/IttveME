@@ -82,11 +82,23 @@
 { 
    position:fixed; 
    overflow:auto; 
-   top:4%; 
+   top:24%; 
    bottom:4%;
    padding:0 .5rem 0 .5rem;
    text-align:justify;
    background:yellow; 
+   right:33%;
+   width:67%; 
+}
+#EditDebug
+{ 
+   position:fixed; 
+   /*overflow:auto;*/ 
+   top:4%; 
+   bottom:76%;
+   padding:0 .5rem 0 .5rem;
+   /*text-align:justify;
+   background:red;*/ 
    right:33%;
    width:67%; 
 }

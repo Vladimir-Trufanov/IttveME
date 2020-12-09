@@ -10,7 +10,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 01.12.2020
 
-/*
+
 function file_force_download($file) 
 {
    if (file_exists($file)) 
@@ -120,17 +120,15 @@ function file_force_download2()
 // http://itrobo.ru/programmirovanie/web/zagruzka-i-skachivanie-faila-v-php.html
   
 $file='Main.php';
-$file='pic.png';
-//if (file_exists($file)) {echo $file.' существует!<br>';} 
-//file_force_download($file);
-//file_force_download1($file);
-file_force_download2();
-*/
-
-      $page='/DownUpLoad/ProbaTest.php';
-      Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-
-
+$file='pic1.png';
+if (!file_exists($file)) 
+{
+   echo $file.' не существует!<br>';
+} 
+else 
+{
+   file_force_download2();
+}
 
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once 'iniWorkSpace.php';
@@ -154,7 +152,7 @@ require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
    // Запускаем сценарий сайта
-   require_once $_SERVER['DOCUMENT_ROOT']."/Main.php";
+   //require_once $_SERVER['DOCUMENT_ROOT']."/Main.php";
 }
 catch (E_EXCEPTION $e) 
 {

@@ -16,38 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	+www
-		+DownUpLoad
-			-images
-				-thumbs
-					www\DownUpLoad\images\thumbs\basin.jpg
-					www\DownUpLoad\images\thumbs\fountains.jpg
-					www\DownUpLoad\images\thumbs\kinkakuji.jpg
-					www\DownUpLoad\images\thumbs\maiko.jpg
-					www\DownUpLoad\images\thumbs\maiko_phone.jpg
-					www\DownUpLoad\images\thumbs\menu.jpg
-					www\DownUpLoad\images\thumbs\monk.jpg
-					www\DownUpLoad\images\thumbs\ryoanji.jpg
-				www\DownUpLoad\images\basin.jpg
-				www\DownUpLoad\images\fountains.jpg
-				www\DownUpLoad\images\fuji.jpg
-				www\DownUpLoad\images\getTranslit.php
-				www\DownUpLoad\images\kinkakuji.jpg
-				www\DownUpLoad\images\logis.txt
-				www\DownUpLoad\images\maiko.jpg
-				www\DownUpLoad\images\maiko_phone.jpg
-				www\DownUpLoad\images\maiko_phone_1.jpg
-				www\DownUpLoad\images\menu.jpg
-				www\DownUpLoad\images\monk.jpg
-				www\DownUpLoad\images\ryoanji.jpg
-				www\DownUpLoad\images\ryoanji_1.jpg
-			www\DownUpLoad\blog.php
-			www\DownUpLoad\contact.php
-			www\DownUpLoad\download.php
-			www\DownUpLoad\error.php
-			www\DownUpLoad\gallery.php
-			www\DownUpLoad\index_01.php
-			www\DownUpLoad\ProbaTest.php
+	-www
 		-example
 			-image
 				www\example\image\a1.jpg
@@ -105,6 +74,7 @@ IttveME
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
+		-GalleryProba
 		-Html
 			www\Html\iniHtmlLifeMenu.php
 			www\Html\iniHtmlLogin.php
@@ -157,7 +127,6 @@ IttveME
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
 			-Temp
-		-mydir
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
@@ -448,22 +417,38 @@ IttveME
 1=www\iniMem.php
 2=www\Main.php
 3=www\UpSite.php
-4=www\DownUpLoad\ProbaTest.php
+4=www\Site.php
+5=www\NavSetCss.php
+6=www\EditText.php
+7=www\UpSiteCSS.php
+8=www\Styles\Img2Right.css
 [Selected Project Files]
 Main=
-Selected=www\DownUpLoad\ProbaTest.php
+Selected=www\index.php
 [www\index.php]
-TopLine=117
-Caret=1,132
+TopLine=105
+Caret=12,123
 [www\iniMem.php]
 TopLine=179
 Caret=13,187
 [www\Main.php]
-TopLine=37
-Caret=51,63
+TopLine=10
+Caret=1,26
 [www\UpSite.php]
-TopLine=131
+TopLine=119
 Caret=1,147
-[www\DownUpLoad\ProbaTest.php]
-TopLine=126
-Caret=1,63
+[www\Site.php]
+TopLine=41
+Caret=1,1
+[www\NavSetCss.php]
+TopLine=47
+Caret=1,1
+[www\EditText.php]
+TopLine=18
+Caret=52,21
+[www\UpSiteCSS.php]
+TopLine=5
+Caret=1,1
+[www\Styles\Img2Right.css]
+TopLine=82
+Caret=12,98

@@ -27,9 +27,65 @@
    </div>
 
    <?php
-      //echo '<p><b>Создать материал или редактировать его</b>'.'</p>';
+      // Создаем каталог для хранения изображений, если его нет.
+      // И отдельно (чтобы сработало на старых Windows) задаем права
+      $imgDir = "GalleryProba";
+      if (!is_dir($imgDir))
+      {
+         mkdir($imgDir);      
+         chmod($imgDir,0777);
+      }
+      // set the maximum upload size in bytes
+      $max = 57200;
+      if (isset($_POST['upload'])) 
+      {     
+         // define the path to the upload folder
+         $destination = $imgDir.'/';
+         try 
+         {
+            $upload = new ttools\UploadToServer($destination);
+            $upload->move();
+            $upload->setMaxSize($max);
+            $result = $upload->getMessages();
+         } 
+         catch (Exception $e) 
+         {
+            echo $e->getMessage();
+         }
+      }
+   
       echo '<p><textarea id="TitleArea" name="areat">Заголовок</textarea></p>';
-      echo '<p><textarea id="ContentArea" name="areac">Текст нового материала</textarea></p>';
+      echo '<div id="EditDebug">
+            <p><b>Создать материал или редактировать его</b></p>';
+      echo '<br>';
+      
+      // Выводим сообщения по итогам загрузки файла
+      if (isset($result)) 
+      {
+         echo '<ul>';
+         foreach ($result as $message) 
+         {
+            echo "<li>$message</li>";
+         }
+         echo '</ul>';
+      }
+
+            
+            ?>
+            <form action="" method="post" enctype="multipart/form-data" id="uploadImage">
+            <p>
+            <label for="image">Upload images:</label>
+            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max; ?>">
+            <input type="file" name="image" id="image">
+            </p>
+            <p>
+            <input type="submit" name="upload" id="upload" value="Upload">
+            </p>
+            </form>
+            <?php
+            
+       echo '</div>';
+       echo '<p><textarea id="ContentArea" name="areac">Текст нового материала</textarea></p>';
    ?>
    <p><input id="InputArea" type="submit" value="Отправить"></p>
 </form>

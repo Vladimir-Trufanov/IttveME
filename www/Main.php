@@ -21,6 +21,10 @@ require_once $TPhpPrown."/TPhpPrown/MakeUserError.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 require_once $TPhpPrown."/TPhpPrown/ViewSimpleArray.php";
 
+// Подключаем файлы библиотеки прикладных классов:
+$TPhpTools=$SiteHost.'/TPhpTools';
+require_once $TPhpTools."/TPhpTools/TUploadToServer/UploadToServerClass.php";
+
 // Выполняем начальную инициализацию
 require_once "Common.php";
 require_once "iniMem.php";
