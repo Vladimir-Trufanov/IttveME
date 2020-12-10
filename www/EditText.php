@@ -74,7 +74,7 @@
             ?>
             
             <!-- -->
-            <p><a href="download.php?file=pic.png">Download image 2</a></p>
+            <p><a href="download.php?file=pic.png">Download image</a></p>
             
             <form action="" method="post" enctype="multipart/form-data" id="uploadImage">
             <p>

@@ -24,6 +24,7 @@ require_once $TPhpPrown."/TPhpPrown/ViewSimpleArray.php";
 // Подключаем файлы библиотеки прикладных классов:
 $TPhpTools=$SiteHost.'/TPhpTools';
 require_once $TPhpTools."/TPhpTools/TUploadToServer/UploadToServerClass.php";
+require_once $TPhpTools."/TPhpTools/TDownloadFromServer/DownloadFromServerClass.php";
 
 // Выполняем начальную инициализацию
 require_once "Common.php";
