@@ -23,12 +23,13 @@ require_once $TPhpPrown."/TPhpPrown/ViewSimpleArray.php";
 
 // Подключаем файлы библиотеки прикладных классов:
 $TPhpTools=$SiteHost.'/TPhpTools';
-require_once $TPhpTools."/TPhpTools/TUploadToServer/UploadToServerClass.php";
 require_once $TPhpTools."/TPhpTools/TDownloadFromServer/DownloadFromServerClass.php";
+require_once $TPhpTools."/TPhpTools/TUploadToServer/UploadToServerClass.php";
 
 // Выполняем начальную инициализацию
-require_once "Common.php";
-require_once "iniMem.php";
+require_once "Common.php";     // Всегда 1-ый корневой модуль в списке
+require_once "iniMem.php";     // Всегда 2-ой корневой модуль в списке
+require_once "DebugNews.php";
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы

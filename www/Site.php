@@ -11,19 +11,20 @@
 
 // Выводим div с галереей изображений
 echo '<div id="Gallery">';
-require_once "ittveNews/GalleryNews.php";
+require_once "ittveLife/GalleryLife.php";
 echo '</div>';
 
 // Выводим текстовый контент сайта: колонку новостей, колонку моей жизни
 echo '<div id="Content">';
    echo '<div id="News">';
-      require_once "DebugNews.php";
-      ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+      //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
       require_once "ittveNews/".$p_ittveNews;
    echo '</div>';
 
    echo '<div id="Life">';
-      require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
+      //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+      require_once "ittveLife/".$p_ittveLife;
+      //require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
    echo '</div>';
 echo '</div>';
 

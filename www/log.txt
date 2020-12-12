@@ -135,3 +135,9 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\IttveME\www\download.php on line 190
+[12-Dec-2020 12:53:41 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function isNichost() in C:\IttveME\www\iniMem.php:186
+Stack trace:
+#0 C:\IttveME\www\Main.php(30): require_once()
+#1 C:\IttveME\www\index.php(35): require_once('C:\\IttveME\\www\\...')
+#2 {main}
+  thrown in C:\IttveME\www\iniMem.php on line 186

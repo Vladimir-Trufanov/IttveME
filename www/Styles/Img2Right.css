@@ -23,16 +23,17 @@
    bottom:5.8rem;
    padding:0 .5rem 0 .5rem;
    text-align:justify;
+   right:33%;
+   width:67%; 
 }
 #News
 { 
-   right:33%;
-   width:67%; 
+   /*display:none;*/ 
    background:transparent; /*blue;*/ 
 }
 #Life                                                                   
 { 
-   display:none; 
+   /*display:none;*/ 
    background:teal; 
 }
 #Gallery, #NewGallery

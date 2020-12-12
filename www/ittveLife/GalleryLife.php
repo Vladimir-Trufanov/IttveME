@@ -2,56 +2,42 @@
 // PHP7/HTML5, EDGE/CHROME                              *** GalleryLife.php ***
 
 // ****************************************************************************
-// * ittve.me                                   Развернуть новостную галлерею *
+// * ittve.me                      Развернуть архивную ("моя жизнь") галлерею *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 30.01.2019
+// Copyright © 2019 tve                              Посл.изменение: 30.11.2020
 
-?>
-<!-- 
--->
-<div class="Card">
-   <img class="imgCard" 
-   src="tveArc/tveArc1/tve1-1-pod^yom-nastroeniya.jpg" 
-   alt="Подъём настроения">
-   <p class="pCard"> 
-      <?php
-      //require_once "tveArc/tveArc1/tve1-1-comm.txt";
-      ?> 
-   </p>
-</div>
+echo '<form id="fGallery" action="'.$SpecSite.'">';
 
-<div class="Card">
-   <img class="imgCard" 
-   src="/Images/С заботой и к мамам.jpg" 
-   alt="С заботой и к мамам">
-</div>
+$FileName="ittveLife/ittve01-001-Подъём-настроения.jpg";
+$Comment="Ночная прогулка по Ладоге до рассвета и подъёма настроения.";
+GViewImage($FileName,$Comment);
 
-<div class="Card">
-   <img class="imgCard" 
-   src="/Images/nasampo.jpg" 
-   alt="На горе Сампо">
-</div>
+$FileName="ittveLife/ittve01-001-С-заботой-и-к-мамам.jpg";
+$Comment="'С заботой и к мамам' - такой мамочкин хвостик.";
+GViewImage($FileName,$Comment,true);
 
-<div class="Card">
-   <img class="imgCard" 
-   src="/Images/dozhd'-prazdniku-ne-pomeha.jpg" 
-   alt="Дождь празднику не помеха">
-</div>
+$FileName="ittveLife/ittve01-001-На-Сампо.jpg";
+$Comment="На горе Сампо всем хорошо!";
+GViewImage($FileName,$Comment);
 
-<div class="Card">
-   <img class="imgCard" 
-   src="/Images/uyolochki.png" 
-   alt="У ёлочки">
-</div>
+$FileName="ittveLife/ittve01-001-Дождь-празднику-не-помеха.jpg";
+$Comment="'Дождь празднику не помеха' - в Киндасово на шуточном празднике.";
+GViewImage($FileName,$Comment);
 
-<div class="Card">
-   <img class="imgCard" id="hochesh" 
-   src="/Images/hochesh'-kvasku.jpg" 
-   alt="Хочешь кваску">
-</div>
+$FileName="ittveLife/ittve01-001-У-ёлочки.png";
+$Comment="'У ёлочки' В Карельском лесу на каменистой гряде - наследии ледника.";
+GViewImage($FileName,$Comment);
 
-<?php
-// ******************************************************** GalleryView.php ***
+$FileName="ittveLife/ittve01-001-Хочешь-кваску.jpg";
+$Comment="'Хочешь кваску' - Рича притомился бегать по Марциальным водам.";
+GViewImage($FileName,$Comment);
+
+echo '</form>';
+
+// Из галереи задаем режим представления выбранной картинки - "на высоту страницы"
+$s_ModeImg=prown\MakeSession('ModeImg',vimOnPage,tInt);           
+
+// <!-- --> *********************************************** GalleryLife.php ***
