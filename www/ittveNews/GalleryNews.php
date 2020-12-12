@@ -9,7 +9,8 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 30.11.2020
 
-echo '<form id="fGallery" action="'.$SpecSite.'">';
+//echo '<form id="fGallery" action="'.$SpecSite.'">';
+echo '<form action="" method="post" enctype="multipart/form-data" id="uploadiImage">';
 
 $FileName="ittveNews/ittve01-001-Подъём-настроения.jpg";
 $Comment="Ночная прогулка по Ладоге до рассвета и подъёма настроения.";
@@ -17,7 +18,7 @@ GViewImage($FileName,$Comment);
 
 $FileName="ittveNews/ittve01-001-С-заботой-и-к-мамам.jpg";
 $Comment="'С заботой и к мамам' - такой мамочкин хвостик.";
-GViewImage($FileName,$Comment,true);
+GLoadImage($FileName,$Comment,true,"Upload");
 
 $FileName="ittveNews/ittve01-001-На-Сампо.jpg";
 $Comment="На горе Сампо всем хорошо!";

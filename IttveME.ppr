@@ -93,10 +93,15 @@ IttveME
 			www\Images\ittve01-001-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
 			www\Images\oni.jpg
-		-ittvei
-			-draft
-		+ittveLife
+		-ittveLife
 			www\ittveLife\GalleryLife.php
+			www\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+			www\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
+			www\ittveLife\ittve01-001-На-Сампо.jpg
+			www\ittveLife\ittve01-001-Подъём-настроения.jpg
+			www\ittveLife\ittve01-001-С-заботой-и-к-мамам.jpg
+			www\ittveLife\ittve01-001-У-ёлочки.png
+			www\ittveLife\ittve01-001-Хочешь-кваску.jpg
 			www\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
 			www\ittveLife\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
 			www\ittveLife\ittve02-065-В-город-c-молоком.jpg
@@ -113,15 +118,12 @@ IttveME
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+ittveNews
+		-ittveNews
 			www\ittveNews\GalleryNews.php
 			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\ittveNews\ittve01-001-Дождь-празднику-не-помеха.jpg
 			www\ittveNews\ittve01-001-На-Сампо.jpg
 			www\ittveNews\ittve01-001-Подъём-настроения.jpg
 			www\ittveNews\ittve01-001-С-заботой-и-к-мамам.jpg
-			www\ittveNews\ittve01-001-У-ёлочки.png
-			www\ittveNews\ittve01-001-Хочешь-кваску.jpg
 		-KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
@@ -422,43 +424,48 @@ IttveME
 4=www\Common.php
 5=www\ittveLife\GalleryLife.php
 6=www\Site.php
-7=www\DebugNews.php
-8=www\iniMem.php
-9=www\Styles\Img2Right.css
-10=www\EditText.php
+7=www\iniMem.php
+8=www\Styles\Img2Right.css
+9=www\EditText.php
+10=www\Styles\Gallery-Image.css
+11=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=www\ittveLife\GalleryLife.php
+Selected=www\Styles\Img2Right.css
 [www\index.php]
-TopLine=19
-Caret=1,47
-[www\Main.php]
-TopLine=12
-Caret=46,31
-[www\UpSite.php]
-TopLine=133
-Caret=35,142
-[www\ittveNews\GalleryNews.php]
-TopLine=1
-Caret=1,25
-[www\Common.php]
-TopLine=29
-Caret=1,64
-[www\ittveLife\GalleryLife.php]
-TopLine=1
-Caret=16,5
-[www\Site.php]
 TopLine=11
+Caret=1,39
+[www\Main.php]
+TopLine=41
+Caret=66,78
+[www\UpSite.php]
+TopLine=101
+Caret=8,114
+[www\ittveNews\GalleryNews.php]
+TopLine=13
+Caret=43,21
+[www\Common.php]
+TopLine=35
+Caret=58,87
+Mark1=1,63
+[www\ittveLife\GalleryLife.php]
+TopLine=8
+Caret=37,8
+[www\Site.php]
+TopLine=8
 Caret=7,21
-[www\DebugNews.php]
-TopLine=33
-Caret=1,1
 [www\iniMem.php]
 TopLine=161
 Caret=13,163
 [www\Styles\Img2Right.css]
-TopLine=23
-Caret=21,31
+TopLine=71
+Caret=12,87
 [www\EditText.php]
-TopLine=17
+TopLine=37
+Caret=31,63
+[www\Styles\Gallery-Image.css]
+TopLine=1
+Caret=20,30
+[www\UpSiteCSS.php]
+TopLine=1
 Caret=1,1

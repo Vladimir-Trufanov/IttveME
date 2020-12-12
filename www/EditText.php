@@ -18,8 +18,9 @@
 */
 
 ?>
+<!-- 
 <form action="textarea1.php" method="post">
-
+-->
    <div id="NewGallery">
       <?php
       require_once "ittveNews/GalleryNews.php";
@@ -37,6 +38,7 @@
       }
       // set the maximum upload size in bytes
       $max = 57200;
+      //if (isset($_POST['upload'])) 
       if (isset($_POST['upload'])) 
       {     
          // define the path to the upload folder
@@ -58,6 +60,7 @@
       echo '<div id="EditDebug">
             <p><b>Создать материал или редактировать его</b></p>';
       echo '<br>';
+      prown\ViewGlobal(avgPOST);
       
       // Выводим сообщения по итогам загрузки файла
       if (isset($result)) 
@@ -70,30 +73,33 @@
          echo '</ul>';
       }
 
-            
             ?>
             
-            <!-- -->
+            <!-- 
             <p><a href="download.php?file=pic.png">Download image</a></p>
             
             <form action="" method="post" enctype="multipart/form-data" id="uploadImage">
             <p>
             <label for="image">Upload images:</label>
             <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max; ?>">
-            <input type="file" name="image" id="image">
+            <input type="file" name="image" id="image1">
             </p>
             <p>
-            <input type="submit" name="upload" id="upload" value="Upload">
+            <input type="submit" name="upload" id="upload1" value="Upload">
             </p>
             </form>
+            -->
             <?php
             
        echo '</div>';
-       echo '<p><textarea id="ContentArea" name="areac">Текст нового материала</textarea></p>';
+       echo '<p><textarea id="ContentArea" name="areac">Текст нового материала';
+       prown\ViewGlobal(avgREQUEST);
+       echo '</textarea></p>';
    ?>
    <p><input id="InputArea" type="submit" value="Отправить"></p>
+<!-- 
 </form>
-
+-->
 
 <?php
 // *********************************************************** EditText.php ***

@@ -17,7 +17,7 @@ GViewImage($FileName,$Comment);
 
 $FileName="ittveLife/ittve01-001-С-заботой-и-к-мамам.jpg";
 $Comment="'С заботой и к мамам' - такой мамочкин хвостик.";
-GViewImage($FileName,$Comment,true);
+GViewImage($FileName,$Comment);
 
 $FileName="ittveLife/ittve01-001-На-Сампо.jpg";
 $Comment="На горе Сампо всем хорошо!";

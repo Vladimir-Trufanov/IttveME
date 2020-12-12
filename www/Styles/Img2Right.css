@@ -79,27 +79,27 @@
    right:33%;
    width:67%; 
 }
-#ContentArea
-{ 
-   position:fixed; 
-   overflow:auto; 
-   top:24%; 
-   bottom:4%;
-   padding:0 .5rem 0 .5rem;
-   text-align:justify;
-   background:yellow; 
-   right:33%;
-   width:67%; 
-}
 #EditDebug
 { 
    position:fixed; 
    /*overflow:auto;*/ 
    top:4%; 
-   bottom:76%;
+   bottom:56%;
    padding:0 .5rem 0 .5rem;
    /*text-align:justify;
    background:red;*/ 
+   right:33%;
+   width:67%; 
+}
+#ContentArea
+{ 
+   position:fixed; 
+   overflow:auto; 
+   top:44%; 
+   bottom:4%;
+   padding:0 .5rem 0 .5rem;
+   text-align:justify;
+   background:yellow; 
    right:33%;
    width:67%; 
 }
