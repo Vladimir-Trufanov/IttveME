@@ -93,6 +93,14 @@ IttveME
 			www\Images\ittve01-001-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
 			www\Images\oni.jpg
+		-img
+			www\img\active.png
+			www\img\icons.png
+			www\img\Thumbs.db
+		-imga
+			www\imga\arrow_down.png
+			www\imga\arrow_up.png
+			www\imga\bgnoise_lg.jpg
 		-ittveLife
 			www\ittveLife\GalleryLife.php
 			www\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
@@ -148,6 +156,7 @@ IttveME
 			www\Styles\Gallery-Image.css
 			www\Styles\Img2Right.css
 			www\Styles\iniStyles.css
+			www\Styles\Menu.css
 			www\Styles\styleSet.css
 		-TinyMCE
 			-langs
@@ -406,11 +415,13 @@ IttveME
 		www\log.txt
 		www\Main.php
 		www\manifest.json
+		www\Menu.php
 		www\MessLeftFooter.php
 		www\Nastr.php
 		www\NavSetCss.php
 		www\NavSetJs.php
 		www\pic.png
+		www\sampo.jpg
 		www\Site.php
 		www\SiteOld.php
 		www\UpSite.php
@@ -418,54 +429,37 @@ IttveME
 		www\ViewImage.php
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\UpSite.php
-3=www\ittveNews\GalleryNews.php
-4=www\Common.php
-5=www\ittveLife\GalleryLife.php
-6=www\Site.php
-7=www\iniMem.php
-8=www\Styles\Img2Right.css
-9=www\EditText.php
-10=www\Styles\Gallery-Image.css
-11=www\UpSiteCSS.php
+1=www\Menu.php
+2=www\Site.php
+3=www\UpSite.php
+4=www\UpSiteCSS.php
+5=www\EditText.php
+6=www\Styles\Menu.css
+7=www\Styles\Img2Right.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Img2Right.css
+Selected=www\Styles\Menu.css
 [www\index.php]
 TopLine=11
 Caret=1,39
-[www\Main.php]
-TopLine=49
-Caret=66,78
-[www\UpSite.php]
-TopLine=101
-Caret=6,137
-[www\ittveNews\GalleryNews.php]
-TopLine=13
-Caret=43,21
-[www\Common.php]
-TopLine=58
-Caret=58,87
-Mark1=1,63
-[www\ittveLife\GalleryLife.php]
-TopLine=8
-Caret=37,8
+[www\Menu.php]
+TopLine=196
+Caret=54,199
 [www\Site.php]
-TopLine=8
-Caret=9,21
-[www\iniMem.php]
-TopLine=161
-Caret=13,163
-[www\Styles\Img2Right.css]
-TopLine=25
-Caret=21,41
-[www\EditText.php]
-TopLine=87
-Caret=31,63
-[www\Styles\Gallery-Image.css]
-TopLine=1
-Caret=20,30
+TopLine=7
+Caret=30,21
+[www\UpSite.php]
+TopLine=81
+Caret=1,98
 [www\UpSiteCSS.php]
-TopLine=21
-Caret=1,47
+TopLine=1
+Caret=65,17
+[www\EditText.php]
+TopLine=9
+Caret=1,20
+[www\Styles\Menu.css]
+TopLine=417
+Caret=1,423
+[www\Styles\Img2Right.css]
+TopLine=19
+Caret=26,42

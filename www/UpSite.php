@@ -124,17 +124,6 @@ if ($ImageFile<>NULL)
 // Выводим другие страницы сайта
 else
 {
-   /*
-   // Выбираем страницу с меню и рекламой
-   if (prown\isComRequest('LifeMenu','Com'))
-   {
-      //require_once "Html/iniHtmlLifeMenu.php";
-      //require_once "iniHtml1.php";
-      //echo 'Жизнь и путешествия!'.'<br>';
-      //require_once "Nastr.php";
-   }
-   else
-   */ 
    // Выбираем страницу для отправки сообщения автору
    if (prown\isComRequest('Inbox','Com'))
    {
@@ -166,6 +155,16 @@ else
       require_once "Site.php";
       //require_once "Nastr.php";
    }
+   /*
+   // Выводим меню
+   if (prown\isComRequest('LifeMenu','Com'))
+   {
+      //require_once "Html/iniHtmlLifeMenu.php";
+      //require_once "iniHtml1.php";
+      //echo 'Жизнь и путешествия!'.'<br>';
+      //require_once "Nastr.php";
+   }
+   */
 }
 /*
 }

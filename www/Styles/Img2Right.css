@@ -39,7 +39,8 @@
 #Menu                                                                   
 { 
    /*display:none;*/ 
-   background:yellow; 
+   /*background:yellow;*/
+   background: #e0e3ec url(../imga/bgnoise_lg.jpg) repeat top left;
 }
 #Gallery, #NewGallery
 {

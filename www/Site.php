@@ -18,7 +18,7 @@ echo '</div>';
 echo '<div id="Content">';
    echo '<div id="Menu">';
       //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-      //require_once "ittveNews/".$p_ittveNews;
+      require_once "Menu.php";
    echo '</div>';
 
    echo '<div id="News">';

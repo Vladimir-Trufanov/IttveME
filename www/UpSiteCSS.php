@@ -14,6 +14,7 @@
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/Menu.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
 
