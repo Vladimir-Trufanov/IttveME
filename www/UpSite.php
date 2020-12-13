@@ -124,16 +124,19 @@ if ($ImageFile<>NULL)
 // Выводим другие страницы сайта
 else
 {
+   /*
    // Выбираем страницу с меню и рекламой
    if (prown\isComRequest('LifeMenu','Com'))
    {
       //require_once "Html/iniHtmlLifeMenu.php";
       //require_once "iniHtml1.php";
-      echo 'Жизнь и путешествия!'.'<br>';
+      //echo 'Жизнь и путешествия!'.'<br>';
       //require_once "Nastr.php";
    }
+   else
+   */ 
    // Выбираем страницу для отправки сообщения автору
-   else if (prown\isComRequest('Inbox','Com'))
+   if (prown\isComRequest('Inbox','Com'))
    {
       echo 'Отправить сообщение автору'.'<br>';
    }

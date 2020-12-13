@@ -15,7 +15,7 @@
  Позиционируем основные секции сайта: галерею новостных изображений, 
  секцию новых материалов, подвал, секцию архивных статей скрываем
 */
-#News,#Life 
+#News,#Life,#Menu 
 { 
    position:fixed; 
    overflow:auto; 
@@ -35,6 +35,11 @@
 { 
    /*display:none;*/ 
    background:teal; 
+}
+#Menu                                                                   
+{ 
+   /*display:none;*/ 
+   background:yellow; 
 }
 #Gallery, #NewGallery
 {

@@ -16,6 +16,11 @@ echo '</div>';
 
 // Выводим текстовый контент сайта: колонку новостей, колонку моей жизни
 echo '<div id="Content">';
+   echo '<div id="Menu">';
+      //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+      //require_once "ittveNews/".$p_ittveNews;
+   echo '</div>';
+
    echo '<div id="News">';
       //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
       require_once "ittveNews/".$p_ittveNews;

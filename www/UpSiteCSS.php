@@ -16,6 +16,38 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+
+// Переключаем контекстные колонки
+if (prown\isComRequest('LifeMenu','Com'))
+{
+   echo "
+   <style>
+   #News,#Life 
+   {
+      display:none; 
+   }
+   #Menu 
+   {
+      display:block;
+   }
+   </style>
+   ";
+}
+else
+{
+   echo "
+   <style>
+   #Menu 
+   {
+      display:none; 
+   }
+   #News,#Life 
+   {
+      display:block;
+   }
+   </style>
+   ";
+}
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
