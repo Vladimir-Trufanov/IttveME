@@ -438,15 +438,15 @@ IttveME
 7=www\Styles\Img2Right.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Menu.css
+Selected=www\Menu.php
 [www\index.php]
-TopLine=11
+TopLine=3
 Caret=1,39
 [www\Menu.php]
-TopLine=196
-Caret=54,199
+TopLine=9
+Caret=90,31
 [www\Site.php]
-TopLine=7
+TopLine=67
 Caret=30,21
 [www\UpSite.php]
 TopLine=81
@@ -458,8 +458,8 @@ Caret=65,17
 TopLine=9
 Caret=1,20
 [www\Styles\Menu.css]
-TopLine=417
-Caret=1,423
+TopLine=341
+Caret=3,348
 [www\Styles\Img2Right.css]
 TopLine=19
 Caret=26,42

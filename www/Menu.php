@@ -10,10 +10,60 @@
 //                                                   Дата создания:  13.12.2020
 // Copyright © 2020 tve                              Посл.изменение: 13.12.2020
 
-echo 'Жизнь и путешествия!'.'<br>';
+echo 'Жизнь и путешествия! '.prown\getTranslit('Микропутешествия').' <br>';
 ?>
-<!-- 1 вариант
 
+<div id="wrapperX">
+<ul class="accordion">
+   
+   <li id="one" class="moya-zhizn"> <!--files-->
+   <a href="#one">Моя жизнь<span>495</span></a>
+   <ul class="sub-menu">
+      <li><a href="#one"><em>01</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
+	</ul>
+	</li>
+			
+	<li id="two" class="mikroputeshestviya">       <!--mail-->
+   <a href="#two">Микропутешествия<span>26</span></a>
+   <ul class="sub-menu">
+      <li><a href="#two"><em>01</em>Киндасово - земля карельского юмора<span>20.06.2010</span></a></li>	
+		<li><a href="#two"><em>02</em>Гора Сампо, озеро, светлый лес, тропинка и небо<span>23.06.2010</span></a></li>
+		<li><a href="#two"><em>03</em>Падозеро, кладбище заключенных лагеря 517<span>03.07.2010</span></a></li>
+	</ul>
+	</li>
+			
+			<li id="three" class="cloud">
+				<a href="#three">Облако<span>58</span></a>
+
+				<ul class="sub-menu">			
+					<li><a href="#three"><em>01</em>Соединений<span>12</span></a></li>
+				
+					<li><a href="#three"><em>02</em>Профилей<span>19</span></a></li>
+					<li><a href="#three"><em>03</em>Опций<span>27</span></a></li>
+				</ul>
+			</li>
+			
+			<li id="four" class="sign">
+				<a href="#four">Выйти</a>
+
+				<ul class="sub-menu">					
+					<li><a href="#four"><em>01</em>Выйти из</a></li>				
+					<li><a href="#four"><em>02</em>Удалить аккаунт</a></li>
+					<li><a href="#four"><em>03</em>Заморозить аккаунт </a></li>
+				</ul>
+			</li>
+		
+		</ul>
+		
+	</div>
+
+
+
+
+
+
+
+<!-- 1 вариант
 <nav role='navigation'>
   <ul>
     <li><a href="#">Home</a></li>
@@ -192,6 +242,9 @@ echo 'Жизнь и путешествия!'.'<br>';
 	</div>
 -->
 
+
+<!-- 2 вариант
+
        <div class="container">
 
 			<section class="ac-container">
@@ -225,8 +278,7 @@ echo 'Жизнь и путешествия!'.'<br>';
 				</div>
 			</section>
         </div>
-
-
+-->
 
 <?php
 // *************************************************************** Menu.php ***
