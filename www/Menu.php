@@ -10,275 +10,74 @@
 //                                                   Дата создания:  13.12.2020
 // Copyright © 2020 tve                              Посл.изменение: 13.12.2020
 
-echo 'Жизнь и путешествия! '.prown\getTranslit('Микропутешествия').' <br>';
+echo 'Жизнь и путешествия! '.prown\getTranslit('').' <br>';
 ?>
-
-<div id="wrapperX">
 <ul class="accordion">
    
-   <li id="one" class="moya-zhizn"> <!--files-->
-   <a href="#one">Моя жизнь<span>495</span></a>
+   <li id="part1" class="moya-zhizn">                 <!--files=one-->
+   <a href="#part1">Моя жизнь<span>495</span></a>
    <ul class="sub-menu">
-      <li><a href="#one"><em>01</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
+      <li><a href="#one"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
 	</ul>
 	</li>
 			
-	<li id="two" class="mikroputeshestviya">       <!--mail-->
-   <a href="#two">Микропутешествия<span>26</span></a>
+	<li id="part2" class="mikroputeshestviya">        <!--mail=two-->
+   <a href="#part2">Микропутешествия<span>26</span></a>
    <ul class="sub-menu">
-      <li><a href="#two"><em>01</em>Киндасово - земля карельского юмора<span>20.06.2010</span></a></li>	
-		<li><a href="#two"><em>02</em>Гора Сампо, озеро, светлый лес, тропинка и небо<span>23.06.2010</span></a></li>
-		<li><a href="#two"><em>03</em>Падозеро, кладбище заключенных лагеря 517<span>03.07.2010</span></a></li>
+      <li><a href="#part2"><em>1</em>Киндасово - земля карельского юмора<span>20.06.2010</span></a></li>	
+		<li><a href="#part2"><em>2</em>Гора Сампо, озеро, светлый лес, тропинка и небо<span>23.06.2010</span></a></li>
+		<li><a href="#part2"><em>3</em>Падозеро, кладбище заключенных лагеря №517<span>03.07.2010</span></a></li>
+		<li><a href="#part2"><em>4</em>Таёжный зоопарк на озере Сямозеро<span>04.07.2010</span></a></li>
+		<li><a href="#part2"><em>5</em>Как жили вепсы в Шелтозере<span>10.07.2010</span></a></li>
+		<li><a href="#part2"><em>6</em>Полоса 2300 - военный аэродром в Гирвасе<span>17.07.2010</span></a></li>
+		<li><a href="#part2"><em>8</em>Чертов стул, кусочек ботанического сада<span>11.09.2010</span></a></li>
+		<li><a href="#part2"><em>10</em>Благовещенский Ионо-Яшезерский мужской монастырь<span>10.10.2010</span></a></li>
+	</ul>                                                                                     
+	</li>
+   
+   <li id="part3" class="vsyakoe-raznoe">        <!--cloud=three-->
+   <a href="#part3">Всякое-разное<span>58</span></a>
+   <ul class="sub-menu">
+      <li><a href="#part3"><em>1</em>Всякое-разное<span>05.02.1958</span></a></li>
 	</ul>
 	</li>
-			
-			<li id="three" class="cloud">
-				<a href="#three">Облако<span>58</span></a>
-
-				<ul class="sub-menu">			
-					<li><a href="#three"><em>01</em>Соединений<span>12</span></a></li>
-				
-					<li><a href="#three"><em>02</em>Профилей<span>19</span></a></li>
-					<li><a href="#three"><em>03</em>Опций<span>27</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="four" class="sign">
-				<a href="#four">Выйти</a>
-
-				<ul class="sub-menu">					
-					<li><a href="#four"><em>01</em>Выйти из</a></li>				
-					<li><a href="#four"><em>02</em>Удалить аккаунт</a></li>
-					<li><a href="#four"><em>03</em>Заморозить аккаунт </a></li>
-				</ul>
-			</li>
+   
+   <li id="part4" class="v-kontakte">        <!--sign=four-->
+   <a href="#part4">В контакте<span>58</span></a>
+   <ul class="sub-menu">
+      <li><a href="#part4"><em>1</em>В контакте<span>05.02.1958</span></a></li>
+	</ul>
+	</li>
+   
+   <li id="part5" class="moj-mir">       
+   <a href="#part5">Мой мир<span>58</span></a>
+   <ul class="sub-menu">
+      <li><a href="#part5"><em>1</em>Мой мир<span>05.02.1958</span></a></li>
+	</ul>
+	</li>
+   
+   <li id="part6" class="progulki">       
+   <a href="#part6">Прогулки<span>58</span></a>
+   <ul class="sub-menu">
+      <li><a href="#part6"><em>1</em>Прогулки<span>05.02.1958</span></a></li>
+	</ul>
+	</li>
+   
+   <li id="part22" class="dopolneniya-k-mikroputeshestviyam">       
+   <a href="#part22">Дополнения к микропутешествиям<span>58</span></a>
+   <ul class="sub-menu">
+      <li><a href="#part22"><em>1</em>Дополнения к микропутешествиям<span>05.02.1958</span></a></li>
+	</ul>
+	</li>
+   
+   <li id="part99" class="perepechatka">       
+   <a href="#part99">Перепечатка<span>58</span></a>
+   <ul class="sub-menu">
+      <li><a href="#part99"><em>1</em>Перепечатка<span>05.02.1958</span></a></li>
+	</ul>
+	</li>
 		
-		</ul>
-		
-	</div>
-
-
-
-
-
-
-
-<!-- 1 вариант
-<nav role='navigation'>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About Abou tAbout</a>
-      <ul>
-        <li><a href="">Our team Our team Our team</a></li>
-        <li><a href="">History</a></li>
-        <li><a href="#">Aboutш</a>
-            <ul>
-               <li><a href="">Our teamш Our teamш Our teamш</a></li>
-               <li><a href="">Historyш</a></li>
-            </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#">Clients</a></li>
-    <li><a href="#">Contact Us Contact Us </a>
-      <ul>
-        <li><a href="">Our team Our team Our team</a></li>
-        <li><a href="">History</a></li>
-        <li><a href="#">Aboutш</a>
-            <ul>
-               <li><a href="">Our teamш Our teamш Our teamш</a></li>
-               <li><a href="">Historyш</a></li>
-            </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>  
--->
-
-
-<!-- 2 вариант
-	<div id="wrapper-200a">
-
-		<ul class="accordion">
-			
-			<li id="one" class="files">
-				<a href="#one">Мои файлы<span>495</span></a>
-
-				<ul class="sub-menu">		
-					<li><a href="#one"><em>01</em>Dropbox<span>42</span></a></li>			
-					<li><a href="#one"><em>02</em>Skydrive<span>87</span></a></li>
-					<li><a href="#one"><em>03</em>FTP сервер<span>366</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="two" class="mail">
-				<a href="#two">Mail<span>26</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#two"><em>01</em>Hotmail<span>9</span></a></li>	
-					<li><a href="#two"><em>02</em>Yahoo<span>14</span></a></li>
-					<li><a href="#two"><em>03</em>Gmail<span>3</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="three" class="cloud">
-				<a href="#three">Облако<span>58</span></a>
-
-				<ul class="sub-menu">			
-					<li><a href="#three"><em>01</em>Соединений<span>12</span></a></li>
-				
-					<li><a href="#three"><em>02</em>Профилей<span>19</span></a></li>
-					<li><a href="#three"><em>03</em>Опций<span>27</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="four" class="sign">
-				<a href="#four">Выйти</a>
-
-				<ul class="sub-menu">					
-					<li><a href="#four"><em>01</em>Выйти из</a></li>				
-					<li><a href="#four"><em>02</em>Удалить аккаунт</a></li>
-					<li><a href="#four"><em>03</em>Заморозить аккаунт </a></li>
-				</ul>
-			</li>
-		
-		</ul>
-		
-	</div>
-
-	<div id="wrapper-200b">
-
-		<ul class="accordion">		
-			<li id="one2" class="files">
-				<a href="#one2">Мои файлы<span>495</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#one2"><em>01</em>Dropbox<span>42</span></a></li>
-					<li><a href="#one2"><em>02</em>Skydrive<span>87</span></a></li>
-					<li><a href="#one2"><em>03</em>FTP сервер<span>366</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="two2" class="mail">
-				<a href="#two2">Mail<span>26</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#two2"><em>01</em>Hotmail<span>9</span></a></li>
-					<li><a href="#two2"><em>02</em>Yahoo<span>14</span></a></li>
-					<li><a href="#two2"><em>03</em>Gmail<span>3</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="three2" class="cloud">
-				<a href="#three2">Облако<span>58</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#three2"><em>01</em>Соединений<span>12</span></a></li>
-					<li><a href="#three2"><em>02</em>Профилей<span>19</span></a></li>
-					<li><a href="#three2"><em>03</em>Опций<span>27</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="four2" class="sign">
-				<a href="#four2">Выйти</a>
-
-				<ul class="sub-menu">
-					<li><a href="#four2"><em>01</em>Выйти из</a></li>
-					<li><a href="#four2"><em>02</em>Удалить аккаунт</a></li>
-					<li><a href="#four2"><em>03</em>Заморозить аккаунт</a></li>
-				</ul>
-			</li>
-		
-		</ul>
-		
-	</div>
-
-	<div id="wrapper-600">
-
-		<ul class="accordion">
-			<li id="one3" class="files">
-				<a href="#one3">Мои файлы<span>495</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#one3"><em>01</em>Dropbox<span>42</span></a></li>
-					<li><a href="#one3"><em>02</em>Skydrive<span>87</span></a></li>
-					<li><a href="#one3"><em>03</em>FTP сервер<span>366</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="two3" class="mail">
-				<a href="#two3">Mail<span>26</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#two3"><em>01</em>Hotmail<span>9</span></a></li>
-					<li><a href="#two3"><em>02</em>Yahoo<span>14</span></a></li>
-					<li><a href="#two3"><em>03</em>Gmail<span>3</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="three3" class="cloud">
-				<a href="#three3">Облако<span>58</span></a>
-
-				<ul class="sub-menu">
-					<li><a href="#three3"><em>01</em>Соединений<span>12</span></a></li>		
-					<li><a href="#three3"><em>02</em>Профилей<span>19</span></a></li>
-					<li><a href="#three3"><em>03</em>Опций<span>27</span></a></li>
-				</ul>
-			</li>
-			
-			<li id="four3" class="sign">
-				<a href="#four3">Выйти</a>
-
-				<ul class="sub-menu">	
-					<li><a href="#four3"><em>01</em>Выйти из</a></li>
-					<li><a href="#four3"><em>02</em>Удалить аккаунт</a></li>
-					<li><a href="#four3"><em>03</em>Заморозить аккаунт</a></li>
-				</ul>
-			</li>
-		
-		</ul>
-		
-	</div>
--->
-
-
-<!-- 2 вариант
-
-       <div class="container">
-
-			<section class="ac-container">
-				<div>
-					<input id="ac-1" name="accordion-1" type="radio" />
-					<label for="ac-1">О нас</label>
-					<article class="ac-small">
-						<p>"Скрипты для сайтов" - это молодой проект занимающийся предоставлением разнообразных скриптов веб-мастерам, с целью улучшения внешнего вида, удобства навигации их сайтов.</p>
-					</article>
-				</div>
-				<div>
-					<input id="ac-2" name="accordion-1" type="radio" />
-					<label for="ac-2">Услуги</label>
-					<article class="ac-medium">
-						<p>Услуг мы не предоставляем, однако если вы желаете установить любую CMS систему на свой сайт (при условии наличия у вас архива данной CMS), то можете обратиться к нам через форму обратной связи. Любая помощь в комментариях на сайте осуществляется исключительно на добровольных условиях.</p>
-					</article>
-				</div>
-				<div>
-					<input id="ac-3" name="accordion-1" type="radio" />
-					<label for="ac-3">Портфолио</label>
-					<article class="ac-large">
-						<p>У нас два небольших проекта: "Форум твоего направления" и непосредственно этот сайт "Скрипты для сайтов". Большая часть времени уходит на их содержание и обслуживание.</p>
-					</article>
-				</div>
-				<div>
-					<input id="ac-4" name="accordion-1" type="radio" />
-					<label for="ac-4">Контакты</label>
-					<article class="ac-large">
-						<p>Связаться с нами можно через форму обратной связи (email почту), через социальные сети (twitter) или системы мгновенных сообщений: ICQ.</p>
-					</article>
-				</div>
-			</section>
-        </div>
--->
+</ul>
 
 <?php
 // *************************************************************** Menu.php ***
