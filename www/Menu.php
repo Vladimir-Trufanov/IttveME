@@ -14,35 +14,35 @@ echo 'Жизнь и путешествия! '.prown\getTranslit('').' <br>';
 ?>
 <ul class="accordion">
    
-   <li id="part1" class="moya-zhizn">                 <!--files=one-->
+   <li id="part1" class="moya-zhizn">                
    <a href="#part1">Моя жизнь<span>495</span></a>
    <ul class="sub-menu">
       <li><a href="#one"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
 	</ul>
 	</li>
 			
-	<li id="part2" class="mikroputeshestviya">        <!--mail=two-->
+	<li id="part2" class="mikroputeshestviya">       
    <a href="#part2">Микропутешествия<span>26</span></a>
    <ul class="sub-menu">
       <li><a href="#part2"><em>1</em>Киндасово - земля карельского юмора<span>20.06.2010</span></a></li>	
-		<li><a href="#part2"><em>2</em>Гора Сампо, озеро, светлый лес, тропинка и небо<span>23.06.2010</span></a></li>
+		<li><a href="#part2"><em>2</em>Гора Сампо. Озеро, светлый лес, тропинка в небо<span>23.06.2010</span></a></li>
 		<li><a href="#part2"><em>3</em>Падозеро, кладбище заключенных лагеря №517<span>03.07.2010</span></a></li>
 		<li><a href="#part2"><em>4</em>Таёжный зоопарк на озере Сямозеро<span>04.07.2010</span></a></li>
-		<li><a href="#part2"><em>5</em>Как жили вепсы в Шелтозере<span>10.07.2010</span></a></li>
+		<li><a href="#part2"><em>5</em>Шелтозер. Так жили вепсы<span>10.07.2010</span></a></li>
 		<li><a href="#part2"><em>6</em>Полоса 2300 - военный аэродром в Гирвасе<span>17.07.2010</span></a></li>
 		<li><a href="#part2"><em>8</em>Чертов стул, кусочек ботанического сада<span>11.09.2010</span></a></li>
 		<li><a href="#part2"><em>10</em>Благовещенский Ионо-Яшезерский мужской монастырь<span>10.10.2010</span></a></li>
 	</ul>                                                                                     
 	</li>
    
-   <li id="part3" class="vsyakoe-raznoe">        <!--cloud=three-->
+   <li id="part3" class="vsyakoe-raznoe">      
    <a href="#part3">Всякое-разное<span>58</span></a>
    <ul class="sub-menu">
       <li><a href="#part3"><em>1</em>Всякое-разное<span>05.02.1958</span></a></li>
 	</ul>
 	</li>
    
-   <li id="part4" class="v-kontakte">        <!--sign=four-->
+   <li id="part4" class="v-kontakte">      
    <a href="#part4">В контакте<span>58</span></a>
    <ul class="sub-menu">
       <li><a href="#part4"><em>1</em>В контакте<span>05.02.1958</span></a></li>

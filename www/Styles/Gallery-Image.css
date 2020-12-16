@@ -27,7 +27,7 @@
 }
 .bCard
 {
-   background:green; /*green*/
+   background:transparent; /*green*/
    cursor:pointer;
 }
 .imgCard

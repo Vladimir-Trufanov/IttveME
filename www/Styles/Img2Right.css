@@ -34,7 +34,7 @@
 #Life                                                                   
 { 
    /*display:none;*/ 
-   background:teal; 
+   background:transparent; /*teal;*/ 
 }
 #Menu                                                                   
 { 
