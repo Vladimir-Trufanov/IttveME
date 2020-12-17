@@ -17,7 +17,7 @@ echo 'Жизнь и путешествия! '.prown\getTranslit('').' <br>';
    <li id="part1" class="moya-zhizn">                
    <a href="#part1">Моя жизнь<span>495</span></a>
    <ul class="sub-menu">
-      <li><a href="#one"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
+      <li><a href="#part1"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
 	</ul>
 	</li>
 			

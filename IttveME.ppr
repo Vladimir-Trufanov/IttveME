@@ -17,6 +17,25 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
+		-DetmanBase
+			-www
+				-css
+					www\DetmanBase\www\css\style.css
+				www\DetmanBase\www\db_conn.php
+				www\DetmanBase\www\functions.php
+				www\DetmanBase\www\index.php
+			www\DetmanBase\DetmanBase.ppr
+		+DetmanPage
+			+www
+				+css
+					www\DetmanPage\www\css\style.css
+				-pages
+					www\DetmanPage\www\pages\about.php
+					www\DetmanPage\www\pages\article.php
+					www\DetmanPage\www\pages\contact.php
+					www\DetmanPage\www\pages\foto.php
+					www\DetmanPage\www\pages\main.php
+				www\DetmanPage\www\index1.php
 		-example
 			-image
 				www\example\image\a1.jpg
@@ -90,17 +109,17 @@ IttveME
 				www\Images\Cursors\More-move.cur
 				www\Images\Cursors\Move.cur
 				www\Images\Cursors\Unavailable.cur
+			-Menu
+				www\Images\Menu\arrow_down.png
+				www\Images\Menu\arrow_up.png
+				www\Images\Menu\bgnoise_lg.jpg
+				www\Images\Menu\icons.png
 			www\Images\ittve01-001-Подъём-настроения.jpg
 			www\Images\Kwinflat.jpg
-			www\Images\oni.jpg
 		-img
 			www\img\active.png
 			www\img\icons.png
 			www\img\Thumbs.db
-		-imga
-			www\imga\arrow_down.png
-			www\imga\arrow_up.png
-			www\imga\bgnoise_lg.jpg
 		-ittveLife
 			www\ittveLife\GalleryLife.php
 			www\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
@@ -145,7 +164,7 @@ IttveME
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-blue.css
 			www\SmartMenus\sm-core-css.css
-		+Styles
+		-Styles
 			-res
 				www\Styles\res\ImgLeft.css
 				www\Styles\res\ImgRight.css
@@ -436,21 +455,24 @@ IttveME
 5=www\EditText.php
 6=www\Styles\Menu.css
 7=www\Styles\Gallery-Image.css
+8=www\DetmanPage\www\index1.php
+9=www\DetmanPage\www\pages\main.php
+10=www\DetmanPage\www\css\style.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\Gallery-Image.css
+Selected=www\DetmanPage\www\index1.php
 [www\index.php]
 TopLine=11
 Caret=1,39
 [www\Menu.php]
-TopLine=63
-Caret=44,45
+TopLine=20
+Caret=26,20
 [www\Site.php]
 TopLine=21
 Caret=30,21
 [www\UpSite.php]
-TopLine=81
-Caret=1,98
+TopLine=115
+Caret=40,131
 [www\UpSiteCSS.php]
 TopLine=1
 Caret=65,17
@@ -463,3 +485,12 @@ Caret=1,197
 [www\Styles\Gallery-Image.css]
 TopLine=29
 Caret=26,30
+[www\DetmanPage\www\index1.php]
+TopLine=43
+Caret=12,64
+[www\DetmanPage\www\pages\main.php]
+TopLine=1
+Caret=10,1
+[www\DetmanPage\www\css\style.css]
+TopLine=1
+Caret=1,10

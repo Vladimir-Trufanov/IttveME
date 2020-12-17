@@ -127,14 +127,17 @@ else
    // Выбираем страницу для отправки сообщения автору
    if (prown\isComRequest('Inbox','Com'))
    {
-      echo 'Отправить сообщение автору'.'<br>';
+      //echo 'Отправить сообщение автору'.'<br>';
+      $page='/DetmanPage/www/index1.php';
+      Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    }
    // Выбираем страницу для изменения настроек
    else if (prown\isComRequest('Tuning','Com'))
    {
       //echo 'Изменить настройки сайта в браузере'.'<br>';
-      $page='/DownUpLoad/index_01.php';
-      $page='/DownUpLoad/ProbaTest.php';
+      //$page='/DownUpLoad/index_01.php';
+      //$page='/DownUpLoad/ProbaTest.php';
+      $page='/DetmanBase/www/index.php';
       Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    }
    // Выбираем страницу для входа по логину или для регистрации

@@ -1,0 +1,17 @@
+﻿/*
+h1          {color:blue;}
+body      {color:black;  padding:0; margin:0; height:100%;}
+#page    {width:1000px;   margin:0 auto;    border:1px solid black;}
+#menu    {color:yellow; min-height:650px; width:250px; background-color:#999999; float:left;}
+#menu ul {margin:10px 20px;}
+*/
+ 
+body{padding: 0;margin: 0;height: 100%;}
+#page{width: 1000px;margin: 0 auto;border: 1px solid black;}
+#header{height: 250px;width: 100%;background-color: #555555;}
+#menu{min-height: 650px;width: 250px;background-color: #999999;float: left;}
+#menu ul{margin: 10px 30px;}
+#content{min-height: 600px;padding: 25px;width: 700px;background-color: #CCC;float: right;}
+#footer{padding-top: 20px;height: 100px;width: 100%;background-color: #555555;}
+.clear{float: none;clear: both;}
+

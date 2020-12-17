@@ -1,0 +1,44 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.CompileOnBackground=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultDir=C:\Webservers\DetmanBase\www
+DefaultCP=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+HTServer=localhost
+Extensions=*.*
+[Project tree]
+DetmanBase
+	+www
+		+css
+			www\css\style.css
+		www\db_conn.php
+		www\functions.php
+		www\index.php
+[Open project files]
+0=www\index.php
+1=www\db_conn.php
+2=www\functions.php
+3=www\css\style.css
+[Selected Project Files]
+Main=
+Selected=www\index.php
+[www\index.php]
+TopLine=31
+Caret=1,1
+[www\db_conn.php]
+TopLine=1
+Caret=1,1
+[www\functions.php]
+TopLine=1
+Caret=1,1
+[www\css\style.css]
+TopLine=1
+Caret=1,1
