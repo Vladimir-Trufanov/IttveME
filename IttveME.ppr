@@ -17,17 +17,15 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
-		-DetmanBase
+		+DetmanBase
+			+css
+				www\DetmanBase\css\style.css
+			www\DetmanBase\db_conn.php
+			www\DetmanBase\functions.php
+			www\DetmanBase\indexBase.php
+		-DetmanPage
 			-www
 				-css
-					www\DetmanBase\www\css\style.css
-				www\DetmanBase\www\db_conn.php
-				www\DetmanBase\www\functions.php
-				www\DetmanBase\www\index.php
-			www\DetmanBase\DetmanBase.ppr
-		+DetmanPage
-			+www
-				+css
 					www\DetmanPage\www\css\style.css
 				-pages
 					www\DetmanPage\www\pages\about.php
@@ -451,19 +449,17 @@ IttveME
 1=www\Menu.php
 2=www\Site.php
 3=www\UpSite.php
-4=www\UpSiteCSS.php
-5=www\EditText.php
-6=www\Styles\Menu.css
-7=www\Styles\Gallery-Image.css
-8=www\DetmanPage\www\index1.php
-9=www\DetmanPage\www\pages\main.php
-10=www\DetmanPage\www\css\style.css
+4=www\DetmanPage\www\index1.php
+5=www\DetmanBase\indexBase.php
+6=www\DetmanBase\functions.php
+7=www\DetmanBase\db_conn.php
+8=www\DetmanBase\css\style.css
 [Selected Project Files]
 Main=
-Selected=www\DetmanPage\www\index1.php
+Selected=www\DetmanBase\functions.php
 [www\index.php]
 TopLine=11
-Caret=1,39
+Caret=56,35
 [www\Menu.php]
 TopLine=20
 Caret=26,20
@@ -471,26 +467,20 @@ Caret=26,20
 TopLine=21
 Caret=30,21
 [www\UpSite.php]
-TopLine=115
-Caret=40,131
-[www\UpSiteCSS.php]
-TopLine=1
-Caret=65,17
-[www\EditText.php]
-TopLine=9
-Caret=1,20
-[www\Styles\Menu.css]
-TopLine=178
-Caret=1,197
-[www\Styles\Gallery-Image.css]
-TopLine=29
-Caret=26,30
+TopLine=127
+Caret=21,127
 [www\DetmanPage\www\index1.php]
-TopLine=43
-Caret=12,64
-[www\DetmanPage\www\pages\main.php]
 TopLine=1
-Caret=10,1
-[www\DetmanPage\www\css\style.css]
+Caret=1,1
+[www\DetmanBase\indexBase.php]
+TopLine=71
+Caret=1,2
+[www\DetmanBase\functions.php]
 TopLine=1
-Caret=1,10
+Caret=34,20
+[www\DetmanBase\db_conn.php]
+TopLine=1
+Caret=44,10
+[www\DetmanBase\css\style.css]
+TopLine=1
+Caret=1,19

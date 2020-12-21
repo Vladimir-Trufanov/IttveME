@@ -1,13 +1,19 @@
-﻿<?php
-include ('db_conn.php');
+<?php
 include ('functions.php');
-if(!isset($_GET['art_id'])){
+include ('db_conn.php');
+
+
+if(!isset($_GET['art_id']))
+{
     $art_id = '1';
 }
-else{
+else
+{
     $art_id = addslashes(strip_tags(trim($_GET['art_id'])));
 }
+echo 'art_id='.art_id.'<br>';
 $art_data = GetDataArt($art_id);
+
 
 /*
 if(!isset($_GET['page'])){
@@ -44,6 +50,7 @@ switch ($page){
     break;
 }
 */
+
 ?>
 <!DOCTYPE html>
 
@@ -79,3 +86,4 @@ switch ($page){
 </div>
 </body>
 </html>
+<?php

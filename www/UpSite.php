@@ -137,7 +137,7 @@ else
       //echo 'Изменить настройки сайта в браузере'.'<br>';
       //$page='/DownUpLoad/index_01.php';
       //$page='/DownUpLoad/ProbaTest.php';
-      $page='/DetmanBase/www/index.php';
+      $page='/DetmanBase/indexBase.php';
       Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    }
    // Выбираем страницу для входа по логину или для регистрации

@@ -8,7 +8,7 @@ else{
 switch ($page){
     case 'main':
         $title = 'Главная';
-        $meta_d = 'Глав ная';
+        $meta_d = 'Главная';
         $meta_kw = 'Главная';
     break;
     case 'about':
