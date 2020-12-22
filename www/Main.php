@@ -25,6 +25,7 @@ require_once $TPhpPrown."/TPhpPrown/ViewSimpleArray.php";
 $TPhpTools=$SiteHost.'/TPhpTools';
 require_once $TPhpTools."/TPhpTools/TDownloadFromServer/DownloadFromServerClass.php";
 require_once $TPhpTools."/TPhpTools/TUploadToServer/UploadToServerClass.php";
+require_once $TPhpTools."/TPhpTools/TBaseMaker/BaseMakerClass.php";
 
 // Выполняем начальную инициализацию
 require_once "Common.php";     // Всегда 1-ый корневой модуль в списке

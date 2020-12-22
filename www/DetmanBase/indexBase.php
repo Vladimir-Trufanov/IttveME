@@ -1,8 +1,8 @@
 <?php
-include ('functions.php');
+//include ('functions.php');
 include ('db_conn.php');
 
-
+/*
 if(!isset($_GET['art_id']))
 {
     $art_id = '1';
@@ -13,7 +13,7 @@ else
 }
 echo 'art_id='.art_id.'<br>';
 $art_data = GetDataArt($art_id);
-
+*/
 
 /*
 if(!isset($_GET['page'])){
@@ -51,6 +51,8 @@ switch ($page){
 }
 */
 
+/*
+
 ?>
 <!DOCTYPE html>
 
@@ -68,7 +70,7 @@ switch ($page){
     </div>
     <div id="menu">
         <ul>
-            <li><a href="/">Главная</a></li>
+            <li><a href="/">Главная по БАЗЕ</a></li>
             <li><a href="/index.php?art_id=2">О нас</a></li>
             <li><a href="/index.php?art_id=3">Статья</a></li>
             <li><a href="/index.php?art_id=4">Фотогалерея</a></li>
@@ -87,3 +89,4 @@ switch ($page){
 </body>
 </html>
 <?php
+*/
