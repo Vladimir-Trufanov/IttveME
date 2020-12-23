@@ -481,8 +481,8 @@ Caret=3,92
 TopLine=1
 Caret=34,20
 [www\DetmanBase\db_conn.php]
-TopLine=48
-Caret=21,90
+TopLine=126
+Caret=60,58
 [www\DetmanBase\css\style.css]
 TopLine=1
 Caret=1,19

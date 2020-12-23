@@ -55,7 +55,7 @@ try
    foreach ($results as $row) {echo $row['id'].'-'; echo $row['text']; }
    */ 
 
-   $pathBase='sqlite:'.$_SERVER['DOCUMENT_ROOT'].'/produkty1.db3'; 
+   $pathBase='sqlite:'.$_SERVER['DOCUMENT_ROOT'].'/produkty.db3'; 
    $username='tve';
    $password='23ety17';                                         
    //$pdo = new PDO($pathBase);
@@ -76,19 +76,61 @@ try
          colour      TEXT
       )';
       $st = $pdo->query($sql);
+      $sql='CREATE TABLE produkts (
+         name        TEXT PRIMARY KEY,
+         [id-colour] INTEGER,
+         calories    NUMERIC( 5, 1 ),
+         [id-vid]    INTEGER
+      )';
+      $st = $pdo->query($sql);
+      
+      // https://art-life-spb.ru/kaiioraz_frukty
+      // https://sostavproduktov.ru/produkty/yagody
+      // https://sostavproduktov.ru/potrebitelyu/vidy-produktov/frukty
 
+      $sql="INSERT INTO [vids] ([id-vid], [vid]) VALUES (1, 'фрукты');";
+      $st = $pdo->query($sql);
+      $sql="INSERT INTO [vids] ([id-vid], [vid]) VALUES (2, 'ягоды');";
+      $st = $pdo->query($sql);
+
+      $sql="INSERT INTO [colours] ([id-colour], [colour]) VALUES (1, 'красные');";
+      $st = $pdo->query($sql);
+      $sql="INSERT INTO [colours] ([id-colour], [colour]) VALUES (2, 'голубые');";
+      $st = $pdo->query($sql);
+      $sql="INSERT INTO [colours] ([id-colour], [colour]) VALUES (3, 'жёлтые');";
+      $st = $pdo->query($sql);
+      $sql="INSERT INTO [colours] ([id-colour], [colour]) VALUES (4, 'оранжевые');";
+      $st = $pdo->query($sql);
+      $sql="INSERT INTO [colours] ([id-colour], [colour]) VALUES (5, 'зелёные');";
+      $st = $pdo->query($sql);
+
+
+      $aProducts=[
+         ['голубика', 2, 41, 2],
+         ['брусника', 1, 41, 2],
+         ['груши', 3, 42, 1],
+         ['земляника', 1, 34, 2],
+         ['рябина', 4, 81, 2],
+         ['виноград', 5, 70, 1]
+      ];
+      $statement = $pdo->prepare("INSERT INTO [produkts] ".
+         "([name], [id-colour], [calories], [id-vid]) VALUES ".
+         "(:name,  :idcolour,   :calories,  :idvid);");
+      $i=0;
+      foreach ($aProducts as [$name,$idcolor,$calories,$idvid])
+      $statement->execute(["name"=>$name, "idcolour"=>$idcolor, "calories"=>$calories, "idvid"=>$idvid]);
+      
       $pdo->commit();
    } 
    catch (Exception $e) 
    {
+      // Если в транзакции, то делаем откат изменений
       if ($pdo->inTransaction()) 
       {
          $pdo->rollback();
-         echo 'rollback';
-        // If we got here our two data updates are not in the database
       }
-         echo 'throw';
-      //throw $e;
+      // Продолжаем исключение
+      throw $e;
    }
 
    
