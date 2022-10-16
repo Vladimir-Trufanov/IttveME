@@ -5,6 +5,7 @@ Compilator.CompileOnBackground=0
 Compilator.ProgSaveAll=0
 Compilator.ProgRunSelection=0
 Compilator.LogType=0
+Compilator.LogEncoding=0
 DefaultDir=C:\IttveME\www
 DefaultCP=0
 LogtoEnd=1
@@ -17,8 +18,11 @@ Extensions=*.*
 [Project tree]
 IttveME
 	+www
-		+DetmanBase
-			+css
+		-.well-known
+			-pki-validation
+				www\.well-known\pki-validation\gsdv.txt
+		-DetmanBase
+			-css
 				www\DetmanBase\css\style.css
 			www\DetmanBase\db_conn.php
 			www\DetmanBase\functions.php
@@ -91,7 +95,6 @@ IttveME
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
-		-GalleryProba
 		-Html
 			www\Html\iniHtmlLifeMenu.php
 			www\Html\iniHtmlLogin.php
@@ -153,15 +156,13 @@ IttveME
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
 				www\KwinTiny\Arc\textfile.html
-			-Temp
 		-Reset
 			www\Reset\e404.php
 			www\Reset\index.php
-		-Scripts
-		-SmartMenus
-			www\SmartMenus\jquery.smartmenus.min.js
-			www\SmartMenus\sm-blue.css
-			www\SmartMenus\sm-core-css.css
+		-smartmenus
+			www\smartmenus\jquery.smartmenus.min.js
+			www\smartmenus\sm-blue.css
+			www\smartmenus\sm-core-css.css
 		-Styles
 			-res
 				www\Styles\res\ImgLeft.css
@@ -424,9 +425,10 @@ IttveME
 		www\index.php
 		www\iniHtml1.php
 		www\iniHtmlBegin.php
-		www\iniMem.php
+		www\Inimem.php
 		www\iniWorkSpace.php
 		www\iniWorkSpace.phpo
+		www\ittve.db3
 		www\IttveME.js
 		www\iUserError.php
 		www\log.txt
@@ -438,6 +440,7 @@ IttveME
 		www\NavSetCss.php
 		www\NavSetJs.php
 		www\pic.png
+		www\proba.db3
 		www\sampo.jpg
 		www\Site.php
 		www\SiteOld.php
@@ -447,48 +450,12 @@ IttveME
 [Open project files]
 0=www\index.php
 1=www\Menu.php
-2=www\Site.php
-3=www\UpSite.php
-4=www\DetmanPage\www\index1.php
-5=www\DetmanBase\indexBase.php
-6=www\DetmanBase\functions.php
-7=www\DetmanBase\db_conn.php
-8=www\DetmanBase\css\style.css
-9=..\TPhpTools\TPhpTools\TBaseMaker\BaseMakerClass.php
-10=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\DetmanBase\db_conn.php
+Selected=www\Menu.php
 [www\index.php]
-TopLine=11
+TopLine=10
 Caret=1,22
 [www\Menu.php]
 TopLine=20
 Caret=26,20
-[www\Site.php]
-TopLine=21
-Caret=30,21
-[www\UpSite.php]
-TopLine=127
-Caret=21,127
-[www\DetmanPage\www\index1.php]
-TopLine=1
-Caret=1,1
-[www\DetmanBase\indexBase.php]
-TopLine=73
-Caret=3,92
-[www\DetmanBase\functions.php]
-TopLine=1
-Caret=34,20
-[www\DetmanBase\db_conn.php]
-TopLine=126
-Caret=60,58
-[www\DetmanBase\css\style.css]
-TopLine=1
-Caret=1,19
-[..\TPhpTools\TPhpTools\TBaseMaker\BaseMakerClass.php]
-TopLine=107
-Caret=25,126
-[www\Main.php]
-TopLine=9
-Caret=1,29

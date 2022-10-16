@@ -1,0 +1,67 @@
+/** HTML5/CSS3, EDGE/CHROME                               *** Img2Right.css ***
+
+ ******************************************************************************
+ * ittve.me             Спозиционировать справа галерею изображений и сделать *
+ *            только одну колонку для статей (как правило, новостных статей). * 
+ *         Сделать общие настройки по внутренним фонтам и их позиционированю. *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 25.11.2020
+*/
+
+/* 
+ Позиционируем основные секции сайта: галерею новостных изображений, 
+ секцию новых материалов, подвал, секцию архивных статей скрываем
+*/
+#News,#Life 
+{ 
+   position:fixed; 
+   overflow:auto; 
+   top:0; 
+   bottom:5.8rem;
+   padding:0 .5rem 0 .5rem;
+   text-align:justify;
+}
+#News
+{ 
+   right:33%;
+   width:67%; 
+   background:transparent; /*blue;*/ 
+}
+#Life                                                                   
+{ 
+   display:none; 
+   background:teal; 
+}
+#Gallery
+{
+   margin-left:67%;
+   width:33%;
+}
+#Footer
+{
+   position:fixed; 
+   width:67%;
+   right:33%;
+   height:4.4rem;
+   bottom:0; 
+   margin-bottom:1.4rem;
+   background:transparent; /*green;*/ 
+}
+#Info
+{
+   position:fixed; 
+   width:67%;
+   right:33%;
+   bottom:0; 
+   height:1.4rem;
+   margin-bottom:0;
+   background:transparent; /*yellow*/; 
+}
+/*
+ ************************************************************ Img2Right.css ***
+*/	
+	
+

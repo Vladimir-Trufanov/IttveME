@@ -1,0 +1,35 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.CompileOnBackground=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+Compilator.LogEncoding=0
+DefaultDir=C:\IttveMe\ttree
+DefaultCP=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+HTServer=localhost
+Extensions=*.*
+[Project tree]
+ttree
+	+ttree
+		index.php
+		styles.css
+		ttree.ppr
+[Open project files]
+0=index.php
+1=styles.css
+[Selected Project Files]
+Main=
+Selected=index.php
+[index.php]
+TopLine=13
+Caret=1,24
+[styles.css]
+TopLine=9
+Caret=20,193
