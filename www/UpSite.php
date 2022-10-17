@@ -54,7 +54,7 @@ echo '<link rel="stylesheet" type="text/css"
 */
 // Подключаем jQuery для jQuery Mobile
 echo '
-   <script src="https://doortry.ru/JqueryFW/deploy/jquery-2.2.4.min.js">
+   <script src="jQueryFW/jquery-2.2.4.min.js">
    </script>
 ';
 /*
