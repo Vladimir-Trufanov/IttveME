@@ -95,6 +95,7 @@ IttveME
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
+		-GalleryProba
 		-Html
 			www\Html\iniHtmlLifeMenu.php
 			www\Html\iniHtmlLogin.php
@@ -152,6 +153,12 @@ IttveME
 			www\ittveNews\ittve01-001-На-Сампо.jpg
 			www\ittveNews\ittve01-001-Подъём-настроения.jpg
 			www\ittveNews\ittve01-001-С-заботой-и-к-мамам.jpg
+		-jQuery
+			-images
+				www\jQuery\images\ajax-loader.gif
+			www\jQuery\jquery.mobile-1.3.2.min.css
+			www\jQuery\jquery.mobile-1.3.2.min.js
+			www\jQuery\jquery-2.2.4.min.js
 		-KwinTiny
 			-Arc
 				www\KwinTiny\Arc\proba.jpg
@@ -420,15 +427,17 @@ IttveME
 		www\DefineJs.php
 		www\download.php
 		www\EditText.php
+		www\EditTextOld.php
 		www\error.php
 		www\iMobileStyles.php
 		www\index.php
 		www\iniHtml1.php
 		www\iniHtmlBegin.php
-		www\Inimem.php
+		www\iniMem.php
 		www\iniWorkSpace.php
 		www\iniWorkSpace.phpo
 		www\ittve.db3
+		www\ittve-log.txt
 		www\IttveME.js
 		www\iUserError.php
 		www\log.txt
@@ -441,6 +450,7 @@ IttveME
 		www\NavSetJs.php
 		www\pic.png
 		www\proba.db3
+		www\produkty.db3
 		www\sampo.jpg
 		www\Site.php
 		www\SiteOld.php
@@ -451,14 +461,16 @@ IttveME
 0=www\index.php
 1=www\Menu.php
 2=www\error.php
-3=www\EditText.php
-4=www\Main.php
-5=www\UpSite.php
+3=www\Main.php
+4=www\UpSite.php
+5=www\iniMem.php
+6=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
+7=www\EditText.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\UpSite.php
 [www\index.php]
-TopLine=7
+TopLine=10
 Caret=4,35
 [www\Menu.php]
 TopLine=20
@@ -466,12 +478,18 @@ Caret=26,20
 [www\error.php]
 TopLine=1
 Caret=1,1
+[www\Main.php]
+TopLine=27
+Caret=50,29
+[www\UpSite.php]
+TopLine=115
+Caret=34,36
+[www\iniMem.php]
+TopLine=103
+Caret=1,1
+[..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php]
+TopLine=20
+Caret=1,1
 [www\EditText.php]
 TopLine=1
-Caret=1,2
-[www\Main.php]
-TopLine=9
-Caret=3,24
-[www\UpSite.php]
-TopLine=23
-Caret=27,57
+Caret=20,2

@@ -20,17 +20,13 @@ require_once pathPhpPrown."/ViewGlobal.php";
 require_once pathPhpPrown."/ViewSimpleArray.php";
 // Указываем размещение библиотеки и подключаем прикладные классы TPhpTools
 define ("pathPhpTools",$SiteHost.'/TPhpTools/TPhpTools');
-
-//$TPhpTools=$SiteHost.'/TPhpTools';
-
 require_once pathPhpTools."/iniToolsMessage.php";
 require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
-//require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
+require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
 //require_once pathPhpTools."/TBaseMaker/BaseMakerClass.php";
    
 // Выполняем запуск сессии и начальную инициализацию
-// session_start();
-// $oMainStarter = new PageStarter('sph','SignaPhoto');
+$oMainStarter = new PageStarter('ittveme','ittve-log');
 
 // Выполняем начальную инициализацию
 require_once "Common.php";     // Всегда 1-ый корневой модуль в списке

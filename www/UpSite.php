@@ -52,19 +52,8 @@ echo '<link rel="stylesheet" type="text/css"
       crossorigin="anonymous">
    </script>';
 */
-// Подключаем jQuery для jQuery Mobile
-echo '
-   <script src="jQueryFW/jquery-2.2.4.min.js">
-   </script>
-';
-/*
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"
-  ></script>
-*/
-   
+// Подключаем jQuery
+echo '<script src="jQuery/jquery-2.2.4.min.js"> </script>';
 /*
 // Подключаем TJsPrown и TJsTools
 echo '
