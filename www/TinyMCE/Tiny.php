@@ -1,5 +1,5 @@
 <?php
-
+/*
 // Записываем материал в файл при запросе 
 if(isset($_POST['enter']))
 {
@@ -10,6 +10,7 @@ if(isset($_POST['enter']))
    // Закрыть текстовый файл
    fclose($f);
 }
+*/
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +32,8 @@ if(isset($_POST['enter']))
    <!-- 
         theme: 'modern',
    -->
+
+   <!-- 
 
    <script src="/TinyMCE/tinymce.min.js"></script>
    <script>tinymce.init
@@ -56,6 +59,9 @@ if(isset($_POST['enter']))
         a_configuration_option: 400
     });
     </script>
+    
+    -->
+
     
 </head>
 

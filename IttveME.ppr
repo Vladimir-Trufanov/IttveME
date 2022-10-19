@@ -441,7 +441,6 @@ IttveME
 		www\IttveME.js
 		www\iUserError.php
 		www\log.txt
-		www\Main.php
 		www\manifest.json
 		www\Menu.php
 		www\MessLeftFooter.php
@@ -461,29 +460,25 @@ IttveME
 0=www\index.php
 1=www\Menu.php
 2=www\error.php
-3=www\Main.php
-4=www\UpSite.php
-5=www\iniMem.php
-6=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
-7=www\EditText.php
+3=www\UpSite.php
+4=www\iniMem.php
+5=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
+6=www\EditText.php
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\index.php
 [www\index.php]
-TopLine=10
-Caret=4,35
+TopLine=93
+Caret=44,117
 [www\Menu.php]
 TopLine=20
 Caret=26,20
 [www\error.php]
 TopLine=1
 Caret=1,1
-[www\Main.php]
-TopLine=27
-Caret=50,29
 [www\UpSite.php]
-TopLine=115
-Caret=34,36
+TopLine=3
+Caret=39,5
 [www\iniMem.php]
 TopLine=103
 Caret=1,1
