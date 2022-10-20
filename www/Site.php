@@ -17,25 +17,21 @@ echo '</div>';
 // Выводим текстовый контент сайта: колонку новостей, колонку моей жизни
 echo '<div id="Content">';
    echo '<div id="Menu">';
-      //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
       require_once "Menu.php";
    echo '</div>';
 
    echo '<div id="News">';
-      //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-      require_once "ittveNews/".$p_ittveNews;
+      //require_once "ittveNews/".$p_ittveNews;
    echo '</div>';
 
    echo '<div id="Life">';
-      //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
       require_once "ittveLife/".$p_ittveLife;
-      //require_once "ittveLife/ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html";
+      ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
    echo '</div>';
 echo '</div>';
 
 // Выводим подвал сайта
 echo '<div id="Footer">';
-
    // Главное меню 
    echo '<div id="LifeMenu">';
    echo '<form id="frmLifeMenu" action="'.$SpecSite.'">';

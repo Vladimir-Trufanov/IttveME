@@ -423,7 +423,6 @@ IttveME
 		www\.htaccess
 		www\.user.ini
 		www\Common.php
-		www\DebugNews.php
 		www\DefineJs.php
 		www\download.php
 		www\EditText.php
@@ -431,11 +430,8 @@ IttveME
 		www\error.php
 		www\iMobileStyles.php
 		www\index.php
-		www\iniHtml1.php
-		www\iniHtmlBegin.php
 		www\iniMem.php
 		www\iniWorkSpace.php
-		www\iniWorkSpace.phpo
 		www\ittve.db3
 		www\ittve-log.txt
 		www\IttveME.js
@@ -453,34 +449,29 @@ IttveME
 		www\sampo.jpg
 		www\Site.php
 		www\SiteOld.php
+		www\ToPlugDebug.php
 		www\UpSite.php
 		www\UpSiteCSS.php
 		www\ViewImage.php
 [Open project files]
-0=www\index.php
-1=www\Menu.php
-2=www\error.php
-3=www\UpSite.php
-4=www\iniMem.php
-5=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
-6=www\EditText.php
+0=www\Menu.php
+1=www\UpSite.php
+2=www\iniMem.php
+3=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
+4=www\EditText.php
+5=www\index.php
+6=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
-[www\index.php]
-TopLine=93
-Caret=44,117
+Selected=www\UpSite.php
 [www\Menu.php]
 TopLine=20
 Caret=26,20
-[www\error.php]
-TopLine=1
-Caret=1,1
 [www\UpSite.php]
-TopLine=3
-Caret=39,5
+TopLine=91
+Caret=1,128
 [www\iniMem.php]
-TopLine=103
+TopLine=1
 Caret=1,1
 [..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php]
 TopLine=20
@@ -488,3 +479,9 @@ Caret=1,1
 [www\EditText.php]
 TopLine=1
 Caret=20,2
+[www\index.php]
+TopLine=86
+Caret=1,120
+[www\Site.php]
+TopLine=13
+Caret=1,29

@@ -34,7 +34,19 @@ php_flag session.use_trans_sid off
 ## http://php.net/session.auto-start
 php_flag session.auto_start off
 
-# php_value session.cookie_lifetime 10800
+## Определяем время жизни файлов куки до закрытия браузера, 
+## если задать этому параметру определенное значение, сессия будет прерываться 
+## при активном сеансе, поэтому лучше ее оставлять в значении ноль;
+php_value session.cookie_lifetime 0
+
+## Задаём время сессии в секундах, по прошествии которого 
+## данные могут быть удалены (по умолчанию 1440 сек = 24 минуты).
+## php_value session.gc_maxlifetime 30
+php_value session.gc_maxlifetime 1440
+
+## Определяем максимальный размер загружаемых файлов
+## http://php.net/upload-max-filesize
+php_value upload_max_filesize 3M
 
 ## Запрещаем загрузку базы данных .db3
 <FilesMatch "\.db3$">        
@@ -48,23 +60,33 @@ php_flag session.auto_start off
     Deny from all
 </FilesMatch>
 
-## *************************************************************** kwinflat.ru ***
-## 
-## RewriteEngine On
-## 
+## Включаем преобразование URL
+RewriteEngine On
+
+## Преобразовываем URL-запросы главных страниц сайта
+RewriteRule ^home$ index.php [L]
+## RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
+## RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
+## RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
+## RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
+## RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
 ## RewriteRule ^Normativy_po_otopleniyu$ Main.php?Com=refNormotop [L]
 ## RewriteRule ^Redaktor_tekstov$ /TinyMCE/ [L]
 ## RewriteRule ^reset$ /Reset/ [L]
- 
+
+## Перенаправляем все запросы с HTTP на HTTPS
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 ## Перенаправляем ошибки в файл e404.php
-ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 
-ErrorDocument 403 http://ittve.me/Reset/e404.php?err=403 
-ErrorDocument 404 http://ittve.me/Reset/e404.php?err=404 
-ErrorDocument 405 http://ittve.me/Reset/e404.php?err=405 
-ErrorDocument 408 http://ittve.me/Reset/e404.php?err=408 
+## ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 
+## ErrorDocument 403 http://ittve.me/Reset/e404.php?err=403 
+## ErrorDocument 404 http://ittve.me/Reset/e404.php?err=404 
+## ErrorDocument 405 http://ittve.me/Reset/e404.php?err=405 
+## ErrorDocument 408 http://ittve.me/Reset/e404.php?err=408 
 
-ErrorDocument 500 http://ittve.me/Reset/e404.php?err=500 
-ErrorDocument 502 http://ittve.me/Reset/e404.php?err=502 
-ErrorDocument 504 http://ittve.me/Reset/e404.php?err=504 
-
+## ErrorDocument 500 http://ittve.me/Reset/e404.php?err=500 
+## ErrorDocument 502 http://ittve.me/Reset/e404.php?err=502 
+## ErrorDocument 504 http://ittve.me/Reset/e404.php?err=504 
+ 
 ## **************************************************************** .htaccess ***

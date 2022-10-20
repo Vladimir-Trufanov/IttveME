@@ -35,10 +35,7 @@ echo '
 <meta name="theme-color" content="#ffffff">
 ';
 // Подключаем font-awesome/4.7.0
-//echo '<link rel="stylesheet"'.
-//   'href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">';
 echo '<link rel="stylesheet"'.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
-
 /*
 echo '<link rel="stylesheet" type="text/css"
    href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
@@ -66,9 +63,6 @@ echo '
 ';
 */
 
-// Подключаем персональные стили для настольной и мобильной версий
-require_once "UpSiteCSS.php";
-
 /*
 // При необходимости инициируем в сессии проверку JS
 
@@ -92,24 +86,11 @@ if (!isset($_SESSION['js']))
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
+
 // Проверяем не требуется ли просто вывести изображение и выводим его
 if ($ImageFile<>NULL)
 {
    require_once "ViewImage.php";
-   // Показываем возможность JS
-   //if (isset($_SESSION['js']))
-   //{
-   //   echo 'Есть JS'.'<br>';
-   //}
-   //else
-   //{
-   //   echo 'Нет JS неТ'.'<br>';
-   //}
-   /*
-   // При необходимости показываем кукисы и переменные сессий
-   prown\ViewGlobal(avgSESSION);
-   prown\ViewGlobal(avgCOOKIE);
-   */
 }
 // Выводим другие страницы сайта
 else
@@ -143,10 +124,8 @@ else
    // Запускаем страницу с активным материалом
    else
    {
-      //require_once "iniHtmlBegin.php";
-      //require_once "iniHtml1.php";
-      require_once "Site.php";
       //require_once "Nastr.php";
+      require_once "Site.php";
    }
    /*
    // Выводим меню

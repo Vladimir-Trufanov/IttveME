@@ -1,13 +1,14 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                                *** DebugNews.php ***
+// PHP7/HTML5, EDGE/CHROME                              *** ToPlugDebug.php ***
 
 // ****************************************************************************
-// * ittve.me               Вывести отладочную информацию в колонке  новостей *
+// * ittve.me      Обеспечить, при необходимости, вывод отладочной информации *
+// *                                                      на текущей странице *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 13.11.2020
+// Copyright © 2019 tve                              Посл.изменение: 20.10.2022
 
 define ("gb", 1);    // Характеристики браузера по UserAgent через get_browser
 define ("js", 2);    // Сообщение о включенном или выключенном javascript
@@ -18,7 +19,6 @@ define ("sd", 8);    // Тип устройства, корневой катал
 function fgb()
 {
    $browser = get_browser(null, true);
-   //prown\ViewArray($browser,'Caption');
    print_r($browser);
 }
 // Вывести сообщение о включенном или выключенном javascript
@@ -46,7 +46,7 @@ function fsd($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost)
 // ****************************************************************************
 function ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost)
 {
-$DebugNews=-pi;
+$DebugNews=-sd;
 
 if ($DebugNews==gb) fgb();
 elseif ($DebugNews==js) fjs();
