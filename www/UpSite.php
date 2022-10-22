@@ -66,8 +66,8 @@ else
    echo '<div id="Content">';
 
       // Выводим меню, когда он выбран
-      echo '<div id="Menu">';
-         require_once "Menu.php";
+      echo '<div id="MenuArticles">';
+         require_once "MenuArticles.php";
       echo '</div>';
 
       // Выбираем страницу для отправки сообщения автору
@@ -120,6 +120,7 @@ else
    
    // Выводим подвал сайта
    echo '<div id="Footer">';
+   
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
       echo '<form id="frmLifeMenu" action="'.$SpecSite.'">';
@@ -140,7 +141,7 @@ else
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';
       echo '<form id="frmNavset" action="'.$SpecSite.'">';
-      require_once "NavSetCss.php";
+      require_once "MenuLeader.php";
       echo '</form>';  
       echo '</div>';
    echo '</div>';

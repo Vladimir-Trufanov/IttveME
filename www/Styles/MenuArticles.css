@@ -1,13 +1,13 @@
-/* HTML5/CSS3, EDGE/CHROME                                     *** Menu.css ***
+/* HTML5/CSS3, EDGE/CHROME                             *** MenuArticles.css ***
 
  ******************************************************************************
- * ittve.me                                             Определить стили меню *
+ * ittve.me                         Определить стили меню статей (материалов) *
  *        Discovered from article on Ryan Collins': http://www.ryancollins.me *
  ******************************************************************************
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  13.12.2020
- Copyright © 2020 tve                                Посл.изменение: 16.12.2020
+ Copyright © 2020 tve                                Посл.изменение: 22.10.2022
 */
 
 .accordion,
@@ -96,9 +96,11 @@
 .accordion > li > a:before 
 {
 	position:absolute;
-	top:0;
+
+   	top:0;
 	left:0;
 	content:'';
+
 	width:24px;
 	height:24px;
 	margin:4px 8px;
@@ -195,7 +197,7 @@
 	height: 100%;
 }
 /*
- ***************************************************************** Menu.css ***
+ ********************************************************* MenuArticles.css ***
 */	
 	
 

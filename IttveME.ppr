@@ -95,7 +95,6 @@ IttveME
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
-		-GalleryProba
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -167,19 +166,13 @@ IttveME
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		-Styles
-			-res
-				www\Styles\res\ImgLeft.css
-				www\Styles\res\ImgRight.css
-				www\Styles\res\jquery-ui.min.css
-				www\Styles\res\mLeadImg.css
-				www\Styles\res\StylesLifeMenu.css
+		+Styles
 			www\Styles\Footer-Info.css
 			www\Styles\Gallery-Image.css
-			www\Styles\Img2Right.css
+			www\Styles\ImgRight.css
 			www\Styles\iniStyles.css
-			www\Styles\Menu.css
-			www\Styles\styleSet.css
+			www\Styles\MenuArticles.css
+			www\Styles\MenuLeader.css
 		-TinyMCE
 			-langs
 				www\TinyMCE\langs\readme.md
@@ -424,7 +417,6 @@ IttveME
 		www\EditText.php
 		www\EditTextOld.php
 		www\error.php
-		www\iMobileStyles.php
 		www\index.php
 		www\iniMem.php
 		www\iniWorkSpace.php
@@ -434,9 +426,9 @@ IttveME
 		www\iUserError.php
 		www\log.txt
 		www\manifest.json
-		www\Menu.php
+		www\MenuArticles.php
+		www\MenuLeader.php
 		www\MessLeftFooter.php
-		www\NavSetCss.php
 		www\pic.png
 		www\proba.db3
 		www\produkty.db3
@@ -446,7 +438,7 @@ IttveME
 		www\UpSiteCSS.php
 		www\ViewImage.php
 [Open project files]
-0=www\Menu.php
+0=www\MenuArticles.php
 1=www\UpSite.php
 2=www\iniMem.php
 3=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
@@ -456,13 +448,13 @@ IttveME
 7=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
-[www\Menu.php]
-TopLine=20
-Caret=26,20
+Selected=www\UpSiteCSS.php
+[www\MenuArticles.php]
+TopLine=45
+Caret=12,83
 [www\UpSite.php]
-TopLine=88
-Caret=1,118
+TopLine=106
+Caret=31,144
 [www\iniMem.php]
 TopLine=1
 Caret=1,1
@@ -479,5 +471,5 @@ Caret=1,120
 TopLine=6
 Caret=1,1
 [www\UpSiteCSS.php]
-TopLine=16
-Caret=7,31
+TopLine=1
+Caret=13,26

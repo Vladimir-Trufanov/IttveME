@@ -8,15 +8,23 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  11.11.2020
-// Copyright © 2020 tve                              Посл.изменение: 20.10.2022
+// Copyright © 2020 tve                              Посл.изменение: 22.10.2022
 
-// Подключаем общие стили
+// Выполняем сброс стилей и устанавливаем начальные настройки стилей
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/Img2Right.css">';
+// Позиционируем справа галерею изображений и делам только одну колонку для 
+// статей. Выполняем общее фиксирование элементов разметки  
+echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
+// Определяем стили галлереи, определяем стили для показа изображения, 
+// выбранной в галерее картинки, на отдельной странице в ее рамках 
+// или в натуральную величину 
 echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/Menu.css">';
+// Определяем стили меню статей (материалов) 
+echo '<link rel="stylesheet" type="text/css" href="Styles/MenuArticles.css">';
+// Выстраиваем стили подвала сайта и информационной полосы
 echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/styleSet.css">';
+// Стилизуем панель меню управления в подвале страницы 
+echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 
 // Переключаем контекстные колонки
 if (prown\isComRequest('LifeMenu','Com'))
@@ -29,7 +37,7 @@ if (prown\isComRequest('LifeMenu','Com'))
       display:none; 
    }
    -->
-   #Menu 
+   #MenuArticles 
    {
       display:block;
    }
@@ -40,7 +48,7 @@ else
 {
    echo "
    <style>
-   #Menu 
+   #MenuArticles 
    {
       display:none; 
    }
@@ -60,11 +68,6 @@ $ImageFile=prown\getComRequest('Image');
 // Делаем персональные стили для смартфона
 if ($SiteDevice==Mobile) 
 {
-   // После 17.11.2020 без подключения jQuery Mobile
-   // echo '
-   // <link rel="stylesheet" href="https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.3.2.min.css" />
-   // <script src=                "https://doortry.ru/JqueryFW/deploy/jquery.mobile-1.3.2.min.js"></script>
-   // ';
 }
 // Делаем персональные стили для компьютера
 else 
