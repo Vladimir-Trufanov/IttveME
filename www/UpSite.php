@@ -2,18 +2,15 @@
 // PHP7/HTML5, EDGE/CHROME                                   *** UpSite.php ***
 
 // ****************************************************************************
-// * ittve.me                          Разобрать параметры запроса, запустить *
-// *                                 общую оболочку и настройку страниц сайта *
+// * ittve.me  Выполнить общую разметку страницы, разобрать параметры запроса,*
+// *                            настроить и подключить страницу для просмотра *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 19.10.2022
+// Copyright © 2019 tve                              Посл.изменение: 22.10.2022
 
-// ****************************************************************************
-// *              Формируем общие начальные теги разметки страницы,           *
-// *           разбираем параметры запроса и открываем страницу сайта         *
-// ****************************************************************************
+// Формируем общие начальные теги разметки страницы
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
@@ -34,23 +31,9 @@ echo '
 <meta name="msapplication-config" content="/favicon260x260/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 ';
-// Подключаем font-awesome/4.7.0
+// Подключаем font-awesome 4.7.0
 echo '<link rel="stylesheet"'.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
-/*
-echo '<link rel="stylesheet" type="text/css"
-   href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
-   <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous">
-   </script>
-   <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous">
-   </script>';
-*/
-// Подключаем jQuery
+// Подключаем jQuery 2.2.4
 echo '<script src="jQuery/jquery-2.2.4.min.js"> </script>';
 /*
 // Подключаем TJsPrown и TJsTools
@@ -62,27 +45,6 @@ echo '
    </script>
 ';
 */
-
-/*
-// При необходимости инициируем в сессии проверку JS
-
-$_SESSION['js'] = 'no'; 
-
-if (!isset($_SESSION['js']))
-{
-?>
-<!-- 
-<script> 
-   $(document).ready(function()
-   { 
-      $.get("DefineJs.php"); 
-   });
-</script> 
--->
-<?php
-}
-*/
-
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
@@ -95,52 +57,108 @@ if ($ImageFile<>NULL)
 // Выводим другие страницы сайта
 else
 {
-   // Выбираем страницу для отправки сообщения автору
-   if (prown\isComRequest('Inbox','Com'))
-   {
-      //echo 'Отправить сообщение автору'.'<br>';
-      $page='/DetmanPage/www/index1.php';
-      Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   }
-   // Выбираем страницу для изменения настроек
-   else if (prown\isComRequest('Tuning','Com'))
-   {
-      //echo 'Изменить настройки сайта в браузере'.'<br>';
-      //$page='/DownUpLoad/index_01.php';
-      //$page='/DownUpLoad/ProbaTest.php';
-      $page='/DetmanBase/indexBase.php';
-      Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   }
-   // Выбираем страницу для входа по логину или для регистрации
-   else if (prown\isComRequest('Signup','Com'))
-   {
-      echo 'Войти или зарегистрироваться'.'<br>';
-   }
-   // Выбираем страницу для редактирования или создания материала
-   else if (prown\isComRequest('ЕditМaterial','Com'))
-   {
-      require_once "EditText.php";
-   }
-   // Запускаем страницу с активным материалом
-   else
-   {
-      //require_once "Nastr.php";
-      require_once "Site.php";
-   }
-   /*
-   // Выводим меню
-   if (prown\isComRequest('LifeMenu','Com'))
-   {
-      //require_once "Html/iniHtmlLifeMenu.php";
-      //require_once "iniHtml1.php";
-      //echo 'Жизнь и путешествия!'.'<br>';
-      //require_once "Nastr.php";
-   }
-   */
+   // Выводим div с галереей изображений
+   echo '<div id="Gallery">';
+   require_once "ittveLife/GalleryLife.php";
+   echo '</div>';
+   
+   // Выводим текстовый контент страницы айта
+   echo '<div id="Content">';
+
+      // Выводим меню, когда он выбран
+      echo '<div id="Menu">';
+         require_once "Menu.php";
+      echo '</div>';
+
+      // Выбираем страницу для отправки сообщения автору
+      if (prown\isComRequest('Inbox','Com'))
+      {
+         echo '<div id="Life">';
+         echo 'Отправить сообщение автору'.'<br>';
+         echo '</div>';
+         //$page='/DetmanPage/www/index1.php';
+         //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+      }
+      // Выбираем страницу для изменения настроек
+      else if (prown\isComRequest('Tuning','Com'))
+      {
+         echo '<div id="Life">';
+         echo 'Изменить настройки сайта в браузере'.'<br>';
+         echo '</div>';
+         //$page='/DownUpLoad/index_01.php';
+         //$page='/DownUpLoad/ProbaTest.php';
+         //$page='/DetmanBase/indexBase.php';
+         //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+      }
+      // Выбираем страницу для входа по логину или для регистрации
+      else if (prown\isComRequest('Signup','Com'))
+      {
+         echo '<div id="Life">';
+         echo 'Войти или зарегистрироваться'.'<br>';
+         echo '</div>';
+      }
+      // Выбираем страницу для редактирования или создания материала
+      else if (prown\isComRequest('ЕditМaterial','Com'))
+      {
+         echo '<div id="Life">';
+         echo 'Редактировать или создать материал'.'<br>';
+         echo '</div>';
+         //require_once "EditText.php";
+      }
+      // Запускаем страницу с активным материалом
+      else
+      {
+         echo '<div id="News">';
+            //require_once "ittveNews/".$p_ittveNews;
+         echo '</div>';
+         echo '<div id="Life">';
+            require_once "ittveLife/".$p_ittveLife;
+            //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+         echo '</div>';
+      }
+   echo '</div>';
+   
+   // Выводим подвал сайта
+   echo '<div id="Footer">';
+      // Кнопка главного меню 
+      echo '<div id="LifeMenu">';
+      echo '<form id="frmLifeMenu" action="'.$SpecSite.'">';
+      echo '
+      <button id="btnLifeMenu" btn-title="Жизнь и путешествия!" 
+         name="Com" value="LifeMenu">
+         <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
+      </button>
+      ';
+      echo '</form>';  
+      echo '</div>';
+
+      // Левая часть подвала для сообщений, разворачиваемых в три строки
+      echo '<div id="LeftFooter">';
+         require_once "MessLeftFooter.php";
+      echo '</div>';
+
+      // Правая часть подвала, меню управления
+      echo '<div id="RightFooter">';
+      echo '<form id="frmNavset" action="'.$SpecSite.'">';
+      require_once "NavSetCss.php";
+      echo '</form>';  
+      echo '</div>';
+   echo '</div>';
+
+   // Выводим нижнюю информационную строку
+   echo '<div id="Info">';
+      echo '
+      <div id="InfoLeft">
+         Copyright (c) 2019 v2.0  Труфанов Владимир   tve58@inbox.ru<br>
+      </div>
+      ';
+
+      echo '<div id="InfoRight">';
+      echo $SiteDevice.
+         " ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
+      echo '</div>';
+   echo '</div>';
 }
-/*
-}
-*/
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';

@@ -96,9 +96,6 @@ IttveME
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
 		-GalleryProba
-		-Html
-			www\Html\iniHtmlLifeMenu.php
-			www\Html\iniHtmlLogin.php
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -423,7 +420,6 @@ IttveME
 		www\.htaccess
 		www\.user.ini
 		www\Common.php
-		www\DefineJs.php
 		www\download.php
 		www\EditText.php
 		www\EditTextOld.php
@@ -440,15 +436,11 @@ IttveME
 		www\manifest.json
 		www\Menu.php
 		www\MessLeftFooter.php
-		www\Nastr.php
 		www\NavSetCss.php
-		www\NavSetJs.php
 		www\pic.png
 		www\proba.db3
 		www\produkty.db3
 		www\sampo.jpg
-		www\Site.php
-		www\SiteOld.php
 		www\ToPlugDebug.php
 		www\UpSite.php
 		www\UpSiteCSS.php
@@ -460,7 +452,8 @@ IttveME
 3=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
 4=www\EditText.php
 5=www\index.php
-6=www\Site.php
+6=www\ittveLife\GalleryLife.php
+7=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
 Selected=www\UpSite.php
@@ -468,8 +461,8 @@ Selected=www\UpSite.php
 TopLine=20
 Caret=26,20
 [www\UpSite.php]
-TopLine=91
-Caret=1,128
+TopLine=88
+Caret=1,118
 [www\iniMem.php]
 TopLine=1
 Caret=1,1
@@ -480,8 +473,11 @@ Caret=1,1
 TopLine=1
 Caret=20,2
 [www\index.php]
-TopLine=86
+TopLine=98
 Caret=1,120
-[www\Site.php]
-TopLine=13
-Caret=1,29
+[www\ittveLife\GalleryLife.php]
+TopLine=6
+Caret=1,1
+[www\UpSiteCSS.php]
+TopLine=16
+Caret=7,31

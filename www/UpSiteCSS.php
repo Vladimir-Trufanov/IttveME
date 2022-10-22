@@ -23,10 +23,12 @@ if (prown\isComRequest('LifeMenu','Com'))
 {
    echo "
    <style>
+   <!-- 
    #News,#Life 
    {
       display:none; 
    }
+   -->
    #Menu 
    {
       display:block;
@@ -42,10 +44,12 @@ else
    {
       display:none; 
    }
+   <!-- 
    #News,#Life 
    {
       display:block;
    }
+   -->
    </style>
    ";
 }
