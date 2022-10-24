@@ -16,7 +16,7 @@ ProjectFilesOnly=0
 HTServer=localhost
 Extensions=*.*
 [Project tree]
-IttveME
+IttveMe
 	+www
 		-.well-known
 			-pki-validation
@@ -118,6 +118,12 @@ IttveME
 			www\img\active.png
 			www\img\icons.png
 			www\img\Thumbs.db
+		+ittveEdit
+			www\ittveEdit\GalleryEdit.php
+			www\ittveEdit\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+			www\ittveEdit\ittve01-001-На-Сампо.jpg
+			www\ittveEdit\ittve01-001-Подъём-настроения.jpg
+			www\ittveEdit\ittve01-001-С-заботой-и-к-мамам.jpg
 		-ittveLife
 			www\ittveLife\GalleryLife.php
 			www\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
@@ -144,11 +150,7 @@ IttveME
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 		-ittveNews
-			www\ittveNews\GalleryNews.php
-			www\ittveNews\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\ittveNews\ittve01-001-На-Сампо.jpg
-			www\ittveNews\ittve01-001-Подъём-настроения.jpg
-			www\ittveNews\ittve01-001-С-заботой-и-к-мамам.jpg
+			www\ittveNews\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 		-jQuery
 			-images
 				www\jQuery\images\ajax-loader.gif
@@ -166,7 +168,7 @@ IttveME
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\Footer-Info.css
 			www\Styles\Gallery-Image.css
 			www\Styles\ImgRight.css
@@ -422,7 +424,7 @@ IttveME
 		www\iniWorkSpace.php
 		www\ittve.db3
 		www\ittve-log.txt
-		www\IttveME.js
+		www\IttveMe.js
 		www\iUserError.php
 		www\log.txt
 		www\manifest.json
@@ -441,35 +443,31 @@ IttveME
 0=www\MenuArticles.php
 1=www\UpSite.php
 2=www\iniMem.php
-3=..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php
-4=www\EditText.php
-5=www\index.php
-6=www\ittveLife\GalleryLife.php
-7=www\UpSiteCSS.php
+3=www\index.php
+4=www\UpSiteCSS.php
+5=www\ToPlugDebug.php
+6=www\Styles\ImgRight.css
 [Selected Project Files]
 Main=
-Selected=www\UpSiteCSS.php
+Selected=www\UpSite.php
 [www\MenuArticles.php]
 TopLine=45
 Caret=12,83
 [www\UpSite.php]
-TopLine=106
-Caret=31,144
+TopLine=55
+Caret=15,117
 [www\iniMem.php]
-TopLine=1
-Caret=1,1
-[..\TPhpTools\TPhpTools\TPageStarter\PageStarterClass.php]
-TopLine=20
-Caret=1,1
-[www\EditText.php]
-TopLine=1
-Caret=20,2
+TopLine=111
+Caret=3,151
 [www\index.php]
-TopLine=98
-Caret=1,120
-[www\ittveLife\GalleryLife.php]
 TopLine=6
-Caret=1,1
+Caret=38,6
 [www\UpSiteCSS.php]
+TopLine=2
+Caret=1,56
+[www\ToPlugDebug.php]
+TopLine=7
+Caret=1,1
+[www\Styles\ImgRight.css]
 TopLine=1
-Caret=13,26
+Caret=16,40

@@ -17,7 +17,7 @@ echo '<head>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 // SeoTags()
 echo '<title>Обо мне, путешествиях и ... Черногории</title>';
-echo '<meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и жизнь его близких">';
+echo '<meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и увлечения, жизнь его близких">';
 echo '<meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">';
 // Выводим данные о favicon
 echo '
@@ -57,7 +57,7 @@ if ($ImageFile<>NULL)
 // Выводим другие страницы сайта
 else
 {
-   // Выводим div с галереей изображений
+   // Выводим галерею изображений ("моя жизнь") активной статьи
    echo '<div id="Gallery">';
    require_once "ittveLife/GalleryLife.php";
    echo '</div>';
@@ -114,6 +114,7 @@ else
          echo '<div id="Life">';
             require_once "ittveLife/".$p_ittveLife;
             //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+            //echo  prown\getTranslit('Тезисы по организации сайта').'<br>';
          echo '</div>';
       }
    echo '</div>';

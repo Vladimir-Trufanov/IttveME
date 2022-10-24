@@ -21,7 +21,7 @@
 <!-- 
 <form action="textarea1.php" method="post">
 -->
-   <div id="NewGallery">
+   <div id="EditGallery">
       <?php
       require_once "ittveNews/GalleryNews.php";
       ?>

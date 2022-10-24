@@ -14,7 +14,7 @@
 /**
  *  Cтили картинок, изображений в галлерее
 **/
-#Gallery, #NewGallery
+#Gallery, #EditGallery
 {
    background:transparent; /*red*/
    align-items:center;
