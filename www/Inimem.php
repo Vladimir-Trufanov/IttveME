@@ -15,7 +15,7 @@
 
 define ("ChangeSize", "chs");    // "Изменить размер базового шрифта"  
 
-// Два рабочих каталога используются для контента:
+// Три рабочих каталога используются для контента:
 define ("dirLife", "ittveLife"); // каталог активной статьи сайта и её изображений
 define ("dirEdit", "ittveEdit"); // каталог редактируемой статьи и её изображений
 define ("dirNews", "ittveNews"); // каталог сборной новостной статьи
@@ -38,11 +38,12 @@ define ("mesCookiUserNo", 3);    // "Разрешить использовани
 define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
 
-// ---------------------------------------- Режимы представления материалов ---
-define ("rpmDoubleRight", 1);    // двухколоночный с правосторонней галереей
-define ("rpmDoubleLeft",  2);    // двухколоночный с левосторонней галереей
-define ("rpmOneRight",    3);    // одноколоночный с правосторонней галереей
-define ("rpmOneLeft",     4);    // одноколоночный с левосторонней галереей
+// ----------- Режимы представления материалов = Content Presentation Modes ---
+define ("rpmDoubleRight", 'двухколоночный с правосторонней галереей');   
+define ("rpmDoubleLeft",  'двухколоночный с левосторонней галереей');    
+define ("rpmOneRight",    'одноколоночный с правосторонней галереей');     
+define ("rpmOneLeft",     'одноколоночный с левосторонней галереей'); 
+
 // -------------------------------- Режимы представления выбранной картинки ---
 define ("vimExiSize",     1);    // в заданном размере в пикселах 
 define ("vimOnPage",      2);    // на странице по высоте
@@ -127,11 +128,12 @@ else
 }
 */
 // Инициализируем переменные-кукисы
-$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин авторизованного посетителя
-$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true); // логин посетителя
-$c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);     // число запросов сайта из браузера
-$c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);     // счетчик посещений текущим посетителем
-$c_ittveMode=prown\MakeCookie('ittveMode',0,tInt,true);     // счетчик посещений текущим посетителем
+$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);       // логин авторизованного посетителя
+$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);       // логин посетителя
+$c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);           // число запросов сайта из браузера
+$c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);           // счетчик посещений текущим посетителем
+// Инициализируем настройки
+$c_PresModes=prown\MakeCookie('PresModes',rpmOneRight,tStr,true); // режим представления материалов
 
 $с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
 $с_ModeImg=prown\MakeCookie('ModeImg',vimOnPage,tInt,true);            // режим представления выбранной картинки

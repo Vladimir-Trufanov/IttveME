@@ -84,6 +84,9 @@ else
       {
          echo '<div id="Life">';
          echo 'Изменить настройки сайта в браузере'.'<br>';
+         // Инициировать класс, изменить настройки, убрать класс
+         $Tune=new tune\Tuning;
+         //$Tune->init('$db','$Atfirst');
          echo '</div>';
          //$page='/DownUpLoad/index_01.php';
          //$page='/DownUpLoad/ProbaTest.php';
