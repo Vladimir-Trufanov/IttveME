@@ -460,10 +460,10 @@ Caret=12,83
 TopLine=69
 Caret=12,89
 [www\iniMem.php]
-TopLine=108
-Caret=47,41
+TopLine=103
+Caret=19,48
 [www\index.php]
-TopLine=78
+TopLine=60
 Caret=1,98
 [www\UpSiteCSS.php]
 TopLine=36
@@ -475,5 +475,5 @@ Caret=1,1
 TopLine=20
 Caret=16,40
 [www\TMenuLeader\TuningClass.php]
-TopLine=63
-Caret=73,78
+TopLine=13
+Caret=30,57
