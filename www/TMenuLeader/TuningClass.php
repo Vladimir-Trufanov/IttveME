@@ -8,22 +8,20 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  04.02.2018
-// Copyright © 2018 tve                              Посл.изменение: 26.10.2022
+// Copyright © 2018 tve                              Посл.изменение: 28.10.2022
 
-// Подгружаем нужные модули библиотеки прикладных функций
-require_once pathPhpPrown."/MakeSession.php";
+// Определяем массив режимов представления материалов
+$aPresMode=['1'=>rpmDoubleRight,'2'=>rpmDoubleLeft,'3'=>rpmOneRight,'4'=>rpmOneLeft]; 
+// Определяем массив режимов представления выбранной картинки    
+$aModeImg=['1'=>vimExiSize,'2'=>vimOnPage]; 
 
 class Tuning
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
    protected $PresMode;         // настроенный режим представления материалов
-   protected $aPresMode=        // режимы представления материалов
-      ['1'=>rpmDoubleRight,'2'=>rpmDoubleLeft,'3'=>rpmOneRight,'4'=>rpmOneLeft]; 
    protected $PresModeList;     // список режимов представления материалов
 
    protected $ModeImg;          // настроенный режим представления выбранной картинки
-   protected $aModeImg=         // режимы представления выбранной картинки
-      ['1'=>vimExiSize,'2'=>vimOnPage]; 
    protected $ModeImgList;      // список режимов представления выбранной картинки
    
    protected $EtDom;            // Этажность дома
@@ -32,65 +30,67 @@ class Tuning
    // *         Проинициализировать свойства классов по настройкам сайта,     *
    // *            запустить изменение свойств для обновления настроек        *
    // *************************************************************************
-   public function __construct() 
+   public function __construct($ap,$ai) 
    {
       // Выбираем из кукисов настройки сайта
-      $this->PresMode=\prown\MakeCookie('PresMode'); 
+      $this->PresMode=\prown\MakeCookie('PresMode');
       $this->ModeImg=\prown\MakeCookie('ModeImg'); 
       $this->EtDom=3; 
       // Изменяем настройки
-      $this->ShowUpdate();      
+      $this->ShowUpdate($ap,$ai);      
+   }
+   // Выбрать ключ из массива (для $aPresMode,$aModeImg)
+   protected function getKey($a,$v)
+   {
+      $Result=1;
+      foreach($a as $key => $value) 
+      {
+         if ($v==$value) $Result=$key;
+      }
+      return $Result;
    }
    // *************************************************************************
-   // *       Представить сведения о проживающих и о доме для расчета         *
+   // *                  Изменить свойства для обновления настроек            *
    // *************************************************************************
-   protected function ShowUpdate()
+   protected function ShowUpdate($aPresMode,$aModeImg)
    {
-      echo "<form class=\"frmDomKvar\" method=\"GET\" name=\"DomvesFrm\">";
-      echo "<div id=\"Domves\">";
-      echo "<fieldset>";
-      echo "<ul>";
-
+      echo '<form class="frmTuning" method="POST" name="TuningFrm">';
+      echo '<div>';
+      echo '<fieldset>';
+      echo '<ul>';
       // Определяем режим представления материалов
       $a="Режимы представления материалов";
-      $this->PresModeList[]=[$a,$this->aPresMode];
-      $this->echoGroupList("cPresMode",$a.':',"PresMode",$this->PresModeList,2); //$this->PresMode); 
-
+      $this->PresModeList[]=[$a,$aPresMode];
+      $this->echoGroupList("cPresMode",$a.':',"PresMode",$this->PresModeList,$this->getKey($aPresMode,$this->PresMode)); 
       // Определяем режим представления выбранной картинки
       $a="Режимы представления выбранной картинки";
-      $this->ModeImgList[]=[$a,$this->aModeImg];
-      $this->echoGroupList("cModeImg",$a.':',"ModeImg",$this->ModeImgList,2); //$this->ModeImg); 
-       
+      $this->ModeImgList[]=[$a,$aModeImg];
+      $this->echoGroupList("cModeImg",$a.':',"ModeImg",$this->ModeImgList,$this->getKey($aModeImg,$this->ModeImg)); 
        // Определяем этажность дома
        echo "<li class=\"liEtd\">";
        echo "<label for=\"etd\">Этажность дома: </label>";
        echo "<input id=\"etd\" type=\"number\" name=\"etd\" value=".$this->EtDom." ".
           "step=\"1\" min=\"1\" max=\"35\"".">"; 
        echo "</li>";
-
+       //
        echo "</ul>";
        echo "</fieldset>";
        echo "</div>";
-           
        // Управляем вводом
        echo '<div id="LineCommon">';
-       echo '<button id="btnDomKvar" class="buttons" type="submit">Рассчитать льготы</button>';
+       echo '<button id="btnTuning" class="buttons" type="submit">Изменить настройки</button>';
        echo "</div>";
-       
        echo "</form>"; 
     }
-    
     // ************************************************************************
     // *              Обеспечить работу в поле со списком выбора              *
     // ************************************************************************
    protected function echoGroupList($Classname,$Name,$Parmname,$aGroupList,$IniKey) 
-
    // $Classname - класс форматирования вывода в форме
    // $Name - наименование поля в форме
    // $Parmname - список выбора, параметр запроса, класс форматирования списка
    // $aGroupList - массив групп списка выбора
    // $IniKey - ключ начального выбора в списке
-   
    {
       echo "<li class=\"".$Classname."\">";
       echo "<label for=\"".$Parmname."\">".$Name." </label>";
@@ -104,7 +104,7 @@ class Tuning
          $aOptGroup=$aGroupList[$i][1]; 
          foreach($aOptGroup as $key => $value) 
          {
-            if ($IniKey==$key) echo "<option selected value=\"".$key."\">".$value."</option>";
+           if ($IniKey==$key) echo "<option selected value=\"".$key."\">".$value."</option>";
             else echo "<option value=\"".$key."\">".$value."</option>";
          }
          echo "</optgroup>";

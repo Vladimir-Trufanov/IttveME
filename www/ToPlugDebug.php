@@ -8,13 +8,19 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 20.10.2022
+// Copyright © 2019 tve                              Посл.изменение: 27.10.2022
 
 define ("gb", 1);    // Характеристики браузера по UserAgent через get_browser
 define ("js", 2);    // Сообщение о включенном или выключенном javascript
 define ("pi", 4);    // Информация о настройках PHP
 define ("sd", 8);    // Тип устройства, корневой каталог, надсайтовый и каталог хостинга
+define ("ck", 16);   // Информация о кукисах
 
+// Показать характеристики браузера по UserAgent через get_browser
+function fck()
+{
+   prown\ViewGlobal(avgCOOKIE);
+}
 // Показать характеристики браузера по UserAgent через get_browser
 function fgb()
 {
@@ -46,12 +52,13 @@ function fsd($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost)
 // ****************************************************************************
 function ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost)
 {
-$DebugNews=-sd;
+$DebugNews=ck;
 
 if ($DebugNews==gb) fgb();
 elseif ($DebugNews==js) fjs();
 elseif ($DebugNews==pi) fpi();
 elseif ($DebugNews==sd) fsd($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+elseif ($DebugNews==ck) fck();
 }
 
 // ********************************************************** DebugNews.php ***

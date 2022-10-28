@@ -134,7 +134,7 @@ $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);           // счетч�
 // Инициализируем настройки
 $c_PresMode=prown\MakeCookie('PresMode',rpmOneRight,tStr,true);   // режим представления материалов
 $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize,tStr,true);      // режим представления выбранной картинки
-
+//
 $с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
 //$c_MakeGround=prown\MakeCookie('MakeGround',fimWhiteGround,tInt,true); // фон показываемых картинок/изображений
 $c_MakeGround=prown\MakeCookie('MakeGround',fimAnimation,tInt); // фон показываемых картинок/изображений

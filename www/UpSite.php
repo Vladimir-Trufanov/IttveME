@@ -85,13 +85,8 @@ else
          echo '<div id="Life">';
          echo 'Изменить настройки сайта в браузере'.'<br>';
          // Инициировать класс, изменить настройки, убрать класс
-         $Tune=new tune\Tuning;
-         //$Tune->init('$db','$Atfirst');
+         $Tune=new tune\Tuning($aPresMode,$aModeImg);
          echo '</div>';
-         //$page='/DownUpLoad/index_01.php';
-         //$page='/DownUpLoad/ProbaTest.php';
-         //$page='/DetmanBase/indexBase.php';
-         //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
       }
       // Выбираем страницу для входа по логину или для регистрации
       else if (prown\isComRequest('Signup','Com'))
@@ -116,8 +111,10 @@ else
          echo '</div>';
          echo '<div id="Life">';
             require_once "ittveLife/".$p_ittveLife;
-            //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+            ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+            
             //echo  prown\getTranslit('Тезисы по организации сайта').'<br>';
+            
          echo '</div>';
       }
    echo '</div>';
