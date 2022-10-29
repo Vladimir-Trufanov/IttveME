@@ -13,7 +13,6 @@
    position:fixed; 
    height:4.4rem;
    width:5rem;
-   left:0;
    bottom:1.4rem; 
    background:transparent; /*lime;*/
 }
@@ -42,10 +41,6 @@
    padding:.1rem .3rem .1rem .5rem;
    font-size:1.2rem;
    font-weight:bold; 
-   /*
-   border-top:dashed 1px rgb(153,153,153);
-   border-bottom:dashed 1px rgb(153,153,153);
-   */
    border-top:dashed 1px #ddd;
    border-bottom:dashed 1px #ddd;
    background:transparent; /*orange;*/
@@ -55,7 +50,7 @@
    position:fixed; 
    height:4.4rem;
    width:24rem;
-   right:33%;
+   /*right:33%;*/
    bottom:1.4rem; 
    background:transparent; /*olive;*/
 }

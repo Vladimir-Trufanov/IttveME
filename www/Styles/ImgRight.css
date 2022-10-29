@@ -1,4 +1,4 @@
-/** HTML5/CSS3, EDGE/CHROME                               *** Img2Right.css ***
+/** HTML5/CSS3, EDGE/CHROME                                *** ImgRight.css ***
 
  ******************************************************************************
  * ittve.me      Спозиционировать справа галерею изображений и сделать только *
@@ -22,22 +22,27 @@
    bottom:5.8rem;
    padding:0 .5rem 0 .5rem;
    text-align:justify;
+}
+#MenuArticles
+{ 
    right:33%;
    width:67%; 
 }
 #News
 { 
-   background:transparent; /*blue;*/ 
+   /* background:transparent; */ 
+   background:blue;  
 }
 #Life                                                                   
 { 
-   background:transparent; /*teal;*/ 
+   /* background:transparent; */ 
+   background:teal;  
 }
 #MenuArticles                                                                   
 { 
    background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
-#Gallery, #EditGallery
+#EditGallery
 {
    margin-left:67%;
    width:33%;
@@ -45,8 +50,6 @@
 #Footer
 {
    position:fixed; 
-   width:67%;
-   right:33%;
    height:4.4rem;
    bottom:0; 
    margin-bottom:1.4rem;
@@ -55,66 +58,13 @@
 #Info
 {
    position:fixed; 
-   width:67%;
-   right:33%;
    bottom:0; 
    height:1.4rem;
    margin-bottom:0;
    background:transparent; /*yellow*/; 
 }
-/* 
- Позиционируем секции сайта при создании или редактировании страницы
-*/
-#TitleArea
-{ 
-   position:fixed; 
-   overflow:auto; 
-   top:0; 
-   bottom:96%;
-   padding:0 .5rem 0 .5rem;
-   text-align:center;
-   background:gray; 
-   right:33%;
-   width:67%; 
-}
-#EditDebug
-{ 
-   position:fixed; 
-   /*overflow:auto;*/ 
-   top:4%; 
-   bottom:56%;
-   padding:0 .5rem 0 .5rem;
-   /*text-align:justify;
-   background:red;*/ 
-   right:33%;
-   width:67%; 
-}
-#ContentArea
-{ 
-   position:fixed; 
-   overflow:auto; 
-   top:44%; 
-   bottom:4%;
-   padding:0 .5rem 0 .5rem;
-   text-align:justify;
-   background:yellow; 
-   right:33%;
-   width:67%; 
-}
-#InputArea
-{ 
-   position:fixed; 
-   overflow:auto; 
-   top:96%; 
-   bottom:0%;
-   padding:0 .5rem 0 .5rem;
-   text-align:center;
-   background:gray; 
-   right:33%;
-   width:67%; 
-}
 /*
- ************************************************************ Img2Right.css ***
+ ************************************************************* ImgRight.css ***
 */	
 	
 

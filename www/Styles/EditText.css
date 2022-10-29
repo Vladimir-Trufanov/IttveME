@@ -1,0 +1,65 @@
+/** HTML5/CSS3, EDGE/CHROME                                *** EditText.css ***
+
+ ******************************************************************************
+ * ittve.me               Определить стили страницы редактирования материалов *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 29.10.2022
+*/
+
+#TitleArea
+{ 
+   position:fixed; 
+   overflow:auto; 
+   top:0; 
+   bottom:96%;
+   padding:0 .5rem 0 .5rem;
+   text-align:center;
+   background:gray; 
+   right:33%;
+   width:67%; 
+}
+#EditDebug
+{ 
+   position:fixed; 
+   /*overflow:auto;*/ 
+   top:4%; 
+   bottom:56%;
+   padding:0 .5rem 0 .5rem;
+   /*text-align:justify;
+   background:red;*/ 
+   right:33%;
+   width:67%; 
+}
+
+#ContentArea
+{ 
+   position:fixed; 
+   overflow:auto; 
+   top:44%; 
+   bottom:4%;
+   padding:0 .5rem 0 .5rem;
+   text-align:justify;
+   background:yellow; 
+   right:33%;
+   width:67%; 
+}
+#InputArea
+{ 
+   position:fixed; 
+   overflow:auto; 
+   top:96%; 
+   bottom:0%;
+   padding:0 .5rem 0 .5rem;
+   text-align:center;
+   background:gray; 
+   right:33%;
+   width:67%; 
+}
+/*
+ ************************************************************* EditText.css ***
+*/	
+	
+
