@@ -9,7 +9,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 30.11.2020
 
-//echo '<form id="fGallery" action="'.$SpecSite.'">';
+//echo '<form id="fGallery" action="'.$urlHome.'">';
 echo '<form action="" method="post" enctype="multipart/form-data" id="uploadiImage">';
 
 $FileName="ittveNews/ittve01-001-Подъём-настроения.jpg";

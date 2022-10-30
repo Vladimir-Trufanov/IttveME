@@ -18,6 +18,7 @@ $aModeImg=['1'=>vimExiSize,'2'=>vimOnPage];
 class Tuning
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
+   protected $urlHome;          // Начальная страница сайта 
    protected $PresMode;         // настроенный режим представления материалов
    protected $PresModeList;     // список режимов представления материалов
 
@@ -30,8 +31,9 @@ class Tuning
    // *         Проинициализировать свойства классов по настройкам сайта,     *
    // *            запустить изменение свойств для обновления настроек        *
    // *************************************************************************
-   public function __construct($ap,$ai) 
+   public function __construct($ap,$ai,$ui) 
    {
+      $this->urlHome=$ui;
       // Выбираем из кукисов настройки сайта
       $this->PresMode=\prown\MakeCookie('PresMode');
       $this->ModeImg=\prown\MakeCookie('ModeImg'); 
@@ -57,7 +59,7 @@ class Tuning
    // *************************************************************************
    protected function ShowUpdate($aPresMode,$aModeImg)
    {
-      echo '<form class="frmTuning" method="POST" name="TuningFrm">';
+      echo '<form class="frmTuning" method="POST" name="TuningFrm" action="'.$this->urlHome.'">';
       echo '<div>';
       echo '<fieldset>';
       echo '<ul>';

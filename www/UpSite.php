@@ -62,7 +62,7 @@ else
          echo '<div id="Life">';
          echo 'Изменить настройки сайта в браузере'.'<br>';
          // Инициировать класс, изменить настройки, убрать класс
-         $Tune=new tune\Tuning($aPresMode,$aModeImg);
+         $Tune=new tune\Tuning($aPresMode,$aModeImg,$urlHome);
          echo '</div>';
       }
       // Выбираем страницу для входа по логину или для регистрации
@@ -91,6 +91,7 @@ else
             require_once "ittveLife/".$p_ittveLife;
             ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
             echo '$urlHome='.$urlHome.'<br>';
+            //echo '$SpecSite='.$SpecSite.'<br>';
             
             //echo  prown\getTranslit('Тезисы по организации сайта').'<br>';
             
@@ -103,7 +104,7 @@ else
    
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
-      echo '<form id="frmLifeMenu" action="'.$SpecSite.'">';
+      echo '<form id="frmLifeMenu" action="'.$urlHome.'">';
       echo '
       <button id="btnLifeMenu" btn-title="Жизнь и путешествия!" 
          name="Com" value="LifeMenu">
@@ -120,7 +121,7 @@ else
 
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';
-      echo '<form id="frmNavset" action="'.$SpecSite.'">';
+      echo '<form id="frmNavset" action="'.$urlHome.'">';
       require_once "MenuLeader.php";
       echo '</form>';  
       echo '</div>';

@@ -9,7 +9,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 24.10.2022
 
-echo '<form id="fGallery" action="'.$SpecSite.'">';
+echo '<form id="fGallery" action="'.$urlHome.'">';
 
 $FileName="ittveLife/ittve01-001-Подъём-настроения.jpg";
 $Comment="Ночная прогулка по Ладоге до рассвета и подъёма настроения.";

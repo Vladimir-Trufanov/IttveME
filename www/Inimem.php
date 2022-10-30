@@ -162,21 +162,7 @@ else
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
 $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - разворачивать новости при загрузке
 */
-
-
-
-
 // Инициализируем общесайтовые переменные
+$ModeError=2;   // Режим вывода сообщений об ошибках
 
-// Режим вывода сообщений об ошибках
-$ModeError=2;  
-// Спецификация сайта: "http://ittve.me" или "http://localhost:83"                                 
-if (isNichost())
-{
-   $SpecSite="http://".$_SERVER['HTTP_HOST'];  
-}
-else
-{
-   $SpecSite="http://localhost:83";  
-}
 // ************************************************************* iniMem.php *** 

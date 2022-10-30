@@ -89,7 +89,7 @@ else
    ';
 }
 // Готовим форму для перевывода картинки
-echo '<form id="fImg"  action="'.$SpecSite.'" align="center">';
+echo '<form id="fImg"  action="'.$urlHome.'" align="center">';
 if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimOnPage))
 {
    // На страничном изображении готовим возвращение "домой" для мобильного
