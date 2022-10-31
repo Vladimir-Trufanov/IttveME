@@ -90,11 +90,8 @@ else
          echo '<div id="Life">';
             require_once "ittveLife/".$p_ittveLife;
             ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-            echo '$urlHome='.$urlHome.'<br>';
-            //echo '$SpecSite='.$SpecSite.'<br>';
-            
+            //echo '$urlHome='.$urlHome.'<br>';
             //echo  prown\getTranslit('Тезисы по организации сайта').'<br>';
-            
          echo '</div>';
       }
    echo '</div>';

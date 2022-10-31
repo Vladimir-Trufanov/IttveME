@@ -460,14 +460,14 @@ Selected=www\index.php
 TopLine=46
 Caret=12,83
 [www\UpSite.php]
-TopLine=17
-Caret=61,65
+TopLine=43
+Caret=1,95
 [www\iniMem.php]
 TopLine=131
 Caret=1,166
 [www\index.php]
-TopLine=140
-Caret=45,176
+TopLine=125
+Caret=1,173
 [www\UpSiteCSS.php]
 TopLine=109
 Caret=14,112
@@ -484,5 +484,5 @@ Caret=1,58
 TopLine=47
 Caret=1,1
 [www\TMenuLeader\TuningClass.php]
-TopLine=55
-Caret=92,62
+TopLine=48
+Caret=1,62

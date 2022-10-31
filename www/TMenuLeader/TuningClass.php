@@ -66,11 +66,11 @@ class Tuning
       // Определяем режим представления материалов
       $a="Режимы представления материалов";
       $this->PresModeList[]=[$a,$aPresMode];
-      $this->echoGroupList("cPresMode",$a.':',"PresMode",$this->PresModeList,$this->getKey($aPresMode,$this->PresMode)); 
+      $this->echoGroupList("cPresMode",$a.':',"pPresMode",$this->PresModeList,$this->getKey($aPresMode,$this->PresMode)); 
       // Определяем режим представления выбранной картинки
       $a="Режимы представления выбранной картинки";
       $this->ModeImgList[]=[$a,$aModeImg];
-      $this->echoGroupList("cModeImg",$a.':',"ModeImg",$this->ModeImgList,$this->getKey($aModeImg,$this->ModeImg)); 
+      $this->echoGroupList("cModeImg",$a.':',"pModeImg",$this->ModeImgList,$this->getKey($aModeImg,$this->ModeImg)); 
        // Определяем этажность дома
        echo "<li class=\"liEtd\">";
        echo "<label for=\"etd\">Этажность дома: </label>";
