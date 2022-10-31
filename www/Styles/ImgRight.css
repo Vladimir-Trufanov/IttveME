@@ -20,8 +20,11 @@
    overflow:auto; 
    top:0; 
    bottom:5.8rem;
-   padding:0 .5rem 0 .5rem;
    text-align:justify;
+}
+#Life,#MenuArticles
+{
+   padding:0.5rem 0.5rem;
 }
 #MenuArticles
 { 
@@ -30,13 +33,13 @@
 }
 #News
 { 
-   /* background:transparent; */ 
-   background:blue;  
+   background:transparent; 
+   /*background:blue;*/  
 }
 #Life                                                                   
 { 
-   /* background:transparent; */ 
-   background:teal;  
+   background:transparent; 
+   /*background:teal;*/  
 }
 #MenuArticles                                                                   
 { 

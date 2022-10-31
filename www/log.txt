@@ -2,3 +2,4 @@
 [17-Oct-2022 17:03:14 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'pathPhpPrown/CommonPrown.php' (include_path='.;C:\php\pear') in C:\TPhpTools\TPhpTools\TUploadToServer\UploadToServerClass.php on line 51
 [17-Oct-2022 17:06:20 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'pathPhpPrown/CommonPrown.php' (include_path='.;C:\php\pear') in C:\TPhpTools\TPhpTools\TUploadToServer\UploadToServerClass.php on line 51
 [18-Oct-2022 20:12:25 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'ж' (T_STRING), expecting ',' or ';' in C:\IttveMe\www\EditText.php on line 97
+[31-Oct-2022 19:03:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'or' (T_LOGICAL_OR) in C:\IttveMe\www\UpSiteCSS.php on line 57

@@ -54,14 +54,16 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
 // При одноколоночном режиме отключаем див '#News'
-if ($c_PresMode==rpmOneRight)
+if (($c_PresMode==rpmOneRight)||(prown\isComRequest('Tuning','Com')))
 {
    echo "
    <style>
    #News
    { 
      right:0;
-     width:0; 
+     width:0;
+     overflow:hidden; 
+     padding:0; 
    }
    #Life,#Footer,#Info
    { 
@@ -89,9 +91,11 @@ else if ($c_PresMode==rpmOneLeft)
    echo "
    <style>
    #News
-   { 
+   {
      right:0;
      width:0; 
+     overflow:hidden;
+     padding:0; 
    }
    #Life,#Footer,#Info
    { 
@@ -114,27 +118,80 @@ else if ($c_PresMode==rpmOneLeft)
    </style>
    ";
 }
+else if ($c_PresMode==rpmDoubleRight)
+{
+   echo "
+   <style>
+   #News
+   { 
+     right:67%;
+     width:33%;
+     overflow:auto; 
+     padding:0.5rem 0.5rem;
+   }
+   #Life
+   { 
+      right:33%;
+      width:34%; 
+   }
+   #Footer,#Info
+   { 
+      right:33%;
+      width:67%; 
+   }
+   #Gallery
+   {
+      margin-left:67%;
+      width:33%;
+   }
+   #LifeMenu
+   {
+      left:0;
+   }
+   #RightFooter
+   {
+      right:33%;
+   }
+   </style>
+   ";
+}
 else
 {
    echo "
    <style>
-#News
-{ 
-   right:33%;
-   width:10%; 
-}
-#Life
-{ 
-   right:43%;
-   width:57%; 
-}
+   #News
+   {
+     right:0;
+     width:33%;
+     overflow:auto; 
+     padding:0.5rem 0.5rem;
+   }
+   #Life
+   { 
+      right:33%;
+      width:34%; 
+   }
+   #Footer,#Info
+   { 
+      left:33%;
+      width:67%; 
+   }
+   #Gallery
+   {
+      margin-right:67%;
+      width:33%;
+   }
+   #LifeMenu
+   {
+      left:33.1%;
+   }
+   #RightFooter
+   {
+      right:0;
+   }
    </style>
    ";
 }
-
-
-
-
 // Переключаем контекстные колонки
 if (prown\isComRequest('LifeMenu','Com'))
 {
