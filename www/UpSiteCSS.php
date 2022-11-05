@@ -53,8 +53,55 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
+
+// Подключаем TinyMCE
+if (prown\isComRequest('ЕditМaterial','Com'))
+{
+   echo '
+   <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
+   <script>tinymce.init
+   ({
+        selector: "#mytextarea",
+        height: 360,
+        /*width:  820,*/
+        content_css: "/Styles/TinyMCE.css",
+        
+        plugins:
+        [ 
+            "advlist autolink link image imagetools lists charmap print preview hr anchor",
+            "pagebreak spellchecker searchreplace wordcount visualblocks",
+            "visualchars code fullscreen insertdatetime media nonbreaking",
+            /* "contextmenu", */ // отключено для TinyMCE5-8-1
+            /* "textcolor", */   // отключено для TinyMCE5-8-1
+            "save table directionality emoticons template paste"
+        ],
+        
+        language: "ru",
+        toolbar:
+        [
+            "| link image | forecolor backcolor emoticons"
+        ],
+        /*
+        toolbar:
+        [
+            "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
+        ],
+        */
+        image_list: [
+          {title: "My image 1", value: "KwinTiny/proba.jpg"},
+          {title: "My image 2", value: "http://www.moxiecode.com/my2.gif"}
+        ],
+        a_plugin_option: true,
+        a_configuration_option: 400
+   });
+   </script>
+   ';
+}   
+
 // При одноколоночном режиме отключаем див '#News'
-if (($c_PresMode==rpmOneRight)||(prown\isComRequest('Tuning','Com')))
+if (($c_PresMode==rpmOneRight)||
+   (prown\isComRequest('Tuning','Com'))||
+   (prown\isComRequest('ЕditМaterial','Com')))
 {
    echo "
    <style>
@@ -70,7 +117,7 @@ if (($c_PresMode==rpmOneRight)||(prown\isComRequest('Tuning','Com')))
       right:33%;
       width:67%; 
    }
-   #Gallery
+   #Gallery,#EditGallery
    {
       margin-left:67%;
       width:33%;
@@ -102,7 +149,7 @@ else if ($c_PresMode==rpmOneLeft)
       left:33%;
       width:67%; 
    }
-   #Gallery
+   #Gallery,#EditGallery
    {
       margin-right:67%;
       width:33%;
@@ -139,7 +186,7 @@ else if ($c_PresMode==rpmDoubleRight)
       right:33%;
       width:67%; 
    }
-   #Gallery
+   #Gallery,#EditGallery
    {
       margin-left:67%;
       width:33%;
@@ -176,7 +223,7 @@ else
       left:33%;
       width:67%; 
    }
-   #Gallery
+   #Gallery,#EditGallery
    {
       margin-right:67%;
       width:33%;
@@ -192,7 +239,33 @@ else
    </style>
    ";
 }
-// Переключаем контекстные колонки
+
+// При входе в режим редактирования материала управляем расположением галереи
+if (prown\isComRequest('ЕditМaterial','Com'))
+{
+   /*
+   if (($c_PresMode==rpmOneRight)||($c_PresMode==rpmDoubleRight))
+   {
+      echo "
+      <style>
+         #EditGallery{margin-left:67%;width:33%;}
+      </style>
+      ";
+   }
+   if (($c_PresMode==rpmOneLeft)||($c_PresMode==rpmDoubleLeft))
+   {
+      echo "
+      <style>
+         #EditGallery{margin-right:67%;width:33%;}
+      </style>
+      ";
+   }
+   */
+}
+
+
+
+// Зажигаем при необходимости меню статей
 if (prown\isComRequest('LifeMenu','Com'))
 {
    echo "
@@ -227,6 +300,7 @@ else
    </style>
    ";
 }
+
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  

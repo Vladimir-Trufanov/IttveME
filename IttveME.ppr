@@ -151,6 +151,7 @@ IttveMe
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 		-ittveNews
 			www\ittveNews\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
+			www\ittveNews\IttveMe.html
 		-jQuery
 			-images
 				www\jQuery\images\ajax-loader.gif
@@ -176,240 +177,244 @@ IttveMe
 			www\Styles\iniStyles.css
 			www\Styles\MenuArticles.css
 			www\Styles\MenuLeader.css
-		-TinyMCE
+			www\Styles\TinyMCE.css
+		+TinyMCE5-8-1
+			-icons
+				-default
+					www\TinyMCE5-8-1\icons\default\icons.js
+					www\TinyMCE5-8-1\icons\default\icons.min.js
 			-langs
-				www\TinyMCE\langs\readme.md
-				www\TinyMCE\langs\ru.js
+				www\TinyMCE5-8-1\langs\README.md
+				www\TinyMCE5-8-1\langs\ru.js
 			-plugins
 				-advlist
-					www\TinyMCE\plugins\advlist\plugin.js
-					www\TinyMCE\plugins\advlist\plugin.min.js
+					www\TinyMCE5-8-1\plugins\advlist\plugin.js
+					www\TinyMCE5-8-1\plugins\advlist\plugin.min.js
 				-anchor
-					www\TinyMCE\plugins\anchor\plugin.js
-					www\TinyMCE\plugins\anchor\plugin.min.js
+					www\TinyMCE5-8-1\plugins\anchor\plugin.js
+					www\TinyMCE5-8-1\plugins\anchor\plugin.min.js
 				-autolink
-					www\TinyMCE\plugins\autolink\plugin.js
-					www\TinyMCE\plugins\autolink\plugin.min.js
+					www\TinyMCE5-8-1\plugins\autolink\plugin.js
+					www\TinyMCE5-8-1\plugins\autolink\plugin.min.js
 				-autoresize
-					www\TinyMCE\plugins\autoresize\plugin.js
-					www\TinyMCE\plugins\autoresize\plugin.min.js
+					www\TinyMCE5-8-1\plugins\autoresize\plugin.js
+					www\TinyMCE5-8-1\plugins\autoresize\plugin.min.js
 				-autosave
-					www\TinyMCE\plugins\autosave\plugin.js
-					www\TinyMCE\plugins\autosave\plugin.min.js
+					www\TinyMCE5-8-1\plugins\autosave\plugin.js
+					www\TinyMCE5-8-1\plugins\autosave\plugin.min.js
 				-bbcode
-					www\TinyMCE\plugins\bbcode\plugin.js
-					www\TinyMCE\plugins\bbcode\plugin.min.js
+					www\TinyMCE5-8-1\plugins\bbcode\plugin.js
+					www\TinyMCE5-8-1\plugins\bbcode\plugin.min.js
 				-charmap
-					www\TinyMCE\plugins\charmap\plugin.js
-					www\TinyMCE\plugins\charmap\plugin.min.js
+					www\TinyMCE5-8-1\plugins\charmap\plugin.js
+					www\TinyMCE5-8-1\plugins\charmap\plugin.min.js
 				-code
-					www\TinyMCE\plugins\code\plugin.js
-					www\TinyMCE\plugins\code\plugin.min.js
+					www\TinyMCE5-8-1\plugins\code\plugin.js
+					www\TinyMCE5-8-1\plugins\code\plugin.min.js
 				-codesample
-					-css
-						www\TinyMCE\plugins\codesample\css\prism.css
-					www\TinyMCE\plugins\codesample\plugin.js
-					www\TinyMCE\plugins\codesample\plugin.min.js
+					www\TinyMCE5-8-1\plugins\codesample\plugin.js
+					www\TinyMCE5-8-1\plugins\codesample\plugin.min.js
 				-colorpicker
-					www\TinyMCE\plugins\colorpicker\plugin.js
-					www\TinyMCE\plugins\colorpicker\plugin.min.js
+					www\TinyMCE5-8-1\plugins\colorpicker\plugin.js
+					www\TinyMCE5-8-1\plugins\colorpicker\plugin.min.js
 				-contextmenu
-					www\TinyMCE\plugins\contextmenu\plugin.js
-					www\TinyMCE\plugins\contextmenu\plugin.min.js
+					www\TinyMCE5-8-1\plugins\contextmenu\plugin.js
+					www\TinyMCE5-8-1\plugins\contextmenu\plugin.min.js
 				-directionality
-					www\TinyMCE\plugins\directionality\plugin.js
-					www\TinyMCE\plugins\directionality\plugin.min.js
+					www\TinyMCE5-8-1\plugins\directionality\plugin.js
+					www\TinyMCE5-8-1\plugins\directionality\plugin.min.js
 				-emoticons
 					-img
-						www\TinyMCE\plugins\emoticons\img\smiley-cool.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-cry.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-embarassed.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-foot-in-mouth.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-frown.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-innocent.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-kiss.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-laughing.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-money-mouth.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-sealed.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-smile.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-surprised.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-tongue-out.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-undecided.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-wink.gif
-						www\TinyMCE\plugins\emoticons\img\smiley-yell.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-cool.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-cry.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-embarassed.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-foot-in-mouth.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-frown.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-innocent.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-kiss.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-laughing.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-money-mouth.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-sealed.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-smile.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-surprised.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-tongue-out.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-undecided.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-wink.gif
+						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-yell.gif
 					-js
-						www\TinyMCE\plugins\emoticons\js\emojis.js
-						www\TinyMCE\plugins\emoticons\js\emojis.min.js
-					www\TinyMCE\plugins\emoticons\plugin.js
-					www\TinyMCE\plugins\emoticons\plugin.min.js
+						www\TinyMCE5-8-1\plugins\emoticons\js\emojiimages.js
+						www\TinyMCE5-8-1\plugins\emoticons\js\emojiimages.min.js
+						www\TinyMCE5-8-1\plugins\emoticons\js\emojis.js
+						www\TinyMCE5-8-1\plugins\emoticons\js\emojis.min.js
+					www\TinyMCE5-8-1\plugins\emoticons\plugin.js
+					www\TinyMCE5-8-1\plugins\emoticons\plugin.min.js
 				-fullpage
-					www\TinyMCE\plugins\fullpage\plugin.js
-					www\TinyMCE\plugins\fullpage\plugin.min.js
+					www\TinyMCE5-8-1\plugins\fullpage\plugin.js
+					www\TinyMCE5-8-1\plugins\fullpage\plugin.min.js
 				-fullscreen
-					www\TinyMCE\plugins\fullscreen\plugin.js
-					www\TinyMCE\plugins\fullscreen\plugin.min.js
+					www\TinyMCE5-8-1\plugins\fullscreen\plugin.js
+					www\TinyMCE5-8-1\plugins\fullscreen\plugin.min.js
 				-help
-					-img
-						www\TinyMCE\plugins\help\img\logo.png
-					www\TinyMCE\plugins\help\plugin.js
-					www\TinyMCE\plugins\help\plugin.min.js
+					www\TinyMCE5-8-1\plugins\help\plugin.js
+					www\TinyMCE5-8-1\plugins\help\plugin.min.js
 				-hr
-					www\TinyMCE\plugins\hr\plugin.js
-					www\TinyMCE\plugins\hr\plugin.min.js
+					www\TinyMCE5-8-1\plugins\hr\plugin.js
+					www\TinyMCE5-8-1\plugins\hr\plugin.min.js
 				-image
-					www\TinyMCE\plugins\image\plugin.js
-					www\TinyMCE\plugins\image\plugin.min.js
+					www\TinyMCE5-8-1\plugins\image\plugin.js
+					www\TinyMCE5-8-1\plugins\image\plugin.min.js
 				-imagetools
-					www\TinyMCE\plugins\imagetools\plugin.js
-					www\TinyMCE\plugins\imagetools\plugin.min.js
+					www\TinyMCE5-8-1\plugins\imagetools\plugin.js
+					www\TinyMCE5-8-1\plugins\imagetools\plugin.min.js
 				-importcss
-					www\TinyMCE\plugins\importcss\plugin.js
-					www\TinyMCE\plugins\importcss\plugin.min.js
+					www\TinyMCE5-8-1\plugins\importcss\plugin.js
+					www\TinyMCE5-8-1\plugins\importcss\plugin.min.js
 				-insertdatetime
-					www\TinyMCE\plugins\insertdatetime\plugin.js
-					www\TinyMCE\plugins\insertdatetime\plugin.min.js
+					www\TinyMCE5-8-1\plugins\insertdatetime\plugin.js
+					www\TinyMCE5-8-1\plugins\insertdatetime\plugin.min.js
 				-legacyoutput
-					www\TinyMCE\plugins\legacyoutput\plugin.js
-					www\TinyMCE\plugins\legacyoutput\plugin.min.js
+					www\TinyMCE5-8-1\plugins\legacyoutput\plugin.js
+					www\TinyMCE5-8-1\plugins\legacyoutput\plugin.min.js
 				-link
-					www\TinyMCE\plugins\link\plugin.js
-					www\TinyMCE\plugins\link\plugin.min.js
+					www\TinyMCE5-8-1\plugins\link\plugin.js
+					www\TinyMCE5-8-1\plugins\link\plugin.min.js
 				-lists
-					www\TinyMCE\plugins\lists\plugin.js
-					www\TinyMCE\plugins\lists\plugin.min.js
+					www\TinyMCE5-8-1\plugins\lists\plugin.js
+					www\TinyMCE5-8-1\plugins\lists\plugin.min.js
 				-media
-					www\TinyMCE\plugins\media\plugin.js
-					www\TinyMCE\plugins\media\plugin.min.js
+					www\TinyMCE5-8-1\plugins\media\plugin.js
+					www\TinyMCE5-8-1\plugins\media\plugin.min.js
 				-nonbreaking
-					www\TinyMCE\plugins\nonbreaking\plugin.js
-					www\TinyMCE\plugins\nonbreaking\plugin.min.js
+					www\TinyMCE5-8-1\plugins\nonbreaking\plugin.js
+					www\TinyMCE5-8-1\plugins\nonbreaking\plugin.min.js
 				-noneditable
-					www\TinyMCE\plugins\noneditable\plugin.js
-					www\TinyMCE\plugins\noneditable\plugin.min.js
+					www\TinyMCE5-8-1\plugins\noneditable\plugin.js
+					www\TinyMCE5-8-1\plugins\noneditable\plugin.min.js
 				-pagebreak
-					www\TinyMCE\plugins\pagebreak\plugin.js
-					www\TinyMCE\plugins\pagebreak\plugin.min.js
+					www\TinyMCE5-8-1\plugins\pagebreak\plugin.js
+					www\TinyMCE5-8-1\plugins\pagebreak\plugin.min.js
 				-paste
-					www\TinyMCE\plugins\paste\plugin.js
-					www\TinyMCE\plugins\paste\plugin.min.js
+					www\TinyMCE5-8-1\plugins\paste\plugin.js
+					www\TinyMCE5-8-1\plugins\paste\plugin.min.js
 				-preview
-					www\TinyMCE\plugins\preview\plugin.js
-					www\TinyMCE\plugins\preview\plugin.min.js
+					www\TinyMCE5-8-1\plugins\preview\plugin.js
+					www\TinyMCE5-8-1\plugins\preview\plugin.min.js
 				-print
-					www\TinyMCE\plugins\print\plugin.js
-					www\TinyMCE\plugins\print\plugin.min.js
+					www\TinyMCE5-8-1\plugins\print\plugin.js
+					www\TinyMCE5-8-1\plugins\print\plugin.min.js
 				-quickbars
-					www\TinyMCE\plugins\quickbars\plugin.js
-					www\TinyMCE\plugins\quickbars\plugin.min.js
+					www\TinyMCE5-8-1\plugins\quickbars\plugin.js
+					www\TinyMCE5-8-1\plugins\quickbars\plugin.min.js
 				-save
-					www\TinyMCE\plugins\save\plugin.js
-					www\TinyMCE\plugins\save\plugin.min.js
+					www\TinyMCE5-8-1\plugins\save\plugin.js
+					www\TinyMCE5-8-1\plugins\save\plugin.min.js
 				-searchreplace
-					www\TinyMCE\plugins\searchreplace\plugin.js
-					www\TinyMCE\plugins\searchreplace\plugin.min.js
+					www\TinyMCE5-8-1\plugins\searchreplace\plugin.js
+					www\TinyMCE5-8-1\plugins\searchreplace\plugin.min.js
 				-spellchecker
-					www\TinyMCE\plugins\spellchecker\plugin.js
-					www\TinyMCE\plugins\spellchecker\plugin.min.js
+					www\TinyMCE5-8-1\plugins\spellchecker\plugin.js
+					www\TinyMCE5-8-1\plugins\spellchecker\plugin.min.js
 				-tabfocus
-					www\TinyMCE\plugins\tabfocus\plugin.js
-					www\TinyMCE\plugins\tabfocus\plugin.min.js
+					www\TinyMCE5-8-1\plugins\tabfocus\plugin.js
+					www\TinyMCE5-8-1\plugins\tabfocus\plugin.min.js
 				-table
-					www\TinyMCE\plugins\table\plugin.js
-					www\TinyMCE\plugins\table\plugin.min.js
+					www\TinyMCE5-8-1\plugins\table\plugin.js
+					www\TinyMCE5-8-1\plugins\table\plugin.min.js
 				-template
-					www\TinyMCE\plugins\template\plugin.js
-					www\TinyMCE\plugins\template\plugin.min.js
+					www\TinyMCE5-8-1\plugins\template\plugin.js
+					www\TinyMCE5-8-1\plugins\template\plugin.min.js
 				-textcolor
-					www\TinyMCE\plugins\textcolor\plugin.js
-					www\TinyMCE\plugins\textcolor\plugin.min.js
+					www\TinyMCE5-8-1\plugins\textcolor\plugin.js
+					www\TinyMCE5-8-1\plugins\textcolor\plugin.min.js
 				-textpattern
-					www\TinyMCE\plugins\textpattern\plugin.js
-					www\TinyMCE\plugins\textpattern\plugin.min.js
+					www\TinyMCE5-8-1\plugins\textpattern\plugin.js
+					www\TinyMCE5-8-1\plugins\textpattern\plugin.min.js
 				-toc
-					www\TinyMCE\plugins\toc\plugin.js
-					www\TinyMCE\plugins\toc\plugin.min.js
+					www\TinyMCE5-8-1\plugins\toc\plugin.js
+					www\TinyMCE5-8-1\plugins\toc\plugin.min.js
 				-visualblocks
-					-css
-						www\TinyMCE\plugins\visualblocks\css\visualblocks.css
-					www\TinyMCE\plugins\visualblocks\plugin.js
-					www\TinyMCE\plugins\visualblocks\plugin.min.js
+					www\TinyMCE5-8-1\plugins\visualblocks\plugin.js
+					www\TinyMCE5-8-1\plugins\visualblocks\plugin.min.js
 				-visualchars
-					www\TinyMCE\plugins\visualchars\plugin.js
-					www\TinyMCE\plugins\visualchars\plugin.min.js
+					www\TinyMCE5-8-1\plugins\visualchars\plugin.js
+					www\TinyMCE5-8-1\plugins\visualchars\plugin.min.js
 				-wordcount
-					www\TinyMCE\plugins\wordcount\plugin.js
-					www\TinyMCE\plugins\wordcount\plugin.min.js
+					www\TinyMCE5-8-1\plugins\wordcount\plugin.js
+					www\TinyMCE5-8-1\plugins\wordcount\plugin.min.js
 			-skins
 				-content
+					-dark
+						www\TinyMCE5-8-1\skins\content\dark\content.css
+						www\TinyMCE5-8-1\skins\content\dark\content.min.css
+						www\TinyMCE5-8-1\skins\content\dark\content.min.css.map
 					-default
-						www\TinyMCE\skins\content\default\content.css
-						www\TinyMCE\skins\content\default\content.min.css
-						www\TinyMCE\skins\content\default\content.min.css.map
+						www\TinyMCE5-8-1\skins\content\default\content.css
+						www\TinyMCE5-8-1\skins\content\default\content.min.css
+						www\TinyMCE5-8-1\skins\content\default\content.min.css.map
 					-document
-						www\TinyMCE\skins\content\document\content.css
-						www\TinyMCE\skins\content\document\content.min.css
-						www\TinyMCE\skins\content\document\content.min.css.map
+						www\TinyMCE5-8-1\skins\content\document\content.css
+						www\TinyMCE5-8-1\skins\content\document\content.min.css
+						www\TinyMCE5-8-1\skins\content\document\content.min.css.map
 					-writer
-						www\TinyMCE\skins\content\writer\content.css
-						www\TinyMCE\skins\content\writer\content.min.css
-						www\TinyMCE\skins\content\writer\content.min.css.map
-				-lightgray
-					-fonts
-						www\TinyMCE\skins\lightgray\fonts\tinymce.eot
-						www\TinyMCE\skins\lightgray\fonts\tinymce.svg
-						www\TinyMCE\skins\lightgray\fonts\tinymce.ttf
-						www\TinyMCE\skins\lightgray\fonts\tinymce.woff
-						www\TinyMCE\skins\lightgray\fonts\tinymce-mobile.woff
-						www\TinyMCE\skins\lightgray\fonts\tinymce-small.eot
-						www\TinyMCE\skins\lightgray\fonts\tinymce-small.svg
-						www\TinyMCE\skins\lightgray\fonts\tinymce-small.ttf
-						www\TinyMCE\skins\lightgray\fonts\tinymce-small.woff
-					-img
-						www\TinyMCE\skins\lightgray\img\anchor.gif
-						www\TinyMCE\skins\lightgray\img\loader.gif
-						www\TinyMCE\skins\lightgray\img\object.gif
-						www\TinyMCE\skins\lightgray\img\trans.gif
-					www\TinyMCE\skins\lightgray\content.min.css
-					www\TinyMCE\skins\lightgray\content.mobile.min.css
-					www\TinyMCE\skins\lightgray\skin.min.css
-					www\TinyMCE\skins\lightgray\skin.mobile.min.css
+						www\TinyMCE5-8-1\skins\content\writer\content.css
+						www\TinyMCE5-8-1\skins\content\writer\content.min.css
+						www\TinyMCE5-8-1\skins\content\writer\content.min.css.map
 				-ui
 					-oxide
 						-fonts
-							www\TinyMCE\skins\ui\oxide\fonts\tinymce-mobile.woff
-						www\TinyMCE\skins\ui\oxide\content.inline.min.css
-						www\TinyMCE\skins\ui\oxide\content.inline.min.css.map
-						www\TinyMCE\skins\ui\oxide\content.min.css
-						www\TinyMCE\skins\ui\oxide\content.min.css.map
-						www\TinyMCE\skins\ui\oxide\content.mobile.min.css
-						www\TinyMCE\skins\ui\oxide\skin.min.css
-						www\TinyMCE\skins\ui\oxide\skin.min.css.map
-						www\TinyMCE\skins\ui\oxide\skin.mobile.min.css
-						www\TinyMCE\skins\ui\oxide\skin.mobile.min.css.map
+							www\TinyMCE5-8-1\skins\ui\oxide\fonts\tinymce-mobile.woff
+						www\TinyMCE5-8-1\skins\ui\oxide\content.css
+						www\TinyMCE5-8-1\skins\ui\oxide\content.inline.css
+						www\TinyMCE5-8-1\skins\ui\oxide\content.inline.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide\content.inline.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide\content.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide\content.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide\content.mobile.css
+						www\TinyMCE5-8-1\skins\ui\oxide\content.mobile.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide\content.mobile.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.css
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.mobile.css
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.mobile.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.mobile.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.shadowdom.css
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.shadowdom.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide\skin.shadowdom.min.css.map
 					-oxide-dark
-						www\TinyMCE\skins\ui\oxide-dark\content.inline.min.css
-						www\TinyMCE\skins\ui\oxide-dark\content.inline.min.css.map
-						www\TinyMCE\skins\ui\oxide-dark\content.min.css
-						www\TinyMCE\skins\ui\oxide-dark\content.min.css.map
-						www\TinyMCE\skins\ui\oxide-dark\skin.min.css
-						www\TinyMCE\skins\ui\oxide-dark\skin.min.css.map
-			-themes
+						-fonts
+							www\TinyMCE5-8-1\skins\ui\oxide-dark\fonts\tinymce-mobile.woff
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.inline.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.inline.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.inline.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.mobile.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.mobile.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.mobile.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.mobile.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.mobile.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.mobile.min.css.map
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.shadowdom.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.shadowdom.min.css
+						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.shadowdom.min.css.map
+			+themes
 				-mobile
-					www\TinyMCE\themes\mobile\theme.js
-					www\TinyMCE\themes\mobile\theme.min.js
-				-modern
-					www\TinyMCE\themes\modern\theme.min.js
+					www\TinyMCE5-8-1\themes\mobile\theme.js
+					www\TinyMCE5-8-1\themes\mobile\theme.min.js
 				-silver
-					www\TinyMCE\themes\silver\theme.js
-					www\TinyMCE\themes\silver\theme.min.js
-			www\TinyMCE\jquery.tinymce.min.js
-			www\TinyMCE\KwinTiny.css
-			www\TinyMCE\license.txt
-			www\TinyMCE\Styles.css
-			www\TinyMCE\Tiny.php
-			www\TinyMCE\TinyMCE.css
-			www\TinyMCE\tinymce.js
-			www\TinyMCE\tinymce.min.js
+					www\TinyMCE5-8-1\themes\silver\theme.js
+					www\TinyMCE5-8-1\themes\silver\theme.min.js
+			www\TinyMCE5-8-1\jquery.tinymce.min.js
+			www\TinyMCE5-8-1\license.txt
+			www\TinyMCE5-8-1\README.md
+			www\TinyMCE5-8-1\tinymce.d.ts
+			www\TinyMCE5-8-1\tinymce.js
+			www\TinyMCE5-8-1\tinymce.min.js
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
@@ -420,7 +425,6 @@ IttveMe
 		www\Common.php
 		www\download.php
 		www\EditText.php
-		www\EditTextOld.php
 		www\error.php
 		www\index.php
 		www\iniMem.php
@@ -448,33 +452,45 @@ IttveMe
 2=www\iniMem.php
 3=www\index.php
 4=www\UpSiteCSS.php
-5=www\Styles\EditText.css
-6=www\Styles\Footer-Info.css
-7=www\Styles\ImgRight.css
+5=www\Styles\Footer-Info.css
+6=www\Styles\ImgRight.css
+7=www\EditText.php
+8=www\Styles\EditText.css
+9=www\Styles\Gallery-Image.css
+10=www\Styles\TinyMCE.css
 [Selected Project Files]
 Main=
-Selected=www\UpSiteCSS.php
+Selected=www\Styles\EditText.css
 [www\MenuArticles.php]
 TopLine=46
 Caret=12,83
 [www\UpSite.php]
-TopLine=55
-Caret=50,60
+TopLine=48
+Caret=40,86
 [www\iniMem.php]
 TopLine=35
-Caret=24,42
+Caret=23,43
 [www\index.php]
-TopLine=137
-Caret=1,173
+TopLine=102
+Caret=19,140
 [www\UpSiteCSS.php]
-TopLine=143
-Caret=15,171
-[www\Styles\EditText.css]
-TopLine=28
-Caret=1,61
+TopLine=52
+Caret=85,86
 [www\Styles\Footer-Info.css]
-TopLine=66
+TopLine=57
 Caret=1,57
 [www\Styles\ImgRight.css]
-TopLine=7
-Caret=27,36
+TopLine=11
+Caret=1,48
+[www\EditText.php]
+TopLine=39
+Caret=1,60
+[www\Styles\EditText.css]
+TopLine=22
+Caret=1,26
+[www\Styles\Gallery-Image.css]
+TopLine=36
+Caret=1,1
+[www\Styles\TinyMCE.css]
+TopLine=1
+Caret=28,4

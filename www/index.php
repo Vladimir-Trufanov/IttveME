@@ -137,7 +137,7 @@ try
    require_once "ToPlugDebug.php";  
    // Разбираем параметры запроса,
    // запускаем общую оболочку и настройку страниц сайта
-   require_once $_SERVER['DOCUMENT_ROOT']."/UpSite.php";
+   require_once "UpSite.php";
 
 }
 catch (E_EXCEPTION $e) 

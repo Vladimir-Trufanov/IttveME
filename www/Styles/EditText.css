@@ -11,31 +11,24 @@
 
 #TitleArea
 { 
+   background:gray;
+   width:100%;
+   /* 
    position:fixed; 
    overflow:auto; 
    top:0; 
    bottom:96%;
    padding:0 .5rem 0 .5rem;
    text-align:center;
-   background:gray; 
    right:33%;
-   width:67%; 
+   */ 
 }
-#EditDebug
-{ 
-   position:fixed; 
-   /*overflow:auto;*/ 
-   top:4%; 
-   bottom:56%;
-   padding:0 .5rem 0 .5rem;
-   /*text-align:justify;
-   background:red;*/ 
-   right:33%;
-   width:67%; 
-}
-
 #ContentArea
 { 
+   background:magenta;
+   width:100%;
+   /*height:50;*/
+/*
    position:fixed; 
    overflow:auto; 
    top:44%; 
@@ -45,7 +38,12 @@
    background:yellow; 
    right:33%;
    width:67%; 
+*/
 }
+#mytextarea
+{ 
+}
+/*
 #InputArea
 { 
    position:fixed; 
@@ -58,6 +56,7 @@
    right:33%;
    width:67%; 
 }
+*/
 /*
  ************************************************************* EditText.css ***
 */	

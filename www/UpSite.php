@@ -34,11 +34,25 @@ if ($ImageFile<>NULL)
 // Выводим другие страницы сайта
 else
 {
-   // Выводим галерею изображений ("моя жизнь") активной статьи
-   echo '<div id="Gallery">';
-   require_once "ittveLife/GalleryLife.php";
-   echo '</div>';
-   
+   // Обеспечиваем вывод только одной галереи изображений: как правило галереи
+   // активной статьи, а в некоторых случаях галереи редактируемой статьи (при 
+   // переходе в режим редактирования по кнопке 'Редактировать или создать 
+   // материал', при ...):
+
+   // а) выводим галерею для редактирования
+   if (prown\isComRequest('ЕditМaterial','Com'))
+   {
+      echo '<div id="EditGallery">';
+      require_once "ittveEdit/GalleryEdit.php";
+      echo '</div>';
+   }
+   // б) выводим галерею изображений ("моя жизнь") активной статьи
+   else
+   {
+      echo '<div id="Gallery">';
+      require_once "ittveLife/GalleryLife.php";
+      echo '</div>';
+   }
    // Выводим текстовый контент страницы айта
    echo '<div id="Content">';
 
@@ -76,9 +90,9 @@ else
       else if (prown\isComRequest('ЕditМaterial','Com'))
       {
          echo '<div id="Life">';
-         echo 'Редактировать или создать материал'.'<br>';
+         //echo 'Редактировать или создать материал'.'<br>';
+         require_once "EditText.php";
          echo '</div>';
-         //require_once "EditText.php";
       }
       // Запускаем страницу с активным материалом
       else
