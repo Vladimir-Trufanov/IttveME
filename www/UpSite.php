@@ -40,7 +40,7 @@ else
    // материал', при ...):
 
    // а) выводим галерею для редактирования
-   if (prown\isComRequest('ЕditМaterial','Com'))
+   if (prown\isComRequest('Мaterial','Edit'))
    {
       echo '<div id="EditGallery">';
       require_once "ittveEdit/GalleryEdit.php";
@@ -75,7 +75,7 @@ else
       {
          echo '<div id="Life">';
          echo 'Изменить настройки сайта в браузере'.'<br>';
-         // Инициировать класс, изменить настройки, убрать класс
+         // Инициируем класс, изменяем настройки
          $Tune=new tune\Tuning($aPresMode,$aModeImg,$urlHome);
          echo '</div>';
       }
@@ -87,11 +87,13 @@ else
          echo '</div>';
       }
       // Выбираем страницу для редактирования или создания материала
-      else if (prown\isComRequest('ЕditМaterial','Com'))
+      else if (prown\isComRequest('Мaterial','Edit'))
       {
          echo '<div id="Life">';
-         //echo 'Редактировать или создать материал'.'<br>';
-         require_once "EditText.php";
+         // Редактировать или создать материал'.'<br>';
+         //require_once "EditText.php";
+         // Инициируем класс, редактируем или создаём материал
+         $Tune=new edit\Editing($urlHome);
          echo '</div>';
       }
       // Запускаем страницу с активным материалом

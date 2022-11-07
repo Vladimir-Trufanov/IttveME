@@ -62,7 +62,7 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       </div>
    </button>
 
-   <button class='link' name="Com" value="ЕditМaterial">
+   <button class='link' name="Edit" value="Мaterial">
       <div class='prev'>&#xf044;</div>
       <div class='small'>&#xf044;</div>
       <div class='full'>

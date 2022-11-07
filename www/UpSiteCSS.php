@@ -55,7 +55,7 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
 
 // Подключаем TinyMCE
-if (prown\isComRequest('ЕditМaterial','Com'))
+if (prown\isComRequest('Мaterial','Edit'))
 {
    echo '
    <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
@@ -101,7 +101,7 @@ if (prown\isComRequest('ЕditМaterial','Com'))
 // При одноколоночном режиме отключаем див '#News'
 if (($c_PresMode==rpmOneRight)||
    (prown\isComRequest('Tuning','Com'))||
-   (prown\isComRequest('ЕditМaterial','Com')))
+   (prown\isComRequest('Мaterial','Edit')))
 {
    echo "
    <style>

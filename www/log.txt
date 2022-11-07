@@ -18,3 +18,10 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(140): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\EditText.php on line 96
+[06-Nov-2022 19:14:56 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'edit\Editing' not found in C:\IttveMe\www\UpSite.php:96
+Stack trace:
+#0 C:\IttveMe\www\index.php(140): require_once()
+#1 {main}
+  thrown in C:\IttveMe\www\UpSite.php on line 96
+[06-Nov-2022 19:15:49 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\IttveMe\www\TMenuLeader\EditClass.php on line 63
+[06-Nov-2022 19:16:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\IttveMe\www\TMenuLeader\EditClass.php on line 63

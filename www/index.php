@@ -104,6 +104,7 @@ try
    
    // Подключаем классы для отработки управляющего меню
    require_once $SiteRoot.'/TMenuLeader/TuningClass.php';
+   require_once $SiteRoot.'/TMenuLeader/EditClass.php';
       
    // Выполняем запуск сессии и работу с лог-файлом
    $oMainStarter = new PageStarter('ittveme','ittve-log');
