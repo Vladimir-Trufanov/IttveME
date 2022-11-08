@@ -55,7 +55,6 @@ else
    }
    // Выводим текстовый контент страницы айта
    echo '<div id="Content">';
-
       // Выводим меню, когда он выбран
       echo '<div id="MenuArticles">';
          require_once "MenuArticles.php";
@@ -89,12 +88,25 @@ else
       // Выбираем страницу для редактирования или создания материала
       else if (prown\isComRequest('Мaterial','Edit'))
       {
+      
          echo '<div id="Life">';
          // Редактировать или создать материал'.'<br>';
          //require_once "EditText.php";
          // Инициируем класс, редактируем или создаём материал
          $Tune=new edit\Editing($urlHome);
+         
+         
+         
+         
          echo '</div>';
+      
+    echo
+   '<div id="okno">
+   Всплывающее окошко!<br>
+   <a href="#" class="close">Закрыть окно</a>
+   </div>
+   ';
+       
       }
       // Запускаем страницу с активным материалом
       else
@@ -129,7 +141,16 @@ else
 
       // Левая часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
-         require_once "MessLeftFooter.php";
+         // а) показываем идентификацию статей
+         if (prown\isComRequest('Мaterial','Edit'))
+         {
+            PlaceIdArticles();
+         }
+         // б) выводим обычное сообщение
+         else
+         {
+            require_once "MessLeftFooter.php";
+         }
       echo '</div>';
 
       // Правая часть подвала, меню управления

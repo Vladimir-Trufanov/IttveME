@@ -85,6 +85,7 @@ class Editing
       '; 
       ?>
       <input type="submit" name="Edit" value="Мaterial" form="frmTinyText">
+    
       <?php
    }
 }

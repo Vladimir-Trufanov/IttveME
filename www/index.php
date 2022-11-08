@@ -103,6 +103,7 @@ try
    require_once "iniMem.php";     // Всегда 2-ой корневой модуль в списке
    
    // Подключаем классы для отработки управляющего меню
+   require_once $SiteRoot.'/TMenuLeader/ItemLeftFooter.php';
    require_once $SiteRoot.'/TMenuLeader/TuningClass.php';
    require_once $SiteRoot.'/TMenuLeader/EditClass.php';
       
@@ -172,4 +173,4 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
       $MakeIs=true;
    }
 }
-// ************************************************************** index.php ***
+?> <!-- --> <?php // ******************************************** index.php ***
