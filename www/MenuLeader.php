@@ -29,47 +29,52 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 IN THE SOFTWARE.
 */
-
 ?>
+
 <!--
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
-<div class='navset'>
-   <button class='link' name="Com" value="Inbox">
-      <div class='prev'>&#xf01c;</div>
-      <div class='small'>&#xf01c;</div>
-      <div class='full'>
-         <div class='k1'>Отправить</div>
-         <div class='k2'>сообщение</div>
-      </div>
-   </button>
-   
-   <button class='link' name="Com" value="Tuning">
-      <div class='prev'>&#xf013;</div>
-      <div class='small'>&#xf013;</div>
-      <div class='full'>
-         <div class='k1'>Изменить настройки</div>
-         <div class='k2'>сайта в браузере</div>
-      </div>
-   </button>
 
+<div class='navset'>
+
+<!--
+
+   <button class='link' name='Com' value='Inbox'>
+      <span class='prev'> &#xf01c; </span>
+      <span class='small'> &#xf01c; </span>
+      <span class='full'>
+         <span class='k1'>Отправить</span>
+         <span class='k2'>сообщение</span>
+      </span>
+   </button>
+-->
+
+   <button class='link' name="Com" value="Tuning">
+      <span class='prev'>&#xf013;</span>
+      <span class='small'>&#xf013;</span>
+      <span class='full'>
+         <span class='k1'>Изменить настройки</span>
+         <span class='k2'>сайта в браузере</span>
+      </span>
+   </button>
    <button class='link' name="Com" value="Signup">
-      <div class='prev'>&#xf007;</div>
-      <div class='small'>&#xf007;</div>
-      <div class='full'>
-         <div class='k1'>Войти или</div>
-         <div class='k2'>зарегистрироваться</div>
-      </div>
+      <span class='prev'>&#xf007;</span>
+      <span class='small'>&#xf007;</span>
+      <span class='full'>
+         <span class='k1'>Войти или</span>
+         <span class='k2'>зарегистрироваться</span>
+      </span>
    </button>
 
    <button class='link' name="Edit" value="Мaterial">
-      <div class='prev'>&#xf044;</div>
-      <div class='small'>&#xf044;</div>
-      <div class='full'>
-         <div class='k1'>Создать материал</div>
-         <div class='k2'>или редактировать</div>
-      </div>
+      <span class='prev'>&#xf044;</span>
+      <span class='small'>&#xf044;</span>
+      <span class='full'>
+         <span class='k1'>Создать материал</span>
+         <span class='k2'>или редактировать</span>
+      </span>
    </button>
 </div>
+
 <?php
 // ********************************************************* MenuLeader.php ***

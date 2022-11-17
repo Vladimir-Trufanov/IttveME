@@ -150,9 +150,9 @@ IttveMe
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		-ittveNews
+		+ittveNews
 			www\ittveNews\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-			www\ittveNews\IttveMe.html
+			www\ittveNews\IttveNews.html
 		-jQuery
 			-images
 				www\jQuery\images\ajax-loader.gif
@@ -415,7 +415,7 @@ IttveMe
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		+TMenuLeader
+		-TMenuLeader
 			www\TMenuLeader\EditClass.php
 			www\TMenuLeader\ItemLeftFooter.php
 			www\TMenuLeader\TuningClass.php
@@ -432,9 +432,9 @@ IttveMe
 		www\ittve-log.txt
 		www\IttveMe.js
 		www\iUserError.php
-		www\log.txt
 		www\manifest.json
 		www\MenuArticles.php
+		www\MenuArticlesOld.php
 		www\MenuLeader.php
 		www\MessLeftFooter.php
 		www\pic.png
@@ -446,34 +446,34 @@ IttveMe
 		www\UpSiteCSS.php
 		www\ViewImage.php
 [Open project files]
-0=www\MenuArticles.php
-1=www\UpSite.php
-2=www\iniMem.php
-3=www\index.php
-4=www\UpSiteCSS.php
-5=www\Styles\ImgRight.css
-6=www\EditText.php
-7=www\Styles\EditText.css
-8=www\TMenuLeader\EditClass.php
-9=www\TMenuLeader\ItemLeftFooter.php
+0=www\UpSite.php
+1=www\iniMem.php
+2=www\index.php
+3=www\UpSiteCSS.php
+4=www\Styles\ImgRight.css
+5=www\EditText.php
+6=www\Styles\EditText.css
+7=www\TMenuLeader\EditClass.php
+8=www\TMenuLeader\ItemLeftFooter.php
+9=www\Styles\MenuArticles.css
+10=www\ittveNews\IttveNews.html
+11=www\Styles\Footer-Info.css
+12=www\MenuLeader.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
-[www\MenuArticles.php]
-TopLine=46
-Caret=12,83
+Selected=www\MenuLeader.php
 [www\UpSite.php]
-TopLine=57
-Caret=48,101
+TopLine=116
+Caret=1,133
 [www\iniMem.php]
-TopLine=131
+TopLine=129
 Caret=38,168
 [www\index.php]
-TopLine=139
+TopLine=137
 Caret=34,176
 [www\UpSiteCSS.php]
-TopLine=1
-Caret=6,151
+TopLine=7
+Caret=30,35
 [www\Styles\ImgRight.css]
 TopLine=10
 Caret=1,48
@@ -484,8 +484,20 @@ Caret=1,60
 TopLine=6
 Caret=1,26
 [www\TMenuLeader\EditClass.php]
-TopLine=55
-Caret=53,84
+TopLine=52
+Caret=15,84
 [www\TMenuLeader\ItemLeftFooter.php]
 TopLine=1
 Caret=1,24
+[www\Styles\MenuArticles.css]
+TopLine=164
+Caret=1,1
+[www\ittveNews\IttveNews.html]
+TopLine=1
+Caret=4,27
+[www\Styles\Footer-Info.css]
+TopLine=64
+Caret=1,73
+[www\MenuLeader.php]
+TopLine=20
+Caret=1,51

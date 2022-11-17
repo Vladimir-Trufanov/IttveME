@@ -14,7 +14,7 @@
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
-echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+echo '<meta http-equiv="content-type" content="text/html; charset=utf-8">';
 // SeoTags()
 echo '<title>Обо мне, путешествиях и ... Черногории</title>';
 echo '<meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и увлечения, жизнь его близких">';
@@ -32,7 +32,7 @@ echo '
 <meta name="theme-color" content="#ffffff">
 ';
 // Подключаем font-awesome 4.7.0
-echo '<link rel="stylesheet"'.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
+echo '<link rel="stylesheet" '.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
 // Подключаем jQuery 2.2.4
 echo '<script src="jQuery/jquery-2.2.4.min.js"> </script>';
 

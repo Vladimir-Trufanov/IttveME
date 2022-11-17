@@ -67,12 +67,13 @@
    background: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
    background-image: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
 }
+/* Выводим текст при наезде на кнопку */
 #btnLifeMenu:hover::after 
 {
-   content:attr(btn-title); /* Выводим текст */
-   position:absolute; left:5.3rem; bottom:1rem; 
+   content:'Жизнь и путешествия!'; 
+   position:absolute; left:5.0rem; bottom:1rem; 
    z-index:1; /* Отображаем подсказку поверх других элементов */
-   background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+   background: white; 
    color: #ab4a16;  /* Приятный коричневый цвет */ 
    font-size:1.3rem;
    font-weight:600; 

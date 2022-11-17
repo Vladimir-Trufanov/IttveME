@@ -113,7 +113,7 @@ else
       {
          echo '<div id="News">';
             //require_once "ittveNews/".$p_ittveNews;
-            require_once "ittveNews/IttveMe.html";
+            require_once "ittveNews/IttveNews.html";
          echo '</div>';
          echo '<div id="Life">';
             require_once "ittveLife/".$p_ittveLife;
@@ -131,8 +131,7 @@ else
       echo '<div id="LifeMenu">';
       echo '<form id="frmLifeMenu" action="'.$urlHome.'">';
       echo '
-      <button id="btnLifeMenu" btn-title="Жизнь и путешествия!" 
-         name="Com" value="LifeMenu">
+      <button id="btnLifeMenu" name="Com" value="LifeMenu">
          <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
       </button>
       ';
