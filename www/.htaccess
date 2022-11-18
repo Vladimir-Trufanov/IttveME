@@ -1,15 +1,25 @@
 ## PHP-APACHE                                                   *** .htaccess ***
 ##
-## ******************************************************************************
-## * ittve.me                                Произвести локальные установки PHP *
-## ******************************************************************************
+## ****************************************************************************
+## * ittve.me                              Произвести локальные установки PHP *
+## ****************************************************************************
 ##
-##                                                     Автор:       Труфанов В.Е.
-##                                                     Дата создания:  01.11.2016
-## Copyright © 2016 tve                                Посл.изменение: 29.01.2019
+##                                                   Автор:       Труфанов В.Е.
+##                                                   Дата создания:  01.11.2016
+## Copyright © 2016 tve                              Посл.изменение: 18.11.2022
 
 ## Устанавливаем кодировку сайта по умолчанию
 AddDefaultCharset utf-8
+
+## 1 вариант проверки перенаправления URL: вставка этих двух строк в .htaccess
+## вызывает перенаправление https://ittve.me/RewriteTest/ на https://example.com/
+RewriteEngine on
+RewriteRule ^RewriteTest/$ https://example.com/ [R]
+RewriteRule ^zhizn-i-puteshestviya$ https://www.ittve.me/?Com=LifeMenu [R]
+
+## 2 вариант проверки перенаправления URL: вставка этой строки в .htaccess
+## вызывает перенаправление https://ittve.me/RewriteTest/ на https://example.com/
+## Redirect /RewriteTest/ https://example.com
 
 ## Определяем, что будет использоваться кукис для хранения идентификатора 
 ## сессии на стороне клиента. on[boolean] = "включено".
@@ -61,12 +71,12 @@ php_value upload_max_filesize 3M
 </FilesMatch>
 
 ## Включаем преобразование URL
-RewriteEngine On
+## RewriteEngine On
 
 ## Преобразовываем URL-запросы главных страниц сайта
-RewriteRule ^home$ index.php [L]
-## RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
-## RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
+## RewriteRule ^home$ index.php [L]
+## RewriteRule ^zhizn-i-puteshestviya$ ?Com=LifeMenu [L]
+## RewriteRule ^prostoj-princip-programmirovaniya$                 index.php?list=prostoj-princip-programmirovaniya [L]
 ## RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
 ## RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
 ## RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
@@ -75,8 +85,8 @@ RewriteRule ^home$ index.php [L]
 ## RewriteRule ^reset$ /Reset/ [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+## RewriteCond %{ENV:HTTPS} !on
+## RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ## Перенаправляем ошибки в файл e404.php
 ## ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 

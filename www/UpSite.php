@@ -94,19 +94,15 @@ else
          //require_once "EditText.php";
          // Инициируем класс, редактируем или создаём материал
          $Tune=new edit\Editing($urlHome);
-         
-         
-         
-         
          echo '</div>';
-      
-    echo
-   '<div id="okno">
-   Всплывающее окошко!<br>
-   <a href="#" class="close">Закрыть окно</a>
-   </div>
-   ';
-       
+         /*
+         echo
+         '<div id="okno">
+         Всплывающее окошко!<br>
+         <a href="#" class="close">Закрыть окно</a>
+         </div>
+         ';
+         */
       }
       // Запускаем страницу с активным материалом
       else
@@ -119,7 +115,7 @@ else
             require_once "ittveLife/".$p_ittveLife;
             ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
             //echo '$urlHome='.$urlHome.'<br>';
-            //echo  prown\getTranslit('Тезисы по организации сайта').'<br>';
+            //echo  prown\getTranslit('Жизнь и путешествия').'<br>';
          echo '</div>';
       }
    echo '</div>';

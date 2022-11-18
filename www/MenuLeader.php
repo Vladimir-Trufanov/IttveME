@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  27.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 22.10.2022
+// Copyright © 2019 tve                              Посл.изменение: 18.11.2022
 
 /**
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
@@ -30,25 +30,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 */
 ?>
-
 <!--
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
-
 <div class='navset'>
-
-<!--
-
    <button class='link' name='Com' value='Inbox'>
       <span class='prev'> &#xf01c; </span>
       <span class='small'> &#xf01c; </span>
       <span class='full'>
-         <span class='k1'>Отправить</span>
+         <span class='k1'>Отправить автору</span>
          <span class='k2'>сообщение</span>
       </span>
    </button>
--->
-
    <button class='link' name="Com" value="Tuning">
       <span class='prev'>&#xf013;</span>
       <span class='small'>&#xf013;</span>
@@ -75,6 +68,5 @@ Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
       </span>
    </button>
 </div>
-
 <?php
 // ********************************************************* MenuLeader.php ***

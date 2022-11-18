@@ -54,15 +54,16 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
 
-// Подключаем TinyMCE
+// Делаем настройки при заходе в режим редактирования
 if (prown\isComRequest('Мaterial','Edit'))
 {
+   // Настраиваем див всплывающего окна
+   /*
    ?>
    <style>
    #okno 
    {
       width: 300px;
-      /*width: 100%;*/
       height: 50px;
       text-align: center;
       padding: 15px;
@@ -91,9 +92,10 @@ if (prown\isComRequest('Мaterial','Edit'))
       cursor:pointer;
    }
    .close:hover {background: #e6e6ff;}
-    </style>
-    <?php
-
+   </style>
+   <?php
+   */
+   // Подключаем TinyMCE
    echo '
    <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
    <script>tinymce.init
@@ -142,13 +144,13 @@ if (($c_PresMode==rpmOneRight)||
 {
    echo "
    <style>
-   /*
+   <!-- 
    #okno 
    {
       right:40%;
       width:60%; 
    }
-   */
+   -->
    #News
    { 
      right:0;
