@@ -11,16 +11,6 @@
 ## Устанавливаем кодировку сайта по умолчанию
 AddDefaultCharset utf-8
 
-## 1 вариант проверки перенаправления URL: вставка этих двух строк в .htaccess
-## вызывает перенаправление https://ittve.me/RewriteTest/ на https://example.com/
-RewriteEngine on
-RewriteRule ^RewriteTest/$ https://example.com/ [R]
-RewriteRule ^zhizn-i-puteshestviya$ https://www.ittve.me/?Com=LifeMenu [R]
-
-## 2 вариант проверки перенаправления URL: вставка этой строки в .htaccess
-## вызывает перенаправление https://ittve.me/RewriteTest/ на https://example.com/
-## Redirect /RewriteTest/ https://example.com
-
 ## Определяем, что будет использоваться кукис для хранения идентификатора 
 ## сессии на стороне клиента. on[boolean] = "включено".
 php_flag session.use_cookies on
@@ -70,10 +60,20 @@ php_value upload_max_filesize 3M
     Deny from all
 </FilesMatch>
 
-## Включаем преобразование URL
+## Два варианта проверки перенаправления URL, вызывающие
+## перенаправление https://ittve.me/RewriteTest/ на https://example.com/
+## 1) вставка этих двух строк в .htaccess
 ## RewriteEngine On
+## RewriteRule ^RewriteTest/$ https://example.com/ [R]
+## 2) вставка этой строки в .htaccess
+## Redirect /RewriteTest/ https://example.com
 
+## Включаем преобразование URL
+RewriteEngine On
 ## Преобразовываем URL-запросы главных страниц сайта
+## RewriteRule ^zhizn-i-puteshestviya$ https://www.ittve.me/?Com=LifeMenu [R]
+## RewriteRule ^LifeMenu$ https://www.ittve.me/zhizn-i-puteshestviya [R]
+RewriteRule ^\?Comi$ https://www.ittve.me/zhizn-i-puteshestviya [R]
 ## RewriteRule ^home$ index.php [L]
 ## RewriteRule ^zhizn-i-puteshestviya$ ?Com=LifeMenu [L]
 ## RewriteRule ^prostoj-princip-programmirovaniya$                 index.php?list=prostoj-princip-programmirovaniya [L]
