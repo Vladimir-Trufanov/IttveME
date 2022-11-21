@@ -7,23 +7,14 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  05.03.2019
-// Copyright © 2019 tve                              Посл.изменение: 12.12.2020
+// Copyright © 2019 tve                              Посл.изменение: 21.11.2022
 
-// ****************************************************************************
-// *                      Вывести сообщение только при отладке                *
-// ****************************************************************************
-//function echod($String)
-//{
-//   if (!(($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru')))
-//   echo ($String);
-//}
 // ****************************************************************************
 // *                       Определить работаем ли на сайте                    *
 // ****************************************************************************
 function isIttveme()
 {
    $Result=false;
-   //$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']
    if ($_SERVER['HTTP_HOST']=='ittve.me') $Result=true;
    return $Result;
 }
@@ -33,7 +24,10 @@ function isIttveme()
 function isNichost()
 { 
    $Result=false;
-   if (($_SERVER['HTTP_HOST']=='ittve.me')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+   if (
+     ($_SERVER['HTTP_HOST']=='ittve.me')||
+     ($_SERVER['HTTP_HOST']=='www.ittve.me')||
+     ($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
       $Result=true;
    }
@@ -80,7 +74,7 @@ function GLoadImage($FileName,$Comment,$AreaText=false,$Action='Image')
    </div>
    <?php
    */
-      ?>
+   ?>
    <!-- -->
    <div class="Card">
    <button class="bCard" type="submit" name="upload" value="FileName">

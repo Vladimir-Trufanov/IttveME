@@ -29,44 +29,46 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 IN THE SOFTWARE.
 */
+
 ?>
 <!--
 Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
 -->
-<div class='navset'>
-   <button class='link' name='Com' value='Inbox'>
+
+<ul class='navset'>
+   <li class='link'>
       <span class='prev'> &#xf01c; </span>
       <span class='small'> &#xf01c; </span>
       <span class='full'>
-         <span class='k1'>Отправить автору</span>
-         <span class='k2'>сообщение</span>
+         <span class='k1'><a href= "<?php echo $cPref.mmlOtpravitAvtoruSoobshchenie; ?>">Отправить автору</a></span>
+         <span class='k2'><a href= "<?php echo $cPref.mmlOtpravitAvtoruSoobshchenie; ?>">сообщение</a></span>
       </span>
-   </button>
-   <button class='link' name="Com" value="Tuning">
+   </li>     
+   <li class='link'>
       <span class='prev'>&#xf013;</span>
       <span class='small'>&#xf013;</span>
       <span class='full'>
-         <span class='k1'>Изменить настройки</span>
-         <span class='k2'>сайта в браузере</span>
+         <span class='k1'><a href= "<?php echo $cPref.mmlIzmenitNastrojkiSajta; ?>">Изменить настройки</a></span>
+         <span class='k2'><a href= "<?php echo $cPref.mmlIzmenitNastrojkiSajta; ?>">сайта в браузере</a></span>
       </span>
-   </button>
-   <button class='link' name="Com" value="Signup">
+   </li>
+   <li class='link'>
       <span class='prev'>&#xf007;</span>
       <span class='small'>&#xf007;</span>
       <span class='full'>
-         <span class='k1'>Войти или</span>
-         <span class='k2'>зарегистрироваться</span>
+         <span class='k1'><a href= "<?php echo $cPref.mmlVojtiZaregistrirovatsya; ?>">Войти или</a></span>
+         <span class='k2'><a href= "<?php echo $cPref.mmlVojtiZaregistrirovatsya; ?>">зарегистрироваться</a></span>
       </span>
-   </button>
-
-   <button class='link' name="Edit" value="Мaterial">
+   </li>
+   <li class='link'>
       <span class='prev'>&#xf044;</span>
       <span class='small'>&#xf044;</span>
       <span class='full'>
-         <span class='k1'>Создать материал</span>
-         <span class='k2'>или редактировать</span>
+         <span class='k1'><a href= "<?php echo $cPref.mmlSozdatRedaktirovat; ?>">Создать материал</a></span>
+         <span class='k2'><a href= "<?php echo $cPref.mmlSozdatRedaktirovat; ?>">или редактировать</a></span>
       </span>
-   </button>
-</div>
+   </li>
+</ul>
+
 <?php
 // ********************************************************* MenuLeader.php ***

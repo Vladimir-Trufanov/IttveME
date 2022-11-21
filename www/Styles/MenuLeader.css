@@ -20,10 +20,6 @@
 
  color: #ab4a16;  приятный коричневый цвет 
 */
-#frmNavset
-{
-   height:100%;
-}
 .navset 
 {
    height:100%;
@@ -65,7 +61,7 @@
   элемента, которые могут быть определены с помощью псевдоклассов :hover 
   или :active)
 **/
-button, .navset 
+li, .navset 
 {
    color:#aaa;    /* обычный серый цвет элементов панели меню */
    background:#fff;
@@ -109,7 +105,6 @@ button, .navset
 .navset .link:hover 
 {
    width:80%;
-   color:#555; 
 }
 .navset .link:active 
 {

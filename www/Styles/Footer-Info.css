@@ -6,7 +6,7 @@
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 25.11.2020
+ Copyright © 2019 tve                                Посл.изменение: 21.11.2022
 */
 #LifeMenu
 {
@@ -16,17 +16,13 @@
    bottom:1.4rem; 
    background:transparent; /*lime;*/
 }
-#frmLifeMenu
-{
-   width: 100%;
-}
 #btnLifeMenu
 {
    width: 95%;
    z-index:1;
    border-radius:8px;
    background:radial-gradient(farthest-side ellipse at top left, #fff,  #ededed);
-   margin-top:.3rem;
+   margin-top:.5rem;
    margin-left:.3rem;
 }
 #imgLifeMenu

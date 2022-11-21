@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  11.11.2020
-// Copyright © 2020 tve                              Посл.изменение: 29.10.2022
+// Copyright © 2020 tve                              Посл.изменение: 21.11.2022
 
 // Формируем общие начальные теги разметки страницы
 echo '<!DOCTYPE html>';
@@ -312,7 +312,8 @@ if (prown\isComRequest('ЕditМaterial','Com'))
 
 
 // Зажигаем при необходимости меню статей
-if (prown\isComRequest('LifeMenu','Com'))
+// ?Com=zhizn-i-puteshestviya
+if (prown\isComRequest(mmlZhiznIputeshestviya))
 {
    echo "
    <style>

@@ -38,6 +38,15 @@ define ("mesCookiUserNo", 3);    // "Разрешить использовани
 define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
 
+// ------------------------------------ Тексты запросов для меню управления ---
+define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');   
+define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');   
+define ('mmlIzmenitNastrojkiSajta',      'izmenit-nastrojki-sajta-v-brauzere');    
+define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');     
+define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat'); 
+// Формируем префикс вызова страницы на сайте и localhost
+if (isNichost()) $cPref=''; else $cPref='?Com=';
+
 // ----------- Режимы представления материалов = Content Presentation Modes ---
 define ("rpmDoubleRight", 'двухколоночный с правосторонней галереей');   
 define ("rpmDoubleLeft",  'двухколоночный с левосторонней галереей');    

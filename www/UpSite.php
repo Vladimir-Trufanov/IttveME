@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 29.10.2022
+// Copyright © 2019 tve                              Посл.изменение: 21.11.2022
 
 /*
 // Подключаем TJsPrown и TJsTools
@@ -61,7 +61,8 @@ else
       echo '</div>';
 
       // Выбираем страницу для отправки сообщения автору
-      if (prown\isComRequest('Inbox','Com'))
+      // ?Com=otpravit-avtoru-soobshchenie
+      if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
       {
          echo '<div id="Life">';
          echo 'Отправить сообщение автору'.'<br>';
@@ -70,7 +71,8 @@ else
          //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
       }
       // Выбираем страницу для изменения настроек
-      else if (prown\isComRequest('Tuning','Com'))
+      // ?Com=izmenit-nastrojki-sajta-v-brauzere
+      else if (prown\isComRequest(mmlIzmenitNastrojkiSajta))
       {
          echo '<div id="Life">';
          echo 'Изменить настройки сайта в браузере'.'<br>';
@@ -79,14 +81,16 @@ else
          echo '</div>';
       }
       // Выбираем страницу для входа по логину или для регистрации
-      else if (prown\isComRequest('Signup','Com'))
+      // ?Com=vojti-ili-zaregistrirovatsya
+      else if (prown\isComRequest(mmlVojtiZaregistrirovatsya))
       {
          echo '<div id="Life">';
          echo 'Войти или зарегистрироваться'.'<br>';
          echo '</div>';
       }
       // Выбираем страницу для редактирования или создания материала
-      else if (prown\isComRequest('Мaterial','Edit'))
+      // ?Com=sozdat-material-ili-redaktirovat
+      else if (prown\isComRequest(mmlSozdatRedaktirovat))
       {
       
          echo '<div id="Life">';
@@ -114,8 +118,9 @@ else
          echo '<div id="Life">';
             require_once "ittveLife/".$p_ittveLife;
             ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-            //echo '$urlHome='.$urlHome.'<br>';
+
             //echo  prown\getTranslit('Жизнь и путешествия').'<br>';
+            
          echo '</div>';
       }
    echo '</div>';
@@ -125,13 +130,15 @@ else
    
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
-      echo '<form id="frmLifeMenu" action="'.$urlHome.'">';
       echo '
-      <button id="btnLifeMenu" name="Com" value="LifeMenu">
+      <ul id="btnLifeMenu">
+      <li>
+         <a href= "'.$cPref.mmlZhiznIputeshestviya.'">
          <img id="imgLifeMenu" src="/Images/Buttons/tveMenuD.png" alt="tveMenuD">
-      </button>
+         </a> 
+      </li> 
+      </ul>
       ';
-      echo '</form>';  
       echo '</div>';
 
       // Левая часть подвала для сообщений, разворачиваемых в три строки
@@ -150,9 +157,7 @@ else
 
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';
-      echo '<form id="frmNavset" action="'.$urlHome.'">';
       require_once "MenuLeader.php";
-      echo '</form>';  
       echo '</div>';
    echo '</div>';
 

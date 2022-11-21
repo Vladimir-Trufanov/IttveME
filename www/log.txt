@@ -1,3 +1,12 @@
 [17-Nov-2022 19:47:19 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '&' in C:\TPhpPrown\TPhpPrown\ViewGlobal.php on line 76
 [17-Nov-2022 21:40:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveMe\www\MenuLeader.php on line 33
 [17-Nov-2022 21:40:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\IttveMe\www\MenuLeader.php on line 33
+[21-Nov-2022 18:05:29 Asia/Kuwait] PHP Warning:  Unexpected character in input:  ' in C:\IttveMe\www\Common.php on line 77
+[21-Nov-2022 18:05:29 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'Ḱ˼' (T_STRING) in C:\IttveMe\www\Common.php on line 77
+[21-Nov-2022 18:12:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\IttveMe\www\MenuLeader.php on line 34
+[21-Nov-2022 19:10:10 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getComRequest() in C:\IttveMe\www\UpSite.php:119
+Stack trace:
+#0 C:\IttveMe\www\index.php(142): require_once()
+#1 {main}
+  thrown in C:\IttveMe\www\UpSite.php on line 119
+[21-Nov-2022 20:08:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\UpSite.php on line 146

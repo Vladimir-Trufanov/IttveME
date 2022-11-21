@@ -60,7 +60,7 @@ php_value upload_max_filesize 3M
     Deny from all
 </FilesMatch>
 
-## Два варианта проверки перенаправления URL, вызывающие
+## Два варианта проверки возможности перенаправления URL, вызывающие
 ## перенаправление https://ittve.me/RewriteTest/ на https://example.com/
 ## 1) вставка этих двух строк в .htaccess
 ## RewriteEngine On
@@ -71,12 +71,15 @@ php_value upload_max_filesize 3M
 ## Включаем преобразование URL
 RewriteEngine On
 ## Преобразовываем URL-запросы главных страниц сайта
-## RewriteRule ^zhizn-i-puteshestviya$ https://www.ittve.me/?Com=LifeMenu [R]
-## RewriteRule ^LifeMenu$ https://www.ittve.me/zhizn-i-puteshestviya [R]
-RewriteRule ^\?Comi$ https://www.ittve.me/zhizn-i-puteshestviya [R]
 ## RewriteRule ^home$ index.php [L]
 ## RewriteRule ^zhizn-i-puteshestviya$ ?Com=LifeMenu [L]
-## RewriteRule ^prostoj-princip-programmirovaniya$                 index.php?list=prostoj-princip-programmirovaniya [L]
+
+RewriteRule ^zhizn-i-puteshestviya$              ?Com=zhizn-i-puteshestviya [L]
+RewriteRule ^otpravit-avtoru-soobshchenie$       ?Com=otpravit-avtoru-soobshchenie [L]
+RewriteRule ^izmenit-nastrojki-sajta-v-brauzere$ ?Com=izmenit-nastrojki-sajta-v-brauzere [L]
+RewriteRule ^vojti-ili-zaregistrirovatsya$       ?Com=vojti-ili-zaregistrirovatsya [L]
+RewriteRule ^sozdat-material-ili-redaktirovat$   ?Com=sozdat-material-ili-redaktirovat [L]
+
 ## RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
 ## RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
 ## RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
