@@ -80,4 +80,33 @@ echo 'Жизнь и путешествия! '.prown\getTranslit('').' <br>';
 </ul>
 
 <?php
+
+echo '<br>';
+echo 'Привет!<br>';
+
+
+// Готовим и выводим меню
+$Arti=new ttools\ArticlesMaker($basename,$username,$password);
+
+// При отладке воссоздаем базу данных
+// $Arti->BaseFirstCreate();
+
+// Строим html-код меню по базе данных материалов сайта 
+// $FirstUl=' id="main-menu" class="sm sm-mint"';
+$FirstUl='';
+echo "\nMakeMenu16\n"; 
+$Arti->MakeMenu($FirstUl);
+
+echo '_MakeTblMenu<br>';
+$ListFields = array(
+   'uid'     => '..Пункт меню..',
+   'pid'     => '..Родитель..',
+   'NameArt' => '..Статья сайта..',
+   'IdCue'   => '..Тип статьи..',
+);
+$SignAsc='>..';
+$SignDesc='<..';
+
+$Arti->MakeTblMenu($ListFields,$SignAsc,$SignDesc);
+
 // ******************************************************* MenuArticles.php ***

@@ -55,7 +55,7 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
 
 // Делаем настройки при заходе в режим редактирования
-if (prown\isComRequest('Мaterial','Edit'))
+if (prown\isComRequest(mmlSozdatRedaktirovat))
 {
    // Настраиваем див всплывающего окна
    /*
@@ -287,7 +287,7 @@ else
 }
 
 // При входе в режим редактирования материала управляем расположением галереи
-if (prown\isComRequest('ЕditМaterial','Com'))
+if (prown\isComRequest(mmlSozdatRedaktirovat))
 {
    /*
    if (($c_PresMode==rpmOneRight)||($c_PresMode==rpmDoubleRight))

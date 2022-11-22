@@ -40,7 +40,7 @@ else
    // материал', при ...):
 
    // а) выводим галерею для редактирования
-   if (prown\isComRequest('Мaterial','Edit'))
+   if (prown\isComRequest(mmlSozdatRedaktirovat))
    {
       echo '<div id="EditGallery">';
       require_once "ittveEdit/GalleryEdit.php";
@@ -119,7 +119,7 @@ else
             require_once "ittveLife/".$p_ittveLife;
             ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
 
-            //echo  prown\getTranslit('Жизнь и путешествия').'<br>';
+            //echo  prown\getTranslit('Особенности устройства винтиков в моей голове').'<br>';
             
          echo '</div>';
       }
@@ -144,7 +144,7 @@ else
       // Левая часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
          // а) показываем идентификацию статей
-         if (prown\isComRequest('Мaterial','Edit'))
+         if (prown\isComRequest(mmlSozdatRedaktirovat))
          {
             PlaceIdArticles();
          }

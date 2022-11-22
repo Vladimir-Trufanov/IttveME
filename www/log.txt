@@ -10,3 +10,96 @@ Stack trace:
 #1 {main}
   thrown in C:\IttveMe\www\UpSite.php on line 119
 [21-Nov-2022 20:08:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\UpSite.php on line 146
+[22-Nov-2022 19:52:10 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\ArticlesMaker' not found in C:\IttveMe\www\MenuArticles.php:89
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(60): require_once()
+#1 C:\IttveMe\www\index.php(142): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\MenuArticles.php on line 89
+[22-Nov-2022 19:53:06 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TPhpTools/TArticlesMaker/ArticlesMakerClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\index.php on line 100
+[22-Nov-2022 20:03:14 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\_BaseFirstCreate() in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php:114
+Stack trace:
+#0 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#1 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#2 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 114
+[22-Nov-2022 20:05:33 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\aRecursLevel() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:177
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(114): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#1 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 177
+[22-Nov-2022 20:05:37 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\aRecursLevel() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:177
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(114): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#1 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 177
+[22-Nov-2022 20:09:58 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\aRecursLevel() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:177
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(114): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#1 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 177
+[22-Nov-2022 20:23:22 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\Exception' not found in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonArticlesMaker.php:46
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php(141): ttools\_UnlinkFile('C:\\IttveMe\\www/...')
+#1 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(118): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#2 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#3 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#4 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#5 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonArticlesMaker.php on line 46
+[22-Nov-2022 20:26:42 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\aRecursLevel() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:177
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(118): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#1 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 177
+[22-Nov-2022 20:29:24 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\aViewLevel() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:179
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(118): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#1 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 179
+[22-Nov-2022 20:30:01 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\aRecursPath() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:187
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(118): ttools\_BaseFirstCreate('C:\\IttveMe\\www/...', 'tve', '23ety17')
+#1 C:\IttveMe\www\MenuArticles.php(92): ttools\ArticlesMaker->BaseFirstCreate()
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 187
+[22-Nov-2022 20:33:11 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\_MakeMenu() in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php:111
+Stack trace:
+#0 C:\IttveMe\www\MenuArticles.php(98): ttools\ArticlesMaker->MakeMenu('')
+#1 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#2 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 111
+[22-Nov-2022 20:34:28 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\ShowTree16() in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:364
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(111): ttools\_MakeMenu('C:\\IttveMe\\www/...', 'tve', '23ety17', '')
+#1 C:\IttveMe\www\MenuArticles.php(98): ttools\ArticlesMaker->MakeMenu('')
+#2 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#3 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 364
+[22-Nov-2022 20:36:47 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\_MakeTblMenu() in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php:103
+Stack trace:
+#0 C:\IttveMe\www\MenuArticles.php(110): ttools\ArticlesMaker->MakeTblMenu(Array, '>..', '<..')
+#1 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#2 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 103

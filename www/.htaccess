@@ -72,7 +72,6 @@ php_value upload_max_filesize 3M
 RewriteEngine On
 ## Преобразовываем URL-запросы главных страниц сайта
 ## RewriteRule ^home$ index.php [L]
-## RewriteRule ^zhizn-i-puteshestviya$ ?Com=LifeMenu [L]
 
 RewriteRule ^zhizn-i-puteshestviya$              ?Com=zhizn-i-puteshestviya [L]
 RewriteRule ^otpravit-avtoru-soobshchenie$       ?Com=otpravit-avtoru-soobshchenie [L]
@@ -88,8 +87,8 @@ RewriteRule ^sozdat-material-ili-redaktirovat$   ?Com=sozdat-material-ili-redakt
 ## RewriteRule ^reset$ /Reset/ [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
-## RewriteCond %{ENV:HTTPS} !on
-## RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ## Перенаправляем ошибки в файл e404.php
 ## ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 

@@ -83,6 +83,8 @@ $urlHome      = $_WORKSPACE[wsUrlHome];      // Начальная страни�
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
+   // Указываем тип базы данных (по сайту) для управления классом ArticlesMaker   
+   define ("articleSite",'IttveMe'); 
    // Указываем размещение библиотеки и подключаем прикладные функции TPhpPrown
    define ("pathPhpPrown",$SiteHost.'/TPhpPrown/TPhpPrown');
    require_once pathPhpPrown."/CommonPrown.php";
@@ -97,6 +99,8 @@ try
    require_once pathPhpTools."/iniToolsMessage.php";
    require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
    require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
+   require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
+
 
    // Выполняем начальную инициализацию
    require_once "Common.php";     // Всегда 1-ый корневой модуль в списке
@@ -173,4 +177,13 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
       $MakeIs=true;
    }
 }
+
+/*
+  Тестирование                                           - HTML -     - CSS -   
+-------------------------------------------------------------------------------
+https://www.ittve.me/                                   22.11.2022 - 22.11.2022 
+https://www.ittve.me/zhizn-i-puteshestviya              22.11.2022 - 22.11.2022 
+https://www.ittve.me/sozdat-material-ili-redaktirovat   xx.11.2022 - 22.11.2022
+*/
+
 ?> <!-- --> <?php // ******************************************** index.php ***
