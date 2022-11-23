@@ -93,6 +93,8 @@
 /**
  * Выводим иконки в названиях разделов
 **/
+
+/*
 .accordion > li > a:before 
 {
 	position:absolute;
@@ -127,6 +129,8 @@
 .accordion li.v-kontakte > a:before{background-position:-72px -24px;}
 .accordion li.v-kontakte:hover > a:before,
 .accordion li.v-kontakte:target > a:before{background-position:-72px 0;}
+
+*/
 /**
  * Устанавливаем цвета и бордюры пунктов меню со статьями
 **/
