@@ -451,10 +451,9 @@ IttveMe
 2=www\UpSiteCSS.php
 3=www\UpSite.php
 4=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
-5=..\TPhpTools\TPhpTools\TArticlesMaker\CommonArticlesMaker.php
-6=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
-7=www\MenuArticles.php
-8=www\Styles\MenuArticles.css
+5=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
+6=www\MenuArticles.php
+7=www\Styles\MenuArticles.css
 [Selected Project Files]
 Main=
 Selected=www\MenuArticles.php
@@ -462,7 +461,7 @@ Selected=www\MenuArticles.php
 TopLine=142
 Caret=44,175
 [www\index.php]
-TopLine=151
+TopLine=149
 Caret=12,189
 [www\UpSiteCSS.php]
 TopLine=252
@@ -471,17 +470,14 @@ Caret=45,290
 TopLine=110
 Caret=54,123
 [..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=91
-Caret=1,1
-[..\TPhpTools\TPhpTools\TArticlesMaker\CommonArticlesMaker.php]
-TopLine=38
-Caret=1,1
+TopLine=95
+Caret=30,109
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
-TopLine=61
-Caret=77,71
+TopLine=25
+Caret=1,85
 [www\MenuArticles.php]
 TopLine=1
-Caret=65,25
+Caret=3,36
 [www\Styles\MenuArticles.css]
-TopLine=25
+TopLine=124
 Caret=3,133

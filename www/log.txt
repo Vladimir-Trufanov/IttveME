@@ -103,3 +103,13 @@ Stack trace:
 #2 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
 #3 {main}
   thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 103
+[24-Nov-2022 16:00:10 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\_ShowSampleMenu() (previously declared in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonArticlesMaker.php:55) in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 675
+[24-Nov-2022 21:27:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 552
+[24-Nov-2022 21:28:59 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\ShowTreeMe() (previously declared in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php:413) in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 599
+[24-Nov-2022 21:29:51 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ttools\ArticlesMaker::MakeMenu(), 0 passed in C:\IttveMe\www\MenuArticles.php on line 27 and exactly 1 expected in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php:109
+Stack trace:
+#0 C:\IttveMe\www\MenuArticles.php(27): ttools\ArticlesMaker->MakeMenu()
+#1 C:\IttveMe\www\UpSite.php(60): require_once('C:\\IttveMe\\www\\...')
+#2 C:\IttveMe\www\index.php(146): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 109
