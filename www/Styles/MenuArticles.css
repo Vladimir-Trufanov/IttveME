@@ -156,21 +156,13 @@
    background:#efefef;
 }
 /**
- * Не будем снимать тени с дат статей и количеств статей в разделах
+ * Определяем цвет дат статей и бордюр их
 **/
-/*
 .sub-menu li > a span 
 {
-	color: #797979;
-	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
-	background: transparent;
-	border: 1px solid #c9c9c9;
-
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+   color:#797979;
+   border:1px solid #c9c9c9;
 }
-*/
 /**
  * Выделяем порядковые номера статей в разделах
 **/

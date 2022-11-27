@@ -119,8 +119,7 @@ else
             require_once "ittveLife/".$p_ittveLife;
             ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
 
-            echo  prown\getTranslit('Моя жизнь').'<br>';
-            echo  prown\getTranslit('Микропутешествия').'<br>';
+            echo  prown\getTranslit('Деревянное чудо на холме').'<br>';
             
          echo '</div>';
       }
