@@ -467,7 +467,7 @@ Caret=12,189
 TopLine=252
 Caret=45,290
 [www\UpSite.php]
-TopLine=117
+TopLine=84
 Caret=1,123
 [..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=95
@@ -476,8 +476,8 @@ Caret=30,109
 TopLine=1
 Caret=4,18
 [www\Styles\MenuArticles.css]
-TopLine=159
+TopLine=117
 Caret=42,159
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
-TopLine=53
-Caret=144,82
+TopLine=547
+Caret=1,595
