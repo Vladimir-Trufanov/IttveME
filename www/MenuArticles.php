@@ -12,21 +12,20 @@
 
 echo 'Жизнь и путешествия! '.prown\getTranslit('').'&#128152;&#129315;'.' <br>';
 
-
-
-$с1='&#128152;';
-$с2=htmlspecialchars($с1);
-$с3=htmlspecialchars_decode($с2);
-echo $с1.'.'.$с2.'.'.$с3.'.'.ord($с3).'<br>';
-echo strlen($с1).' --> '.strlen($с2).' --> '.strlen($с3).'<br>';
-
-$с1='&#129315;';
-$с2=htmlspecialchars($с1);
-$с33=htmlspecialchars_decode($с2);
-echo $с1.'.'.$с2.'.'.$с3.'<br>';
-echo strlen($с1).' --> '.strlen($с2).' --> '.strlen($с3).'<br>';
-
-if ($с3==$с33) echo ('Истина!'); else echo ('ЛОЖЬ!');
+// Отлаживаем UnicodeUserClass
+$Unicoder=new ttools\UnicodeUser();
+//$Unicoder->ViewCharsetAsColomn(0);
+/*
+echo '<br>';
+$Unicoder->ViewCharsetAsTable(0,10);
+echo '<br>';
+$Unicoder->ViewCharsetAsTable(1,10); 
+*/  
+echo '<br>';
+$Unicoder->ViewCharsetAsTable(2,10);   
+echo '<br>';
+$Unicoder->ViewCharsetAsTable(3,10);   
+echo '<br>';
 
 // Готовим и выводим меню
 $Arti=new ttools\ArticlesMaker($basename,$username,$password);

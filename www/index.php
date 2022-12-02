@@ -95,13 +95,15 @@ try
    require_once pathPhpPrown."/ViewGlobal.php";
    require_once pathPhpPrown."/ViewSimpleArray.php";
    // Указываем размещение библиотеки и подключаем прикладные классы TPhpTools
+   
+   // МОЖЕТ В ИТОГЕ ЗАГРУЖАТЬ МОДУЛИ ТОЛЬКО В НУЖНЫХ СТРАНИЦАХ !!!
+   
    define ("pathPhpTools",$SiteHost.'/TPhpTools/TPhpTools');
    require_once pathPhpTools."/iniToolsMessage.php";
    require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
    require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
    require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
-
-
+   require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
    // Выполняем начальную инициализацию
    require_once "Common.php";     // Всегда 1-ый корневой модуль в списке
    require_once "iniMem.php";     // Всегда 2-ой корневой модуль в списке

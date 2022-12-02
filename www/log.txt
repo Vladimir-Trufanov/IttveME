@@ -169,3 +169,7 @@ Stack trace:
 #6 C:\IttveMe\www\MenuArticles.php(22): ttools\Articl in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 507
 [28-Nov-2022 15:25:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '.' in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 512
 [28-Nov-2022 15:27:29 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 512
+[02-Dec-2022 14:09:57 Asia/Kuwait] PHP Warning:  Unterminated comment starting line 128 in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 128
+[02-Dec-2022 14:09:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 173
+[02-Dec-2022 14:36:08 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TUnicodeUser/UnicodeUserClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\index.php on line 106
+[02-Dec-2022 14:54:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Arti' (T_VARIABLE) in C:\IttveMe\www\MenuArticles.php on line 53

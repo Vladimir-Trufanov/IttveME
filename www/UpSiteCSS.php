@@ -53,7 +53,23 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
-
+// Определяем письменный шрифт, который будем использовать для статей
+// (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')
+echo'  
+   <style>
+   @font-face 
+   {
+      /* Имя шрифта для страницы */
+      font-family: Emojitveme; 
+      /* Путь к файлу со шрифтом */
+      src: url(Fonts/Lobster.ttf); 
+   }
+   p 
+   {
+      font-family: Emojitveme;
+   }
+   </style>
+';
 // Делаем настройки при заходе в режим редактирования
 if (prown\isComRequest(mmlSozdatRedaktirovat))
 {
