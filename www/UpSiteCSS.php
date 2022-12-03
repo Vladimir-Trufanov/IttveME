@@ -68,6 +68,12 @@ echo'
    {
       font-family: Emojitveme;
    }
+   
+   #setTable {border-collapse:separate; border-spacing:4px; width:100%}
+   .setThead {text-align:center; font-family:Emojitveme; font-size:1.8rem;}
+   .setTbody tr td {width:4rem; height:4rem; font-size:3.6rem; text-align:center;}
+   .setTbody tr td:hover {background:#a2c3dd; transition-duration:0.2s; border-radius:1rem;}
+
    </style>
 ';
 // Делаем настройки при заходе в режим редактирования

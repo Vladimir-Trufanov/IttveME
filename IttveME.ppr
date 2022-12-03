@@ -95,6 +95,9 @@ IttveMe
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
+		+Fonts
+			www\Fonts\AliExpress.ico
+			www\Fonts\Lobster.ttf
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -149,7 +152,7 @@ IttveMe
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+ittveNews
+		-ittveNews
 			www\ittveNews\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 			www\ittveNews\IttveNews.html
 		-jQuery
@@ -165,7 +168,7 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
 			www\Styles\Gallery-Image.css
@@ -466,16 +469,16 @@ Caret=44,175
 TopLine=77
 Caret=67,99
 [www\UpSiteCSS.php]
-TopLine=42
-Caret=1,73
+TopLine=60
+Caret=1,75
 [www\UpSite.php]
 TopLine=95
 Caret=1,123
 [www\MenuArticles.php]
-TopLine=14
-Caret=1,29
-[www\Styles\MenuArticles.css]
 TopLine=1
+Caret=35,27
+[www\Styles\MenuArticles.css]
+TopLine=122
 Caret=42,159
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
 TopLine=49
@@ -484,8 +487,8 @@ Caret=137,80
 TopLine=36
 Caret=33,69
 [..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php]
-TopLine=79
-Caret=31,108
+TopLine=103
+Caret=1,129
 [..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php]
 TopLine=1
 Caret=1,18
