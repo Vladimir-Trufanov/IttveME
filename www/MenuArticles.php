@@ -22,9 +22,9 @@ echo '<br>';
 $Unicoder->ViewCharsetAsTable(1,10); 
 */  
 echo '<br>';
-$Unicoder->ViewCharsetAsTable(2,10);   
+//$Unicoder->ViewCharsetAsTable(2,16);   
 echo '<br>';
-$Unicoder->ViewCharsetAsTable(3,10);   
+//$Unicoder->ViewCharsetAsTable(3,16);   
 echo '<br>';
 
 // Готовим и выводим меню

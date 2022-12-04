@@ -95,6 +95,9 @@ IttveMe
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
+		-Fonts
+			www\Fonts\AliExpress.ico
+			www\Fonts\Lobster.ttf
 		-Images
 			-Buttons
 				www\Images\Buttons\tveMenuD.png
@@ -149,7 +152,7 @@ IttveMe
 			www\ittveLife\ittve02-065-Фонтанчик.jpg
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		+ittveNews
+		-ittveNews
 			www\ittveNews\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 			www\ittveNews\IttveNews.html
 		-jQuery
@@ -165,11 +168,11 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		-Styles
+		+Styles
+			www\Styles\Content.css
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
 			www\Styles\Gallery-Image.css
-			www\Styles\ImgRight.css
 			www\Styles\iniStyles.css
 			www\Styles\MenuArticles.css
 			www\Styles\MenuLeader.css
@@ -425,7 +428,7 @@ IttveMe
 		www\EditText.php
 		www\error.php
 		www\index.php
-		www\iniMem.php
+		www\Inimem.php
 		www\iniWorkSpace.php
 		www\ittve.db3
 		www\ittve-log.txt
@@ -448,44 +451,44 @@ IttveMe
 [Open project files]
 0=www\iniMem.php
 1=www\index.php
-2=www\UpSiteCSS.php
-3=www\UpSite.php
-4=www\MenuArticles.php
-5=www\Styles\MenuArticles.css
-6=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
-7=www\Styles\Footer-Info.css
-8=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php
-9=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php
+2=www\UpSite.php
+3=www\MenuArticles.php
+4=www\Styles\MenuArticles.css
+5=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
+6=www\MenuLeader.php
+7=www\Common.php
+8=www\UpSiteCSS.php
+9=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\MenuArticles.php
+Selected=www\UpSiteCSS.php
 [www\iniMem.php]
-TopLine=142
-Caret=44,175
+TopLine=41
+Caret=21,52
 [www\index.php]
 TopLine=77
 Caret=67,99
-[www\UpSiteCSS.php]
-TopLine=42
-Caret=1,73
 [www\UpSite.php]
-TopLine=95
-Caret=1,123
+TopLine=38
+Caret=2,53
 [www\MenuArticles.php]
-TopLine=14
-Caret=1,29
+TopLine=23
+Caret=3,27
 [www\Styles\MenuArticles.css]
-TopLine=1
+TopLine=159
 Caret=42,159
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
-TopLine=49
+TopLine=52
 Caret=137,80
-[www\Styles\Footer-Info.css]
-TopLine=36
-Caret=33,69
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php]
-TopLine=79
-Caret=31,108
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php]
-TopLine=1
-Caret=1,18
+[www\MenuLeader.php]
+TopLine=29
+Caret=1,1
+[www\Common.php]
+TopLine=27
+Caret=10,43
+[www\UpSiteCSS.php]
+TopLine=349
+Caret=1,359
+[www\Styles\Content.css]
+TopLine=15
+Caret=22,29

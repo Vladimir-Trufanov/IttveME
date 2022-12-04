@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 21.11.2022
+// Copyright © 2019 tve                              Посл.изменение: 03.12.2022
 
 /*
 // Подключаем TJsPrown и TJsTools
@@ -23,9 +23,6 @@ echo '
 // Начинаем html-страницу
 echo '</head>'; 
 echo '<body>'; 
-
-
-
 // Проверяем не требуется ли просто вывести изображение и выводим его
 if ($ImageFile<>NULL)
 {
@@ -38,7 +35,6 @@ else
    // активной статьи, а в некоторых случаях галереи редактируемой статьи (при 
    // переходе в режим редактирования по кнопке 'Редактировать или создать 
    // материал', при ...):
-
    // а) выводим галерею для редактирования
    if (prown\isComRequest(mmlSozdatRedaktirovat))
    {
@@ -53,20 +49,29 @@ else
       require_once "ittveLife/GalleryLife.php";
       echo '</div>';
    }
-   // Выводим текстовый контент страницы айта
-   echo '<div id="Content">';
-      // Выводим меню, когда он выбран
-      echo '<div id="MenuArticles">';
-         require_once "MenuArticles.php";
+   // "News" выводим только в двухколоночном режиме при выводе статьи и новостей
+   if (isChistoNewsDouble($c_PresMode))
+   {
+      echo '<div id="News">';
+      //require_once "ittveNews/".$p_ittveNews;
+      require_once "ittveNews/IttveNews.html";
       echo '</div>';
-
+   }
+   // Выводим текстовый контент страницы cайта
+   if (prown\isComRequest(mmlZhiznIputeshestviya))
+      echo '<div id="Life" class="MenuArticles">';
+   else echo '<div id="Life">';
+      // Выводим меню, когда он выбран
+      // ?Com=zhizn-i-puteshestviya
+      if (prown\isComRequest(mmlZhiznIputeshestviya))
+      {
+         require_once "MenuArticles.php";
+      }
       // Выбираем страницу для отправки сообщения автору
       // ?Com=otpravit-avtoru-soobshchenie
       if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
       {
-         echo '<div id="Life">';
          echo 'Отправить сообщение автору'.'<br>';
-         echo '</div>';
          //$page='/DetmanPage/www/index1.php';
          //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
       }
@@ -74,26 +79,20 @@ else
       // ?Com=izmenit-nastrojki-sajta-v-brauzere
       else if (prown\isComRequest(mmlIzmenitNastrojkiSajta))
       {
-         echo '<div id="Life">';
          echo 'Изменить настройки сайта в браузере'.'<br>';
          // Инициируем класс, изменяем настройки
          $Tune=new tune\Tuning($aPresMode,$aModeImg,$urlHome);
-         echo '</div>';
       }
       // Выбираем страницу для входа по логину или для регистрации
       // ?Com=vojti-ili-zaregistrirovatsya
       else if (prown\isComRequest(mmlVojtiZaregistrirovatsya))
       {
-         echo '<div id="Life">';
          echo 'Войти или зарегистрироваться'.'<br>';
-         echo '</div>';
       }
       // Выбираем страницу для редактирования или создания материала
       // ?Com=sozdat-material-ili-redaktirovat
       else if (prown\isComRequest(mmlSozdatRedaktirovat))
       {
-      
-         echo '<div id="Life">';
          // Редактировать или создать материал'.'<br>';
          //require_once "EditText.php";
          // Инициируем класс, редактируем или создаём материал
@@ -111,17 +110,9 @@ else
       // Запускаем страницу с активным материалом
       else
       {
-         echo '<div id="News">';
-            //require_once "ittveNews/".$p_ittveNews;
-            require_once "ittveNews/IttveNews.html";
-         echo '</div>';
-         echo '<div id="Life">';
-            require_once "ittveLife/".$p_ittveLife;
-            ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-
-            echo  prown\getTranslit('Деревянное чудо на холме').'<br>';
-            
-         echo '</div>';
+         require_once "ittveLife/".$p_ittveLife;
+         ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+         echo  prown\getTranslit('Деревянное чудо на холме').'<br>';
       }
    echo '</div>';
    

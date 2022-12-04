@@ -1,4 +1,4 @@
-/** HTML5/CSS3, EDGE/CHROME                                *** ImgRight.css ***
+/** HTML5/CSS3, EDGE/CHROME                                 *** Content.css ***
 
  ******************************************************************************
  * ittve.me      Спозиционировать справа галерею изображений и сделать только *
@@ -7,14 +7,14 @@
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 22.10.2022
+ Copyright © 2019 tve                                Посл.изменение: 03.12.2022
 */
 
 /* 
  Позиционируем основные секции сайта: галерею новостных изображений, 
  секцию новых материалов, подвал, секцию архивных статей скрываем
 */
-#News,#Life,#MenuArticles
+#News,#Life
 { 
    position:fixed; 
    overflow:auto; 
@@ -22,26 +22,13 @@
    bottom:5.8rem;
    text-align:justify;
 }
-#Life,#MenuArticles
+#News,#Life
 {
    padding:0.5rem 0.5rem;
+   background:transparent;
+   /*overflow:auto;*/ 
 }
-#MenuArticles
-{ 
-   right:33%;
-   width:67%; 
-}
-#News
-{ 
-   background:transparent; 
-   /*background:blue;*/  
-}
-#Life                                                                   
-{ 
-   background:transparent; 
-   /*background:teal;*/  
-}
-#MenuArticles                                                                   
+.MenuArticles                                                                   
 { 
    background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
@@ -62,7 +49,7 @@
    background:transparent; /*yellow*/; 
 }
 /*
- ************************************************************* ImgRight.css ***
+ ************************************************************** Content.css ***
 */	
 	
 

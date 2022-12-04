@@ -53,6 +53,7 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
+
 // Определяем письменный шрифт, который будем использовать для статей
 // (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')
 echo'  
@@ -68,15 +69,108 @@ echo'
    {
       font-family: Emojitveme;
    }
+   
+   #setTable {border-collapse:separate; border-spacing:4px; width:100%}
+   .setThead {text-align:center; font-family:Emojitveme; font-size:1.8rem;}
+   .setTbody tr td {width:4rem; height:4rem; font-size:3.6rem; text-align:center;}
+   .setTbody tr td:hover {background:#a2c3dd; transition-duration:0.2s; border-radius:1rem;}
+
    </style>
 ';
+// --- Формируем стили --------------------------------------------------------
+echo "<style>";
+// Позиционируем колонки материалов и новостей
+if ($c_PresMode==rpmDoubleLeft)
+{
+   echo "
+   #News
+   {
+     right:0;
+     width:33%;
+   }
+   #Life
+   { 
+      right:33%;
+      width:34%; 
+   }
+   ";
+}
+else if ($c_PresMode==rpmDoubleRight)
+{
+   echo "
+   #News
+   { 
+     right:67%;
+     width:33%;
+   }
+   #Life
+   { 
+      right:33%;
+      width:34%; 
+   }
+   ";
+}
+else if ($c_PresMode==rpmOneLeft)
+{
+   echo "
+   #Life
+   { 
+      left:33%;
+      width:67%; 
+   }
+   ";
+}
+else
+   echo "
+   #Life
+   { 
+      right:33%;
+      width:67%; 
+   }
+   ";
+// Позиционируем подвальную часть при правосторонней галерее
+if (($c_PresMode==rpmDoubleRight)||($c_PresMode==rpmOneRight))
+{
+   echo "
+   #Footer,#Info
+   { 
+      right:33%;
+      width:67%; 
+   }
+   ";
+}
+// Позиционируем подвальную часть при левосторонней галерее
+else
+{
+   echo "
+   #Footer,#Info
+   { 
+      left:33%;
+      width:67%; 
+   }
+   ";
+}
+//
+if ($c_PresMode==rpmDoubleLeft)
+{
+}
+// Если работает двухколоночный режим, но новости не должны просматриваться,
+// то делаем размеры колонки новостей нулевыми
+if (isNoNewsDouble($c_PresMode))
+{
+   echo "
+      #News
+      { 
+        right:0; width:0; 
+      }
+   ";
+} 
 // Делаем настройки при заходе в режим редактирования
 if (prown\isComRequest(mmlSozdatRedaktirovat))
 {
    // Настраиваем див всплывающего окна
    /*
    ?>
-   <style>
    #okno 
    {
       width: 300px;
@@ -108,7 +202,6 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
       cursor:pointer;
    }
    .close:hover {background: #e6e6ff;}
-   </style>
    <?php
    */
    // Подключаем TinyMCE
@@ -152,14 +245,12 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
    </script>
    ';
 }   
-
-// При одноколоночном режиме отключаем див '#News'
+//
 if (($c_PresMode==rpmOneRight)||
    (prown\isComRequest('Tuning','Com'))||
    (prown\isComRequest('Мaterial','Edit')))
 {
    echo "
-   <style>
    <!-- 
    #okno 
    {
@@ -167,18 +258,6 @@ if (($c_PresMode==rpmOneRight)||
       width:60%; 
    }
    -->
-   #News
-   { 
-     right:0;
-     width:0;
-     overflow:hidden; 
-     padding:0; 
-   }
-   #Life,#Footer,#Info
-   { 
-      right:33%;
-      width:67%; 
-   }
    #Gallery,#EditGallery
    {
       margin-left:67%;
@@ -192,25 +271,11 @@ if (($c_PresMode==rpmOneRight)||
    {
       right:33%;
    }
-   </style>
    ";
 }
 else if ($c_PresMode==rpmOneLeft)
 {
    echo "
-   <style>
-   #News
-   {
-     right:0;
-     width:0; 
-     overflow:hidden;
-     padding:0; 
-   }
-   #Life,#Footer,#Info
-   { 
-      left:33%;
-      width:67%; 
-   }
    #Gallery,#EditGallery
    {
       margin-right:67%;
@@ -224,30 +289,12 @@ else if ($c_PresMode==rpmOneLeft)
    {
       right:0;
    }
-   </style>
    ";
 }
+// При двухколоночном с правой галереей появляется #News
 else if ($c_PresMode==rpmDoubleRight)
 {
    echo "
-   <style>
-   #News
-   { 
-     right:67%;
-     width:33%;
-     overflow:auto; 
-     padding:0.5rem 0.5rem;
-   }
-   #Life
-   { 
-      right:33%;
-      width:34%; 
-   }
-   #Footer,#Info
-   { 
-      right:33%;
-      width:67%; 
-   }
    #Gallery,#EditGallery
    {
       margin-left:67%;
@@ -261,30 +308,12 @@ else if ($c_PresMode==rpmDoubleRight)
    {
       right:33%;
    }
-   </style>
    ";
 }
+// При двухколоночном с левой галереей появляется #News
 else
 {
    echo "
-   <style>
-   #News
-   {
-     right:0;
-     width:33%;
-     overflow:auto; 
-     padding:0.5rem 0.5rem;
-   }
-   #Life
-   { 
-      right:33%;
-      width:34%; 
-   }
-   #Footer,#Info
-   { 
-      left:33%;
-      width:67%; 
-   }
    #Gallery,#EditGallery
    {
       margin-right:67%;
@@ -298,7 +327,6 @@ else
    {
       right:0;
    }
-   </style>
    ";
 }
 
@@ -324,44 +352,10 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
    }
    */
 }
-
-
-
 // Зажигаем при необходимости меню статей
 // ?Com=zhizn-i-puteshestviya
 if (prown\isComRequest(mmlZhiznIputeshestviya))
 {
-   echo "
-   <style>
-   <!-- 
-   #News,#Life 
-   {
-      display:none; 
-   }
-   -->
-   #MenuArticles 
-   {
-      display:block;
-   }
-   </style>
-   ";
-}
-else
-{
-   echo "
-   <style>
-   #MenuArticles 
-   {
-      display:none; 
-   }
-   <!-- 
-   #News,#Life 
-   {
-      display:block;
-   }
-   -->
-   </style>
-   ";
 }
 
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
@@ -376,4 +370,8 @@ if ($SiteDevice==Mobile)
 else 
 {   
 }
+// Завершаем стили 
+echo "</style>";
+// ----------------------------------------------------------------------------
+
 // <!-- --> ************************************************* UpSiteCSS.php ***
