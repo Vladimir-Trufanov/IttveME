@@ -173,3 +173,5 @@ Stack trace:
 [02-Dec-2022 14:09:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 173
 [02-Dec-2022 14:36:08 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TUnicodeUser/UnicodeUserClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\index.php on line 106
 [02-Dec-2022 14:54:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Arti' (T_VARIABLE) in C:\IttveMe\www\MenuArticles.php on line 53
+[03-Dec-2022 08:48:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''</em>'' (T_CONSTANT_ENCAPSED_STRING) in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php on line 131
+[03-Dec-2022 09:13:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '.' in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php on line 124
