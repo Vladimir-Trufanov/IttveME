@@ -95,11 +95,7 @@ IttveMe
 				www\font-awesome-4.7.0\scss\_variables.scss
 				www\font-awesome-4.7.0\scss\font-awesome.scss
 			www\font-awesome-4.7.0\HELP-US-OUT.txt
-<<<<<<< HEAD
 		-Fonts
-=======
-		+Fonts
->>>>>>> df13172b4ee6fe7ab3daf0ea4e396828f2009d1c
 			www\Fonts\AliExpress.ico
 			www\Fonts\Lobster.ttf
 		-Images
@@ -172,11 +168,8 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		+Styles
-<<<<<<< HEAD
+		-Styles
 			www\Styles\Content.css
-=======
->>>>>>> df13172b4ee6fe7ab3daf0ea4e396828f2009d1c
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
 			www\Styles\Gallery-Image.css
@@ -468,39 +461,25 @@ IttveMe
 9=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\UpSiteCSS.php
+Selected=www\Common.php
 [www\iniMem.php]
 TopLine=41
 Caret=21,52
 [www\index.php]
 TopLine=77
 Caret=67,99
-<<<<<<< HEAD
-=======
-[www\UpSiteCSS.php]
-TopLine=60
-Caret=1,75
->>>>>>> df13172b4ee6fe7ab3daf0ea4e396828f2009d1c
 [www\UpSite.php]
 TopLine=38
 Caret=2,53
 [www\MenuArticles.php]
-<<<<<<< HEAD
-TopLine=23
-Caret=3,27
+TopLine=28
+Caret=1,36
 [www\Styles\MenuArticles.css]
-TopLine=159
-=======
-TopLine=1
-Caret=35,27
-[www\Styles\MenuArticles.css]
-TopLine=122
->>>>>>> df13172b4ee6fe7ab3daf0ea4e396828f2009d1c
+TopLine=130
 Caret=42,159
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
 TopLine=52
 Caret=137,80
-<<<<<<< HEAD
 [www\MenuLeader.php]
 TopLine=29
 Caret=1,1
@@ -508,19 +487,8 @@ Caret=1,1
 TopLine=27
 Caret=10,43
 [www\UpSiteCSS.php]
-TopLine=349
+TopLine=326
 Caret=1,359
 [www\Styles\Content.css]
 TopLine=15
 Caret=22,29
-=======
-[www\Styles\Footer-Info.css]
-TopLine=36
-Caret=33,69
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php]
-TopLine=103
-Caret=1,129
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php]
-TopLine=1
-Caret=1,18
->>>>>>> df13172b4ee6fe7ab3daf0ea4e396828f2009d1c

@@ -21,17 +21,16 @@ $Unicoder->ViewCharsetAsTable(0,10);
 echo '<br>';
 $Unicoder->ViewCharsetAsTable(1,10); 
 */  
-echo '<br>';
-<<<<<<< HEAD
+//echo '<br>';
+//<<<<<<< HEAD
 //$Unicoder->ViewCharsetAsTable(2,16);   
-echo '<br>';
+//echo '<br>';
 //$Unicoder->ViewCharsetAsTable(3,16);   
-=======
-$Unicoder->ViewCharsetAsTable(2,16);   
-echo '<br>';
-$Unicoder->ViewCharsetAsTable(3,16);   
->>>>>>> df13172b4ee6fe7ab3daf0ea4e396828f2009d1c
-echo '<br>';
+//=======
+//$Unicoder->ViewCharsetAsTable(2,16);   
+//echo '<br>';
+//$Unicoder->ViewCharsetAsTable(3,16);   
+//echo '<br>';
 
 // Готовим и выводим меню
 $Arti=new ttools\ArticlesMaker($basename,$username,$password);
