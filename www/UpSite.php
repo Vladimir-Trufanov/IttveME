@@ -69,7 +69,7 @@ else
       }
       // Выбираем страницу для отправки сообщения автору
       // ?Com=otpravit-avtoru-soobshchenie
-      if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+      else if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
       {
          echo 'Отправить сообщение автору'.'<br>';
          //$page='/DetmanPage/www/index1.php';

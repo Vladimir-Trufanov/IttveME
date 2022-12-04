@@ -461,7 +461,7 @@ IttveMe
 9=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\Common.php
+Selected=www\Styles\MenuArticles.css
 [www\iniMem.php]
 TopLine=41
 Caret=21,52
@@ -469,13 +469,13 @@ Caret=21,52
 TopLine=77
 Caret=67,99
 [www\UpSite.php]
-TopLine=38
-Caret=2,53
+TopLine=90
+Caret=12,72
 [www\MenuArticles.php]
-TopLine=28
+TopLine=21
 Caret=1,36
 [www\Styles\MenuArticles.css]
-TopLine=130
+TopLine=155
 Caret=42,159
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
 TopLine=52
@@ -484,11 +484,11 @@ Caret=137,80
 TopLine=29
 Caret=1,1
 [www\Common.php]
-TopLine=27
+TopLine=33
 Caret=10,43
 [www\UpSiteCSS.php]
-TopLine=326
-Caret=1,359
+TopLine=338
+Caret=1,312
 [www\Styles\Content.css]
 TopLine=15
 Caret=22,29

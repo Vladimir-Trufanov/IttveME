@@ -291,7 +291,6 @@ else if ($c_PresMode==rpmOneLeft)
    }
    ";
 }
-// При двухколоночном с правой галереей появляется #News
 else if ($c_PresMode==rpmDoubleRight)
 {
    echo "
@@ -310,7 +309,6 @@ else if ($c_PresMode==rpmDoubleRight)
    }
    ";
 }
-// При двухколоночном с левой галереей появляется #News
 else
 {
    echo "
