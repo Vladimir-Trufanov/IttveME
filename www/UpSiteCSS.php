@@ -40,7 +40,7 @@ echo '<script src="jQuery/jquery-2.2.4.min.js"> </script>';
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем справа галерею изображений и делам только одну колонку для 
 // статей. Выполняем общее фиксирование элементов разметки  
-echo '<link rel="stylesheet" type="text/css" href="Styles/ImgRight.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 // Определяем стили галлереи, определяем стили для показа изображения, 
 // выбранной в галерее картинки, на отдельной странице в ее рамках 
 // или в натуральную величину 
@@ -79,36 +79,55 @@ echo'
 ';
 // --- Формируем стили --------------------------------------------------------
 echo "<style>";
-// Позиционируем колонки материалов и новостей
-if ($c_PresMode==rpmDoubleLeft)
+// Если работает двухколоночный режим, но новости не должны просматриваться,
+// то делаем размеры колонки новостей нулевыми
+/*
+if (isNoNewsDouble($c_PresMode))
 {
    echo "
-   #News
-   {
-     right:0;
-     width:33%;
-   }
-   #Life
-   { 
-      right:33%;
-      width:34%; 
-   }
+      #News
+      { 
+        right:0; width:0; 
+      }
    ";
+} 
+*/
+// Позиционируем колонки материалов и новостей
+// (если работает двухколоночный режим, но новости не должны просматриваться,
+// то делаем размеры колонки новостей нулевыми)
+if ($c_PresMode==rpmDoubleLeft)
+{
+   if (isNoNewsDouble($c_PresMode))
+   {
+      echo "
+         #News{right:0; width:0;}
+         #Life{right:0;width:67%;}
+      ";
+   }
+   else
+   {
+      echo "
+         #News{right:0;width:33%;}
+         #Life{right:33%;width:34%;}
+      ";
+   } 
 }
 else if ($c_PresMode==rpmDoubleRight)
 {
-   echo "
-   #News
-   { 
-     right:67%;
-     width:33%;
+   if (isNoNewsDouble($c_PresMode))
+   {
+      echo "
+         #News{right:0;width:0;}
+         #Life{right:33%;width:67%;}
+      ";
    }
-   #Life
-   { 
-      right:33%;
-      width:34%; 
-   }
-   ";
+   else
+   {
+      echo "
+         #News{right:67%;width:33%;}
+         #Life{right:33%;width:34%;}
+      ";
+   } 
 }
 else if ($c_PresMode==rpmOneLeft)
 {
@@ -154,17 +173,6 @@ else
 if ($c_PresMode==rpmDoubleLeft)
 {
 }
-// Если работает двухколоночный режим, но новости не должны просматриваться,
-// то делаем размеры колонки новостей нулевыми
-if (isNoNewsDouble($c_PresMode))
-{
-   echo "
-      #News
-      { 
-        right:0; width:0; 
-      }
-   ";
-} 
 // Делаем настройки при заходе в режим редактирования
 if (prown\isComRequest(mmlSozdatRedaktirovat))
 {

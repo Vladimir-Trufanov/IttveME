@@ -168,7 +168,7 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\Content.css
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
@@ -461,7 +461,7 @@ IttveMe
 9=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\MenuArticles.css
+Selected=www\Styles\Content.css
 [www\iniMem.php]
 TopLine=41
 Caret=21,52
@@ -469,13 +469,13 @@ Caret=21,52
 TopLine=77
 Caret=67,99
 [www\UpSite.php]
-TopLine=90
-Caret=12,72
+TopLine=46
+Caret=47,62
 [www\MenuArticles.php]
 TopLine=21
 Caret=1,36
 [www\Styles\MenuArticles.css]
-TopLine=155
+TopLine=151
 Caret=42,159
 [..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
 TopLine=52
@@ -484,11 +484,11 @@ Caret=137,80
 TopLine=29
 Caret=1,1
 [www\Common.php]
-TopLine=33
-Caret=10,43
+TopLine=3
+Caret=53,22
 [www\UpSiteCSS.php]
-TopLine=338
-Caret=1,312
+TopLine=43
+Caret=24,121
 [www\Styles\Content.css]
 TopLine=15
-Caret=22,29
+Caret=1,28

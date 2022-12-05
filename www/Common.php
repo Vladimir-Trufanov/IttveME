@@ -17,7 +17,9 @@ function isProchieRegimy()
 {
    $Result=false;
    if ((prown\isComRequest(mmlZhiznIputeshestviya))||
+      (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))||
       (prown\isComRequest(mmlIzmenitNastrojkiSajta))||
+      (prown\isComRequest(mmlVojtiZaregistrirovatsya))||
       (prown\isComRequest(mmlSozdatRedaktirovat)))
    $Result=true;
    return $Result;
