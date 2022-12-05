@@ -60,38 +60,25 @@ echo'
    <style>
    @font-face 
    {
-      /* Имя шрифта для страницы */
       font-family: Emojitveme; 
-      /* Путь к файлу со шрифтом */
-      src: url(Fonts/Lobster.ttf); 
+      src: url(Styles/Lobster.ttf); 
    }
    p 
    {
       font-family: Emojitveme;
    }
-   
-   #setTable {border-collapse:separate; border-spacing:4px; width:100%}
-   .setThead {text-align:center; font-family:Emojitveme; font-size:1.8rem;}
-   .setTbody tr td {width:4rem; height:4rem; font-size:3.6rem; text-align:center;}
-   .setTbody tr td:hover {background:#a2c3dd; transition-duration:0.2s; border-radius:1rem;}
-
    </style>
 ';
+
+// Если выбрана страница с главным меню, то создаем объекты для работы с меню,
+// выборкой юникодов и формируем стили разметки
+if (prown\isComRequest(mmlZhiznIputeshestviya))
+{
+   $Unicoder=new ttools\UnicodeUser('Emojitveme'); 
+   $Arti=new ttools\ArticlesMaker($basename,$username,$password);
+}
 // --- Формируем стили --------------------------------------------------------
 echo "<style>";
-// Если работает двухколоночный режим, но новости не должны просматриваться,
-// то делаем размеры колонки новостей нулевыми
-/*
-if (isNoNewsDouble($c_PresMode))
-{
-   echo "
-      #News
-      { 
-        right:0; width:0; 
-      }
-   ";
-} 
-*/
 // Позиционируем колонки материалов и новостей
 // (если работает двухколоночный режим, но новости не должны просматриваться,
 // то делаем размеры колонки новостей нулевыми)
@@ -335,47 +322,10 @@ else
    }
    ";
 }
-
-// При входе в режим редактирования материала управляем расположением галереи
-if (prown\isComRequest(mmlSozdatRedaktirovat))
-{
-   /*
-   if (($c_PresMode==rpmOneRight)||($c_PresMode==rpmDoubleRight))
-   {
-      echo "
-      <style>
-         #EditGallery{margin-left:67%;width:33%;}
-      </style>
-      ";
-   }
-   if (($c_PresMode==rpmOneLeft)||($c_PresMode==rpmDoubleLeft))
-   {
-      echo "
-      <style>
-         #EditGallery{margin-right:67%;width:33%;}
-      </style>
-      ";
-   }
-   */
-}
-// Зажигаем при необходимости меню статей
-// ?Com=zhizn-i-puteshestviya
-if (prown\isComRequest(mmlZhiznIputeshestviya))
-{
-}
-
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
 $ImageFile=prown\getComRequest('Image');
-// Делаем персональные стили для смартфона
-if ($SiteDevice==Mobile) 
-{
-}
-// Делаем персональные стили для компьютера
-else 
-{   
-}
 // Завершаем стили 
 echo "</style>";
 // ----------------------------------------------------------------------------
