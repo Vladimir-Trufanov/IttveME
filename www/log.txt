@@ -1,1 +1,11 @@
 [06-Dec-2022 20:13:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\MenuArticles.php on line 19
+[08-Dec-2022 16:56:53 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'prev' (T_STRING), expecting ',' or ';' in C:\IttveMe\www\MenuArticles.php on line 18
+[08-Dec-2022 19:20:09 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\UnicodeUser::ViewFontAwesome470AsColomn() in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php on line 143
+[08-Dec-2022 19:21:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\MenuArticles.php on line 21
+[08-Dec-2022 19:43:17 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\FontAwesome470next() in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php:139
+Stack trace:
+#0 C:\IttveMe\www\MenuArticles.php(17): ttools\UnicodeUser->ViewFontAwesome470AsColomn('f000', 'f2e0')
+#1 C:\IttveMe\www\UpSite.php(68): require_once('C:\\IttveMe\\www\\...')
+#2 C:\IttveMe\www\index.php(151): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php on line 139

@@ -13,7 +13,10 @@
 echo 'Жизнь и путешествия! '.prown\getTranslit('').'&#128152;&#129315;'.' <br>';
 
 // $Unicoder->ViewCharsetAsColomn(0);
-// $Unicoder->ViewIntervalAsColomn('2700','27ff');
+// $Unicoder->ViewIntervalAsColomn('f0c0','f124');
+// $Unicoder->ViewFontAwesome470AsColomn('f000','f2e0');
+$Unicoder->ViewFontAwesome470AsTable('f000','f2e0',16);
+
 echo '<br>';
 $Unicoder->ViewCharsetAsTable(4,16);   
 echo '<br>';
