@@ -1,0 +1,1 @@
+[06-Dec-2022 20:13:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\MenuArticles.php on line 19

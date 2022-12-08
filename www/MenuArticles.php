@@ -13,15 +13,11 @@
 echo 'Жизнь и путешествия! '.prown\getTranslit('').'&#128152;&#129315;'.' <br>';
 
 // $Unicoder->ViewCharsetAsColomn(0);
-
+// $Unicoder->ViewIntervalAsColomn('2700','27ff');
 echo '<br>';
-$Unicoder->ViewCharsetAsTable(0,16);
-//echo '<br>';
-//$Unicoder->ViewCharsetAsTable(1,16); 
-//echo '<br>';
-//$Unicoder->ViewCharsetAsTable(2,16);   
+$Unicoder->ViewCharsetAsTable(4,16);   
 echo '<br>';
-$Unicoder->ViewCharsetAsTable(3,16);   
+$Unicoder->ViewCharsetAsTable(5,16);   
 echo '<br>';
 
 // При отладке воссоздаем базу данных
