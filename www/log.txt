@@ -9,3 +9,4 @@ Stack trace:
 #2 C:\IttveMe\www\index.php(151): require_once('C:\\IttveMe\\www\\...')
 #3 {main}
   thrown in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php on line 139
+[09-Dec-2022 14:53:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'Punkt' (T_STRING) in C:\IttveMe\www\MenuLeader.php on line 63

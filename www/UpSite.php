@@ -112,7 +112,7 @@ else
       {
          require_once "ittveLife/".$p_ittveLife;
          ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-         echo  prown\getTranslit('Деревянное чудо на холме').'<br>';
+         echo  prown\getTranslit('Вернуться на главную страницу').'<br>';
       }
    echo '</div>';
    

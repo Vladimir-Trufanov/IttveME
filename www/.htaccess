@@ -70,21 +70,16 @@ php_value upload_max_filesize 3M
 
 ## Включаем преобразование URL
 RewriteEngine On
+
 ## Преобразовываем URL-запросы главных страниц сайта
-## RewriteRule ^home$ index.php [L]
-
-RewriteRule ^zhizn-i-puteshestviya$              ?Com=zhizn-i-puteshestviya [L]
-RewriteRule ^otpravit-avtoru-soobshchenie$       ?Com=otpravit-avtoru-soobshchenie [L]
-RewriteRule ^izmenit-nastrojki-sajta-v-brauzere$ ?Com=izmenit-nastrojki-sajta-v-brauzere [L]
-RewriteRule ^vojti-ili-zaregistrirovatsya$       ?Com=vojti-ili-zaregistrirovatsya [L]
-RewriteRule ^sozdat-material-ili-redaktirovat$   ?Com=sozdat-material-ili-redaktirovat [L]
-
-## RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
-## RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
-## RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
-## RewriteRule ^Normativy_po_otopleniyu$ Main.php?Com=refNormotop [L]
-## RewriteRule ^Redaktor_tekstov$ /TinyMCE/ [L]
-## RewriteRule ^reset$ /Reset/ [L]
+RewriteRule ^zhizn-i-puteshestviya$               ?Com=zhizn-i-puteshestviya [L]
+RewriteRule ^otpravit-avtoru-soobshchenie$        ?Com=otpravit-avtoru-soobshchenie [L]
+RewriteRule ^izmenit-nastrojki-sajta-v-brauzere$  ?Com=izmenit-nastrojki-sajta-v-brauzere [L]
+RewriteRule ^vojti-ili-zaregistrirovatsya$        ?Com=vojti-ili-zaregistrirovatsya [L]
+RewriteRule ^sozdat-material-ili-redaktirovat$    ?Com=sozdat-material-ili-redaktirovat [L]
+RewriteRule ^dobavit-novyj-razdel-materialov$     ?Com=dobavit-novyj-razdel-materialov [L]
+RewriteRule ^izmenit-nazvanie-razdela-ili-ikonku$ ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
+RewriteRule ^udalit-razdel-materialov$            ?Com=udalit-razdel-materialov [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
 RewriteCond %{ENV:HTTPS} !on

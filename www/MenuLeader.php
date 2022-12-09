@@ -7,68 +7,48 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  27.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 18.11.2022
+// Copyright © 2019 tve                              Посл.изменение: 09.12.2022
 
-/**
-Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
-Permission is hereby granted, free of charge, to any person obtaining a copy 
-of this software and associated documentation files (the "Software"), to deal 
-in the Software without restriction, including without limitation the rights 
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
-copies of the Software, and to permit persons to whom the Software is furnished 
-to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all 
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
-IN THE SOFTWARE.
-*/
-
-?>
-<!--
-Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
--->
-
-<ul class='navset'>
-   <li class='link'>
-      <span class='prev'> &#xf01c; </span>
-      <span class='small'> &#xf01c; </span>
-      <span class='full'>
-         <span class='k1'><a href= "<?php echo $cPref.mmlOtpravitAvtoruSoobshchenie; ?>">Отправить автору</a></span>
-         <span class='k2'><a href= "<?php echo $cPref.mmlOtpravitAvtoruSoobshchenie; ?>">сообщение</a></span>
-      </span>
-   </li>     
-   <li class='link'>
-      <span class='prev'>&#xf013;</span>
-      <span class='small'>&#xf013;</span>
-      <span class='full'>
-         <span class='k1'><a href= "<?php echo $cPref.mmlIzmenitNastrojkiSajta; ?>">Изменить настройки</a></span>
-         <span class='k2'><a href= "<?php echo $cPref.mmlIzmenitNastrojkiSajta; ?>">сайта в браузере</a></span>
+// ****************************************************************************
+// *                    Вывести кнопку меню управления страницей              *
+// ****************************************************************************
+function Punkt($Punkt,$cUniCod,$fString,$sString)
+{
+   echo '
+      <li class="link">
+      <span class="prev">'.$cUniCod.'</span>
+      <span class="small">'.$cUniCod.'</span>
+      <span class="full">
+         <span class="k1"><a href="'.$Punkt.'">'.$fString.'</a></span>
+         <span class="k2"><a href="'.$Punkt.'">'.$sString.'</a></span>
       </span>
    </li>
-   <li class='link'>
-      <span class='prev'>&#xf007;</span>
-      <span class='small'>&#xf007;</span>
-      <span class='full'>
-         <span class='k1'><a href= "<?php echo $cPref.mmlVojtiZaregistrirovatsya; ?>">Войти или</a></span>
-         <span class='k2'><a href= "<?php echo $cPref.mmlVojtiZaregistrirovatsya; ?>">зарегистрироваться</a></span>
-      </span>
-   </li>
-   <li class='link'>
-      <span class='prev'>&#xf044;</span>
-      <span class='small'>&#xf044;</span>
-      <span class='full'>
-         <span class='k1'><a href= "<?php echo $cPref.mmlSozdatRedaktirovat; ?>">Создать материал</a></span>
-         <span class='k2'><a href= "<?php echo $cPref.mmlSozdatRedaktirovat; ?>">или редактировать</a></span>
-      </span>
-   </li>
-</ul>
+   ';
+}
+// Начинаем меню с отсылкой к автору идеи
+echo '
+   <!--
+   Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
+   -->
+   <ul class="navset">
+';
+// Выводим пункты меню управления для страницы меню
+if (prown\isComRequest(mmlZhiznIputeshestviya))
+{
+   Punkt($urlHome,'&#xf015;','Вернуться','на главную страницу');
+   Punkt($cPref.mmlDobavitNovyjRazdel,'&#xf0f2;','Добавить новый','раздел материалов');
+   Punkt($cPref.mmlIzmenitNazvanieIkonku,'&#xf086;','Изменить название','раздела или иконку');
+   Punkt($cPref.mmlUdalitRazdelMaterialov,'&#xf1f8;','Удалить раздел','материалов');
+}
+// Выводим пункты меню главной страницы
+else
+{
+   Punkt($cPref.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
+   Punkt($cPref.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
+   Punkt($cPref.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
+   Punkt($cPref.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
+}
+// Закрываем меню
+echo '</ul>';
 
-<?php
 // ********************************************************* MenuLeader.php ***

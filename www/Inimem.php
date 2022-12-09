@@ -39,10 +39,16 @@ define ("mesCookiUserYes", 4);   // Сообщение не выводить
 
 // ------------------------------------ Тексты запросов для меню управления ---
 define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');   
+
 define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');   
 define ('mmlIzmenitNastrojkiSajta',      'izmenit-nastrojki-sajta-v-brauzere');    
 define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');     
 define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat'); 
+
+define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');   
+define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');    
+define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku');     
+define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov'); 
 // Формируем префикс вызова страницы на сайте и localhost
 if (isNichost()) $cPref=''; else $cPref='?Com=';
 
