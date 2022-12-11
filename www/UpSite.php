@@ -79,25 +79,21 @@ else
       // ?Com=izmenit-nastrojki-sajta-v-brauzere
       else if (prown\isComRequest(mmlIzmenitNastrojkiSajta))
       {
-         echo 'Изменить настройки сайта в браузере'.'<br>';
-         // Инициируем класс, изменяем настройки
-         $Tune=new tune\Tuning($aPresMode,$aModeImg,$urlHome);
+         require_once $SiteRoot.'/TMenuLeader/TuningClass.php';
       }
       // Выбираем страницу для входа по логину или для регистрации
       // ?Com=vojti-ili-zaregistrirovatsya
       else if (prown\isComRequest(mmlVojtiZaregistrirovatsya))
       {
-         echo 'Войти или зарегистрироваться'.'<br>';
+         require_once $SiteRoot.'/TMenuLeader/EntryClass.php';
       }
       // Выбираем страницу для редактирования или создания материала
       // ?Com=sozdat-material-ili-redaktirovat
       else if (prown\isComRequest(mmlSozdatRedaktirovat))
       {
          // Редактировать или создать материал'.'<br>';
-         //require_once "EditText.php";
-         // Инициируем класс, редактируем или создаём материал
-         $Tune=new edit\Editing($urlHome);
-         echo '</div>';
+         require_once $SiteRoot.'/TMenuLeader/EditClass.php';
+         $Edit=new edit\Editing($urlHome);
          /*
          echo
          '<div id="okno">

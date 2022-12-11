@@ -10,10 +10,8 @@
 //                                                   Дата создания:  04.02.2018
 // Copyright © 2018 tve                              Посл.изменение: 28.10.2022
 
-// Определяем массив режимов представления материалов
-$aPresMode=['1'=>rpmDoubleRight,'2'=>rpmDoubleLeft,'3'=>rpmOneRight,'4'=>rpmOneLeft]; 
-// Определяем массив режимов представления выбранной картинки    
-$aModeImg=['1'=>vimExiSize,'2'=>vimOnPage]; 
+echo 'Изменить настройки сайта в браузере'.'<br>';
+$Tune=new Tuning($aPresMode,$aModeImg,$urlHome);
 
 class Tuning
 {
@@ -118,4 +116,5 @@ class Tuning
       echo "</li>";
    }
 }
+
 // ******************************************************** TuningClass.php ***

@@ -10,3 +10,16 @@ Stack trace:
 #3 {main}
   thrown in C:\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php on line 139
 [09-Dec-2022 14:53:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'Punkt' (T_STRING) in C:\IttveMe\www\MenuLeader.php on line 63
+[11-Dec-2022 18:11:31 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'tune\tune\Tuning' not found in C:\IttveMe\www\TMenuLeader\TuningClass.php:14
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(82): require_once()
+#1 C:\IttveMe\www\index.php(149): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\TMenuLeader\TuningClass.php on line 14
+[11-Dec-2022 18:13:10 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'tune\tune\Tuning' not found in C:\IttveMe\www\TMenuLeader\TuningClass.php:118
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(82): require_once()
+#1 C:\IttveMe\www\index.php(149): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\TMenuLeader\TuningClass.php on line 118
+[11-Dec-2022 19:20:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$', expecting function (T_FUNCTION) or const (T_CONST) in C:\IttveMe\www\TMenuLeader\EntryClass.php on line 19

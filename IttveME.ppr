@@ -165,7 +165,7 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\Content.css
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
@@ -415,8 +415,9 @@ IttveMe
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		-TMenuLeader
+		+TMenuLeader
 			www\TMenuLeader\EditClass.php
+			www\TMenuLeader\EntryClass.php
 			www\TMenuLeader\ItemLeftFooter.php
 			www\TMenuLeader\TuningClass.php
 		www\.htaccess
@@ -435,7 +436,6 @@ IttveMe
 		www\log.txt
 		www\manifest.json
 		www\MenuArticles.php
-		www\MenuArticlesOld.php
 		www\MenuLeader.php
 		www\MessLeftFooter.php
 		www\pic.png
@@ -455,42 +455,34 @@ IttveMe
 5=www\MenuLeader.php
 6=www\Common.php
 7=www\UpSiteCSS.php
-8=www\Styles\Content.css
-9=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php
-10=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php
+8=www\TMenuLeader\EntryClass.php
 [Selected Project Files]
 Main=
-Selected=www\MenuLeader.php
+Selected=www\TMenuLeader\EntryClass.php
 [www\iniMem.php]
-TopLine=15
-Caret=43,51
+TopLine=41
+Caret=1,69
 [www\index.php]
-TopLine=71
-Caret=9,79
+TopLine=106
+Caret=61,126
 [www\UpSite.php]
-TopLine=116
-Caret=1,116
+TopLine=65
+Caret=61,86
 [www\MenuArticles.php]
-TopLine=1
+TopLine=9
 Caret=4,17
 [www\Styles\MenuArticles.css]
 TopLine=133
 Caret=42,159
 [www\MenuLeader.php]
-TopLine=15
-Caret=1,38
+TopLine=31
+Caret=1,57
 [www\Common.php]
 TopLine=3
 Caret=53,22
 [www\UpSiteCSS.php]
 TopLine=291
 Caret=1,329
-[www\Styles\Content.css]
-TopLine=15
-Caret=1,28
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php]
-TopLine=173
-Caret=1,197
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php]
-TopLine=249
-Caret=16,281
+[www\TMenuLeader\EntryClass.php]
+TopLine=1
+Caret=56,32
