@@ -8,7 +8,17 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  06.11.2022
-// Copyright © 2022 tve                              Посл.изменение: 06.11.2022
+// Copyright © 2022 tve                              Посл.изменение: 12.12.2022
+
+$Edit=new Editing($urlHome);
+/*
+echo
+  '<div id="okno">
+  Всплывающее окошко!<br>
+  <a href="#" class="close">Закрыть окно</a>
+  </div>
+  ';
+*/
 
 class Editing
 {

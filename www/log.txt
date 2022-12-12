@@ -23,3 +23,9 @@ Stack trace:
 #2 {main}
   thrown in C:\IttveMe\www\TMenuLeader\TuningClass.php on line 118
 [11-Dec-2022 19:20:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$', expecting function (T_FUNCTION) or const (T_CONST) in C:\IttveMe\www\TMenuLeader\EntryClass.php on line 19
+[12-Dec-2022 14:56:55 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'sayme\Noticing' not found in C:\IttveMe\www\TMenuLeader\NewarticleClass.php:14
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(87): require_once()
+#1 C:\IttveMe\www\index.php(149): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\TMenuLeader\NewarticleClass.php on line 14

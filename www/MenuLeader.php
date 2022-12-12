@@ -32,8 +32,11 @@ echo '
    -->
    <ul class="navset">
 ';
-// Выводим пункты меню управления для страницы меню
-if (prown\isComRequest(mmlZhiznIputeshestviya))
+// Выводим пункты меню управления для страниц из главного меню
+if (prown\isComRequest(mmlZhiznIputeshestviya)||
+    prown\isComRequest(mmlDobavitNovyjRazdel)||
+    prown\isComRequest(mmlIzmenitNazvanieIkonku)||
+    prown\isComRequest(mmlUdalitRazdelMaterialov))
 {
    Punkt($urlHome,'&#xf015;','Вернуться','на главную страницу');
    Punkt($cPref.mmlDobavitNovyjRazdel,'&#xf0f2;','Добавить новый','раздел материалов');
@@ -55,6 +58,22 @@ else if (prown\isComRequest(mmlVojtiZaregistrirovatsya))
    Punkt($cPref.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
    Punkt($cPref.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
    Punkt($cPref.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
+}
+// Выводим пункты для страницы сообщения автору 
+else if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+{
+   Punkt($urlHome,'&#xf015;','Вернуться','на главную страницу');
+   Punkt($cPref.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
+   Punkt($cPref.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
+   Punkt($cPref.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
+}
+// Выводим пункты меню при работе с материалом 
+else if (prown\isComRequest(mmlSozdatRedaktirovat))
+{
+   Punkt($urlHome,'&#xf015;','Вернуться','на главную страницу');
+   Punkt($cPref.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
+   Punkt($cPref.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
+   Punkt($cPref.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
 }
 // Выводим пункты меню главной страницы
 else

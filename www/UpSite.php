@@ -61,48 +61,39 @@ else
    if (prown\isComRequest(mmlZhiznIputeshestviya))
       echo '<div id="Life" class="MenuArticles">';
    else echo '<div id="Life">';
-      // Выводим меню, когда он выбран
-      // ?Com=zhizn-i-puteshestviya
+      
+      // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
       if (prown\isComRequest(mmlZhiznIputeshestviya))
-      {
-         require_once "MenuArticles.php";
-      }
-      // Выбираем страницу для отправки сообщения автору
-      // ?Com=otpravit-avtoru-soobshchenie
+      {require_once "MenuArticles.php";}
+      
+      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
       else if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-      {
-         echo 'Отправить сообщение автору'.'<br>';
-         //$page='/DetmanPage/www/index1.php';
-         //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-      }
-      // Выбираем страницу для изменения настроек
-      // ?Com=izmenit-nastrojki-sajta-v-brauzere
+      {require_once $SiteRoot.'/TMenuLeader/SaymeClass.php';}
+      
+      // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
       else if (prown\isComRequest(mmlIzmenitNastrojkiSajta))
-      {
-         require_once $SiteRoot.'/TMenuLeader/TuningClass.php';
-      }
-      // Выбираем страницу для входа по логину или для регистрации
-      // ?Com=vojti-ili-zaregistrirovatsya
+      {require_once $SiteRoot.'/TMenuLeader/TuningClass.php';}
+      
+      // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
       else if (prown\isComRequest(mmlVojtiZaregistrirovatsya))
-      {
-         require_once $SiteRoot.'/TMenuLeader/EntryClass.php';
-      }
-      // Выбираем страницу для редактирования или создания материала
-      // ?Com=sozdat-material-ili-redaktirovat
+      {require_once $SiteRoot.'/TMenuLeader/EntryClass.php';}
+      
+      // Работаем с материалом ---------- ?Com=sozdat-material-ili-redaktirovat
       else if (prown\isComRequest(mmlSozdatRedaktirovat))
-      {
-         // Редактировать или создать материал'.'<br>';
-         require_once $SiteRoot.'/TMenuLeader/EditClass.php';
-         $Edit=new edit\Editing($urlHome);
-         /*
-         echo
-         '<div id="okno">
-         Всплывающее окошко!<br>
-         <a href="#" class="close">Закрыть окно</a>
-         </div>
-         ';
-         */
-      }
+      {require_once $SiteRoot.'/TMenuLeader/EditClass.php';}
+      
+      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
+      else if (prown\isComRequest(mmlDobavitNovyjRazdel))
+      {require_once $SiteRoot.'/TMenuLeader/NewarticleClass.php';}
+      
+      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
+      else if (prown\isComRequest(mmlIzmenitNazvanieIkonku))
+      {require_once $SiteRoot.'/TMenuLeader/ModyarticleClass.php';}
+
+      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
+      else if (prown\isComRequest(mmlUdalitRazdelMaterialov))
+      {require_once $SiteRoot.'/TMenuLeader/DelarticleClass.php';}
+      
       // Запускаем страницу с активным материалом
       else
       {
@@ -110,6 +101,7 @@ else
          ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
          echo  prown\getTranslit('Вернуться на главную страницу').'<br>';
       }
+   
    echo '</div>';
    
    // Выводим подвал сайта

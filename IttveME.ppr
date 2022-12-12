@@ -416,9 +416,13 @@ IttveMe
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		+TMenuLeader
+			www\TMenuLeader\DelarticleClass.php
 			www\TMenuLeader\EditClass.php
 			www\TMenuLeader\EntryClass.php
 			www\TMenuLeader\ItemLeftFooter.php
+			www\TMenuLeader\ModyarticleClass.php
+			www\TMenuLeader\NewarticleClass.php
+			www\TMenuLeader\SaymeClass.php
 			www\TMenuLeader\TuningClass.php
 		www\.htaccess
 		www\.user.ini
@@ -453,12 +457,10 @@ IttveMe
 3=www\MenuArticles.php
 4=www\Styles\MenuArticles.css
 5=www\MenuLeader.php
-6=www\Common.php
-7=www\UpSiteCSS.php
-8=www\TMenuLeader\EntryClass.php
+6=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=www\TMenuLeader\EntryClass.php
+Selected=www\UpSite.php
 [www\iniMem.php]
 TopLine=41
 Caret=1,69
@@ -466,8 +468,8 @@ Caret=1,69
 TopLine=106
 Caret=61,126
 [www\UpSite.php]
-TopLine=65
-Caret=61,86
+TopLine=77
+Caret=50,93
 [www\MenuArticles.php]
 TopLine=9
 Caret=4,17
@@ -476,13 +478,7 @@ TopLine=133
 Caret=42,159
 [www\MenuLeader.php]
 TopLine=31
-Caret=1,57
-[www\Common.php]
-TopLine=3
-Caret=53,22
+Caret=42,44
 [www\UpSiteCSS.php]
 TopLine=291
 Caret=1,329
-[www\TMenuLeader\EntryClass.php]
-TopLine=1
-Caret=56,32
