@@ -40,8 +40,15 @@
    width:67%; 
 */
 }
-#mytextarea
+#WorkTiny
 { 
+   width:100%;
+   height:60%;
+   background:yellow;
+}
+#TinyArea
+{ 
+   background:magenta;
 }
 /*
 #InputArea

@@ -47,7 +47,8 @@ class Editing
       $htmlDir=$_SERVER['DOCUMENT_ROOT'].'/ittveEdit'; 
       $nameFile='Privet';
       $filename=$htmlDir.'/'.$nameFile.'.html';
-
+      
+      echo '$filename='.$filename.'<br>';
       /*
       echo '$htmlDir='.$htmlDir.'<br>'; 
       echo '$this->urlHome='.$this->urlHome.'<br>'; 
@@ -58,7 +59,7 @@ class Editing
       if (isset($_POST['Edit']))
       {
          $postEdit=$_POST['Edit'];
-         if (isset($_POST['Dor']))
+         if (isset($_POST['TextArea']))
          {
             $postDor=$_POST['Dor'];
             // Открываем файл с материалом для записи
@@ -83,9 +84,9 @@ class Editing
       // Формируем область редактирования текста TinyMCE и 
       // помещаем значение переменной $contents в эту область
       echo '
-         <div class="WorkTiny">
-         <form id="frmTinyText" method="POST" action="'.$this->urlHome.'">
-         <textarea id="mytextarea" name="Dor">
+         <div id="WorkTiny">
+         <form id="frmTinyText" method="get" action="'.$this->urlHome.'">
+         <textarea id="TinyArea" name="TextArea">
       '; 
       echo $contents;
       echo '
@@ -94,8 +95,7 @@ class Editing
         </div>
       '; 
       ?>
-      <input type="submit" name="Edit" value="Мaterial" form="frmTinyText">
-    
+      <input type="submit" name="Edit" value="Сохранить материал" form="frmTinyText">
       <?php
    }
 }

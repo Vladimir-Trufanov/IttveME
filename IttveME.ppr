@@ -165,7 +165,7 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		-Styles
+		+Styles
 			www\Styles\Content.css
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
@@ -458,18 +458,25 @@ IttveMe
 4=www\Styles\MenuArticles.css
 5=www\MenuLeader.php
 6=www\UpSiteCSS.php
+7=www\TMenuLeader\EditClass.php
+8=www\Styles\EditText.css
+9=www\ittveEdit\privet.html
+10=www\Styles\Footer-Info.css
+11=www\Styles\TinyMCE.css
+12=..\KwinTiny\www\TinyMCE5-0-01\Tiny.php
+13=..\KwinTiny\www\TinyMCE5-0-01\index.php
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=..\KwinTiny\www\TinyMCE5-0-01\Tiny.php
 [www\iniMem.php]
 TopLine=41
 Caret=1,69
 [www\index.php]
-TopLine=106
+TopLine=120
 Caret=61,126
 [www\UpSite.php]
-TopLine=77
-Caret=50,93
+TopLine=73
+Caret=22,108
 [www\MenuArticles.php]
 TopLine=9
 Caret=4,17
@@ -480,5 +487,26 @@ Caret=42,159
 TopLine=31
 Caret=42,44
 [www\UpSiteCSS.php]
-TopLine=291
-Caret=1,329
+TopLine=195
+Caret=44,225
+[www\TMenuLeader\EditClass.php]
+TopLine=63
+Caret=32,89
+[www\Styles\EditText.css]
+TopLine=22
+Caret=2,49
+[www\ittveEdit\privet.html]
+TopLine=1
+Caret=1,2
+[www\Styles\Footer-Info.css]
+TopLine=17
+Caret=2,43
+[www\Styles\TinyMCE.css]
+TopLine=1
+Caret=1,1
+[..\KwinTiny\www\TinyMCE5-0-01\Tiny.php]
+TopLine=53
+Caret=53,80
+[..\KwinTiny\www\TinyMCE5-0-01\index.php]
+TopLine=1
+Caret=1,15

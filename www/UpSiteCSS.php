@@ -143,9 +143,19 @@ if (($c_PresMode==rpmDoubleRight)||($c_PresMode==rpmOneRight))
       right:33%;
       width:67%; 
    }
+   #Gallery,#EditGallery
+   {
+      margin-left:67%;
+      width:33%;
+   }
+   #RightFooter
+   {
+      right:33%;
+   }
    ";
 }
 // Позиционируем подвальную часть при левосторонней галерее
+// rpmDoubleLeft или rpmOneLeft
 else
 {
    echo "
@@ -154,11 +164,16 @@ else
       left:33%;
       width:67%; 
    }
+   #Gallery,#EditGallery
+   {
+      margin-right:67%;
+      width:33%;
+   }
+   #RightFooter
+   {
+      right:0;
+   }
    ";
-}
-//
-if ($c_PresMode==rpmDoubleLeft)
-{
 }
 // Делаем настройки при заходе в режим редактирования
 if (prown\isComRequest(mmlSozdatRedaktirovat))
@@ -204,9 +219,9 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
    <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
    <script>tinymce.init
    ({
-        selector: "#mytextarea",
-        height: 360,
-        /*width:  820,*/
+        selector: "#TinyArea",
+        height: 560,
+        width:  820,
         content_css: "/Styles/TinyMCE.css",
         
         plugins:
@@ -239,89 +254,7 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
    });
    </script>
    ';
-}   
-//
-if (($c_PresMode==rpmOneRight)||
-   (prown\isComRequest('Tuning','Com'))||
-   (prown\isComRequest('Мaterial','Edit')))
-{
-   echo "
-   <!-- 
-   #okno 
-   {
-      right:40%;
-      width:60%; 
-   }
-   -->
-   #Gallery,#EditGallery
-   {
-      margin-left:67%;
-      width:33%;
-   }
-   #LifeMenu
-   {
-      left:0;
-   }
-   #RightFooter
-   {
-      right:33%;
-   }
-   ";
-}
-else if ($c_PresMode==rpmOneLeft)
-{
-   echo "
-   #Gallery,#EditGallery
-   {
-      margin-right:67%;
-      width:33%;
-   }
-   #LifeMenu
-   {
-      left:33.1%;
-   }
-   #RightFooter
-   {
-      right:0;
-   }
-   ";
-}
-else if ($c_PresMode==rpmDoubleRight)
-{
-   echo "
-   #Gallery,#EditGallery
-   {
-      margin-left:67%;
-      width:33%;
-   }
-   #LifeMenu
-   {
-      left:0;
-   }
-   #RightFooter
-   {
-      right:33%;
-   }
-   ";
-}
-else
-{
-   echo "
-   #Gallery,#EditGallery
-   {
-      margin-right:67%;
-      width:33%;
-   }
-   #LifeMenu
-   {
-      left:33.1%;
-   }
-   #RightFooter
-   {
-      right:0;
-   }
-   ";
-}
+}  
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
