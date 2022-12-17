@@ -15,13 +15,15 @@ echo 'Жизнь и путешествия! '.prown\getTranslit('').'&#128152;&#
 // $Unicoder->ViewCharsetAsColomn(0);
 // $Unicoder->ViewIntervalAsColomn('f0c0','f124');
 // $Unicoder->ViewFontAwesome470AsColomn('f000','f2e0');
-$Unicoder->ViewFontAwesome470AsTable('f000','f2e0',16);
+// $Unicoder->ViewFontAwesome470AsTable('f000','f2e0',16);
 
+/*
 echo '<br>';
 $Unicoder->ViewCharsetAsTable(4,16);   
 echo '<br>';
 $Unicoder->ViewCharsetAsTable(5,16);   
 echo '<br>';
+*/
 
 // При отладке воссоздаем базу данных
 // $Arti->BaseFirstCreate();

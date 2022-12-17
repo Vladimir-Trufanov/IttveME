@@ -29,3 +29,4 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(149): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\TMenuLeader\NewarticleClass.php on line 14
+[17-Dec-2022 17:56:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '.12' (T_DNUMBER) in C:\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php on line 511
