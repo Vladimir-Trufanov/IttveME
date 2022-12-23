@@ -30,7 +30,12 @@ echo '<br>';
 
 // Строим html-код меню по базе данных материалов сайта 
 //$Arti->ShowSampleMenu();  // из примера меню
-$Arti->MakeMenu();          // по базе
+//$Arti->MakeMenu();          // по базе
+
+// Выбираем пункт меню
+$pdo=$Arti->BaseConnect();
+$Arti->GetPunktMenu($pdo);
+
 
 /*
 echo '_MakeTblMenu<br>';

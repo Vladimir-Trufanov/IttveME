@@ -120,10 +120,11 @@ IttveMe
 			www\img\Thumbs.db
 		-ittveEdit
 			www\ittveEdit\GalleryEdit.php
-			www\ittveEdit\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\ittveEdit\ittve01-001-На-Сампо.jpg
-			www\ittveEdit\ittve01-001-Подъём-настроения.jpg
-			www\ittveEdit\ittve01-001-С-заботой-и-к-мамам.jpg
+			www\ittveEdit\ittve1-1-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+			www\ittveEdit\ittve1-1-На-Сампо.jpg
+			www\ittveEdit\ittve1-1-Подъём-настроения.jpg
+			www\ittveEdit\ittve1-1-С-заботой-и-к-мамам.jpg
+			www\ittveEdit\privet.html
 		-ittveLife
 			www\ittveLife\GalleryLife.php
 			www\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
@@ -150,8 +151,6 @@ IttveMe
 			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
 		-ittveNews
-			www\ittveNews\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-			www\ittveNews\IttveNews.html
 		-jQuery
 			-images
 				www\jQuery\images\ajax-loader.gif
@@ -165,7 +164,7 @@ IttveMe
 			www\smartmenus\jquery.smartmenus.min.js
 			www\smartmenus\sm-blue.css
 			www\smartmenus\sm-core-css.css
-		+Styles
+		-Styles
 			www\Styles\Content.css
 			www\Styles\EditText.css
 			www\Styles\Footer-Info.css
@@ -415,7 +414,7 @@ IttveMe
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		+TMenuLeader
+		-TMenuLeader
 			www\TMenuLeader\DelarticleClass.php
 			www\TMenuLeader\EditClass.php
 			www\TMenuLeader\EntryClass.php
@@ -455,26 +454,34 @@ IttveMe
 1=www\index.php
 2=www\UpSite.php
 3=www\MenuArticles.php
-4=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
-5=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
+4=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
+5=www\Styles\MenuArticles.css
+6=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
+7=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
+Selected=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
 [www\iniMem.php]
-TopLine=1
+TopLine=57
 Caret=1,69
 [www\index.php]
 TopLine=120
 Caret=61,126
 [www\UpSite.php]
-TopLine=59
+TopLine=69
 Caret=22,108
 [www\MenuArticles.php]
-TopLine=11
-Caret=3,26
-[..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
-TopLine=486
-Caret=50,502
+TopLine=13
+Caret=8,37
 [..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=89
+TopLine=58
+Caret=1,82
+[www\Styles\MenuArticles.css]
+TopLine=43
+Caret=1,1
+[..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
+TopLine=7
+Caret=1,31
+[www\UpSiteCSS.php]
+TopLine=43
 Caret=1,1
