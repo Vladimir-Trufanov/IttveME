@@ -6,7 +6,7 @@ Compilator.ProgSaveAll=0
 Compilator.ProgRunSelection=0
 Compilator.LogType=0
 Compilator.LogEncoding=0
-DefaultDir=C:\IttveME\www
+DefaultDir=C:\IttveMe
 DefaultCP=0
 LogtoEnd=1
 DontOpen=0
@@ -16,472 +16,136 @@ ProjectFilesOnly=0
 HTServer=localhost
 Extensions=*.*
 [Project tree]
-IttveMe
-	+www
-		-.well-known
-			-pki-validation
-				www\.well-known\pki-validation\gsdv.txt
-		-DetmanBase
-			-css
-				www\DetmanBase\css\style.css
-			www\DetmanBase\db_conn.php
-			www\DetmanBase\functions.php
-			www\DetmanBase\indexBase.php
-		-DetmanPage
-			-www
+IttveME
+	+IttveMe
+		-BpWin
+			BpWin\IttveMe.bp1
+		-Favicon
+			-favicon260x260
+				Favicon\favicon260x260\android-chrome-192x192.png
+				Favicon\favicon260x260\android-chrome-256x256.png
+				Favicon\favicon260x260\apple-touch-icon.png
+				Favicon\favicon260x260\browserconfig.xml
+				Favicon\favicon260x260\favicon.ico
+				Favicon\favicon260x260\favicon-16x16.png
+				Favicon\favicon260x260\favicon-32x32.png
+				Favicon\favicon260x260\mstile-150x150.png
+				Favicon\favicon260x260\safari-pinned-tab.svg
+			Favicon\favicon.ico
+			Favicon\favicon.png
+			Favicon\favicon_package_v0.16.zip
+			Favicon\favicon128x128.png
+			Favicon\favicon260x260.png
+			Favicon\tveMenuD.png
+			Favicon\О favicon.doc
+		-ttree
+			ttree\index.php
+			ttree\styles.css
+			ttree\ttree.ppr
+			ttree\Вывод HTML-таблицы с функцией сортировки.doc
+			ttree\Построение дерева иерархии с помощью PHP.doc
+			ttree\Редактирование данных в MySql с помощью PHP.doc
+		+www
+			-favicon260x260
+				www\favicon260x260\android-chrome-192x192.png
+				www\favicon260x260\android-chrome-256x256.png
+				www\favicon260x260\apple-touch-icon.png
+				www\favicon260x260\browserconfig.xml
+				www\favicon260x260\favicon.ico
+				www\favicon260x260\favicon-16x16.png
+				www\favicon260x260\favicon-32x32.png
+				www\favicon260x260\mstile-150x150.png
+				www\favicon260x260\safari-pinned-tab.svg
+			-font-awesome-4.7.0
 				-css
-					www\DetmanPage\www\css\style.css
-				-pages
-					www\DetmanPage\www\pages\about.php
-					www\DetmanPage\www\pages\article.php
-					www\DetmanPage\www\pages\contact.php
-					www\DetmanPage\www\pages\foto.php
-					www\DetmanPage\www\pages\main.php
-				www\DetmanPage\www\index1.php
-		-example
-			-image
-				www\example\image\a1.jpg
-				www\example\image\a2.png
-				www\example\image\a3.png
-		-favicon260x260
-			www\favicon260x260\android-chrome-192x192.png
-			www\favicon260x260\android-chrome-256x256.png
-			www\favicon260x260\apple-touch-icon.png
-			www\favicon260x260\browserconfig.xml
-			www\favicon260x260\favicon.ico
-			www\favicon260x260\favicon-16x16.png
-			www\favicon260x260\favicon-32x32.png
-			www\favicon260x260\mstile-150x150.png
-			www\favicon260x260\safari-pinned-tab.svg
-		-font-awesome-4.7.0
-			-css
-				www\font-awesome-4.7.0\css\font-awesome.css
-				www\font-awesome-4.7.0\css\font-awesome.min.css
-			-fonts
-				www\font-awesome-4.7.0\fonts\FontAwesome.otf
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
-			-less
-				www\font-awesome-4.7.0\less\animated.less
-				www\font-awesome-4.7.0\less\bordered-pulled.less
-				www\font-awesome-4.7.0\less\core.less
-				www\font-awesome-4.7.0\less\fixed-width.less
-				www\font-awesome-4.7.0\less\font-awesome.less
-				www\font-awesome-4.7.0\less\icons.less
-				www\font-awesome-4.7.0\less\larger.less
-				www\font-awesome-4.7.0\less\list.less
-				www\font-awesome-4.7.0\less\mixins.less
-				www\font-awesome-4.7.0\less\path.less
-				www\font-awesome-4.7.0\less\rotated-flipped.less
-				www\font-awesome-4.7.0\less\screen-reader.less
-				www\font-awesome-4.7.0\less\stacked.less
-				www\font-awesome-4.7.0\less\variables.less
-			-scss
-				www\font-awesome-4.7.0\scss\_animated.scss
-				www\font-awesome-4.7.0\scss\_bordered-pulled.scss
-				www\font-awesome-4.7.0\scss\_core.scss
-				www\font-awesome-4.7.0\scss\_fixed-width.scss
-				www\font-awesome-4.7.0\scss\_icons.scss
-				www\font-awesome-4.7.0\scss\_larger.scss
-				www\font-awesome-4.7.0\scss\_list.scss
-				www\font-awesome-4.7.0\scss\_mixins.scss
-				www\font-awesome-4.7.0\scss\_path.scss
-				www\font-awesome-4.7.0\scss\_rotated-flipped.scss
-				www\font-awesome-4.7.0\scss\_screen-reader.scss
-				www\font-awesome-4.7.0\scss\_stacked.scss
-				www\font-awesome-4.7.0\scss\_variables.scss
-				www\font-awesome-4.7.0\scss\font-awesome.scss
-			www\font-awesome-4.7.0\HELP-US-OUT.txt
-		-Images
-			-Buttons
-				www\Images\Buttons\tveMenuD.png
-			-Cursors
-				www\Images\Cursors\Less10.cur
-				www\Images\Cursors\Less-anoop.cur
-				www\Images\Cursors\Less-cross.cur
-				www\Images\Cursors\More10.cur
-				www\Images\Cursors\More-anoop.cur
-				www\Images\Cursors\More-move.cur
-				www\Images\Cursors\Move.cur
-				www\Images\Cursors\Unavailable.cur
-			-Menu
-				www\Images\Menu\arrow_down.png
-				www\Images\Menu\arrow_up.png
-				www\Images\Menu\bgnoise_lg.jpg
-				www\Images\Menu\icons.png
-			www\Images\ittve01-001-Подъём-настроения.jpg
-			www\Images\Kwinflat.jpg
-		-img
-			www\img\active.png
-			www\img\icons.png
-			www\img\Thumbs.db
-		-ittveEdit
-			www\ittveEdit\GalleryEdit.php
-			www\ittveEdit\ittve1-1-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\ittveEdit\ittve1-1-На-Сампо.jpg
-			www\ittveEdit\ittve1-1-Подъём-настроения.jpg
-			www\ittveEdit\ittve1-1-С-заботой-и-к-мамам.jpg
-			www\ittveEdit\privet.html
-		-ittveLife
-			www\ittveLife\GalleryLife.php
-			www\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-			www\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
-			www\ittveLife\ittve01-001-На-Сампо.jpg
-			www\ittveLife\ittve01-001-Подъём-настроения.jpg
-			www\ittveLife\ittve01-001-С-заботой-и-к-мамам.jpg
-			www\ittveLife\ittve01-001-У-ёлочки.png
-			www\ittveLife\ittve01-001-Хочешь-кваску.jpg
-			www\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
-			www\ittveLife\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
-			www\ittveLife\ittve02-065-В-город-c-молоком.jpg
-			www\ittveLife\ittve02-065-Вокруг-прудика.jpg
-			www\ittveLife\ittve02-065-Всем-солнечного-лета.jpg
-			www\ittveLife\ittve02-065-Едем-по-грибку.jpg
-			www\ittveLife\ittve02-065-Здесь-здоровье.jpg
-			www\ittveLife\ittve02-065-На-мостике.jpg
-			www\ittveLife\ittve02-065-Островок.jpg
-			www\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.jpg
-			www\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.txt
-			www\ittveLife\ittve02-065-Пока-аптекарский-садик.jpg
-			www\ittveLife\ittve02-065-Привет-сад.jpg
-			www\ittveLife\ittve02-065-Фонтанчик.jpg
-			www\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
-			www\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-		-ittveNews
-		-jQuery
-			-images
-				www\jQuery\images\ajax-loader.gif
-			www\jQuery\jquery.mobile-1.3.2.min.css
-			www\jQuery\jquery.mobile-1.3.2.min.js
-			www\jQuery\jquery-2.2.4.min.js
-		-Reset
-			www\Reset\e404.php
-			www\Reset\index.php
-		-smartmenus
-			www\smartmenus\jquery.smartmenus.min.js
-			www\smartmenus\sm-blue.css
-			www\smartmenus\sm-core-css.css
-		-Styles
-			www\Styles\Content.css
-			www\Styles\EditText.css
-			www\Styles\Footer-Info.css
-			www\Styles\Gallery-Image.css
-			www\Styles\iniStyles.css
-			www\Styles\Lobster.ttf
-			www\Styles\MenuArticles.css
-			www\Styles\MenuLeader.css
-			www\Styles\TinyMCE.css
-		-TinyMCE5-8-1
-			-icons
-				-default
-					www\TinyMCE5-8-1\icons\default\icons.js
-					www\TinyMCE5-8-1\icons\default\icons.min.js
-			-langs
-				www\TinyMCE5-8-1\langs\README.md
-				www\TinyMCE5-8-1\langs\ru.js
-			-plugins
-				-advlist
-					www\TinyMCE5-8-1\plugins\advlist\plugin.js
-					www\TinyMCE5-8-1\plugins\advlist\plugin.min.js
-				-anchor
-					www\TinyMCE5-8-1\plugins\anchor\plugin.js
-					www\TinyMCE5-8-1\plugins\anchor\plugin.min.js
-				-autolink
-					www\TinyMCE5-8-1\plugins\autolink\plugin.js
-					www\TinyMCE5-8-1\plugins\autolink\plugin.min.js
-				-autoresize
-					www\TinyMCE5-8-1\plugins\autoresize\plugin.js
-					www\TinyMCE5-8-1\plugins\autoresize\plugin.min.js
-				-autosave
-					www\TinyMCE5-8-1\plugins\autosave\plugin.js
-					www\TinyMCE5-8-1\plugins\autosave\plugin.min.js
-				-bbcode
-					www\TinyMCE5-8-1\plugins\bbcode\plugin.js
-					www\TinyMCE5-8-1\plugins\bbcode\plugin.min.js
-				-charmap
-					www\TinyMCE5-8-1\plugins\charmap\plugin.js
-					www\TinyMCE5-8-1\plugins\charmap\plugin.min.js
-				-code
-					www\TinyMCE5-8-1\plugins\code\plugin.js
-					www\TinyMCE5-8-1\plugins\code\plugin.min.js
-				-codesample
-					www\TinyMCE5-8-1\plugins\codesample\plugin.js
-					www\TinyMCE5-8-1\plugins\codesample\plugin.min.js
-				-colorpicker
-					www\TinyMCE5-8-1\plugins\colorpicker\plugin.js
-					www\TinyMCE5-8-1\plugins\colorpicker\plugin.min.js
-				-contextmenu
-					www\TinyMCE5-8-1\plugins\contextmenu\plugin.js
-					www\TinyMCE5-8-1\plugins\contextmenu\plugin.min.js
-				-directionality
-					www\TinyMCE5-8-1\plugins\directionality\plugin.js
-					www\TinyMCE5-8-1\plugins\directionality\plugin.min.js
-				-emoticons
-					-img
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-cool.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-cry.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-embarassed.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-foot-in-mouth.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-frown.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-innocent.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-kiss.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-laughing.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-money-mouth.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-sealed.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-smile.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-surprised.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-tongue-out.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-undecided.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-wink.gif
-						www\TinyMCE5-8-1\plugins\emoticons\img\smiley-yell.gif
-					-js
-						www\TinyMCE5-8-1\plugins\emoticons\js\emojiimages.js
-						www\TinyMCE5-8-1\plugins\emoticons\js\emojiimages.min.js
-						www\TinyMCE5-8-1\plugins\emoticons\js\emojis.js
-						www\TinyMCE5-8-1\plugins\emoticons\js\emojis.min.js
-					www\TinyMCE5-8-1\plugins\emoticons\plugin.js
-					www\TinyMCE5-8-1\plugins\emoticons\plugin.min.js
-				-fullpage
-					www\TinyMCE5-8-1\plugins\fullpage\plugin.js
-					www\TinyMCE5-8-1\plugins\fullpage\plugin.min.js
-				-fullscreen
-					www\TinyMCE5-8-1\plugins\fullscreen\plugin.js
-					www\TinyMCE5-8-1\plugins\fullscreen\plugin.min.js
-				-help
-					www\TinyMCE5-8-1\plugins\help\plugin.js
-					www\TinyMCE5-8-1\plugins\help\plugin.min.js
-				-hr
-					www\TinyMCE5-8-1\plugins\hr\plugin.js
-					www\TinyMCE5-8-1\plugins\hr\plugin.min.js
-				-image
-					www\TinyMCE5-8-1\plugins\image\plugin.js
-					www\TinyMCE5-8-1\plugins\image\plugin.min.js
-				-imagetools
-					www\TinyMCE5-8-1\plugins\imagetools\plugin.js
-					www\TinyMCE5-8-1\plugins\imagetools\plugin.min.js
-				-importcss
-					www\TinyMCE5-8-1\plugins\importcss\plugin.js
-					www\TinyMCE5-8-1\plugins\importcss\plugin.min.js
-				-insertdatetime
-					www\TinyMCE5-8-1\plugins\insertdatetime\plugin.js
-					www\TinyMCE5-8-1\plugins\insertdatetime\plugin.min.js
-				-legacyoutput
-					www\TinyMCE5-8-1\plugins\legacyoutput\plugin.js
-					www\TinyMCE5-8-1\plugins\legacyoutput\plugin.min.js
-				-link
-					www\TinyMCE5-8-1\plugins\link\plugin.js
-					www\TinyMCE5-8-1\plugins\link\plugin.min.js
-				-lists
-					www\TinyMCE5-8-1\plugins\lists\plugin.js
-					www\TinyMCE5-8-1\plugins\lists\plugin.min.js
-				-media
-					www\TinyMCE5-8-1\plugins\media\plugin.js
-					www\TinyMCE5-8-1\plugins\media\plugin.min.js
-				-nonbreaking
-					www\TinyMCE5-8-1\plugins\nonbreaking\plugin.js
-					www\TinyMCE5-8-1\plugins\nonbreaking\plugin.min.js
-				-noneditable
-					www\TinyMCE5-8-1\plugins\noneditable\plugin.js
-					www\TinyMCE5-8-1\plugins\noneditable\plugin.min.js
-				-pagebreak
-					www\TinyMCE5-8-1\plugins\pagebreak\plugin.js
-					www\TinyMCE5-8-1\plugins\pagebreak\plugin.min.js
-				-paste
-					www\TinyMCE5-8-1\plugins\paste\plugin.js
-					www\TinyMCE5-8-1\plugins\paste\plugin.min.js
-				-preview
-					www\TinyMCE5-8-1\plugins\preview\plugin.js
-					www\TinyMCE5-8-1\plugins\preview\plugin.min.js
-				-print
-					www\TinyMCE5-8-1\plugins\print\plugin.js
-					www\TinyMCE5-8-1\plugins\print\plugin.min.js
-				-quickbars
-					www\TinyMCE5-8-1\plugins\quickbars\plugin.js
-					www\TinyMCE5-8-1\plugins\quickbars\plugin.min.js
-				-save
-					www\TinyMCE5-8-1\plugins\save\plugin.js
-					www\TinyMCE5-8-1\plugins\save\plugin.min.js
-				-searchreplace
-					www\TinyMCE5-8-1\plugins\searchreplace\plugin.js
-					www\TinyMCE5-8-1\plugins\searchreplace\plugin.min.js
-				-spellchecker
-					www\TinyMCE5-8-1\plugins\spellchecker\plugin.js
-					www\TinyMCE5-8-1\plugins\spellchecker\plugin.min.js
-				-tabfocus
-					www\TinyMCE5-8-1\plugins\tabfocus\plugin.js
-					www\TinyMCE5-8-1\plugins\tabfocus\plugin.min.js
-				-table
-					www\TinyMCE5-8-1\plugins\table\plugin.js
-					www\TinyMCE5-8-1\plugins\table\plugin.min.js
-				-template
-					www\TinyMCE5-8-1\plugins\template\plugin.js
-					www\TinyMCE5-8-1\plugins\template\plugin.min.js
-				-textcolor
-					www\TinyMCE5-8-1\plugins\textcolor\plugin.js
-					www\TinyMCE5-8-1\plugins\textcolor\plugin.min.js
-				-textpattern
-					www\TinyMCE5-8-1\plugins\textpattern\plugin.js
-					www\TinyMCE5-8-1\plugins\textpattern\plugin.min.js
-				-toc
-					www\TinyMCE5-8-1\plugins\toc\plugin.js
-					www\TinyMCE5-8-1\plugins\toc\plugin.min.js
-				-visualblocks
-					www\TinyMCE5-8-1\plugins\visualblocks\plugin.js
-					www\TinyMCE5-8-1\plugins\visualblocks\plugin.min.js
-				-visualchars
-					www\TinyMCE5-8-1\plugins\visualchars\plugin.js
-					www\TinyMCE5-8-1\plugins\visualchars\plugin.min.js
-				-wordcount
-					www\TinyMCE5-8-1\plugins\wordcount\plugin.js
-					www\TinyMCE5-8-1\plugins\wordcount\plugin.min.js
-			-skins
-				-content
-					-dark
-						www\TinyMCE5-8-1\skins\content\dark\content.css
-						www\TinyMCE5-8-1\skins\content\dark\content.min.css
-						www\TinyMCE5-8-1\skins\content\dark\content.min.css.map
-					-default
-						www\TinyMCE5-8-1\skins\content\default\content.css
-						www\TinyMCE5-8-1\skins\content\default\content.min.css
-						www\TinyMCE5-8-1\skins\content\default\content.min.css.map
-					-document
-						www\TinyMCE5-8-1\skins\content\document\content.css
-						www\TinyMCE5-8-1\skins\content\document\content.min.css
-						www\TinyMCE5-8-1\skins\content\document\content.min.css.map
-					-writer
-						www\TinyMCE5-8-1\skins\content\writer\content.css
-						www\TinyMCE5-8-1\skins\content\writer\content.min.css
-						www\TinyMCE5-8-1\skins\content\writer\content.min.css.map
-				-ui
-					-oxide
-						-fonts
-							www\TinyMCE5-8-1\skins\ui\oxide\fonts\tinymce-mobile.woff
-						www\TinyMCE5-8-1\skins\ui\oxide\content.css
-						www\TinyMCE5-8-1\skins\ui\oxide\content.inline.css
-						www\TinyMCE5-8-1\skins\ui\oxide\content.inline.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide\content.inline.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide\content.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide\content.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide\content.mobile.css
-						www\TinyMCE5-8-1\skins\ui\oxide\content.mobile.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide\content.mobile.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.css
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.mobile.css
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.mobile.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.mobile.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.shadowdom.css
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.shadowdom.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide\skin.shadowdom.min.css.map
-					-oxide-dark
-						-fonts
-							www\TinyMCE5-8-1\skins\ui\oxide-dark\fonts\tinymce-mobile.woff
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.inline.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.inline.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.inline.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.mobile.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.mobile.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\content.mobile.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.mobile.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.mobile.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.mobile.min.css.map
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.shadowdom.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.shadowdom.min.css
-						www\TinyMCE5-8-1\skins\ui\oxide-dark\skin.shadowdom.min.css.map
-			-themes
-				-mobile
-					www\TinyMCE5-8-1\themes\mobile\theme.js
-					www\TinyMCE5-8-1\themes\mobile\theme.min.js
-				-silver
-					www\TinyMCE5-8-1\themes\silver\theme.js
-					www\TinyMCE5-8-1\themes\silver\theme.min.js
-			www\TinyMCE5-8-1\jquery.tinymce.min.js
-			www\TinyMCE5-8-1\license.txt
-			www\TinyMCE5-8-1\README.md
-			www\TinyMCE5-8-1\tinymce.d.ts
-			www\TinyMCE5-8-1\tinymce.js
-			www\TinyMCE5-8-1\tinymce.min.js
-		-TJsPrown
-			www\TJsPrown\TJsPrown.css
-			www\TJsPrown\TJsPrown.js
-		-TMenuLeader
-			www\TMenuLeader\DelarticleClass.php
-			www\TMenuLeader\EditClass.php
-			www\TMenuLeader\EntryClass.php
-			www\TMenuLeader\ItemLeftFooter.php
-			www\TMenuLeader\ModyarticleClass.php
-			www\TMenuLeader\NewarticleClass.php
-			www\TMenuLeader\SaymeClass.php
-			www\TMenuLeader\TuningClass.php
-		www\.htaccess
-		www\.user.ini
-		www\Common.php
-		www\download.php
-		www\EditText.php
-		www\error.php
-		www\index.php
-		www\iniMem.php
-		www\iniWorkSpace.php
-		www\ittve.db3
-		www\ittve-log.txt
-		www\IttveMe.js
-		www\iUserError.php
-		www\log.txt
-		www\manifest.json
-		www\MenuArticles.php
-		www\MenuLeader.php
-		www\MessLeftFooter.php
-		www\pic.png
-		www\proba.db3
-		www\produkty.db3
-		www\sampo.jpg
-		www\ToPlugDebug.php
-		www\UpSite.php
-		www\UpSiteCSS.php
-		www\ViewImage.php
+					www\font-awesome-4.7.0\css\font-awesome.css
+					www\font-awesome-4.7.0\css\font-awesome.min.css
+				-fonts
+					www\font-awesome-4.7.0\fonts\FontAwesome.otf
+					www\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
+					www\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
+					www\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
+					www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
+					www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
+				-less
+					www\font-awesome-4.7.0\less\animated.less
+					www\font-awesome-4.7.0\less\bordered-pulled.less
+					www\font-awesome-4.7.0\less\core.less
+					www\font-awesome-4.7.0\less\fixed-width.less
+					www\font-awesome-4.7.0\less\font-awesome.less
+					www\font-awesome-4.7.0\less\icons.less
+					www\font-awesome-4.7.0\less\larger.less
+					www\font-awesome-4.7.0\less\list.less
+					www\font-awesome-4.7.0\less\mixins.less
+					www\font-awesome-4.7.0\less\path.less
+					www\font-awesome-4.7.0\less\rotated-flipped.less
+					www\font-awesome-4.7.0\less\screen-reader.less
+					www\font-awesome-4.7.0\less\stacked.less
+					www\font-awesome-4.7.0\less\variables.less
+				-scss
+					www\font-awesome-4.7.0\scss\_animated.scss
+					www\font-awesome-4.7.0\scss\_bordered-pulled.scss
+					www\font-awesome-4.7.0\scss\_core.scss
+					www\font-awesome-4.7.0\scss\_fixed-width.scss
+					www\font-awesome-4.7.0\scss\_icons.scss
+					www\font-awesome-4.7.0\scss\_larger.scss
+					www\font-awesome-4.7.0\scss\_list.scss
+					www\font-awesome-4.7.0\scss\_mixins.scss
+					www\font-awesome-4.7.0\scss\_path.scss
+					www\font-awesome-4.7.0\scss\_rotated-flipped.scss
+					www\font-awesome-4.7.0\scss\_screen-reader.scss
+					www\font-awesome-4.7.0\scss\_stacked.scss
+					www\font-awesome-4.7.0\scss\_variables.scss
+					www\font-awesome-4.7.0\scss\font-awesome.scss
+				www\font-awesome-4.7.0\HELP-US-OUT.txt
+			www\.htaccess
+			www\.user.ini
+			www\Common.php
+			www\favicon.ico
+			www\index.php
+			www\iniMem.php
+			www\iniWorkSpace.php
+			www\ittve-log.txt
+			www\log.txt
+			www\Main.php
+			www\manifest.json
+			www\UpSite.php
+			www\UpSiteCSS.php
+		-Материалы
+			Материалы\Как работать через PDO.doc
+			Материалы\Обёртка для работы с PDO.doc
+			Материалы\Транзакции базы данных с PDO.doc
+		.gitignore
+		index.php
+		IttveME.ppr
+		IttveMe.rtf
+		IttveMe.xls
+		README.md
 [Open project files]
-0=www\iniMem.php
-1=www\index.php
-2=www\UpSite.php
-3=www\MenuArticles.php
-4=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
-5=www\Styles\MenuArticles.css
-6=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
-7=www\UpSiteCSS.php
+0=www\index.php
+1=www\Main.php
+2=www\Common.php
+3=www\iniMem.php
+4=www\UpSiteCSS.php
+5=www\UpSite.php
 [Selected Project Files]
 Main=
-Selected=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
-[www\iniMem.php]
-TopLine=57
-Caret=1,69
+Selected=www\UpSite.php
 [www\index.php]
-TopLine=120
-Caret=61,126
-[www\UpSite.php]
-TopLine=69
-Caret=22,108
-[www\MenuArticles.php]
-TopLine=13
-Caret=8,37
-[..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=58
-Caret=1,82
-[www\Styles\MenuArticles.css]
-TopLine=43
-Caret=1,1
-[..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
-TopLine=7
-Caret=1,31
+TopLine=73
+Caret=12,9
+[www\Main.php]
+TopLine=31
+Caret=1,13
+[www\Common.php]
+TopLine=1
+Caret=2,78
+[www\iniMem.php]
+TopLine=103
+Caret=1,100
 [www\UpSiteCSS.php]
-TopLine=43
+TopLine=228
+Caret=1,1
+[www\UpSite.php]
+TopLine=123
 Caret=1,1

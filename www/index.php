@@ -6,9 +6,8 @@
 // *                                 его жизнь и увлечения, жизнь его близких *
 // ****************************************************************************
 
-//                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 28.10.2022
+// v3.0, 19.02.2023                                   Автор:      Труфанов В.Е.
+// Copyright © 2019 tve                               Дата создания: 13.01.2019
 
 /**
  * Сайт работает следующим образом:
@@ -83,71 +82,21 @@ $urlHome      = $_WORKSPACE[wsUrlHome];      // Начальная страни�
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
-   // Указываем тип базы данных (по сайту) для управления классом ArticlesMaker   
-   define ("articleSite",'IttveMe'); 
-   // Указываем размещение библиотеки и подключаем прикладные функции TPhpPrown
-   define ("pathPhpPrown",$SiteHost.'/TPhpPrown/TPhpPrown');
-   require_once pathPhpPrown."/CommonPrown.php";
-   require_once pathPhpPrown."/getTranslit.php";
-   require_once pathPhpPrown."/MakeCookie.php";
-   require_once pathPhpPrown."/MakeSession.php";
-   require_once pathPhpPrown."/MakeUserError.php";
-   require_once pathPhpPrown."/ViewGlobal.php";
-   require_once pathPhpPrown."/ViewSimpleArray.php";
-   // Указываем размещение библиотеки и подключаем прикладные классы TPhpTools
-   
-   // МОЖЕТ В ИТОГЕ ЗАГРУЖАТЬ МОДУЛИ ТОЛЬКО В НУЖНЫХ СТРАНИЦАХ !!!
-   
-   define ("pathPhpTools",$SiteHost.'/TPhpTools/TPhpTools');
-   require_once pathPhpTools."/iniToolsMessage.php";
-   require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
-   require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
-   require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
-   require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
    // Выполняем начальную инициализацию
-   require_once "Common.php";     // Всегда 1-ый корневой модуль в списке
-   require_once "iniMem.php";     // Всегда 2-ой корневой модуль в списке
-   
-   // Подключаем классы для отработки управляющего меню
-   require_once $SiteRoot.'/TMenuLeader/ItemLeftFooter.php';
-      
-   // Выполняем запуск сессии и работу с лог-файлом
-   $oMainStarter = new PageStarter('ittveme','ittve-log');
-
-   // Изменяем счетчик запросов сайта из браузера и, таким образом,       
-   // регистрируем новую загрузку страницы
-   $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
-   // Изменяем счетчик посещений текущим посетителем      
-   $c_PersEntry=prown\MakeCookie('PersEntry',$c_PersEntry+1,tInt);
-   // Изменяем счетчик посещений за сессию                 
-   $s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);   
-
-   // echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
-   // echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
-   // Если после авторизации изменилось имя пользователя,
-   // то перенастраиваем счетчики и посетителя
-   if ($c_PersName<>$c_UserName)
-   {
-      $c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);
-      $s_Counter=prown\MakeSession('Counter',1,tInt); 
-      $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
-   }
-
+   require_once "iniMem.php";    
+   require_once "Common.php";  
    // Заносим в кукисы новые настройки                    
    UpdateTune($urlHome,$c_PresMode,$c_ModeImg,$aPresMode,$aModeImg);
 
-   // Создаем объекты для работы с материалами
-   // ----
-   
+   echo 'Привет!<br>';
    // Подключаем персональные стили для настольной и мобильной версий
-   require_once "UpSiteCSS.php";
+   //require_once "UpSiteCSS.php";
    // Обеспечиваем, при необходимости, вывод отладочной информации
    // на текущей странице
-   require_once "ToPlugDebug.php";  
+   //require_once "ToPlugDebug.php";  
    // Разбираем параметры запроса,
    // запускаем общую оболочку и настройку страниц сайта
-   require_once "UpSite.php";
-
+   //require_once "UpSite.php";
 }
 catch (E_EXCEPTION $e) 
 {
@@ -180,7 +129,6 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
       $MakeIs=true;
    }
 }
-
 /*
   Тестирование                                           - HTML -     - CSS -   
 -------------------------------------------------------------------------------
