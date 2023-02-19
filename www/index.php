@@ -87,16 +87,14 @@ try
    require_once "Common.php";  
    // Заносим в кукисы новые настройки                    
    UpdateTune($urlHome,$c_PresMode,$c_ModeImg,$aPresMode,$aModeImg);
-
-   echo 'Привет!<br>';
    // Подключаем персональные стили для настольной и мобильной версий
-   //require_once "UpSiteCSS.php";
+   require_once "UpSiteCSS.php";
    // Обеспечиваем, при необходимости, вывод отладочной информации
    // на текущей странице
-   //require_once "ToPlugDebug.php";  
+   require_once "ToPlugDebug.php";  
    // Разбираем параметры запроса,
    // запускаем общую оболочку и настройку страниц сайта
-   //require_once "UpSite.php";
+   require_once "UpSite.php";
 }
 catch (E_EXCEPTION $e) 
 {

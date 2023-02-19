@@ -13,3 +13,5 @@ Stack trace:
 #0 C:\IttveMe\www\index.php(87): require_once()
 #1 {main}
   thrown in C:\IttveMe\www\iniMem.php on line 115
+[19-Feb-2023 16:58:06 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting end of file in C:\IttveMe\www\UpSite.php on line 32
+[19-Feb-2023 16:58:51 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting end of file in C:\IttveMe\www\UpSite.php on line 32

@@ -8,8 +8,9 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  11.11.2020
-// Copyright © 2020 tve                              Посл.изменение: 21.11.2022
+// Copyright © 2020 tve                              Посл.изменение: 19.02.2023
 
+// ---------------------------------------------------------- HEAD and LAST ---
 // Формируем общие начальные теги разметки страницы
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
@@ -33,26 +34,37 @@ echo '
 ';
 // Подключаем font-awesome 4.7.0
 echo '<link rel="stylesheet" '.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
-// Подключаем jQuery 2.2.4
-echo '<script src="jQuery/jquery-2.2.4.min.js"> </script>';
-
+// Подключаем jQuery 
+echo 
+   '<link rel="stylesheet" type="text/css" href="/jQuery/jquery-ui.min.css">
+    <script src="/jQuery/jquery-3.6.3.min.js"></script>
+    <script src="/jQuery/jquery-ui.min.js"></script>';
+// Подключаем базовый шрифт
+echo '
+   <link rel="stylesheet"
+   href="Styles/Anonymous_Pro?family=Anonymous+Pro:400,400i,700,700i&amp;
+   subset=cyrillic">
+';
 // Выполняем сброс стилей и устанавливаем начальные настройки стилей
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем справа галерею изображений и делам только одну колонку для 
 // статей. Выполняем общее фиксирование элементов разметки  
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
+// Выстраиваем стили подвала сайта и информационной полосы
+echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
+
+/*
 // Определяем стили галлереи, определяем стили для показа изображения, 
 // выбранной в галерее картинки, на отдельной странице в ее рамках 
 // или в натуральную величину 
 echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
 // Определяем стили меню статей (материалов) 
 echo '<link rel="stylesheet" type="text/css" href="Styles/MenuArticles.css">';
-// Выстраиваем стили подвала сайта и информационной полосы
-echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 // Стилизуем панель меню управления в подвале страницы 
 echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
+*/
 
 // Определяем письменный шрифт, который будем использовать для статей
 // (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')
@@ -72,11 +84,11 @@ echo'
 
 // Если выбрана страница с главным меню, то создаем объекты для работы с меню,
 // выборкой юникодов и формируем стили разметки
-if (prown\isComRequest(mmlZhiznIputeshestviya))
-{
-   $Unicoder=new ttools\UnicodeUser('Emojitveme'); 
-   $Arti=new ttools\ArticlesMaker($basename,$username,$password);
-}
+//if (prown\isComRequest(mmlZhiznIputeshestviya))
+//{
+   //$Unicoder=new ttools\UnicodeUser('Emojitveme'); 
+   //$Arti=new ttools\ArticlesMaker($basename,$username,$password);
+//}
 // --- Формируем стили --------------------------------------------------------
 echo "<style>";
 // Позиционируем колонки материалов и новостей
@@ -178,42 +190,8 @@ else
 // Делаем настройки при заходе в режим редактирования
 if (prown\isComRequest(mmlSozdatRedaktirovat))
 {
-   // Настраиваем див всплывающего окна
    /*
-   ?>
-   #okno 
-   {
-      width: 300px;
-      height: 50px;
-      text-align: center;
-      padding: 15px;
-      border: 3px solid #0000cc;
-      border-radius: 10px;
-      color: #0000cc;
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-   }
-   #okno:target {display: block;}
-   .close 
-   {
-      display: inline-block;
-      border: 1px solid #0000cc;
-      color: #0000cc;
-      padding: 0 12px;
-      margin: 10px;
-      text-decoration: none;
-      background: #f2f2f2;
-      font-size: 14pt;
-      cursor:pointer;
-   }
-   .close:hover {background: #e6e6ff;}
-   <?php
-   */
+   // Настраиваем див всплывающего окна
    // Подключаем TinyMCE
    echo '
    <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
@@ -229,8 +207,8 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
             "advlist autolink link image imagetools lists charmap print preview hr anchor",
             "pagebreak spellchecker searchreplace wordcount visualblocks",
             "visualchars code fullscreen insertdatetime media nonbreaking",
-            /* "contextmenu", */ // отключено для TinyMCE5-8-1
-            /* "textcolor", */   // отключено для TinyMCE5-8-1
+            // "contextmenu",  // отключено для TinyMCE5-8-1
+            // "textcolor",    // отключено для TinyMCE5-8-1
             "save table directionality emoticons template paste"
         ],
         
@@ -239,12 +217,10 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
         [
             "| link image | forecolor backcolor emoticons"
         ],
-        /*
-        toolbar:
-        [
-            "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
-        ],
-        */
+        //toolbar:
+        //[
+        //    "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
+        //],
         image_list: [
           {title: "My image 1", value: "KwinTiny/proba.jpg"},
           {title: "My image 2", value: "http://www.moxiecode.com/my2.gif"}
@@ -254,6 +230,7 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
    });
    </script>
    ';
+   */
 }  
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
@@ -261,6 +238,23 @@ if (prown\isComRequest(mmlSozdatRedaktirovat))
 $ImageFile=prown\getComRequest('Image');
 // Завершаем стили 
 echo "</style>";
-// ----------------------------------------------------------------------------
+/*
+// Подключаем TJsPrown и TJsTools
+echo '
+   <link rel="stylesheet" type="text/css" 
+   href="TJsPrown/TJsPrown.css">
+   <script 
+      src="/TJsPrown/TJsPrown.js">
+   </script>
+';
+*/
+
+// Подключаем стили для редактирования материалов
+$Edit->IniEditSpace();
+$note->Init();
+$Arti->Head();
+
+echo '</head>'; 
+// end ------------------------------------------------------ HEAD and LAST ---
 
 // <!-- --> ************************************************* UpSiteCSS.php ***

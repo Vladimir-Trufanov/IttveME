@@ -10,23 +10,35 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 03.12.2022
 
-/*
-// Подключаем TJsPrown и TJsTools
-echo '
-   <link rel="stylesheet" type="text/css" 
-   href="TJsPrown/TJsPrown.css">
-   <script 
-      src="/TJsPrown/TJsPrown.js">
-   </script>
-';
-*/
+// ------------------------------------------------------------------- BODY ---
 // Начинаем html-страницу
-echo '</head>'; 
 echo '<body>'; 
+
+echo '<div id="Info">'; 
+// Разворачиваем область для редактирования материала
+$Edit->OpenEditSpace();
+// prown\ViewGlobal(avgCOOKIE);
+// echo '<img src="data:image/jpeg;base64,'.base64_encode(file_get_contents("test.jpg")).'"/>';
+// Помещаем значение переменной в область редактирования TinyMCE
+echo '</div>';
+
+echo '<div id="Niz">'; 
+if (prown\isComRequest(mmlVernutsyaNaGlavnuyu))
+{
+   echo '<pre>';
+   echo prown\getTranslit('Подъём настроения').'<br>';
+   //print_r($_FILES);
+   echo '</pre>';
+}
+echo '</div>';
+// Трассируем страницы
+if (prown\isComRequest(mmlVernutsyaNaGlavnuyu)) prown\ConsoleLog('Вернулись на главную страницу');
+
+/*
 // Проверяем не требуется ли просто вывести изображение и выводим его
 if ($ImageFile<>NULL)
 {
-   require_once "ViewImage.php";
+   //   require_once "ViewImage.php";
 }
 // Выводим другие страницы сайта
 else
@@ -38,29 +50,30 @@ else
    // а) выводим галерею для редактирования
    if (prown\isComRequest(mmlSozdatRedaktirovat))
    {
-      echo '<div id="EditGallery">';
-      require_once "ittveEdit/GalleryEdit.php";
-      echo '</div>';
+      //echo '<div id="EditGallery">';
+      //require_once "ittveEdit/GalleryEdit.php";
+      //echo '</div>';
    }
    // б) выводим галерею изображений ("моя жизнь") активной статьи
    else
    {
-      echo '<div id="Gallery">';
-      require_once "ittveLife/GalleryLife.php";
-      echo '</div>';
+      //echo '<div id="Gallery">';
+      //require_once "ittveLife/GalleryLife.php";
+      //echo '</div>';
    }
    // "News" выводим только в двухколоночном режиме при выводе статьи и новостей
    if (isChistoNewsDouble($c_PresMode))
    {
-      echo '<div id="News">';
+      //echo '<div id="News">';
       //require_once "ittveNews/".$p_ittveNews;
-      require_once "ittveNews/IttveNews.html";
-      echo '</div>';
+      //require_once "ittveNews/IttveNews.html";
+      //echo '</div>';
    }
    // Выводим текстовый контент страницы cайта
-   if (prown\isComRequest(mmlZhiznIputeshestviya))
-      echo '<div id="Life" class="MenuArticles">';
-   else echo '<div id="Life">';
+   //if (prown\isComRequest(mmlZhiznIputeshestviya))
+   //   echo '<div id="Life" class="MenuArticles">';
+   //else 
+   echo '<div id="Life">';
       
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
       if (prown\isComRequest(mmlZhiznIputeshestviya))
@@ -97,10 +110,10 @@ else
       // Запускаем страницу с активным материалом
       else
       {
-         require_once "ittveLife/".$p_ittveLife;
-         ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
-         echo  prown\getTranslit('Вернуться на главную страницу').'<br>';
-      }
+         //require_once "ittveLife/".$p_ittveLife;
+         //ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost);
+         //echo  prown\getTranslit('Вернуться на главную страницу').'<br>';
+      //}
    
    echo '</div>';
    
@@ -154,6 +167,7 @@ else
       echo '</div>';
    echo '</div>';
 }
+*/
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';

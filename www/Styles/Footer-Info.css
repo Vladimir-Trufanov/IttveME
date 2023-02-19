@@ -1,0 +1,102 @@
+/** HTML5/CSS3, EDGE/CHROME                             *** Footer-Info.css ***
+
+ ******************************************************************************
+ * ittve.me             Построить стили подвала сайта и информационной полосы *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 21.11.2022
+*/
+
+/*
+#LifeMenu
+{
+   position:fixed; 
+   height:4.4rem;
+   width:5rem;
+   bottom:1.4rem; 
+   background:transparent; 
+}
+#btnLifeMenu
+{
+   width: 95%;
+   z-index:1;
+   border-radius:8px;
+   background:radial-gradient(farthest-side ellipse at top left, #fff,  #ededed);
+   margin-top:.5rem;
+   margin-left:.3rem;
+}
+#imgLifeMenu
+{
+   width: 100%;
+}
+#LeftFooter
+{
+   height:100%;
+   margin-left:5rem;
+   margin-right:24rem;
+   padding:.1rem .3rem .1rem .5rem;
+   font-size:1.2rem;
+   font-weight:bold; 
+   border-top:dashed 1px #ddd;
+   border-bottom:dashed 1px #ddd;
+   background:transparent; 
+}
+#RightFooter
+{
+   position:fixed; 
+   height:4.4rem;
+   width:24rem;
+   bottom:1.4rem; 
+   background:transparent; 
+}
+#btnLifeMenu:hover 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #fff,  #dcdcdc);
+}
+#btnLifeMenu:active 
+{
+   background: radial-gradient(farthest-side ellipse at top left, #ededed,  #fff);
+   background: -webkit-gradient(radial,farthest-side ellipse at top left, from(#f47a20), to(#faa51a));
+   background: -moz-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background: -ms-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background-image: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+}
+*/
+/* Выводим текст при наезде на кнопку */
+#btnLifeMenu:hover::after 
+{
+   content:'Жизнь и путешествия!'; 
+   position:absolute; left:5.0rem; bottom:1rem; 
+   z-index:1; /* Отображаем подсказку поверх других элементов */
+   background: white; 
+   color: #ab4a16;  /* Приятный коричневый цвет */ 
+   font-size:1.3rem;
+   font-weight:600; 
+   padding:.4rem .5rem;
+   border: 1px solid #ab4a16; border-radius: 8px;
+}
+/*
+#InfoLeft
+{
+   float: left;
+   width: 50%;
+}
+#InfoRight
+{
+   float: right;
+   text-align: right;
+   width: 50%;
+}
+#InfoLeft, #InfoRight
+{
+   height:100%;
+   font-size:1rem;
+   font-weight: bold; 
+   padding:0rem .3rem .2rem .3rem;
+   color: #A4A4A4;
+}
+*/
+/* ***************************************************** Footer-Info.css *** */	
