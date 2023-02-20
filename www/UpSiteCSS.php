@@ -52,6 +52,8 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 // Выстраиваем стили подвала сайта и информационной полосы
 echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
+// Стилизуем панель меню управления в подвале страницы 
+echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 
 /*
 // Определяем стили галлереи, определяем стили для показа изображения, 
@@ -60,8 +62,6 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
 // Определяем стили меню статей (материалов) 
 echo '<link rel="stylesheet" type="text/css" href="Styles/MenuArticles.css">';
-// Стилизуем панель меню управления в подвале страницы 
-echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
 */

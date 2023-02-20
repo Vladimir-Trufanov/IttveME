@@ -10,9 +10,8 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 19.02.2023
 
-
+require_once "Common.php";  
 // ------------------------------------------------------------------- ZERO ---
-
 // Инициализируем общесайтовые константы (здесь стараемся не назначать константу = 0, так как 
 // проверка значению "==" может не отличить 0 от NULL)
 define("pathPhpPrown", $SiteHost.'/TPhpPrown/TPhpPrown'); // место размещения библиотеки прикладных функций TPhpPrown
@@ -46,7 +45,6 @@ define ("mesCookiNoMes", 2);     // "Кукисы в Вашем браузере
 define ("mesCookiUserNo", 3);    // "Разрешить использование кукисов для Вашего удобства?" 
 define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
-/*
 
 // ------------------------------------ Тексты запросов для меню управления ---
 define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');   
@@ -60,9 +58,11 @@ define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');
 define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');    
 define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku');     
 define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov'); 
-// Формируем префикс вызова страницы на сайте и localhost
-if (isNichost()) $cPref=''; else $cPref='?Com=';
-*/
+
+define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');
+define ('mmlNaznachitStatyu',            'naznachit-statyu');
+define ('mmlUdalitMaterial',             'udalit-material');
+
 // ----------- Режимы представления материалов = Content Presentation Modes ---
 define ("rpmDoubleRight", 'двухколоночный с правосторонней галереей');   
 define ("rpmDoubleLeft",  'двухколоночный с левосторонней галереей');    
@@ -81,6 +81,7 @@ define ("fimWhiteGround", 1);    // обычный белый фон
 define ("fimColorGround", 2);    // фон с помощью цветной картинки
 define ("fimAnimation",   3);    // анимационный фон
 */
+
 
 // Подключаем прикладные функции TPhpPrown
 require_once pathPhpPrown."/CommonPrown.php";
@@ -104,6 +105,7 @@ require_once pathPhpTools."/TTinyGallery/TinyGalleryClass.php";
    
 // Подключаем классы для отработки управляющего меню
 //require_once $SiteRoot.'/TMenuLeader/ItemLeftFooter.php';
+
       
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');

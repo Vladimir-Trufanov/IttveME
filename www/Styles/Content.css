@@ -14,7 +14,6 @@
  Позиционируем основные секции сайта: галерею новостных изображений, 
  секцию новых материалов, подвал, секцию архивных статей скрываем
 */
-/*
 #News,#Life
 { 
    position:fixed; 
@@ -27,11 +26,13 @@
 {
    padding:0.5rem 0.5rem;
 }
+
 .MenuArticles                                                                   
 { 
    background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
-#Footer
+/*#Footer*/
+#FooterTiny
 {
    position:fixed; 
    height:4.4rem;
@@ -39,6 +40,14 @@
    margin-bottom:1.4rem;
    background:transparent;
 }
+#FooterTiny
+{
+   /*position:fixed;*/ 
+   left:0;
+   overflow:auto;
+}
+
+
 #Info
 {
    position:fixed; 
@@ -47,7 +56,7 @@
    margin-bottom:0;
    background:transparent;  
 }
-*/
+
 
 /* ********************************************************* Content.css *** */	
 	

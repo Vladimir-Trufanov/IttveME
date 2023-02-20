@@ -14,14 +14,27 @@
 // Начинаем html-страницу
 echo '<body>'; 
 
-echo '<div id="Info">'; 
+echo '<div id="Life">'; 
 // Разворачиваем область для редактирования материала
 $Edit->OpenEditSpace();
 // prown\ViewGlobal(avgCOOKIE);
 // echo '<img src="data:image/jpeg;base64,'.base64_encode(file_get_contents("test.jpg")).'"/>';
 // Помещаем значение переменной в область редактирования TinyMCE
 echo '</div>';
+// Выводим нижнюю информационную строку
+echo '<div id="Info">';
+   echo '
+      <div id="InfoLeft">
+         Copyright (c) 2019 v2.0  Труфанов Владимир   tve58@inbox.ru<br>
+      </div>
+   ';
+   echo '<div id="InfoRight">';
+      echo $SiteDevice." ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
+   echo '</div>';
+echo '</div>';
 
+
+/*
 echo '<div id="Niz">'; 
 if (prown\isComRequest(mmlVernutsyaNaGlavnuyu))
 {
@@ -31,8 +44,9 @@ if (prown\isComRequest(mmlVernutsyaNaGlavnuyu))
    echo '</pre>';
 }
 echo '</div>';
+*/
 // Трассируем страницы
-if (prown\isComRequest(mmlVernutsyaNaGlavnuyu)) prown\ConsoleLog('Вернулись на главную страницу');
+//if (prown\isComRequest(mmlVernutsyaNaGlavnuyu)) prown\ConsoleLog('Вернулись на главную страницу');
 
 /*
 // Проверяем не требуется ли просто вывести изображение и выводим его

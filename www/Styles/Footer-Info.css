@@ -9,7 +9,6 @@
  Copyright © 2019 tve                                Посл.изменение: 21.11.2022
 */
 
-/*
 #LifeMenu
 {
    position:fixed; 
@@ -64,7 +63,6 @@
    background: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
    background-image: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
 }
-*/
 /* Выводим текст при наезде на кнопку */
 #btnLifeMenu:hover::after 
 {
