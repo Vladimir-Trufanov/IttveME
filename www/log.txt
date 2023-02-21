@@ -56,3 +56,15 @@ Stack trace:
   thrown in C:\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php on line 184
 [20-Feb-2023 18:59:06 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php on line 74
 [20-Feb-2023 19:08:55 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 397
+[21-Feb-2023 14:32:12 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: stockpw1 in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php:561
+Stack trace:
+#0 C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php(561): PDO->prepare('UPDATE [stockpw...')
+#1 C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php(212): ttools\ArticlesMaker->UpdateByTranslit(Object(PDO), 'ohota-na-medved...', '<p>\xD0\x91\xD1\x8B\xD0\xBB\xD0\xB0 \xD0\xB2\xD0...')
+#2 C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php(144): ttools\TinyGallery->ZeroEditSpace()
+#3 C:\IttveMe\www\iniMem.php(179): ttools\TinyGallery->__construct('C:\\IttveMe\\www', 'http://localhos...', '75', '15', '30', '%', Object(ttools\ArticlesMaker))
+#4 C:\IttveMe\www\index.php(88): require_once('C:\\IttveMe\\www\\...')
+#5 {main}
+  thrown in C:\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php on line 561
+[21-Feb-2023 15:22:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 416
+[21-Feb-2023 19:24:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE), expecting function (T_FUNCTION) or const (T_CONST) in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 119
+[21-Feb-2023 19:25:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE), expecting function (T_FUNCTION) or const (T_CONST) in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 119

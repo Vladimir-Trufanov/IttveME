@@ -55,7 +55,7 @@ php_value upload_max_filesize 3M
 </FilesMatch>
 
 ## Закрываем доступ к файлам с определенными расширениями
-<FilesMatch "\.(txt|exe|doc|docx)$">
+<FilesMatch "\.(txt|exe|doc|docx|php|js)$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
