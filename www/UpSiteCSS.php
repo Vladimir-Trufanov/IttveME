@@ -253,7 +253,13 @@ echo '
 $Edit->IniEditSpace();
 $note->Init();
 $Arti->Head();
-
+// Отправляем пути в js
+?> <script>
+$(document).ready(function() {
+   pathPhpTools="<?php echo pathPhpTools;?>";
+   pathPhpPrown="<?php echo pathPhpPrown;?>";
+});
+</script> <?php
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---
 
