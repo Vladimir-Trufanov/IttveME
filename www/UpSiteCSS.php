@@ -260,6 +260,7 @@ $(document).ready(function() {
    pathPhpPrown="<?php echo pathPhpPrown;?>";
 });
 </script> <?php
+DefineJS();
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---
 
