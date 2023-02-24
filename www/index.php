@@ -82,7 +82,6 @@ $urlHome      = $_WORKSPACE[wsUrlHome];      // Начальная страни�
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
-
    // ---------------------------------------------------------------- ZERO ---
    // Выполняем начальную инициализацию
    require_once "iniMem.php";   

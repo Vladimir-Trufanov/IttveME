@@ -129,14 +129,14 @@ require_once pathPhpPrown."/ViewGlobal.php";
 require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
 require_once pathPhpTools."/TNotice/NoticeClass.php";
 //require_once pathPhpTools."/iniToolsMessage.php";
-require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
-require_once pathPhpTools."/TKwinGallery/KwinGalleryClass.php";
 //require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
 //require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
    
 // Подключаем внутренние классы
 require_once "ttools/TMenuLeader/MenuLeaderClass.php";
+require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once "ttools/TTinyGallery/TinyGalleryClass.php";
+require_once "ttools/TKwinGallery/KwinGalleryClass.php";
       
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');

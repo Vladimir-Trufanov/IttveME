@@ -73,8 +73,10 @@ class MenuLeader
       $this->urlHome=$urlHome; 
       $this->classdir=pathPhpTools.'/TMenuLeader'; 
       // Формируем префиксы вызова страниц для сайта 'ittve.me' и localhost
-      if ($this->is_ittveme()) $this->cPreMe='';  else $this->cPreMe='?Com=';
-      if ($this->is_ittveme()) $this->ComTiny=''; else $this->ComTiny='?Com=';
+      // if ($this->is_ittveme()) $this->cPreMe='';  else 
+      $this->cPreMe='?Com=';
+      //if ($this->is_ittveme()) $this->ComTiny=''; else 
+      $this->ComTiny='?Com=';
       // Проверяем, нужно ли заменить файл стилей в каталоге редактирования и,
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 

@@ -94,7 +94,6 @@ class TinyGallery
    protected $SiteRoot;         // корневой каталог сайта
    protected $urlHome;          // начальная страница сайта
    protected $editdir;          // каталог размещения файлов, связанных c материалом
-   protected $classdir;         // путь к каталогу файлов класса
    protected $cPref;            // префикс вызова страницы на сайте и localhost
    protected $WorkTinyHeight;   // высота рабочей области Tiny
    protected $FooterTinyHeight; // высота подвала области редактирования
@@ -124,7 +123,6 @@ class TinyGallery
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->editdir=editdir; 
-      $this->classdir=pathPhpTools.'/TTinyGallery'; 
       $this->pidEdit=-1; 
       $this->uidEdit=-1; 
       // Регистрируем объект по работе с базой данных материалов
@@ -246,7 +244,6 @@ class TinyGallery
       $this->Arti->IniEditSpace();
       // <script src="/Jsx/CommonTools.js"></script>
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
-      $this->Galli->Head();
       
       // Настраиваем размеры частей рабочей области редактирования
       echo '

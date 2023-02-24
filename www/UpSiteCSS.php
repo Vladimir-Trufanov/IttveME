@@ -54,11 +54,12 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 // Подключаем стили внутренних классов 
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
+echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TTinyGallery/WorkTiny.css">';
 // Подключаем скрипты внутренних классов 
-// <script src="/Jsx/WorkTiny.js"></script>
+echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TTinyGallery/WorkTiny.js"></script>';
-
+echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
 
 /*
 // Определяем стили галлереи, определяем стили для показа изображения, 
@@ -257,7 +258,6 @@ echo '
 // Подключаем стили для редактирования материалов
 $Edit->IniEditSpace();
 $note->Init();
-$Arti->Head();
 // Отправляем пути в js
 ?> <script>
 $(document).ready(function() {

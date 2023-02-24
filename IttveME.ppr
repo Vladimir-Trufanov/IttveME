@@ -126,19 +126,16 @@ IttveME
 				www\jQuery\jquery-3.6.3.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
-				www\Jsx\ArticlesMaker.js
+			-Jsx
 				www\Jsx\CommonTools.js
-				www\Jsx\KwinGallery.js
 				www\Jsx\Notice.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-Italic.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-Regular.ttf
 					www\Styles\Anonymous_Pro\OFL.txt
-				www\Styles\ArticlesMaker.css
 				www\Styles\Content.css
 				www\Styles\Footer-Info.css
 				www\Styles\iniStyles.css
@@ -381,10 +378,28 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TMenuLeader
+				-TArticlesMaker
+					www\ttools\TArticlesMaker\ArticlesMaker.css
+					www\ttools\TArticlesMaker\ArticlesMaker.js
+					www\ttools\TArticlesMaker\ArticlesMakerClass.php
+					www\ttools\TArticlesMaker\bgnoise_lg.jpg
+					www\ttools\TArticlesMaker\CommonArticlesMaker.php
+					www\ttools\TArticlesMaker\CommonIttveMe.php
+					www\ttools\TArticlesMaker\CommonIttvePw.php
+					www\ttools\TArticlesMaker\CommonOwn.php
+					www\ttools\TArticlesMaker\deleteArt.php
+					www\ttools\TArticlesMaker\getNameCue.php
+					www\ttools\TArticlesMaker\icons.png
+					www\ttools\TArticlesMaker\TestBase.php
+				+TKwinGallery
+					www\ttools\TKwinGallery\deleteImg.php
+					www\ttools\TKwinGallery\KwinGallery.js
+					www\ttools\TKwinGallery\KwinGalleryClass.php
+					www\ttools\TKwinGallery\sampo.jpg
+				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				+TTinyGallery
+				-TTinyGallery
 					www\ttools\TTinyGallery\TinyGalleryClass.php
 					www\ttools\TTinyGallery\WorkTiny.css
 					www\ttools\TTinyGallery\WorkTiny.js
@@ -422,21 +437,33 @@ IttveME
 2=www\iniMem.php
 3=www\UpSiteCSS.php
 4=www\UpSite.php
+5=www\ttools\TTinyGallery\TinyGalleryClass.php
+6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+7=www\ttools\TKwinGallery\KwinGalleryClass.php
 [Selected Project Files]
 Main=
-Selected=www\UpSiteCSS.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=69
-Caret=1,88
+TopLine=67
+Caret=10,73
 [www\Common.php]
 TopLine=1
 Caret=2,17
 [www\iniMem.php]
-TopLine=107
-Caret=1,140
+TopLine=110
+Caret=35,139
 [www\UpSiteCSS.php]
-TopLine=22
-Caret=40,60
+TopLine=37
+Caret=1,64
 [www\UpSite.php]
-TopLine=31
+TopLine=27
 Caret=1,31
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=217
+Caret=1,245
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=27
+Caret=1,51
+[www\ttools\TKwinGallery\KwinGalleryClass.php]
+TopLine=149
+Caret=1,168
