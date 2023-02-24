@@ -52,8 +52,13 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 // Выстраиваем стили подвала сайта и информационной полосы
 echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
-// Стилизуем панель меню управления в подвале страницы 
-echo '<link rel="stylesheet" type="text/css" href="Styles/MenuLeader.css">';
+// Подключаем стили внутренних классов 
+echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
+echo '<link rel="stylesheet" type="text/css" href="ttools/TTinyGallery/WorkTiny.css">';
+// Подключаем скрипты внутренних классов 
+// <script src="/Jsx/WorkTiny.js"></script>
+echo '<script src="/ttools/TTinyGallery/WorkTiny.js"></script>';
+
 
 /*
 // Определяем стили галлереи, определяем стили для показа изображения, 

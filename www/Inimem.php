@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 23.02.2023
+// Copyright © 2019 tve                              Посл.изменение: 24.02.2023
 
 require_once "Common.php";  
 // --------------------------------- Межязыковые (PHP-JScript) определения  ---
@@ -56,8 +56,6 @@ define("stylesdir",    'Styles');                         // каталог ст
 define("imgdir",       'Images');                         // каталог служебных изображений
 define ("ChangeSize",  "chs");                            // "Изменить размер базового шрифта"  
 define('nym',          'ittve');                          // префикс имен файлов для фотографий галереи и материалов
-
-
 
 //define ("dirLife", "ittveLife"); // каталог активной статьи сайта и её изображений
 //define ("dirEdit", "ittveEdit"); // каталог редактируемой статьи и её изображений
@@ -117,7 +115,6 @@ define ("fimColorGround", 2);    // фон с помощью цветной ка
 define ("fimAnimation",   3);    // анимационный фон
 */
 
-
 // Подключаем прикладные функции TPhpPrown
 require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpPrown."/getTranslit.php";
@@ -130,17 +127,16 @@ require_once pathPhpPrown."/ViewGlobal.php";
 
 // Подключаем прикладные классы TPhpTools
 require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
+require_once pathPhpTools."/TNotice/NoticeClass.php";
 //require_once pathPhpTools."/iniToolsMessage.php";
 require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
 require_once pathPhpTools."/TKwinGallery/KwinGalleryClass.php";
-require_once pathPhpTools."/TNotice/NoticeClass.php";
-require_once pathPhpTools."/TTinyGallery/TinyGalleryClass.php";
 //require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
 //require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
    
-// Подключаем классы для отработки управляющего меню
-//require_once $SiteRoot.'/TMenuLeader/ItemLeftFooter.php';
-
+// Подключаем внутренние классы
+require_once "ttools/TMenuLeader/MenuLeaderClass.php";
+require_once "ttools/TTinyGallery/TinyGalleryClass.php";
       
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');

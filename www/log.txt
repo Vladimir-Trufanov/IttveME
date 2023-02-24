@@ -70,3 +70,4 @@ Stack trace:
 [21-Feb-2023 19:25:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE), expecting function (T_FUNCTION) or const (T_CONST) in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 119
 [23-Feb-2023 06:39:25 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'protected' (T_PROTECTED), expecting ',' or ';' in C:\TPhpTools\TPhpTools\TNotice\NoticeClass.php on line 103
 [23-Feb-2023 09:46:41 Asia/Kuwait] PHP Fatal error:  Cannot redeclare DefinePHPtoJS() (previously declared in C:\IttveMe\www\UpSiteDef.php:14) in C:\IttveMe\www\UpSiteDef.php on line 40
+[24-Feb-2023 08:37:13 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TMenuLeader/MenuLeaderClass.php' (include_path='.;C:\php\pear') in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 83

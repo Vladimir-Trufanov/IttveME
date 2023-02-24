@@ -131,8 +131,7 @@ IttveME
 				www\Jsx\CommonTools.js
 				www\Jsx\KwinGallery.js
 				www\Jsx\Notice.js
-				www\Jsx\WorkTiny.js
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -144,8 +143,6 @@ IttveME
 				www\Styles\Footer-Info.css
 				www\Styles\iniStyles.css
 				www\Styles\Lobster.ttf
-				www\Styles\MenuLeader.css
-				www\Styles\WorkTiny.css
 			-TinyMCE5-8-1
 				-icons
 					-default
@@ -383,7 +380,15 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
+				+TMenuLeader
+					www\ttools\TMenuLeader\MenuLeader.css
+					www\ttools\TMenuLeader\MenuLeaderClass.php
+				+TTinyGallery
+					www\ttools\TTinyGallery\TinyGalleryClass.php
+					www\ttools\TTinyGallery\WorkTiny.css
+					www\ttools\TTinyGallery\WorkTiny.js
+					www\ttools\TTinyGallery\WorkTiny.php
 			www\.htaccess
 			www\.user.ini
 			www\Common.php
@@ -401,7 +406,6 @@ IttveME
 			www\ToPlugDebug.php
 			www\UpSite.php
 			www\UpSiteCSS.php
-			www\UpSiteDef.php
 		-Материалы
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
@@ -418,57 +422,21 @@ IttveME
 2=www\iniMem.php
 3=www\UpSiteCSS.php
 4=www\UpSite.php
-5=..\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php
-6=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.php
-7=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.css
-8=..\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php
-9=..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php
-10=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
-11=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
-12=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.js
-13=..\TPhpTools\TPhpTools\TNotice\Notice.js
 [Selected Project Files]
 Main=
-Selected=..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php
+Selected=www\UpSiteCSS.php
 [www\index.php]
-TopLine=75
-Caret=6,89
+TopLine=69
+Caret=1,88
 [www\Common.php]
 TopLine=1
 Caret=2,17
 [www\iniMem.php]
-TopLine=15
-Caret=16,22
+TopLine=107
+Caret=1,140
 [www\UpSiteCSS.php]
-TopLine=2
-Caret=1,251
+TopLine=22
+Caret=40,60
 [www\UpSite.php]
 TopLine=31
 Caret=1,31
-[..\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php]
-TopLine=359
-Caret=4,359
-[..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.php]
-TopLine=106
-Caret=1,106
-[..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.css]
-TopLine=221
-Caret=20,240
-[..\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php]
-TopLine=183
-Caret=59,208
-[..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php]
-TopLine=20
-Caret=45,39
-[..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=367
-Caret=28,379
-[..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
-TopLine=32
-Caret=19,622
-[..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.js]
-TopLine=92
-Caret=1,116
-[..\TPhpTools\TPhpTools\TNotice\Notice.js]
-TopLine=68
-Caret=1,106
