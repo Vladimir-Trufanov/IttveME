@@ -8,10 +8,44 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 19.02.2023
+// Copyright © 2019 tve                              Посл.изменение: 23.02.2023
 
 require_once "Common.php";  
+// --------------------------------- Межязыковые (PHP-JScript) определения  ---
+
+define ("RootDir",              $_SERVER['DOCUMENT_ROOT']); 
+define ("oriLandscape", 'landscape');     // Ландшафтное расположение устройства
+define ("oriPortrait",  'portrait');      // Портретное расположение устройства
+  
+define ("nstNoVyb",     "не выбрано");     
+define ("nstNoNaz",     "не назначено");
+define ("nstErr",       'произошла ошибка');  
+define ("jsxdir",       'Jsx');                            // каталог файлов на javascript
+
+// Определения сообщений для PHP
+define ("ajSuccess",            "Функция/процедура выполнена успешно");     
+define ("ajTransparentSuccess", "Преобразование к прозрачному виду успешно");
+define ("ajUndeletionOldFiles", "Ошибка удаления старых файлов");
+
+function DefineJS()
+{
+   // Переменные JavaScript, соответствующие определениям сообщений в PHP
+   $define=
+   '<script>'.
+   'RootDir="'             .RootDir.'";'.
+   'nstNoVyb="'            .nstNoVyb.'";'.
+   'nstNoNaz="'            .nstNoNaz.'";'.
+   'nstErr="'              .nstErr.'";'.
+
+   'ajSuccess="'           .ajSuccess.           '";'.
+   'ajTransparentSuccess="'.ajTransparentSuccess.'";'.
+   'ajUndeletionOldFiles="'.ajUndeletionOldFiles.'";'.
+   '</script>';
+   echo $define;
+}   
+
 // ------------------------------------------------------------------- ZERO ---
+
 // Инициализируем общесайтовые константы (здесь стараемся не назначать константу = 0, так как 
 // проверка значению "==" может не отличить 0 от NULL)
 define("pathPhpPrown", $SiteHost.'/TPhpPrown/TPhpPrown'); // место размещения библиотеки прикладных функций TPhpPrown
@@ -19,10 +53,11 @@ define("pathPhpTools", $SiteHost.'/TPhpTools/TPhpTools'); // место разм
 define("articleSite",  'IttveMe');                        // тип базы данных для управления классом ArticlesMaker 
 define("editdir",      'ittveEdit');                      // каталог файлов, связанных c материалом
 define("stylesdir",    'Styles');                         // каталог стилей элементов разметки и фонтов
-define("jsxdir",       'Jsx');                            // каталог файлов на javascript
 define("imgdir",       'Images');                         // каталог служебных изображений
 define ("ChangeSize",  "chs");                            // "Изменить размер базового шрифта"  
 define('nym',          'ittve');                          // префикс имен файлов для фотографий галереи и материалов
+
+
 
 //define ("dirLife", "ittveLife"); // каталог активной статьи сайта и её изображений
 //define ("dirEdit", "ittveEdit"); // каталог редактируемой статьи и её изображений

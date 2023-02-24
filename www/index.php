@@ -85,8 +85,8 @@ try
 
    // ---------------------------------------------------------------- ZERO ---
    // Выполняем начальную инициализацию
-   require_once "UpSiteDef.php";  
-   DefinePHP(); 
+   //require_once "UpSiteDef.php";  
+   //DefinePHP(); 
    require_once "iniMem.php";   
    // Заносим в кукисы новые настройки                    
    UpdateTune($urlHome,$c_PresMode,$c_ModeImg,$aPresMode,$aModeImg);

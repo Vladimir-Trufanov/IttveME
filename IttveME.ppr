@@ -130,8 +130,9 @@ IttveME
 				www\Jsx\ArticlesMaker.js
 				www\Jsx\CommonTools.js
 				www\Jsx\KwinGallery.js
+				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -143,6 +144,7 @@ IttveME
 				www\Styles\Footer-Info.css
 				www\Styles\iniStyles.css
 				www\Styles\Lobster.ttf
+				www\Styles\MenuLeader.css
 				www\Styles\WorkTiny.css
 			-TinyMCE5-8-1
 				-icons
@@ -381,6 +383,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
+			-ttools
 			www\.htaccess
 			www\.user.ini
 			www\Common.php
@@ -394,12 +397,11 @@ IttveME
 			www\ittve-log.txt
 			www\log.txt
 			www\manifest.json
-			www\MenuLeader.php
-			www\SaveStuff.php
 			www\TestBase.php
 			www\ToPlugDebug.php
 			www\UpSite.php
 			www\UpSiteCSS.php
+			www\UpSiteDef.php
 		-Материалы
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
@@ -417,52 +419,56 @@ IttveME
 3=www\UpSiteCSS.php
 4=www\UpSite.php
 5=..\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php
-6=..\TPhpTools\TPhpTools\TKwinGallery\KwinGalleryClass.php
-7=..\TPhpTools\TPhpTools\TKwinGallery\KwinGallery.js
-8=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.php
-9=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.css
-10=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.js
-11=..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php
-12=..\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php
+6=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.php
+7=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.css
+8=..\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php
+9=..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php
+10=..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php
+11=..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php
+12=..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.js
+13=..\TPhpTools\TPhpTools\TNotice\Notice.js
 [Selected Project Files]
 Main=
-Selected=..\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php
+Selected=..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php
 [www\index.php]
-TopLine=83
-Caret=16,89
+TopLine=75
+Caret=6,89
 [www\Common.php]
-TopLine=31
-Caret=10,31
+TopLine=1
+Caret=2,17
 [www\iniMem.php]
-TopLine=8
-Caret=1,23
+TopLine=15
+Caret=16,22
 [www\UpSiteCSS.php]
-TopLine=229
+TopLine=2
 Caret=1,251
 [www\UpSite.php]
 TopLine=31
 Caret=1,31
 [..\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php]
-TopLine=487
+TopLine=359
 Caret=4,359
-[..\TPhpTools\TPhpTools\TKwinGallery\KwinGalleryClass.php]
-TopLine=302
-Caret=1,302
-[..\TPhpTools\TPhpTools\TKwinGallery\KwinGallery.js]
-TopLine=1
-Caret=3,10
 [..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.php]
-TopLine=112
+TopLine=106
 Caret=1,106
 [..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.css]
 TopLine=221
 Caret=20,240
-[..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.js]
-TopLine=75
-Caret=12,92
-[..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php]
-TopLine=7
-Caret=44,38
 [..\TPhpTools\TPhpTools\TMenuLeader\MenuLeaderClass.php]
 TopLine=183
 Caret=59,208
+[..\TPhpTools\TPhpTools\TArticlesMaker\getNameCue.php]
+TopLine=20
+Caret=45,39
+[..\TPhpTools\TPhpTools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=367
+Caret=28,379
+[..\TPhpTools\TPhpTools\TArticlesMaker\CommonIttveMe.php]
+TopLine=32
+Caret=19,622
+[..\TPhpTools\TPhpTools\TTinyGallery\WorkTiny.js]
+TopLine=92
+Caret=1,116
+[..\TPhpTools\TPhpTools\TNotice\Notice.js]
+TopLine=68
+Caret=1,106
