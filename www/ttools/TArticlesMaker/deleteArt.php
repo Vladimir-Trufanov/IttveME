@@ -23,7 +23,7 @@ define("stylesdir",'Styles');     // каталог стилей элемент�
 define("imgdir",'Images');        // каталог файлов служебных для сайта изображений
 
 // Подгружаем нужные модули библиотек
-require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
+require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once pathPhpPrown."/CommonPrown.php";
 // Подключаем объект для работы с базой данных материалов
 // (при необходимости создаем базу данных материалов)

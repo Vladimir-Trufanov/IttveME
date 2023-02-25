@@ -72,3 +72,85 @@ Stack trace:
 [23-Feb-2023 09:46:41 Asia/Kuwait] PHP Fatal error:  Cannot redeclare DefinePHPtoJS() (previously declared in C:\IttveMe\www\UpSiteDef.php:14) in C:\IttveMe\www\UpSiteDef.php on line 40
 [24-Feb-2023 08:37:13 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TMenuLeader/MenuLeaderClass.php' (include_path='.;C:\php\pear') in C:\TPhpTools\TPhpTools\TTinyGallery\TinyGalleryClass.php on line 83
 [24-Feb-2023 22:43:23 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TArticlesMaker/ArticlesMakerClass.php' (include_path='.;C:\php\pear') in C:\TPhpTools\TPhpTools\TKwinGallery\KwinGalleryClass.php on line 69
+[25-Feb-2023 07:53:27 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:85
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(280): ttools\main_HEAD()
+#1 C:\IttveMe\www\UpSiteCSS.php(259): ttools\TinyGallery->IniEditSpace()
+#2 C:\IttveMe\www\index.php(92): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 85
+[25-Feb-2023 08:36:32 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:131
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(297): ttools\main_BODY_KwinGallery('4', '27')
+#1 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 131
+[25-Feb-2023 08:41:06 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:131
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(297): ttools\main_BODY_KwinGallery()
+#1 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 131
+[25-Feb-2023 13:01:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in C:\IttveMe\www\UpSite.php on line 29
+[25-Feb-2023 13:02:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in C:\IttveMe\www\UpSite.php on line 29
+[25-Feb-2023 13:02:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in C:\IttveMe\www\UpSite.php on line 29
+[25-Feb-2023 13:03:27 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getComRequest() in C:\IttveMe\www\UpSite.php:30
+Stack trace:
+#0 C:\IttveMe\www\index.php(99): require_once()
+#1 {main}
+  thrown in C:\IttveMe\www\UpSite.php on line 30
+[25-Feb-2023 15:03:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\IttveMe\www\ttools\TKwinGallery\KwinGalleryClass.php on line 214
+[25-Feb-2023 16:52:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE), expecting end of file in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 254
+[25-Feb-2023 16:52:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE), expecting end of file in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 254
+[25-Feb-2023 16:53:27 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 254
+[25-Feb-2023 17:07:18 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''.'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 324
+[25-Feb-2023 17:08:06 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\prown\getTranslit() in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:256
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(305): ttools\mmlZhiznIputeshestviya_BODY_WorkTiny(Object(PDO), Object(ttools\ArticlesMaker))
+#1 C:\IttveMe\www\UpSite.php(22): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 256
+[25-Feb-2023 17:34:49 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\prown\getComRequest() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:294
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(21): ttools\TinyGallery->OpenEditSpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 294
+[25-Feb-2023 19:05:50 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:132
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(293): ttools\main_BODY_KwinGallery(NULL)
+#1 C:\IttveMe\www\UpSite.php(24): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 132
+[25-Feb-2023 19:08:10 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:132
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(293): ttools\main_BODY_KwinGallery(NULL)
+#1 C:\IttveMe\www\UpSite.php(24): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 132
+[25-Feb-2023 19:08:20 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:132
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(293): ttools\main_BODY_KwinGallery(NULL)
+#1 C:\IttveMe\www\UpSite.php(24): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 132
+[25-Feb-2023 19:09:54 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:132
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(293): ttools\main_BODY_KwinGallery(NULL)
+#1 C:\IttveMe\www\UpSite.php(24): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 132
+[25-Feb-2023 19:13:14 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:132
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(296): ttools\main_BODY_KwinGallery(NULL)
+#1 C:\IttveMe\www\UpSite.php(24): ttools\TinyGallery->OpenEditSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 132

@@ -7,9 +7,11 @@
 // * Copyright © 2023 tve                           Дата создания: 09.01.2023 *
 // ****************************************************************************
 
+      /*
       pathPhpTools="<?php echo pathPhpTools;?>";
       pathPhpPrown="<?php echo pathPhpPrown;?>";
       gncNoCue="<?php echo gncNoCue;?>"; 
+      */
 
       // **********************************************************************
       // *       Проверить целостность базы данных по 16 очередным записям    *
@@ -48,56 +50,5 @@
                }
             }
          });
-      }
-      // **********************************************************************
-      // *        Задать обработчик аякс-запроса по удалению материала        *
-      // **********************************************************************
-      function UdalitMater(Uid)
-      {
-         $('#DialogWind').dialog
-         ({
-            buttons:[{text:"OK",click:function(){xUdalitMater(Uid)}}]
-         });
-         htmlText="Удалить выбранный материал по "+Uid+"?";
-         Notice_Info(htmlText,"Удалить материал");
-      }
-      function xUdalitMater(Uid)
-      {
-         // Выводим в диалог предварительный результат выполнения запроса
-         htmlText="Удалить статью по "+Uid+" не удалось!";
-         // Выполняем запрос на удаление
-         pathphp="deleteArt.php";
-         // Делаем запрос на определение наименования раздела материалов
-         $.ajax({
-            url: pathphp,
-            type: 'POST',
-            data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
-            // Выводим ошибки при выполнении запроса в PHP-сценарии
-            error: function (jqXHR,exception) {SmarttodoError(jqXHR,exception)},
-            // Обрабатываем ответное сообщение
-            success: function(message)
-            {
-               // Вырезаем из запроса чистое сообщение
-               messa=FreshLabel(message);
-               // Получаем параметры ответа
-               parm=JSON.parse(messa);
-               // Выводим результат выполнения
-               if (parm.NameArt==gncNoCue) htmlText=parm.NameArt+' Uid='+Uid;
-               else htmlText=parm.NameArt;
-               $('#DialogWind').html(htmlText);
-            }
-         });
-         // Удаляем кнопку из диалога и увеличиваем задержку до закрытия
-         delayClose=1500;
-         $('#DialogWind').dialog
-         ({
-            buttons:[],
-            hide:{effect:"explode",delay:delayClose,duration:1000,easing:'swing'},
-            title: "Удаление материала",
-         });
-         // Закрываем окно
-         $("#DialogWind").dialog("close");
-         // Перезагружаем страницу через 4 секунды
-         setTimeout(function() {location.reload();}, 4000);
       }
 // ******************************************************* ArticlesMaker.js *** 

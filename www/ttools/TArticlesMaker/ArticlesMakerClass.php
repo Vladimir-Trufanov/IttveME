@@ -47,7 +47,8 @@
 //    сообщений
 
 // ------------------------------------------ Путь к каталогу файлов класса ---
-define ("TArticlesMakerDir",$SiteRoot.'/ttools/TArticlesMaker');  
+//define ("TArticlesMakerDir",$SiteRoot.'/ttools/TArticlesMaker');  
+define ("TArticlesMakerDir",'ttools/TArticlesMaker');  
 
 // --------------------- Константы для указания типа базы данных (по сайту) ---
 define ("tbsIttveme", 'IttveMe'); 
@@ -56,8 +57,6 @@ define ("tbsIttvepw", 'IttvePw');
 define ("acsAll",   1);      // доступ разрешен всем
 define ("acsClose", 2);      // закрыт, статья в разработке
 define ("acsAutor", 4);      // только автору-хозяину сайта
-// ----------------------------------------- Ошибки обработки аякс-запросов ---
-define ("gncNoCue", 'Статья не найдена в базе'); 
 
 // Подгружаем общие функции класса
 require_once("CommonArticlesMaker.php"); 

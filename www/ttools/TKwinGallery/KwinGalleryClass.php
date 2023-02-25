@@ -56,9 +56,6 @@
 
 // ------------------------------------------ Путь к каталогу файлов класса ---
 define ("TKwinGalleryDir",$SiteRoot.'/ttools/TKwinGallery');  
-// ----------------------------------------------- Режимы работы с галереей ---
-define ("mwgViewing", 1);   // просмотр
-define ("mwgEditing", 2);   // редактирование
 
 // Подгружаем нужные модули библиотеки прикладных функций
 require_once pathPhpPrown."/CommonPrown.php";
@@ -168,51 +165,69 @@ class KwinGallery
    // *************************************************************************
    // *            Развернуть изображения галереи из базы данных              *
    // *                          и обеспечить их ведение                      *
-   // *     $GalleryMode - режим вывода галереи: mwgViewing или mwgEditing    *
+   // *     GalleryMode - режим вывода галереи: mwgViewing или mwgEditing    *
    // *************************************************************************
-   public function BaseGallery($GalleryMode=mwgViewing)
+   public function BaseGallery()
    {
       $messa=imok;
       // Выбираем все фотографии по идентификатору текущей статьи
       $tableKeys=$this->Arti->SelImgKeys($this->apdo,$this->uid);
-      $i=0;
-      // Если фотографий нет, предлагаем загрузить первую
+
+      // Если фотографий нет, то показываем шаблонную 
+      // или предлагаем загрузить первую
       if (count($tableKeys)==0)
-      if (($GalleryMode=mwgEditing)&&($i==0)) 
       {
-         if (IsSet($_POST["MAX_FILE_SIZE"])) $this->GSaveImgComm();
-         else  $this->GLoadImage(imgdir.'/sampo.jpg',"На горе Сампо всем хорошо!");
-      }
-      // Перебираем изображения и загружаем их по ключам 
-      // для просмотра или редактирования
-      foreach ($tableKeys as $row)
-      {
-         $uid=$row['uid'];
-         $TranslitPic=$row['TranslitPic'];
-         $Comment=$row['CommPic'];
-         // Загружаем изображение для просмотра
-         $table=$this->Arti->SelImgPic($this->apdo,$uid,$TranslitPic);
-         // Если ошибка загрузки, то завершаем цикл и возвращаем сообщение
-         if ($table['TranslitPic']==Err)
-         {
-            $messa=$table['Pic']; break;
-         }
-         // Выводим загруженное изображение в карточке
-         if ($GalleryMode=mwgEditing) 
-            $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic,$Action='Image');
-         else
-            $this->GViewImage($row['mime_type'],$table['Pic'],$Comment,$Action='Image');
-            //$this->GViewImage($FileName,$Comment,$Action='Image');
-         // Если задан режим редактирования, то выводим изображение для загрузки
-         // (как правило, второе при выводе карточек)
-         if (($GalleryMode=mwgEditing)&&($i==0)) 
+         if (GalleryMode==mwgEditing) 
          {
             if (IsSet($_POST["MAX_FILE_SIZE"])) $this->GSaveImgComm();
             else  $this->GLoadImage(imgdir.'/sampo.jpg',"На горе Сампо всем хорошо!");
+         } 
+         else $this->GPicImage(imgdir.'/sampo.jpg',"На горе Сампо всем хорошо!");
+      }
+      else
+      // Работаем по ключам выбранных фотографий
+      {
+         $i=0;
+         // Перебираем изображения и загружаем их по ключам 
+         // для просмотра или редактирования
+         foreach ($tableKeys as $row)
+         {
+            $uid=$row['uid'];
+            $TranslitPic=$row['TranslitPic'];
+            $Comment=$row['CommPic'];
+            // Загружаем изображение для просмотра
+            $table=$this->Arti->SelImgPic($this->apdo,$uid,$TranslitPic);
+            // Если ошибка загрузки, то завершаем цикл и возвращаем сообщение
+            if ($table['TranslitPic']==Err)
+            {
+               $messa=$table['Pic']; break;
+            }
+            // Выводим загруженное изображение в карточке
+            if (GalleryMode==mwgEditing) 
+               $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic,$Action='Image');
+            else
+               $this->GViewImage($row['mime_type'],$table['Pic'],$Comment,$Action='Image');
+               //$this->GViewImage($FileName,$Comment,$Action='Image');
+            // Если задан режим редактирования, то выводим изображение для загрузки
+            // (как правило, второе при выводе карточек)
+            if ((GalleryMode==mwgEditing)&&($i==0)) 
+            {
+               if (IsSet($_POST["MAX_FILE_SIZE"])) $this->GSaveImgComm();
+               else  $this->GLoadImage(imgdir.'/sampo.jpg',"На горе Сампо всем хорошо!");
+            }
+            $i++;
          }
-         $i++;
-      } 
+      }
       return $messa;
+   }
+   protected function GPicImage($FileName,$Comment)
+   {
+      echo '<div class="Card">';
+      echo '<button class="bCard">';
+      echo '<img class="imgCard" src="'.$FileName.'">';
+      echo '</button>';
+      echo '<p class="pCard">'.$Comment.'</p>';
+      echo '</div>';
    }
    protected function GViewImage($mime_type,$DataPic,$Comment,$Action='Image')
    {

@@ -59,8 +59,69 @@ function MakeTitle($NameGru,$NameArt,$DateArt='')
    }
 }
 
+// ------------------------------------------------------------------- Main ---
+
+// ****************************************************************************
+// *      Построить рабочую область для редактирования выбранной статьи       *
+// ****************************************************************************
+function main_HEAD($fileStyle)
+{
+   // Если режим редактирования, то готовим рабочую область Tiny  
+  if (GalleryMode==mwgEditing) 
+  {
+    echo '
+      <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
+      <script> tinymce.init
+      ({
+         selector: "#mytextarea",'.
+         //theme: "modern",
+         //setup: function(editor) 
+         //{
+         //   editor.on("init", function(e) 
+         //   {
+         //      console.log("The Editor has initialized.");
+         //   });
+         //},'.
+         //height: 180,'.
+         //width:  780,'.
+         'content_css: "'.$fileStyle.'",'.
+         'plugins:
+         [ 
+            "advlist autolink link image imagetools lists charmap print preview hr anchor",
+            "pagebreak spellchecker searchreplace wordcount visualblocks",
+            "visualchars code fullscreen insertdatetime media nonbreaking",'.
+            // "contextmenu",  // отключено для TinyMCE5-8-1
+            // "textcolor",    // отключено для TinyMCE5-8-1'.
+            '"save table directionality emoticons template paste"
+         ],
+       
+         language: "ru",
+         toolbar:
+         [
+            "| link image | forecolor backcolor emoticons"
+         ],'.
+         //
+         // toolbar:
+         // [
+         //    "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
+         // ],.
+         'image_list: [
+            {title: "My image 1", value: "ittveEdit/proba.jpg"},
+            {title: "My image 2", value: "http://www.moxiecode.com/my2.gif"}
+         ],
+         a_plugin_option: true,
+         a_configuration_option: 400
+      });
+      </script>
+    ';
+  }
+}
+
 // ----------------------------------------------------- mmlNaznachitStatyu ---
 
+// ****************************************************************************
+// *           Подготовить стили страницы при назначении новой статьи         *
+// ****************************************************************************
 function mmlNaznachitStatyu_HEAD()
 {
     // Отключаем разворачивание аккордеона
@@ -80,12 +141,35 @@ function mmlNaznachitStatyu_HEAD()
     // Включаем рождественскую версию шрифтов и полосок меню
     IniFontChristmas();
 }
+
+// ****************************************************************************
+// *           Подготовить стили страницы при назначении новой статьи         *
+// ****************************************************************************
+function mmlZhiznIputeshestviya_HEAD()
+{
+    // Отключаем разворачивание аккордеона
+    // в случае, когда создаем заголовок новой статьи. 
+    echo '
+    <style>
+      .accordion li .sub-menu 
+      {
+         height:100%;
+      }
+    </style>
+    ';
+    echo '
+    <script>
+    </script>
+    ';
+}
 // ****************************************************************************
 // *   Построить панель выбранных значений при назначении новой статьи        *
 // ****************************************************************************
 function mmlNaznachitStatyu_BODY_KwinGallery()
 {
+   // Здесь будем выводим кнопку для создания новой записи через js: 
    // <input type="submit" value="Записать реквизиты статьи" form="frmNaznachitStatyu">
+   // только после выбора/назначения всех трех условий
    echo '<br><br>
       <div class="nazst"> 
          <p class="nazstName"  id="wnCue">Раздел материалов</p>
@@ -93,15 +177,16 @@ function mmlNaznachitStatyu_BODY_KwinGallery()
       </div>
       <div class="nazst"> 
          <p class="nazstName"  id="wnArt">Новая статья</p>
-         <p class="nazstValue" id="wvArt">не назначено</p>
+         <p class="nazstValue" id="wvArt">'.nstNoNaz.'</p>
       </div>
       <div class="nazst"> 
          <p class="nazstName"  id="wnDat">Дата создания</p>
-         <p class="nazstValue" id="wvDat">не выбрано</p>
+         <p class="nazstValue" id="wvDat">'.nstNoVyb.'</p>
          <div id="nazstSub">
          </div>
       </div>
    ';
+   //$this->Galli->BaseGallery(mwgEditing);
 }
 // ****************************************************************************
 // *            Выполнить действия в области редактирования "WorkTiny"        *
@@ -146,5 +231,15 @@ function mmlNaznachitStatyu_BODY_WorkTiny($messa,$pdo,$Arti)
       $Arti->MakeUniMenu($pdo,'getNameCue');
    echo '</div>';
 }
+
+   // *************************************************************************
+   // *             ------        Выбрать статью для редактирования                 *
+   // *             ------(дополнительно проверить целостность базы данных)         *
+   // *************************************************************************
+   function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
+   {
+      MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
+      $Arti->getPunktMenu($pdo); 
+   }
 
 // *********************************************************** WorkTiny.php ***

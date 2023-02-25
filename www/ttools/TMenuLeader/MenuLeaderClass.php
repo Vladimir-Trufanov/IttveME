@@ -106,53 +106,13 @@ class MenuLeader
    {
       // Формируем префикс вызова страниц из меню на сайте и localhost
       $cPref=$this->ComTiny;
-      // Выводим управляющие меню по страницам
-      if (\prown\isComRequest(mmlVybratStatyuRedakti))
-      {
-         echo '
-            <ul class="uli">
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVernutsyaNaGlavnuyu.'">На главную</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVybratStatyuRedakti.'">Выбрать материал</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlNaznachitStatyu.    '">Назначить статью</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlUdalitMaterial     .'">Удалить материал</a></li>
-            </ul>   
-         ';
-      }
-      // Если просто была выбрана страница "Назначить статью" 
-      else if (\prown\isComRequest(mmlNaznachitStatyu))
-      {
-         echo '
-            <ul class="uli">
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVernutsyaNaGlavnuyu.'">На главную</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlUdalitMaterial     .'">Удалить материал</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVybratStatyuRedakti.'">Выбрать материал</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlNaznachitStatyu.    '">Назначить статью</a></li>
-            </ul>   
-         ';
-            //<li class="ili"><a class="ali" href="'.$cPref.mmlNaznachitStatyu.    '">Назначить статью</a></li>
-      }
-      else if (\prown\isComRequest(mmlUdalitMaterial))
-      {
-         echo '
-            <ul class="uli">
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVernutsyaNaGlavnuyu.'">На главную</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVybratStatyuRedakti.'">Выбрать материал</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlUdalitMaterial     .'">Удалить материал</a></li>
-            </ul>   
-         ';
-      }
-      // В обычном режиме
-      else
-      {
-         echo '
-            <ul class="uli">
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVernutsyaNaGlavnuyu.'">На главную</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlNaznachitStatyu.    '">Назначить статью</a></li>
-            <li class="ili"><a class="ali" href="'.$cPref.mmlVybratStatyuRedakti.'">Выбрать материал</a></li>
-            <li class="ili">'.'<input type="submit" value="Сохранить материал" form="frmTinyText" onclick="SaveStuff()">'.'</li>
-            </ul>   
-         ';
-      }
+      echo '
+         <ul class="uli">
+         <li class="ili"><a class="ali" href="'.$cPref.mmlVernutsyaNaGlavnuyu.'">На главную</a></li>
+         <li class="ili"><a class="ali" href="'.$cPref.mmlUdalitMaterial     .'">Удалить материал</a></li>
+         <li class="ili">'.'<input type="submit" value="Сохранить материал" form="frmTinyText" onclick="SaveStuff()">'.'</li>
+         </ul>   
+      ';
    }
    // *************************************************************************
    // *             Отработать меню управления на сайте "ittve.me"            *
@@ -201,7 +161,16 @@ class MenuLeader
          $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
       }
-      // Выводим пункты меню при работе с материалом 
+      // ---------------------- Выводим пункты меню при работе с материалом ---
+      else if (\prown\isComRequest(mmlSozdatRedaktirovat)||\prown\isComRequest(mmlNaznachitStatyu))
+      {
+         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
+         $this->Punkt($this->cPreMe.mmlNaznachitStatyu,'&#xf0f6;','Назначить','новую статью');
+         $this->Punkt($this->cPreMe.mmlVybratStatyuRedakti,'&#xf07c;','Выбрать материал','для изменений');
+         $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Удалить','указанный материал');
+         //$cPost='<input type="submit" value="Сохранить материал" form="frmTinyText">';
+         //$this->PunktPost('&#xf0ed;',$cPost,"Сохранить материал");
+      }
       else if (\prown\isComRequest(mmlSozdatRedaktirovat))
       {
          $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');

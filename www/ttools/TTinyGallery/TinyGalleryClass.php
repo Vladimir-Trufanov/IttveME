@@ -122,6 +122,7 @@ class TinyGallery
       // Инициализируем свойства класса
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
+      $this->fileStyle="Styles/WorkTiny.css";
       $this->editdir=editdir; 
       $this->pidEdit=-1; 
       $this->uidEdit=-1; 
@@ -222,15 +223,10 @@ class TinyGallery
       $this->DateArt=$DateArt;
       $this->pidEdit=$pidEdit; 
       $this->uidEdit=$uidEdit; 
-      // Если нет отложенного сообщения, то создаем галерею 
-      // и выбираем другое возможное отложенное сообщение 
-      if ($this->DelayedMessage==imok)
-      {
-         // Cоздаем объект для управления изображениями в галерее, связанной с 
-         // материалами сайта из базы данных
-         $this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
-         $this->DelayedMessage=$this->Galli->getDelayedMessage();
-      }
+      // Cоздаем объект для управления изображениями в галерее, связанной с 
+      // материалами сайта из базы данных
+      $this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
+      $this->DelayedMessage=$this->Galli->getDelayedMessage();
    }
    
    // --------------------------------------------------------------------------------------- HEAD and LAST ---
@@ -268,16 +264,15 @@ class TinyGallery
       }
       </style>
       ';
-      
-      // Инициализируем страницу "Назначить статью"
-      if (\prown\isComRequest(mmlNaznachitStatyu))
+      if (\prown\isComRequest(mmlZhiznIputeshestviya))
+         mmlZhiznIputeshestviya_HEAD();
+      else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_HEAD();
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->IniEditSpace_mmlVybratStatyuRedakti();
       else if (\prown\isComRequest(mmlUdalitMaterial))
          $this->IniEditSpace_mmlUdalitMaterial();
-      // В обычном режиме
-      else $this->IniEditSpace_main();
+      else main_HEAD($this->fileStyle);
    }
    // *************************************************************************
    // *              Открыть пространство редактирования материала            *
@@ -290,15 +285,15 @@ class TinyGallery
          mmlNaznachitStatyu_BODY_KwinGallery();
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->KwinGallery_mmlVybratStatyuRedakti();
-      else if (\prown\isComRequest(mmlUdalitMaterial))
-         $this->KwinGallery_mmlUdalitMaterial();
-      // В обычном режиме
-      else $this->KwinGallery_main($this->pidEdit,$this->uidEdit);
+      else $this->Galli->BaseGallery();;
    echo '</div>'; 
    // Включаем в разметку рабочую область редактирования
    echo '<div id="WorkTiny">';
       // Перезапускаем страницу "Назначить статью"
-      if (\prown\isComRequest(mmlNaznachitStatyu))
+      if (\prown\isComRequest(mmlZhiznIputeshestviya))
+         mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Перезапускаем страницу "Назначить статью"
+      else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_BODY_WorkTiny
          ('Укажите название и дату для новой статьи, выберите раздел материалов',$this->apdo,$this->Arti);
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
@@ -315,7 +310,7 @@ class TinyGallery
       echo '
       <ul id="btnLifeMenu">
       <li>
-         <a href= "'.'$cPref.mmlZhiznIputeshestviya'.'">
+         <a href= "'.'?Com='.mmlZhiznIputeshestviya.'">
          <img id="imgLifeMenu" src="/Images/tveMenuD.png" alt="tveMenuD">
          </a> 
       </li> 
@@ -350,58 +345,6 @@ class TinyGallery
 
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
 
-   // *************************************************************************
-   // *    Выполнить действия на странице в обычном режиме редактирования     *
-   // *************************************************************************
-   private function IniEditSpace_main()
-   {
-      // Готовим рабочую область Tiny <!-- theme: "modern", -->
-      // Подключаем TinyMCE
-      echo '
-         <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
-         <script> tinymce.init
-         ({
-            selector: "#mytextarea",'.
-            //setup: function(editor) 
-            //{
-            //   editor.on("init", function(e) 
-            //   {
-            //      console.log("The Editor has initialized.");
-            //   });
-            //},'.
-            //height: 180,'.
-            //width:  780,'.
-            'content_css: "'.$this->fileStyle.'",'.
-            'plugins:
-            [ 
-               "advlist autolink link image imagetools lists charmap print preview hr anchor",
-               "pagebreak spellchecker searchreplace wordcount visualblocks",
-               "visualchars code fullscreen insertdatetime media nonbreaking",'.
-               // "contextmenu",  // отключено для TinyMCE5-8-1
-               // "textcolor",    // отключено для TinyMCE5-8-1'.
-               '"save table directionality emoticons template paste"
-            ],
-        
-            language: "ru",
-            toolbar:
-            [
-               "| link image | forecolor backcolor emoticons"
-            ],'.
-            //
-            // toolbar:
-            // [
-            //    "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
-            // ],.
-            'image_list: [
-               {title: "My image 1", value: "ittveEdit/proba.jpg"},
-               {title: "My image 2", value: "http://www.moxiecode.com/my2.gif"}
-            ],
-            a_plugin_option: true,
-            a_configuration_option: 400
-         });
-         </script>
-      ';
-   }
    private function IniEditSpace_mmlVernutsyaNaGlavnuyu()
    {
       \prown\ConsoleLog('IniEditSpace_mmlVernutsyaNaGlavnuyu'); 
@@ -443,23 +386,25 @@ class TinyGallery
          MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
       else 
          MakeTitle($this->DelayedMessage,ttError);
-      $SaveAction=$_SERVER["SCRIPT_NAME"];
-      echo '
-         <form id="frmTinyText" method="post" action="'.$SaveAction.'">
-         <textarea id="mytextarea" name="mytextarea">
-      '; 
-      if ($this->contents<>NULL)
+      // Формируем контент страницы   
+      if ($this->contents<>NULL) $contenti=$this->contents;
+      else $contenti='';
+
+      // Если режим редактирования, то готовим рабочую область Tiny  
+      if (GalleryMode==mwgEditing) 
       {
-         echo $this->contents;
+         $SaveAction=$_SERVER["SCRIPT_NAME"];
+         echo '
+            <form id="frmTinyText" method="post" action="'.$SaveAction.'">
+            <textarea id="mytextarea" name="mytextarea">
+         '; 
+         echo $contenti;
+         echo '
+            </textarea>
+            </form>
+         ';
       }
-      else
-      {
-         echo '';
-      }
-      echo '
-         </textarea>
-         </form>
-      '; 
+      else echo $contenti; 
    }
    private function WorkTiny_mmlVernutsyaNaGlavnuyu()
    {
@@ -483,23 +428,6 @@ class TinyGallery
       // Выбираем статью для редактирования и, дополнительно,
       // проверяем целостность базы данных
       $this->Arti->getPunktMenu($this->apdo); 
-   }
-   // *************************************************************************
-   // *        Обеспечить просмотр и редактирование фотографий в галерее      *
-   // *************************************************************************
-   private function KwinGallery_main($pidEdit,$uidEdit)
-   {
-      // Если нет отложенного сообщения, то показываем галерею изображений
-      if ($this->DelayedMessage==imok)
-      {
-         //$this->Galli->ViewGalleryAsArray();
-         //$this->Galli->ViewGallery(NULL,mwgEditing);
-         $this->DelayedMessage=$this->Galli->BaseGallery(mwgEditing);
-      }
-   }
-   private function KwinGallery_mmlUdalitMaterial()
-   {
-      echo 'KwinGallery_mmlUdalitMaterial<br>';
    }
    private function KwinGallery_mmlVernutsyaNaGlavnuyu()
    {

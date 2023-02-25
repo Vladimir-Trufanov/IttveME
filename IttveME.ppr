@@ -114,6 +114,8 @@ IttveME
 					www\ittveEdit\Охота на медведя\Следы не свежие, но догоним.JPG
 					www\ittveEdit\Охота на медведя\Шапша в половодье.JPG
 					www\ittveEdit\Охота на медведя\Шапша весной.JPG
+				www\ittveEdit\ittve4-27-brevno-na-medvedya.jpg
+				www\ittveEdit\ittve4-27-karta-progulki.jpg
 			-jQuery
 				-images
 					www\jQuery\images\ui-icons_444444_256x240.png
@@ -126,9 +128,10 @@ IttveME
 				www\jQuery\jquery-3.6.3.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
+				www\Jsx\WorkTiny.js
 			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
@@ -140,6 +143,7 @@ IttveME
 				www\Styles\Footer-Info.css
 				www\Styles\iniStyles.css
 				www\Styles\Lobster.ttf
+				www\Styles\WorkTiny.css
 			-TinyMCE5-8-1
 				-icons
 					-default
@@ -378,7 +382,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.css
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -391,7 +395,7 @@ IttveME
 					www\ttools\TArticlesMaker\getNameCue.php
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -401,8 +405,6 @@ IttveME
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 				-TTinyGallery
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-					www\ttools\TTinyGallery\WorkTiny.css
-					www\ttools\TTinyGallery\WorkTiny.js
 					www\ttools\TTinyGallery\WorkTiny.php
 			www\.htaccess
 			www\.user.ini
@@ -417,6 +419,7 @@ IttveME
 			www\ittve-log.txt
 			www\log.txt
 			www\manifest.json
+			www\MenuArticles.php
 			www\TestBase.php
 			www\ToPlugDebug.php
 			www\UpSite.php
@@ -440,6 +443,8 @@ IttveME
 5=www\ttools\TTinyGallery\TinyGalleryClass.php
 6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 7=www\ttools\TKwinGallery\KwinGalleryClass.php
+8=www\ttools\TMenuLeader\MenuLeaderClass.php
+9=www\ttools\TTinyGallery\WorkTiny.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
@@ -450,20 +455,26 @@ Caret=10,73
 TopLine=1
 Caret=2,17
 [www\iniMem.php]
-TopLine=110
-Caret=35,139
+TopLine=128
+Caret=1,150
 [www\UpSiteCSS.php]
-TopLine=37
-Caret=1,64
+TopLine=232
+Caret=1,259
 [www\UpSite.php]
-TopLine=27
-Caret=1,31
+TopLine=1
+Caret=1,18
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=217
-Caret=1,245
+TopLine=386
+Caret=17,407
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=27
-Caret=1,51
+TopLine=23
+Caret=30,51
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=149
-Caret=1,168
+TopLine=167
+Caret=1,182
+[www\ttools\TMenuLeader\MenuLeaderClass.php]
+TopLine=73
+Caret=28,77
+[www\ttools\TTinyGallery\WorkTiny.php]
+TopLine=58
+Caret=1,72

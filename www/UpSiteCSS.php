@@ -55,11 +55,11 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 // Подключаем стили внутренних классов 
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
-echo '<link rel="stylesheet" type="text/css" href="ttools/TTinyGallery/WorkTiny.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
-echo '<script src="/ttools/TTinyGallery/WorkTiny.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
+echo '<script src="/Jsx/WorkTiny.js"></script>';
 
 /*
 // Определяем стили галлереи, определяем стили для показа изображения, 
@@ -254,19 +254,35 @@ echo '
    </script>
 ';
 */
-
+// Назначаем режим работы с галереей (просмотр или редактирование)
+define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
 $Edit->IniEditSpace();
 $note->Init();
-// Отправляем пути в js
-?> <script>
-$(document).ready(function() {
-   pathPhpTools="<?php echo pathPhpTools;?>";
-   pathPhpPrown="<?php echo pathPhpPrown;?>";
-});
-</script> <?php
+// Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---
+
+// ****************************************************************************
+// *               На основании указанных параметров запроса страницы         *
+// *                     определяем режим просмотра галереи                   *
+// ****************************************************************************
+function setGalleryMode()
+{
+   // По умолчанию считаем режим просмотра галереи
+   $Result=mwgViewing;
+   if (
+     (prown\isComRequest(mmlSozdatRedaktirovat))||
+     (prown\isComRequest(mmlVybratStatyuRedakti))||
+     (prown\isComRequest(mmlNaznachitStatyu))
+   ) $Result=mwgEditing;   
+   else if (
+     (prown\isComRequest(mmlVernutsyaNaGlavnuyu))||
+     (prown\isComRequest(mmlUdalitMaterial))||
+     (prown\isComRequest(mmlZhiznIputeshestviya))
+   ) $Result=mwgViewing; 
+   return $Result;  
+}
 
 // <!-- --> ************************************************* UpSiteCSS.php ***
