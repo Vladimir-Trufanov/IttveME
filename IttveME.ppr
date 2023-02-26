@@ -454,10 +454,9 @@ IttveME
 7=www\ttools\TKwinGallery\KwinGalleryClass.php
 8=www\ttools\TMenuLeader\MenuLeaderClass.php
 9=www\ttools\TTinyGallery\WorkTiny.php
-10=www\ttools\TDelCueClass\DelCueClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\ttools\TTinyGallery\WorkTiny.php
 [www\index.php]
 TopLine=79
 Caret=37,118
@@ -465,14 +464,14 @@ Caret=37,118
 TopLine=1
 Caret=2,17
 [www\iniMem.php]
-TopLine=145
-Caret=3,184
+TopLine=146
+Caret=1,146
 [www\UpSiteCSS.php]
-TopLine=221
-Caret=1,259
+TopLine=174
+Caret=1,195
 [www\UpSite.php]
-TopLine=80
-Caret=1,96
+TopLine=40
+Caret=1,40
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=298
 Caret=17,311
@@ -486,8 +485,5 @@ Caret=1,182
 TopLine=1
 Caret=23,1
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=258
-Caret=49,290
-[www\ttools\TDelCueClass\DelCueClass.php]
-TopLine=1
-Caret=10,13
+TopLine=240
+Caret=4,240

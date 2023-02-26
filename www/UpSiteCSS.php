@@ -88,13 +88,6 @@ echo'
    </style>
 ';
 
-// Если выбрана страница с главным меню, то создаем объекты для работы с меню,
-// выборкой юникодов и формируем стили разметки
-//if (prown\isComRequest(mmlZhiznIputeshestviya))
-//{
-   //$Unicoder=new ttools\UnicodeUser('Emojitveme'); 
-   //$Arti=new ttools\ArticlesMaker($basename,$username,$password);
-//}
 // --- Формируем стили --------------------------------------------------------
 echo "<style>";
 // Позиционируем колонки материалов и новостей
@@ -193,67 +186,12 @@ else
    }
    ";
 }
-// Делаем настройки при заходе в режим редактирования
-if (prown\isComRequest(mmlSozdatRedaktirovat))
-{
-   /*
-   // Настраиваем див всплывающего окна
-   // Подключаем TinyMCE
-   echo '
-   <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
-   <script>tinymce.init
-   ({
-        selector: "#TinyArea",
-        height: 560,
-        width:  820,
-        content_css: "/Styles/TinyMCE.css",
-        
-        plugins:
-        [ 
-            "advlist autolink link image imagetools lists charmap print preview hr anchor",
-            "pagebreak spellchecker searchreplace wordcount visualblocks",
-            "visualchars code fullscreen insertdatetime media nonbreaking",
-            // "contextmenu",  // отключено для TinyMCE5-8-1
-            // "textcolor",    // отключено для TinyMCE5-8-1
-            "save table directionality emoticons template paste"
-        ],
-        
-        language: "ru",
-        toolbar:
-        [
-            "| link image | forecolor backcolor emoticons"
-        ],
-        //toolbar:
-        //[
-        //    "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
-        //],
-        image_list: [
-          {title: "My image 1", value: "KwinTiny/proba.jpg"},
-          {title: "My image 2", value: "http://www.moxiecode.com/my2.gif"}
-        ],
-        a_plugin_option: true,
-        a_configuration_option: 400
-   });
-   </script>
-   ';
-   */
-}  
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
 $ImageFile=prown\getComRequest('Image');
 // Завершаем стили 
 echo "</style>";
-/*
-// Подключаем TJsPrown и TJsTools
-echo '
-   <link rel="stylesheet" type="text/css" 
-   href="TJsPrown/TJsPrown.css">
-   <script 
-      src="/TJsPrown/TJsPrown.js">
-   </script>
-';
-*/
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов

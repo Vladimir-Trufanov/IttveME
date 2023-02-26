@@ -192,3 +192,11 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 311
+[26-Feb-2023 13:03:49 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\ttools\UnicodeUser' not found in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:243
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(294): ttools\mmlZhiznIputeshestviya_BODY_WorkTiny(Object(PDO), Object(ttools\ArticlesMaker))
+#1 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 243
+[26-Feb-2023 13:24:18 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 246

@@ -143,7 +143,6 @@ require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
 require_once pathPhpTools."/TNotice/NoticeClass.php";
 //require_once pathPhpTools."/iniToolsMessage.php";
 //require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
-//require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
    
 // Подключаем внутренние классы
 require_once "ttools/TMenuLeader/MenuLeaderClass.php";

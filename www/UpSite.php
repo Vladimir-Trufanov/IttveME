@@ -38,21 +38,6 @@ echo 'getComRequest()='.prown\getComRequest().'   ';
 */
 echo '</div>';
 
-
-/*
-echo '<div id="Niz">'; 
-if (prown\isComRequest(mmlVernutsyaNaGlavnuyu))
-{
-   echo '<pre>';
-   echo prown\getTranslit('Подъём настроения').'<br>';
-   //print_r($_FILES);
-   echo '</pre>';
-}
-echo '</div>';
-*/
-// Трассируем страницы
-//if (prown\isComRequest(mmlVernutsyaNaGlavnuyu)) prown\ConsoleLog('Вернулись на главную страницу');
-
 /*
 // Проверяем не требуется ли просто вывести изображение и выводим его
 if ($ImageFile<>NULL)

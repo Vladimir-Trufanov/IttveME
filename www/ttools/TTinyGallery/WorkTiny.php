@@ -238,6 +238,16 @@ function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
 {
    MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
    $Arti->getPunktMenu($pdo); 
+   
+   /*
+   require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
+   $Unicoder=new UnicodeUser('Emojitveme'); 
+   //$Unicoder->ViewCharsetAsColomn(0);
+   //$Unicoder->ViewIntervalAsColomn('2300','2650');
+   //$Unicoder->ViewFontAwesome470AsColomn('f0b3','f200');
+   //$Unicoder->ViewFontAwesome470AsTable('f0b3','f200',2);
+   $Unicoder->ViewCharsetAsTable(0,3);
+   */
 }
 // ****************************************************************************
 // *                         "Отправить сообщение автору"                     *
