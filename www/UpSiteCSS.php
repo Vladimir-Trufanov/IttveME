@@ -50,8 +50,6 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем справа галерею изображений и делам только одну колонку для 
 // статей. Выполняем общее фиксирование элементов разметки  
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
-// Выстраиваем стили подвала сайта и информационной полосы
-echo '<link rel="stylesheet" type="text/css" href="Styles/Footer-Info.css">';
 // Подключаем стили внутренних классов 
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
@@ -149,7 +147,7 @@ else
 if (($c_PresMode==rpmDoubleRight)||($c_PresMode==rpmOneRight))
 {
    echo "
-   #Footer,#Info
+   #FooterTiny,#Info
    { 
       right:33%;
       width:67%; 
@@ -170,7 +168,7 @@ if (($c_PresMode==rpmDoubleRight)||($c_PresMode==rpmOneRight))
 else
 {
    echo "
-   #Footer,#Info
+   #FooterTiny,#Info
    { 
       left:33%;
       width:67%; 

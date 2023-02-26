@@ -277,7 +277,7 @@ class TinyGallery
    // *************************************************************************
    // *              Открыть пространство редактирования материала            *
    // *************************************************************************
-   public function OpenEditSpace($aPresMode,$aModeImg,$urlHome)
+   public function OpenEditSpace($aPresMode,$aModeImg,$urlHome,$UserAgent)
    {
    // Включаем в разметку див галереи изображений 
    echo '<div id="KwinGallery">'; 
@@ -338,20 +338,7 @@ class TinyGallery
       echo '</div>';
       // Левая часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
-         
-         $menuOld=new MenuLeader(kwintiny,$this->urlHome);
-         $menuOld->Menu(); 
-         echo \prown\getComRequest().'<br>';
-         // а) показываем идентификацию статей
-         if (\prown\isComRequest(mmlSozdatRedaktirovat))
-         {
-            // PlaceIdArticles();
-         }
-         // б) выводим обычное сообщение
-         else
-         {
-            // require_once "MessLeftFooter.php";
-         }
+         echo $UserAgent.'<br>';
       echo '</div>';
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';

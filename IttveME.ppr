@@ -99,8 +99,25 @@ IttveME
 					www\font-awesome-4.7.0\scss\font-awesome.scss
 				www\font-awesome-4.7.0\HELP-US-OUT.txt
 			-Images
+				-Buttons
+					www\Images\Buttons\tveMenuD.png
+				-Cursors
+					www\Images\Cursors\Less10.cur
+					www\Images\Cursors\Less-anoop.cur
+					www\Images\Cursors\Less-cross.cur
+					www\Images\Cursors\More10.cur
+					www\Images\Cursors\More-anoop.cur
+					www\Images\Cursors\More-move.cur
+					www\Images\Cursors\Move.cur
+					www\Images\Cursors\Unavailable.cur
+				-Menu
+					www\Images\Menu\arrow_down.png
+					www\Images\Menu\arrow_up.png
+					www\Images\Menu\bgnoise_lg.jpg
+					www\Images\Menu\icons.png
 				www\Images\bgnoise_lg.jpg
 				www\Images\icons.png
+				www\Images\Kwinflat.jpg
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
@@ -130,7 +147,55 @@ IttveME
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Styles
+			-Old
+				-example
+					-image
+						www\Old\example\image\a1.jpg
+						www\Old\example\image\a2.png
+						www\Old\example\image\a3.png
+				-ittveLife
+					www\Old\ittveLife\GalleryLife.php
+					www\Old\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+					www\Old\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
+					www\Old\ittveLife\ittve01-001-На-Сампо.jpg
+					www\Old\ittveLife\ittve01-001-Подъём-настроения.jpg
+					www\Old\ittveLife\ittve01-001-С-заботой-и-к-мамам.jpg
+					www\Old\ittveLife\ittve01-001-У-ёлочки.png
+					www\Old\ittveLife\ittve01-001-Хочешь-кваску.jpg
+					www\Old\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
+					www\Old\ittveLife\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
+					www\Old\ittveLife\ittve02-065-В-город-c-молоком.jpg
+					www\Old\ittveLife\ittve02-065-Вокруг-прудика.jpg
+					www\Old\ittveLife\ittve02-065-Всем-солнечного-лета.jpg
+					www\Old\ittveLife\ittve02-065-Едем-по-грибку.jpg
+					www\Old\ittveLife\ittve02-065-Здесь-здоровье.jpg
+					www\Old\ittveLife\ittve02-065-На-мостике.jpg
+					www\Old\ittveLife\ittve02-065-Островок.jpg
+					www\Old\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.jpg
+					www\Old\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.txt
+					www\Old\ittveLife\ittve02-065-Пока-аптекарский-садик.jpg
+					www\Old\ittveLife\ittve02-065-Привет-сад.jpg
+					www\Old\ittveLife\ittve02-065-Фонтанчик.jpg
+					www\Old\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
+					www\Old\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
+				-ittveNews
+				-Reset
+					www\Old\Reset\e404.php
+					www\Old\Reset\index.php
+				-smartmenus
+					www\Old\smartmenus\jquery.smartmenus.min.js
+					www\Old\smartmenus\sm-blue.css
+					www\Old\smartmenus\sm-core-css.css
+				-TJsPrown
+					www\Old\TJsPrown\TJsPrown.css
+					www\Old\TJsPrown\TJsPrown.js
+				www\Old\download.php
+				www\Old\IttveMe.js
+				www\Old\iUserError.php
+				www\Old\pic.png
+				www\Old\sampo.jpg
+				www\Old\ViewImage.php
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -138,7 +203,6 @@ IttveME
 					www\Styles\Anonymous_Pro\AnonymousPro-Regular.ttf
 					www\Styles\Anonymous_Pro\OFL.txt
 				www\Styles\Content.css
-				www\Styles\Footer-Info.css
 				www\Styles\iniStyles.css
 				www\Styles\Lobster.ttf
 				www\Styles\WorkTiny.css
@@ -379,7 +443,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.css
 					www\ttools\TArticlesMaker\ArticlesMaker.js
@@ -393,7 +457,7 @@ IttveME
 					www\ttools\TArticlesMaker\getNameCue.php
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
-				+TDelCueClass
+				-TDelCueClass
 					www\ttools\TDelCueClass\DelCueClass.php
 				-TEntryClass
 					www\ttools\TEntryClass\EntryClass.php
@@ -438,7 +502,6 @@ IttveME
 			Материалы\Обёртка для работы с PDO.doc
 			Материалы\Транзакции базы данных с PDO.doc
 		.gitignore
-		index.php
 		IttveME.ppr
 		IttveMe.rtf
 		IttveMe.xls
@@ -454,27 +517,28 @@ IttveME
 7=www\ttools\TKwinGallery\KwinGalleryClass.php
 8=www\ttools\TMenuLeader\MenuLeaderClass.php
 9=www\ttools\TTinyGallery\WorkTiny.php
+10=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\WorkTiny.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=79
-Caret=37,118
+TopLine=65
+Caret=11,77
 [www\Common.php]
 TopLine=1
 Caret=2,17
 [www\iniMem.php]
-TopLine=146
+TopLine=190
 Caret=1,146
 [www\UpSiteCSS.php]
-TopLine=174
-Caret=1,195
+TopLine=127
+Caret=1,53
 [www\UpSite.php]
-TopLine=40
-Caret=1,40
+TopLine=8
+Caret=68,27
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=298
-Caret=17,311
+TopLine=231
+Caret=67,244
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=23
 Caret=30,51
@@ -482,8 +546,11 @@ Caret=30,51
 TopLine=167
 Caret=1,182
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=1
-Caret=23,1
+TopLine=5
+Caret=17,9
 [www\ttools\TTinyGallery\WorkTiny.php]
 TopLine=240
 Caret=4,240
+[www\Styles\Content.css]
+TopLine=108
+Caret=14,139
