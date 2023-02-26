@@ -16,7 +16,7 @@ echo '<body>';
 
 echo '<div id="Life">'; 
 // Разворачиваем область для редактирования материала
-$Edit->OpenEditSpace();
+$Edit->OpenEditSpace($aPresMode,$aModeImg,$urlHome);
 // prown\ViewGlobal(avgCOOKIE);
 // echo '<img src="data:image/jpeg;base64,'.base64_encode(file_get_contents("test.jpg")).'"/>';
 // Помещаем значение переменной в область редактирования TinyMCE
@@ -93,38 +93,6 @@ else
    //   echo '<div id="Life" class="MenuArticles">';
    //else 
    echo '<div id="Life">';
-      
-      // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
-      if (prown\isComRequest(mmlZhiznIputeshestviya))
-      {require_once "MenuArticles.php";}
-      
-      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
-      else if (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-      {require_once $SiteRoot.'/TMenuLeader/SaymeClass.php';}
-      
-      // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
-      else if (prown\isComRequest(mmlIzmenitNastrojkiSajta))
-      {require_once $SiteRoot.'/TMenuLeader/TuningClass.php';}
-      
-      // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
-      else if (prown\isComRequest(mmlVojtiZaregistrirovatsya))
-      {require_once $SiteRoot.'/TMenuLeader/EntryClass.php';}
-      
-      // Работаем с материалом ---------- ?Com=sozdat-material-ili-redaktirovat
-      else if (prown\isComRequest(mmlSozdatRedaktirovat))
-      {require_once $SiteRoot.'/TMenuLeader/EditClass.php';}
-      
-      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
-      else if (prown\isComRequest(mmlDobavitNovyjRazdel))
-      {require_once $SiteRoot.'/TMenuLeader/NewarticleClass.php';}
-      
-      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
-      else if (prown\isComRequest(mmlIzmenitNazvanieIkonku))
-      {require_once $SiteRoot.'/TMenuLeader/ModyarticleClass.php';}
-
-      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
-      else if (prown\isComRequest(mmlUdalitRazdelMaterialov))
-      {require_once $SiteRoot.'/TMenuLeader/DelarticleClass.php';}
       
       // Запускаем страницу с активным материалом
       else

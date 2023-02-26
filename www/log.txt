@@ -154,3 +154,41 @@ Stack trace:
 #2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
 #3 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 132
+[26-Feb-2023 09:35:37 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\prown\isComRequest() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:296
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 296
+[26-Feb-2023 10:07:04 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\Tuning' not found in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:256
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(300): ttools\mmlIzmenitNastrojkiSajta_BODY_WorkTiny(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 256
+[26-Feb-2023 10:27:38 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\Entrying' not found in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:267
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(303): ttools\mmlVojtiZaregistrirovatsya_BODY_WorkTiny(Object(PDO), Object(ttools\ArticlesMaker))
+#1 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 267
+[26-Feb-2023 10:48:34 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\prown\isComRequest() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:305
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 305
+[26-Feb-2023 11:01:13 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\prown\isComRequest() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:308
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 308
+[26-Feb-2023 11:16:03 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\prown\isComRequest() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:311
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(19): ttools\TinyGallery->OpenEditSpace(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 311

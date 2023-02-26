@@ -231,15 +231,67 @@ function mmlNaznachitStatyu_BODY_WorkTiny($messa,$pdo,$Arti)
       $Arti->MakeUniMenu($pdo,'getNameCue');
    echo '</div>';
 }
-
-   // *************************************************************************
-   // *             ------        Выбрать статью для редактирования                 *
-   // *             ------(дополнительно проверить целостность базы данных)         *
-   // *************************************************************************
-   function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
-   {
-      MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
-      $Arti->getPunktMenu($pdo); 
-   }
+// ****************************************************************************
+// *                            "Жизнь и путешествия"                         *
+// ****************************************************************************
+function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
+{
+   MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
+   $Arti->getPunktMenu($pdo); 
+}
+// ****************************************************************************
+// *                         "Отправить сообщение автору"                     *
+// ****************************************************************************
+function mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($pdo,$Arti)
+{
+   require_once "ttools/TSaymeClass/SaymeClass.php";
+   MakeTitle('Отправить сообщение автору! '.'&#128152;&#129315;',ttMessage);
+   $Sayme=new Noticing();
+}
+// ****************************************************************************
+// *                  "Изменить настройки сайта в браузере"                   *
+// ****************************************************************************
+function mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome)
+{
+   require_once "ttools/TTuningClass/TuningClass.php";
+   MakeTitle('Изменить настройки сайта в браузере! '.'&#128152;&#129315;',ttMessage);
+   $Tune=new Tuning($aPresMode,$aModeImg,$urlHome);
+}
+// ****************************************************************************
+// *                         "Войти или зарегистрироваться"                   *
+// ****************************************************************************
+function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
+{
+   require_once "ttools/TEntryClass/EntryClass.php";
+   MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+   $Entry=new Entrying();
+}
+// ****************************************************************************
+// *                      "Добавить новый раздел материалов"                  *
+// ****************************************************************************
+function mmlDobavitNovyjRazdel_BODY_WorkTiny($pdo,$Arti)
+{
+   require_once "ttools/TNewCueClass/NewCueClass.php";
+   MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
+   $Newcue=new NewCue();
+}
+// ****************************************************************************
+// *                     "Изменить заголовок раздела или иконку"              *
+// ****************************************************************************
+function mmlIzmenitNazvanieIkonku_BODY_WorkTiny($pdo,$Arti)
+{
+   require_once "ttools/TModyCueClass/ModyCueClass.php";
+   MakeTitle('Изменить заголовок раздела или иконку! '.'&#128152;&#129315;',ttMessage);
+   $Modycue=new ModyCue();
+}
+// ****************************************************************************
+// *                         "Удалить раздел материалов"                      *
+// ****************************************************************************
+function mmlUdalitRazdelMaterialov_BODY_WorkTiny($pdo,$Arti)
+{
+   require_once "ttools/TDelCueClass/DelCueClass.php";
+   MakeTitle('Удалить раздел материалов! '.'&#128152;&#129315;',ttMessage);
+   $Delcue=new DelCue();
+}
 
 // *********************************************************** WorkTiny.php ***

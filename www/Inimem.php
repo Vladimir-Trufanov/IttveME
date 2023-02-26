@@ -120,6 +120,7 @@ define ("vimExiSize",     'в заданном размере в пиксела�
 define ("vimOnPage",      'на странице по высоте');   
 // Определяем массив режимов представления выбранной картинки    
 $aModeImg=['1'=>vimExiSize,'2'=>vimOnPage]; 
+
 /*
 // --------------------------------- Фоны показываемых картинок/изображений ---
 define ("fimWhiteGround", 1);    // обычный белый фон 
@@ -180,7 +181,8 @@ if ($c_PersName<>$c_UserName)
 // Инициализируем настройки, далее они могут быть изменены
 $c_PresMode=prown\MakeCookie('PresMode',rpmOneRight,tStr,true);          // режим представления материалов
 $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize,tStr,true);             // режим представления выбранной картинки
-$с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
+//$с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
+
 //$c_MakeGround=prown\MakeCookie('MakeGround',fimWhiteGround,tInt,true); // фон показываемых картинок/изображений
 //$c_MakeGround=prown\MakeCookie('MakeGround',fimAnimation,tInt);        // фон показываемых картинок/изображений
 //$c_isJScript=prown\MakeCookie('isJScript',7,tInt,false);               // JavaScript не включен

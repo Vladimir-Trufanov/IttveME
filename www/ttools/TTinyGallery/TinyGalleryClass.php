@@ -277,7 +277,7 @@ class TinyGallery
    // *************************************************************************
    // *              Открыть пространство редактирования материала            *
    // *************************************************************************
-   public function OpenEditSpace()
+   public function OpenEditSpace($aPresMode,$aModeImg,$urlHome)
    {
    // Включаем в разметку див галереи изображений 
    echo '<div id="KwinGallery">'; 
@@ -289,9 +289,28 @@ class TinyGallery
    echo '</div>'; 
    // Включаем в разметку рабочую область редактирования
    echo '<div id="WorkTiny">';
-      // Перезапускаем страницу "Назначить статью"
+      // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
       if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
+      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+         mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
+      else if (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
+         mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome);
+      // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
+      else if (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
+         mmlVojtiZaregistrirovatsya_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
+      else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         mmlDobavitNovyjRazdel_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
+      else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
+         mmlIzmenitNazvanieIkonku_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
+      else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+         mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->apdo,$this->Arti);
+         
       // Перезапускаем страницу "Назначить статью"
       else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_BODY_WorkTiny

@@ -617,7 +617,7 @@ function CreateTables($pdo,$aCharters)
       $sql='CREATE TABLE stockpw ('.
          'uid      INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пункта меню (раздел или статья сайта)
          'pid      INTEGER NOT NULL REFERENCES stockpw(uid),'.    // указатель элемента уровнем выше - uid родителя	
-         'IdCue    INTEGER NOT NULL REFERENCES cue(IdCue),'.      // указатель типа статьи
+         'IdCue    INTEGER NOT NULL REFERENCES cue(IdCue),'.      // указатель раздела статьи
          'NameArt  VARCHAR NOT NULL,'.                            // заголовок материала = статьи сайта
          'Translit VARCHAR NOT NULL,'.                            // транслит заголовка
          'access   INTEGER NOT NULL,'.                            // доступ к пунктам меню (All/Autor)
