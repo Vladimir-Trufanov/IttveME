@@ -206,3 +206,4 @@ Stack trace:
 #1 {main}
   thrown in C:\IttveMe\www\UpSiteCSS.php on line 198
 [27-Feb-2023 15:44:45 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\IttveMe\www\UpSite.php on line 45
+[27-Feb-2023 20:22:02 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\UpSite.php on line 90

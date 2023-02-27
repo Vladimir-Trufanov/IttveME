@@ -49,14 +49,13 @@ echo '
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем элементы, подключаем стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
-//echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 //echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
 //echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
 echo '<script src="/Jsx/WorkTiny.js"></script>';
-
 /*
 // Определяем стили галлереи, определяем стили для показа изображения, 
 // выбранной в галерее картинки, на отдельной странице в ее рамках 
@@ -67,7 +66,6 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/MenuArticles.css">';
 // Определяем стили страницы редактирования материалов
 echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
 */
-
 // Определяем письменный шрифт, который будем использовать для статей
 // (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')
 echo'  
@@ -83,116 +81,16 @@ echo'
    }
    </style>
 ';
-
-// --- Формируем стили --------------------------------------------------------
+// Формируем стили
 setPositionDiv($c_PresMode);
-// Позиционируем колонки материалов и новостей
-// (если работает двухколоночный режим, но новости не должны просматриваться,
-// то делаем размеры колонки новостей нулевыми)
-/*
-if ($c_PresMode==rpmDoubleLeft)
-{
-   if (isNoNewsDouble($c_PresMode))
-   {
-      echo "
-         #News{right:0; width:0;}
-         #Life{right:0;width:67%;}
-      ";
-   }
-   else
-   {
-      echo "
-         #News{right:0;width:33%;}
-         #Life{right:33%;width:34%;}
-      ";
-   } 
-}
-else if ($c_PresMode==rpmDoubleRight)
-{
-   if (isNoNewsDouble($c_PresMode))
-   {
-      echo "
-         #News{right:0;width:0;}
-         #Life{right:33%;width:67%;}
-      ";
-   }
-   else
-   {
-      echo "
-         #News{right:67%;width:33%;}
-         #Life{right:33%;width:34%;}
-      ";
-   } 
-}
-else if ($c_PresMode==rpmOneLeft)
-{
-   echo "
-   #Life
-   { 
-      left:33%;
-      width:67%; 
-   }
-   ";
-}
-else
-   echo "
-   #Life
-   { 
-      right:33%;
-      width:67%; 
-   }
-   ";
-// Позиционируем подвальную часть при правосторонней галерее
-if (($c_PresMode==rpmDoubleRight)||($c_PresMode==rpmOneRight))
-{
-   echo "
-   #FooterTiny,#Info
-   { 
-      right:33%;
-      width:67%; 
-   }
-   #Gallery,#EditGallery
-   {
-      margin-left:67%;
-      width:33%;
-   }
-   #RightFooter
-   {
-      right:33%;
-   }
-   ";
-}
-// Позиционируем подвальную часть при левосторонней галерее
-// rpmDoubleLeft или rpmOneLeft
-else
-{
-   echo "
-   #FooterTiny,#Info
-   { 
-      left:33%;
-      width:67%; 
-   }
-   #Gallery,#EditGallery
-   {
-      margin-right:67%;
-      width:33%;
-   }
-   #RightFooter
-   {
-      right:0;
-   }
-   ";
-}
-*/
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
 $ImageFile=prown\getComRequest('Image');
-// Завершаем стили 
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
-//$Edit->IniEditSpace();
+$Edit->IniEditSpace();
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();
@@ -219,7 +117,6 @@ function setGalleryMode()
    ) $Result=mwgViewing; 
    return $Result;  
 }
-
 // ****************************************************************************
 // *         Определить изменяемые параметры текущего положения div-ов        *
 // ****************************************************************************

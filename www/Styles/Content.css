@@ -9,7 +9,7 @@
  Copyright © 2019 tve                                Посл.изменение: 27.02.2023
 */
 
-/*  Не изменяемые параметры текущего положения div-ов                        */
+/* Не изменяемые параметры текущего положения div-ов                         */
 #Gallery
 {
    top:0;
@@ -35,34 +35,67 @@
 {
    width:67%; 
 }
-
-
-
-
-
-
-/* 
- Позиционируем основные секции сайта: галерею новостных изображений, 
- секцию новых материалов, подвал, секцию архивных статей скрываем
-*/
-/*
-#News,#Life
-{ 
-   position:fixed; 
-   overflow:auto; 
-   top:0; 
-   bottom:5.8rem;
-   text-align:justify;
-}
-#News,#Life
+/* Стили нижней информационной строки                                        */ 
+#Info
 {
-   padding:0.5rem 0.5rem;
+   margin-bottom:0;
+   background:transparent; 
+}
+#InfoLeft
+{
+   float:left;
+   width:50%;
+}
+#InfoRight
+{
+   float:right;
+   text-align:right;
+   width:50%;
+}
+#InfoLeft,#InfoRight
+{
+   height:100%;
+   font-size:1rem;
+   font-weight:bold; 
+   padding:0rem .3rem .2rem .3rem;
+   color:#A4A4A4;
+}
+/* Стили подвала                                                             */
+#LifeMenu,#LeftFooter,#RightFooter
+{
+   position:absolute; 
+   top:0;
+   bottom:0;
+   /*
+   height:4.4rem;
+   bottom:1.4rem;
+   */ 
 }
 
-.MenuArticles                                                                   
-{ 
-   background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
+#LifeMenu{background:Lavender;}
+#LeftFooter{background:PaleGreen;}
+#RightFooter{background:Honeydew;}
+
+#LifeMenu
+{
+   left:0;
+   width:5rem;
 }
+#LeftFooter
+{
+   left:5rem;
+   right:24rem;
+}
+#RightFooter
+{
+   right:0;
+   width:24rem;
+}
+
+
+
+
+/*
 #FooterTiny
 {
    position:fixed; 
@@ -122,12 +155,6 @@
 /* Подвал */
 
 /*
-#LifeMenu,#LeftFooter,#RightFooter
-{
-   position:fixed; 
-   height:4.4rem;
-   bottom:1.4rem; 
-}
 
 
 
@@ -176,31 +203,33 @@
 
 
 
-/* нижняя строка */ 
-#Info
-{
-   margin-bottom:0;
-   background:transparent; 
+
+
+/* 
+ Позиционируем основные секции сайта: галерею новостных изображений, 
+ секцию новых материалов, подвал, секцию архивных статей скрываем
+*/
+/*
+#News,#Life
+{ 
+   position:fixed; 
+   overflow:auto; 
+   top:0; 
+   bottom:5.8rem;
+   text-align:justify;
 }
-#InfoLeft
+#News,#Life
 {
-   float:left;
-   width:50%;
+   padding:0.5rem 0.5rem;
 }
-#InfoRight
-{
-   float:right;
-   text-align:right;
-   width:50%;
+
+.MenuArticles                                                                   
+{ 
+   background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
-#InfoLeft, #InfoRight
-{
-   height:100%;
-   font-size:1rem;
-   font-weight:bold; 
-   padding:0rem .3rem .2rem .3rem;
-   color:#A4A4A4;
-}
+*/
+
+
 /* ********************************************************* Content.css *** */	
 	
 

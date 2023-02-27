@@ -242,6 +242,7 @@ class TinyGallery
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       
       // Настраиваем размеры частей рабочей области редактирования
+      /*
       echo '
       <style>
       #KwinGallery
@@ -264,6 +265,7 @@ class TinyGallery
       }
       </style>
       ';
+      */
       if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_HEAD();
       else if (\prown\isComRequest(mmlNaznachitStatyu))
@@ -275,18 +277,48 @@ class TinyGallery
       else main_HEAD($this->fileStyle);
    }
    // *************************************************************************
-   // *              Открыть пространство редактирования материала            *
+   // *                Развернуть область галлереи изображений                *
    // *************************************************************************
-   public function OpenEditSpace($aPresMode,$aModeImg,$urlHome,$UserAgent)
+   public function ViewGallerySpace()
    {
-   // Включаем в разметку див галереи изображений 
-   echo '<div id="KwinGallery">'; 
       if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_BODY_KwinGallery();
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->KwinGallery_mmlVybratStatyuRedakti();
-      else $this->Galli->BaseGallery();;
-   echo '</div>'; 
+      else $this->Galli->BaseGallery();
+   }
+   // *************************************************************************
+   // *                Развернуть область галлереи изображений                *
+   // *************************************************************************
+   public function ViewFooterSpace($UserAgent)
+   {
+      // Кнопка главного меню 
+      echo '<div id="LifeMenu">';
+         echo '
+         <ul id="btnLifeMenu">
+         <li>
+            <a href= "'.'?Com='.mmlZhiznIputeshestviya.'">
+            <img id="imgLifeMenu" src="/Images/tveMenuD.png" alt="tveMenuD">
+            </a> 
+         </li> 
+         </ul>
+         ';
+      echo '</div>';
+      // Левая часть подвала для сообщений, разворачиваемых в три строки
+      echo '<div id="LeftFooter">';
+         echo $UserAgent.'<br>';
+      echo '</div>';
+      // Правая часть подвала, меню управления
+      echo '<div id="RightFooter">';
+         $this->menu=new MenuLeader(ittveme,$this->urlHome);
+         $this->menu->Menu(); 
+      echo '</div>';
+   }
+   // *************************************************************************
+   // *              Открыть пространство редактирования материала            *
+   // *************************************************************************
+   public function OpenEditSpace($aPresMode,$aModeImg,$urlHome)
+   {
    // Включаем в разметку рабочую область редактирования
    echo '<div id="WorkTiny">';
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
@@ -323,6 +355,7 @@ class TinyGallery
       else $this->WorkTiny_main();
    echo '</div>';
    // Обустраиваем подвал области редактирования
+   /*
    echo '<div id="FooterTiny">';
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
@@ -347,6 +380,7 @@ class TinyGallery
          $this->menu->Menu(); 
       echo '</div>';
    echo '</div>';
+   */
    }
 
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
