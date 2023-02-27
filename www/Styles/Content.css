@@ -1,19 +1,51 @@
 /** HTML5/CSS3, EDGE/CHROME                                 *** Content.css ***
 
  ******************************************************************************
- * ittve.me      Спозиционировать справа галерею изображений и сделать только *
- *   одну колонку для статей. Выполнить общее фиксирование элементов разметки * 
+ * ittve.me                   Выполнить общее фиксирование элементов разметки * 
  ******************************************************************************
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 03.12.2022
+ Copyright © 2019 tve                                Посл.изменение: 27.02.2023
 */
+
+/*  Не изменяемые параметры текущего положения div-ов                        */
+#Gallery
+{
+   top:0;
+   height:100%;
+   width:33%;
+}
+#Life,#News
+{
+   top:0;
+   bottom:5.8rem;
+}
+#FooterTiny
+{
+   bottom:1.4rem;
+   height:4.4rem;
+}
+#Info
+{
+   bottom:0;
+   height:1.4rem;
+}
+#FooterTiny,#Info
+{
+   width:67%; 
+}
+
+
+
+
+
 
 /* 
  Позиционируем основные секции сайта: галерею новостных изображений, 
  секцию новых материалов, подвал, секцию архивных статей скрываем
 */
+/*
 #News,#Life
 { 
    position:fixed; 
@@ -31,7 +63,6 @@
 { 
    background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
-/*#Footer*/
 #FooterTiny
 {
    position:fixed; 
@@ -71,24 +102,26 @@
    background: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
    background-image: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
 }
+*/
 /* Выводим текст при наезде на кнопку */
+/*
 #btnLifeMenu:hover::after 
 {
    content:'Жизнь и путешествия!'; 
    position:absolute; left:5.0rem; bottom:1rem; 
-   z-index:1; /* Отображаем подсказку поверх других элементов */
+   z-index:1; Отображаем подсказку поверх других элементов
    background: white; 
-   color: #ab4a16;  /* Приятный коричневый цвет */ 
+   color: #ab4a16;  Приятный коричневый цвет 
    font-size:1.3rem;
    font-weight:600; 
    padding:.4rem .5rem;
    border: 1px solid #ab4a16; border-radius: 8px;
 }
-
+*/
 
 /* Подвал */
 
-
+/*
 #LifeMenu,#LeftFooter,#RightFooter
 {
    position:fixed; 
@@ -108,11 +141,10 @@
 #LeftFooter
 {
    background:yellow; 
-   /*overflow:auto;*/
+   overflow:auto;
    left:5rem;
    margin-right:24rem;
    
-   /*
    width:34rem;
    background:transparent; 
    margin-left:5rem;
@@ -131,18 +163,15 @@
    border-top:dashed 1px #ddd;
    border-bottom:dashed 1px #ddd;
    background:transparent;
-   */ 
 }
 #RightFooter
 {
    background:magenta;
    width:20%;
-   /*width:24rem;*/
-   /*   
+   width:24rem;
    background:transparent;
-   */ 
 }
-
+*/
 
 
 
@@ -150,33 +179,28 @@
 /* нижняя строка */ 
 #Info
 {
-   position:fixed; 
-   bottom:0; 
-   height:1.4rem;
    margin-bottom:0;
    background:transparent; 
 }
-
 #InfoLeft
 {
-   float: left;
-   width: 50%;
+   float:left;
+   width:50%;
 }
 #InfoRight
 {
-   float: right;
-   text-align: right;
-   width: 50%;
+   float:right;
+   text-align:right;
+   width:50%;
 }
 #InfoLeft, #InfoRight
 {
    height:100%;
    font-size:1rem;
-   font-weight: bold; 
+   font-weight:bold; 
    padding:0rem .3rem .2rem .3rem;
-   color: #A4A4A4;
+   color:#A4A4A4;
 }
-
 /* ********************************************************* Content.css *** */	
 	
 

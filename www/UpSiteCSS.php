@@ -47,13 +47,11 @@ echo '
 ';
 // Выполняем сброс стилей и устанавливаем начальные настройки стилей
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
-// Позиционируем справа галерею изображений и делам только одну колонку для 
-// статей. Выполняем общее фиксирование элементов разметки  
+// Позиционируем элементы, подключаем стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
-// Подключаем стили внутренних классов 
-echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
-echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
+//echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
+//echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
+//echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
@@ -87,10 +85,11 @@ echo'
 ';
 
 // --- Формируем стили --------------------------------------------------------
-echo "<style>";
+setPositionDiv($c_PresMode);
 // Позиционируем колонки материалов и новостей
 // (если работает двухколоночный режим, но новости не должны просматриваться,
 // то делаем размеры колонки новостей нулевыми)
+/*
 if ($c_PresMode==rpmDoubleLeft)
 {
    if (isNoNewsDouble($c_PresMode))
@@ -184,16 +183,16 @@ else
    }
    ";
 }
+*/
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
 $ImageFile=prown\getComRequest('Image');
 // Завершаем стили 
-echo "</style>";
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
-$Edit->IniEditSpace();
+//$Edit->IniEditSpace();
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();
@@ -219,6 +218,111 @@ function setGalleryMode()
      (prown\isComRequest(mmlZhiznIputeshestviya))
    ) $Result=mwgViewing; 
    return $Result;  
+}
+
+// ****************************************************************************
+// *         Определить изменяемые параметры текущего положения div-ов        *
+// ****************************************************************************
+function setPositionDiv($c_PresMode)
+{
+   $c_PresMode=rpmOneRight;
+   //$c_PresMode=rpmDoubleRight;
+   //$c_PresMode=rpmOneLeft;
+   //$c_PresMode=rpmDoubleLeft;
+   echo "<style>";
+   // Если режим представления материалов = 'одноколоночный с правосторонней галереей')
+   if ($c_PresMode==rpmOneRight)
+   {
+      echo "
+      #News
+      {
+         width:0;
+      }
+      #Life,#FooterTiny,#Info
+      {
+         left:0;
+      }
+      #Life
+      {
+         width:67%; 
+      }
+      #Gallery
+      {
+         left:67%;
+      }
+      ";
+   }
+   // Если режим представления материалов = 'двухколоночный с правосторонней галереей')
+   if ($c_PresMode==rpmDoubleRight)
+   {
+      echo "
+      #News
+      {
+         left:0;
+         width:33%;
+      }
+      #Life
+      {
+         left:33%;
+         width:34%;
+      }
+      #FooterTiny,#Info
+      {
+         left:0;
+      }
+      #Gallery
+      {
+         left:67%;
+      }
+      ";
+   }
+   // Если режим представления материалов = 'одноколоночный с левосторонней галереей')
+   if ($c_PresMode==rpmOneLeft)
+   {
+      echo "
+      #News
+      {
+         width:0;
+      }
+      #Life,#FooterTiny,#Info
+      {
+         left:33%;
+      }
+      #Life
+      {
+         width:67%; 
+      }
+      #Gallery
+      {
+         left:0;
+      }
+      ";
+   }
+   // Если режим представления материалов = 'двухколоночный с левосторонней галереей')
+   if ($c_PresMode==rpmDoubleLeft)
+   {
+      echo "
+      #News
+      {
+         left:67%;
+         width:33%;
+      }
+      #Life
+      {
+         left:33%;
+         width:34%;
+      }
+      #FooterTiny,#Info
+      {
+         left:33%;
+      }
+      #Gallery
+      {
+         left:0;
+      }
+      ";
+   }
+   echo "</style>";
 }
 
 // <!-- --> ************************************************* UpSiteCSS.php ***

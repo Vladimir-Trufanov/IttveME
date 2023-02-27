@@ -221,7 +221,7 @@ $Arti->setKindMessage($note);
 // изображениями в галерее, связанной с материалом сайта из базы данных)
 $WorkTinyHeight='75'; $FooterTinyHeight='15'; $KwinGalleryWidth='30'; $EdIzm='%';
 $Edit=new ttools\TinyGallery($SiteRoot,$urlHome,
-      $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
+   $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
 
 // end --------------------------------------------------------------- ZERO ---
 

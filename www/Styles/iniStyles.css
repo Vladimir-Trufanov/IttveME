@@ -72,7 +72,6 @@ body
    font-size:1.4rem;  
    width:100%;
    height:100%;
-   /*background: yellow;*/
 }
 h1
 {
@@ -80,23 +79,22 @@ h1
    padding-bottom:.4rem;
    text-align: center;
 }
-/* Выравниваем */
-html,body,#Info,#Niz
-{
-	margin:0;
-	padding:0;
-	border:0;
-	vertical-align:baseline;
-}
-/* #Niz в низ */
-#Niz
+/* Выравниваем дивы */
+html,body,#News,#Life,#Gallery,#FooterTiny,#Info
 {
    position:fixed; 
-   left:0;
-   bottom:0;
-   height:10%;
+   margin:0;
+   padding:0;
+   border:0;
+   vertical-align:baseline;
    overflow:auto;
 }
+#News{background:Cornsilk;}
+#Life{background:Azure;
+}
+#Gallery{background:LightCyan;}
+#FooterTiny{background:LightGrey;}
+#Info{background:Ivory;}
 
 /* ******************************************************* iniStyles.css *** */	
 	
