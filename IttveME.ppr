@@ -195,7 +195,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -466,7 +466,7 @@ IttveME
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				-TMenuLeader
+				+TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 				-TModyCueClass
@@ -478,7 +478,7 @@ IttveME
 				-TTinyGallery
 					www\ttools\TTinyGallery\TinyGalleryClass.php
 					www\ttools\TTinyGallery\WorkTiny.php
-				+TTuningClass
+				-TTuningClass
 					www\ttools\TTuningClass\TuningClass.php
 			www\.htaccess
 			www\.user.ini
@@ -520,6 +520,7 @@ IttveME
 10=www\Styles\iniStyles.css
 11=www\Styles\Content.css
 12=www\Styles\WorkTiny.css
+13=www\ttools\TMenuLeader\MenuLeader.css
 [Selected Project Files]
 Main=
 Selected=www\UpSiteCSS.php
@@ -533,14 +534,14 @@ Caret=10,45
 TopLine=94
 Caret=67,113
 [www\UpSiteCSS.php]
-TopLine=107
+TopLine=113
 Caret=6,128
 [www\UpSite.php]
-TopLine=43
-Caret=9,84
+TopLine=34
+Caret=1,48
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=288
-Caret=10,314
+TopLine=417
+Caret=1,357
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=23
 Caret=30,51
@@ -551,14 +552,17 @@ Caret=1,182
 TopLine=5
 Caret=17,9
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=270
+TopLine=240
 Caret=4,240
 [www\Styles\iniStyles.css]
-TopLine=63
-Caret=1,98
+TopLine=66
+Caret=12,92
 [www\Styles\Content.css]
-TopLine=62
-Caret=13,68
+TopLine=110
+Caret=1,144
 [www\Styles\WorkTiny.css]
-TopLine=31
-Caret=16,65
+TopLine=1
+Caret=1,17
+[www\ttools\TMenuLeader\MenuLeader.css]
+TopLine=9
+Caret=1,1

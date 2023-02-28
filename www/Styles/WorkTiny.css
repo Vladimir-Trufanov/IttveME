@@ -13,6 +13,7 @@
 #Gallery
 {
    align-items:center;
+   background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
 .Card, .bCard, .imgCard, .pCard, .taCard
 {
@@ -64,12 +65,7 @@
    color:#993300; 
    font-weight:600;
 }
-
-
-
-/* Позиционируем секции области редактирования */
-
-/* Настраиваем рабочую область Tiny */
+/* Рабочая область Tiny                                                      */
 /*
 #frmTinyText
 {

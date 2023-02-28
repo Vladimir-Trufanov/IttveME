@@ -60,22 +60,19 @@
    padding:0rem .3rem .2rem .3rem;
    color:#A4A4A4;
 }
-/* Стили подвала                                                             */
+/* Неизменяемые стили позиционирования элементов подвала                     */
 #LifeMenu,#LeftFooter,#RightFooter
 {
    position:absolute; 
    top:0;
    bottom:0;
-   /*
-   height:4.4rem;
-   bottom:1.4rem;
-   */ 
+   background:transparent; 
 }
-
+/*
 #LifeMenu{background:Lavender;}
 #LeftFooter{background:PaleGreen;}
 #RightFooter{background:Honeydew;}
-
+*/
 #LifeMenu
 {
    left:0;
@@ -91,144 +88,60 @@
    right:0;
    width:24rem;
 }
-
-
-
-
-/*
-#FooterTiny
-{
-   position:fixed; 
-   height:4.4rem;
-   bottom:0; 
-   margin-bottom:1.4rem;
-   background:transparent;
-}
-#FooterTiny
-{
-   left:0;
-}
-
+/* Кнопка "Жизнь и путешествия"                                              */
 #btnLifeMenu
 {
    width: 95%;
    z-index:1;
    border-radius:8px;
-   background:radial-gradient(farthest-side ellipse at top left, #fff,  #ededed);
-   margin-top:.5rem;
+   background:radial-gradient(farthest-side ellipse at top left,#fff, #ededed);
+   margin-top:.3rem;
    margin-left:.3rem;
 }
 #imgLifeMenu
 {
-   width: 100%;
-}
-#btnLifeMenu:hover 
-{
-   background: radial-gradient(farthest-side ellipse at top left, #fff,  #dcdcdc);
+   width:100%;
 }
 #btnLifeMenu:active 
 {
-   background: radial-gradient(farthest-side ellipse at top left, #ededed,  #fff);
-   background: -webkit-gradient(radial,farthest-side ellipse at top left, from(#f47a20), to(#faa51a));
-   background: -moz-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
-   background: -ms-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
-   background: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
-   background-image: -o-radial-gradient(farthest-side ellipse at top left,  #f47a20,  #faa51a);
+   background:radial-gradient(farthest-side ellipse at top left,#ededed,#fff);
+   background:-webkit-gradient(radial,farthest-side ellipse at top left,from(#f47a20),to(#faa51a));
+   background:-moz-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
+   background:-ms-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
+   background:-o-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
+   background-image:-o-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
 }
-*/
-/* Выводим текст при наезде на кнопку */
-/*
+#btnLifeMenu:hover 
+{
+   background:radial-gradient(farthest-side ellipse at top left,#fff,#dcdcdc);
+}
 #btnLifeMenu:hover::after 
 {
    content:'Жизнь и путешествия!'; 
-   position:absolute; left:5.0rem; bottom:1rem; 
-   z-index:1; Отображаем подсказку поверх других элементов
-   background: white; 
-   color: #ab4a16;  Приятный коричневый цвет 
+   position:absolute;left:5rem;bottom:.3rem; 
+   z-index:1; /*Отображаем подсказку поверх других элементов*/
+   background:white; 
+   color:#ab4a16;  /*Приятный коричневый цвет*/ 
    font-size:1.3rem;
    font-weight:600; 
    padding:.4rem .5rem;
-   border: 1px solid #ab4a16; border-radius: 8px;
+   border:1px solid #ab4a16;border-radius:.8rem;
 }
-*/
-
-/* Подвал */
-
-/*
-
-
-
-
-#LifeMenu
-{
-   width:5rem;
-   left:0;
-   background:transparent; 
-}
+/* Подвал, внутренности                                                      */
 #LeftFooter
 {
-   background:yellow; 
    overflow:auto;
-   left:5rem;
-   margin-right:24rem;
-   
-   width:34rem;
-   background:transparent; 
-   margin-left:5rem;
-   margin-right:24rem;
-   padding:.1rem .3rem .1rem .5rem;
-   font-size:1.2rem;
+   padding:0 .5rem 0 .5rem;
+   font-size:1.1rem;
    font-weight:bold; 
    border-top:dashed 1px #ddd;
    border-bottom:dashed 1px #ddd;
-   height:100%;
-   height:4.4rem;
-   margin-left:5rem;
-   padding:.1rem .3rem .1rem .5rem;
-   font-size:1.2rem;
-   font-weight:bold; 
-   border-top:dashed 1px #ddd;
-   border-bottom:dashed 1px #ddd;
-   background:transparent;
 }
-#RightFooter
-{
-   background:magenta;
-   width:20%;
-   width:24rem;
-   background:transparent;
-}
-*/
-
-
-
-
-
-
-/* 
- Позиционируем основные секции сайта: галерею новостных изображений, 
- секцию новых материалов, подвал, секцию архивных статей скрываем
-*/
-/*
+/* Галерея новостей, секция материалов                                       */
 #News,#Life
 { 
-   position:fixed; 
-   overflow:auto; 
-   top:0; 
-   bottom:5.8rem;
-   text-align:justify;
+   padding:.6rem;
 }
-#News,#Life
-{
-   padding:0.5rem 0.5rem;
-}
-
-.MenuArticles                                                                   
-{ 
-   background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
-}
-*/
-
 
 /* ********************************************************* Content.css *** */	
 	

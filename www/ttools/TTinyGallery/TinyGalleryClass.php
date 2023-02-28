@@ -354,33 +354,6 @@ class TinyGallery
       // В обычном режиме
       else $this->WorkTiny_main();
    echo '</div>';
-   // Обустраиваем подвал области редактирования
-   /*
-   echo '<div id="FooterTiny">';
-      // Кнопка главного меню 
-      echo '<div id="LifeMenu">';
-      echo '
-      <ul id="btnLifeMenu">
-      <li>
-         <a href= "'.'?Com='.mmlZhiznIputeshestviya.'">
-         <img id="imgLifeMenu" src="/Images/tveMenuD.png" alt="tveMenuD">
-         </a> 
-      </li> 
-      </ul>
-      ';
-      echo '</div>';
-      // Левая часть подвала для сообщений, разворачиваемых в три строки
-      echo '<div id="LeftFooter">';
-         echo $UserAgent.'<br>';
-      echo '</div>';
-      // Правая часть подвала, меню управления
-      echo '<div id="RightFooter">';
-      // Подключаем управляющее меню в подвале
-         $this->menu=new MenuLeader(ittveme,$this->urlHome);
-         $this->menu->Menu(); 
-      echo '</div>';
-   echo '</div>';
-   */
    }
 
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---

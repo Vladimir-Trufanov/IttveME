@@ -50,7 +50,7 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем элементы, подключаем стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
-//echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
+echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
 //echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
@@ -133,7 +133,7 @@ function setPositionDiv($c_PresMode)
       echo "
       #News
       {
-         width:0;
+         display:none;
       }
       #Life,#FooterTiny,#Info
       {
@@ -155,6 +155,7 @@ function setPositionDiv($c_PresMode)
       echo "
       #News
       {
+         display:block;
          left:0;
          width:33%;
       }
@@ -179,7 +180,7 @@ function setPositionDiv($c_PresMode)
       echo "
       #News
       {
-         width:0;
+         display:none;
       }
       #Life,#FooterTiny,#Info
       {
@@ -201,6 +202,7 @@ function setPositionDiv($c_PresMode)
       echo "
       #News
       {
+         display:block;
          left:67%;
          width:33%;
       }
