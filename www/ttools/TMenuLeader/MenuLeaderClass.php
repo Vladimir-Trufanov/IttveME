@@ -214,12 +214,14 @@ class MenuLeader
    // *************************************************************************
    private function Punkt($Punkt,$cUniCod,$fString,$sString)
    {
+      // Формируем идентификатор для отработки кнопки "small" по юникоду
+      $idsmall=substr($cUniCod,3,4); 
       echo '
          <li class="link">
          <span class="prev">'.$cUniCod.'</span>
-         <span class="small">'.$cUniCod.'</span>
+         <span class="small" onclick="PunktClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
          <span class="full">
-            <span class="k1"><a href="'.$Punkt.'">'.$fString.'</a></span>
+            <span class="k1"><a href="'.$Punkt.'" id="'.$idsmall.'">'.$fString.'</a></span>
             <span class="k2"><a href="'.$Punkt.'">'.$sString.'</a></span>
          </span>
          </li>

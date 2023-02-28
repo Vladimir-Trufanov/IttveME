@@ -242,6 +242,7 @@ class TinyGallery
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       
       // Настраиваем размеры частей рабочей области редактирования
+      // 28.02.2023 - может в будущем пригодится !!!
       /*
       echo '
       <style>

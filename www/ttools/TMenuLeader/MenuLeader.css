@@ -126,6 +126,10 @@ li, .navset
    padding-left:0;
    text-align:center; 
 } 
+.navset .link .small:hover 
+{
+   color: #ab4a16;  /* Приятный коричневый цвет */ 
+} 
 .navset .link .full 
 {
    padding-top:0.2rem; 
