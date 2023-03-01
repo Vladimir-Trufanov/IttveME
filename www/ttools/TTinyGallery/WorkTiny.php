@@ -148,7 +148,7 @@ function mmlNaznachitStatyu_HEAD()
 function mmlZhiznIputeshestviya_HEAD()
 {
     // Отключаем разворачивание аккордеона
-    // в случае, когда создаем заголовок новой статьи. 
+    // как в случае, когда создаем заголовок новой статьи. 
     echo '
     <style>
       .accordion li .sub-menu 
@@ -156,10 +156,6 @@ function mmlZhiznIputeshestviya_HEAD()
          height:100%;
       }
     </style>
-    ';
-    echo '
-    <script>
-    </script>
     ';
 }
 // ****************************************************************************
@@ -237,7 +233,8 @@ function mmlNaznachitStatyu_BODY_WorkTiny($messa,$pdo,$Arti)
 function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
 {
    MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
-   $Arti->getPunktMenu($pdo); 
+   //$Arti->getPunktMenu($pdo); 
+   $Arti->MakeMyLifeMenu($pdo);
    
    /*
    require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
@@ -282,7 +279,8 @@ function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
 function mmlDobavitNovyjRazdel_BODY_WorkTiny($pdo,$Arti)
 {
    require_once "ttools/TNewCueClass/NewCueClass.php";
-   MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
+   //MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
+   MakeTitle('Страничка будет следующей зимой, пока постреляйте уток!',ttMessage);
    $Newcue=new NewCue();
 }
 // ****************************************************************************

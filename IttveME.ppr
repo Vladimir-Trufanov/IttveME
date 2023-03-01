@@ -38,13 +38,6 @@ IttveME
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\О favicon.doc
-		-ttree
-			ttree\index.php
-			ttree\styles.css
-			ttree\ttree.ppr
-			ttree\Вывод HTML-таблицы с функцией сортировки.doc
-			ttree\Построение дерева иерархии с помощью PHP.doc
-			ttree\Редактирование данных в MySql с помощью PHP.doc
 		+www
 			-favicon260x260
 				www\favicon260x260\android-chrome-192x192.png
@@ -143,7 +136,7 @@ IttveME
 				www\jQuery\jquery-3.6.3.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -195,7 +188,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -466,12 +459,13 @@ IttveME
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 				-TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
-				-TNewCueClass
+				+TNewCueClass
+					www\ttools\TNewCueClass\game.css
 					www\ttools\TNewCueClass\NewCueClass.php
 				-TSaymeClass
 					www\ttools\TSaymeClass\SaymeClass.php
@@ -501,6 +495,13 @@ IttveME
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
 			Материалы\Транзакции базы данных с PDO.doc
+		-Построение дерева иерархии
+			Построение дерева иерархии\index.php
+			Построение дерева иерархии\styles.css
+			Построение дерева иерархии\ttree.ppr
+			Построение дерева иерархии\Вывод HTML-таблицы с функцией сортировки.doc
+			Построение дерева иерархии\Построение дерева иерархии с помощью PHP.doc
+			Построение дерева иерархии\Редактирование данных в MySql с помощью PHP.doc
 		.gitignore
 		IttveME.ppr
 		IttveMe.rtf
@@ -517,14 +518,15 @@ IttveME
 7=www\ttools\TKwinGallery\KwinGalleryClass.php
 8=www\ttools\TTinyGallery\WorkTiny.php
 9=www\Styles\iniStyles.css
-10=www\Styles\Content.css
-11=www\Styles\WorkTiny.css
-12=www\ttools\TMenuLeader\MenuLeader.css
-13=www\ttools\TMenuLeader\MenuLeaderClass.php
-14=www\Jsx\WorkTiny.js
+10=www\Jsx\WorkTiny.js
+11=www\ttools\TArticlesMaker\CommonIttveMe.php
+12=www\ttools\TNewCueClass\NewCueClass.php
+13=..\Users\Евгеньевич\Downloads\duck-hunter.css-master\duck-hunter.css-master\assets\index.html
+14=www\ttools\TNewCueClass\game.css
+15=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\WorkTiny.css
+Selected=www\ttools\TNewCueClass\game.css
 [www\index.php]
 TopLine=69
 Caret=2,84
@@ -532,41 +534,44 @@ Caret=2,84
 TopLine=12
 Caret=10,45
 [www\iniMem.php]
-TopLine=190
+TopLine=113
 Caret=67,113
 [www\UpSiteCSS.php]
-TopLine=173
-Caret=6,128
+TopLine=25
+Caret=84,57
 [www\UpSite.php]
-TopLine=34
+TopLine=28
 Caret=1,48
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=154
-Caret=50,245
+TopLine=240
+Caret=10,253
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=121
-Caret=21,198
+TopLine=94
+Caret=22,258
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=167
 Caret=1,182
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=36
-Caret=22,47
+TopLine=259
+Caret=26,283
 [www\Styles\iniStyles.css]
 TopLine=66
-Caret=12,92
-[www\Styles\Content.css]
-TopLine=110
-Caret=20,143
-[www\Styles\WorkTiny.css]
-TopLine=79
-Caret=17,89
-[www\ttools\TMenuLeader\MenuLeader.css]
-TopLine=120
-Caret=1,132
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=207
-Caret=1,230
+Caret=1,74
 [www\Jsx\WorkTiny.js]
-TopLine=29
+TopLine=59
 Caret=7,5
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=573
+Caret=36,607
+[www\ttools\TNewCueClass\NewCueClass.php]
+TopLine=1
+Caret=21,26
+[..\Users\Евгеньевич\Downloads\duck-hunter.css-master\duck-hunter.css-master\assets\index.html]
+TopLine=1
+Caret=1,11
+[www\ttools\TNewCueClass\game.css]
+TopLine=83
+Caret=1,111
+[www\Styles\Content.css]
+TopLine=109
+Caret=12,120

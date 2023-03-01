@@ -21,6 +21,23 @@ class NewCue
    // *************************************************************************
    public function __construct() 
    {
+   echo '
+   <!-- Утки -->
+   <div id="duckbody">
+      <input type="checkbox" id="duck1">
+      <label for="duck1" class="duck"></label>
+      <input type="checkbox" id="duck2">
+      <label for="duck2" class="duck"></label>
+      <input type="checkbox" id="duck3">
+      <label for="duck3" class="duck"></label>
+      <input type="checkbox" id="duck4">
+      <label for="duck4" class="duck"></label>
+      <input type="checkbox" id="duck5">
+      <label for="duck5" class="duck"></label>
+
+      <div class="score"></div>
+   </div>
+   ';
    }
    public function __destruct() 
    {

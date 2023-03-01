@@ -253,6 +253,10 @@ class ArticlesMaker
    {
       _MakeMenu($this->basename,$this->username,$this->password);
    } 
+   public function MakeMyLifeMenu($pdo)
+   {
+      _MakeMyLifeMenu($pdo);
+   } 
    // 
    // *************************************************************************
    // *              Отметить в кукисе, что выбран указанный материал         *
@@ -269,7 +273,7 @@ class ArticlesMaker
       // Проверяем целостность базы данных (по 10 очередным записям) 
       // ВРЕМЕННО ЗДЕСЬ
       ?> <script> 
-         $(document).ready(function() {GetPunktTestBase();})
+      //   $(document).ready(function() {GetPunktTestBase();})
       </script> <?php
       // Готовим выбор материала
       $lvl=-1; $cLast='+++'; $nLine=0; $cli=""; 

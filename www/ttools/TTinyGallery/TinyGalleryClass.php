@@ -243,6 +243,20 @@ class TinyGallery
       
       // Настраиваем размеры частей рабочей области редактирования
       // 28.02.2023 - может в будущем пригодится !!!
+     
+      echo '
+      <style>
+      #WorkTiny
+      {
+         width:100%;
+         height:96%;
+           overflow: hidden;
+
+      }
+      </style>
+      ';
+      
+      
       /*
       echo '
       <style>

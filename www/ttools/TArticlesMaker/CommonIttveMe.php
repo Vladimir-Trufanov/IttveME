@@ -106,6 +106,17 @@ function _MakeMenu($basename,$username,$password)
    ShowTreeMe($pdo,1,1,$cLast,$nLine,$cli,$lvl,$otlada);
    unset($pdo);          
 }
+function _MakeMyLifeMenu($pdo) 
+{
+   // Готовим параметры и вырисовываем меню
+   $lvl=-1; $cLast='+++';
+   $nLine=0; $cli=""; 
+   // Параметр $otlada при необходимости используется для просмотра в коде
+   // страницы вложенности тегов и вызова рекурсий 
+   $otlada=false;
+   ShowMyLife($pdo,1,1,$cLast,$nLine,$cli,$lvl,$otlada);
+   unset($pdo);          
+}
 // ****************************************************************************
 // * Построить html-код в строке ТАБЛИЦЫ меню по базе данных материалов сайта *
 // ****************************************************************************
@@ -545,6 +556,76 @@ function ShowTreeMe($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$F
       echo($cli); $cLast='-li'; 
       echo(SpacesOnLevel($lvl,$cLast,0,0,$otlada)."</ul>\n");  $cLast='-ul';
    }
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+
+function ShowMyLife($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
+{
+   // Определяем текущий уровень меню
+   $lvl++; 
+   // Выбираем все записи одного родителя
+   $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
+   $stmt = $pdo->query($cSQL);
+   $table = $stmt->fetchAll();
+
+   if (count($table)>0) 
+   {
+      // Выводим <ul>. Перед ним </li> не выводим.
+      echo(SpacesOnLevel($lvl,$cLast,0,0,$otlada).'<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
+      // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
+      $nPoint=0;
+      foreach ($table as $row)
+      {
+         $nLine++; $cLine=''; 
+         if ($otlada) $cLine=$cLine.' ='.$nLine.'=';
+         $Uid=$row["uid"]; $Pid=$row["pid"]; $Translit=$row["Translit"];
+         $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
+         if ($cLast<>'+ul') 
+         {
+             $cli=SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."</li>\n";
+             echo($cli); $cLast='-li';
+         }
+         // Выводим li и href для раздела (IdCue=-1)
+         // <li id="moya-zhizn" class="moya-zhizn"><a href="#moya-zhizn">Моя жизнь<span>495</span></a>
+         if ($IdCue==-1)
+         {
+            echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada).'<li id="'.$Translit.'" class="'.$Translit.'"> '); 
+            //echo('<a href="#'.$Translit.'">'.$Uid.' &#129392; '.$row['NameArt'].$cLine.CountPoint($pdo,$Uid).'</a>'."\n"); 
+            //echo('<a href="#'.$Translit.'">'.$Uid.' '.getIconCue($Translit).' '.$row['NameArt'].$cLine.CountPoint($pdo,$Uid).'</a>'."\n"); 
+            echo('<a href="#'.$Translit.'">'.$Uid.' '.getIconCue($Translit).' '.$row['NameArt'].$cLine.CountPoint($pdo,$Uid).'</a>'."\n"); 
+         } 
+         // Выводим li и href для статьи
+         // <li><a href="#osobennosti-ustrojstva-vintikov-v-moej-golove"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
+         else
+         {
+            $nPoint++;
+            echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."<li> ");
+            echo('<a href="?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+         }
+         $cLast='+li';
+         ShowMyLife($pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,$otlada,' class="sub-menu"'); 
+         $lvl--; 
+      }
+      $cli=SpacesOnLevel($lvl,$cLast,0,0,$otlada)."</li>\n";
+      echo($cli); $cLast='-li'; 
+      echo(SpacesOnLevel($lvl,$cLast,0,0,$otlada)."</ul>\n");  $cLast='-ul';
+   }
+}
+function getIconCue($Translit)
+{
+   if ($Translit=='moya-zhizn') $icon='&#129392;';
+   else if ($Translit=='mikroputeshestviya') $icon='&#9978;';
+   else if ($Translit=='vsyakoe-raznoe') $icon='&#9994;';
+   else if ($Translit=='v-kontakte') $icon='&#128165;';
+   else if ($Translit=='moj-mir') $icon='&#10024;';
+   else if ($Translit=='perepechatka') $icon='&#9924;';
+   else if ($Translit=='progulki') $icon='&#128692;';
+   else $icon='&#9925;'; 
+   return '<i class="UniIcon">'.$icon.'</i>';
 }
 // ****************************************************************************
 // *   Включить ссылку в текущую строку таблицы меню с сортировкой по полям   *

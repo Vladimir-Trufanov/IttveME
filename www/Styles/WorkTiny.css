@@ -80,6 +80,7 @@
 #Message,#NameError,#TopLine
 {
    display:block;
+   font-size:1.6rem;
    overflow:hidden;
    color:maroon;
    font-weight:600;

@@ -51,7 +51,11 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
-//echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
+echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
+
+// Подключаем игровые стили
+echo '<link rel="stylesheet" type="text/css" href="ttools/TNewCueClass/game.css">';
+
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';

@@ -92,40 +92,39 @@
 #btnLifeMenu
 {
    width: 95%;
-   z-index:1;
-   border-radius:8px;
-   background:radial-gradient(farthest-side ellipse at top left,#fff, #ededed);
    margin-top:.3rem;
    margin-left:.3rem;
 }
 #imgLifeMenu
 {
    width:100%;
-}
-#btnLifeMenu:active 
-{
    background:radial-gradient(farthest-side ellipse at top left,#ededed,#fff);
    background:-webkit-gradient(radial,farthest-side ellipse at top left,from(#f47a20),to(#faa51a));
    background:-moz-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
    background:-ms-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
    background:-o-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
    background-image:-o-radial-gradient(farthest-side ellipse at top left,#f47a20,#faa51a);
+   border-radius:.2rem;
 }
-#btnLifeMenu:hover 
+#imgLifeMenu:hover
 {
    background:radial-gradient(farthest-side ellipse at top left,#fff,#dcdcdc);
+}
+#imgLifeMenu:active 
+{
+   background:radial-gradient(farthest-side ellipse at top left,#fff, #ededed);
 }
 #btnLifeMenu:hover::after 
 {
    content:'Жизнь и путешествия!'; 
-   position:absolute;left:5rem;bottom:.3rem; 
-   z-index:1; /*Отображаем подсказку поверх других элементов*/
+   position:absolute;left:5rem;bottom:.3rem;z-index:11;
    background:white; 
    color:#ab4a16;  /*Приятный коричневый цвет*/ 
    font-size:1.3rem;
    font-weight:600; 
    padding:.4rem .5rem;
-   border:1px solid #ab4a16;border-radius:.8rem;
+   border:1px solid #ab4a16; 
+   border-radius:.8rem;
 }
 /* Подвал, внутренности                                                      */
 #LeftFooter
@@ -140,8 +139,8 @@
 /* Галерея новостей, секция материалов                                       */
 #News,#Life
 {
-   margin-top:1rem; 
    padding:.6rem;
+   z-index:10;
 }
 
 /* ********************************************************* Content.css *** */	
