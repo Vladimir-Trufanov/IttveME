@@ -114,12 +114,14 @@ class TinyGallery
    protected $uidEdit;          // одентификатор материала
    
    protected $DelayedMessage;   // отложенное сообщение
+   private   $Newcue;           // объект "Добавить новый раздел материалов"
 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
    {
       // Инициализируем свойства класса
+      $this->Newcue=NULL;
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->fileStyle="Styles/WorkTiny.css";
@@ -234,10 +236,10 @@ class TinyGallery
    // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
-   public function IniEditSpace()
+   public function Init($NewCueGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
-      $this->Arti->IniEditSpace();
+      $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       
@@ -249,9 +251,8 @@ class TinyGallery
       #WorkTiny
       {
          width:100%;
-         height:96%;
-           overflow: hidden;
-
+         height:100%;
+         overflow:auto;
       }
       </style>
       ';
@@ -281,7 +282,8 @@ class TinyGallery
       </style>
       ';
       */
-      if (\prown\isComRequest(mmlZhiznIputeshestviya))
+      if ($this->Dispatch_HEAD($NewCueGame)) {}
+      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_HEAD();
       else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_HEAD();
@@ -332,10 +334,12 @@ class TinyGallery
    // *************************************************************************
    // *              Открыть пространство редактирования материала            *
    // *************************************************************************
-   public function OpenEditSpace($aPresMode,$aModeImg,$urlHome)
+   public function ViewLifeSpace($aPresMode,$aModeImg,$urlHome)
    {
    // Включаем в разметку рабочую область редактирования
    echo '<div id="WorkTiny">';
+      if ($this->Dispatch_BODY_WorkTiny()) {}
+      else
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
       if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
@@ -348,9 +352,6 @@ class TinyGallery
       // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
       else if (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
          mmlVojtiZaregistrirovatsya_BODY_WorkTiny($this->apdo,$this->Arti);
-      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
-      else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         mmlDobavitNovyjRazdel_BODY_WorkTiny($this->apdo,$this->Arti);
       // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
       else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
          mmlIzmenitNazvanieIkonku_BODY_WorkTiny($this->apdo,$this->Arti);
@@ -465,6 +466,33 @@ class TinyGallery
    {
       echo 'KwinGallery_mmlVybratStatyuRedakti<br>';
    }
-
+   // *************************************************************************
+   // *                     Распределить запросы страниц                      *
+   // *************************************************************************
+   private function Dispatch_HEAD($NewCueGame)
+   {
+      // ----------------------------------------------------------------------
+      // это вставка на случай, пока используется игра DuckFly 
+      // (для игры нужно убрать все полосы прокрутки)
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
+      else
+         echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
+      // ----------------------------------------------------------------------
+      $Result=true;
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+      else $Result=false;
+      return $Result;
+   }
+   private function Dispatch_BODY_WorkTiny()
+   {
+      $Result=true;
+      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         mmlDobavitNovyjRazdel_BODY_WorkTiny($this->Newcue);
+      else $Result=false;
+      return $Result;
+   }
 } 
 // *************************************************** TinyGalleryClass.php ***

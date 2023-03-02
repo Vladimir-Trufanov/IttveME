@@ -53,9 +53,6 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
 
-// Подключаем игровые стили
-echo '<link rel="stylesheet" type="text/css" href="ttools/TNewCueClass/game.css">';
-
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
@@ -94,7 +91,7 @@ $ImageFile=prown\getComRequest('Image');
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
-$Edit->IniEditSpace();
+$Edit->Init($Duck);
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();
@@ -126,41 +123,38 @@ function setGalleryMode()
 // ****************************************************************************
 function setPositionDiv($c_PresMode)
 {
-   $c_PresMode=rpmOneRight;
+   //$c_PresMode=rpmOneRight;
    //$c_PresMode=rpmDoubleRight;
    //$c_PresMode=rpmOneLeft;
    //$c_PresMode=rpmDoubleLeft;
-   echo "<style>";
-   // Если режим представления материалов = 'одноколоночный с правосторонней галереей')
-   if ($c_PresMode==rpmOneRight)
+   // -------------------------------------------------------------------------
+   // это вставка на случай, пока используется игра DuckFly 
+   // (для игры нужно убрать все полосы прокрутки)
+   if (\prown\isComRequest(mmlDobavitNovyjRazdel))
    {
-      echo "
-      #News
-      {
-         display:none;
-      }
-      #Life,#FooterTiny,#Info
-      {
-         left:0;
-      }
-      #Life
-      {
-         width:67%; 
-      }
-      #Gallery
-      {
-         left:67%;
-      }
-      ";
+      if ($c_PresMode==rpmDoubleRight) rOneRight();
+      else if ($c_PresMode==rpmDoubleLeft) rOneLeft();
+      else if ($c_PresMode==rpmOneLeft) rOneLeft();
+      else rOneRight();
    }
+   // -------------------------------------------------------------------------
    // Если режим представления материалов = 'двухколоночный с правосторонней галереей')
-   if ($c_PresMode==rpmDoubleRight)
-   {
-      echo "
+   else if ($c_PresMode==rpmDoubleRight) rDoubleRight();
+   // Если режим представления материалов = 'одноколоночный с левосторонней галереей')
+   else if ($c_PresMode==rpmOneLeft) rOneLeft();
+   // Если режим представления материалов = 'двухколоночный с левосторонней галереей')
+   else if ($c_PresMode==rpmDoubleLeft) rDoubleLeft();
+   // В остальных случаях = 'одноколоночный с правосторонней галереей')
+   else rOneRight();
+}
+function rDoubleLeft()
+{
+   echo "<style>";
+   echo "
       #News
       {
          display:block;
-         left:0;
+         left:67%;
          width:33%;
       }
       #Life
@@ -170,18 +164,19 @@ function setPositionDiv($c_PresMode)
       }
       #FooterTiny,#Info
       {
-         left:0;
+         left:33%;
       }
       #Gallery
       {
-         left:67%;
+         left:0;
       }
-      ";
-   }
-   // Если режим представления материалов = 'одноколоночный с левосторонней галереей')
-   if ($c_PresMode==rpmOneLeft)
-   {
-      echo "
+   ";
+   echo "</style>";
+}
+function rOneLeft()
+{
+   echo "<style>";
+   echo "
       #News
       {
          display:none;
@@ -198,16 +193,17 @@ function setPositionDiv($c_PresMode)
       {
          left:0;
       }
-      ";
-   }
-   // Если режим представления материалов = 'двухколоночный с левосторонней галереей')
-   if ($c_PresMode==rpmDoubleLeft)
-   {
-      echo "
+   ";
+   echo "</style>";
+}
+function rDoubleRight()
+{
+   echo "<style>";
+   echo "
       #News
       {
          display:block;
-         left:67%;
+         left:0;
          width:33%;
       }
       #Life
@@ -217,14 +213,36 @@ function setPositionDiv($c_PresMode)
       }
       #FooterTiny,#Info
       {
-         left:33%;
+         left:0;
       }
       #Gallery
       {
+         left:67%;
+      }
+   ";
+   echo "</style>";
+}
+function rOneRight()
+{
+   echo "<style>";
+   echo "
+      #News
+      {
+         display:none;
+      }
+      #Life,#FooterTiny,#Info
+      {
          left:0;
       }
-      ";
-   }
+      #Life
+      {
+         width:67%; 
+      }
+      #Gallery
+      {
+         left:67%;
+      }
+   ";
    echo "</style>";
 }
 

@@ -208,3 +208,16 @@ Stack trace:
 [27-Feb-2023 15:44:45 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\IttveMe\www\UpSite.php on line 45
 [27-Feb-2023 20:22:02 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\IttveMe\www\UpSite.php on line 90
 [01-Mar-2023 21:08:18 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'src' (T_STRING), expecting ',' or ';' in C:\IttveMe\www\UpSiteCSS.php on line 60
+[02-Mar-2023 17:18:28 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting '(' in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 317
+[02-Mar-2023 18:28:49 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'DuckFly' not found in C:\IttveMe\www\iniMem.php:228
+Stack trace:
+#0 C:\IttveMe\www\index.php(87): require_once()
+#1 {main}
+  thrown in C:\IttveMe\www\iniMem.php on line 228
+[02-Mar-2023 18:31:26 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\NewCue' not found in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php:290
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(353): ttools\mmlDobavitNovyjRazdel_BODY_WorkTiny(Object(PDO), Object(ttools\ArticlesMaker))
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 290

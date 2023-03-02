@@ -465,7 +465,14 @@ IttveME
 				-TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
 				+TNewCueClass
-					www\ttools\TNewCueClass\game.css
+					-img
+						www\ttools\TNewCueClass\img\aim.png
+						www\ttools\TNewCueClass\img\bg.png
+						www\ttools\TNewCueClass\img\dog.png
+						www\ttools\TNewCueClass\img\duck_black.png
+						www\ttools\TNewCueClass\img\duck_light.png
+					www\ttools\TNewCueClass\DuckFly.css
+					www\ttools\TNewCueClass\gameDuckFlyClass.php
 					www\ttools\TNewCueClass\NewCueClass.php
 				-TSaymeClass
 					www\ttools\TSaymeClass\SaymeClass.php
@@ -515,63 +522,51 @@ IttveME
 4=www\UpSite.php
 5=www\ttools\TTinyGallery\TinyGalleryClass.php
 6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-7=www\ttools\TKwinGallery\KwinGalleryClass.php
-8=www\ttools\TTinyGallery\WorkTiny.php
-9=www\Styles\iniStyles.css
-10=www\Jsx\WorkTiny.js
-11=www\ttools\TArticlesMaker\CommonIttveMe.php
+7=www\ttools\TTinyGallery\WorkTiny.php
+8=www\Styles\iniStyles.css
+9=www\ttools\TNewCueClass\DuckFly.css
+10=www\ttools\TNewCueClass\gameDuckFlyClass.php
+11=www\ttools\TMenuLeader\MenuLeaderClass.php
 12=www\ttools\TNewCueClass\NewCueClass.php
-13=..\Users\Евгеньевич\Downloads\duck-hunter.css-master\duck-hunter.css-master\assets\index.html
-14=www\ttools\TNewCueClass\game.css
-15=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TNewCueClass\game.css
+Selected=www\ttools\TNewCueClass\DuckFly.css
 [www\index.php]
-TopLine=69
-Caret=2,84
+TopLine=74
+Caret=35,89
 [www\Common.php]
 TopLine=12
 Caret=10,45
 [www\iniMem.php]
-TopLine=113
-Caret=67,113
+TopLine=194
+Caret=32,228
 [www\UpSiteCSS.php]
-TopLine=25
-Caret=84,57
+TopLine=121
+Caret=9,148
 [www\UpSite.php]
-TopLine=28
-Caret=1,48
+TopLine=34
+Caret=27,48
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=240
-Caret=10,253
+Caret=20,254
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=94
-Caret=22,258
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=167
-Caret=1,182
+TopLine=185
+Caret=24,214
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=259
-Caret=26,283
+TopLine=3
+Caret=11,19
 [www\Styles\iniStyles.css]
-TopLine=66
-Caret=1,74
-[www\Jsx\WorkTiny.js]
-TopLine=59
-Caret=7,5
-[www\ttools\TArticlesMaker\CommonIttveMe.php]
-TopLine=573
-Caret=36,607
+TopLine=65
+Caret=1,94
+[www\ttools\TNewCueClass\DuckFly.css]
+TopLine=57
+Caret=17,84
+[www\ttools\TNewCueClass\gameDuckFlyClass.php]
+TopLine=16
+Caret=1,32
+[www\ttools\TMenuLeader\MenuLeaderClass.php]
+TopLine=45
+Caret=1,73
 [www\ttools\TNewCueClass\NewCueClass.php]
 TopLine=1
-Caret=21,26
-[..\Users\Евгеньевич\Downloads\duck-hunter.css-master\duck-hunter.css-master\assets\index.html]
-TopLine=1
-Caret=1,11
-[www\ttools\TNewCueClass\game.css]
-TopLine=83
-Caret=1,111
-[www\Styles\Content.css]
-TopLine=109
-Caret=12,120
+Caret=1,28

@@ -223,6 +223,10 @@ $WorkTinyHeight='75'; $FooterTinyHeight='15'; $KwinGalleryWidth='30'; $EdIzm='%'
 $Edit=new ttools\TinyGallery($SiteRoot,$urlHome,
    $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
 
+// Подключаем заменяющую игру для страницы "Добавить новый раздел"
+require_once "ttools/TNewCueClass/gameDuckFlyClass.php";
+$Duck=new game\DuckFly('IttveME');
+
 // end --------------------------------------------------------------- ZERO ---
 
 // ************************************************************* iniMem.php *** 

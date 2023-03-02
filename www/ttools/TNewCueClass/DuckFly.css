@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@keyframes utkaFly {
+@keyframes utkaFly 
+{
   0% {
     left: 150%;
     top: 10%;
@@ -21,15 +22,15 @@
     top: 10%;
   }
 }
-
-@keyframes utkaDie {
+@keyframes utkaDie 
+{
   0% {
     left: -50%;
     top: 100%;
   }
 }
-
-input + label {
+input + label 
+{
   position: absolute;
   left: -100px;
   z-index: 1;
@@ -41,8 +42,8 @@ input + label {
   background: url(../TNewCueClass/img/duck_light.png) no-repeat left center;
   background-position: -138px 0;
 }
-
-input:checked + label {
+input:checked + label 
+{
   opacity: 0;
   transition: all 0.5s;
   transform: rotate(120deg);
@@ -50,71 +51,72 @@ input:checked + label {
   z-index: -5;
   animation: utkaDie 1s linear infinite;
 }
-
-.duck:nth-of-type(1) {
+.duck:nth-of-type(1) 
+{
   animation: utkaFly 10s linear 1s infinite;
   animation-direction: alternate;
 }
-
-.duck:nth-of-type(2) {
+.duck:nth-of-type(2) 
+{
   animation: utkaFly 20s linear 2s infinite;
   animation-direction: alternate;
 }
-
-.duck:nth-of-type(3) {
+.duck:nth-of-type(3) 
+{
   animation: utkaFly 30s linear 3s infinite;
   animation-direction: alternate;
 }
-
-.duck:nth-of-type(4) {
+.duck:nth-of-type(4) 
+{
   animation: utkaFly 40s linear 4s infinite;
   animation-direction: alternate;
 }
-
-.duck:nth-of-type(5) {
+.duck:nth-of-type(5) 
+{
   animation: utkaFly 50s linear 5s infinite;
   animation-direction: alternate;
 }
-
-.score {
-  position: absolute;
-  bottom: 0;
-  height: 50px;
-  line-height: 50px;
-  font-size: 30px;
+.score 
+{
+  position:absolute;
+  bottom:0;
+  height:30px;
+  line-height:30px;
+  font-size:20px;
   text-align: center;
   width: 100%;
   z-index: 2;
-  background-color: #dadada;
+  background:transparent;
 }
-
-.score:after {
+.score:after 
+{
   content: counter(score);
   display: inline-block;
 }
-
-.score:before {
-  content: 'Очки: ';
-  display: inline-block;
-  margin-right: 10px;
+.score:before 
+{
+  content:'Из 5 уток выбиты: ';
+  display:inline-block;
+  white-space:pre;
 }
-
-input:checked {
+input:checked 
+{
   counter-increment: score;
 }
 #duckbody 
 {
-  margin: 0;
-  padding: 0;
-  cursor: url(../TNewCueClass/img/aim.png), text;
-  overflow: hidden;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  cursor:url(../TNewCueClass/img/aim.png),text;
+  overflow:hidden;
 }
 #duckbody:before 
 {
   content: '';
   display: block;
   position:absolute;
-  /*position: fixed;*/
   width: 100%;
   height:100%;
   z-index: 1;
