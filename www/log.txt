@@ -221,3 +221,4 @@ Stack trace:
 #2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
 #3 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 290
+[03-Mar-2023 19:12:16 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\ModyCue::__construct() in C:\IttveMe\www\ttools\TModyCueClass\ModyCueClass.php on line 46

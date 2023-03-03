@@ -88,6 +88,8 @@ input:checked + label
   z-index: 2;
   background:transparent;
 }
+/* Здесь через функцию counter от CSS выводим счетчик по событию */ 
+/*
 .score:after 
 {
   content: counter(score);
@@ -99,6 +101,7 @@ input:checked + label
   display:inline-block;
   white-space:pre;
 }
+*/
 input:checked 
 {
   counter-increment: score;

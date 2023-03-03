@@ -352,9 +352,6 @@ class TinyGallery
       // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
       else if (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
          mmlVojtiZaregistrirovatsya_BODY_WorkTiny($this->apdo,$this->Arti);
-      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
-      else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
-         mmlIzmenitNazvanieIkonku_BODY_WorkTiny($this->apdo,$this->Arti);
       // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
       else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->apdo,$this->Arti);
@@ -491,6 +488,10 @@ class TinyGallery
       // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
       if (\prown\isComRequest(mmlDobavitNovyjRazdel))
          mmlDobavitNovyjRazdel_BODY_WorkTiny($this->Newcue);
+      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
+      else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
+         mmlIzmenitNazvanieIkonku_BODY_WorkTiny();
+
       else $Result=false;
       return $Result;
    }

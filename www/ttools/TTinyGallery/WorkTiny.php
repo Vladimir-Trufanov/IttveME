@@ -26,6 +26,30 @@ function mmlDobavitNovyjRazdel_BODY_WorkTiny($Newcue)
    $Newcue->Body();
 }
 // ****************************************************************************
+// *                     "Изменить заголовок раздела или иконку"              *
+// ****************************************************************************
+function mmlIzmenitNazvanieIkonku_BODY_WorkTiny()
+{
+   //require_once "ttools/TModyCueClass/ModyCueClass.php";
+   //MakeTitle('Изменить заголовок раздела или иконку! '.'&#128152;&#129315;',ttMessage);
+   //$Modycue=new ModyCue();
+   //$Modycue->Body();
+
+   require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
+   MakeTitle('Страничка разрешена собственнику сайта. Смотрите возможные иконки разделов материалов и статей!',ttMessage);
+   $Unicoder=new UnicodeUser('Emojitveme'); 
+   //$Unicoder->ViewCharsetAsColomn(0);
+   //$Unicoder->ViewIntervalAsColomn('2300','2650');
+   //$Unicoder->ViewFontAwesome470AsColomn('f0b3','f200');
+   $Unicoder->ViewCharsetAsTable(0,8);
+   $Unicoder->ViewCharsetAsTable(5,8);
+   $Unicoder->ViewCharsetAsTable(4,8);
+   $Unicoder->ViewCharsetAsTable(3,8);
+   $Unicoder->ViewFontAwesome470AsTable('f0b3','f200',8);
+   $Unicoder->ViewCharsetAsTable(2,8);
+   $Unicoder->ViewCharsetAsTable(1,8);
+}
+// ****************************************************************************
 // *      Настроить размеры шрифтов и полосок меню (рождественская версия)    *
 // ****************************************************************************
 function IniFontChristmas()
@@ -251,16 +275,6 @@ function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
    MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
    //$Arti->getPunktMenu($pdo); 
    $Arti->MakeMyLifeMenu($pdo);
-   
-   /*
-   require_once pathPhpTools."/TUnicodeUser/UnicodeUserClass.php";
-   $Unicoder=new UnicodeUser('Emojitveme'); 
-   //$Unicoder->ViewCharsetAsColomn(0);
-   //$Unicoder->ViewIntervalAsColomn('2300','2650');
-   //$Unicoder->ViewFontAwesome470AsColomn('f0b3','f200');
-   //$Unicoder->ViewFontAwesome470AsTable('f0b3','f200',2);
-   $Unicoder->ViewCharsetAsTable(0,3);
-   */
 }
 // ****************************************************************************
 // *                         "Отправить сообщение автору"                     *
@@ -288,15 +302,6 @@ function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
    require_once "ttools/TEntryClass/EntryClass.php";
    MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
    $Entry=new Entrying();
-}
-// ****************************************************************************
-// *                     "Изменить заголовок раздела или иконку"              *
-// ****************************************************************************
-function mmlIzmenitNazvanieIkonku_BODY_WorkTiny($pdo,$Arti)
-{
-   require_once "ttools/TModyCueClass/ModyCueClass.php";
-   MakeTitle('Изменить заголовок раздела или иконку! '.'&#128152;&#129315;',ttMessage);
-   $Modycue=new ModyCue();
 }
 // ****************************************************************************
 // *                         "Удалить раздел материалов"                      *

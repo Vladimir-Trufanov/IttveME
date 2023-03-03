@@ -188,7 +188,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -451,6 +451,11 @@ IttveME
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
 				-TDelCueClass
+					-g2048
+						-js
+						-meta
+						-style
+						www\ttools\TDelCueClass\g2048\game2048Class.php
 					www\ttools\TDelCueClass\DelCueClass.php
 				-TEntryClass
 					www\ttools\TEntryClass\EntryClass.php
@@ -462,18 +467,46 @@ IttveME
 				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				-TModyCueClass
+				+TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
-				+TNewCueClass
+				-TNewCueClass
+					-Duck Hunt v2
+						-mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\01 - Title Screen.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\02 - Duck Hunt Intro.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\03 - Clay Shooting Intro.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\04 - Got Duck(s).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\05 - Round Clear.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\06 - Perfect.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\07 - You Failed.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\08 - Game Over.mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Bark! (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Clay Shooting Whistle (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Counting Hits (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Dead Duck Falls (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Dead Duck Lands (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Disc Hit (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Duck Flapping (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Flying Disc (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Gunshot (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Laugh (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Pause (SFX).mp3
+							www\ttools\TNewCueClass\Duck Hunt v2\mp3\99 - Quack! (SFX).mp3
+						www\ttools\TNewCueClass\Duck Hunt v2\index.html
+						www\ttools\TNewCueClass\Duck Hunt v2\sprite.png
+						www\ttools\TNewCueClass\Duck Hunt v2\stage.png
+						www\ttools\TNewCueClass\Duck Hunt v2\styles.css
 					-img
 						www\ttools\TNewCueClass\img\aim.png
 						www\ttools\TNewCueClass\img\bg.png
 						www\ttools\TNewCueClass\img\dog.png
 						www\ttools\TNewCueClass\img\duck_black.png
 						www\ttools\TNewCueClass\img\duck_light.png
+					www\ttools\TNewCueClass\CSS3 - анимация.doc
 					www\ttools\TNewCueClass\DuckFly.css
 					www\ttools\TNewCueClass\gameDuckFlyClass.php
 					www\ttools\TNewCueClass\NewCueClass.php
+					www\ttools\TNewCueClass\Игра на голом HTML.doc
 				-TSaymeClass
 					www\ttools\TSaymeClass\SaymeClass.php
 				-TTinyGallery
@@ -524,13 +557,12 @@ IttveME
 6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 7=www\ttools\TTinyGallery\WorkTiny.php
 8=www\Styles\iniStyles.css
-9=www\ttools\TNewCueClass\DuckFly.css
-10=www\ttools\TNewCueClass\gameDuckFlyClass.php
-11=www\ttools\TMenuLeader\MenuLeaderClass.php
-12=www\ttools\TNewCueClass\NewCueClass.php
+9=www\ttools\TModyCueClass\g2048\game2048Class.php
+10=www\ttools\TModyCueClass\ModyCueClass.php
+11=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TNewCueClass\DuckFly.css
+Selected=www\ttools\TTinyGallery\WorkTiny.php
 [www\index.php]
 TopLine=74
 Caret=35,89
@@ -538,35 +570,32 @@ Caret=35,89
 TopLine=12
 Caret=10,45
 [www\iniMem.php]
-TopLine=194
+TopLine=192
 Caret=32,228
 [www\UpSiteCSS.php]
-TopLine=121
+TopLine=85
 Caret=9,148
 [www\UpSite.php]
-TopLine=34
+TopLine=32
 Caret=27,48
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=240
-Caret=20,254
+TopLine=439
+Caret=43,491
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=185
-Caret=24,214
+TopLine=175
+Caret=56,208
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=3
-Caret=11,19
+TopLine=14
+Caret=37,50
 [www\Styles\iniStyles.css]
-TopLine=65
+TopLine=64
 Caret=1,94
-[www\ttools\TNewCueClass\DuckFly.css]
-TopLine=57
-Caret=17,84
-[www\ttools\TNewCueClass\gameDuckFlyClass.php]
-TopLine=16
-Caret=1,32
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=45
-Caret=1,73
-[www\ttools\TNewCueClass\NewCueClass.php]
+[www\ttools\TModyCueClass\g2048\game2048Class.php]
 TopLine=1
-Caret=1,28
+Caret=20,36
+[www\ttools\TModyCueClass\ModyCueClass.php]
+TopLine=1
+Caret=1,39
+[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php]
+TopLine=237
+Caret=1,1
