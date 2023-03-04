@@ -222,3 +222,19 @@ Stack trace:
 #3 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 290
 [03-Mar-2023 19:12:16 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\ModyCue::__construct() in C:\IttveMe\www\ttools\TModyCueClass\ModyCueClass.php on line 46
+[03-Mar-2023 20:27:30 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: picturepw.TranslitPic in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php:513
+Stack trace:
+#0 C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php(513): PDOStatement->execute(Array)
+#1 C:\IttveMe\www\ttools\TKwinGallery\KwinGalleryClass.php(333): ttools\ArticlesMaker->InsertImgByTranslit(Object(PDO), '5', '\xD0\x9A\xD0\xB0\xD1\x80\xD1\x82\xD0\xB0 \xD0\xBF\xD1\x80...', 'karta-progulki', 'jpg', 'image/jpeg', '03.03.2023', 455770, '\xD0\xA2\xD0\xB5\xD0\xBA\xD1\x81\xD1\x82 \xD0\xBA\xD0\xBE...')
+#2 C:\IttveMe\www\ttools\TKwinGallery\KwinGalleryClass.php(138): ttools\KwinGallery->ifKwinUpload('C:\\IttveMe\\www', 'ittveEdit', 'ittve', '4', '5')
+#3 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(230): ttools\KwinGallery->__construct('ittveEdit', 'ittve', '4', '5', 'C:\\IttveMe\\www', 'http://localhos...', Object(ttools\ArticlesMaker))
+#4 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 513
+[03-Mar-2023 20:29:02 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: picturepw.TranslitPic in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php:513
+Stack trace:
+#0 C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php(513): PDOStatement->execute(Array)
+#1 C:\IttveMe\www\ttools\TKwinGallery\KwinGalleryClass.php(333): ttools\ArticlesMaker->InsertImgByTranslit(Object(PDO), '32', '\xD0\x9A\xD0\xB0\xD1\x80\xD1\x82\xD0\xB0 \xD0\xBF\xD1\x80...', 'karta-progulki', 'jpg', 'image/jpeg', '03.03.2023', 455770, '\xD0\xA2\xD0\xB5\xD0\xBA\xD1\x81\xD1\x82 \xD0\xBA\xD0\xBE...')
+#2 C:\IttveMe\www\ttools\TKwinGallery\KwinGalleryClass.php(138): ttools\KwinGallery->ifKwinUpload('C:\\IttveMe\\www', 'ittveEdit', 'ittve', '4', '32')
+#3 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(230): ttools\KwinGallery->__construct('ittveEdit', 'ittve', '4', '32', 'C:\\IttveMe\\www', 'http://localhos...', Object(ttools\ArticlesMaker))
+#4 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass. in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 513
+[04-Mar-2023 03:25:11 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TDelCueClass/game2048Class.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 230
+[04-Mar-2023 03:27:22 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TNewCueClass/DelCueClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 58

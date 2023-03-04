@@ -226,6 +226,9 @@ $Edit=new ttools\TinyGallery($SiteRoot,$urlHome,
 // Подключаем заменяющую игру для страницы "Добавить новый раздел"
 require_once "ttools/TNewCueClass/gameDuckFlyClass.php";
 $Duck=new game\DuckFly('IttveME');
+// Подключаем заменяющую игру для страницы "Удалить раздел материалов"
+require_once "ttools/TDelCueClass/g2048/game2048Class.php";
+$a2048=new game\g2048('IttveME');
 
 // end --------------------------------------------------------------- ZERO ---
 

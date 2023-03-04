@@ -124,6 +124,8 @@ IttveME
 					www\ittveEdit\Охота на медведя\Следы не свежие, но догоним.JPG
 					www\ittveEdit\Охота на медведя\Шапша в половодье.JPG
 					www\ittveEdit\Охота на медведя\Шапша весной.JPG
+				www\ittveEdit\ittve4-32-karta-progulki.jpg
+				www\ittveEdit\ittve4-5-karta-progulki.jpg
 			-jQuery
 				-images
 					www\jQuery\images\ui-icons_444444_256x240.png
@@ -450,11 +452,36 @@ IttveME
 					www\ttools\TArticlesMaker\getNameCue.php
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
-				-TDelCueClass
-					-g2048
+				+TDelCueClass
+					+g2048
 						-js
-						-meta
+							www\ttools\TDelCueClass\g2048\js\animframe_polyfill.js
+							www\ttools\TDelCueClass\g2048\js\application.js
+							www\ttools\TDelCueClass\g2048\js\bind_polyfill.js
+							www\ttools\TDelCueClass\g2048\js\classlist_polyfill.js
+							www\ttools\TDelCueClass\g2048\js\game_manager.js
+							www\ttools\TDelCueClass\g2048\js\grid.js
+							www\ttools\TDelCueClass\g2048\js\html_actuator.js
+							www\ttools\TDelCueClass\g2048\js\keyboard_input_manager.js
+							www\ttools\TDelCueClass\g2048\js\local_storage_manager.js
+							www\ttools\TDelCueClass\g2048\js\tile.js
+						+meta
+							www\ttools\TDelCueClass\g2048\meta\apple-touch-icon.png
+							www\ttools\TDelCueClass\g2048\meta\apple-touch-startup-image-640x1096.png
+							www\ttools\TDelCueClass\g2048\meta\apple-touch-startup-image-640x920.png
 						-style
+							-fonts
+								www\ttools\TDelCueClass\g2048\style\fonts\clear-sans.css
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Bold-webfont.eot
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Bold-webfont.svg
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Bold-webfont.woff
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Light-webfont.eot
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Light-webfont.svg
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Light-webfont.woff
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Regular-webfont.eot
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Regular-webfont.svg
+								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Regular-webfont.woff
+							www\ttools\TDelCueClass\g2048\style\main.css
 						www\ttools\TDelCueClass\g2048\game2048Class.php
 					www\ttools\TDelCueClass\DelCueClass.php
 				-TEntryClass
@@ -467,7 +494,7 @@ IttveME
 				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				+TModyCueClass
+				-TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
 				-TNewCueClass
 					-Duck Hunt v2
@@ -557,12 +584,14 @@ IttveME
 6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 7=www\ttools\TTinyGallery\WorkTiny.php
 8=www\Styles\iniStyles.css
-9=www\ttools\TModyCueClass\g2048\game2048Class.php
-10=www\ttools\TModyCueClass\ModyCueClass.php
-11=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php
+9=www\ttools\TKwinGallery\KwinGalleryClass.php
+10=..\Users\Евгеньевич\Downloads\2048-master\2048-master\index.html
+11=www\ttools\TDelCueClass\g2048\game2048Class.php
+12=www\ttools\TDelCueClass\DelCueClass.php
+13=www\ttools\TDelCueClass\g2048\style\main.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\WorkTiny.php
+Selected=www\ttools\TDelCueClass\DelCueClass.php
 [www\index.php]
 TopLine=74
 Caret=35,89
@@ -570,32 +599,38 @@ Caret=35,89
 TopLine=12
 Caret=10,45
 [www\iniMem.php]
-TopLine=192
-Caret=32,228
+TopLine=197
+Caret=41,230
 [www\UpSiteCSS.php]
-TopLine=85
-Caret=9,148
+TopLine=17
+Caret=25,96
 [www\UpSite.php]
-TopLine=32
+TopLine=34
 Caret=27,48
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=439
-Caret=43,491
+TopLine=461
+Caret=1,496
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=175
 Caret=56,208
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=14
-Caret=37,50
+TopLine=39
+Caret=80,66
 [www\Styles\iniStyles.css]
 TopLine=64
 Caret=1,94
-[www\ttools\TModyCueClass\g2048\game2048Class.php]
-TopLine=1
-Caret=20,36
-[www\ttools\TModyCueClass\ModyCueClass.php]
-TopLine=1
-Caret=1,39
-[..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeArrays.php]
-TopLine=237
+[www\ttools\TKwinGallery\KwinGalleryClass.php]
+TopLine=177
 Caret=1,1
+[..\Users\Евгеньевич\Downloads\2048-master\2048-master\index.html]
+TopLine=1
+Caret=1,14
+[www\ttools\TDelCueClass\g2048\game2048Class.php]
+TopLine=102
+Caret=12,32
+[www\ttools\TDelCueClass\DelCueClass.php]
+TopLine=1
+Caret=79,36
+[www\ttools\TDelCueClass\g2048\style\main.css]
+TopLine=1
+Caret=1,155

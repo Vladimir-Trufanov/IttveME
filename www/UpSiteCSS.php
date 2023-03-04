@@ -40,11 +40,13 @@ echo
     <script src="/jQuery/jquery-3.6.3.min.js"></script>
     <script src="/jQuery/jquery-ui.min.js"></script>';
 // Подключаем базовый шрифт
+/*
 echo '
    <link rel="stylesheet"
    href="Styles/Anonymous_Pro?family=Anonymous+Pro:400,400i,700,700i&amp;
    subset=cyrillic">
 ';
+*/
 // Выполняем сброс стилей и устанавливаем начальные настройки стилей
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем элементы, подключаем стили
@@ -91,7 +93,7 @@ $ImageFile=prown\getComRequest('Image');
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
-$Edit->Init($Duck);
+$Edit->Init($Duck,$a2048);
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();
@@ -129,7 +131,7 @@ function setPositionDiv($c_PresMode)
    //$c_PresMode=rpmDoubleLeft;
    // -------------------------------------------------------------------------
    // это вставка на случай, пока используется игра DuckFly 
-   // (для игры нужно убрать все полосы прокрутки)
+   // (для игры нужно пространство, занимаемое двумя колонками)
    if (\prown\isComRequest(mmlDobavitNovyjRazdel))
    {
       if ($c_PresMode==rpmDoubleRight) rOneRight();

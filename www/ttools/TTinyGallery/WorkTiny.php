@@ -49,6 +49,23 @@ function mmlIzmenitNazvanieIkonku_BODY_WorkTiny()
    $Unicoder->ViewCharsetAsTable(2,8);
    $Unicoder->ViewCharsetAsTable(1,8);
 }
+
+// ****************************************************************************
+// *                           "Удалить раздел материалов"                    *
+// ****************************************************************************
+function mmlUdalitRazdelMaterialov_HEAD($game=NULL)
+{
+   require_once "ttools/TDelCueClass/DelCueClass.php";
+   $Delcue=new DelCue($game);
+   $Delcue->Head();
+   return $Delcue;
+}
+function mmlUdalitRazdelMaterialov_BODY_WorkTiny($Delcue)
+{
+   //MakeTitle('Удалить раздел материалов! '.'&#128152;&#129315;',ttMessage);
+   MakeTitle('Страничка будет следующей зимой, а здесь соберите сумму 2048.<br> У меня пока получилось 756!',ttMessage);
+   $Delcue->Body();
+}
 // ****************************************************************************
 // *      Настроить размеры шрифтов и полосок меню (рождественская версия)    *
 // ****************************************************************************
@@ -302,15 +319,6 @@ function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
    require_once "ttools/TEntryClass/EntryClass.php";
    MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
    $Entry=new Entrying();
-}
-// ****************************************************************************
-// *                         "Удалить раздел материалов"                      *
-// ****************************************************************************
-function mmlUdalitRazdelMaterialov_BODY_WorkTiny($pdo,$Arti)
-{
-   require_once "ttools/TDelCueClass/DelCueClass.php";
-   MakeTitle('Удалить раздел материалов! '.'&#128152;&#129315;',ttMessage);
-   $Delcue=new DelCue();
 }
 
 // *********************************************************** WorkTiny.php ***

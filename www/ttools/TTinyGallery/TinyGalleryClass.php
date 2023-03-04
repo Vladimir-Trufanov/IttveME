@@ -115,6 +115,7 @@ class TinyGallery
    
    protected $DelayedMessage;   // отложенное сообщение
    private   $Newcue;           // объект "Добавить новый раздел материалов"
+   private   $Delcue;           // объект "Удалить раздел материалов"
 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
@@ -122,6 +123,7 @@ class TinyGallery
    {
       // Инициализируем свойства класса
       $this->Newcue=NULL;
+      $this->Delcue=NULL;
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->fileStyle="Styles/WorkTiny.css";
@@ -236,7 +238,7 @@ class TinyGallery
    // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
-   public function Init($NewCueGame=NULL)
+   public function Init($NewCueGame=NULL,$DelCueGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
@@ -282,7 +284,7 @@ class TinyGallery
       </style>
       ';
       */
-      if ($this->Dispatch_HEAD($NewCueGame)) {}
+      if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame)) {}
       else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_HEAD();
       else if (\prown\isComRequest(mmlNaznachitStatyu))
@@ -352,10 +354,6 @@ class TinyGallery
       // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
       else if (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
          mmlVojtiZaregistrirovatsya_BODY_WorkTiny($this->apdo,$this->Arti);
-      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
-      else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
-         mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->apdo,$this->Arti);
-         
       // Перезапускаем страницу "Назначить статью"
       else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_BODY_WorkTiny
@@ -466,7 +464,7 @@ class TinyGallery
    // *************************************************************************
    // *                     Распределить запросы страниц                      *
    // *************************************************************************
-   private function Dispatch_HEAD($NewCueGame)
+   private function Dispatch_HEAD($NewCueGame,$DelCueGame)
    {
       // ----------------------------------------------------------------------
       // это вставка на случай, пока используется игра DuckFly 
@@ -479,6 +477,8 @@ class TinyGallery
       $Result=true;
       if (\prown\isComRequest(mmlDobavitNovyjRazdel))
          $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+      elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+         $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
       else $Result=false;
       return $Result;
    }
@@ -491,7 +491,9 @@ class TinyGallery
       // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
       else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
          mmlIzmenitNazvanieIkonku_BODY_WorkTiny();
-
+      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
+      else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+         mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);
       else $Result=false;
       return $Result;
    }
