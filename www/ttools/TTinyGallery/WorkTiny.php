@@ -67,6 +67,22 @@ function mmlUdalitRazdelMaterialov_BODY_WorkTiny($Delcue)
    $Delcue->Body();
 }
 // ****************************************************************************
+// *                         "Отправить сообщение автору"                     *
+// ****************************************************************************
+function mmlOtpravitAvtoruSoobshchenie_HEAD($game=NULL)
+{
+   require_once "ttools/TSaymeClass/SaymeClass.php";
+   $Sayme=new Noticing($game);
+   $Sayme->Head();
+   return $Sayme;
+}
+function mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($Sayme)
+{
+   //MakeTitle('Отправить сообщение автору! '.'&#128152;&#129315;',ttMessage);
+   MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
+   $Sayme->Body();
+}
+// ****************************************************************************
 // *      Настроить размеры шрифтов и полосок меню (рождественская версия)    *
 // ****************************************************************************
 function IniFontChristmas()
@@ -292,15 +308,6 @@ function mmlZhiznIputeshestviya_BODY_WorkTiny($pdo,$Arti)
    MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
    //$Arti->getPunktMenu($pdo); 
    $Arti->MakeMyLifeMenu($pdo);
-}
-// ****************************************************************************
-// *                         "Отправить сообщение автору"                     *
-// ****************************************************************************
-function mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($pdo,$Arti)
-{
-   require_once "ttools/TSaymeClass/SaymeClass.php";
-   MakeTitle('Отправить сообщение автору! '.'&#128152;&#129315;',ttMessage);
-   $Sayme=new Noticing();
 }
 // ****************************************************************************
 // *                  "Изменить настройки сайта в браузере"                   *

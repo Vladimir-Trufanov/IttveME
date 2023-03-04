@@ -229,6 +229,9 @@ $Duck=new game\DuckFly('IttveME');
 // Подключаем заменяющую игру для страницы "Удалить раздел материалов"
 require_once "ttools/TDelCueClass/g2048/game2048Class.php";
 $a2048=new game\g2048('IttveME');
+// Подключаем заменяющую игру для страницы "Отправить сообщение автору"
+require_once "ttools/TSaymeClass/Hextris/gameHextrisClass.php";
+$Hex=new game\Hextris('IttveME');
 
 // end --------------------------------------------------------------- ZERO ---
 

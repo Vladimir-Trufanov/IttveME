@@ -116,6 +116,7 @@ class TinyGallery
    protected $DelayedMessage;   // отложенное сообщение
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $Delcue;           // объект "Удалить раздел материалов"
+   private   $Sayme;           // объект "Отправить сообщение автору" 
 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
@@ -124,6 +125,7 @@ class TinyGallery
       // Инициализируем свойства класса
       $this->Newcue=NULL;
       $this->Delcue=NULL;
+      $this->Sayme=NULL;
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->fileStyle="Styles/WorkTiny.css";
@@ -238,7 +240,7 @@ class TinyGallery
    // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
-   public function Init($NewCueGame=NULL,$DelCueGame=NULL)
+   public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
@@ -284,7 +286,7 @@ class TinyGallery
       </style>
       ';
       */
-      if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame)) {}
+      if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)) {}
       else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_HEAD();
       else if (\prown\isComRequest(mmlNaznachitStatyu))
@@ -345,9 +347,6 @@ class TinyGallery
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
       if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
-      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
-      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-         mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($this->apdo,$this->Arti);
       // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
       else if (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
          mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome);
@@ -464,7 +463,7 @@ class TinyGallery
    // *************************************************************************
    // *                     Распределить запросы страниц                      *
    // *************************************************************************
-   private function Dispatch_HEAD($NewCueGame,$DelCueGame)
+   private function Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)
    {
       // ----------------------------------------------------------------------
       // это вставка на случай, пока используется игра DuckFly 
@@ -479,6 +478,8 @@ class TinyGallery
          $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
       elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
+      elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+         $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
       else $Result=false;
       return $Result;
    }
@@ -494,6 +495,9 @@ class TinyGallery
       // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
       else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);
+      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
+      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+         mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($this->Sayme);
       else $Result=false;
       return $Result;
    }
