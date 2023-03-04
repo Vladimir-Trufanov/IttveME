@@ -27,8 +27,11 @@ echo '
 		<script type="text/javascript" src="vendor/js.cookie.js"></script>
 		<script type="text/javascript" src="vendor/jsonfn.min.js"></script>
 		<script type="text/javascript" src="vendor/keypress.min.js"></script>
-		<script type="text/javascript" src="vendor/jquery.js"></script>
-		<script type="text/javascript" src="js/save-state.js"></script>
+		
+        <!-- <script type="text/javascript" src="vendor/jquery1-9-1.js"></script> -->
+        <script type="text/javascript" src="vendor/jquery-1.11.1.min.js"></script> 
+		
+        <script type="text/javascript" src="js/save-state.js"></script>
 		<script type="text/javascript" src="js/view.js"></script>
 		<script type="text/javascript" src="js/wavegen.js"></script>
 		<script type="text/javascript" src="js/math.js"></script>

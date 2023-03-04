@@ -125,6 +125,11 @@ IttveME
 					www\ittveEdit\Охота на медведя\Шапша в половодье.JPG
 					www\ittveEdit\Охота на медведя\Шапша весной.JPG
 			-jQuery
+				-fil
+					www\jQuery\fil\jquery-3.6.3.min.js
+					www\jQuery\fil\jquery-3.6.3.min.map
+					www\jQuery\fil\jquery-ui.min.css
+					www\jQuery\fil\jquery-ui.min.js
 				-images
 					www\jQuery\images\ui-icons_444444_256x240.png
 					www\jQuery\images\ui-icons_555555_256x240.png
@@ -132,8 +137,8 @@ IttveME
 					www\jQuery\images\ui-icons_777777_256x240.png
 					www\jQuery\images\ui-icons_cc0000_256x240.png
 					www\jQuery\images\ui-icons_ffffff_256x240.png
-				www\jQuery\jquery-3.6.3.min.js
-				www\jQuery\jquery-3.6.3.min.map
+				www\jQuery\jquery-1.11.1.min.js
+				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
 			-Jsx
@@ -533,8 +538,8 @@ IttveME
 					www\ttools\TNewCueClass\NewCueClass.php
 					www\ttools\TNewCueClass\Игра на голом HTML.doc
 				+TSaymeClass
-					+Hextris
-						+js
+					-Hextris
+						-js
 							www\ttools\TSaymeClass\Hextris\js\Block.js
 							www\ttools\TSaymeClass\Hextris\js\checking.js
 							www\ttools\TSaymeClass\Hextris\js\comboTimer.js
@@ -578,88 +583,90 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\rrssb.min.js
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
-					-Hextris_Old
+					+hextris-gh-pages
+						-fil
+							www\ttools\TSaymeClass\hextris-gh-pages\fil\jquery1-9-1.js
 						-images
 							-icons
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\apple-touch.svg
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\apple-touch-120.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\apple-touch-152.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\apple-touch-167.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\apple-touch-180.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\apple-touch-512.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\maskable.svg
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\maskable-192.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\maskable-192.webp
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\maskable-512.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\maskable-512.webp
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\transparent.svg
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\transparent-192.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\transparent-192.webp
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\transparent-512.png
-								www\ttools\TSaymeClass\Hextris_Old\images\icons\transparent-512.webp
-							www\ttools\TSaymeClass\Hextris_Old\images\android.png
-							www\ttools\TSaymeClass\Hextris_Old\images\appstore.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_back.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_facebook.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_help.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_pause.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_restart.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_resume.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_share.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\btn_twitter.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\facebook-opengraph.png
-							www\ttools\TSaymeClass\Hextris_Old\images\icon_arrows.svg
-							www\ttools\TSaymeClass\Hextris_Old\images\twitter-opengraph.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\apple-touch.svg
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\apple-touch-120.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\apple-touch-152.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\apple-touch-167.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\apple-touch-180.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\apple-touch-512.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\maskable.svg
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\maskable-192.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\maskable-192.webp
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\maskable-512.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\maskable-512.webp
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\transparent.svg
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\transparent-192.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\transparent-192.webp
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\transparent-512.png
+								www\ttools\TSaymeClass\hextris-gh-pages\images\icons\transparent-512.webp
+							www\ttools\TSaymeClass\hextris-gh-pages\images\android.png
+							www\ttools\TSaymeClass\hextris-gh-pages\images\appstore.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_back.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_facebook.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_help.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_pause.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_restart.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_resume.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_share.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\btn_twitter.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\facebook-opengraph.png
+							www\ttools\TSaymeClass\hextris-gh-pages\images\icon_arrows.svg
+							www\ttools\TSaymeClass\hextris-gh-pages\images\twitter-opengraph.png
 						-js
-							www\ttools\TSaymeClass\Hextris_Old\js\Block.js
-							www\ttools\TSaymeClass\Hextris_Old\js\checking.js
-							www\ttools\TSaymeClass\Hextris_Old\js\comboTimer.js
-							www\ttools\TSaymeClass\Hextris_Old\js\Hex.js
-							www\ttools\TSaymeClass\Hextris_Old\js\initialization.js
-							www\ttools\TSaymeClass\Hextris_Old\js\input.js
-							www\ttools\TSaymeClass\Hextris_Old\js\main.js
-							www\ttools\TSaymeClass\Hextris_Old\js\math.js
-							www\ttools\TSaymeClass\Hextris_Old\js\render.js
-							www\ttools\TSaymeClass\Hextris_Old\js\save-state.js
-							www\ttools\TSaymeClass\Hextris_Old\js\Text.js
-							www\ttools\TSaymeClass\Hextris_Old\js\update.js
-							www\ttools\TSaymeClass\Hextris_Old\js\view.js
-							www\ttools\TSaymeClass\Hextris_Old\js\wavegen.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\Block.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\checking.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\comboTimer.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\Hex.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\initialization.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\input.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\main.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\math.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\render.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\save-state.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\Text.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\update.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\view.js
+							www\ttools\TSaymeClass\hextris-gh-pages\js\wavegen.js
 						-style
 							-fa
 								-css
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\css\font-awesome.css
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\css\font-awesome.min.css
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\css\font-awesome.css
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\css\font-awesome.min.css
 								-fonts
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\fonts\FontAwesome.otf
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\fonts\fontawesome-webfont.eot
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\fonts\fontawesome-webfont.svg
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\fonts\fontawesome-webfont.ttf
-									www\ttools\TSaymeClass\Hextris_Old\style\fa\fonts\fontawesome-webfont.woff
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\fonts\FontAwesome.otf
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\fonts\fontawesome-webfont.eot
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\fonts\fontawesome-webfont.svg
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\fonts\fontawesome-webfont.ttf
+									www\ttools\TSaymeClass\hextris-gh-pages\style\fa\fonts\fontawesome-webfont.woff
 							-fonts
-								www\ttools\TSaymeClass\Hextris_Old\style\fonts\Exo2-ExtraLight.otf
-								www\ttools\TSaymeClass\Hextris_Old\style\fonts\Exo2-Regular.otf
-								www\ttools\TSaymeClass\Hextris_Old\style\fonts\Exo2-SemiBold.otf
-								www\ttools\TSaymeClass\Hextris_Old\style\fonts\Lovelo.otf
-								www\ttools\TSaymeClass\Hextris_Old\style\fonts\QuattrocentoSans-Regular.ttf
-								www\ttools\TSaymeClass\Hextris_Old\style\fonts\roboto.woff
-							www\ttools\TSaymeClass\Hextris_Old\style\rrssb.css
-							www\ttools\TSaymeClass\Hextris_Old\style\style.css
-						-vendor
-							www\ttools\TSaymeClass\Hextris_Old\vendor\hammer.min.js
-							www\ttools\TSaymeClass\Hextris_Old\vendor\jquery.js
-							www\ttools\TSaymeClass\Hextris_Old\vendor\js.cookie.js
-							www\ttools\TSaymeClass\Hextris_Old\vendor\jsonfn.min.js
-							www\ttools\TSaymeClass\Hextris_Old\vendor\keypress.min.js
-							www\ttools\TSaymeClass\Hextris_Old\vendor\rrssb.min.js
-							www\ttools\TSaymeClass\Hextris_Old\vendor\sweet-alert.min.js
-						www\ttools\TSaymeClass\Hextris_Old\a.js
-						www\ttools\TSaymeClass\Hextris_Old\CNAME
-						www\ttools\TSaymeClass\Hextris_Old\favicon.ico
-						www\ttools\TSaymeClass\Hextris_Old\index.html
-						www\ttools\TSaymeClass\Hextris_Old\LICENSE.md
-						www\ttools\TSaymeClass\Hextris_Old\manifest.webmanifest
-						www\ttools\TSaymeClass\Hextris_Old\README.md
+								www\ttools\TSaymeClass\hextris-gh-pages\style\fonts\Exo2-ExtraLight.otf
+								www\ttools\TSaymeClass\hextris-gh-pages\style\fonts\Exo2-Regular.otf
+								www\ttools\TSaymeClass\hextris-gh-pages\style\fonts\Exo2-SemiBold.otf
+								www\ttools\TSaymeClass\hextris-gh-pages\style\fonts\Lovelo.otf
+								www\ttools\TSaymeClass\hextris-gh-pages\style\fonts\QuattrocentoSans-Regular.ttf
+								www\ttools\TSaymeClass\hextris-gh-pages\style\fonts\roboto.woff
+							www\ttools\TSaymeClass\hextris-gh-pages\style\rrssb.css
+							www\ttools\TSaymeClass\hextris-gh-pages\style\style.css
+						+vendor
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\hammer.min.js
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\jquery-1.11.1.min.js
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\js.cookie.js
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\jsonfn.min.js
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\keypress.min.js
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\rrssb.min.js
+							www\ttools\TSaymeClass\hextris-gh-pages\vendor\sweet-alert.min.js
+						www\ttools\TSaymeClass\hextris-gh-pages\a.js
+						www\ttools\TSaymeClass\hextris-gh-pages\CNAME
+						www\ttools\TSaymeClass\hextris-gh-pages\favicon.ico
+						www\ttools\TSaymeClass\hextris-gh-pages\index.php
+						www\ttools\TSaymeClass\hextris-gh-pages\LICENSE.md
+						www\ttools\TSaymeClass\hextris-gh-pages\manifest.json
+						www\ttools\TSaymeClass\hextris-gh-pages\README.md
 					www\ttools\TSaymeClass\SaymeClass.php
 				-TTinyGallery
 					www\ttools\TTinyGallery\TinyGalleryClass.php
@@ -706,18 +713,13 @@ IttveME
 3=www\UpSiteCSS.php
 4=www\UpSite.php
 5=www\ttools\TTinyGallery\TinyGalleryClass.php
-6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-7=www\ttools\TTinyGallery\WorkTiny.php
-8=www\Styles\iniStyles.css
-9=www\ttools\TKwinGallery\KwinGalleryClass.php
-10=www\ttools\TSaymeClass\SaymeClass.php
-11=www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
-12=www\ttools\TSaymeClass\Hextris_Old\index.html
-13=www\ttools\TSaymeClass\Hextris\style\style.css
-14=www\ttools\TSaymeClass\Hextris\js\initialization.js
+6=www\ttools\TTinyGallery\WorkTiny.php
+7=www\ttools\TKwinGallery\KwinGalleryClass.php
+8=www\ttools\TSaymeClass\hextris-gh-pages\index.php
+9=www\deleteArt.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TSaymeClass\Hextris\js\initialization.js
+Selected=www\ttools\TSaymeClass\hextris-gh-pages\index.php
 [www\index.php]
 TopLine=74
 Caret=35,89
@@ -728,38 +730,23 @@ Caret=10,45
 TopLine=196
 Caret=5,234
 [www\UpSiteCSS.php]
-TopLine=30
-Caret=1,39
+TopLine=24
+Caret=3,43
 [www\UpSite.php]
 TopLine=32
 Caret=27,48
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=465
 Caret=1,500
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=175
-Caret=56,208
 [www\ttools\TTinyGallery\WorkTiny.php]
 TopLine=47
 Caret=29,75
-[www\Styles\iniStyles.css]
-TopLine=64
-Caret=1,94
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=177
 Caret=1,1
-[www\ttools\TSaymeClass\SaymeClass.php]
+[www\ttools\TSaymeClass\hextris-gh-pages\index.php]
+TopLine=19
+Caret=86,31
+[www\deleteArt.php]
 TopLine=1
-Caret=44,36
-[www\ttools\TSaymeClass\Hextris\gameHextrisClass.php]
-TopLine=24
-Caret=12,59
-[www\ttools\TSaymeClass\Hextris_Old\index.html]
-TopLine=34
-Caret=1,69
-[www\ttools\TSaymeClass\Hextris\style\style.css]
-TopLine=488
-Caret=3,527
-[www\ttools\TSaymeClass\Hextris\js\initialization.js]
-TopLine=69
-Caret=2,101
+Caret=1,1
