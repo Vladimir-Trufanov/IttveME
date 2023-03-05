@@ -193,7 +193,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -538,12 +538,12 @@ IttveME
 					www\ttools\TNewCueClass\NewCueClass.php
 					www\ttools\TNewCueClass\Игра на голом HTML.doc
 				+TSaymeClass
-					-Hextris
+					+Hextris
 						-images
 							www\ttools\TSaymeClass\Hextris\images\btn_help.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_pause.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_restart.svg
-						-js
+						+js
 							www\ttools\TSaymeClass\Hextris\js\Block.js
 							www\ttools\TSaymeClass\Hextris\js\checking.js
 							www\ttools\TSaymeClass\Hextris\js\comboTimer.js
@@ -558,7 +558,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\js\update.js
 							www\ttools\TSaymeClass\Hextris\js\view.js
 							www\ttools\TSaymeClass\Hextris\js\wavegen.js
-						-style
+						+style
 							-fonts
 								www\ttools\TSaymeClass\Hextris\style\fonts\Exo2-ExtraLight.otf
 								www\ttools\TSaymeClass\Hextris\style\fonts\Exo2-Regular.otf
@@ -621,11 +621,13 @@ IttveME
 6=www\ttools\TTinyGallery\WorkTiny.php
 7=www\ttools\TKwinGallery\KwinGalleryClass.php
 8=www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
+9=www\ttools\TSaymeClass\Hextris\js\main.js
+10=www\ttools\TSaymeClass\Hextris\style\style.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
+Selected=www\ttools\TSaymeClass\Hextris\style\style.css
 [www\index.php]
-TopLine=102
+TopLine=101
 Caret=12,140
 [www\Common.php]
 TopLine=12
@@ -649,5 +651,11 @@ Caret=29,75
 TopLine=177
 Caret=1,1
 [www\ttools\TSaymeClass\Hextris\gameHextrisClass.php]
-TopLine=18
-Caret=12,33
+TopLine=81
+Caret=25,87
+[www\ttools\TSaymeClass\Hextris\js\main.js]
+TopLine=3
+Caret=10,18
+[www\ttools\TSaymeClass\Hextris\style\style.css]
+TopLine=518
+Caret=1,557

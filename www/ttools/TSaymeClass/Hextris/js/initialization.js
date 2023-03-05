@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	initialize();
 });
-function initialize(a) {
+function initialize(a) 
+{
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
@@ -99,7 +100,8 @@ function initialize(a) {
 
 	window.canvas = document.getElementById('canvas');
 	window.ctx = canvas.getContext('2d');
-	window.trueCanvas = {
+	window.trueCanvas = 
+    {
 		width: canvas.width,
 		height: canvas.height
 	};

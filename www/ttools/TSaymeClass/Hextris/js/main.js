@@ -1,6 +1,12 @@
-function scaleCanvas() {
-	canvas.width = $(window).width();
-	canvas.height = $(window).height();
+function scaleCanvas() 
+{
+	//canvas.width = $(window).width();
+	//canvas.height = $(window).height();
+
+	canvas.width  = ($("#Life").width())*0.8;
+	canvas.height = ($("#Life").height())*0.8;
+    
+    //alert('canvas.width='+canvas.width+' '+'canvas.height='+canvas.height);
 
 	if (canvas.height > canvas.width) {
 		settings.scale = (canvas.width / 800) * settings.baseScale;
@@ -334,11 +340,16 @@ function isInfringing(hex) {
 	return false;
 }
 
-function checkGameOver() {
-	for (var i = 0; i < MainHex.sides; i++) {
-		if (isInfringing(MainHex)) {
+function checkGameOver() 
+{
+	for (var i = 0; i < MainHex.sides; i++) 
+    {
+		if (isInfringing(MainHex)) 
+        {
 			$.get('http://54.183.184.126/' + String(score))
-			if (highscores.indexOf(score) == -1) {
+
+			if (highscores.indexOf(score) == -1) 
+            {
 				highscores.push(score);
 			}
 			writeHighScores();
@@ -350,19 +361,29 @@ function checkGameOver() {
 }
 
 function showHelp() {
-	if ($('#openSideBar').attr('src') == './images/btn_back.svg') {
-		$('#openSideBar').attr('src', './images/btn_help.svg');
+	if ($('#openSideBar').attr('src') == './ttools/TSaymeClass/Hextris/images/btn_back.svg') {
+		$('#openSideBar').attr('src', './ttools/TSaymeClass/Hextris/images/btn_help.svg');
 		if (gameState != 0 && gameState != -1 && gameState != 2) {
 			$('#fork-ribbon').fadeOut(150, 'linear');
 		}
 	} else {
-		$('#openSideBar').attr('src', './images/btn_back.svg');
+		$('#openSideBar').attr('src', './ttools/TSaymeClass/Hextris/images/btn_back.svg');
 		if (gameState == 0 && gameState == -1 && gameState == 2) {
 			$('#fork-ribbon').fadeIn(150, 'linear');
 		}
 	}
 
-	$("#inst_main_body").html("<div id = 'instructions_head'>HOW TO PLAY</div><p>The goal of Hextris is to stop blocks from leaving the inside of the outer gray hexagon.</p><p>" + (settings.platform != 'mobile' ? 'Press the right and left arrow keys' : 'Tap the left and right sides of the screen') + " to rotate the Hexagon." + (settings.platform != 'mobile' ? ' Press the down arrow to speed up the block falling': '') + " </p><p>Clear blocks and get points by making 3 or more blocks of the same color touch.</p><p>Time left before your combo streak disappears is indicated by <span style='color:#f1c40f;'>the</span> <span style='color:#e74c3c'>colored</span> <span style='color:#3498db'>lines</span> <span style='color:#2ecc71'>on</span> the outer hexagon</p> <hr> <p id = 'afterhr'></p> By <a href='http://loganengstrom.com' target='_blank'>Logan Engstrom</a> & <a href='http://github.com/garrettdreyfus' target='_blank'>Garrett Finucane</a><br>Find Hextris on <a href = 'https://itunes.apple.com/us/app/id903769553?mt=8' target='_blank'>iOS</a> & <a href ='https://play.google.com/store/apps/details?id=com.hextris.hextris' target='_blank'>Android</a><br>More @ the <a href ='http://hextris.github.io/' target='_blank'>Hextris Website</a>");
+	$("#inst_main_body").html(
+       "<div id = 'instructions_head'>КАК ИГРАТЬ</div>"+
+       "<p>Цель Hextris - помешать блокам вырасти и выйти за внешнюю границу серого шестиугольника.</p>"+
+       "<p>"+(settings.platform != 'mobile' ? 
+          'Нажимайте клавиши со стрелками вправо или влево ' : 
+          'Коснитесь левой или правой сторон экрана ')+
+          "для того, чтобы повернуть шестиугольник. " + (settings.platform != 'mobile' ? 
+          'Нажимайте клавишу со стрелкой вниз, чтобы ускорить падение блока': '') + 
+       "</p>"+
+       "<p>Убирайте блоки и получайте очки, соединяя 3 или более блоков одного цвета.</p>"+
+       "<p>Time left before your combo streak disappears is indicated by <span style='color:#f1c40f;'>the</span> <span style='color:#e74c3c'>colored</span> <span style='color:#3498db'>lines</span> <span style='color:#2ecc71'>on</span> the outer hexagon</p> <hr> <p id = 'afterhr'></p> By <a href='http://loganengstrom.com' target='_blank'>Logan Engstrom</a> & <a href='http://github.com/garrettdreyfus' target='_blank'>Garrett Finucane</a><br>Find Hextris on <a href = 'https://itunes.apple.com/us/app/id903769553?mt=8' target='_blank'>iOS</a> & <a href ='https://play.google.com/store/apps/details?id=com.hextris.hextris' target='_blank'>Android</a><br>More @ the <a href ='http://hextris.github.io/' target='_blank'>Hextris Website</a>");
 	if (gameState == 1) {
 		pause();
 	}
@@ -375,8 +396,9 @@ function showHelp() {
 	$('#helpScreen').fadeToggle(150, "linear");
 }
 
-(function(){
-    	var script = document.createElement('script');
-	script.src = 'http://hextris.io/a.js';
+(function()
+{
+   	var script = document.createElement('script');
+	//script.src = 'http://hextris.io/a.js';
 	document.head.appendChild(script);
 })()
