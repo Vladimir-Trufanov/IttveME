@@ -96,7 +96,7 @@ function hideUIElements() {
 function init(b) {
 	if(settings.ending_block && b == 1){return;}
 	if (b) {
-		$("#pauseBtn").attr('src',"./images/btn_pause.svg");
+		$("#pauseBtn").attr('src',"./ttools/TSaymeClass/Hextris/images/btn_pause.svg");
 		if ($('#helpScreen').is(":visible")) {
 			$('#helpScreen').fadeOut(150, "linear");
 		}
@@ -117,7 +117,7 @@ function init(b) {
 		$("#currentHighScore").text(highscores[0])
 	}
 	infobuttonfading = true;
-	$("#pauseBtn").attr('src',"./images/btn_pause.svg");
+	$("#pauseBtn").attr('src',"./ttools/TSaymeClass/Hextris/images/btn_pause.svg");
 	hideUIElements();
 	var saveState = localStorage.getItem("saveState") || "{}";
 	saveState = JSONfn.parse(saveState);
@@ -346,7 +346,7 @@ function checkGameOver()
     {
 		if (isInfringing(MainHex)) 
         {
-			$.get('http://54.183.184.126/' + String(score))
+			//$.get('http://54.183.184.126/' + String(score))
 
 			if (highscores.indexOf(score) == -1) 
             {
@@ -375,7 +375,7 @@ function showHelp() {
 
 	$("#inst_main_body").html(
        "<div id = 'instructions_head'>КАК ИГРАТЬ</div>"+
-       "<p>Цель Hextris - помешать блокам вырасти и выйти за внешнюю границу серого шестиугольника.</p>"+
+       "<p><br>Цель Hextris - помешать блокам выстроиться и выйти за внешнюю границу серого шестиугольника.</p>"+
        "<p>"+(settings.platform != 'mobile' ? 
           'Нажимайте клавиши со стрелками вправо или влево ' : 
           'Коснитесь левой или правой сторон экрана ')+
@@ -383,12 +383,22 @@ function showHelp() {
           'Нажимайте клавишу со стрелкой вниз, чтобы ускорить падение блока': '') + 
        "</p>"+
        "<p>Убирайте блоки и получайте очки, соединяя 3 или более блоков одного цвета.</p>"+
-       "<p>Time left before your combo streak disappears is indicated by <span style='color:#f1c40f;'>the</span> <span style='color:#e74c3c'>colored</span> <span style='color:#3498db'>lines</span> <span style='color:#2ecc71'>on</span> the outer hexagon</p> <hr> <p id = 'afterhr'></p> By <a href='http://loganengstrom.com' target='_blank'>Logan Engstrom</a> & <a href='http://github.com/garrettdreyfus' target='_blank'>Garrett Finucane</a><br>Find Hextris on <a href = 'https://itunes.apple.com/us/app/id903769553?mt=8' target='_blank'>iOS</a> & <a href ='https://play.google.com/store/apps/details?id=com.hextris.hextris' target='_blank'>Android</a><br>More @ the <a href ='http://hextris.github.io/' target='_blank'>Hextris Website</a>");
+       "<p><br>На внешней границе шестиугольника зажигаются цветные линии "+
+          "<span style='color:#f1c40f;'>желтого,</span> <span style='color:#e74c3c'>красного,</span> "+
+          "<span style='color:#3498db'>синего</span> <span style='color:#2ecc71'>и зеленого</span> "+
+          "цвета, показывающие оставшееся время после исчезновения блоков из шестиугольника"+
+       "</p> <hr> <br> <p id = 'afterhr'></p> "+
+       "By <a href='http://loganengstrom.com' target='_blank'>Logan Engstrom</a> & "+
+       "<a href='http://github.com/garrettdreyfus' target='_blank'>Garrett Finucane</a><br>"+
+       "Find Hextris on <a href = 'https://itunes.apple.com/us/app/id903769553?mt=8' target='_blank'>iOS</a> & "+
+       "<a href ='https://play.google.com/store/apps/details?id=com.hextris.hextris' target='_blank'>Android</a><br>"+
+       "More @ the <a href ='http://hextris.github.io/' target='_blank'>Hextris Website</a>"
+    );
 	if (gameState == 1) {
 		pause();
 	}
 
-	if($("#pauseBtn").attr('src') == "./images/btn_pause.svg" && gameState != 0 && !infobuttonfading) {
+	if($("#pauseBtn").attr('src') == "./ttools/TSaymeClass/Hextris/images/btn_pause.svg" && gameState != 0 && !infobuttonfading) {
 		return;
 	}
 

@@ -85,20 +85,18 @@ function echoPlay()
    echo '<div id=HextrisBody>';
    echo '
       <canvas id="canvas"></canvas> 
-      <div id="overlay" class="faded overlay"></div>
       <div id="startBtn" ></div>
       <div id="helpScreen" class="unselectable">
          <div id="inst_main_body"></div>
       </div>
       <img id="openSideBar" class="helpText" src="./ttools/TSaymeClass/Hextris/images/btn_help.svg">
-      <div class="faded overlay"></div>
       <img id="pauseBtn" src="./ttools/TSaymeClass/Hextris/images/btn_pause.svg">
       <img id="restartBtn" src="./ttools/TSaymeClass/Hextris/images/btn_restart.svg">
    ';
    echo '
       <div id="HIGHSCORE">РЕКОРД</div>
       <div id="highScoreInGameText">
-         <div id="highScoreInGameTextHeader">РЕКОРД</div><div id="currentHighScore">10292</div>
+         <div id="highScoreInGameTextHeader">РЕКОРДоо</div><div id="currentHighScore">10292</div>
       </div>
       <div id="gameoverscreen">
          <div id="container">
