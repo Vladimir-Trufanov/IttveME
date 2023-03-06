@@ -1,36 +1,127 @@
-/* Юникод */
-
+/* 
+ * Все игровое поле 
+ */
 #HextrisBody
 {
-   height:100%;
+   margin:0;
+   padding:0;
+   border:0;
+   height:96%;
    width:100%;
    color:#ecf0f1;
    font-family:'Exo', sans-serif;
-   //background-color:#ecf0f1;
-   background:red;
+   overflow:hidden;
+   -webkit-touch-callout:none;
+   -webkit-user-select:none;
+   -khtml-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+   background:transparent;
 }
+/* 
+ * Переключатель "инструкция-игра" #openSideBar,
+ * кнопка "пауза" #pauseBtn,
+ * кнопка "рестарт" #restartBtn
+ */
+#openSideBar,#pauseBtn,#restartBtn 
+{
+   position:absolute;
+   width:60px;
+   height:60px;
+   background:transparent;
+   z-index:30000;
+   cursor:pointer;
+
+}
+#openSideBar 
+{
+   top:10%;
+   left:5%;
+   /*
+   margin-top:1rem;
+   margin-left:1rem;
+   */
+   color:#232323;
+}
+#pauseBtn 
+{
+   right:5%;
+   bottom:4%;
+   display:none;
+   /*
+   margin-bottom:7px;
+   margin-right:11px;
+   */
+   color:#232323;
+}
+#restartBtn 
+{
+   left:5%;
+   bottom:4%;
+   display:none;
+   /*
+   margin-bottom:7px;
+   margin-left:11px;
+   */
+   color:#232323;
+}
+
+
+
+
+
+
+
+
+
+
+
+.helpText 
+{
+   z-index:3001;
+}
+
+
+
+/* 
+ * Поле, на котором строится шестиугольник и падают блоки 
+ */
 #canvas 
 {
    transition:all 0.5s ease;
-   position:absolute;
+   margin-left:.6%;
+   margin-top:.6%;
+   /*position:absolute;
    left:0;
-   right:0;
-   height:100%;
-   width:100%;
-   /*background-color:#ecf0f1;*/
-   background:yellow;
+   right:0;*/
+   /*height:100%;
+   width:100%;*/
+   background-color:#ecf0f1;
    z-index:0;
 }
-#HIGHSCORE 
+/* 
+ * Стартовая кнопка 
+ */
+#startBtn 
 {
    position:absolute;
-   left:50%;
-   width:250px;
-   overflow:visible;
-   margin-left:-175px;
-   font-family:Exo;
-   background:yellow;
+   left:38%;
+   top:38%;
+   height:25%;
+   width:25%;
+   z-index:99999999;
+   cursor:pointer;
+   background:transparent;
 }
+/* 
+ * Контейнер с отчетом, который появляется после завершения игры: #container,
+ * внутри контейнера:
+ * две строки - ИГРА ЗАКОНЧЕНА, ЛУЧШИЕ РЕЗУЛЬТАТЫ (#highScoresTitle) со стилем .GOTitle,
+ * строка с текущим результатом #cScore,
+ * три строки с лучшими результатами .score,.scoreNum
+ */
 #container 
 {
    color:#232323;
@@ -44,28 +135,53 @@
    -moz-transform:translate(-50%, -50%);
    -ms-transform:translate(-50%, -50%);
    display:none;
-   background:yellow;
+   background:transparent;
+}
+#highScoresTitle 
+{
+   margin-bottom:2px;
 }
 
-/* -------------------------------------------------------------- убрано!!! ---
-* {
-   -webkit-touch-callout:none;
-   -webkit-user-select:none;
-   -khtml-user-select:none;
-   -moz-user-select:none;
-   -ms-user-select:none;
-   user-select:none;
-   padding:0;
-   margin:0;
-   -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-* {
-	padding:0;
-	margin:0;
-}
-body 
+.GOTitle 
 {
-   overflow:hidden;
+   font-weight:bold;
+   font-size:24.2000px;
+}
+#cScore 
+{
+   font-size:60.5000px;
+   font-weight:light;
+   margin-bottom:5px;
+   margin-top:-10px;
+   background:transparent;
+}
+.score 
+{
+   font-weight:light;
+   line-height:18px;
+}
+.scoreNum 
+{
+   font-weight:normal ! important;
+}
+
+
+
+
+/* -------------------------------------------------------------- убрано!!! ---
+#HIGHSCORE 
+{
+   position:absolute;
+   top:0;
+   left:0;
+   //
+   left:50%;
+   width:250px;
+   overflow:visible;
+   margin-left:-175px;
+   //
+   font-family:Exo;
+   background:Cornsilk;
 }
 .tweet 
 {
@@ -311,31 +427,19 @@ padding-bottom:4px;
   #instructions_head {
 	padding-left:0%;
   }
-  #openSideBar{
-	width:60px;
-	height:60px;
-  }
-  #pauseBtn {
-	width:60px;
-	height:60px;
-  }
-  #restartBtn {
-	width:60px;
-	height:60px;
-  }
 }
 */
 
-/* ----------------------------------------------------------------------------
+/* 
  * Панель инструкций #helpScreen,
  * текст в панели #inst_main_body,
  * заголовок инструкции #instructions_head
- * --------------------------------------------------------------------------*/
+ */
 #helpScreen 
 {
    position:absolute;
    z-index:3001;
-   top:10%;
+   top:15%;
    left:10%;
    bottom:10%;
    right:10%;
@@ -346,100 +450,48 @@ padding-bottom:4px;
    color:#232323;
    background-color:rgba(236,240,241,1);
 }
-/* ----------------------------------------------------------------------------
- * Переключатель "инструкция-игра" анель инструкций #openSideBar,
- * кнопка "пауза" #pauseBtn,
- * кнопка "рестарт" #restartBtn
- * кнопка "старт" #startBtn
- * --------------------------------------------------------------------------*/
-#openSideBar 
+#instructions_head 
 {
-   position:fixed;
-   /*position:absolute;*/
-   /*margin-top:6px;*/
-   width:72px;
-   height:72px;
-   /*margin-left:11px;*/
-   z-index:3003;
-   color:#232323;
-   cursor:pointer;
-   top:0;
-   left:0;
-   background:transparent;
+   text-align:center;
+   font-size:1.5em;
+   padding-bottom:4px;
+   padding-left:0%;
 }
-.helpText 
-{
-   z-index:3001;
-}
-#pauseBtn 
-{
-   display:none;
-   position:fixed;
-   margin-bottom:7px;
-   width:72px;
-   height:72px;
-   margin-right:11px;
-   z-index:3000;
-   color:#232323;
-   cursor:pointer;
-   right:0;
-   bottom:0;
-   z-index:99;
-}
-#restartBtn 
-{
-   display:none;
-   position:fixed;
-   margin-bottom:7px;
-   width:72px;
-   height:72px;
-   margin-left:11px;
-   z-index:3000;
-   color:#232323;
-   cursor:pointer;
-   bottom:0;
-   z-index:99;
-}
-#startBtn 
-{
-   position:absolute;
-   left:40%;
-   top:38%;
-   height:25%;
-   width:25%;
-   z-index:99999999;
-   cursor:pointer;
-   background:red;
-}
-/* ----------------------------------------------------------------------------
- * ----Панель инструкций #helpScreen,
- * текст в панели #inst_main_body,
- * заголовок инструкции #instructions_head
- * --------------------------------------------------------------------------*/
-#highScoreInGameTextHeader 
-{
-/*color: #bdc3c7;*/
-   color:red;
-   background:green;
-   width:100%;
-}
+/* 
+ * Контейнер для заголовка с общим рекордом в текущем браузере, позиционируемый 
+ * в функции set_score_pos() #highScoreInGameText.
+ * Внутри контейнера два элемента:
+ *    заголовок - #highScoreInGameTextHeader,
+ *    значение - #currentHighScore
+ */
 #highScoreInGameText 
 {
-   position: absolute;
-   top:10px;
-   text-align: center;
-   width:200px;
-   left:50%;
-   margin-left:-100px;
-   background:magenta;
+	position: absolute;
+	/*top:10px;*/
+    top:6%;
+	text-align: center;
+	width:200px;
+	left:50%;
+	margin-left:-100px;
 }
-#currentHighScore {
-   color: #2c3e50;
-   width:100%;
-   margin-top: -5px;
-   font-size:2em;
-   background:purple;
+#highScoreInGameTextHeader 
+{
+	color: #bdc3c7;
+	width:100%;
 }
+#currentHighScore 
+{
+	color: #2c3e50;
+	width:100%;
+	margin-top: -5px;
+	font-size:2em;
+}
+/*         */
+
+
+
+
+
 .overlay 
 {
    position:absolute;
@@ -553,31 +605,6 @@ padding-bottom:4px;
 	font-family:Exo;
 	font-weight:bold;
 	src:url("./fonts/Exo2-SemiBold.otf") format("opentype");
-}
-
-.GOTitle {
-	font-weight:bold;
-	font-size:24.2000px;
-}
-
-.scoreNum {
-	font-weight:normal ! important;
-}
-
-#cScore {
-	font-size:60.5000px;
-	font-weight:light;
-	margin-bottom:5px;
-	margin-top:-10px;
-}
-
-#highScoresTitle {
-	margin-bottom:2px;
-}
-
-.score {
-	font-weight:light;
-	line-height:18px;
 }
 
 

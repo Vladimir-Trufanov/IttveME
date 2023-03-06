@@ -161,6 +161,7 @@ function initialize(a)
 		});
 
 		addKeyListeners();
+        /*
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function() {
@@ -170,9 +171,11 @@ function initialize(a)
 			a.async = 1;
 			a.src = g;
 			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		})
+        (window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 		ga('create', 'UA-51272720-1', 'teamsnowman.github.io');
 		ga('send', 'pageview');
+        */
 
 		document.addEventListener("pause", handlePause, false);
 		document.addEventListener("backbutton", handlePause, false);
@@ -272,23 +275,37 @@ function handleTap(e) {
 function handleClick(e) {
 	handleClickTap(e.clientX, e.clientY);
 }
-
-function handleTapBefore(e) {
-	var x = e.changedTouches[0].clientX;
-	var y = e.changedTouches[0].clientY;
-
-	if (x < 120 && y < 83 && $('.helpText').is(':visible')) {
-		showHelp();
-		return;
-	}
+// ****************************************************************************
+// *     Отработать клик на переключателе "инструкция-игра" #openSideBar      *
+// ****************************************************************************
+function openSideBarClick()
+{
+   //console.log('openSideBarClick');
+   showHelp();
 }
-
-function handleClickBefore(e) {
-	var x = e.clientX;
-	var y = e.clientY;
-
-	if (x < 120 && y < 83 && $('.helpText').is(':visible')) {
-		showHelp();
-		return;
-	}
+// 06.03.2023 заменено на OnClick=openSideBarClick()
+function handleTapBefore(e) 
+{
+   /*
+   var x = e.changedTouches[0].clientX;
+   var y = e.changedTouches[0].clientY;
+   if (x < 120 && y < 83 && $('.helpText').is(':visible')) 
+   {
+      showHelp();
+      return;
+   }
+   */
+}
+function handleClickBefore(e) 
+{
+   /*
+   var x = e.clientX;
+   var y = e.clientY;
+   //console.log('x='+x+' y='+y);
+   if (x < 120 && y < 83 && $('.helpText').is(':visible')) 
+   {
+      showHelp();
+      return;
+   }
+   */
 }

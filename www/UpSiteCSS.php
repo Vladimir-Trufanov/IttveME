@@ -138,7 +138,8 @@ function setPositionDiv($c_PresMode)
    // -------------------------------------------------------------------------
    // это вставка на случай, пока используется игра DuckFly 
    // (для игры нужно пространство, занимаемое двумя колонками)
-   if ((\prown\isComRequest(mmlDobavitNovyjRazdel))||(\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie)))
+   if ((\prown\isComRequest(mmlDobavitNovyjRazdel))
+     ||(\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie)))
    {
       if ($c_PresMode==rpmDoubleRight) rOneRight();
       else if ($c_PresMode==rpmDoubleLeft) rOneLeft();

@@ -1,19 +1,15 @@
 function scaleCanvas() 
 {
-	//canvas.width = $(window).width();
-	//canvas.height = $(window).height();
-
-	canvas.width  = ($("#Life").width())*0.8;
-	canvas.height = ($("#Life").height())*0.8;
-    
-    //alert('canvas.width='+canvas.width+' '+'canvas.height='+canvas.height);
-
-	if (canvas.height > canvas.width) {
+	canvas.width  = ($("#Life").width())*0.99;
+	canvas.height = ($("#Life").height())*0.948;
+	if (canvas.height > canvas.width) 
+    {
 		settings.scale = (canvas.width / 800) * settings.baseScale;
-	} else {
+	} 
+    else 
+    {
 		settings.scale = (canvas.height / 800) * settings.baseScale;
 	}
-
 	trueCanvas = {
 		width: canvas.width,
 		height: canvas.height
@@ -47,8 +43,12 @@ function setBottomContainer() {
         $("#bottomContainer").css("margin-bottom", "-" + Math.abs(delta) + "px");
     }
 }
-
-function set_score_pos() {
+// ****************************************************************************
+// *          Спозиционировать элементы внутри контейнера с отчетом,          *
+// *                  который появляется после завершения игры                *
+// ****************************************************************************
+function set_score_pos() 
+{
     $("#container").css('margin-top', '0');
     var middle_of_container = ($("#container").height()/2 + $("#container").offset().top);
     var top_of_bottom_container = $("#buttonCont").offset().top
@@ -359,21 +359,28 @@ function checkGameOver()
 	}
 	return false;
 }
-
-function showHelp() {
-	if ($('#openSideBar').attr('src') == './ttools/TSaymeClass/Hextris/images/btn_back.svg') {
-		$('#openSideBar').attr('src', './ttools/TSaymeClass/Hextris/images/btn_help.svg');
-		if (gameState != 0 && gameState != -1 && gameState != 2) {
-			$('#fork-ribbon').fadeOut(150, 'linear');
-		}
-	} else {
-		$('#openSideBar').attr('src', './ttools/TSaymeClass/Hextris/images/btn_back.svg');
-		if (gameState == 0 && gameState == -1 && gameState == 2) {
-			$('#fork-ribbon').fadeIn(150, 'linear');
-		}
-	}
-
-	$("#inst_main_body").html(
+// ****************************************************************************
+// *               Показать панель с помощью или вернуть поле игры            *
+// ****************************************************************************
+function showHelp() 
+{
+   if ($('#openSideBar').attr('src') == './ttools/TSaymeClass/Hextris/images/btn_back.svg') 
+   {
+      $('#openSideBar').attr('src', './ttools/TSaymeClass/Hextris/images/btn_help.svg');
+      if (gameState != 0 && gameState != -1 && gameState != 2) 
+      {
+	     $('#fork-ribbon').fadeOut(150, 'linear');
+	  }
+   } 
+   else 
+   {
+      $('#openSideBar').attr('src', './ttools/TSaymeClass/Hextris/images/btn_back.svg');
+	  if (gameState == 0 && gameState == -1 && gameState == 2) 
+      {
+         $('#fork-ribbon').fadeIn(150, 'linear');
+	  }
+   }
+   $("#inst_main_body").html(
        "<div id = 'instructions_head'>КАК ИГРАТЬ</div>"+
        "<p><br>Цель Hextris - помешать блокам выстроиться и выйти за внешнюю границу серого шестиугольника.</p>"+
        "<p>"+(settings.platform != 'mobile' ? 
@@ -393,22 +400,24 @@ function showHelp() {
        "Find Hextris on <a href = 'https://itunes.apple.com/us/app/id903769553?mt=8' target='_blank'>iOS</a> & "+
        "<a href ='https://play.google.com/store/apps/details?id=com.hextris.hextris' target='_blank'>Android</a><br>"+
        "More @ the <a href ='http://hextris.github.io/' target='_blank'>Hextris Website</a>"
-    );
-	if (gameState == 1) {
-		pause();
-	}
-
-	if($("#pauseBtn").attr('src') == "./ttools/TSaymeClass/Hextris/images/btn_pause.svg" && gameState != 0 && !infobuttonfading) {
-		return;
-	}
-
-	$("#openSideBar").fadeIn(150,"linear");
-	$('#helpScreen').fadeToggle(150, "linear");
+   );
+   if (gameState == 1) 
+   {
+      pause();
+   }
+   if($("#pauseBtn").attr('src') == "./ttools/TSaymeClass/Hextris/images/btn_pause.svg" && gameState != 0 && !infobuttonfading) 
+   {
+      return;
+   }
+   $("#openSideBar").fadeIn(150,"linear");
+   $('#helpScreen').fadeToggle(150, "linear");
 }
 
+/*
 (function()
 {
    	var script = document.createElement('script');
 	//script.src = 'http://hextris.io/a.js';
 	document.head.appendChild(script);
 })()
+*/

@@ -239,3 +239,15 @@ Stack trace:
 [04-Mar-2023 03:25:11 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TDelCueClass/game2048Class.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 230
 [04-Mar-2023 03:27:22 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TNewCueClass/DelCueClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php on line 58
 [05-Mar-2023 10:41:02 Asia/Kuwait] PHP Fatal error:  Cannot redeclare game\echoHead() (previously declared in C:\IttveMe\www\ttools\TSaymeClass\Hextris\gameHextrisClass.php:46) in C:\IttveMe\www\ttools\TSaymeClass\Hextris\gameHextrisClass.php on line 121
+[06-Mar-2023 18:10:15 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\IttveMe\www\ttools\TSaymeClass\Hextris\gameHextrisClass.php:76
+Stack trace:
+#0 C:\IttveMe\www\ttools\TSaymeClass\Hextris\gameHextrisClass.php(31): game\echoHead()
+#1 C:\IttveMe\www\ttools\TSaymeClass\SaymeClass.php(27): game\Hextris->Head()
+#2 C:\IttveMe\www\ttools\TTinyGallery\WorkTiny.php(76): ttools\Noticing->Head()
+#3 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(482): ttools\mmlOtpravitAvtoruSoobshchenie_HEAD(Object(game\Hextris))
+#4 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(289): ttools\TinyGallery->Dispatch_HEAD(Object(game\DuckFly), Object(game\g2048), Object(game\Hextris))
+#5 C:\IttveMe\www\UpSiteCSS.php(102): ttools\TinyGallery->Init(Object(game\DuckFly), Object(game\g2048), Object(game\Hextris))
+#6 C:\IttveMe\www\index.php(92): require_once('C:\\IttveMe\\www\\...')
+#7 {main}
+  thrown in C:\IttveMe\www\ttools\TSaymeClass\Hextris\gameHextrisClass.php on line 76
+[06-Mar-2023 18:12:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE), expecting end of file in C:\IttveMe\www\ttools\TSaymeClass\Hextris\gameHextrisClass.php on line 39

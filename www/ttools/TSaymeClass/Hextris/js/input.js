@@ -203,34 +203,44 @@ function inside (point, vs) {
 	
 	return inside;
 };
-
-function handleClickTap(x,y) {
-	if (x < 120 && y < 83 && $('.helpText').is(':visible')) {
-		showHelp();
-		return;
-	}
-	var radius = settings.hexWidth ;
-	var halfRadius = radius/2;
-	var triHeight = radius *(Math.sqrt(3)/2);
-	var Vertexes =[
-		[radius,0],
-		[halfRadius,-triHeight],
-		[-halfRadius,-triHeight],
-		[-radius,0],
-		[-halfRadius,triHeight],
-		[halfRadius,triHeight]];
-	Vertexes = Vertexes.map(function(coord){ 
-		return [coord[0] + trueCanvas.width/2, coord[1] + trueCanvas.height/2]});
-
-	if (!MainHex || gameState === 0 || gameState==-1) {
-		return;
-	}
-
-	if (x < window.innerWidth/2) {
-		MainHex.rotate(1);
-	}
-	if (x > window.innerWidth/2) {
-		MainHex.rotate(-1);
-	}
+// ****************************************************************************
+// *                   ќтработать клики по координатам мыши                   *
+// ****************************************************************************
+function handleClickTap(x,y) 
+{
+   // 06.03.2023 заменено на OnClick=openSideBarClick()
+   /*
+   if (x < 120 && y < 83 && $('.helpText').is(':visible')) 
+   {
+      showHelp();
+      return;
+   }
+   */
+   var radius = settings.hexWidth ;
+   var halfRadius = radius/2;
+   var triHeight = radius *(Math.sqrt(3)/2);
+   var Vertexes =[
+      [radius,0],
+      [halfRadius,-triHeight],
+      [-halfRadius,-triHeight],
+      [-radius,0],
+      [-halfRadius,triHeight],
+      [halfRadius,triHeight]
+   ];
+   Vertexes = Vertexes.map(function(coord)
+   { 
+      return [coord[0]+trueCanvas.width/2,coord[1]+trueCanvas.height/2]
+   });
+   if (!MainHex || gameState === 0 || gameState==-1) 
+   {
+      return;
+   }
+   if (x < window.innerWidth/2) 
+   {
+      MainHex.rotate(1);
+   }
+   if (x > window.innerWidth/2) 
+   {
+      MainHex.rotate(-1);
+   }
 }
-
