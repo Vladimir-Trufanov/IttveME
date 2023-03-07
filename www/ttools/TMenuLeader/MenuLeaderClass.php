@@ -184,10 +184,15 @@ class MenuLeader
       // Выводим пункты меню главной страницы
       else
       {
+         $this->Punkt($this->cPreMe.mmlVybratSledMaterial,'&#xf0a7;','Выбрать следующий','материал');
+         $this->Punkt($this->cPreMe.mmlVernutsyaPredState,'&#xf0a6;','Вернуться к прежней','статье');
          $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
-         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
          $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
+         
+         /*
+         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
+         */
       }
       // Закрываем меню
       echo '</ul>';

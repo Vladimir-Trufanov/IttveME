@@ -73,7 +73,7 @@ class ArticlesMaker
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
    public $kindMessage;         // Объект вывода сообщений;  
-   public $getArti;             // Транслит выбранного материала
+   public $getArti;             // Транслит текущего материала
 
    protected $editdir;          // Каталог размещения файлов, связанных c материалом
    protected $imgdir;           // Каталог файлов служебных для сайта изображений
@@ -354,6 +354,28 @@ class ArticlesMaker
      {
        $pdo->beginTransaction();
        $cSQL='SELECT * FROM stockpw WHERE uid='.$UnID;
+       $stmt = $pdo->query($cSQL);
+       $table = $stmt->fetchAll();
+       $pdo->commit();
+     } 
+     catch (\Exception $e) 
+     {
+       $messa=$e->getMessage();
+       $table=array(array("NameArt"=>$messa,"Translit"=>nstErr,));
+       if ($pdo->inTransaction()) $pdo->rollback();
+     }
+     return $table; 
+   }
+   // *************************************************************************
+   // *             Выбрать следующую запись (в ней Translit)                 *
+   // *                относительно текущего идентификатора                   *
+   // *************************************************************************
+   public function SelNextTranslit($pdo,$UnID)
+   {
+     try
+     {
+       $pdo->beginTransaction();
+       $cSQL='SELECT NameArt,Translit FROM stockpw1 WHERE uid >'.$UnID.' LIMIT 1';
        $stmt = $pdo->query($cSQL);
        $table = $stmt->fetchAll();
        $pdo->commit();

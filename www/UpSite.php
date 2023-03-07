@@ -51,6 +51,7 @@ else
       $Edit->ViewGallerySpace();
    echo '</div>'; 
    echo '<div id="FooterTiny">';
+      //echo (prown\getTranslit('Изменить настройки, прочитать о сайте'));
       $Edit->ViewFooterSpace($UserAgent);
    echo '</div>';
    // Выводим нижнюю информационную строку

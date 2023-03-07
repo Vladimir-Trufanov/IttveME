@@ -116,7 +116,8 @@ class TinyGallery
    protected $DelayedMessage;   // отложенное сообщение
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $Delcue;           // объект "Удалить раздел материалов"
-   private   $Sayme;           // объект "Отправить сообщение автору" 
+   private   $Sayme;            // объект "Отправить сообщение автору"
+   private   $oWhipperSnapper;  // игра со змеёй
 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
@@ -126,6 +127,7 @@ class TinyGallery
       $this->Newcue=NULL;
       $this->Delcue=NULL;
       $this->Sayme=NULL;
+      $this->oWhipperSnapper=NULL;
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->fileStyle="Styles/WorkTiny.css";
@@ -181,12 +183,55 @@ class TinyGallery
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
       CompareCopyRoot('CommonTools.js',pathPhpTools,jsxdir);
+      // Инициируем отложенное сообщение
+      $this->DelayedMessage=imok;
+      // 1 этап - 'Проверка текущего транслита'
+      $getArti=$this->Arti->getArti;
+      $getArti=NULL;
+      if ($getArti==NULL)
+      {
+         $this->DelayedMessage='Материал не определен. Выберите в меню "Жизнь и путешествия"';
+      }
+      // 2 этап - 'Обработка запроса на следующую страницу'
+      if ($this->DelayedMessage==imok)
+      {
+      }
+      
+      
+      
+      
+      /*
       // Если выбран материал (транслит) для редактирования, то готовим 
       // установку кукиса на данный материал. Материал мог быть выбран при 
       // выполнении методов:
       //    $apdo=$this->Arti->BaseConnect();
       //    $this->Arti->GetPunktMenu($apdo);
       $getArti=\prown\getComRequest('arti'); // выбрали транслит 
+
+      // Если запрос на следующую страницу, то выходим на материал
+      if (\prown\isComRequest(mmlVybratSledMaterial))
+      {
+
+         //$getArti='123-4';
+         //\prown\ConsoleLog(mmlVybratSledMaterial.': '.$getArti);
+         $apdo=$this->Arti->BaseConnect();
+         $a=$this->Arti->SelNextTranslit($apdo,26);
+         \prown\ConsoleLog(serialize($a));
+         \prown\ConsoleLog('$a[0]["Translit"]='.$a[0]["Translit"]);
+         // Если ошибка, то формируем отложенное сообщение
+         if ($a[0]["Translit"]==nstErr) $this->DelayedMessage=$a[0]["NameArt"];
+
+      } 
+      \prown\ConsoleLog('$this->DelayedMessage='.$this->DelayedMessage);
+
+
+
+
+      //if ($this->DelayedMessage==imok)
+
+      
+      
+      
       // Если было назначение нового материала/статьи, 
       // то делаем запись в базу данных и готовим транслит статьи для установки
       // кукиса и начала редактирования материала
@@ -219,6 +264,8 @@ class TinyGallery
       {
          $this->Arti->cookieGetPunktMenu($getArti); 
       }
+      
+      
       // Вытаскиваем материал для редактирования
       $this->DelayedMessage=$this->Arti->SelUidPid
          ($this->apdo,$this->Arti->getArti,$pidEdit,$uidEdit,$NameGru,$NameArt,$DateArt,$contentsIn);
@@ -233,6 +280,7 @@ class TinyGallery
       // материалами сайта из базы данных
       $this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
       $this->DelayedMessage=$this->Galli->getDelayedMessage();
+      */
    }
    
    // --------------------------------------------------------------------------------------- HEAD and LAST ---
@@ -242,6 +290,15 @@ class TinyGallery
    // *************************************************************************
    public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
    {
+      // Если транслит статьи не определен, то инициируем игру со змеёй
+      $getArti=$this->Arti->getArti;
+      $getArti=NULL;
+      if ($getArti==NULL)
+      {
+         require_once "ttools/TTinyGallery/WhipperSnapper/gameWhipperSnapperClass.php";
+         $this->oWhipperSnapper=new \game\WhipperSnapper('IttveME');
+         $this->oWhipperSnapper->Head();
+      }
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
@@ -298,15 +355,24 @@ class TinyGallery
       else main_HEAD($this->fileStyle);
    }
    // *************************************************************************
-   // *                Развернуть область галлереи изображений                *
+   // *                 Развернуть область галереи изображений                *
    // *************************************************************************
    public function ViewGallerySpace()
    {
-      if (\prown\isComRequest(mmlNaznachitStatyu))
-         mmlNaznachitStatyu_BODY_KwinGallery();
-      else if (\prown\isComRequest(mmlVybratStatyuRedakti))
-         $this->KwinGallery_mmlVybratStatyuRedakti();
-      else $this->Galli->BaseGallery();
+      $getArti=$this->Arti->getArti;
+      $getArti=NULL;
+      if ($getArti==NULL)
+      {
+         echo '$getArti==NULL';
+      }
+      else
+      {
+         if (\prown\isComRequest(mmlNaznachitStatyu))
+            mmlNaznachitStatyu_BODY_KwinGallery();
+         else if (\prown\isComRequest(mmlVybratStatyuRedakti))
+            $this->KwinGallery_mmlVybratStatyuRedakti();
+         else $this->Galli->BaseGallery();
+      }
    }
    // *************************************************************************
    // *                Развернуть область галлереи изображений                *
@@ -409,25 +475,35 @@ class TinyGallery
          MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
       else 
          MakeTitle($this->DelayedMessage,ttError);
-      // Формируем контент страницы   
-      if ($this->contents<>NULL) $contenti=$this->contents;
-      else $contenti='';
-
-      // Если режим редактирования, то готовим рабочую область Tiny  
-      if (GalleryMode==mwgEditing) 
+      // Если статья не определена, то подключаем заменяющую игру со змеёй
+      $getArti=$this->Arti->getArti;
+      $getArti=NULL;
+      if ($getArti==NULL)
       {
-         $SaveAction=$_SERVER["SCRIPT_NAME"];
-         echo '
-            <form id="frmTinyText" method="post" action="'.$SaveAction.'">
-            <textarea id="mytextarea" name="mytextarea">
-         '; 
-         echo $contenti;
-         echo '
-            </textarea>
-            </form>
-         ';
+         $this->oWhipperSnapper->Play();
       }
-      else echo $contenti; 
+      else
+      {
+         // Формируем контент страницы   
+         if ($this->contents<>NULL) $contenti=$this->contents;
+         else $contenti='';
+
+         // Если режим редактирования, то готовим рабочую область Tiny  
+         if (GalleryMode==mwgEditing) 
+         {
+            $SaveAction=$_SERVER["SCRIPT_NAME"];
+            echo '
+               <form id="frmTinyText" method="post" action="'.$SaveAction.'">
+               <textarea id="mytextarea" name="mytextarea">
+            '; 
+            echo $contenti;
+            echo '
+               </textarea>
+               </form>
+            ';
+         }
+         else echo $contenti;
+      } 
    }
    private function WorkTiny_mmlVernutsyaNaGlavnuyu()
    {

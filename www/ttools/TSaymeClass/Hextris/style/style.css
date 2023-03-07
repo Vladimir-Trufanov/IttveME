@@ -33,16 +33,11 @@
    background:transparent;
    z-index:30000;
    cursor:pointer;
-
 }
 #openSideBar 
 {
    top:10%;
    left:5%;
-   /*
-   margin-top:1rem;
-   margin-left:1rem;
-   */
    color:#232323;
 }
 #pauseBtn 
@@ -50,10 +45,6 @@
    right:5%;
    bottom:4%;
    display:none;
-   /*
-   margin-bottom:7px;
-   margin-right:11px;
-   */
    color:#232323;
 }
 #restartBtn 
@@ -61,30 +52,12 @@
    left:5%;
    bottom:4%;
    display:none;
-   /*
-   margin-bottom:7px;
-   margin-left:11px;
-   */
    color:#232323;
 }
-
-
-
-
-
-
-
-
-
-
-
 .helpText 
 {
    z-index:3001;
 }
-
-
-
 /* 
  * Поле, на котором строится шестиугольник и падают блоки 
  */
@@ -93,11 +66,6 @@
    transition:all 0.5s ease;
    margin-left:.6%;
    margin-top:.6%;
-   /*position:absolute;
-   left:0;
-   right:0;*/
-   /*height:100%;
-   width:100%;*/
    background-color:#ecf0f1;
    z-index:0;
 }
@@ -164,245 +132,6 @@
 {
    font-weight:normal ! important;
 }
-
-
-
-
-/* -------------------------------------------------------------- убрано!!! ---
-#HIGHSCORE 
-{
-   position:absolute;
-   top:0;
-   left:0;
-   //
-   left:50%;
-   width:250px;
-   overflow:visible;
-   margin-left:-175px;
-   //
-   font-family:Exo;
-   background:Cornsilk;
-}
-.tweet 
-{
-   font-size:2rem;
-   color:#4099FF;
-}
-@media only screen and (min-device-width:320px) and (max-device-width:480px) 
-{
-   .tweet
-   {
-      font-size:1rem;
-   }
-}
-.navbar 
-{
-   width:80%;
-   margin:0 auto;
-   padding:2.5vmin 0;
-   text-align:center;
-}
-.navbar li 
-{
-   display:inline-block;
-   text-align:center;
-   width:calc(33% - 1.25vmin);
-}
-#title 
-{
-   color:#ecf0f1;
-   font-size:6vmin;
-}
-#score 
-{
-   font-size:4vmin;
-   text-align:center;
-   width:30%;
-}
-#highscores 
-{
-   text-align:center;
-   list-style:none;
-}
-.not-visible 
-{
-   display:none;
-}
-a 
-{
-   color:#232323;
-}
-button 
-{
-   color:#ecf0f1;
-   background-color:rgba(0,0,0,0);
-   border:0;
-}
-button:focus 
-{
-   outline:0;
-}
-#helpScreen 
-{
-   z-index:3001;
-   height:100%;
-   width:100%;
-   position:fixed;
-   top:0;
-   margin:0;
-   font-size:15px;
-   text-align:center;
-   display:none;
-   color:#232323;
-   background-color:rgba(236,240,241,1);
-}
-#inst_main_body 
-{
-padding:0px;
-font-size:1.2em;
-left:50%;
-top:50%;
-position: absolute;
-text-align:left;
-max-width:400px;
-transform:translate(-50%, -50%);
--webkit-transform:translate(-50%, -50%);
--moz-transform:translate(-50%, -50%);
--ms-transform:translate(-50%, -50%);
-}
-#instructions_head 
-{
-text-align:center;
-font-size:1.5em;
-padding-bottom:4px;
-}
-#inst_main_body > a 
-{
-   font-weight:bold;
-}
-#inst_main_body > hr 
-{
-   width:100%;
-   color:#232323;
-   background-color:#232323;
-   height:1px;
-   border:0;
-}
-#inst_main_body > p 
-{
-   margin-bottom:15px;
-}
-#colorBlindBtn {
-	position:absolute;
-	width:120px;
-	height:20px;
-	z-index:9999;
-	left:47%;
-	top:65%;
-	font-size:15px;
-	text-align:center;
-	color:#232323;
-	cursor:pointer;
-}
-@media only screen and (orientation:landscape) {
-	#buttonCont {
-		bottom:calc(50vh - 19vh - 36px);
-	}
-	#container {
-		top:calc(50vh - 11vh);
-	}
-}
-
-@media only screen and (orientation:portrait) {
-	#buttonCont {
-		bottom:calc(50vh - 19vw - 36px);
-	}
-	#container {
-		top:calc(50vh - 11vw);
-	}
-}
-
-@media only screen and (min-device-width:320px) and (max-device-width:600px) {
-	.centeredHeader {
-		font-size:2rem; 
-		text-align:center;
-		line-height:0.6rem;
-	}
-
-	.centeredSubHeader {
-		font-size:1rem; 
-		text-align:center;
-	}
-
-	.overlay {
-		margin-top:-20%;
-	}
-
-	#buttonCont {
-		width:280px;
-	}
-
-	@media only screen and (orientation:landscape) {
-		#buttonCont {
-			bottom:119px;
-		}
-	}
-
-	@media only screen and (orientation:portrait) {
-		#buttonCont {
-			bottom:119px;
-		}
-	}
-}
-#androidBadge {
-	position:absolute;
-	height:41px;
-	margin-top:5px;
-	left:calc(50% - 66px);
-	transform:translate(calc(-50% - 4px), -1px);
-	-webkit-transform:translate(calc(-50% - 4px), -1px);
-	-moz-transform:translate(calc(-50% - 4px), -1px);
-	-ms-transform:translate(calc(-50% - 4px), -1px);
-}
-
-#iOSBadge {
-	margin-top:5px;
-	position:absolute;
-	left:calc(50% + 65px);
-	transform:translate(calc(-50% - 4px), 0%);
-	-webkit-transform:translate(calc(-50% - 4px), 0%);
-	-moz-transform:translate(calc(-50% - 4px), 0%);
-	-ms-transform:translate(calc(-50% - 4px), 0%);
-}
-
-#authors {
-	position:absolute;
-	width:200px;
-	bottom:0px;
-	left:50%;
-	transform:translate(-50%, 0%);
-	-webkit-transform:translate(-50%, 0%);
-	-moz-transform:translate(-50%, 0%);
-	-ms-transform:translate(-50%, 0%);
-}
-
-#socialShare{
-	display:none;
-	margin:0;
-	padding:0;
-	bottom:0;
-	margin-bottom: 6.5px;
-	position:absolute;
-	left:calc(50% + 30px);
-	transform:translate(-50%, 0%);
-	-webkit-transform:translate(-50%, 0%);
-	-moz-transform:translate(-50%, 0%);
-	-ms-transform:translate(-50%, 0%);
-    padding-bottom: 2px;
-}
-
-
----------------------------------------------------------------------------- */
 /* Позиционируем элементы для разных экранов */
 /*
 @media only screen and (max-device-width:480px) 
@@ -429,7 +158,6 @@ padding-bottom:4px;
   }
 }
 */
-
 /* 
  * Панель инструкций #helpScreen,
  * текст в панели #inst_main_body,
@@ -467,7 +195,6 @@ padding-bottom:4px;
 #highScoreInGameText 
 {
 	position: absolute;
-	/*top:10px;*/
     top:6%;
 	text-align: center;
 	width:200px;
@@ -486,12 +213,6 @@ padding-bottom:4px;
 	margin-top: -5px;
 	font-size:2em;
 }
-/*         */
-
-
-
-
-
 .overlay 
 {
    position:absolute;
@@ -506,30 +227,20 @@ padding-bottom:4px;
    text-align:center;
    background:LightCyan;
 }
-
-
-
-
-
-
-
 .centeredHeader {
 	font-size:5vw; 
 	text-align:center;
 	line-height:4rem;
 }
-
 .centeredSubHeader {
 	font-size:2.2rem; 
 	line-height:1em;
 	text-align:center;
 }
-
 .centeredSubSubHeader {
 	font-size:1.4rem; 
 	text-align:center;
 }
-
 #buttonCont {
 	position:absolute; 
 	left:50%;
@@ -540,11 +251,9 @@ padding-bottom:4px;
 	-moz-transform:translate(-50%, 0%);
 	-ms-transform:translate(-50%, 0%);
 }
-
 .blur {
 	opacity:0.1;
 }
-
 #clickToExit {
 	cursor:pointer;
 }
@@ -553,11 +262,6 @@ padding-bottom:4px;
 	margin-top:20px;
 	color:#2c3e50;
 }
-
-/*display:none;*/
-#gameoverscreen {
-}
-
 #restart{
 	display:none;
 	cursor:pointer !important;
@@ -572,7 +276,6 @@ padding-bottom:4px;
 	-ms-transform:translate(-50%, 0%);
 	margin-bottom:-3.5px;
 }
-
 .unselectable {
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
@@ -595,26 +298,17 @@ padding-bottom:4px;
 	font-weight:light;
 	src:url("./fonts/Exo2-ExtraLight.otf") format("opentype");
 }
-
 @font-face {
 	font-family:Exo;
 	src:url("./fonts/Exo2-Regular.otf") format("opentype");
 }
-
 @font-face {
 	font-family:Exo;
 	font-weight:bold;
 	src:url("./fonts/Exo2-SemiBold.otf") format("opentype");
 }
-
-
-
-
 #bottomContainer {
 	position:absolute;
 	width:100%;
 	bottom:0px;
 }
-
-/*
-*/

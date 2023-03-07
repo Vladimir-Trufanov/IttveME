@@ -92,10 +92,12 @@ define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
 
 // ------------------------------------ Тексты запросов для меню управления ---
-define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');   
+define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya'); 
+define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');  
+define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');
+define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki');    
 
 define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');   
-define ('mmlIzmenitNastrojkiSajta',      'izmenit-nastrojki-sajta-v-brauzere');    
 define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');     
 define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat'); 
 
