@@ -271,3 +271,23 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(92): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 299
+[08-Mar-2023 08:35:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '{', expecting function (T_FUNCTION) or const (T_CONST) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 409
+[08-Mar-2023 08:36:22 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\MakeTitle() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:502
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(456): ttools\TinyGallery->WorkTiny_main()
+#1 C:\IttveMe\www\UpSite.php(52): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 502
+[08-Mar-2023 12:31:08 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined method ttools\TinyGallery::MakeTitle() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:417
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 417
+[08-Mar-2023 20:44:18 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\_ViewLifeSpace() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:457
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 457

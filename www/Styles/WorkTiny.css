@@ -76,6 +76,24 @@
 {
    height:100%;
 }
+/*
+ * Заголовок и рабочая область внутри #Life
+ */
+#tLife,#WorkTiny
+{
+   width:100%;
+   overflow:auto;
+}
+#tLife
+{
+   background:LightGrey;
+}  
+#WorkTiny
+{
+   background:yellow;
+}
+
+
 /* Стили заголовков                                                          */ 
 #Message,#NameError,#TopLine
 {

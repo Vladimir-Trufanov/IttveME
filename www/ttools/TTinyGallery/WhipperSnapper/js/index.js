@@ -1,3 +1,5 @@
+/* на русском */
+
 var width, height
 var step = 0;
 var canvas = document.createElement('canvas')
@@ -7,6 +9,14 @@ var bg = [68,	43,	48]
 // mouse coordinates
 function Mouse () 
 {
+  //ii=$("#WorkTiny").innerWidth;
+  /*
+  o=document.getElementById('WorkTiny');
+  oi=o.getBoundingClientRect();
+  topi=oi.top;
+  console.log(topi);
+  ii=o.innerWidth;
+  */
   this.x = 160; //window.innerWidth / 2
   //this.x = $("#Life").innerWidth / 2
   
@@ -118,7 +128,18 @@ function drawCircle (context, x, y, r) {
 function fillCanvas (context, color, alpha) 
 {
   //context.rect(0, 0, this.width, this.height)
-  context.rect(10,10,300,300);
-  context.fillStyle = 'rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})';
+
+  o=document.getElementById('WorkTiny');
+  oi=o.getBoundingClientRect();
+  wipi=oi.width;
+  topi=oi.top+20;
+  //console.log(wipi);
+ 
+  
+  context.rect(20,topi,wipi,300);
+  //context.rect(10,10,300,300);
+  //context.fillStyle = 'rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})';
+  context.fillStyle = 'Azure';
+  
   context.fill();
 }

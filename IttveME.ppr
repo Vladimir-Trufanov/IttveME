@@ -141,7 +141,7 @@ IttveME
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -193,7 +193,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -537,15 +537,15 @@ IttveME
 					www\ttools\TNewCueClass\gameDuckFlyClass.php
 					www\ttools\TNewCueClass\NewCueClass.php
 					www\ttools\TNewCueClass\Игра на голом HTML.doc
-				+TSaymeClass
-					+Hextris
+				-TSaymeClass
+					-Hextris
 						-images
 							www\ttools\TSaymeClass\Hextris\images\btn_back.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_help.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_pause.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_restart.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_resume.svg
-						+js
+						-js
 							www\ttools\TSaymeClass\Hextris\js\Block.js
 							www\ttools\TSaymeClass\Hextris\js\checking.js
 							www\ttools\TSaymeClass\Hextris\js\comboTimer.js
@@ -577,7 +577,7 @@ IttveME
 					www\ttools\TSaymeClass\SaymeClass.php
 				+TTinyGallery
 					+WhipperSnapper
-						+css
+						-css
 							www\ttools\TTinyGallery\WhipperSnapper\css\style.css
 						+js
 							www\ttools\TTinyGallery\WhipperSnapper\js\index.js
@@ -589,6 +589,8 @@ IttveME
 					www\ttools\TTinyGallery\WorkTiny.php
 				-TTuningClass
 					www\ttools\TTuningClass\TuningClass.php
+				-TWorkTinyMain
+					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 			www\.htaccess
 			www\.user.ini
 			www\Common.php
@@ -625,18 +627,16 @@ IttveME
 [Open project files]
 0=www\iniMem.php
 1=www\UpSiteCSS.php
-2=www\UpSite.php
-3=www\ttools\TTinyGallery\TinyGalleryClass.php
-4=www\ttools\TTinyGallery\WorkTiny.php
-5=www\ttools\TKwinGallery\KwinGalleryClass.php
-6=www\Styles\iniStyles.css
-7=www\Jsx\WorkTiny.js
-8=www\ttools\TMenuLeader\MenuLeaderClass.php
-9=www\ttools\TArticlesMaker\CommonIttveMe.php
-10=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-11=www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
-12=www\ttools\TTinyGallery\WhipperSnapper\js\index.js
-13=www\ttools\TTinyGallery\WhipperSnapper\css\style.css
+2=www\ttools\TTinyGallery\TinyGalleryClass.php
+3=www\ttools\TTinyGallery\WorkTiny.php
+4=www\Jsx\WorkTiny.js
+5=www\ttools\TMenuLeader\MenuLeaderClass.php
+6=www\ttools\TArticlesMaker\CommonIttveMe.php
+7=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+8=www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
+9=www\Styles\WorkTiny.css
+10=www\ttools\TTinyGallery\WhipperSnapper\js\index.js
+11=www\Styles\iniStyles.css
 [Selected Project Files]
 Main=
 Selected=www\ttools\TTinyGallery\WhipperSnapper\js\index.js
@@ -646,26 +646,17 @@ Caret=1,234
 [www\UpSiteCSS.php]
 TopLine=168
 Caret=1,207
-[www\UpSite.php]
-TopLine=30
-Caret=7,55
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=289
-Caret=38,299
+TopLine=429
+Caret=30,446
 [www\ttools\TTinyGallery\WorkTiny.php]
-TopLine=24
-Caret=19,61
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=237
-Caret=75,249
-[www\Styles\iniStyles.css]
-TopLine=65
-Caret=7,95
+TopLine=370
+Caret=19,402
 [www\Jsx\WorkTiny.js]
-TopLine=37
-Caret=1,54
+TopLine=75
+Caret=45,104
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=167
+TopLine=154
 Caret=1,193
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
 TopLine=741
@@ -675,10 +666,13 @@ TopLine=227
 Caret=7,266
 [www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php]
 TopLine=13
-Caret=14,33
+Caret=2,46
+[www\Styles\WorkTiny.css]
+TopLine=69
+Caret=1,1
 [www\ttools\TTinyGallery\WhipperSnapper\js\index.js]
-TopLine=85
-Caret=19,13
-[www\ttools\TTinyGallery\WhipperSnapper\css\style.css]
-TopLine=1
-Caret=1,10
+TopLine=104
+Caret=29,142
+[www\Styles\iniStyles.css]
+TopLine=65
+Caret=23,96

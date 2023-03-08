@@ -12,6 +12,34 @@
 // ****************************************************************************
 // *                      "Добавить новый раздел материалов"                  *
 // ****************************************************************************
+function WorkTinyMain_HEAD($game=NULL)
+{
+   require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
+   $WorkTiny=new WorkTinyMain($game);
+   $WorkTiny->Head();
+   return $WorkTiny;
+}
+function WorkTinyMain_BODY($WorkTiny,&$Title)
+{
+
+   //MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
+   MakeTitle('Страничка будет следующей зимой, пока постреляйте уток!',ttMessage);
+   $WorkTiny->Body();
+}
+
+
+
+
+
+
+
+
+
+
+
+// ****************************************************************************
+// *                      "Добавить новый раздел материалов"                  *
+// ****************************************************************************
 function mmlDobavitNovyjRazdel_HEAD($game=NULL)
 {
    require_once "ttools/TNewCueClass/NewCueClass.php";
@@ -111,26 +139,49 @@ function IniFontChristmas()
 // *************************************************************************
 // *                         Вывести заголовок статьи                      *
 // *************************************************************************
-function MakeTitle($NameGru,$NameArt,$DateArt='')
+class WhipperSnapper
 {
-   if ($NameArt==ttMessage) echo '<div id="Message">'.$NameGru.'</div>'; 
-   else if ($NameArt==ttError) echo '<div id="NameError">'.$NameGru.'</div>'; 
-   else
+   // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
+   protected $Place;       // приложение, в которое встроена игра
+
+   public function __construct($Place='Other') 
    {
-      echo '<div id="TopLine">'; 
-      if ($NameArt=='')
-      {
-         echo '<div id="NameGru">'.$NameGru.'</div>'; 
-         echo '<div id="NameArt">'.'</div>'; 
-      }
-      else
-      {
-         echo '<div id="NameGru">'.$NameGru.':'.'</div>'; 
-         echo '<div id="NameArt">'.$NameArt.' ['.$DateArt.']'.'</div>'; 
-      } 
-         echo '</div>'; 
+      // Инициализируем свойства класса
+      $this->Place=$Place;
+   }
+   public function __destruct() 
+   {
+   }
+   // Подключить стили игры
+   public function Head() 
+   {
+      if ($this->Place=='IttveME') $this->echoHead();
+   }
+   public function Play() 
+   {
+      $this->echoPlay();
+   }
+   //
+   private function echoHead()
+   {
+      ?>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="ttools/TTinyGallery/WhipperSnapper/css/style.css">
+      <?php
+   }
+   //
+   private function echoPlay()
+   {
+      echo '<div id=WhipperSnapperBody>';
+      ?>
+         <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
+      <?php
+      echo '</div>';
    }
 }
+
+
+
 
 // ------------------------------------------------------------------- Main ---
 
@@ -326,6 +377,31 @@ function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
    require_once "ttools/TEntryClass/EntryClass.php";
    MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
    $Entry=new Entrying();
+}
+// ****************************************************************************
+// *                  Вывести заголовок страницы с материалом                 *
+// ****************************************************************************
+function MakeTitle($NameGru,$NameArt,$DateArt='')
+{
+   $echo='';
+   if ($NameArt==ttMessage) $echo=$echo.'<div id="Message">'.$NameGru.'</div>'; 
+   else if ($NameArt==ttError) $echo=$echo.'<div id="NameError">'.$NameGru.'</div>'; 
+   else
+   {
+      $echo=$echo.'<div id="TopLine">'; 
+      if ($NameArt=='')
+      {
+         $echo=$echo.'<div id="NameGru">'.$NameGru.'</div>'; 
+         $echo=$echo.'<div id="NameArt">'.'</div>'; 
+      }
+      else
+      {
+         $echo=$echo.'<div id="NameGru">'.$NameGru.':'.'</div>'; 
+         $echo=$echo.'<div id="NameArt">'.$NameArt.' ['.$DateArt.']'.'</div>'; 
+      } 
+      $echo=$echo.'</div>'; 
+   }
+   return $echo;
 }
 
 // *********************************************************** WorkTiny.php ***

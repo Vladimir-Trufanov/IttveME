@@ -114,20 +114,24 @@ class TinyGallery
    protected $uidEdit;          // одентификатор материала
    
    protected $DelayedMessage;   // отложенное сообщение
+   private   $WhipperSnapper;   // игра при выводе ошибки
+   private   $WorkTinyMain;     // объект " Обеспечить работу с материалом в рабочей области"
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $Delcue;           // объект "Удалить раздел материалов"
    private   $Sayme;            // объект "Отправить сообщение автору"
-   private   $oWhipperSnapper;  // игра со змеёй
 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
    {
       // Инициализируем свойства класса
+      $this->WhipperSnapper=NULL;
+      $this->WorkTinyMain=NULL;
       $this->Newcue=NULL;
       $this->Delcue=NULL;
       $this->Sayme=NULL;
-      $this->oWhipperSnapper=NULL;
+      
+      
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->fileStyle="Styles/WorkTiny.css";
@@ -190,7 +194,8 @@ class TinyGallery
       $getArti=NULL;
       if ($getArti==NULL)
       {
-         $this->DelayedMessage='Материал не определен. Выберите в меню "Жизнь и путешествия"';
+         $this->DelayedMessage='Материал не определен. Выберите его в меню "Жизнь и путешествия"';
+         $this->DelayedMessage=$this->DelayedMessage.'Материал не определен. Выберите его в меню "Жизнь и путешествия"';
       }
       // 2 этап - 'Обработка запроса на следующую страницу'
       if ($this->DelayedMessage==imok)
@@ -290,23 +295,24 @@ class TinyGallery
    // *************************************************************************
    public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
    {
-      // Если транслит статьи не определен, то инициируем игру со змеёй
-      $getArti=$this->Arti->getArti;
-      $getArti=NULL;
-      if ($getArti==NULL)
-      {
-         require_once "ttools/TTinyGallery/WhipperSnapper/gameWhipperSnapperClass.php";
-         $this->oWhipperSnapper=new \game\WhipperSnapper('IttveME');
-         $this->oWhipperSnapper->Head();
-      }
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       
+      // Если отложенное сообщение, то инициируем игру со змеёй
+      if ($this->DelayedMessage<>imok)
+      {
+         require_once "ttools/TTinyGallery/WhipperSnapper/gameWhipperSnapperClass.php";
+         $this->WhipperSnapper=new \game\WhipperSnapper('IttveME');
+         $this->WhipperSnapper->Head();
+      }
+      
+      
       // Настраиваем размеры частей рабочей области редактирования
       // 28.02.2023 - может в будущем пригодится !!!
      
+      /*
       echo '
       <style>
       #WorkTiny
@@ -317,6 +323,7 @@ class TinyGallery
       }
       </style>
       ';
+      */
       
       
       /*
@@ -343,6 +350,32 @@ class TinyGallery
       </style>
       ';
       */
+      
+      /*
+         // *************************************************************************
+      // *                     Распределить запросы страниц                      *
+      // *************************************************************************
+      private function Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)
+      {
+      // ----------------------------------------------------------------------
+      // это вставка на случай, пока используется игра DuckFly 
+      // (для игры нужно убрать все полосы прокрутки)
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
+      else
+         echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
+      // ----------------------------------------------------------------------
+      $Result=true;
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+      elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+         $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
+      elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+         $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
+      else $Result=false;
+      return $Result;
+      }
+
       if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)) {}
       else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_HEAD();
@@ -353,6 +386,7 @@ class TinyGallery
       else if (\prown\isComRequest(mmlUdalitMaterial))
          $this->IniEditSpace_mmlUdalitMaterial();
       else main_HEAD($this->fileStyle);
+      */
    }
    // *************************************************************************
    // *                 Развернуть область галереи изображений                *
@@ -402,16 +436,61 @@ class TinyGallery
       echo '</div>';
    }
    // *************************************************************************
-   // *              Открыть пространство редактирования материала            *
+   // *      Развернуть пространство просмотра или редактирования материала   *
    // *************************************************************************
+   private function _ViewLifeSpace($Title,$oBody)
+   {
+      echo '<div id="tLife">';
+      echo $Title;
+      echo '</div>';
+      echo '<div id="WorkTiny">';
+      $oBody->Body();
+      echo '</div>';
+   }
    public function ViewLifeSpace($aPresMode,$aModeImg,$urlHome)
    {
-   // Включаем в разметку рабочую область редактирования
-   echo '<div id="WorkTiny">';
+      // Если отложенное сообщение, то готовим заголовок и игру со змеёй
+      if ($this->DelayedMessage<>imok) 
+      {
+         $Title=MakeTitle($this->DelayedMessage,ttError);
+         $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
+      }
+
+      /*
+      // Выводим заголовок статьи
+      if ($this->DelayedMessage==imok)
+         $Title=MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
+      else 
+      */
+         
+   }
+
+
+   /*
+   private function Dispatch_BODY_WorkTiny()
+   {
+      $Result=true;
+      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         mmlDobavitNovyjRazdel_BODY_WorkTiny($this->Newcue);
+      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
+      else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
+         mmlIzmenitNazvanieIkonku_BODY_WorkTiny();
+      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
+      else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+         mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);
+      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
+      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+         mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($this->Sayme);
+      else $Result=false;
+      return $Result;
+   }
+
+
+      // Выводим рабочую область редактирования и просмотра
       if ($this->Dispatch_BODY_WorkTiny()) {}
-      else
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
-      if (\prown\isComRequest(mmlZhiznIputeshestviya))
+      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
       // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
       else if (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
@@ -429,8 +508,7 @@ class TinyGallery
          $this->WorkTiny_mmlUdalitMaterial();
       // В обычном режиме
       else $this->WorkTiny_main();
-   echo '</div>';
-   }
+      */
 
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
 
@@ -464,23 +542,19 @@ class TinyGallery
       IniFontChristmas();
    }
    // *************************************************************************
-   // *     Открыть рабочую область и обеспечить редактирование материала     *
+   // *   Обеспечить просмотр или редактирование материала в рабочей области  *
    // *************************************************************************
    private function WorkTiny_main()
    {
       //phpinfo();
 
-      // Выводим заголовок статьи
-      if ($this->DelayedMessage==imok)
-         MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
-      else 
-         MakeTitle($this->DelayedMessage,ttError);
       // Если статья не определена, то подключаем заменяющую игру со змеёй
       $getArti=$this->Arti->getArti;
       $getArti=NULL;
       if ($getArti==NULL)
       {
-         $this->oWhipperSnapper->Play();
+         //$this->oWhipperSnapper->Play();
+         echo 'WorkTiny_main asdfghjkl; фывапролдж ';
       }
       else
       {
@@ -535,47 +609,6 @@ class TinyGallery
    private function KwinGallery_mmlVybratStatyuRedakti()
    {
       echo 'KwinGallery_mmlVybratStatyuRedakti<br>';
-   }
-   // *************************************************************************
-   // *                     Распределить запросы страниц                      *
-   // *************************************************************************
-   private function Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)
-   {
-      // ----------------------------------------------------------------------
-      // это вставка на случай, пока используется игра DuckFly 
-      // (для игры нужно убрать все полосы прокрутки)
-      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
-      else
-         echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
-      // ----------------------------------------------------------------------
-      $Result=true;
-      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
-      elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
-         $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
-      elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-         $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
-      else $Result=false;
-      return $Result;
-   }
-   private function Dispatch_BODY_WorkTiny()
-   {
-      $Result=true;
-      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
-      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         mmlDobavitNovyjRazdel_BODY_WorkTiny($this->Newcue);
-      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
-      else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
-         mmlIzmenitNazvanieIkonku_BODY_WorkTiny();
-      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
-      else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
-         mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);
-      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
-      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-         mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($this->Sayme);
-      else $Result=false;
-      return $Result;
    }
 } 
 // *************************************************** TinyGalleryClass.php ***

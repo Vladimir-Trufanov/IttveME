@@ -28,7 +28,7 @@ class WhipperSnapper
    {
       if ($this->Place=='IttveME') $this->echoHead();
    }
-   public function Play() 
+   public function Body() 
    {
       $this->echoPlay();
    }
@@ -43,11 +43,9 @@ class WhipperSnapper
    //
    private function echoPlay()
    {
-      echo '<div id=WhipperSnapperBody>';
       ?>
          <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
       <?php
-      echo '</div>';
    }
 }
 
