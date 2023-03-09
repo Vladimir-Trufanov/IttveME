@@ -295,6 +295,11 @@ class TinyGallery
    // *************************************************************************
    public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
    {
+      echo'  
+      <style>
+      </style>
+      ';
+      
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
@@ -427,7 +432,8 @@ class TinyGallery
       echo '</div>';
       // Левая часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
-         echo $UserAgent.'<br>';
+         //echo $UserAgent.'<br>';
+         MakeButton();
       echo '</div>';
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';
@@ -610,5 +616,23 @@ class TinyGallery
    {
       echo 'KwinGallery_mmlVybratStatyuRedakti<br>';
    }
-} 
+}
+
+function MakeButton()
+{
+   echo '
+      <div id="btnBody">
+      <div class="glass3">This текст
+        <div class="glass3hover" onclick="functionToExecute()">This текст</div>
+        <div class="glass3ref"></div>
+        <div class="glass3hi"></div>
+        <div id="hi2" class="glass3hi"></div>
+        <div id="hi3" class="glass3hi"></div>
+        <!-- 
+        -->
+      </div>
+      </div>
+   ';
+}
+ 
 // *************************************************** TinyGalleryClass.php ***
