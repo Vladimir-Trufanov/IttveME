@@ -197,6 +197,121 @@ class MenuLeader
       // Закрываем меню
       echo '</ul>';
    }
+   
+   
+  
+   // *************************************************************************
+   // *   Создать "всякую-разную" кнопку в подвальной области "LeftFooter"    *
+   // *************************************************************************
+   public function MakeAnyDiffButton()
+   {
+      echo '
+      <script>
+      let cssValues; // массив CSS-свойств элемента
+      
+      $(document).ready(function()
+      {
+         let LeftFooter=document.getElementById("LeftFooter");
+
+         // Строим рабочую область для кнопки
+         let btnBody=document.createElement("div");
+         btnBody.setAttribute("id","btnBody");
+         LeftFooter.appendChild(btnBody);
+         // Настраиваем стили рабочей области для кнопки
+         cssValues = {
+            "color":"red",
+            "font-family":"\'Nova Flat\', cursive",
+            "font-size":"12pt",
+            "position":"absolute",
+            "top":"0",
+            "height":"100%",
+            "width":"96%",
+            "margin-left":"1%",
+            "overflow":"hidden",
+         }
+         $("#btnBody").css(cssValues);
+         cssValues = {
+            "text-align":"center",
+            "background":"#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left",
+         }
+         $("#btnBody").css(cssValues);
+
+         // Строим "всякую-разную" кнопку
+         let glass3Html="Всякое-разное";
+         let glass3=document.createElement("div");
+         glass3.setAttribute("id","glass3");
+         btnBody.appendChild(glass3);
+         $("#glass3").html(glass3Html);
+         // Настраиваем стили рабочей области для кнопки
+         cssValues = {
+            "position":"relative",
+            "color":"rgba(255,140,0,1.6)",
+            "font-size":"16px",
+            "text-decoration":"none",
+            "margin-top":".8rem",
+            "cursor":"pointer",
+            "width":"324px",
+            "height":"29px",
+            "outline":"0",
+         }
+         $("#glass3").css(cssValues);
+         cssValues = {
+            "line-height":"24px",
+            "padding-left":"0",
+            "padding-right":"0",
+            "margin-left":"auto",
+            "margin-right":"auto",
+         }
+         $("#glass3").css(cssValues);
+         cssValues = {
+            "border-color":"rgba(255,140,0,1.6)",
+            "border-image":"none",
+            "border-style":"double",
+            "border-width":"1px",
+            "border-radius":"8px",
+            "-webkit-border-radius":"8px",
+            "-moz-border-radius":"8px",
+            "-webkit-transition":"all 0.1s ease-in-out",
+            "-moz-transition":"all 0.1s ease-in-out",
+            "-o-transition":"all 0.1s ease-in-out",
+            "transition":"all 0.1s ease-in-out",
+         }
+         $("#glass3").css(cssValues);
+      });
+      </script>';
+      
+
+   }
+   /*
+                   "background":"#aaa",
+         //
+         let glass3before=document.createElement("div");
+         glass3before.setAttribute("id","glass3before");
+         glass3.appendChild(glass3before);
+         cssValues = {
+            "position":"absolute",
+            "content":"\"tttttt\"",
+            "top":"-1.52px",
+            "left":"2%",
+            "width":"96%",
+            "height":"2px",
+            "background":"linear-gradient (to right,"+
+            "rgba(255, 140, 0,0) 0%,"+
+            "rgba(255, 140, 0,0.75) 15%,"+
+            "rgba(255, 140, 0,0.9) 50%,"+
+            "rgba(255, 140, 0,0.75) 85%,"+
+            "rgba(255, 140, 0,0) 100%"+
+            ")",
+            "z-index":"1",
+         }
+         $("#glass3before").css(cssValues);
+   */
+   
+   
+   
+   
+   
+   
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
 
    // *************************************************************************

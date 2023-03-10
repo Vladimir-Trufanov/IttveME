@@ -230,22 +230,21 @@ button.addEventListener('click', () =>
 */
 
 
+/*
 $(document).ready(function()
 {
-
 var div=document.getElementById('Gallery');
 var button=document.createElement("input");
 button.setAttribute("type", "button");
 button.setAttribute("id", "NewButton");
 button.setAttribute("value", "Новая кнопка");
-/*можно сделать и так
-button.type = "button";
-button.id = "NewButton";
-button.value = "Новая кнопка";
-*/
+ //можно сделать и так
+ //button.type = "button";
+ //button.id = "NewButton";
+//button.value = "Новая кнопка";
    div.appendChild(button);
 });
-  
+*/  
 
 
 

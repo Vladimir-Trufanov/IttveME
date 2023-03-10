@@ -291,3 +291,5 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 457
+[10-Mar-2023 18:23:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$' in C:\IttveMe\www\ttools\TMenuLeader\MenuLeaderClass.php on line 208
+[10-Mar-2023 18:23:46 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$' in C:\IttveMe\www\ttools\TMenuLeader\MenuLeaderClass.php on line 208

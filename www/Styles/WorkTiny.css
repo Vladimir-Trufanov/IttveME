@@ -243,31 +243,33 @@
 /*
  * Стили всплывающей кнопки #LeftFooter
  */
+ 
+#Life
+{
+background:Cornsilk;
+}
+/*
 #btnBody
 {
-  font-family: 'Nova Flat', cursive;
-  font-size: 12pt;
+   font-family: 'Nova Flat', cursive;
+   font-size: 12pt;
 
    position:absolute;
-   
    top:0;
-   left:.5rem;
-   right:.5rem;
-   //height:100%;
-   width: 350px;
-   height: 35px;
-   border-radius: 8px;
-   
+   height:100%;
+   width:96%;
+   margin-left:1%;
    overflow:hidden;
 }
+*/
+/*
 #btnBody
 {
    text-align: center;
    background: #aaa;
-   /*background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;*/
-   /*background-color: #753;*/
-   
-   /*
+   background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
+   -*background-color: #753;*-
+   -*
    background-color: #aaa;   
    background-image: linear-gradient(
       -90deg,
@@ -281,22 +283,41 @@
       rgba(255, 255, 255, 0.2) 96%
    ); 
    background-size: 25px 25px;
-   */
+   *-
 }
-
+*/
+/*
 .glass3
 {
     position: relative;
-    color: rgba(255, 255, 255, 0.6);
+    color:  rgba(255, 140, 0, 1.6);
     font-size: 16px;
     text-decoration:none;
-
-    margin: .8rem;
-
+    margin-top: .8rem;
     cursor: pointer;
     width: 324px;
     height: 29px;
+    outline: 0;
+}
+*/
+/*
+.glass3
+{
+  line-height: 24px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+*/
 
+/*
+.glass3 
+{
+  border-color: rgba(255, 140, 0, 1.6);
+  border-image: none;
+  border-style: double;
+  border-width: 1px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -305,43 +326,30 @@
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-  
-    outline: 0;
+
 }
-.glass3
-{
-  line-height: 20px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-.glass3 
-{
-  transition: all 0.1s ease-in-out;
-  border-color: rgba(255, 255, 255, 0.6);
-  border-image: none;
-  border-style: double;
-  border-width: 1px;
-}
+*/
+/*
 .glass3:before {
   position: absolute;
   content: "";
-  top: -2px;
+  top: -1.52px;
   left: 2%;
   width: 96%;
   height: 2px;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.75) 15%,
-    rgba(0,0,0,0.9) 50%,
-    rgba(0,0,0,0.75) 85%,
-    rgba(0,0,0,0) 100%
+    rgba(255, 140, 0,0) 0%,
+    rgba(255, 140, 0,0.75) 15%,
+    rgba(255, 140, 0,0.9) 50%,
+    rgba(255, 140, 0,0.75) 85%,
+    rgba(255, 140, 0,0) 100%
   );
   z-index: 1;
 }
-.glass3:after {
+*/
+
+#glass3:after {
   position: absolute;
   content: "";
   top: 100%;
@@ -350,23 +358,24 @@
   height: 2px;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.5) 5%,
-    rgba(0,0,0,0.9) 50%,
-    rgba(0,0,0,0.5) 95%,
-    rgba(0,0,0,0) 100%
+    rgba(255, 140, 0,0) 0%,
+    rgba(255, 140, 0,0.5) 5%,
+    rgba(255, 140, 0,0.9) 50%,
+    rgba(255, 140, 0,0.5) 95%,
+    rgba(255, 140, 0,0) 100%
   );
   z-index: 1;
 }
+
 .glass3hover
 {
   position: relative;
-  top: -22px;
+  top: -25px;
   width: 323px;
   height: 30px;
-  line-height: 26px;
+  line-height: 24px;
   border-radius: 6px;
-  color: #000;
+  color: #696969; /* #000;*/
   background: radial-gradient(
     ellipse at center,
     rgba(255,255,255,1) 0%,
@@ -383,23 +392,19 @@ div:hover.glass3hover
   opacity: 1.0;
 }
 
-div:active.glass3hover  {
-    color: rgba(255, 255, 255, 0.99);
+div:active.glass3hover  
+{
+    color: rgba(105, 105, 105 0.99);
+    line-height: 26px;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.99), 0px 0px 4px rgba(255, 255, 255, 0.75);
     border-color: rgba(255, 255, 255, 0.4);
-    box-shadow:
-      0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
-      0 2px 6px rgba(0, 0, 0, 0.5),
-      0 10px rgba(0, 0, 0, 0.05) inset,
-      0 0 5px 2px rgba(255, 255, 255, 0.75),
-      0 0 10px 2px rgba(255, 255, 255, 0.75) inset;
 }
 
 .glass3ref {
     position: relative;
-    top: -50px;
+    top: -52px;
     width: 400px;
-    height: 29px;
+    height: 24px;
     border-radius: 6px;
     background: linear-gradient(
      172deg,
@@ -411,26 +416,34 @@ div:active.glass3hover  {
     );
   z-index: 1;
 }
-
-
 div.glass3hi:before 
 {
   position: absolute;
   content: "";
   top: -2px;
   left: 10%;
-  width: 36px;
+  width: 16px;
   height: 3px;
+  
+  
+ /*
   background: linear-gradient(
     to right,
     rgba(255,255,255,0) 0%,
     rgba(255,255,255,0.99) 50%,
     rgba(255,255,255,0) 100%
   );
+  */
+  /*
+  background: linear-gradient(
+    to right,
+    rgba(255, 140, 0,0) 0%,
+    rgba(255, 140, 0,0.99) 50%,
+    rgba(255, 140, 0,0) 100%
+  );
+  */
   z-index: 1;
 }
-
-
 div.glass3hi:after 
 {
   position: absolute;
@@ -438,21 +451,18 @@ div.glass3hi:after
   top: -2px;
   left: calc(10% + 16px);
   width: 4px;
-  height: 2px;
-  background-color: #fff;
-  box-shadow: 0 0 8px 3px rgba(255,255,255,0.99);
+ÿ heḰˮ  : 2px;
+  background-color: #FF8C00; /* #fff;*/
+  box-shadow: 0 0 8px 3px rgba(255, 140, 0, .99);
   z-index: 1;
 }
-
 #hi2 {
-  transform: translate(120px, -10px);
+  transform: translate(188px, -48px);
   z-index: 9;
 }
-
 #hi3 {
-  transform: rotate(90deg) translate(45px,-163px);
+  transform: rotate(90deg) translate(44px,-161px);
   z-index: 9;
 }
-
 
 /* ******************************************************** WorkTiny.css *** */	
