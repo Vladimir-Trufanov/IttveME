@@ -86,14 +86,12 @@
 }
 #tLife
 {
-   background:LightGrey;
+   /*background:LightGrey;*/
 }  
 #WorkTiny
 {
-   background:yellow;
+   /*background:yellow;*/
 }
-
-
 /* Стили заголовков                                                          */ 
 #Message,#NameError,#TopLine
 {
@@ -109,8 +107,8 @@
 }
 #NameError
 {
-   float:left;
    color:Red;
+   text-align:center;
 }
 #Message
 {

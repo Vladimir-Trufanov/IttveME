@@ -44,7 +44,11 @@ class WhipperSnapper
    private function echoPlay()
    {
       ?>
-         <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
+      <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
+      <script>
+         //СursorSnake();
+         igra();
+      </script>
       <?php
    }
 }

@@ -7,7 +7,7 @@
 // *                 и галереи изображений, связанной с этим материалом (uid) *
 // *                                    из выбранной (указанной) группы (pid) *
 // *                                                                          *
-// * v2.0, 10.02.2022                              Автор:       Труфанов В.Е. *
+// * v2.0, 11.03.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
@@ -194,8 +194,13 @@ class TinyGallery
       $getArti=NULL;
       if ($getArti==NULL)
       {
-         $this->DelayedMessage='Материал не определен. Выберите его в меню "Жизнь и путешествия"';
-         $this->DelayedMessage=$this->DelayedMessage.'Материал не определен. Выберите его в меню "Жизнь и путешествия"';
+         $this->DelayedMessage=
+         'Материал не определен. Выберите его в меню "Жизнь и путешествия"'
+         
+           .'не определен. Выберите его в меню "Жизнь и путешествия не определен.
+           Выберите его в меню "Жизнь и путешествия не определен. 
+           Выберите его в меню "Жизнь и путешествия"'
+        ;
       }
       // 2 этап - 'Обработка запроса на следующую страницу'
       if ($this->DelayedMessage==imok)
@@ -309,7 +314,8 @@ class TinyGallery
       $this->menu=new MenuLeader(ittveme,$this->urlHome);
       $this->menu->Init();
       
-      // Если отложенное сообщение, то инициируем игру со змеёй
+      // Если отложенное сообщение, то инициируем игру со змеёй 
+      // и анимацию фона
       if ($this->DelayedMessage<>imok)
       {
          require_once "ttools/TTinyGallery/WhipperSnapper/gameWhipperSnapperClass.php";
@@ -450,10 +456,10 @@ class TinyGallery
    private function _ViewLifeSpace($Title,$oBody)
    {
       echo '<div id="tLife">';
-      echo $Title;
+         echo $Title;
       echo '</div>';
       echo '<div id="WorkTiny">';
-      $oBody->Body();
+         $oBody->Body();
       echo '</div>';
    }
    public function ViewLifeSpace($aPresMode,$aModeImg,$urlHome)
@@ -620,24 +626,5 @@ class TinyGallery
       echo 'KwinGallery_mmlVybratStatyuRedakti<br>';
    }
 }
-
-/*
-function MakeButton()
-{
-   echo '
-      <div id="btnBody">
-      <div class="glass3">This текст
-        <div class="glass3hover" onclick="functionToExecute()">This текст</div>
-        <div class="glass3ref"></div>
-        <div class="glass3hi"></div>
-        <div id="hi2" class="glass3hi"></div>
-        <div id="hi3" class="glass3hi"></div>
-        <!-- 
-        -->
-      </div>
-      </div>
-   ';
-}
-*/
  
 // *************************************************** TinyGalleryClass.php ***
