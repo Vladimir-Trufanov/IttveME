@@ -300,34 +300,14 @@ class TinyGallery
       </style>
       ';
 
-      
-      echo'  
-      <style>
-      #glass3:before {
-  position: absolute;
-  content: "";
-  top: -1.52px;
-  left: 2%;
-  width: 96%;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 140, 0,0) 0%,
-    rgba(255, 140, 0,0.75) 15%,
-    rgba(255, 140, 0,0.9) 50%,
-    rgba(255, 140, 0,0.75) 85%,
-    rgba(255, 140, 0,0) 100%
-  );
-  z-index: 1;
-}
-
-      </style>
-      ';
-      
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
+      
+      // Подключаем кнопки управляющего меню
+      $this->menu=new MenuLeader(ittveme,$this->urlHome);
+      $this->menu->Init();
       
       // Если отложенное сообщение, то инициируем игру со змеёй
       if ($this->DelayedMessage<>imok)
@@ -442,8 +422,6 @@ class TinyGallery
    // *************************************************************************
    public function ViewFooterSpace($UserAgent)
    {
-      // Создаем объект с кнопками управления
-      $this->menu=new MenuLeader(ittveme,$this->urlHome);
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
          echo '

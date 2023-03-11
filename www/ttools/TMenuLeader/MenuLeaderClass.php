@@ -86,6 +86,151 @@ class MenuLeader
    {
    }
    // *************************************************************************
+   // *                    Настроить стили элементов объекта                  *
+   // *************************************************************************
+   public function Init()
+   {
+      // Зажигаем верхнюю и нижнюю границы кнопки "Всякое-разное"       
+      echo'  
+      <style>
+         #glass3:before 
+         {
+            position:absolute;
+            content: "";
+            top:-1.52px;
+            left:2%;
+            width:96%;
+            height:2px;
+            background:linear-gradient(
+               to right,
+               rgba(255,140,0,0) 0%,
+               rgba(255,140,0,0.75) 15%,
+               rgba(255,140,0,0.9) 50%,
+               rgba(255,140,0,0.75) 85%,
+               rgba(255,140,0,0) 100%
+            );
+            z-index: 1;
+         }
+         #glass3:after 
+         {
+            position:absolute;
+            content:"";
+            top:100%;
+            left:2%;
+            width:96%;
+            height:2px;
+            background:linear-gradient(
+               to right,
+               rgba(255,140,0,0) 0%,
+               rgba(255,140,0,0.5) 5%,
+               rgba(255,140,0,0.9) 50%,
+               rgba(255,140,0,0.5) 95%,
+               rgba(255,140,0,0) 100%
+            );
+            z-index: 1;
+         }
+      </style>
+      ';
+      // Показываем наезд указателем на кнопку "Всякое-разное"       
+      echo'  
+      <style>
+         #glass3hover
+         {
+            position:relative;
+            top:-25px;
+            width:323px;
+            height:30px;
+            line-height:24px;
+            border-radius:6px;
+            color:#696969;
+            background:radial-gradient(
+               ellipse at center,
+               rgba(255,255,255,1) 0%,
+               rgba(255,255,255,0) 100%
+            );
+            opacity:0.0;
+            transition:all 0.3s ease-in-out;
+            z-index:2;
+            box-shadow:0 0 6px 3px rgba(255,255,255,0.5);
+            border:2px groove rgba(255,255,255,0.5);
+         }
+         div:hover#glass3hover 
+         {
+            opacity: 1.0;
+         }
+      </style>
+      ';
+      // Вырисовываем "начальное стеклышко" кнопки       
+      echo'  
+      <style>
+         #glass3ref 
+         {
+            position:relative;
+            top:-52px;
+            width:400px;
+            height:24px;
+            border-radius:6px;
+            background:linear-gradient(
+               172deg,
+               rgba(255,255,255,0.8) 0%,
+               rgba(255,255,255,0.4) 20%,
+               rgba(255,255,255,0.1) 48%,
+               rgba(255,255,255,0.0) 49%,
+               rgba(255,255,255,0.0) 100%
+            );
+            z-index: 1;
+         }
+      </style>
+      ';
+      // Показываем нажатую кнопку       
+      echo'  
+      <style>
+         div:active#glass3hover  
+         {
+            color:rgba(105,105,105 0.99);
+            line-height:26px;
+            text-shadow:0px 0px 2px rgba(255,255,255,0.99),0px 0px 4px rgba(255,255,255,0.75);
+            border-color:rgba(255,255,255,0.4);
+         }
+      </style>
+      ';
+      // Показываем три звездочки       
+      echo'  
+      <style>
+      div.glass3hi:before 
+      {
+         position:absolute;
+         content:"";
+         top:-2px;
+         left:10%;
+         width:16px;
+         height:3px;
+         z-index:1;
+      }
+      div.glass3hi:after 
+      {
+          position:absolute;
+          content:"";
+          top:-2px;
+          left:calc(10% + 16px);
+          width:4px;
+          height:2px;
+          background-color:#FF8C00;
+          box-shadow:0 0 8px 3px rgba(255, 140, 0, .99);
+          z-index:1;
+      }
+      #hi2 {
+         transform: translate(188px, -48px);
+         z-index: 9;
+      }
+      #hi3 {
+         transform: rotate(90deg) translate(44px,-161px);
+         z-index: 9;
+      }
+      </style>
+      ';
+   }
+   // *************************************************************************
    // *                Отработать меню управления (общая часть)               *
    // *************************************************************************
    public function Menu()
@@ -277,37 +422,41 @@ class MenuLeader
             "transition":"all 0.1s ease-in-out",
          }
          $("#glass3").css(cssValues);
+         
+         // Строим образ "всякой-разной" кнопки при наезде на нее
+         // <div id="glass3hover" onclick="functionToExecute()">This текст</div>
+         let glass3hover=document.createElement("div");
+         glass3hover.setAttribute("id","glass3hover");
+         glass3hover.setAttribute("onclick","onClickAnyDiff()");
+         glass3.appendChild(glass3hover);
+         $("#glass3hover").html(glass3Html);
+         
+         // Строим "начальное стеклышко" кнопки
+         // <div id="glass3ref"></div>
+         let glass3ref=document.createElement("div");
+         glass3ref.setAttribute("id","glass3ref");
+         glass3.appendChild(glass3ref);
+         
+         // Строим три звездочки на кнопке
+         // <div class="glass3hi"></div>
+         // <div id="hi2" class="glass3hi"></div>
+         // <div id="hi3" class="glass3hi"></div>
+         let hi1=document.createElement("div");
+         hi1.setAttribute("class","glass3hi");
+         glass3.appendChild(hi1);
+         let hi2=document.createElement("div");
+         hi2.setAttribute("class","glass3hi");
+         glass3.appendChild(hi2);
+         let hi3=document.createElement("div");
+         hi3.setAttribute("class","glass3hi");
+         glass3.appendChild(hi3);
+         hi2.setAttribute("id","hi2");
+         hi3.setAttribute("id","hi3");
       });
       </script>';
       
 
    }
-   /*
-                   "background":"#aaa",
-         //
-         let glass3before=document.createElement("div");
-         glass3before.setAttribute("id","glass3before");
-         glass3.appendChild(glass3before);
-         cssValues = {
-            "position":"absolute",
-            "content":"\"tttttt\"",
-            "top":"-1.52px",
-            "left":"2%",
-            "width":"96%",
-            "height":"2px",
-            "background":"linear-gradient (to right,"+
-            "rgba(255, 140, 0,0) 0%,"+
-            "rgba(255, 140, 0,0.75) 15%,"+
-            "rgba(255, 140, 0,0.9) 50%,"+
-            "rgba(255, 140, 0,0.75) 85%,"+
-            "rgba(255, 140, 0,0) 100%"+
-            ")",
-            "z-index":"1",
-         }
-         $("#glass3before").css(cssValues);
-   */
-   
-   
    
    
    
@@ -364,5 +513,17 @@ class MenuLeader
    // <span class="k1"><a href="'.$Punkt.'">'.$fString.'</a></span>
    // <span class="k2"><a href="'.$Punkt.'">'.$sString.'</a></span>
 } 
+
+// *************************************************************************
+// *             Обработать нажатие на кнопку "всякое-разное"              *
+// *************************************************************************
+echo '
+   <script>
+   function onClickAnyDiff()
+   {
+      console.log("Нажата всякая-разная кнопка!");
+   }
+   </script>
+';
 
 // **************************************************** MenuLeaderClass.php ***

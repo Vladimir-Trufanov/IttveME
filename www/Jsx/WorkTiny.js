@@ -477,8 +477,9 @@ function alfEraseFiles()
    });
 } 
 */
-
-function functionToExecute()
+/*
+function onClickAnyDiff()
 {
-   //alert('functionToExecute()');
+   alert('functionToExecute()');
 }
+*/

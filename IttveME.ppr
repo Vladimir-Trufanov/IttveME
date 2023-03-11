@@ -640,7 +640,7 @@ IttveME
 12=www\Styles\WorkTiny.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\Styles\WorkTiny.css
 [www\iniMem.php]
 TopLine=202
 Caret=1,234
@@ -648,17 +648,17 @@ Caret=1,234
 TopLine=50
 Caret=1,68
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=287
-Caret=1,326
+TopLine=605
+Caret=1,635
 [www\ttools\TTinyGallery\WorkTiny.php]
 TopLine=370
 Caret=19,402
 [www\Jsx\WorkTiny.js]
-TopLine=325
-Caret=1,345
+TopLine=446
+Caret=1,485
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=272
-Caret=1,283
+TopLine=202
+Caret=1,232
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
 TopLine=741
 Caret=77,752
@@ -678,5 +678,5 @@ Caret=6,96
 TopLine=40
 Caret=19,62
 [www\Styles\WorkTiny.css]
-TopLine=329
-Caret=1,350
+TopLine=214
+Caret=1,251
