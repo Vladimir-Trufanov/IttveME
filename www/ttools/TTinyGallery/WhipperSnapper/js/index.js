@@ -42,14 +42,23 @@ function СursorSnake()
    var topCanvas=oi.top;
    var widthCanvas=oi.width;
    var heightCanvas=(heightLife-heighttLife)*.98;
+   
+   // Расчитываем наибольший диаметр кисти (хвоста змейки)
+   var n=50; // количество точек хвоста змеи
+   var MaxD=CalcDi(n,0);
+   //console.log('MaxD='+MaxD);
 
    var mouse=new Mouse(leftCanvas,topCanvas,widthCanvas,heightCanvas);
-   //document.onmousemove = function(e){ mouse.x = e.pageX; mouse.y = e.pageY};
-   //document.onmousemove =  MovingMouse(e);
-   document.onmousemove = function(e){MovingMouse(e,mouse);};
+   document.onmousemove = function(e){
+      MovingMouse(e,mouse,MaxD,leftCanvas,topCanvas,widthCanvas,heightCanvas);
+   };
 
-
-   var flwr,flwrPrev,train=[],i,n=50;
+   // Строим массив точек хвоста змеи в начальном состоянии
+   var n=50;      // количество точек хвоста змеи
+   var train=[];  // массив точек 
+   let flwr;      // текущая точка хвоста
+   let flwrPrev;  // предыдущая точка
+   let i;         // счетчик
    for (i = 0; i < n; i++) 
    {
       flwr = new Flwr(mouse);
@@ -67,76 +76,53 @@ function СursorSnake()
       flwrPrev = flwr
       train.push(flwr)
    }
-    
-   console.log('Начало!');
    animate(SnakeContext,ColorCanvas,train,mouse,n,step,leftCanvas,topCanvas,widthCanvas,heightCanvas);
 }
-
-
-// функции
-
-function MovingMouse(e,mouse)
+// Определить координаты мыши, проконтролировать положение мыши
+// по границам холста и перензначить их для змейки
+function MovingMouse(e,mouse,MaxD,leftCanvas,topCanvas,widthCanvas,heightCanvas)
 {
-   px=e.pageX;
-   if (px>300) px=290;
-   mouse.x = px; 
-   mouse.y = e.pageY
+   mouse.x=CtrlPosiX(e.pageX,MaxD,leftCanvas,widthCanvas); 
+   mouse.y=CtrlPosiY(e.pageY,MaxD,topCanvas,heightCanvas);
 }
-
 // mouse coordinates
 function Mouse (leftCanvas,topCanvas,widthCanvas,heightCanvas) 
 {
    this.x = leftCanvas+(widthCanvas/2);
    this.y = topCanvas+(heightCanvas/2);
 }
-
-
-function Flwr (mouse) 
+// Структура точки хвоста
+function Flwr(mouse) 
 {
-  this.follow = null
-  this.child = null
-  this.x = mouse.x
-  this.y = mouse.y
-  this.dx = 0
-  this.dy = 0
-  this.a = 0.35
-  this.b = 0.54
-  this.n = 0
+  this.follow = null;
+  this.child = null;
+  this.x = mouse.x;
+  this.y = mouse.y;
+  this.dx = 0;
+  this.dy = 0;
+  this.a = 0.35;  // первый коэффициент эластичности хвоста
+  this.b = 0.54;  // второй коэффициент
+  this.n = 0;      
 }
-
-
-
-
-
+//
 function animate(ctx,bg,train,mouse,n,step,Left=10,Top=90,Width=300,Height=100,alpha=1) 
 {
   ctx.rect(Left,Top,Width,Height);
   ctx.fillStyle='rgba('+bg[0]+','+bg[1]+','+bg[2]+','+alpha+')';
   ctx.fill();
-  
-  //
-  // console.log('['+mouse.x+'-'+mouse.y+']');
-  //
-  //if (mouse.x > 200)
-  draw(ctx,train,mouse,n);
+  draw(ctx,train,mouse,n,Left,Top,Width,Height);
   step++;
   window.requestAnimationFrame(function()
   {
      animate(ctx,bg,train,mouse,n,step,Left,Top,Width,Height,alpha)
   })
 }
-
-
-
-
-function draw (ctx,train,mouse,n) 
+// Отрисовать на холсте 50 точек хвоста змейки
+function draw(ctx,train,mouse,n,leftCanvas,topCanvas,widthCanvas,heightCanvas) 
 {
-  // update flwrs
-  // console.log(train)
-  
   for (i in train)
   {
-    // update position
+    // Пересчитываем позиции хвоста
     flwr = train[i]
     var dx = flwr.follow.x - flwr.x
     var dy = flwr.follow.y - flwr.y
@@ -147,38 +133,53 @@ function draw (ctx,train,mouse,n)
     flwr.x = flwr.dx * flwr.b + flwr.x 
     flwr.y = flwr.dy * flwr.b + flwr.y 
 
-  //
-  // console.log('['+mouse.x+'-'+flwr.x+'  '+mouse.y+'-'+flwr.y+']');
-  //
-    
-    // draw
-    // ctx.beginPath();
-    // drawCircle(ctx, flwr.x, flwr.y, 2)
-    // ctx.fillStyle = '#FFF547'
-    // ctx.fill()
-    
+
     if (flwr.follow !== mouse) 
     {
       ctx.beginPath();
       ctx.strokeStyle = '#FFF547';
       ctx.lineCap = 'round';
-      ctx.lineWidth = (n-flwr.n)/n * 8 + 2; // определили диаметр кружка
+      // Определяем диаметр кружка (кисти)
+      ctx.lineWidth = CalcDi(n,flwr.n);
       
-      //if (flwr.x>100) flwr.x=100;
+
+      MaxD=CalcDi(n,0);
+      flwr.follow.x=CtrlPosiX(flwr.follow.x,MaxD,leftCanvas,widthCanvas); 
+      flwr.follow.y=CtrlPosiY(flwr.follow.y,MaxD,topCanvas,heightCanvas);
       
+      
+      // Строим линию между точками
       ctx.moveTo(flwr.x,flwr.y);
       ctx.lineTo(flwr.follow.x,flwr.follow.y);
       ctx.stroke();
     }
   }
-  
+}
+// Проконтролировать положение точки хвоcта по горизонтали
+function CtrlPosiX(px,MaxD,leftCanvas,widthCanvas)
+{
+   ppx=px;
+   Delta=MaxD/2+1; // разрешенное расстояние до границы холста
+   if (px<(leftCanvas+Delta)) ppx=leftCanvas+Delta;
+   if (px>(leftCanvas+widthCanvas-Delta)) ppx=leftCanvas+widthCanvas-Delta;
+   return ppx;
+}
+// Проконтролировать положение точки хвоста по вертикали
+function CtrlPosiY(py,MaxD,topCanvas,heightCanvas)
+{
+   ppy=py;
+   Delta=MaxD/2+1; // разрешенное расстояние до границы холста
+   if (py<(topCanvas+Delta)) ppy=topCanvas+Delta;
+   if (py>(topCanvas+heightCanvas-Delta)) ppy=topCanvas+heightCanvas-Delta;
+   return ppy;
+}
+// Расчитать диаметр кисти для данной точки хвоста
+function CalcDi(nD,currD)
+{
+   Result=(nD-currD)/nD * 8 + 2; 
+   return Result;  
 }
 
-/*
-function drawCircle (context, x, y, r) {
-  context.arc(x ,y , r, 0, 2*Math.PI);
-}
-*/
 
 // 2 часть: анимация фона
 

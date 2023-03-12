@@ -35,6 +35,7 @@ define ("ajUndeletionOldFiles", "Ошибка удаления старых фа
 // Подключить переменные JavaScript, соответствующие определениям в PHP
 function DefineJS()
 {
+/*
    $define=
    '<script>'.
    'pathPhpPrown="'        .pathPhpPrown.'";'.
@@ -51,8 +52,8 @@ function DefineJS()
    'ajUndeletionOldFiles="'.ajUndeletionOldFiles.'";'.
    '</script>';
    echo $define;
+*/
 }   
-
 // ------------------------------------------------------------------- ZERO ---
 
 // Инициализируем общесайтовые константы (здесь стараемся не назначать константу = 0, так как 
