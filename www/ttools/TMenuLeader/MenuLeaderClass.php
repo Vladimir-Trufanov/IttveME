@@ -516,7 +516,7 @@ echo '
    function onClickAnyDiff()
    {
       console.log("Нажата всякая-разная кнопка!");
-      СursorSnake();
+      //СursorSnake();
    }
    </script>
 ';

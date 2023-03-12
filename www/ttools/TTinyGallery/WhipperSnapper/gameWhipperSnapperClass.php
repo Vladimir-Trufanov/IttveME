@@ -38,18 +38,17 @@ class WhipperSnapper
       ?>
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <link rel="stylesheet" href="ttools/TTinyGallery/WhipperSnapper/css/style.css">
+         <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
       <?php
    }
    //
    private function echoPlay()
    {
-      ?>
-      <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
-      <script>
-         //СursorSnake();
-         igra();
-      </script>
-      <?php
+      $SignaUrl=$_SERVER['SCRIPT_NAME'];
+      ?> <script>
+         SignaUrl="<?php echo $SignaUrl;?>";
+         СursorSnake();
+      </script> <?php
    }
 }
 

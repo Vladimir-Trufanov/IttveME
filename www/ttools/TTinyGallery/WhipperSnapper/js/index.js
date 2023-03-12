@@ -1,391 +1,93 @@
 /* на русском */
 
-
-$(document).ready(function()
+$(document).ready(function() 
 {
-   //СursorSnake();
+   window.addEventListener('resize',doOnResize);
 });
 
+function doOnResize() 
+{
+    window.location=SignaUrl;
+}
 
 /*
 // 1 часть: игра с курсором-змеёй
-//window.requestAnimationFrame(animate);
 */
-
-/*
-var step = 0;
-var canvas1 = document.createElement('canvas');
-canvas1.width = window.innerWidth
-canvas1.height = window.innerHeight
-document.getElementsByTagName('body')[0].appendChild(canvas1);
-var ctx = canvas1.getContext('2d');
-var bg = [68,	43,	48]
-var mouse = new Mouse()
-
-document.onmousemove = function(e){ mouse.x = e.pageX; mouse.y = e.pageY}
-window.addEventListener('resize', setup);
-
-
-var flwr, flwrPrev, train = [], i, n = 50;
-for (i = 0; i < n; i++) 
-{
-  flwr = new Flwr(mouse)
-  flwr.n = i
-  if (flwrPrev) {
-    flwr.b = flwrPrev.b + (0.1/n)
-    flwr.follow = flwrPrev
-    flwrPrev.child = flwr
-  } else {
-    flwr.follow = mouse
-  }
-  flwrPrev = flwr
-  train.push(flwr)
-}
-
-setup(ctx,bg);
-anim(ctx,bg,train,mouse,n);
-*/
-
-
-function igra()
-{
-var step = 0;
-var canvas1 = document.createElement('canvas');
-canvas1.width = window.innerWidth
-canvas1.height = window.innerHeight
-document.getElementsByTagName('body')[0].appendChild(canvas1);
-var ctx = canvas1.getContext('2d');
-var bg = [68,	43,	48]
-var mouse = new Mouse()
-
-document.onmousemove = function(e){ mouse.x = e.pageX; mouse.y = e.pageY}
-window.addEventListener('resize', setup);
-
-
-var flwr, flwrPrev, train = [], i, n = 50;
-for (i = 0; i < n; i++) 
-{
-  flwr = new Flwr(mouse)
-  flwr.n = i
-  if (flwrPrev) {
-    flwr.b = flwrPrev.b + (0.1/n)
-    flwr.follow = flwrPrev
-    flwrPrev.child = flwr
-  } else {
-    flwr.follow = mouse
-  }
-  flwrPrev = flwr
-  train.push(flwr)
-}
-
-setup(ctx,bg);
-anim(ctx,bg,train,mouse,n,step);
-
-}
-
-
-/*
 function СursorSnake()
 {
-   let o; // див
-   let oi;
-   var leftCanvas;
-   var topCanvas;
-   var widthCanvas;
-   var heightCanvas;
-   var heightLife;     // высота дива Life
-   var heighttLife;    // высота дива tLife
+   var step=0;
+   var SnakeContext;     // контекст холста для рисования змейки
+   var ColorCanvas;      // цвет холста ('CadetBlue'='#5F9EA0'=[95,158,160]) 
 
-   var SnakeCanvas=document.createElement('canvas');
-   SnakeCanvas.width = window.innerWidth
-   SnakeCanvas.height = window.innerHeight
+   // Готовим холст для рисования змейки
+   let SnakeCanvas=document.createElement('canvas');
+   SnakeCanvas.width = window.innerWidth;
+   SnakeCanvas.height = window.innerHeight;
    document.getElementsByTagName('body')[0].appendChild(SnakeCanvas);
-   var SnakeContext=SnakeCanvas.getContext('2d');
-   var ColorCanvas=[95,158,160]; 
-  
-   // Выбираем параметры для холста
-   o=document.getElementById('Life');
-   oi=o.getBoundingClientRect();
-   leftCanvas=oi.left;
-   topCanvas=oi.top;
-   widthCanvas=oi.width;
-   heightLife=oi.height;
-   console.log('Life');
-   console.log('leftCanvas='+leftCanvas);
-   console.log('topCanvas='+topCanvas);
-   console.log('widthCanvas='+widthCanvas);
-   console.log('heightLife='+heightLife);
+   SnakeContext=SnakeCanvas.getContext('2d');
+   ColorCanvas=[95,158,160]; 
+
+   // Готовим координаты холста
+   let o=document.getElementById('Life');
+   let oi=o.getBoundingClientRect();
+   let heightLife=oi.height;
    
    o=document.getElementById('tLife');
    oi=o.getBoundingClientRect();
-   leftCanvas=oi.left;
-   topCanvas=oi.top;
-   widthCanvas=oi.width;
-   heighttLife=oi.height;
-   console.log('tLife');
-   console.log('leftCanvas='+leftCanvas);
-   console.log('topCanvas='+topCanvas);
-   console.log('widthCanvas='+widthCanvas);
-   console.log('heighttLife='+heighttLife);
+   let heighttLife=oi.height;
    
    o=document.getElementById('WorkTiny');
    oi=o.getBoundingClientRect();
-   leftCanvas=oi.left;
-   topCanvas=oi.top;
-   widthCanvas=oi.width;
-   
-   console.log('WorkTiny');
-   console.log('leftCanvas='+leftCanvas);
-   console.log('topCanvas='+topCanvas);
-   console.log('widthCanvas='+widthCanvas);
-   
-   heightCanvas=heightLife-heighttLife;
-   console.log('heightCanvas='+heightCanvas);
-   
-   SnakeCanvas.left = 20;
-   SnakeCanvas.top = 400;
-   SnakeCanvas.width = 200;
-   SnakeCanvas.height = 100;
+   var leftCanvas=oi.left;
+   var topCanvas=oi.top;
+   var widthCanvas=oi.width;
+   var heightCanvas=(heightLife-heighttLife)*.98;
 
-   SnakeContext.rect(20,400,200,100);
-   SnakeContext.fillStyle = 'Azure';
-   SnakeContext.fill();
-   
-   console.log('Приветик!');
+   var mouse=new Mouse(leftCanvas,topCanvas,widthCanvas,heightCanvas);
+   //document.onmousemove = function(e){ mouse.x = e.pageX; mouse.y = e.pageY};
+   //document.onmousemove =  MovingMouse(e);
+   document.onmousemove = function(e){MovingMouse(e,mouse);};
 
+
+   var flwr,flwrPrev,train=[],i,n=50;
+   for (i = 0; i < n; i++) 
+   {
+      flwr = new Flwr(mouse);
+      flwr.n = i;
+      if (flwrPrev) 
+      {
+         flwr.b = flwrPrev.b + (0.1/n)
+         flwr.follow = flwrPrev
+         flwrPrev.child = flwr
+      } 
+      else 
+      {
+         flwr.follow = mouse
+      }
+      flwrPrev = flwr
+      train.push(flwr)
+   }
+    
+   console.log('Начало!');
+   animate(SnakeContext,ColorCanvas,train,mouse,n,step,leftCanvas,topCanvas,widthCanvas,heightCanvas);
 }
-
-   
-   console.log('Приветик1!');
-*/
-
-
-
-
-
-
-/*
-var SnakeCanvas=document.createElement('canvas');
-SnakeCanvas.width = window.innerWidth
-SnakeCanvas.height = window.innerHeight
-document.getElementsByTagName('body')[0].appendChild(SnakeCanvas);
-var SnakeContext=SnakeCanvas.getContext('2d');
-var ColorCanvas=[95,158,160]; 
-
-fillOldCanvas(ctx,bg,1); 
-fill1(SnakeContext,bg,1);
-*/
-
-function fillOldCanvas(context,color,alpha) 
-{
-  context.rect(10,90,300,100);
-  context.fillStyle = 'Azure';
-  context.fill();
-}
-
-/*
-function fill1(context,color,alpha) 
-{
-  context.rect(10,290,300,100);
-  //context.fillStyle = 'red';
-  context.fill();
-}
-*/
-
-/*
-var canvas2 = document.createElement('canvas')
-var ctx2 = canvas1.getContext('2d')
-document.getElementsByTagName('body')[0].appendChild(canvas2);
-*/
-
-
-/*
-var canvas2 = document.createElement('canvas')
-var ctx2 = canvas2.getContext('2d')
-document.getElementsByTagName('body')[0].appendChild(canvas2);
-setup2();
-
-function setup2() 
-{
-  / *
-  width = window.innerWidth
-  height = window.innerHeight
-  * /
-  fillCanvas2(ctx2, bg, 1)
-}
-function fillCanvas2 (context, color, alpha) 
-{
-  //context.rect(0, 0, this.width, this.height)
-
-  o=document.getElementById('WorkTiny');
-  oi=o.getBoundingClientRect();
-  wipi=oi.width;
-  topi=oi.top+20;
-  //console.log(wipi);
- 
-  canvas2.left = 20;
-  canvas2.top = 400;
-  canvas2.width = 200;
-  canvas2.height = 200;
-
-  context.rect(20,400,200,200);
-  //context.fillStyle = 'rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})';
-  context.fillStyle = 'Azure';
-  
-  context.fill();
-}
-*/
-
-
-/*
-
-   let o; // див
-   let oi;
-   var leftCanvas;
-   var topCanvas;
-   var widthCanvas;
-   var heightCanvas;
-   var heightLife;     // высота дива Life
-   var heighttLife;    // высота дива tLife
-  
-   // Выбираем параметры для холста
-   
-   o=document.getElementById('Life');
-   oi=o.getBoundingClientRect();
-   leftCanvas=oi.left;
-   topCanvas=oi.top;
-   widthCanvas=oi.width;
-   heightLife=oi.height;
-   console.log('Life');
-   console.log('leftCanvas='+leftCanvas);
-   console.log('topCanvas='+topCanvas);
-   console.log('widthCanvas='+widthCanvas);
-   console.log('heightLife='+heightLife);
-   
-   o=document.getElementById('tLife');
-   oi=o.getBoundingClientRect();
-   leftCanvas=oi.left;
-   topCanvas=oi.top;
-   widthCanvas=oi.width;
-   heighttLife=oi.height;
-   console.log('tLife');
-   console.log('leftCanvas='+leftCanvas);
-   console.log('topCanvas='+topCanvas);
-   console.log('widthCanvas='+widthCanvas);
-   console.log('heighttLife='+heighttLife);
-   
-   o=document.getElementById('WorkTiny');
-   oi=o.getBoundingClientRect();
-   leftCanvas=oi.left;
-   topCanvas=oi.top;
-   widthCanvas=oi.width;
-   
-   console.log('WorkTiny');
-   console.log('leftCanvas='+leftCanvas);
-   console.log('topCanvas='+topCanvas);
-   console.log('widthCanvas='+widthCanvas);
-   
-   heightCanvas=heightLife-heighttLife;
-   console.log('heightCanvas='+heightCanvas);
-   
-   SnakeCanvas.left = 20;
-   SnakeCanvas.top = 400;
-   SnakeCanvas.width = 200;
-   SnakeCanvas.height = 100;
-   */
-   
-   /*
-   SnakeContext.rect(20,400,200,100);
-   SnakeContext.fillStyle = 'Azure';
-   SnakeContext.fill();
-   */
-
-   //FillCanvas(SnakeContext,ColorCanvas,1,iLeft,iTop,iWidth,iHeight);
-   //FillCanvas(SnakeContext,ColorCanvas,1);
-   
-   //setup(SnakeContext,bg);
 
 
 // функции
 
-function setup(context,color,iLeft=10,iTop=90,iWidth=300,iHeight=100) 
+function MovingMouse(e,mouse)
 {
-   fillOldCanvas(context,color,1);
+   px=e.pageX;
+   if (px>300) px=290;
+   mouse.x = px; 
+   mouse.y = e.pageY
 }
-
-/*
-function fillOldCanvas(context,color,alpha) 
-{
-  //context.rect(0, 0, this.width, this.height)
-
-  / *
-  o=document.getElementById('WorkTiny');
-  oi=o.getBoundingClientRect();
-  wipi=oi.width;
-  topi=oi.top+20;
-  //console.log(wipi);
-  * /
-
-  //context.rect(20,topi,wipi,300);
-  context.rect(10,90,300,100);
-  //context.rect(iLeft,iTop,iWidth,iHeight);
-  //context.fillStyle = 'rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})';
-  context.fillStyle = 'Azure';
-  
-  context.fill();
-}
-*/
-
-function FillCanvas(context,color,alpha,iLeft,iTop,iWidth,iHeight) 
-{
-  //context.rect(0, 0, this.width, this.height)
-
-  /*
-  o=document.getElementById('WorkTiny');
-  oi=o.getBoundingClientRect();
-  wipi=oi.width;
-  topi=oi.top+20;
-  //console.log(wipi);
-  */
-
-  //context.rect(20,topi,wipi,300);
-  context.rect(10,190,300,100);
-  //context.rect(iLeft,iTop,iWidth,iHeight);
-  //context.fillStyle = 'rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})';
-  context.fillStyle = 'red';
-  
-  context.fill();
-}
-
 
 // mouse coordinates
-function Mouse () 
+function Mouse (leftCanvas,topCanvas,widthCanvas,heightCanvas) 
 {
-  //ii=$("#WorkTiny").innerWidth;
-  this.x = 160; //window.innerWidth / 2
-  //this.x = $("#Life").innerWidth / 2
-  
-  this.y = 160; //window.innerHeight / 2
-  //this.y = $("#Life").innerHeight / 2
-}
-
-
-/*
-function animate() 
-{
-  fillOldCanvas(ctx,bg,1);
-  draw()
-  step++
-  window.requestAnimationFrame(function(){animate()})
-}
-*/
-
-function anim(ctx,bg,train,mouse,n,step) 
-{
-  fillOldCanvas(ctx,bg,1);
-  draw(ctx,train,mouse,n)
-  step++
-  window.requestAnimationFrame(function(){anim(ctx,bg,train,mouse,n,step)})
+   this.x = leftCanvas+(widthCanvas/2);
+   this.y = topCanvas+(heightCanvas/2);
 }
 
 
@@ -401,6 +103,31 @@ function Flwr (mouse)
   this.b = 0.54
   this.n = 0
 }
+
+
+
+
+
+function animate(ctx,bg,train,mouse,n,step,Left=10,Top=90,Width=300,Height=100,alpha=1) 
+{
+  ctx.rect(Left,Top,Width,Height);
+  ctx.fillStyle='rgba('+bg[0]+','+bg[1]+','+bg[2]+','+alpha+')';
+  ctx.fill();
+  
+  //
+  // console.log('['+mouse.x+'-'+mouse.y+']');
+  //
+  //if (mouse.x > 200)
+  draw(ctx,train,mouse,n);
+  step++;
+  window.requestAnimationFrame(function()
+  {
+     animate(ctx,bg,train,mouse,n,step,Left,Top,Width,Height,alpha)
+  })
+}
+
+
+
 
 function draw (ctx,train,mouse,n) 
 {
@@ -419,6 +146,10 @@ function draw (ctx,train,mouse,n)
 
     flwr.x = flwr.dx * flwr.b + flwr.x 
     flwr.y = flwr.dy * flwr.b + flwr.y 
+
+  //
+  // console.log('['+mouse.x+'-'+flwr.x+'  '+mouse.y+'-'+flwr.y+']');
+  //
     
     // draw
     // ctx.beginPath();
@@ -426,11 +157,15 @@ function draw (ctx,train,mouse,n)
     // ctx.fillStyle = '#FFF547'
     // ctx.fill()
     
-    if (flwr.follow !== mouse) {
+    if (flwr.follow !== mouse) 
+    {
       ctx.beginPath();
-      ctx.strokeStyle = '#FFF547'
-      ctx.lineCap = 'round'
-      ctx.lineWidth = (n-flwr.n)/n * 8 + 2
+      ctx.strokeStyle = '#FFF547';
+      ctx.lineCap = 'round';
+      ctx.lineWidth = (n-flwr.n)/n * 8 + 2; // определили диаметр кружка
+      
+      //if (flwr.x>100) flwr.x=100;
+      
       ctx.moveTo(flwr.x,flwr.y);
       ctx.lineTo(flwr.follow.x,flwr.follow.y);
       ctx.stroke();
@@ -439,9 +174,11 @@ function draw (ctx,train,mouse,n)
   
 }
 
+/*
 function drawCircle (context, x, y, r) {
   context.arc(x ,y , r, 0, 2*Math.PI);
 }
+*/
 
 // 2 часть: анимация фона
 
