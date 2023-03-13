@@ -404,13 +404,9 @@ class TinyGallery
    // *************************************************************************
    public function ViewGallerySpace()
    {
-      $getArti=$this->Arti->getArti;
-      $getArti=NULL;
-      if ($getArti==NULL)
-      {
-         echo '$getArti==NULL';
-      }
-      else
+      // Запускаем галерею, если нет отложенного сообщения, 
+      // иначе будем запускать игру со змеёй и градиент
+      if ($this->DelayedMessage==imok) 
       {
          if (\prown\isComRequest(mmlNaznachitStatyu))
             mmlNaznachitStatyu_BODY_KwinGallery();
@@ -438,8 +434,8 @@ class TinyGallery
       echo '</div>';
       // Левая часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
-         //echo $UserAgent.'<br>';
-         $this->menu->MakeAnyDiffButton();
+         echo $UserAgent.'<br>';
+         //$this->menu->MakeAnyDiffButton();
       echo '</div>';
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';

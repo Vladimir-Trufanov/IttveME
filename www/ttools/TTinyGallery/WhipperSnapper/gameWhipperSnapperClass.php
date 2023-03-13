@@ -41,6 +41,8 @@ class WhipperSnapper
       DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
       OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR 
       THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      
+      https://codereviewvideos.com/course/from-jquery-to-typescript/video/super-mario
       --> <?php
    }
    // Подключить стили игры
@@ -57,17 +59,40 @@ class WhipperSnapper
    {
       ?>
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="ttools/TTinyGallery/WhipperSnapper/css/style.css">
-         <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
+         <link rel="stylesheet" href="ttools/TTinyGallery/WhipperSnapper/WhipperSnapper.css">
+         <script  src="ttools/TTinyGallery/WhipperSnapper/WhipperSnapper.js"></script>
       <?php
    }
    //
    private function echoPlay()
    {
       $SignaUrl=$_SERVER['SCRIPT_NAME'];
-      ?> <script>
-         SignaUrl="<?php echo $SignaUrl;?>";
-         //СursorSnake();
+      ?> 
+      <script>
+      // Готовим переменную для перезагрузки страницы 
+      // при изменении размеров окна браузера
+      SignaUrl="<?php echo $SignaUrl;?>";
+      // Готовим настройки для градиента в галерее      
+      var colors = new Array(
+         [62,35,255],
+         [60,255,60],
+         [255,35,98],
+         [45,175,230],
+         [255,0,255],
+         [255,128,0]);
+      var step = 0;
+      //color table indices for: 
+      // current color left
+      // next color left
+      // current color right
+      // next color right
+      var colorIndices = [0,1,2,3];
+      //transition speed
+      var gradientSpeed = 0.002;
+      // Обеспечиваем перезапуск градиента с интервалом 10 мкс
+      setInterval(updateGradient,10);
+      // Запускаем игру со змейкой   
+      СursorSnake();
       </script> <?php
    }
 }

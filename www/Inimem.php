@@ -35,7 +35,6 @@ define ("ajUndeletionOldFiles", "Ошибка удаления старых фа
 // Подключить переменные JavaScript, соответствующие определениям в PHP
 function DefineJS()
 {
-/*
    $define=
    '<script>'.
    'pathPhpPrown="'        .pathPhpPrown.'";'.
@@ -52,7 +51,6 @@ function DefineJS()
    'ajUndeletionOldFiles="'.ajUndeletionOldFiles.'";'.
    '</script>';
    echo $define;
-*/
 }   
 // ------------------------------------------------------------------- ZERO ---
 
@@ -152,9 +150,12 @@ require_once "ttools/TMenuLeader/MenuLeaderClass.php";
 require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once "ttools/TTinyGallery/TinyGalleryClass.php";
 require_once "ttools/TKwinGallery/KwinGalleryClass.php";
-      
+/*
+*/
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');
+//echo 'Привет2';      
+
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
@@ -194,6 +195,7 @@ $с_ModeImg=prown\MakeCookie('ModeImg',vimExiSize,tStr,true);             // р�
 //$p_ittveLife="ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
 //$p_ittveNews="ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
 
+
 /*
 if ($SiteDevice==Mobile) 
 {   
@@ -206,6 +208,7 @@ else
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
 $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - разворачивать новости при загрузке
 */
+
 
 // Определяем данные для работы с базой данных материалов 
 $basename=$_SERVER['DOCUMENT_ROOT'].'/ittve';  // имя базы без расширения 'db3'
