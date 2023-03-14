@@ -302,3 +302,10 @@ Stack trace:
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 415
 [13-Mar-2023 21:06:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 419
+[14-Mar-2023 20:59:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 406
+[14-Mar-2023 21:00:56 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\MakeTitle() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:463
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 463

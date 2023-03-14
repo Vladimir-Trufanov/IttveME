@@ -7,7 +7,7 @@
 // *                 и галереи изображений, связанной с этим материалом (uid) *
 // *                                    из выбранной (указанной) группы (pid) *
 // *                                                                          *
-// * v2.0, 11.03.2023                              Автор:       Труфанов В.Е. *
+// * v3.0, 11.03.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
@@ -81,7 +81,9 @@
 
 require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpTools."/CommonTools.php";
-require_once "ttools/TTinyGallery/WorkTiny.php";
+require_once "ttools/TTinyGallery/Dispatch_ZERO.php";
+require_once "ttools/TTinyGallery/Dispatch_HEAD.php";
+require_once "ttools/TTinyGallery/Dispatch_BODY.php";
 
 define ("ttMessage", 1);  // вывести информационное сообщение
 define ("ttError",   2);  // вывести сообщение об ошибке
@@ -131,13 +133,13 @@ class TinyGallery
       $this->Delcue=NULL;
       $this->Sayme=NULL;
       
-      
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
       $this->fileStyle="Styles/WorkTiny.css";
       $this->editdir=editdir; 
       $this->pidEdit=-1; 
       $this->uidEdit=-1; 
+      
       // Регистрируем объект по работе с базой данных материалов
       $this->Arti=$Arti;
       // Считываем предопределенные размеры частей рабочей области редактирования
@@ -189,7 +191,7 @@ class TinyGallery
       CompareCopyRoot('CommonTools.js',pathPhpTools,jsxdir);
       // Инициируем отложенное сообщение
       $this->DelayedMessage=imok;
-      // 1 этап - 'Проверка текущего транслита'
+      // 1-ZERO этап - 'Проверка текущего транслита'
       $getArti=$this->Arti->getArti;
       $getArti=NULL;
       if ($getArti==NULL)
@@ -198,7 +200,7 @@ class TinyGallery
          'Материал не определен. Выберите его в меню "Жизнь и путешествия"'
         ;
       }
-      // 2 этап - 'Обработка запроса на следующую страницу'
+      // 2-ZERO этап - 'Обработка запроса на следующую страницу'
       if ($this->DelayedMessage==imok)
       {
       }
@@ -296,71 +298,83 @@ class TinyGallery
    // *************************************************************************
    public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
    {
-      echo'  
-      <style>
-      </style>
-      ';
-
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
-      
       // Подключаем кнопки управляющего меню
       $this->menu=new MenuLeader(ittveme,$this->urlHome);
       $this->menu->Init();
       
-      // Если отложенное сообщение, то инициируем игру со змеёй 
-      // и анимацию фона
+      // 1-HEAD этап - 'Если есть отложенное сообщение, то инициируем игру 
+      // со змеёй и анимацию фона'
       if ($this->DelayedMessage<>imok)
       {
          require_once "ttools/TTinyGallery/WhipperSnapper/gameWhipperSnapperClass.php";
          $this->WhipperSnapper=new \game\WhipperSnapper('IttveME');
          $this->WhipperSnapper->Head();
       }
-      
-      
-      // Настраиваем размеры частей рабочей области редактирования
-      // 28.02.2023 - может в будущем пригодится !!!
-     
-      /*
-      echo '
-      <style>
-      #WorkTiny
+      else
       {
-         width:100%;
-         height:100%;
-         overflow:auto;
+         // Настраиваем размеры частей рабочей области редактирования
+         // 28.02.2023 - может в будущем пригодится !!!
+         /*
+         echo '
+         <style>
+         #WorkTiny
+         {
+            width:100%;
+            height:100%;
+            overflow:auto;
+         }
+         </style>
+         ';
+         */
+
+         /*
+         echo '
+         <style>
+         #KwinGallery
+         {
+            width:'.$this->KwinGalleryWidth.$this->EdIzm.';'.'
+            height:'.($this->WorkTinyHeight+$this->FooterTinyHeight).$this->EdIzm.';'.'
+         }
+         #WorkTiny,#FooterTiny
+         {
+            width:'.(100-$this->KwinGalleryWidth).$this->EdIzm.';'.'
+         }
+         #WorkTiny
+         {
+            height:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
+         }
+         #FooterTiny
+         {
+            top:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
+            height:'.$this->FooterTinyHeight.$this->EdIzm.';'.'
+         }
+         </style>
+         ';
+         */
+
+         /*
+         // -------------------------------------------------------------------
+         // это вставка на случай, пока используется игра DuckFly 
+         // (для игры нужно убрать все полосы прокрутки)
+         if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+            echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
+         else
+            echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
+         // -------------------------------------------------------------------
+
+         // 2-HEAD этап ------------------ ?Com=dobavit-novyj-razdel-materialov
+         if (\prown\isComRequest(mmlZhiznIputeshestviya))
+            mmlZhiznIputeshestviya_HEAD();
+         else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+            $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+         // Последний-HEAD этап - инициируем разметку для выбранного материала
+         else $this->$WorkTinyMain=WorkTinyMain_HEAD($this->fileStyle);
+         */
       }
-      </style>
-      ';
-      */
-      
-      
-      /*
-      echo '
-      <style>
-      #KwinGallery
-      {
-         width:'.$this->KwinGalleryWidth.$this->EdIzm.';'.'
-         height:'.($this->WorkTinyHeight+$this->FooterTinyHeight).$this->EdIzm.';'.'
-      }
-      #WorkTiny,#FooterTiny
-      {
-         width:'.(100-$this->KwinGalleryWidth).$this->EdIzm.';'.'
-      }
-      #WorkTiny
-      {
-         height:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
-      }
-      #FooterTiny
-      {
-         top:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
-         height:'.$this->FooterTinyHeight.$this->EdIzm.';'.'
-      }
-      </style>
-      ';
-      */
       
       /*
          // *************************************************************************
@@ -368,17 +382,7 @@ class TinyGallery
       // *************************************************************************
       private function Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)
       {
-      // ----------------------------------------------------------------------
-      // это вставка на случай, пока используется игра DuckFly 
-      // (для игры нужно убрать все полосы прокрутки)
-      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
-      else
-         echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
-      // ----------------------------------------------------------------------
       $Result=true;
-      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
       elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
       elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
@@ -388,15 +392,12 @@ class TinyGallery
       }
 
       if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)) {}
-      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
-         mmlZhiznIputeshestviya_HEAD();
       else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_HEAD();
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->IniEditSpace_mmlVybratStatyuRedakti();
       else if (\prown\isComRequest(mmlUdalitMaterial))
          $this->IniEditSpace_mmlUdalitMaterial();
-      else main_HEAD($this->fileStyle);
       */
    }
    // *************************************************************************
@@ -462,7 +463,18 @@ class TinyGallery
          $Title=MakeTitle($this->DelayedMessage,ttError);
          $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
       }
-
+      
+      /*
+      // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
+      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
+         mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
+      // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
+      else 
+      {
+         $Title=MakeTitle('--------------Страничка',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->$WorkTinyMain);
+      }
+      */
       /*
       // Выводим заголовок статьи
       if ($this->DelayedMessage==imok)
@@ -513,8 +525,6 @@ class TinyGallery
          $this->WorkTiny_mmlVybratStatyuRedakti();
       else if (\prown\isComRequest(mmlUdalitMaterial))
          $this->WorkTiny_mmlUdalitMaterial();
-      // В обычном режиме
-      else $this->WorkTiny_main();
       */
 
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
@@ -547,44 +557,6 @@ class TinyGallery
    {
       // Включаем рождественскую версию шрифтов и полосок меню
       IniFontChristmas();
-   }
-   // *************************************************************************
-   // *   Обеспечить просмотр или редактирование материала в рабочей области  *
-   // *************************************************************************
-   private function WorkTiny_main()
-   {
-      //phpinfo();
-
-      // Если статья не определена, то подключаем заменяющую игру со змеёй
-      $getArti=$this->Arti->getArti;
-      $getArti=NULL;
-      if ($getArti==NULL)
-      {
-         //$this->oWhipperSnapper->Play();
-         echo 'WorkTiny_main asdfghjkl; фывапролдж ';
-      }
-      else
-      {
-         // Формируем контент страницы   
-         if ($this->contents<>NULL) $contenti=$this->contents;
-         else $contenti='';
-
-         // Если режим редактирования, то готовим рабочую область Tiny  
-         if (GalleryMode==mwgEditing) 
-         {
-            $SaveAction=$_SERVER["SCRIPT_NAME"];
-            echo '
-               <form id="frmTinyText" method="post" action="'.$SaveAction.'">
-               <textarea id="mytextarea" name="mytextarea">
-            '; 
-            echo $contenti;
-            echo '
-               </textarea>
-               </form>
-            ';
-         }
-         else echo $contenti;
-      } 
    }
    private function WorkTiny_mmlVernutsyaNaGlavnuyu()
    {

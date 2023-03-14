@@ -5,37 +5,25 @@
 // ****************************************************************************
 // * TinyGalleryClass             Блок функций расширения класса TTinyGallery *
 // *                                                                          *
-// * v1.0, 21.02.2022                              Автор:       Труфанов В.Е. *
+// * v1.0, 14.03.2022                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  13.11.2022 *
 // ****************************************************************************
 
 // ****************************************************************************
-// *                      "Добавить новый раздел материалов"                  *
+// *        Построить рабочую область для выбранной статьи и её галереи,      *
+// *                   обеспечить просмотр и редактирование                   *
 // ****************************************************************************
-function WorkTinyMain_HEAD($game=NULL)
+function WorkTinyMain_HEAD($fileStyle)
 {
    require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
-   $WorkTiny=new WorkTinyMain($game);
+   $WorkTiny=new WorkTinyMain($fileStyle);
    $WorkTiny->Head();
    return $WorkTiny;
 }
 function WorkTinyMain_BODY($WorkTiny,&$Title)
 {
-
-   //MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
-   MakeTitle('Страничка будет следующей зимой, пока постреляйте уток!',ttMessage);
    $WorkTiny->Body();
 }
-
-
-
-
-
-
-
-
-
-
 
 // ****************************************************************************
 // *                      "Добавить новый раздел материалов"                  *
@@ -185,61 +173,6 @@ class WhipperSnapper
 
 // ------------------------------------------------------------------- Main ---
 
-// ****************************************************************************
-// *      Построить рабочую область для редактирования выбранной статьи       *
-// ****************************************************************************
-function main_HEAD($fileStyle)
-{
-   // Если режим редактирования, то готовим рабочую область Tiny  
-  if (GalleryMode==mwgEditing) 
-  {
-    echo '
-      <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
-      <script> tinymce.init
-      ({
-         selector: "#mytextarea",'.
-         //theme: "modern",
-         //setup: function(editor) 
-         //{
-         //   editor.on("init", function(e) 
-         //   {
-         //      console.log("The Editor has initialized.");
-         //   });
-         //},'.
-         //height: 180,'.
-         //width:  780,'.
-         'content_css: "'.$fileStyle.'",'.
-         'plugins:
-         [ 
-            "advlist autolink link image imagetools lists charmap print preview hr anchor",
-            "pagebreak spellchecker searchreplace wordcount visualblocks",
-            "visualchars code fullscreen insertdatetime media nonbreaking",'.
-            // "contextmenu",  // отключено для TinyMCE5-8-1
-            // "textcolor",    // отключено для TinyMCE5-8-1'.
-            '"save table directionality emoticons template paste"
-         ],
-       
-         language: "ru",
-         toolbar:
-         [
-            "| link image | forecolor backcolor emoticons"
-         ],'.
-         //
-         // toolbar:
-         // [
-         //    "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons"
-         // ],.
-         'image_list: [
-            {title: "My image 1", value: "ittveEdit/proba.jpg"},
-            {title: "My image 2", value: "http://www.moxiecode.com/my2.gif"}
-         ],
-         a_plugin_option: true,
-         a_configuration_option: 400
-      });
-      </script>
-    ';
-  }
-}
 
 // ----------------------------------------------------- mmlNaznachitStatyu ---
 
@@ -377,31 +310,6 @@ function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
    require_once "ttools/TEntryClass/EntryClass.php";
    MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
    $Entry=new Entrying();
-}
-// ****************************************************************************
-// *                  Вывести заголовок страницы с материалом                 *
-// ****************************************************************************
-function MakeTitle($NameGru,$NameArt,$DateArt='')
-{
-   $echo='';
-   if ($NameArt==ttMessage) $echo=$echo.'<div id="Message">'.$NameGru.'</div>'; 
-   else if ($NameArt==ttError) $echo=$echo.'<div id="NameError">'.$NameGru.'</div>'; 
-   else
-   {
-      $echo=$echo.'<div id="TopLine">'; 
-      if ($NameArt=='')
-      {
-         $echo=$echo.'<div id="NameGru">'.$NameGru.'</div>'; 
-         $echo=$echo.'<div id="NameArt">'.'</div>'; 
-      }
-      else
-      {
-         $echo=$echo.'<div id="NameGru">'.$NameGru.':'.'</div>'; 
-         $echo=$echo.'<div id="NameArt">'.$NameArt.' ['.$DateArt.']'.'</div>'; 
-      } 
-      $echo=$echo.'</div>'; 
-   }
-   return $echo;
 }
 
 // *********************************************************** WorkTiny.php ***
