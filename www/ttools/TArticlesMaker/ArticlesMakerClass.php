@@ -93,8 +93,9 @@ class ArticlesMaker
       $this->password    = $password;
       $this->kindMessage = NULL;
       
+      // Выбираем текущий транслит
       if (isset($_COOKIE['PunktMenu'])) 
-      $this->getArti=\prown\MakeCookie('PunktMenu');
+         $this->getArti=\prown\MakeCookie('PunktMenu');
       else $this->getArti=NULL; 
       // Выполняем действия на странице до отправления заголовков страницы: 
       // (устанавливаем кукисы и т.д.)                  
@@ -316,30 +317,49 @@ class ArticlesMaker
       $NameGru='Материал для редактирования не выбран!'; 
       $contents='Новый материал'; 
       $NameArt=''; $DateArt='';
+      // Возвращаем ошибку, если транслит не определен
       if ($getArti==NULL) $ErrMessage='Транслит материала не определен';
+      // Транслит есть, будем делать запрос
       else
       {
-         // Выбираем по транслиту $pid,$uid,$NameArt
-         $cSQL='SELECT * FROM stockpw WHERE Translit="'.$getArti.'"';
-         $stmt=$pdo->query($cSQL);
-         $table=$stmt->fetchAll();
-         $count=count($table);
-         // Если найдена одна запись, то выбираем данные
-         if ($count>0)
+         try
          {
-            $pid=$table[0]['pid']; $uid=$table[0]['uid']; 
-            $NameArt=$table[0]['NameArt']; $DateArt=$table[0]['DateArt'];
-            $contents=$table[0]['Art'];
-            // Добираем $NameGru
-            $table=$this->SelRecord($pdo,$pid); 
-            if (count($table)>0) $NameGru=$table[0]['NameArt'];
-            else $ErrMessage='Для статьи с Uid='.$uid.' неверный идентификатор группы: Pid='.$pid; 
+            $pdo->beginTransaction();
+            // Выбираем по транслиту $pid,$uid,$NameArt
+            $cSQL='SELECT * FROM stockpw WHERE Translit="'.$getArti.'"';
+            $stmt=$pdo->query($cSQL);
+            $table=$stmt->fetchAll();
+            // Фиксируем успешную транзакцию
+            $pdo->commit();
+            
+            $count=count($table); 
+            // Если не найдено записей, то диагностируем ошибку.
+            if ($count<1) $ErrMessage='Не найдено записей по транслиту: '.$getArti;
+            // Если больше одной записи, то диагностируем ошибку
+            else if ($count>1) 
+               $ErrMessage="По транслиту ".$getArti." найдено более одной записи, всего ".$count;
+            // Найдена одна запись, выбираем данные из записи
+            else
+            {
+               $pid=$table[0]['pid']; $uid=$table[0]['uid']; 
+               $NameArt=$table[0]['NameArt']; $DateArt=$table[0]['DateArt'];
+               $contents=$table[0]['Art'];
+               // Добираем $NameGru
+               $table=$this->SelRecord($pdo,$pid);
+               // Если ошибка, то возвращаем сообщение
+               if ($table[0]['Translit']==nstErr) $ErrMessage=$table[0]['NameArt'];
+               else
+               {
+                  if (count($table)>0) $NameGru=$table[0]['NameArt'];
+                  else $ErrMessage='Для статьи с Uid='.$uid.' неверный идентификатор группы: Pid='.$pid; 
+               }
+            }
+         } 
+         catch (\Exception $e) 
+         {
+            $ErrMessage=$e->getMessage();
+            if ($pdo->inTransaction()) $pdo->rollback();
          }
-         // Если больше одной записи, то диагностируем ошибку
-         if ($count>1) $ErrMessage="В группе '".$NameGru."' статья '".$NameArt."' c дублированным транслитом: ".$getArti;
-         // Если не найдено записей, то диагностируем ошибку.
-         // На странице ситуация очевидна (на 27.01.2023)
-         else if ($count<1) $ErrMessage='Не найдено записей по транслиту: '.$getArti;
       }
       return $ErrMessage;
    }
@@ -367,15 +387,15 @@ class ArticlesMaker
      return $table; 
    }
    // *************************************************************************
-   // *             Выбрать следующую запись (в ней Translit)                 *
-   // *                относительно текущего идентификатора                   *
+   // *        Найти следующую запись с материалом (статьёй) относительно     *
+   // *            текущего идентификатора и выбрать в ней Translit           *
    // *************************************************************************
    public function SelNextTranslit($pdo,$UnID)
    {
      try
      {
        $pdo->beginTransaction();
-       $cSQL='SELECT NameArt,Translit FROM stockpw1 WHERE uid >'.$UnID.' LIMIT 1';
+       $cSQL='SELECT NameArt,Translit FROM stockpw WHERE uid >'.$UnID.' AND IdCue=0 LIMIT 1';
        $stmt = $pdo->query($cSQL);
        $table = $stmt->fetchAll();
        $pdo->commit();

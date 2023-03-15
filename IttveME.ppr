@@ -442,7 +442,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.css
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -497,7 +497,7 @@ IttveME
 				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				-TModyCueClass
+				+TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
 				-TNewCueClass
 					-Duck Hunt v2
@@ -537,7 +537,7 @@ IttveME
 					www\ttools\TNewCueClass\gameDuckFlyClass.php
 					www\ttools\TNewCueClass\NewCueClass.php
 					www\ttools\TNewCueClass\Игра на голом HTML.doc
-				-TSaymeClass
+				+TSaymeClass
 					-Hextris
 						-images
 							www\ttools\TSaymeClass\Hextris\images\btn_back.svg
@@ -630,55 +630,47 @@ IttveME
 0=www\index.php
 1=www\ttools\TTinyGallery\TinyGalleryClass.php
 2=www\UpSite.php
-3=www\Styles\WorkTiny.css
-4=www\Styles\iniStyles.css
-5=www\ttools\TMenuLeader\MenuLeaderClass.php
-6=www\iniMem.php
-7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-8=www\ttools\TWorkTinyMain\gameProbaClass.php
-9=www\ttools\TKwinGallery\KwinGalleryClass.php
-10=www\UpSiteCSS.php
-11=www\ttools\TTinyGallery\Musor.php
-12=www\ttools\TTinyGallery\Dispatch_BODY.php
+3=www\iniMem.php
+4=www\ttools\TTinyGallery\Musor.php
+5=www\ttools\TTinyGallery\Dispatch_BODY.php
+6=www\ttools\TTinyGallery\Dispatch_ZERO.php
+7=www\ttools\TTinyGallery\Dispatch_HEAD.php
+8=www\ttools\TModyCueClass\ModyCueClass.php
+9=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+10=www\ttools\TArticlesMaker\CommonIttveMe.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\ttools\TTinyGallery\Dispatch_ZERO.php
 [www\index.php]
 TopLine=60
 Caret=4,99
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=1
-Caret=72,3
+TopLine=187
+Caret=10,221
 [www\UpSite.php]
 TopLine=35
 Caret=23,58
-[www\Styles\WorkTiny.css]
-TopLine=208
-Caret=1,247
-[www\Styles\iniStyles.css]
-TopLine=60
-Caret=7,99
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=343
-Caret=37,351
 [www\iniMem.php]
-TopLine=206
-Caret=1,241
-[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=17
-Caret=8,58
-[www\ttools\TWorkTinyMain\gameProbaClass.php]
-TopLine=1
-Caret=1,1
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=156
-Caret=13,168
-[www\UpSiteCSS.php]
-TopLine=84
-Caret=21,100
+TopLine=97
+Caret=1,97
 [www\ttools\TTinyGallery\Musor.php]
-TopLine=276
+TopLine=275
 Caret=1,314
 [www\ttools\TTinyGallery\Dispatch_BODY.php]
 TopLine=1
 Caret=1,12
+[www\ttools\TTinyGallery\Dispatch_ZERO.php]
+TopLine=7
+Caret=80,12
+[www\ttools\TTinyGallery\Dispatch_HEAD.php]
+TopLine=1
+Caret=1,1
+[www\ttools\TModyCueClass\ModyCueClass.php]
+TopLine=1
+Caret=1,1
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=298
+Caret=51,398
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=689
+Caret=54,706

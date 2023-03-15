@@ -91,23 +91,21 @@ define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
 
 // ------------------------------------ Тексты запросов для меню управления ---
-define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya'); 
 define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');  
 define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');
-define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki');    
-
-define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');   
-define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');     
-define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat'); 
-
+define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya'); 
 define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');   
-define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');    
-define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku');     
-define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov'); 
 
-define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');
+define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');    
+define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki');    
+define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku');     
 define ('mmlNaznachitStatyu',            'naznachit-statyu');
+define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');   
+define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat'); 
 define ('mmlUdalitMaterial',             'udalit-material');
+define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov'); 
+define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');     
+define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');
 
 // ----------- Режимы представления материалов = Content Presentation Modes ---
 define ("rpmDoubleRight", 'двухколоночный с правосторонней галереей');   

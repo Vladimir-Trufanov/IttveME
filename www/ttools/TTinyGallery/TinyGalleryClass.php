@@ -189,21 +189,38 @@ class TinyGallery
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
       CompareCopyRoot('CommonTools.js',pathPhpTools,jsxdir);
+      
       // Инициируем отложенное сообщение
       $this->DelayedMessage=imok;
       // 1-ZERO этап - 'Проверка текущего транслита'
       $getArti=$this->Arti->getArti;
-      $getArti=NULL;
       if ($getArti==NULL)
       {
          $this->DelayedMessage=
-         'Материал не определен. Выберите его в меню "Жизнь и путешествия"'
+         "Материал не определен. Выберите его как следующий материал или в меню 'Жизнь и путешествия'"
         ;
       }
-      // 2-ZERO этап - 'Обработка запроса на следующую страницу'
+      // 2-ZERO этап - 'Выбрать следующий материал'
+      $this->DelayedMessage=imok;
+      if ($this->DelayedMessage==imok) 
+      {
+         if (\prown\isComRequest(mmlVybratSledMaterial))
+         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$getArti);
+      }
+      
+      
+      \prown\Alert($this->DelayedMessage." ".$getArti);
+    
+      // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
       if ($this->DelayedMessage==imok)
       {
+         // Устанавливаем кукис на новый или выбранный материал
+         if ($getArti<>NULL)
+         {
+            $this->Arti->cookieGetPunktMenu($getArti); 
+         }
       }
+         $this->DelayedMessage='imok';
       
       
       
@@ -216,20 +233,6 @@ class TinyGallery
       //    $this->Arti->GetPunktMenu($apdo);
       $getArti=\prown\getComRequest('arti'); // выбрали транслит 
 
-      // Если запрос на следующую страницу, то выходим на материал
-      if (\prown\isComRequest(mmlVybratSledMaterial))
-      {
-
-         //$getArti='123-4';
-         //\prown\ConsoleLog(mmlVybratSledMaterial.': '.$getArti);
-         $apdo=$this->Arti->BaseConnect();
-         $a=$this->Arti->SelNextTranslit($apdo,26);
-         \prown\ConsoleLog(serialize($a));
-         \prown\ConsoleLog('$a[0]["Translit"]='.$a[0]["Translit"]);
-         // Если ошибка, то формируем отложенное сообщение
-         if ($a[0]["Translit"]==nstErr) $this->DelayedMessage=$a[0]["NameArt"];
-
-      } 
       \prown\ConsoleLog('$this->DelayedMessage='.$this->DelayedMessage);
 
 
@@ -266,11 +269,6 @@ class TinyGallery
       if ($contentNews<>NULL)
       {
          $this->Arti->UpdateByTranslit($this->apdo,$this->Arti->getArti,$contentNews);
-      }
-      // Устанавливаем кукис на новый или выбранный материал
-      if ($getArti<>NULL)
-      {
-         $this->Arti->cookieGetPunktMenu($getArti); 
       }
       
       

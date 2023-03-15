@@ -309,3 +309,85 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 463
+[15-Mar-2023 13:10:50 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'pri' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 120
+[15-Mar-2023 13:12:38 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:411
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 411
+[15-Mar-2023 13:37:58 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:410
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 410
+[15-Mar-2023 13:38:06 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:410
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 410
+[15-Mar-2023 13:40:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:410
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 410
+[15-Mar-2023 13:42:22 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:411
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 411
+[15-Mar-2023 14:32:02 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:412
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 412
+[15-Mar-2023 15:18:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 198
+[15-Mar-2023 18:41:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\IttveMe\www\ttools\TTinyGallery\Dispatch_ZERO.php on line 27
+[15-Mar-2023 18:44:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '*' in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 212
+[15-Mar-2023 18:45:02 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:413
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 413
+[15-Mar-2023 18:45:11 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:413
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 413
+[15-Mar-2023 18:47:58 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:414
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 414
+[15-Mar-2023 18:56:55 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function BaseGallery() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:414
+Stack trace:
+#0 C:\IttveMe\www\UpSite.php(51): ttools\TinyGallery->ViewGallerySpace()
+#1 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 414
+[15-Mar-2023 19:02:33 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php:325
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\Dispatch_ZERO.php(28): ttools\ArticlesMaker->SelUidPid(NULL, 'osobennosti-ust...', 0, 0, '\xD0\x9C\xD0\xB0\xD1\x82\xD0\xB5\xD1\x80\xD0\xB8\xD0\xB0\xD0...', '', '', '\xD0\x9D\xD0\xBE\xD0\xB2\xD1\x8B\xD0\xB9 \xD0\xBC\xD0\xB0...')
+#1 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(208): ttools\mmlVybratSledMaterial_ZERO(Object(ttools\ArticlesMaker), 'osobennosti-ust...')
+#2 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(157): ttools\TinyGallery->ZeroEditSpace()
+#3 C:\IttveMe\www\iniMem.php(227): ttools\TinyGallery->__construct('C:\\IttveMe\\www', 'http://localhos...', '75', '15', '30', '%', Object(ttools\ArticlesMaker))
+#4 C:\IttveMe\www\index.php(87): require_once('C:\\IttveMe\\www\\...')
+#5 {main}
+  thrown in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 325
+[15-Mar-2023 19:03:47 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: stockpw1 in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php:325
+Stack trace:
+#0 C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php(325): PDO->query('SELECT * FROM s...')
+#1 C:\IttveMe\www\ttools\TTinyGallery\Dispatch_ZERO.php(28): ttools\ArticlesMaker->SelUidPid(Object(PDO), 'osobennosti-ust...', 0, 0, '\xD0\x9C\xD0\xB0\xD1\x82\xD0\xB5\xD1\x80\xD0\xB8\xD0\xB0\xD0...', '', '', '\xD0\x9D\xD0\xBE\xD0\xB2\xD1\x8B\xD0\xB9 \xD0\xBC\xD0\xB0...')
+#2 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(208): ttools\mmlVybratSledMaterial_ZERO(Object(ttools\ArticlesMaker), 'osobennosti-ust...')
+#3 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(157): ttools\TinyGallery->ZeroEditSpace()
+#4 C:\IttveMe\www\iniMem.php(227): ttools\TinyGallery->__construct('C:\\IttveMe\\www', 'http://localhos...', '75', '15', '30', '%', Object(ttools\ArticlesMaker))
+#5 C:\IttveMe\www\index.php(87): require_once('C:\\IttveMe\\www\\...')
+#6  in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 325
