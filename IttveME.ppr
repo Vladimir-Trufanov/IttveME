@@ -590,7 +590,7 @@ IttveME
 					www\ttools\TTinyGallery\TinyGalleryClass.php
 				-TTuningClass
 					www\ttools\TTuningClass\TuningClass.php
-				-TWorkTinyMain
+				+TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 			www\.htaccess
@@ -638,15 +638,16 @@ IttveME
 8=www\ttools\TModyCueClass\ModyCueClass.php
 9=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 10=www\ttools\TArticlesMaker\CommonIttveMe.php
+11=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\Dispatch_ZERO.php
+Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 [www\index.php]
 TopLine=60
 Caret=4,99
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=187
-Caret=10,221
+TopLine=197
+Caret=1,463
 [www\UpSite.php]
 TopLine=35
 Caret=23,58
@@ -654,14 +655,14 @@ Caret=23,58
 TopLine=97
 Caret=1,97
 [www\ttools\TTinyGallery\Musor.php]
-TopLine=275
-Caret=1,314
+TopLine=6
+Caret=1,22
 [www\ttools\TTinyGallery\Dispatch_BODY.php]
 TopLine=1
 Caret=1,12
 [www\ttools\TTinyGallery\Dispatch_ZERO.php]
 TopLine=7
-Caret=80,12
+Caret=1,43
 [www\ttools\TTinyGallery\Dispatch_HEAD.php]
 TopLine=1
 Caret=1,1
@@ -669,8 +670,11 @@ Caret=1,1
 TopLine=1
 Caret=1,1
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=298
-Caret=51,398
+TopLine=92
+Caret=9,104
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
 TopLine=689
 Caret=54,706
+[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
+TopLine=81
+Caret=1,119

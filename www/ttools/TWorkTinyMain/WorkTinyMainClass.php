@@ -15,11 +15,13 @@ class WorkTinyMain
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
    private $fileStyle;     // файл стилей элементов класса 
    private $game;          // игра, замещающая страницу (при необходимости) 
+   private $contents;      // текущий материал
    
-   public function __construct($fileStyle,$game=NULL) 
+   public function __construct($fileStyle,$contents,$game=NULL) 
    {
       $this->game=$game;
       $this->fileStyle=$fileStyle;
+      $this->contents=$contents;
    }
    public function __destruct() 
    {
@@ -56,7 +58,6 @@ class WorkTinyMain
          }
          else echo $contenti;
       } 
-      }
    }
    // *************************************************************************
    // *     Выполнить настройки для Tiny при работе в режиме редактирования   * 

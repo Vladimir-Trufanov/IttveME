@@ -391,3 +391,29 @@ Stack trace:
 #4 C:\IttveMe\www\iniMem.php(227): ttools\TinyGallery->__construct('C:\\IttveMe\\www', 'http://localhos...', '75', '15', '30', '%', Object(ttools\ArticlesMaker))
 #5 C:\IttveMe\www\index.php(87): require_once('C:\\IttveMe\\www\\...')
 #6  in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 325
+[16-Mar-2023 15:37:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\IttveMe\www\ttools\TTinyGallery\Dispatch_ZERO.php on line 46
+[16-Mar-2023 16:02:56 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:449
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(464): ttools\TinyGallery->_ViewLifeSpace('<div id="Messag...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 449
+[16-Mar-2023 16:10:00 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 363
+[16-Mar-2023 16:11:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\WorkTinyMain_HEAD() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:366
+Stack trace:
+#0 C:\IttveMe\www\UpSiteCSS.php(102): ttools\TinyGallery->Init(Object(game\DuckFly), Object(game\g2048), Object(game\Hextris))
+#1 C:\IttveMe\www\index.php(92): require_once('C:\\IttveMe\\www\\...')
+#2 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 366
+[16-Mar-2023 16:51:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE), expecting end of file in C:\IttveMe\www\ttools\TWorkTinyMain\WorkTinyMainClass.php on line 66
+[16-Mar-2023 16:53:33 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:442
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(457): ttools\TinyGallery->_ViewLifeSpace('<div id="Messag...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 442
+[16-Mar-2023 17:01:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 519
+[16-Mar-2023 17:02:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 519
+[16-Mar-2023 17:02:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 519

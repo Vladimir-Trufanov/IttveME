@@ -101,7 +101,7 @@ class ArticlesMaker
       // (устанавливаем кукисы и т.д.)                  
       $this->Zero();
       // Трассируем установленные свойства
-      //\prown\ConsoleLog('$this->basename='.$this->basename); 
+      //\prown\ConsoleLog('$this->getArti='.$this->getArti); 
    }
    // *************************************************************************
    // *           Спрятать в __destruct обработку клика выбора раздела        *

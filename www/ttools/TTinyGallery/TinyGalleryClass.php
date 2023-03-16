@@ -192,39 +192,48 @@ class TinyGallery
       
       // Инициируем отложенное сообщение
       $this->DelayedMessage=imok;
+      // Выбираем текущий транслит
+      $Translit=$this->Arti->getArti;
       // 1-ZERO этап - 'Проверка текущего транслита'
-      $getArti=$this->Arti->getArti;
-      if ($getArti==NULL)
+      if ($Translit==NULL)
       {
          $this->DelayedMessage=
          "Материал не определен. Выберите его как следующий материал или в меню 'Жизнь и путешествия'"
         ;
       }
       // 2-ZERO этап - 'Выбрать следующий материал'
-      $this->DelayedMessage=imok;
       if ($this->DelayedMessage==imok) 
       {
          if (\prown\isComRequest(mmlVybratSledMaterial))
-         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$getArti);
+         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit);
       }
-      
-      
-      \prown\Alert($this->DelayedMessage." ".$getArti);
-    
       // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
       if ($this->DelayedMessage==imok)
       {
-         // Устанавливаем кукис на новый или выбранный материал
-         if ($getArti<>NULL)
+         // Вытаскиваем материал для редактирования
+         $this->DelayedMessage=$this->Arti->SelUidPid
+            ($this->apdo,$Translit,$pidEdit,$uidEdit,$NameGru,$NameArt,$DateArt,$contentsIn);
+         // Если материал выбран готовим данные для страницы
+         if ($this->DelayedMessage==imok)
          {
-            $this->Arti->cookieGetPunktMenu($getArti); 
+            // Устанавливаем кукис на новый или выбранный материал
+            if (($Translit<>NULL)&&($Translit<>\prown\MakeCookie('PunktMenu')))
+            {
+               $this->Arti->cookieGetPunktMenu($Translit); 
+            }
+           // Запоминаем в объекте текущий материал
+           $this->contents=html_entity_decode($contentsIn);
+           $this->NameGru=$NameGru;
+           $this->NameArt=$NameArt;
+           $this->DateArt=$DateArt;
+           $this->pidEdit=$pidEdit; 
+           $this->uidEdit=$uidEdit; 
+           // Cоздаем объект для управления изображениями в галерее, связанной с 
+           // материалами сайта из базы данных
+           //$this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
+           //$this->DelayedMessage=$this->Galli->getDelayedMessage();
          }
       }
-         $this->DelayedMessage='imok';
-      
-      
-      
-      
       /*
       // Если выбран материал (транслит) для редактирования, то готовим 
       // установку кукиса на данный материал. Материал мог быть выбран при 
@@ -232,17 +241,8 @@ class TinyGallery
       //    $apdo=$this->Arti->BaseConnect();
       //    $this->Arti->GetPunktMenu($apdo);
       $getArti=\prown\getComRequest('arti'); // выбрали транслит 
-
       \prown\ConsoleLog('$this->DelayedMessage='.$this->DelayedMessage);
-
-
-
-
       //if ($this->DelayedMessage==imok)
-
-      
-      
-      
       // Если было назначение нового материала/статьи, 
       // то делаем запись в базу данных и готовим транслит статьи для установки
       // кукиса и начала редактирования материала
@@ -270,22 +270,6 @@ class TinyGallery
       {
          $this->Arti->UpdateByTranslit($this->apdo,$this->Arti->getArti,$contentNews);
       }
-      
-      
-      // Вытаскиваем материал для редактирования
-      $this->DelayedMessage=$this->Arti->SelUidPid
-         ($this->apdo,$this->Arti->getArti,$pidEdit,$uidEdit,$NameGru,$NameArt,$DateArt,$contentsIn);
-      // Запоминаем в объекте текущий материал
-      $this->contents=html_entity_decode($contentsIn);
-      $this->NameGru=$NameGru;
-      $this->NameArt=$NameArt;
-      $this->DateArt=$DateArt;
-      $this->pidEdit=$pidEdit; 
-      $this->uidEdit=$uidEdit; 
-      // Cоздаем объект для управления изображениями в галерее, связанной с 
-      // материалами сайта из базы данных
-      $this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
-      $this->DelayedMessage=$this->Galli->getDelayedMessage();
       */
    }
    
@@ -354,7 +338,6 @@ class TinyGallery
          ';
          */
 
-         /*
          // -------------------------------------------------------------------
          // это вставка на случай, пока используется игра DuckFly 
          // (для игры нужно убрать все полосы прокрутки)
@@ -366,12 +349,16 @@ class TinyGallery
 
          // 2-HEAD этап ------------------ ?Com=dobavit-novyj-razdel-materialov
          if (\prown\isComRequest(mmlZhiznIputeshestviya))
-            mmlZhiznIputeshestviya_HEAD();
+            /*mmlZhiznIputeshestviya_HEAD()*/;
          else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-            $this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+            /*$this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame)*/;
          // Последний-HEAD этап - инициируем разметку для выбранного материала
-         else $this->$WorkTinyMain=WorkTinyMain_HEAD($this->fileStyle);
-         */
+         else 
+         {
+            require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
+            $this->WorkTinyMain=new WorkTinyMain($this->fileStyle,$this->contents);
+            $this->WorkTinyMain->Head();
+         }
       }
       
       /*
@@ -407,11 +394,13 @@ class TinyGallery
       // иначе будем запускать игру со змеёй и градиент
       if ($this->DelayedMessage==imok) 
       {
+         /*
          if (\prown\isComRequest(mmlNaznachitStatyu))
             mmlNaznachitStatyu_BODY_KwinGallery();
          else if (\prown\isComRequest(mmlVybratStatyuRedakti))
             $this->KwinGallery_mmlVybratStatyuRedakti();
          else $this->Galli->BaseGallery();
+         */
       }
    }
    // *************************************************************************
@@ -461,25 +450,17 @@ class TinyGallery
          $Title=MakeTitle($this->DelayedMessage,ttError);
          $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
       }
-      
+      // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
+      else
+      {
+         $Title=MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
+         $this->_ViewLifeSpace($Title,$this->WorkTinyMain);
+      }
       /*
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
       else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
-      // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
-      else 
-      {
-         $Title=MakeTitle('--------------Страничка',ttMessage);
-         $this->_ViewLifeSpace($Title,$this->$WorkTinyMain);
-      }
       */
-      /*
-      // Выводим заголовок статьи
-      if ($this->DelayedMessage==imok)
-         $Title=MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
-      else 
-      */
-         
    }
 
 
