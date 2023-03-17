@@ -417,3 +417,5 @@ Stack trace:
 [16-Mar-2023 17:01:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 519
 [16-Mar-2023 17:02:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 519
 [16-Mar-2023 17:02:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 519
+[17-Mar-2023 15:37:43 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '.' in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 424
+[17-Mar-2023 20:30:24 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 433

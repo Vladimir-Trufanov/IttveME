@@ -409,6 +409,46 @@ class ArticlesMaker
      return $table; 
    }
    // *************************************************************************
+   // *       Найти предыдущую запись с материалом (статьёй) относительно     *
+   // *            текущего идентификатора и выбрать в ней Translit           *
+   // *************************************************************************
+   public function SelPrevTranslit($pdo,$UnID)
+   {
+     try
+     {
+       $pdo->beginTransaction();
+       // Первым запросом выбираем максимальный uid меньше данного
+       $cSQL='SELECT max(uid) FROM stockpw WHERE uid <'.$UnID.' AND IdCue=0';
+       $stmt = $pdo->query($cSQL);
+       $table = $stmt->fetchAll();
+       // Если по запросу uid не найден, то считаем что был первый и
+       // возвращаем сообщение об этом
+       if ($table[0]["max(uid)"]==0) 
+       {
+          $table=array(array("NameArt"=>"NoRecords","Translit"=>nstErr,));       
+          $pdo->commit();
+          return $table;
+       }
+       // Если максимальный uid меньше данного найден, 
+       // то по нему выбираем транслит
+       else
+       { 
+          $maxUid=$table[0]["max(uid)"];
+          $cSQL='SELECT NameArt,Translit FROM stockpw WHERE uid = '.$maxUid;
+          $stmt = $pdo->query($cSQL);
+          $table = $stmt->fetchAll();
+       }  
+       $pdo->commit();
+     } 
+     catch (\Exception $e) 
+     {
+       $messa=$e->getMessage();
+       $table=array(array("NameArt"=>$messa,"Translit"=>nstErr,));
+       if ($pdo->inTransaction()) $pdo->rollback();
+     }
+     return $table; 
+   }
+   // *************************************************************************
    // *               Выбрать ключи всех изображений к записи и               *
    // *                   другую информацию по идентификатору                 *
    // *************************************************************************

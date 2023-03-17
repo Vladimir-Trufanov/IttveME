@@ -194,18 +194,22 @@ class TinyGallery
       $this->DelayedMessage=imok;
       // Выбираем текущий транслит
       $Translit=$this->Arti->getArti;
-      // 1-ZERO этап - 'Проверка текущего транслита'
+      // 1-ZERO этап ---------------------------- 'Проверка текущего транслита'
       if ($Translit==NULL)
       {
          $this->DelayedMessage=
          "Материал не определен. Выберите его как следующий материал или в меню 'Жизнь и путешествия'"
         ;
       }
-      // 2-ZERO этап - 'Выбрать следующий материал'
+      // 2-ZERO этап 
       if ($this->DelayedMessage==imok) 
       {
+         // -------------------------------------- 'Выбрать следующий материал'
          if (\prown\isComRequest(mmlVybratSledMaterial))
          $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit);
+         // ----------------------------------- 'Вернуться к предыдущей статье'
+         else if (\prown\isComRequest(mmlVernutsyaPredState))
+         $this->DelayedMessage=mmlVernutsyaPredState_ZERO($this->Arti,$Translit);
       }
       // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
       if ($this->DelayedMessage==imok)
