@@ -442,7 +442,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.css
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -494,10 +494,10 @@ IttveME
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				+TModyCueClass
+				-TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
 				-TNewCueClass
 					-Duck Hunt v2
@@ -638,34 +638,35 @@ IttveME
 8=www\ttools\TModyCueClass\ModyCueClass.php
 9=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 10=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-11=www\ttools\TMenuLeader\MenuLeaderClass.php
+11=www\ttools\TSaymeClass\SaymeClass.php
+12=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TMenuLeader\MenuLeaderClass.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
 TopLine=60
 Caret=4,99
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=153
-Caret=1,498
+TopLine=449
+Caret=1,463
 [www\UpSite.php]
-TopLine=35
+TopLine=17
 Caret=23,47
 [www\iniMem.php]
-TopLine=84
-Caret=35,107
+TopLine=208
+Caret=8,95
 [www\ttools\TTinyGallery\Musor.php]
-TopLine=200
-Caret=1,201
+TopLine=191
+Caret=1,69
 [www\ttools\TTinyGallery\Dispatch_BODY.php]
 TopLine=8
-Caret=25,43
+Caret=23,33
 [www\ttools\TTinyGallery\Dispatch_ZERO.php]
 TopLine=41
 Caret=70,68
 [www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=3
-Caret=26,36
+TopLine=13
+Caret=15,48
 [www\ttools\TModyCueClass\ModyCueClass.php]
 TopLine=1
 Caret=1,1
@@ -673,8 +674,11 @@ Caret=1,1
 TopLine=87
 Caret=40,99
 [www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=17
+TopLine=81
 Caret=1,119
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=117
-Caret=1,142
+[www\ttools\TSaymeClass\SaymeClass.php]
+TopLine=1
+Caret=15,13
+[www\UpSiteCSS.php]
+TopLine=75
+Caret=1,1

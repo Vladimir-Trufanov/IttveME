@@ -350,16 +350,17 @@ class TinyGallery
             echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
          // -------------------------------------------------------------------
 
-         // 3-BODY этап ------------------------------ ?Com=zhizn-i-puteshestviya,
-         // готовим стили страницы    
+         // 3-HEAD этап ---------------------------- ?Com=zhizn-i-puteshestviya
          if (\prown\isComRequest(mmlZhiznIputeshestviya))
             mmlZhiznIputeshestviya_HEAD();
-         // ч-HEAD этап ------------------ ?Com=dobavit-novyj-razdel-materialov
-         if (\prown\isComRequest(mmlZhiznIputeshestviya))
-            /*mmlZhiznIputeshestviya_HEAD()*/;
+         // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
+         elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+            $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
          else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
             /*$this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame)*/;
-         // Последний-HEAD этап - инициируем разметку для выбранного материала
+         // Последний-HEAD этап - инициируем разметку для выбранного материала,
+         // cтроим рабочую область для выбранной статьи и её галереи, 
+         // обеспечиваем просмотр и редактирование 
          else 
          {
             require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
@@ -377,8 +378,6 @@ class TinyGallery
       $Result=true;
       elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
-      elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-         $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
       else $Result=false;
       return $Result;
       }
@@ -458,10 +457,16 @@ class TinyGallery
          $Title=MakeTitle($this->DelayedMessage,ttError);
          $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
       }
-      // 3-BODY этап ------------------------------ ?Com=zhizn-i-puteshestviya,
-      // выводим меню для выбора материала 
+      // 3-BODY этап ------------------------------- ?Com=zhizn-i-puteshestviya
       else if (\prown\isComRequest(mmlZhiznIputeshestviya))
          mmlZhiznIputeshestviya_BODY($this->apdo,$this->Arti);
+      // 5-BODY этап ------------------------ ?Com=otpravit-avtoru-soobshchenie
+      elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+      {
+         //$Title=MakeTitle('Отправить сообщение автору! '.'&#128152;&#129315;',ttMessage);
+         $Title=MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->Sayme);
+      }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else
       {
@@ -484,9 +489,6 @@ class TinyGallery
       // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
       else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);
-      // Выбираем страницу сообщения автору - ?Com=otpravit-avtoru-soobshchenie
-      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-         mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($this->Sayme);
       else $Result=false;
       return $Result;
    }

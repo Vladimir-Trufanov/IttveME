@@ -10,22 +10,6 @@
 // ****************************************************************************
 
 // ****************************************************************************
-// *        Построить рабочую область для выбранной статьи и её галереи,      *
-// *                   обеспечить просмотр и редактирование                   *
-// ****************************************************************************
-function WorkTinyMain_HEAD($fileStyle)
-{
-   require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
-   $WorkTiny=new WorkTinyMain($fileStyle);
-   $WorkTiny->Head();
-   return $WorkTiny;
-}
-function WorkTinyMain_BODY($WorkTiny,&$Title)
-{
-   $WorkTiny->Body();
-}
-
-// ****************************************************************************
 // *                      "Добавить новый раздел материалов"                  *
 // ****************************************************************************
 function mmlDobavitNovyjRazdel_HEAD($game=NULL)
@@ -81,22 +65,6 @@ function mmlUdalitRazdelMaterialov_BODY_WorkTiny($Delcue)
    //MakeTitle('Удалить раздел материалов! '.'&#128152;&#129315;',ttMessage);
    MakeTitle('Страничка будет следующей зимой, а здесь соберите сумму 2048.<br> У меня пока получилось 756!',ttMessage);
    $Delcue->Body();
-}
-// ****************************************************************************
-// *                         "Отправить сообщение автору"                     *
-// ****************************************************************************
-function mmlOtpravitAvtoruSoobshchenie_HEAD($game=NULL)
-{
-   require_once "ttools/TSaymeClass/SaymeClass.php";
-   $Sayme=new Noticing($game);
-   $Sayme->Head();
-   return $Sayme;
-}
-function mmlOtpravitAvtoruSoobshchenie_BODY_WorkTiny($Sayme)
-{
-   //MakeTitle('Отправить сообщение автору! '.'&#128152;&#129315;',ttMessage);
-   MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
-   $Sayme->Body();
 }
 // ****************************************************************************
 // *      Настроить размеры шрифтов и полосок меню (рождественская версия)    *
