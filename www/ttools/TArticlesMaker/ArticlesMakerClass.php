@@ -93,10 +93,16 @@ class ArticlesMaker
       $this->password    = $password;
       $this->kindMessage = NULL;
       
-      // Выбираем текущий транслит
-      if (isset($_COOKIE['PunktMenu'])) 
-         $this->getArti=\prown\MakeCookie('PunktMenu');
-      else $this->getArti=NULL; 
+      // Выбираем текущий транслит (вначале из параметра, если есть)
+      $this->getArti=\prown\getComRequest('arti');
+      // Сохраняем кукис, если есть параметр
+      if ($this->getArti<>NULL) $this->cookieGetPunktMenu($this->getArti); 
+      // Если параметр не передавался, то выбираем из существующего кукиса
+      else
+      {
+         if (isset($_COOKIE['PunktMenu'])) $this->getArti=\prown\MakeCookie('PunktMenu');
+         else $this->getArti=NULL; 
+      }
       // Выполняем действия на странице до отправления заголовков страницы: 
       // (устанавливаем кукисы и т.д.)                  
       $this->Zero();

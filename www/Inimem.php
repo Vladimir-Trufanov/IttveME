@@ -91,9 +91,9 @@ define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
 
 // ------------------------------------ Тексты запросов для меню управления ---
-define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');  
-define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');
-define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya'); 
+define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');       // 1
+define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');     // 2
+define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');               // 3
 define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');   
 
 define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');    

@@ -234,8 +234,8 @@ class TinyGallery
            $this->uidEdit=$uidEdit; 
            // Cоздаем объект для управления изображениями в галерее, связанной с 
            // материалами сайта из базы данных
-           //$this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
-           //$this->DelayedMessage=$this->Galli->getDelayedMessage();
+           $this->Galli=new KwinGallery(editdir,nym,$pidEdit,$uidEdit,$this->SiteRoot,$this->urlHome,$this->Arti);
+           $this->DelayedMessage=$this->Galli->getDelayedMessage();
          }
       }
       /*
@@ -244,7 +244,6 @@ class TinyGallery
       // выполнении методов:
       //    $apdo=$this->Arti->BaseConnect();
       //    $this->Arti->GetPunktMenu($apdo);
-      $getArti=\prown\getComRequest('arti'); // выбрали транслит 
       \prown\ConsoleLog('$this->DelayedMessage='.$this->DelayedMessage);
       //if ($this->DelayedMessage==imok)
       // Если было назначение нового материала/статьи, 
@@ -351,7 +350,11 @@ class TinyGallery
             echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
          // -------------------------------------------------------------------
 
-         // 2-HEAD этап ------------------ ?Com=dobavit-novyj-razdel-materialov
+         // 3-BODY этап ------------------------------ ?Com=zhizn-i-puteshestviya,
+         // готовим стили страницы    
+         if (\prown\isComRequest(mmlZhiznIputeshestviya))
+            mmlZhiznIputeshestviya_HEAD();
+         // ч-HEAD этап ------------------ ?Com=dobavit-novyj-razdel-materialov
          if (\prown\isComRequest(mmlZhiznIputeshestviya))
             /*mmlZhiznIputeshestviya_HEAD()*/;
          else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
@@ -403,8 +406,9 @@ class TinyGallery
             mmlNaznachitStatyu_BODY_KwinGallery();
          else if (\prown\isComRequest(mmlVybratStatyuRedakti))
             $this->KwinGallery_mmlVybratStatyuRedakti();
-         else $this->Galli->BaseGallery();
+         else 
          */
+         $this->Galli->BaseGallery();
       }
    }
    // *************************************************************************
@@ -454,6 +458,10 @@ class TinyGallery
          $Title=MakeTitle($this->DelayedMessage,ttError);
          $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
       }
+      // 3-BODY этап ------------------------------ ?Com=zhizn-i-puteshestviya,
+      // выводим меню для выбора материала 
+      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
+         mmlZhiznIputeshestviya_BODY($this->apdo,$this->Arti);
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else
       {
@@ -461,9 +469,6 @@ class TinyGallery
          $this->_ViewLifeSpace($Title,$this->WorkTinyMain);
       }
       /*
-      // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
-      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
-         mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
       */
    }
 
