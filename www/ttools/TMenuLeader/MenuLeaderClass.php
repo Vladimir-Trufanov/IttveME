@@ -84,6 +84,7 @@ class MenuLeader
    }
    public function __destruct() 
    {
+      echo '<!-- Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK) -->';
    }
    // *************************************************************************
    // *                    Настроить стили элементов объекта                  *
@@ -231,100 +232,61 @@ class MenuLeader
       ';
    }
    // *************************************************************************
-   // *                Отработать меню управления (общая часть)               *
+   // *             Отработать меню управления на сайте "ittve.me"            *
    // *************************************************************************
    public function Menu()
    {
-      if ($this->typemenu==ittveme)
+      // Начинаем меню 
+      echo '<ul class="navset">';
+      // Выводим пункты меню управления для страниц из меню "Жизнь и путешествия"
+      if (\prown\isComRequest(mmlZhiznIputeshestviya))
       {
-         $this->Menu_ittveme();   
+         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
+         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
+         $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
+         $this->Punkt($this->cPreMe.mmlIzmenitNazvanieIkonku,'&#xf086;','Изменить название','раздела или иконку');
       }
-      else
+      // Выводим пункты меню управления пользовательских страниц
+      else if 
+      (
+         \prown\isComRequest(mmlIzmenitNastrojkiSajta)||
+         \prown\isComRequest(mmlOtpravitAvtoruSoobshchenie)||
+         \prown\isComRequest(mmlVojtiZaregistrirovatsya)
+      )
       {
-         $this->Menu_kwintiny();   
+         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
+         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
+         $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
+         $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
       }
-   }
-   // *************************************************************************
-   // *             Отработать меню управления на фрэйме "KwinTiny"           *
-   // *************************************************************************
-   private function Menu_kwintiny()
-   {
-      // Формируем префикс вызова страниц из меню на сайте и localhost
-      $cPref=$this->ComTiny;
-      echo '
-         <ul class="uli">
-         <li class="ili"><a class="ali" href="'.$cPref.mmlVernutsyaNaGlavnuyu.'">На главную</a></li>
-         <li class="ili"><a class="ali" href="'.$cPref.mmlUdalitMaterial     .'">Удалить материал</a></li>
-         <li class="ili">'.'<input type="submit" value="Сохранить материал" form="frmTinyText" onclick="SaveStuff()">'.'</li>
-         </ul>   
-      ';
-   }
-   // *************************************************************************
-   // *             Отработать меню управления на сайте "ittve.me"            *
-   // *************************************************************************
-   private function Menu_ittveme()
-   {
-      // Начинаем меню с отсылкой к автору идеи
-      echo '
-         <!--
-         Copyright (c) 2017 by Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK)
-         -->
-         <ul class="navset">
-      ';
-      // ------------------------------
-      // Выводим пункты меню управления для страниц из главного меню
-      if (\prown\isComRequest(mmlZhiznIputeshestviya)||
-      \prown\isComRequest(mmlDobavitNovyjRazdel)||
-      \prown\isComRequest(mmlIzmenitNazvanieIkonku)||
-      \prown\isComRequest(mmlUdalitRazdelMaterialov))
+      // Выводим пункты меню управления по авторскому редактированию
+      else if 
+      (
+         \prown\isComRequest(mmlSozdatRedaktirovat)||
+         \prown\isComRequest(mmlVybratStatyuRedakti)||
+         \prown\isComRequest(mmlNaznachitStatyu)||
+         \prown\isComRequest(mmlUdalitMaterial)
+      )
+      {
+         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
+         $this->Punkt($this->cPreMe.mmlVybratStatyuRedakti,'&#xf07c;','Выбрать материал','для изменений');
+         $this->Punkt($this->cPreMe.mmlNaznachitStatyu,'&#xf0f6;','Назначить','новую статью');
+         $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Удалить','указанный материал');
+         //$cPost='<input type="submit" value="Сохранить материал" form="frmTinyText">';
+         //$this->PunktPost('&#xf0ed;',$cPost,"Сохранить материал");
+      }
+      // Выводим пункты меню управления для работы с разделами
+      else if 
+      (
+         \prown\isComRequest(mmlIzmenitNazvanieIkonku)||
+         \prown\isComRequest(mmlDobavitNovyjRazdel)||
+         \prown\isComRequest(mmlUdalitRazdelMaterialov)
+      )
       {
          $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
          $this->Punkt($this->cPreMe.mmlDobavitNovyjRazdel,'&#xf0f2;','Добавить новый','раздел материалов');
-         $this->Punkt($this->cPreMe.mmlIzmenitNazvanieIkonku,'&#xf086;','Изменить название','раздела или иконку');
          $this->Punkt($this->cPreMe.mmlUdalitRazdelMaterialov,'&#xf1f8;','Удалить раздел','материалов');
-      }
-      // Выводим пункты меню для страницы изменения настроек сайта
-      else if (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
-      {
-         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
-         $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
-         $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
-      }
-      // Выводим пункты меню страницы для входа и регистрации
-      else if (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
-      {
-         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
-         $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
-         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
-         $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
-      }
-      // Выводим пункты для страницы сообщения автору 
-      else if (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-      {
-         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
-         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Изменить настройки','сайта в браузере');
-         $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
-         $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
-      }
-      // ---------------------- Выводим пункты меню при работе с материалом ---
-      else if (\prown\isComRequest(mmlSozdatRedaktirovat)||\prown\isComRequest(mmlNaznachitStatyu))
-      {
-         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
-         $this->Punkt($this->cPreMe.mmlNaznachitStatyu,'&#xf0f6;','Назначить','новую статью');
-         $this->Punkt($this->cPreMe.mmlVybratStatyuRedakti,'&#xf07c;','Выбрать материал','для изменений');
-         $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Удалить','указанный материал');
-         //$cPost='<input type="submit" value="Сохранить материал" form="frmTinyText">';
-         //$this->PunktPost('&#xf0ed;',$cPost,"Сохранить материал");
-      }
-      else if (\prown\isComRequest(mmlSozdatRedaktirovat))
-      {
-         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
-         $this->Punkt($this->cPreMe.mmlNaznachitStatyu,'&#xf0f6;','Назначить','новую статью');
-         $this->Punkt($this->cPreMe.mmlVybratStatyuRedakti,'&#xf07c;','Выбрать материал','для изменений');
-         $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Удалить','указанный материал');
-         //$cPost='<input type="submit" value="Сохранить материал" form="frmTinyText">';
-         //$this->PunktPost('&#xf0ed;',$cPost,"Сохранить материал");
       }
       // Выводим пункты меню главной страницы
       else
@@ -333,18 +295,10 @@ class MenuLeader
          $this->Punkt($this->cPreMe.mmlVernutsyaPredState,'&#xf0a6;','Вернуться к прежней','статье');
          $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
          $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
-         
-         /*
-         $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
-         $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
-         */
       }
       // Закрываем меню
       echo '</ul>';
    }
-   
-   
-  
    // *************************************************************************
    // *   Создать "всякую-разную" кнопку в подвальной области "LeftFooter"    *
    // *************************************************************************

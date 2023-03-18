@@ -468,8 +468,6 @@ class TinyGallery
          $Title=MakeTitle($this->NameGru,$this->NameArt,$this->DateArt);
          $this->_ViewLifeSpace($Title,$this->WorkTinyMain);
       }
-      /*
-      */
    }
 
 
@@ -497,8 +495,6 @@ class TinyGallery
       // Выводим рабочую область редактирования и просмотра
       if ($this->Dispatch_BODY_WorkTiny()) {}
       // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
-      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
-         mmlZhiznIputeshestviya_BODY_WorkTiny($this->apdo,$this->Arti);
       // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
       else if (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
          mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome);
