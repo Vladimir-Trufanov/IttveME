@@ -67,6 +67,9 @@ require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
 require_once pathPhpTools."/CommonTools.php";
 
+// Вставка для Microsoft Edge (18.03.2023, иначе не находит константу)
+if (!defined("Err")) define ("Err","Произошла ошибка");  
+
 class KwinGallery
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---

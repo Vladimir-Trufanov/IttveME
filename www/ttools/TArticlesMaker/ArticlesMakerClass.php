@@ -65,7 +65,9 @@ if (articleSite==tbsIttveme) require_once("CommonIttveMe.php");
 elseif (articleSite==tbsIttvepw) require_once("CommonIttvePw.php"); 
 
 // Подгружаем нужные модули библиотеки прикладных функций
-require_once(pathPhpPrown."/MakeCookie.php");
+require_once pathPhpPrown."/MakeCookie.php";
+require_once pathPhpPrown."/iniConstMem.php";
+
 // Подгружаем нужные модули библиотеки прикладных классов
 require_once(pathPhpTools."/CommonTools.php");
 

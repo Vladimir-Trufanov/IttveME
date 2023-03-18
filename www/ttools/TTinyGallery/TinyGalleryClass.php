@@ -197,9 +197,7 @@ class TinyGallery
       // 1-ZERO этап ---------------------------- 'Проверка текущего транслита'
       if ($Translit==NULL)
       {
-         $this->DelayedMessage=
-         "Материал не определен. Выберите его как следующий материал или в меню 'Жизнь и путешествия'"
-        ;
+         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit);
       }
       // 2-ZERO этап 
       if ($this->DelayedMessage==imok) 
@@ -221,10 +219,10 @@ class TinyGallery
          if ($this->DelayedMessage==imok)
          {
             // Устанавливаем кукис на новый или выбранный материал
-            if (($Translit<>NULL)&&($Translit<>\prown\MakeCookie('PunktMenu')))
-            {
+            if (!IsSet($_COOKIE['PunktMenu'])) 
                $this->Arti->cookieGetPunktMenu($Translit); 
-            }
+            else if ($Translit<>\prown\MakeCookie('PunktMenu'))
+               $this->Arti->cookieGetPunktMenu($Translit); 
            // Запоминаем в объекте текущий материал
            $this->contents=html_entity_decode($contentsIn);
            $this->NameGru=$NameGru;
