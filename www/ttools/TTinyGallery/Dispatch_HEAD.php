@@ -49,5 +49,16 @@ function mmlOtpravitAvtoruSoobshchenie_HEAD($game=NULL)
    $Sayme->Head();
    return $Sayme;
 }
+// ****************************************************************************
+// *                         "Войти или зарегистрироваться"                   *
+// ****************************************************************************
+function mmlVojtiZaregistrirovatsya_HEAD($game=NULL)
+{
+   require_once "ttools/TEntryClass/EntryClass.php";
+   $Entry=new Entrying($game);
+   $Entry->Head();
+   return $Entry;
+}
+
 
 // ****************************************************** Dispatch_HEAD.php ***

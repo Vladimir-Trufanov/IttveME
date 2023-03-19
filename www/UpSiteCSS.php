@@ -99,7 +99,7 @@ $ImageFile=prown\getComRequest('Image');
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
-$Edit->Init($Duck,$a2048,$Hex);
+$Edit->Init($Duck,$a2048,$Hex,$Paired);
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();

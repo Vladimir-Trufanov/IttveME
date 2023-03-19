@@ -425,3 +425,21 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(87): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 99
+[19-Mar-2023 08:51:13 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:452
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(483): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace(Array, Array, 'http://localhos...')
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 452
+[19-Mar-2023 13:29:53 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\IttveMe\www\iniMem.php on line 245
+[19-Mar-2023 13:37:51 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TEntryClass/PairedCards/PairedCardsClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 244
+[19-Mar-2023 13:37:54 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TEntryClass/PairedCards/PairedCardsClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 244
+[19-Mar-2023 13:38:00 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TEntryClass/PairedCards/PairedCardsClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 244
+[19-Mar-2023 13:40:26 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TEntryClass/PairedCards/PairedCardsClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 244
+[19-Mar-2023 13:43:21 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'ttools/TEntryClass/PairedCards/PairedCardsClass.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\iniMem.php on line 244
+[19-Mar-2023 13:46:41 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'game\PairedCards' not found in C:\IttveMe\www\iniMem.php:245
+Stack trace:
+#0 C:\IttveMe\www\index.php(87): require_once()
+#1 {main}
+  thrown in C:\IttveMe\www\iniMem.php on line 245

@@ -240,7 +240,9 @@ $a2048=new game\g2048('IttveME');
 // Подключаем заменяющую игру для страницы "Отправить сообщение автору"
 require_once "ttools/TSaymeClass/Hextris/gameHextrisClass.php";
 $Hex=new game\Hextris($c_PresMode,'IttveME');
-
+// Подключаем заменяющую игру для страницы "Войти или зарегистрироваться"
+require_once "ttools/TEntryClass/PairedCards/PairedCardsClass.php";
+$Paired=new game\PairedCards($c_PresMode,'IttveME');
 // end --------------------------------------------------------------- ZERO ---
 
 // ************************************************************* iniMem.php *** 

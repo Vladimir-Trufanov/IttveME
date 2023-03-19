@@ -121,6 +121,7 @@ class TinyGallery
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $Delcue;           // объект "Удалить раздел материалов"
    private   $Sayme;            // объект "Отправить сообщение автору"
+   private   $Entry;            // объект "Войти или зарегистрироваться"
 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
@@ -132,6 +133,7 @@ class TinyGallery
       $this->Newcue=NULL;
       $this->Delcue=NULL;
       $this->Sayme=NULL;
+      $this->Entry=NULL;
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
@@ -279,7 +281,7 @@ class TinyGallery
    // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
-   public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
+   public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL,$EntryGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
@@ -354,6 +356,9 @@ class TinyGallery
          // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
          elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
             $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
+         // 6-HEAD этап --------------------- ?Com=vojti-ili-zaregistrirovatsya
+         elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
+            $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($EntryGame);
          else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
             /*$this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame)*/;
          // Последний-HEAD этап - инициируем разметку для выбранного материала,
@@ -444,7 +449,7 @@ class TinyGallery
          echo $Title;
       echo '</div>';
       echo '<div id="WorkTiny">';
-         $oBody->Body();
+        $oBody->Body();
       echo '</div>';
    }
    public function ViewLifeSpace($aPresMode,$aModeImg,$urlHome)
@@ -464,6 +469,13 @@ class TinyGallery
          //$Title=MakeTitle('Отправить сообщение автору! '.'&#128152;&#129315;',ttMessage);
          $Title=MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Sayme);
+      }
+      // 6-BODY этап ------------------------ ?Com=vojti-ili-zaregistrirovatsya
+      elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
+      {
+         $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+         //$Title=MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->Entry);
       }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else

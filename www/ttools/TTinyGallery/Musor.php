@@ -92,55 +92,6 @@ function IniFontChristmas()
    </style>
    ';
 }
-// *************************************************************************
-// *                         Вывести заголовок статьи                      *
-// *************************************************************************
-class WhipperSnapper
-{
-   // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $Place;       // приложение, в которое встроена игра
-
-   public function __construct($Place='Other') 
-   {
-      // Инициализируем свойства класса
-      $this->Place=$Place;
-   }
-   public function __destruct() 
-   {
-   }
-   // Подключить стили игры
-   public function Head() 
-   {
-      if ($this->Place=='IttveME') $this->echoHead();
-   }
-   public function Play() 
-   {
-      $this->echoPlay();
-   }
-   //
-   private function echoHead()
-   {
-      ?>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="ttools/TTinyGallery/WhipperSnapper/css/style.css">
-      <?php
-   }
-   //
-   private function echoPlay()
-   {
-      echo '<div id=WhipperSnapperBody>';
-      ?>
-         <script  src="ttools/TTinyGallery/WhipperSnapper/js/index.js"></script>
-      <?php
-      echo '</div>';
-   }
-}
-
-
-
-
-// ------------------------------------------------------------------- Main ---
-
 
 // ----------------------------------------------------- mmlNaznachitStatyu ---
 
@@ -243,15 +194,6 @@ function mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome)
    require_once "ttools/TTuningClass/TuningClass.php";
    MakeTitle('Изменить настройки сайта в браузере! '.'&#128152;&#129315;',ttMessage);
    $Tune=new Tuning($aPresMode,$aModeImg,$urlHome);
-}
-// ****************************************************************************
-// *                         "Войти или зарегистрироваться"                   *
-// ****************************************************************************
-function mmlVojtiZaregistrirovatsya_BODY_WorkTiny($pdo,$Arti)
-{
-   require_once "ttools/TEntryClass/EntryClass.php";
-   MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
-   $Entry=new Entrying();
 }
 
 // *********************************************************** WorkTiny.php ***

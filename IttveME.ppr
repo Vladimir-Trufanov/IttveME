@@ -91,7 +91,7 @@ IttveME
 					www\font-awesome-4.7.0\scss\_variables.scss
 					www\font-awesome-4.7.0\scss\font-awesome.scss
 				www\font-awesome-4.7.0\HELP-US-OUT.txt
-			-Images
+			+Images
 				-Buttons
 					www\Images\Buttons\tveMenuD.png
 				-Cursors
@@ -103,7 +103,7 @@ IttveME
 					www\Images\Cursors\More-move.cur
 					www\Images\Cursors\Move.cur
 					www\Images\Cursors\Unavailable.cur
-				-Menu
+				+Menu
 					www\Images\Menu\arrow_down.png
 					www\Images\Menu\arrow_up.png
 					www\Images\Menu\bgnoise_lg.jpg
@@ -176,7 +176,6 @@ IttveME
 					www\Old\ittveLife\ittve02-065-Фонтанчик.jpg
 					www\Old\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
 					www\Old\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-				-ittveNews
 				-Reset
 					www\Old\Reset\e404.php
 					www\Old\Reset\index.php
@@ -487,9 +486,30 @@ IttveME
 							www\ttools\TDelCueClass\g2048\style\main.css
 						www\ttools\TDelCueClass\g2048\game2048Class.php
 					www\ttools\TDelCueClass\DelCueClass.php
-				-TEntryClass
+				+TEntryClass
+					-css3-matching-game
+						-css
+							www\ttools\TEntryClass\css3-matching-game\css\matchgame.css
+						-images
+							www\ttools\TEntryClass\css3-matching-game\images\bg.jpg
+							www\ttools\TEntryClass\css3-matching-game\images\deck.png
+							www\ttools\TEntryClass\css3-matching-game\images\popup_bg.jpg
+							www\ttools\TEntryClass\css3-matching-game\images\table.jpg
+						-js
+							www\ttools\TEntryClass\css3-matching-game\js\html5games.matchgame.js
+							www\ttools\TEntryClass\css3-matching-game\js\jquery-1.6.min.js
+						www\ttools\TEntryClass\css3-matching-game\index.html
+						www\ttools\TEntryClass\css3-matching-game\readme.md
+					+PairedCards
+						www\ttools\TEntryClass\PairedCards\bg.jpg
+						www\ttools\TEntryClass\PairedCards\deck.png
+						www\ttools\TEntryClass\PairedCards\matchgame.css
+						www\ttools\TEntryClass\PairedCards\matchgame.js
+						www\ttools\TEntryClass\PairedCards\PairedCardsClass.php
+						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
+						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -538,7 +558,7 @@ IttveME
 					www\ttools\TNewCueClass\NewCueClass.php
 					www\ttools\TNewCueClass\Игра на голом HTML.doc
 				-TSaymeClass
-					-Hextris
+					+Hextris
 						-images
 							www\ttools\TSaymeClass\Hextris\images\btn_back.svg
 							www\ttools\TSaymeClass\Hextris\images\btn_help.svg
@@ -560,7 +580,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\js\update.js
 							www\ttools\TSaymeClass\Hextris\js\view.js
 							www\ttools\TSaymeClass\Hextris\js\wavegen.js
-						-style
+						+style
 							-fonts
 								www\ttools\TSaymeClass\Hextris\style\fonts\Exo2-ExtraLight.otf
 								www\ttools\TSaymeClass\Hextris\style\fonts\Exo2-Regular.otf
@@ -575,7 +595,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -588,7 +608,7 @@ IttveME
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\Musor.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				-TTuningClass
+				+TTuningClass
 					www\ttools\TTuningClass\TuningClass.php
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
@@ -611,6 +631,11 @@ IttveME
 			www\UpSite.php
 			www\UpSiteCSS.php
 		-Материалы
+			-Лабиринт
+				Материалы\Лабиринт\easy_maze.png
+				Материалы\Лабиринт\face.png
+				Материалы\Лабиринт\maze.png
+				Материалы\Лабиринт\Лабиринт.doc
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
 			Материалы\Транзакции базы данных с PDO.doc
@@ -636,28 +661,25 @@ IttveME
 6=www\ttools\TTinyGallery\Dispatch_ZERO.php
 7=www\ttools\TTinyGallery\Dispatch_HEAD.php
 8=www\ttools\TKwinGallery\KwinGalleryClass.php
-9=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-10=www\ttools\TKwinGallery\KwinGallery.js
-11=..\TPhpPrown\TPhpPrown\iniConstMem.php
-12=..\TPhpPrown\TPhpPrown\MakeCookie.php
+9=www\ttools\TEntryClass\EntryClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\Dispatch_ZERO.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=68
-Caret=4,99
+TopLine=102
+Caret=12,140
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=195
-Caret=1,201
+TopLine=297
+Caret=11,302
 [www\UpSite.php]
 TopLine=17
 Caret=23,47
 [www\iniMem.php]
-TopLine=202
-Caret=8,95
+TopLine=210
+Caret=8,245
 [www\ttools\TTinyGallery\Musor.php]
-TopLine=69
-Caret=1,69
+TopLine=161
+Caret=1,198
 [www\ttools\TTinyGallery\Dispatch_BODY.php]
 TopLine=8
 Caret=80,38
@@ -665,20 +687,11 @@ Caret=80,38
 TopLine=9
 Caret=31,23
 [www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=13
-Caret=15,48
+TopLine=25
+Caret=29,58
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=49
 Caret=70,70
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=75
-Caret=40,329
-[www\ttools\TKwinGallery\KwinGallery.js]
-TopLine=43
-Caret=4,55
-[..\TPhpPrown\TPhpPrown\iniConstMem.php]
-TopLine=34
-Caret=1,51
-[..\TPhpPrown\TPhpPrown\MakeCookie.php]
-TopLine=113
-Caret=1,148
+[www\ttools\TEntryClass\EntryClass.php]
+TopLine=5
+Caret=1,40
