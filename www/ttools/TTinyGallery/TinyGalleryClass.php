@@ -117,12 +117,12 @@ class TinyGallery
    
    protected $DelayedMessage;   // отложенное сообщение
    private   $WhipperSnapper;   // игра при выводе ошибки
-   private   $WorkTinyMain;     // объект " Обеспечить работу с материалом в рабочей области"
+   private   $WorkTinyMain;     // объект "Обеспечить работу с материалом в рабочей области"
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $Delcue;           // объект "Удалить раздел материалов"
    private   $Sayme;            // объект "Отправить сообщение автору"
    private   $Entry;            // объект "Войти или зарегистрироваться"
-
+   private   $Tune;             // объект "Изменить настройки сайта в браузере"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
@@ -134,6 +134,7 @@ class TinyGallery
       $this->Delcue=NULL;
       $this->Sayme=NULL;
       $this->Entry=NULL;
+      $this->Tune=NULL;
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
@@ -281,7 +282,8 @@ class TinyGallery
    // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
-   public function Init($NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL,$EntryGame=NULL)
+   public function Init($aPresMode,$aModeImg,$urlHome,
+      $NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL,$EntryGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
@@ -359,8 +361,10 @@ class TinyGallery
          // 6-HEAD этап --------------------- ?Com=vojti-ili-zaregistrirovatsya
          elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
             $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($EntryGame);
-         else if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-            /*$this->Newcue=mmlDobavitNovyjRazdel_HEAD($NewCueGame)*/;
+         // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
+         elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
+            $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome);
+
          // Последний-HEAD этап - инициируем разметку для выбранного материала,
          // cтроим рабочую область для выбранной статьи и её галереи, 
          // обеспечиваем просмотр и редактирование 
@@ -373,7 +377,7 @@ class TinyGallery
       }
       
       /*
-         // *************************************************************************
+      // *************************************************************************
       // *                     Распределить запросы страниц                      *
       // *************************************************************************
       private function Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)
@@ -452,7 +456,7 @@ class TinyGallery
         $oBody->Body();
       echo '</div>';
    }
-   public function ViewLifeSpace($aPresMode,$aModeImg,$urlHome)
+   public function ViewLifeSpace()
    {
       // Если отложенное сообщение, то готовим заголовок и игру со змеёй
       if ($this->DelayedMessage<>imok) 
@@ -473,9 +477,15 @@ class TinyGallery
       // 6-BODY этап ------------------------ ?Com=vojti-ili-zaregistrirovatsya
       elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
       {
-         $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
-         //$Title=MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
+         //$Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+         $Title=MakeTitle('Страница еще не готова, но Вы можете поиграть. Ваша задача - выбрать все парные карты!<br>',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Entry);
+      }
+      // 7-BODY этап ----------------- ?Com=prochitat-o-sajte-izmenit-nastrojki
+      elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
+      {
+         $Title=MakeTitle('Изменить настройки сайта в браузере! '.'&#128152;&#129315;',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->Tune);
       }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else
@@ -506,13 +516,6 @@ class TinyGallery
 
       // Выводим рабочую область редактирования и просмотра
       if ($this->Dispatch_BODY_WorkTiny()) {}
-      // Выводим меню для выбора материала --------- ?Com=zhizn-i-puteshestviya
-      // Выбираем страницу настроек --- ?Com=izmenit-nastrojki-sajta-v-brauzere
-      else if (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
-         mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome);
-      // Выбираем вход/регистрацию ---------- ?Com=vojti-ili-zaregistrirovatsya
-      else if (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
-         mmlVojtiZaregistrirovatsya_BODY_WorkTiny($this->apdo,$this->Arti);
       // Перезапускаем страницу "Назначить статью"
       else if (\prown\isComRequest(mmlNaznachitStatyu))
          mmlNaznachitStatyu_BODY_WorkTiny

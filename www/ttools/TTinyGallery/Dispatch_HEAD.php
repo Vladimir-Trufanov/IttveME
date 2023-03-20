@@ -59,6 +59,16 @@ function mmlVojtiZaregistrirovatsya_HEAD($game=NULL)
    $Entry->Head();
    return $Entry;
 }
+// ****************************************************************************
+// *                         "Войти или зарегистрироваться"                   *
+// ****************************************************************************
+function mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome)
+{
+   require_once "ttools/TTuningClass/TuningClass.php";
+   $Tune=new Tuning($aPresMode,$aModeImg,$urlHome);
+   $Tune->Head();
+   return $Tune;
+}
 
 
 // ****************************************************** Dispatch_HEAD.php ***

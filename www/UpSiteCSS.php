@@ -35,12 +35,7 @@ echo '
 // Подключаем font-awesome 4.7.0
 echo '<link rel="stylesheet" '.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
 // Подключаем jQuery 
-//echo '<script src="/jQuery/jquery-3.6.3.min.js"></script>';
 echo '<script src="/jQuery/jquery-1.11.1.min.js"></script>';
-//echo '
-//    <link rel="stylesheet" type="text/css" href="/jQuery/jquery-ui.min.css">
-//    <script src="/jQuery/jquery-ui.min.js"></script>
-//';
 echo '
     <link rel="stylesheet" type="text/css" href="/jQuery/jquery-ui.min.css">
     <script src="/jQuery/jquery-ui.min.js"></script>
@@ -99,7 +94,7 @@ $ImageFile=prown\getComRequest('Image');
 // Назначаем режим работы с галереей (просмотр или редактирование)
 define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
-$Edit->Init($Duck,$a2048,$Hex,$Paired);
+$Edit->Init($aPresMode,$aModeImg,$urlHome,$Duck,$a2048,$Hex,$Paired);
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 DefineJS();

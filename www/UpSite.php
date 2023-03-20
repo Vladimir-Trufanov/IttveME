@@ -45,7 +45,7 @@ else
       ' - ';
    echo '</div>';
    echo '<div id="Life">'; 
-      $Edit->ViewLifeSpace($aPresMode,$aModeImg,$urlHome);
+      $Edit->ViewLifeSpace();
    echo '</div>';
    echo '<div id="Gallery">';
       $Edit->ViewGallerySpace();

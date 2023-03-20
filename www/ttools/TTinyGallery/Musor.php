@@ -186,14 +186,5 @@ function mmlNaznachitStatyu_BODY_WorkTiny($messa,$pdo,$Arti)
       $Arti->MakeUniMenu($pdo,'getNameCue');
    echo '</div>';
 }
-// ****************************************************************************
-// *                  "Изменить настройки сайта в браузере"                   *
-// ****************************************************************************
-function mmlIzmenitNastrojkiSajta_BODY_WorkTiny($aPresMode,$aModeImg,$urlHome)
-{
-   require_once "ttools/TTuningClass/TuningClass.php";
-   MakeTitle('Изменить настройки сайта в браузере! '.'&#128152;&#129315;',ttMessage);
-   $Tune=new Tuning($aPresMode,$aModeImg,$urlHome);
-}
 
 // *********************************************************** WorkTiny.php ***

@@ -46,7 +46,7 @@ class PairedCards
             #WorkTiny
             {
                width:100%;
-               height:100%;
+               height:92%;
                /*background:transparent;*/
                /*background:white;*/
                overflow:auto;
