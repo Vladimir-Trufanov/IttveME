@@ -570,19 +570,9 @@ IttveME
 					www\ttools\TTinyGallery\Musor.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
 				+TTuningClass
-					+css
-						+fonts
-							www\ttools\TTuningClass\css\fonts\icomoon.eot
-							www\ttools\TTuningClass\css\fonts\icomoon.svg
-							www\ttools\TTuningClass\css\fonts\icomoon.ttf
-							www\ttools\TTuningClass\css\fonts\icomoon.woff
-							www\ttools\TTuningClass\css\fonts\license.txt
-						www\ttools\TTuningClass\css\common.css
-						www\ttools\TTuningClass\css\icons.css
-						www\ttools\TTuningClass\css\style6.css
-					-js
-						www\ttools\TTuningClass\js\jquery.dropdown.js
-						www\ttools\TTuningClass\js\modernizr.custom.63321.js
+					www\ttools\TTuningClass\Pacifico-Regular.ttf
+					www\ttools\TTuningClass\tuning.css
+					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
@@ -635,10 +625,9 @@ IttveME
 6=www\ttools\TTinyGallery\Dispatch_ZERO.php
 7=www\ttools\TTinyGallery\Dispatch_HEAD.php
 8=www\UpSiteCSS.php
-9=www\ttools\TTuningClass\TuningClass.php
-10=www\ttools\TTuningClass\css\style6.css
-11=www\ttools\TEntryClass\PairedCards\PairedCardsClass.php
-12=www\ttools\TTuningClass\css\icons.css
+9=www\ttools\TTuningClass\tuning.css
+10=www\ttools\TTuningClass\tuning.js
+11=www\ttools\TTuningClass\TuningClass.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TTuningClass\TuningClass.php
@@ -646,14 +635,14 @@ Selected=www\ttools\TTuningClass\TuningClass.php
 TopLine=102
 Caret=12,140
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=365
-Caret=64,365
+TopLine=457
+Caret=28,487
 [www\UpSite.php]
-TopLine=33
-Caret=28,48
+TopLine=35
+Caret=1,72
 [www\iniMem.php]
-TopLine=89
-Caret=63,124
+TopLine=96
+Caret=19,123
 [www\ttools\TTinyGallery\Musor.php]
 TopLine=150
 Caret=1,189
@@ -664,20 +653,17 @@ Caret=1,45
 TopLine=23
 Caret=31,23
 [www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=36
+TopLine=34
 Caret=70,65
 [www\UpSiteCSS.php]
-TopLine=15
-Caret=1,38
+TopLine=53
+Caret=1,88
+[www\ttools\TTuningClass\tuning.css]
+TopLine=2
+Caret=68,2
+[www\ttools\TTuningClass\tuning.js]
+TopLine=8
+Caret=2,47
 [www\ttools\TTuningClass\TuningClass.php]
-TopLine=61
-Caret=1,64
-[www\ttools\TTuningClass\css\style6.css]
-TopLine=3
-Caret=1,1
-[www\ttools\TEntryClass\PairedCards\PairedCardsClass.php]
-TopLine=21
-Caret=1,56
-[www\ttools\TTuningClass\css\icons.css]
-TopLine=1
-Caret=1,1
+TopLine=109
+Caret=1,138

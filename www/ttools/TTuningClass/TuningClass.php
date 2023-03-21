@@ -35,6 +35,7 @@ class Tuning
       $this->ModeImg=\prown\MakeCookie('ModeImg'); 
       $this->aModeImg=$aModeImg;
    }
+   /*
    // Выбрать ключ из массива (для $aPresMode,$aModeImg)
    protected function getKey($a,$v)
    {
@@ -45,6 +46,7 @@ class Tuning
       }
       return $Result;
    }
+   */
    public function __destruct() 
    {
    }
@@ -53,65 +55,66 @@ class Tuning
    // *************************************************************************
    public function Head()
    {
-      ?> 
-
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-	   <link rel="stylesheet" type="text/css" href="ttools/TTuningClass/css/style6.css">
-	   <script src="ttools/TTuningClass/js/modernizr.custom.63321.js"></script>
-
-     <?php
-         echo '
-            <style>
-            #WorkTiny
-            {
-               width:100%;
-               height:92%;
-               /*background:transparent;*/
-               /*background:white;*/
-               overflow:auto;
-            }
-            </style>
-         ';
+      ?>
+      <link rel="stylesheet" type="text/css" href="ttools/TTuningClass/tuning.css">
+      <?php
+     
+      echo'  
+         <style>
+         @font-face 
+         {
+            font-family: Pacifico; 
+            src: url(ttools/TTuningClass/Pacifico-Regular.ttf); 
+         }
+         </style>
+      ';
+      echo '
+         <style>
+         #WorkTiny
+         {
+            width:100%;
+            height:92%;
+            overflow:auto;
+         }
+         </style>
+      ';
    }
    // *************************************************************************
    // *                  Изменить свойства для обновления настроек            *
    // *************************************************************************
    public function Body()
    {
+      echo '<div id="tuning">';
+      echo '<form class="frmTuning" method="get" name="TuningFrm" action="'.$this->urlHome.'">';
       ?> 
-		<div class="container">	
-			<section class="main">
-				<div class="fleft">
-					<select id="cd-dropdown" class="cd-select">
-						<option value="-1" selected>Choose your prize</option>
-						<option value="1" class="icon-camera">Camera</option>
-						<option value="2" class="icon-diamond">Diamonds</option>
-						<option value="3" class="icon-rocket">Spaceship</option>
-						<option value="4" class="icon-star">Star</option>
-						<option value="5" class="icon-clock">Time</option>
-					</select>
-				</div>
-			</section>
-		</div>
-		<script type="text/javascript" src="ttools/TTuningClass/js/jquery.dropdown.js"></script>
-		<script type="text/javascript">
-			
-			$( function() {
-				
-				$( '#cd-dropdown' ).dropdown( {
-					gutter : 5,
-					stack : false,
-					delay : 100,
-					slidingIn : 100
-				} );
-
-			});
-
-		</script>
+      <div class="sel sel--black-panther">
+         <select name="pPresMode" id="pPresMode">
+         <option value="" disabled>Режимы представления материалов</option>
+         <option value="rpmOneRight">Одноколоночный с правосторонней галереей</option>
+         <option value="rpmDoubleRight">Двухколоночный с правосторонней галереей</option>
+         <option value="rpmDoubleLeft">Двухколоночный с левосторонней галереей</option>
+         <option value="rpmOneLeft">Одноколоночный с левосторонней галереей</option>
+         </select>
+      </div>
+      <hr class="rule">
+      <div class="sel sel--superman">
+         <select name="pModeImg" id="pModeImg">
+         <option value="" disabled> Режимы представления выбранной картинки</option>
+         <option value="vimExiSize">В заданном размере в пикселах - "как есть"</option>
+         <option value="vimOnPage">На странице по высоте</option>
+         </select>
+      </div>
+      <hr class="rule">
+      <div id="LineCommon">
+      <button id="btnTuning" class="buttons" type="submit">Изменить настройки</button>
+      </div>
       <?php
-            echo '<form class="frmTuning" method="get" name="TuningFrm" action="'.$this->urlHome.'">';
+      echo '</form>';
+      echo '<script src="ttools/TTuningClass/tuning.js"></script>';
+      echo '</div>';
+   }
+   /*
+      echo '<form class="frmTuning" method="get" name="TuningFrm" action="'.$this->urlHome.'">';
       echo '<div>';
       echo '<fieldset>';
       echo '<ul>';
@@ -132,7 +135,7 @@ class Tuning
       echo '<button id="btnTuning" class="buttons" type="submit">Изменить настройки</button>';
       echo "</div>";
       echo "</form>"; 
-   }
+   
    // *************************************************************************
    // *               Обеспечить работу в поле со списком выбора              *
    // *************************************************************************
@@ -163,6 +166,7 @@ class Tuning
       echo "</select>";
       echo "</li>";
    }
+   */
 }
 
 // ******************************************************** TuningClass.php ***

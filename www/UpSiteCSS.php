@@ -33,7 +33,7 @@ echo '
 <meta name="theme-color" content="#ffffff">
 ';
 // Подключаем font-awesome 4.7.0
-echo '<link rel="stylesheet" '.'href="font-awesome-4.7.0/css/font-awesome.min.css">';
+echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
 // Подключаем jQuery 
 echo '<script src="/jQuery/jquery-1.11.1.min.js"></script>';
 echo '
