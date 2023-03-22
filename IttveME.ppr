@@ -192,7 +192,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -441,7 +441,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.css
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -556,7 +556,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -574,9 +574,11 @@ IttveME
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				-TWorkTinyMain
+				+TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+				+TÑhangeClass
+					www\ttools\TÑhangeClass\ChangeClass.php
 			www\.htaccess
 			www\.user.ini
 			www\Common.php
@@ -624,46 +626,50 @@ IttveME
 5=www\ttools\TTinyGallery\Dispatch_BODY.php
 6=www\ttools\TTinyGallery\Dispatch_ZERO.php
 7=www\ttools\TTinyGallery\Dispatch_HEAD.php
-8=www\UpSiteCSS.php
-9=www\ttools\TTuningClass\tuning.css
-10=www\ttools\TTuningClass\tuning.js
-11=www\ttools\TTuningClass\TuningClass.php
+8=www\ttools\TÑhangeClass\ChangeClass.php
+9=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+10=www\UpSiteCSS.php
+11=www\ttools\TArticlesMaker\CommonIttveMe.php
+12=www\Jsx\WorkTiny.js
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTuningClass\TuningClass.php
+Selected=www\ttools\TÑhangeClass\ChangeClass.php
 [www\index.php]
-TopLine=102
-Caret=12,140
+TopLine=80
+Caret=1,92
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=457
-Caret=28,487
+Caret=52,499
 [www\UpSite.php]
 TopLine=35
 Caret=1,72
 [www\iniMem.php]
-TopLine=96
-Caret=19,123
+TopLine=1
+Caret=1,14
 [www\ttools\TTinyGallery\Musor.php]
-TopLine=150
-Caret=1,189
+TopLine=126
+Caret=42,160
 [www\ttools\TTinyGallery\Dispatch_BODY.php]
-TopLine=6
-Caret=1,45
+TopLine=8
+Caret=25,43
 [www\ttools\TTinyGallery\Dispatch_ZERO.php]
-TopLine=23
+TopLine=5
 Caret=31,23
 [www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=34
-Caret=70,65
+TopLine=9
+Caret=1,12
+[www\ttools\TÑhangeClass\ChangeClass.php]
+TopLine=23
+Caret=59,56
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=242
+Caret=21,164
 [www\UpSiteCSS.php]
-TopLine=53
-Caret=1,88
-[www\ttools\TTuningClass\tuning.css]
-TopLine=2
-Caret=68,2
-[www\ttools\TTuningClass\tuning.js]
-TopLine=8
-Caret=2,47
-[www\ttools\TTuningClass\TuningClass.php]
-TopLine=109
-Caret=1,138
+TopLine=135
+Caret=1,1
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=599
+Caret=1,608
+[www\Jsx\WorkTiny.js]
+TopLine=126
+Caret=15,137

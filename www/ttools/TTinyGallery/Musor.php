@@ -66,32 +66,6 @@ function mmlUdalitRazdelMaterialov_BODY_WorkTiny($Delcue)
    MakeTitle('Страничка будет следующей зимой, а здесь соберите сумму 2048.<br> У меня пока получилось 756!',ttMessage);
    $Delcue->Body();
 }
-// ****************************************************************************
-// *      Настроить размеры шрифтов и полосок меню (рождественская версия)    *
-// ****************************************************************************
-function IniFontChristmas()
-{
-   echo '
-   <style>
-   .accordion li > a, 
-   .accordion li > i 
-   {
-      font:bold .9rem/1.8rem Arial, sans-serif;
-      padding:0 1rem 0 1rem;
-      height:2rem;
-   }
-   .accordion li > a span, 
-   .accordion li > i span 
-   {
-      font:normal bold .8rem/1.2rem Arial, sans-serif;
-      top:.4rem;
-      right:0;
-      padding:0 .6rem;
-      margin-right:.6rem;
-   }
-   </style>
-   ';
-}
 
 // ----------------------------------------------------- mmlNaznachitStatyu ---
 

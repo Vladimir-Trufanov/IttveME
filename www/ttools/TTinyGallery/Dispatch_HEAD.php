@@ -69,6 +69,16 @@ function mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome)
    $Tune->Head();
    return $Tune;
 }
+// ****************************************************************************
+// *             "Редактировать выбранный материал или создать новый"         *
+// ****************************************************************************
+function mmlSozdatRedaktirovat_HEAD($Arti,$apdo)
+{
+   require_once "ttools/TСhangeClass/ChangeClass.php";
+   $Сhange=new Change($Arti,$apdo);
+   $Сhange->Head();
+   return $Сhange;
+}
 
 
 // ****************************************************** Dispatch_HEAD.php ***

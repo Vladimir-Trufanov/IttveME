@@ -454,3 +454,68 @@ Stack trace:
 [20-Mar-2023 18:12:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 370
 [20-Mar-2023 18:14:07 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\Tuning::Body() in C:\IttveMe\www\ttools\TTuningClass\TuningClass.php on line 92
 [20-Mar-2023 18:18:43 Asia/Kuwait] PHP Fatal error:  Cannot redeclare ttools\Tuning::Body() in C:\IttveMe\www\ttools\TTuningClass\TuningClass.php on line 92
+[22-Mar-2023 14:35:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 128
+[22-Mar-2023 14:36:17 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 14:40:54 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 14:42:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 14:43:44 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 14:55:59 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 14:56:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 15:00:38 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 15:05:26 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:461
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(505): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 461
+[22-Mar-2023 20:22:11 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function MakeUniMenu() on null in C:\IttveMe\www\ttools\TСhangeClass\ChangeClass.php:42
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(461): ttools\Change->Body()
+#1 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(499): ttools\TinyGallery->_ViewLifeSpace('<div id="Messag...', Object(ttools\Change))
+#2 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#3 C:\IttveMe\www\index.php(99): require_once('C:\\IttveMe\\www\\...')
+#4 {main}
+  thrown in C:\IttveMe\www\ttools\TСhangeClass\ChangeClass.php on line 42

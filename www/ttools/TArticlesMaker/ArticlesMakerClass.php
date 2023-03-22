@@ -159,6 +159,8 @@ class ArticlesMaker
       $cli="";      // сбрасили начальную вставку конца пункта меню
       $this->_MakeUniMenu($clickGru,$clickOne,$pdo,1,1,$cLast,$nLine,$cli,$lvl);
    }
+   
+   /*
    private function _MakeUniMenu($clickGru,$clickOne,
    $pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
    {
@@ -211,6 +213,69 @@ class ArticlesMaker
          echo("</ul>\n");  $cLast='-ul';
       }
    }
+   */
+
+   // Модификация от 22.03.2023
+   private function _MakeUniMenu($clickGru,$clickOne,
+   $pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
+   {
+      // Определяем текущий уровень меню
+      $lvl++; 
+      // Выбираем все записи одного родителя
+      $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
+      $stmt = $pdo->query($cSQL);
+      $table = $stmt->fetchAll();
+      if (count($table)>0) 
+      {
+         echo('<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
+         // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
+         foreach ($table as $row)
+         {
+            // Инкрементируем счетчик строк
+            $nLine++; 
+            // Выбираем параметры записи
+            $Uid=$row["uid"]; $Pid=$row["pid"]; 
+            $NameArt=$row['NameArt']; $Translit=$row["Translit"];
+            $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
+            // Закрываем предыдущий 'LI'
+            if ($cLast<>'+ul') 
+            {
+                $cli="</li>\n";
+                echo($cli); $cLast='-li';
+            }
+            // Выводим 'LI' группы материалов или собственно материала
+            $grClick=$this->HandleСlick($clickGru,$Uid);
+            $maClick=$this->HandleСlick($clickOne,$Uid);
+            echo('<li>'); 
+            if ($IdCue==-1)
+            {
+               echo('<i'.$grClick.'>'.$NameArt.
+                    '<span id="spa'.$Uid.'">'.$Uid.'.</span>'.
+                    '</i>'."\n");
+            } 
+            else
+            {
+               echo('<i'.$maClick.'><em>'.$Uid.'.</em>'.$NameArt.'</i>'); 
+               /*echo('<i'.$maClick.'><em>'.$Uid.'.</em>'.$NameArt.'</i>');*/ 
+               /*echo('<a href="?artim='.$Translit.'">'.$NameArt.'</a>'."\n");*/ 
+               /*
+               $href='<a href="?artim='.$Translit.'">'.$NameArt.'</a>';
+               echo('<i>'.$href.'</i>'); 
+               */
+               echo("\n"); 
+            }
+            $cLast='+li';
+            // Заходим на следующую строку
+            $this->_MakeUniMenu($clickGru,$clickOne,
+               $pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
+            $lvl--; 
+         }
+         $cli="</li>\n";
+         echo($cli); $cLast='-li'; 
+         echo("</ul>\n");  $cLast='-ul';
+      }
+   }
+   
    private function HandleСlick($clickIs,$Uid)
    {
       if ($clickIs=='') $Result='';
