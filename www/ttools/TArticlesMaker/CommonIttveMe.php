@@ -19,7 +19,6 @@
 // aViewLevel($array)                                                         - Вывести содержимое массива в первом виде - до уровня 
 // aViewPath($array)                                                          - Вывести содержимое массива с путями и транслитом  
 // cUidPid($Uid,$Pid,$cLast)                                                  - Обеспечить смещение строк меню при отладке 
-// ShowCaseMe($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
 // ShowTreeMe($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
 // sort_link_th($title,$a,$b,$SignAsc,$SignDesc)                              - Включить ссылку в текущую строку таблицы меню с сортировкой по полям
 // SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)                               - Обеспечить иммитацию пробелов смещения строк меню при отладке 
@@ -455,54 +454,6 @@ function cUidPid($Uid,$Pid,$cLast)
 {
    $c='<!-- '.$cLast.' '.(1000+$Uid).'-'.(1000+$Pid).' --> ';
    return $c;
-}
-// ****************************************************************************
-// *       Сформировать строки меню для выборки записи для редактирования:    *
-// *                    $cli - вставка конца пункта меню                      *            
-// ****************************************************************************
-function ShowCaseMe($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
-{
-   // Определяем текущий уровень меню
-   $lvl++; 
-   // Выбираем все записи одного родителя
-   $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
-   $stmt = $pdo->query($cSQL);
-   $table = $stmt->fetchAll();
-
-   if (count($table)>0) 
-   {
-      echo('<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
-      // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
-      $nPoint=0;
-      foreach ($table as $row)
-      {
-         $nLine++; $cLine=''; 
-         $Uid=$row["uid"]; $Pid=$row["pid"]; $Translit=$row["Translit"];
-         $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
-         if ($cLast<>'+ul') 
-         {
-             $cli="</li>\n";
-             echo($cli); $cLast='-li';
-         }
-         if ($IdCue==-1)
-         {
-            echo('<li id="'.$Translit.'" class="'.$Translit.'"> '); 
-            echo('<a href="#'.$Translit.'">'.$Uid.' '.$row['NameArt'].'</a>'."\n"); 
-         } 
-         else
-         {
-            $nPoint++;
-            echo("<li> ");
-            echo('<a href="?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
-         }
-         $cLast='+li';
-         ShowCaseMe($pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
-         $lvl--; 
-      }
-      $cli="</li>\n";
-      echo($cli); $cLast='-li'; 
-      echo("</ul>\n");  $cLast='-ul';
-   }
 }
 // ****************************************************************************
 // *           Сформировать строки меню для записей одного родителя           *

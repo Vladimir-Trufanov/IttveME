@@ -123,7 +123,7 @@ class TinyGallery
    private   $Sayme;            // объект "Отправить сообщение автору"
    private   $Entry;            // объект "Войти или зарегистрироваться"
    private   $Tune;             // объект "Изменить настройки сайта в браузере"
-   private   $Change;           // объект "Редактировать выбранный материал или создать новый"
+   private   $ModyArt;          // объект "Редактировать выбранный материал или создать новый"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
@@ -136,7 +136,7 @@ class TinyGallery
       $this->Sayme=NULL;
       $this->Entry=NULL;
       $this->Tune=NULL;
-      $this->Change=NULL;
+      $this->ModyArt=NULL;
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
@@ -243,12 +243,8 @@ class TinyGallery
       }
       /*
       // Если выбран материал (транслит) для редактирования, то готовим 
-      // установку кукиса на данный материал. Материал мог быть выбран при 
-      // выполнении методов:
-      //    $apdo=$this->Arti->BaseConnect();
-      //    $this->Arti->GetPunktMenu($apdo);
-      \prown\ConsoleLog('$this->DelayedMessage='.$this->DelayedMessage);
-      //if ($this->DelayedMessage==imok)
+      // установку кукиса на данный материал. 
+
       // Если было назначение нового материала/статьи, 
       // то делаем запись в базу данных и готовим транслит статьи для установки
       // кукиса и начала редактирования материала
@@ -368,7 +364,7 @@ class TinyGallery
             $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome);
          // 8-HEAD этап ----------------- ?Com=sozdat-material-ili-redaktirovat 
          elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
-            $this->Change=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo);
+            $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo);
 
          // Последний-HEAD этап - инициируем разметку для выбранного материала,
          // cтроим рабочую область для выбранной статьи и её галереи, 
@@ -495,8 +491,8 @@ class TinyGallery
       // 8-BODY этап -------------------- ?Com=sozdat-material-ili-redaktirovat 
       elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
       {
-         $Title=MakeTitle('Редактировать выбранный материал или создать новый! '.'&#128152;&#129315;',ttMessage);
-         $this->_ViewLifeSpace($Title,$this->Change);
+         $Title=MakeTitle('Выберите статью для редактирования!? '.'&#128152;&#129315;',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->ModyArt);
       }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else
@@ -587,9 +583,6 @@ class TinyGallery
    {
       // Выводим заголовочное сообщение
       MakeTitle('Выбрать статью для редактирования',ttMessage);
-      // Выбираем статью для редактирования и, дополнительно,
-      // проверяем целостность базы данных
-      $this->Arti->getPunktMenu($this->apdo); 
    }
    private function KwinGallery_mmlVernutsyaNaGlavnuyu()
    {

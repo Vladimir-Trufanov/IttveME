@@ -52,9 +52,7 @@ echo '
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем элементы, подключаем стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
-echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
-echo '<link rel="stylesheet" type="text/css" href="ttools/TArticlesMaker/ArticlesMaker.css">';
 
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';

@@ -74,10 +74,10 @@ function mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome)
 // ****************************************************************************
 function mmlSozdatRedaktirovat_HEAD($Arti,$apdo)
 {
-   require_once "ttools/TСhangeClass/ChangeClass.php";
-   $Сhange=new Change($Arti,$apdo);
-   $Сhange->Head();
-   return $Сhange;
+   require_once "ttools/TModyArt/ModyArtClass.php";
+   $ModyArt=new ModyArt($Arti,$apdo);
+   $ModyArt->Head();
+   return $ModyArt;
 }
 
 

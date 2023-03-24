@@ -6,10 +6,12 @@
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  07.01.2019
- Copyright © 2019 tve                                Посл.изменение: 27.02.2023
+ Copyright © 2019 tve                                Посл.изменение: 24.03.2023
 */
 
-/* Не изменяемые параметры текущего положения div-ов                         */
+/* 
+ Неизменные параметры текущего положения div-ов                         
+*/
 #Gallery
 {
    top:0;
@@ -19,7 +21,10 @@
 #Life,#News
 {
    top:0;
+   padding:.6rem;
    bottom:5.9rem;
+   z-index:10;
+   background:red; 
 }
 #FooterTiny
 {
@@ -35,7 +40,97 @@
 {
    width:67%; 
 }
-/* Стили нижней информационной строки                                        */ 
+/* 
+ Рабочая область Tiny                                                      
+*/
+#frmTinyText
+{
+   margin-top:1rem;
+   width:100%;
+   height:99%;
+}
+#mytextarea
+{
+   height:100%;
+}
+/*
+ * Заголовок и рабочая область внутри #Life
+ */
+#tLife,#WorkTiny
+{
+   width:100%;
+   overflow:auto;
+}
+#tLife
+{
+   display: inline-block;
+   padding:.2rem 0 .8rem 0;
+   background:blue; 
+}  
+#WorkTiny
+{
+   background:green; 
+}
+/* Стили заголовков                                                          */ 
+#Message,#NameError,#TopLine
+{
+   display:block;
+   font-size:1.9rem;
+   overflow:hidden;
+   color:maroon;
+   font-weight:600;
+   margin:0;
+   padding:0;
+   border:0;
+   height:2.5rem;
+}
+#NameError
+{
+   color:Red;
+   text-align:center;
+}
+#Message
+{
+   text-align:center;
+}
+#NameGru
+{
+   float:left;
+}
+#NameArt
+{
+   float:right;
+   margin-right:.5rem;
+}
+
+/*
+ Неизменные стили позиционирования элементов подвала
+*/
+#LifeMenu,#LeftFooter,#RightFooter
+{
+   position:absolute; 
+   top:0;
+   bottom:0;
+   background:transparent; 
+}
+#LifeMenu
+{
+   left:0;
+   width:5rem;
+}
+#LeftFooter
+{
+   left:5rem;
+   right:24rem;
+}
+#RightFooter
+{
+   right:0;
+   width:24rem;
+}
+/* 
+ Неизменные стили нижней информационной строки
+*/ 
 #Info
 {
    margin-bottom:0;
@@ -60,34 +155,100 @@
    padding:0rem .3rem .2rem .3rem;
    color:#A4A4A4;
 }
-/* Неизменяемые стили позиционирования элементов подвала                     */
-#LifeMenu,#LeftFooter,#RightFooter
-{
-   position:absolute; 
-   top:0;
-   bottom:0;
-   background:transparent; 
-}
-/*
-#LifeMenu{background:Lavender;}
-#LeftFooter{background:PaleGreen;}
-#RightFooter{background:Honeydew;}
+/* 
+ Cтили картинок, изображений в галерее                                     
 */
-#LifeMenu
+#Gallery
 {
-   left:0;
-   width:5rem;
+   align-items:center;
+   background:#e0e3ec url(../../../Images/Menu/bgnoise_lg.jpg) repeat top left;
 }
-#LeftFooter
+.Card, .bCard, .imgCard, .pCard, .taCard
 {
-   left:5rem;
-   right:24rem;
+   background:transparent;
 }
-#RightFooter
+.Card
 {
-   right:0;
-   width:24rem;
+   border:.4rem double gray;
+   margin-bottom:.2rem;  
 }
+.bCard
+{
+   cursor:pointer;
+   margin:0;
+   padding:.1rem; 
+   border:0;
+}
+.imgCard
+{
+   width:100%;
+}
+#imgCardi
+{
+   width:100%;
+}
+#infCard, #insCard
+{
+   height:0;
+   width:0;
+   margin:0;
+   padding:0; 
+   border:0;
+}
+.pCard, .taCard 
+{
+   font-size:1rem; 
+   text-align:center;
+   margin:0;
+   padding:.1rem; 
+   border:0;
+}
+.taCard
+{
+   height:10rem;
+   width:100%;
+}
+.Card:hover 
+{
+   color:#993300; 
+   font-weight:600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
 /* Кнопка "Жизнь и путешествия"                                              */
 #btnLifeMenu
 {
@@ -138,12 +299,126 @@
    border-bottom:dashed 1px #ddd;
    */
 }
-/* Галерея новостей, секция материалов                                       */
-#News,#Life
+
+
+/* Устанавливаем стили при назначении статьи */
+/*
+#AddArticle
 {
-   padding:.6rem;
-   z-index:10;
+  margin-top:6rem;
+  padding:0;
+  border:0;
+  vertical-align:baseline;
+  width:100%;
 }
+#nsGroup 
+{
+  position:relative;
+  width:100%;
+ -webkit-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+ -moz-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+ -ms-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+ -o-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+ transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+ -webkit-transition-delay:1s;
+ transition-delay:1s;
+}
+#nsName
+{
+  top:2rem;
+  left:1%;
+  width:76%;
+}
+#nsDate 
+{
+  top:2rem;
+  right:1%;
+  width:15%;
+}
+#nsName,#nsDate 
+{
+  position:absolute;
+  display:block;
+  height:30px;
+  background:#fff;
+  font-size:10pt;
+  padding-left:20px;
+  color:rgba(0,0,0,0.1);
+  -webkit-box-shadow:1px 1px 20px rgba(0,0,0, 0.2);
+  -moz-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+  -ms-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+  -o-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+  box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+  border:none;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  -ms-border-radius:4px;
+  -o-border-radius:4px;
+  border-radius:4px;
+  -webkit-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+  -moz-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+  -ms-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+  -o-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+#nsName:focus, #nsName:active:focus,
+#nsDate:focus, #nsDate:active:focus, 
+{
+  outline:none;
+  padding-left:30px;
+}
+#nsName 
+{
+  z-index:2;
+  -webkit-transition:0.5s;
+  -moz-transition:0.5s;
+  -ms-transition:0.5s;
+  -o-transition:0.5s;
+  transition:0.5s;
+}
+#nsDate 
+{
+  z-index:1;
+  background:rgba(0, 0, 0, 0.1);
+  -webkit-transition:0.5s;
+  -moz-transition:0.5s;
+  -ms-transition:0.5s;
+  -o-transition:0.5s;
+  transition:0.5s;
+}
+*/
+/* ------------------------------ Выбор реквизитов при назначении статьи --- */
+/*
+.nazst
+{
+   padding:0;
+   margin:0 .8rem 1rem .8rem;
+   background:transparent;*/
+   /*color: #993300;*/ 
+  /* border:.4rem double gray;
+}
+.nazstName
+{
+   margin: 1rem .8rem .2rem .8rem;
+}
+.nazstValue
+{
+   margin-bottom:1rem;
+   margin-right:.8rem;
+   text-align:right;
+}
+#nazstSub
+{
+   margin:0;
+   margin-left:.8rem;
+   margin-bottom:.8rem;
+}
+*/
+
+/*
+ * Стили всплывающей кнопки #LeftFooter
+ */
+
 
 /* ********************************************************* Content.css *** */	
 	
