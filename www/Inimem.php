@@ -64,7 +64,7 @@ define ("jsxdir",       'Jsx');                           // каталог фа
 define ("ChangeSize",  "chs");                            // "Изменить размер базового шрифта"  
 define('nym',          'ittve');                          // префикс имен файлов для фотографий галереи и материалов
 
-// ----------------------------------------------- Режимы работы с галереей ---
+// ---------------------------------- Режимы работы с материалом и галереей ---
 define ("mwgViewing", 'просмотр');   
 define ("mwgEditing", 'редактирование');  
 
@@ -109,7 +109,6 @@ define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya'); 
 
 define ('mmlNaznachitStatyu',            'naznachit-statyu');                    // 13 из 8
 define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
-
 
 // ----------- Режимы представления материалов = Content Presentation Modes ---
 define ("rpmDoubleRight", 'двухколоночный с правосторонней галереей');   
@@ -156,8 +155,6 @@ require_once "ttools/TKwinGallery/KwinGalleryClass.php";
 */
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');
-//echo 'Привет2';      
-
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы

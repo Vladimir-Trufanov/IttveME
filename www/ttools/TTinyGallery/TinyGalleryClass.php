@@ -223,11 +223,6 @@ class TinyGallery
          // Если материал выбран готовим данные для страницы
          if ($this->DelayedMessage==imok)
          {
-            // Устанавливаем кукис на новый или выбранный материал
-            if (!IsSet($_COOKIE['PunktMenu'])) 
-               $this->Arti->cookieGetPunktMenu($Translit); 
-            else if ($Translit<>\prown\MakeCookie('PunktMenu'))
-               $this->Arti->cookieGetPunktMenu($Translit); 
            // Запоминаем в объекте текущий материал
            $this->contents=html_entity_decode($contentsIn);
            $this->NameGru=$NameGru;

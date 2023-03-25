@@ -47,7 +47,6 @@
 //    сообщений
 
 // ------------------------------------------ Путь к каталогу файлов класса ---
-//define ("TArticlesMakerDir",$SiteRoot.'/ttools/TArticlesMaker');  
 define ("TArticlesMakerDir",'ttools/TArticlesMaker');  
 
 // --------------------- Константы для указания типа базы данных (по сайту) ---
@@ -95,10 +94,18 @@ class ArticlesMaker
       $this->password    = $password;
       $this->kindMessage = NULL;
       
-      // Выбираем текущий транслит (вначале из параметра, если есть)
-      $this->getArti=\prown\getComRequest('arti');
-      // Сохраняем кукис, если есть параметр
-      if ($this->getArti<>NULL) $this->cookieGetPunktMenu($this->getArti); 
+      // Выбираем текущий транслит, если есть параметр по просмотру материала
+      // и сохраняем кукисы транслита и режима просмотра
+      if (\prown\getComRequest('arti')<>NULL) 
+      {
+         $this->getArti=\prown\MakeCookie('PunktMenu',\prown\getComRequest('arti'),tStr);  
+      }
+      // Выбираем текущий транслит, если есть параметр по редактированию
+      // материала и сохраняем кукисы транслита и режима редактирования
+      else if (\prown\getComRequest('artim')<>NULL) 
+      {
+         $this->getArti=\prown\MakeCookie('PunktMenu',\prown\getComRequest('artim'),tStr);  
+      }
       // Если параметр не передавался, то выбираем из существующего кукиса
       else
       {
@@ -275,7 +282,6 @@ class ArticlesMaker
          echo("</ul>\n");  $cLast='-ul';
       }
    }
-   
    private function HandleСlick($clickIs,$Uid)
    {
       if ($clickIs=='') $Result='';
@@ -287,11 +293,12 @@ class ArticlesMaker
    // *************************************************************************
    public function Init()
    {
+      /*
       // Настраиваем фоны графическими файлами
       $bgnoise_lg=$this->imgdir.'/bgnoise_lg.jpg';
       $icons=$this->imgdir.'/icons.png';
       echo '
-      <style>
+ÿ   Ḱ˳  tyle>
       .accordion li > a span,
       .accordion li > i span 
       {
@@ -303,6 +310,7 @@ class ArticlesMaker
       }
       </style>
       ';
+      */
    }
    // *************************************************************************
    // *                     Открыть соединение с базой данных                 *
@@ -331,14 +339,6 @@ class ArticlesMaker
    {
       _MakeMyLifeMenu($pdo);
    } 
-   // 
-   // *************************************************************************
-   // *              Отметить в кукисе, что выбран указанный материал         *
-   // *************************************************************************
-   public function cookieGetPunktMenu($getArti) 
-   {
-      $this->getArti=\prown\MakeCookie('PunktMenu',$getArti,tStr);  
-   }
    // *************************************************************************
    // *    Создать резервную копию базы данных, построить новую базу данных   *
    // * ($aCharters='-',подключить массив со структурой основной базы данных) *

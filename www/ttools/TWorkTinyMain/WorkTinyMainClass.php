@@ -38,6 +38,7 @@ class WorkTinyMain
       // Выводим страницу
       else
       {
+         \prown\Alert('GalleryMode='.GalleryMode); 
          // Формируем контент страницы   
          if ($this->contents<>NULL) $contenti=$this->contents;
          else $contenti='';
@@ -82,7 +83,7 @@ class WorkTinyMain
                //},'.
                //height: 180,'.
                //width:  780,'.
-               'content_css: "'.$fileStyle.'",'.
+               'content_css: "'. $this->fileStyle.'",'.
                'plugins:
                [ 
                   "advlist autolink link image imagetools lists charmap print preview hr anchor",

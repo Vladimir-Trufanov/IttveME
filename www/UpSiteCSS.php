@@ -116,7 +116,10 @@ function setGalleryMode()
      (prown\isComRequest(mmlVernutsyaNaGlavnuyu))||
      (prown\isComRequest(mmlUdalitMaterial))||
      (prown\isComRequest(mmlZhiznIputeshestviya))
-   ) $Result=mwgViewing; 
+   ) $Result=mwgViewing;
+   
+   
+   $Result=mwgEditing;  
    return $Result;  
 }
 // ****************************************************************************
