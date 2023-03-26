@@ -367,7 +367,7 @@ class TinyGallery
          else 
          {
             require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
-            $this->WorkTinyMain=new WorkTinyMain($this->fileStyle,$this->contents);
+            $this->WorkTinyMain=new WorkTinyMain($this->Arti,$this->fileStyle,$this->contents);
             $this->WorkTinyMain->Head();
          }
       }

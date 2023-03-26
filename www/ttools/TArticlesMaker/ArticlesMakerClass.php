@@ -75,6 +75,7 @@ class ArticlesMaker
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
    public $kindMessage;         // Объект вывода сообщений;  
    public $getArti;             // Транслит текущего материала
+   public $GalleryMode;         // Режим работы с материалом и галереей
 
    protected $editdir;          // Каталог размещения файлов, связанных c материалом
    protected $imgdir;           // Каталог файлов служебных для сайта изображений
@@ -94,23 +95,28 @@ class ArticlesMaker
       $this->password    = $password;
       $this->kindMessage = NULL;
       
+      // Изначально устанавливаем режим просмотра для работы с материалом
+      $this->GalleryMode=mwgViewing;
       // Выбираем текущий транслит, если есть параметр по просмотру материала
-      // и сохраняем кукисы транслита и режима просмотра
+      // и сохраняем кукис транслита 
       if (\prown\getComRequest('arti')<>NULL) 
-      {
-         $this->getArti=\prown\MakeCookie('PunktMenu',\prown\getComRequest('arti'),tStr);  
-      }
+      $this->getArti=$this->setCurrTranslit(\prown\getComRequest('arti'));   
       // Выбираем текущий транслит, если есть параметр по редактированию
-      // материала и сохраняем кукисы транслита и режима редактирования
+      // материала и сохраняем кукисы транслита.
+      //                                     Только в этом случае устанавливаем 
+      //                                         режим редактирования материала
       else if (\prown\getComRequest('artim')<>NULL) 
       {
-         $this->getArti=\prown\MakeCookie('PunktMenu',\prown\getComRequest('artim'),tStr);  
+         $this->getArti=$this->setCurrTranslit(\prown\getComRequest('artim'));
+         $this->GalleryMode=mwgEditing;
       }
       // Если параметр не передавался, то выбираем из существующего кукиса
       else
       {
-         if (isset($_COOKIE['PunktMenu'])) $this->getArti=\prown\MakeCookie('PunktMenu');
-         else $this->getArti=NULL; 
+         if (isset($_COOKIE['PunktMenu'])) 
+            $this->getArti=\prown\MakeCookie('PunktMenu');
+         else 
+            $this->getArti=NULL; 
       }
       // Выполняем действия на странице до отправления заголовков страницы: 
       // (устанавливаем кукисы и т.д.)                  
@@ -124,6 +130,14 @@ class ArticlesMaker
    // *************************************************************************
    public function __destruct() 
    {
+   }
+   // *************************************************************************
+   // *         Назначить заданный транслит текущим и убрать его в кукис      *
+   // *************************************************************************
+   public function setCurrTranslit($getArti) 
+   {
+      $CurrTranslit=\prown\MakeCookie('PunktMenu',$getArti,tStr); 
+      return $CurrTranslit;
    }
    // *************************************************************************
    // *   Выполнить действия на странице до отправления заголовков страницы:  *
@@ -298,7 +312,7 @@ class ArticlesMaker
       $bgnoise_lg=$this->imgdir.'/bgnoise_lg.jpg';
       $icons=$this->imgdir.'/icons.png';
       echo '
-ÿ   Ḱ˳  tyle>
+      <style>
       .accordion li > a span,
       .accordion li > i span 
       {

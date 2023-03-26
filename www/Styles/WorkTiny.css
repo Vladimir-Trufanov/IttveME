@@ -1,0 +1,72 @@
+/** HTML5/CSS3, EDGE/CHROME                                *** WorkTiny.css ***
+
+ ******************************************************************************
+ * ittve.me                             Выполнить стилизацию рабочих областей *
+ *                                        WorkTiny и tLife для редактирования *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 26.03.2023
+*/
+/* 
+ Рабочая область Tiny                                                      
+*/
+#frmTinyText
+{
+   margin-top:1rem;
+   width:100%;
+   height:99%;
+}
+#mytextarea
+{
+   height:100%;
+}
+/*
+ * Заголовок и рабочая область внутри #Life
+ */
+#tLife,#WorkTiny
+{
+   width:100%;
+}
+#tLife
+{
+   padding:.2rem 0 .8rem 0;
+}  
+#WorkTiny
+{
+}
+/* Стили заголовков                                                          */ 
+#Message,#NameError,#TopLine
+{
+   display:block;
+   font-size:1.9rem;
+   overflow:hidden;
+   color:maroon;
+   font-weight:600;
+   margin:0;
+   padding:0;
+   border:0;
+}
+#NameError
+{
+   color:Red;
+   text-align:center;
+}
+#Message
+{
+   text-align:center;
+}
+#NameGru
+{
+   float:left;
+}
+#NameArt
+{
+   float:right;
+   margin-right:.5rem;
+}
+
+/* ******************************************************** WorkTiny.css *** */	
+	
+

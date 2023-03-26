@@ -13,12 +13,14 @@
 class WorkTinyMain
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
+   private $Arti;          // построитель материалов сайта 
    private $fileStyle;     // файл стилей элементов класса 
    private $game;          // игра, замещающая страницу (при необходимости) 
    private $contents;      // текущий материал
    
-   public function __construct($fileStyle,$contents,$game=NULL) 
+   public function __construct($Arti,$fileStyle,$contents,$game=NULL) 
    {
+      $this->Arti=$Arti;
       $this->game=$game;
       $this->fileStyle=$fileStyle;
       $this->contents=$contents;
@@ -38,13 +40,13 @@ class WorkTinyMain
       // Выводим страницу
       else
       {
-         \prown\Alert('GalleryMode='.GalleryMode); 
+         //\prown\Alert('GalleryMode='.$this->Arti->GalleryMode); 
          // Формируем контент страницы   
          if ($this->contents<>NULL) $contenti=$this->contents;
          else $contenti='';
 
          // Если режим редактирования, то готовим рабочую область Tiny  
-         if (GalleryMode==mwgEditing) 
+         if ($this->Arti->GalleryMode==mwgEditing) 
          {
             $SaveAction=$_SERVER["SCRIPT_NAME"];
             echo '
@@ -66,7 +68,7 @@ class WorkTinyMain
    private function IniTiny() 
    {
       // Если режим редактирования, то готовим рабочую область Tiny  
-      if (GalleryMode==mwgEditing) 
+      if ($this->Arti->GalleryMode==mwgEditing) 
       {
          echo '
             <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
@@ -83,7 +85,7 @@ class WorkTinyMain
                //},'.
                //height: 180,'.
                //width:  780,'.
-               'content_css: "'. $this->fileStyle.'",'.
+               'content_css: "'.$this->fileStyle.'",'.
                'plugins:
                [ 
                   "advlist autolink link image imagetools lists charmap print preview hr anchor",

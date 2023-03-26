@@ -180,7 +180,7 @@ class KwinGallery
       // или предлагаем загрузить первую
       if (count($tableKeys)==0)
       {
-         if (GalleryMode==mwgEditing) 
+         if ($this->Arti->GalleryMode==mwgEditing) 
          {
             if (IsSet($_POST["MAX_FILE_SIZE"])) $this->GSaveImgComm();
             else  $this->GLoadImage(imgdir.'/sampo.jpg',"На горе Сампо всем хорошо!");
@@ -206,14 +206,14 @@ class KwinGallery
                $messa=$table['Pic']; break;
             }
             // Выводим загруженное изображение в карточке
-            if (GalleryMode==mwgEditing) 
+            if ($this->Arti->GalleryMode==mwgEditing) 
                $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic,$Action='Image');
             else
                $this->GViewImage($row['mime_type'],$table['Pic'],$Comment,$Action='Image');
                //$this->GViewImage($FileName,$Comment,$Action='Image');
             // Если задан режим редактирования, то выводим изображение для загрузки
             // (как правило, второе при выводе карточек)
-            if ((GalleryMode==mwgEditing)&&($i==0)) 
+            if (($this->Arti->GalleryMode==mwgEditing)&&($i==0)) 
             {
                if (IsSet($_POST["MAX_FILE_SIZE"])) $this->GSaveImgComm();
                else  $this->GLoadImage(imgdir.'/sampo.jpg',"На горе Сампо всем хорошо!");

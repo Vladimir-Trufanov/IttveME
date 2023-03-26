@@ -37,7 +37,7 @@ function mmlVybratSledMaterial_ZERO($Arti,&$getArti)
       // Если ошибка, то формируем отложенное сообщение
       if ($a[0]["Translit"]==nstErr) $DelayedMessage=$a[0]["NameArt"];
       // Если поиск удачный, то возвращаем найденный транслит
-      else $getArti=$a[0]["Translit"];
+      else $getArti=$Arti->setCurrTranslit($a[0]["Translit"]); 
    }
    // Возвращаем сообщение
    return $DelayedMessage;
@@ -72,7 +72,7 @@ function mmlVernutsyaPredState_ZERO($Arti,&$getArti)
       // Если ошибка, то формируем отложенное сообщение
       if ($a[0]["Translit"]==nstErr) $DelayedMessage=$a[0]["NameArt"];
       // Если поиск удачный, то возвращаем найденный транслит
-      else $getArti=$a[0]["Translit"];
+      else $getArti=$Arti->setCurrTranslit($a[0]["Translit"]); 
    }
    // Возвращаем сообщение
    return $DelayedMessage;

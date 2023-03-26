@@ -52,6 +52,7 @@ echo '
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем элементы, подключаем стили
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
+echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
 
 // Подключаем скрипты внутренних классов 
@@ -89,8 +90,6 @@ setPositionDiv($c_PresMode);
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
 $ImageFile=prown\getComRequest('Image');
-// Назначаем режим работы с галереей (просмотр или редактирование)
-define ("GalleryMode",setGalleryMode());   
 // Подключаем стили для редактирования материалов
 $Edit->Init($aPresMode,$aModeImg,$urlHome,$Duck,$a2048,$Hex,$Paired);
 $note->Init();
@@ -99,29 +98,6 @@ DefineJS();
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---
 
-// ****************************************************************************
-// *               На основании указанных параметров запроса страницы         *
-// *                     определяем режим просмотра галереи                   *
-// ****************************************************************************
-function setGalleryMode()
-{
-   // По умолчанию считаем режим просмотра галереи
-   $Result=mwgViewing;
-   if (
-     (prown\isComRequest(mmlSozdatRedaktirovat))||
-     (prown\isComRequest(mmlVybratStatyuRedakti))||
-     (prown\isComRequest(mmlNaznachitStatyu))
-   ) $Result=mwgEditing;   
-   else if (
-     (prown\isComRequest(mmlVernutsyaNaGlavnuyu))||
-     (prown\isComRequest(mmlUdalitMaterial))||
-     (prown\isComRequest(mmlZhiznIputeshestviya))
-   ) $Result=mwgViewing;
-   
-   
-   $Result=mwgEditing;  
-   return $Result;  
-}
 // ****************************************************************************
 // *         Определить изменяемые параметры текущего положения div-ов        *
 // ****************************************************************************
