@@ -80,5 +80,15 @@ function mmlSozdatRedaktirovat_HEAD($Arti,$apdo)
    return $ModyArt;
 }
 
+// ****************************************************************************
+// *                        "Назначить новую статью"                          *
+// ****************************************************************************
+function mmlNaznachitStatyu_HEAD($Arti,$apdo)
+{
+   require_once "ttools/TNewArt/NewArtClass.php";
+   $NewArt=new NewArt($Arti,$apdo);
+   $NewArt->Head();
+   return $NewArt;
+}
 
 // ****************************************************** Dispatch_HEAD.php ***

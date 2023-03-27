@@ -68,29 +68,6 @@ function mmlUdalitRazdelMaterialov_BODY_WorkTiny($Delcue)
 }
 
 // ----------------------------------------------------- mmlNaznachitStatyu ---
-
-// ****************************************************************************
-// *           Подготовить стили страницы при назначении новой статьи         *
-// ****************************************************************************
-function mmlNaznachitStatyu_HEAD()
-{
-    // Отключаем разворачивание аккордеона
-    // в случае, когда создаем заголовок новой статьи. 
-    echo '
-    <style>
-      .accordion li .sub-menu 
-      {
-         height:100%;
-      }
-    </style>
-    ';
-    echo '
-    <script>
-    </script>
-    ';
-    // Включаем рождественскую версию шрифтов и полосок меню
-    IniFontChristmas();
-}
 // ****************************************************************************
 // *   Построить панель выбранных значений при назначении новой статьи        *
 // ****************************************************************************
@@ -116,49 +93,6 @@ function mmlNaznachitStatyu_BODY_KwinGallery()
       </div>
    ';
    //$this->Galli->BaseGallery(mwgEditing);
-}
-// ****************************************************************************
-// *            Выполнить действия в области редактирования "WorkTiny"        *
-// *                        при назначении новой статьи                       *
-// ****************************************************************************
-function mmlNaznachitStatyu_BODY_WorkTiny($messa,$pdo,$Arti)
-{
-   if (\prown\getComRequest('nsnGru')==NoDefine)
-   {
-      ?> <script> 
-         $(document).ready(function() {Error_Info('Группа материалов не назначена!');})
-      </script> <?php
-   }
-   // Проверяем и учитываем уже выбранные данные
-   if (\prown\getComRequest('nsnName')==NULL) $nsnName='';
-   else $nsnName='value="'.\prown\getComRequest('nsnName').'"';
-   if (\prown\getComRequest('nsnDate')==NULL) $nsnDate='';
-   else $nsnDate='value="'.\prown\getComRequest('nsnDate').'"';
-   // Выводим заголовочное сообщение
-   MakeTitle($messa,ttMessage);
-   // Выбираем название и дату новой статьи
-   $SaveAction=$_SERVER["SCRIPT_NAME"];
-   echo '
-      <div id="nsGroup">
-      <form id="frmNaznachitStatyu" method="post" action="'.$SaveAction.'">
-   ';
-   echo '
-      <input id="nsName" type="text" name="nsnName" '.$nsnName.
-         ' placeholder="Название нового материала"'.
-         ' required onchange="changeNsName(this.value)">
-      <input id="nsDate" type="date" name="nsnDate" '.$nsnDate.
-         ' required onchange="changeNsDate(this.value)">
-      <input id="nsCue"  type="hidden" name="nsnCue" value="'.NoDefine.'">
-      <input id="nsGru"  type="hidden" name="nsnGru" value="'.NoDefine.'">
-   ';
-   echo '
-      </form>
-      </div>
-   ';
-   // Выбираем группу материалов для которой создается новая статья
-   echo '<div id="AddArticle">';
-      $Arti->MakeUniMenu($pdo,'getNameCue');
-   echo '</div>';
 }
 
 // *********************************************************** WorkTiny.php ***

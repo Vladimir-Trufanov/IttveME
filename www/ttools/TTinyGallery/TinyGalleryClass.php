@@ -124,6 +124,7 @@ class TinyGallery
    private   $Entry;            // объект "Войти или зарегистрироваться"
    private   $Tune;             // объект "Изменить настройки сайта в браузере"
    private   $ModyArt;          // объект "Редактировать выбранный материал или создать новый"
+   private   $NewArt;           // объект "Назначить новую статью"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
@@ -137,6 +138,7 @@ class TinyGallery
       $this->Entry=NULL;
       $this->Tune=NULL;
       $this->ModyArt=NULL;
+      $this->NewArt=NULL;
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
@@ -220,7 +222,7 @@ class TinyGallery
          // Вытаскиваем материал для редактирования
          $this->DelayedMessage=$this->Arti->SelUidPid
             ($this->apdo,$Translit,$pidEdit,$uidEdit,$NameGru,$NameArt,$DateArt,$contentsIn);
-         // Если материал выбран готовим данные для страницы
+         // Если материал выбран, готовим данные для страницы
          if ($this->DelayedMessage==imok)
          {
            // Запоминаем в объекте текущий материал
@@ -237,9 +239,6 @@ class TinyGallery
          }
       }
       /*
-      // Если выбран материал (транслит) для редактирования, то готовим 
-      // установку кукиса на данный материал. 
-
       // Если было назначение нового материала/статьи, 
       // то делаем запись в базу данных и готовим транслит статьи для установки
       // кукиса и начала редактирования материала
@@ -262,7 +261,7 @@ class TinyGallery
       }
       // Если был выбран режим сохранения отредактированного материала, 
       // то сохраняем его    
-      $contentNews=\prown\getComRequest('mytextarea');
+      $contentNews=\prown\getComRequest('Article');
       if ($contentNews<>NULL)
       {
          $this->Arti->UpdateByTranslit($this->apdo,$this->Arti->getArti,$contentNews);
@@ -297,20 +296,6 @@ class TinyGallery
       else
       {
          // Настраиваем размеры частей рабочей области редактирования
-         // 28.02.2023 - может в будущем пригодится !!!
-         /*
-         echo '
-         <style>
-         #WorkTiny
-         {
-            width:100%;
-            height:100%;
-            overflow:auto;
-         }
-         </style>
-         ';
-         */
-
          /*
          echo '
          <style>
@@ -360,7 +345,9 @@ class TinyGallery
          // 8-HEAD этап ----------------- ?Com=sozdat-material-ili-redaktirovat 
          elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
             $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo);
-
+         // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
+         elseif (\prown\isComRequest(mmlNaznachitStatyu))
+            $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
          // Последний-HEAD этап - инициируем разметку для выбранного материала,
          // cтроим рабочую область для выбранной статьи и её галереи, 
          // обеспечиваем просмотр и редактирование 
@@ -386,8 +373,6 @@ class TinyGallery
       }
 
       if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)) {}
-      else if (\prown\isComRequest(mmlNaznachitStatyu))
-         mmlNaznachitStatyu_HEAD();
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->IniEditSpace_mmlVybratStatyuRedakti();
       else if (\prown\isComRequest(mmlUdalitMaterial))
@@ -486,8 +471,15 @@ class TinyGallery
       // 8-BODY этап -------------------- ?Com=sozdat-material-ili-redaktirovat 
       elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
       {
-         $Title=MakeTitle('Выберите статью для редактирования!? '.'&#128152;&#129315;',ttMessage);
+         $Title=MakeTitle('Выберите статью для редактирования?',ttMessage);
          $this->_ViewLifeSpace($Title,$this->ModyArt);
+      }
+      // 13-BODY этап ----------------------------------- ?Com=naznachit-statyu 
+      elseif (\prown\isComRequest(mmlNaznachitStatyu))
+      {
+         $Title=MakeTitle('Укажите название и дату для новой статьи,<br>'.
+            'выберите кликом раздел материалов?',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->NewArt);
       }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else
@@ -518,10 +510,6 @@ class TinyGallery
 
       // Выводим рабочую область редактирования и просмотра
       if ($this->Dispatch_BODY_WorkTiny()) {}
-      // Перезапускаем страницу "Назначить статью"
-      else if (\prown\isComRequest(mmlNaznachitStatyu))
-         mmlNaznachitStatyu_BODY_WorkTiny
-         ('Укажите название и дату для новой статьи, выберите раздел материалов',$this->apdo,$this->Arti);
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->WorkTiny_mmlVybratStatyuRedakti();
       else if (\prown\isComRequest(mmlUdalitMaterial))
@@ -552,12 +540,12 @@ class TinyGallery
       </script>
       ';
       // Включаем рождественскую версию шрифтов и полосок меню
-      IniFontChristmas();
+      //IniFontChristmas();
    }
    private function IniEditSpace_mmlVybratStatyuRedakti()
    {
       // Включаем рождественскую версию шрифтов и полосок меню
-      IniFontChristmas();
+      //IniFontChristmas();
    }
    private function WorkTiny_mmlVernutsyaNaGlavnuyu()
    {

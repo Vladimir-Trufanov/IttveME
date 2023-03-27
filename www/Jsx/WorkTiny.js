@@ -89,6 +89,8 @@ function changeNsName(value)
 // при назначении новой статьи
 function getNameCue(Uid)
 {
+   alert(Uid);
+   /*
    pathphp="getNameCue.php";
    // Делаем запрос на определение наименования раздела материалов
    $.ajax({
@@ -116,6 +118,7 @@ function getNameCue(Uid)
          Dialog_errmess(parm.iif,parm.NameGru,null);
       }
    });
+   */
 }
 // Вытащить кнопку "Записать реквизиты статьи" по готовности трех параметров:
 // указании названия новой статьи, даты ее создания и выборе группы материалов

@@ -51,7 +51,7 @@ class WorkTinyMain
             $SaveAction=$_SERVER["SCRIPT_NAME"];
             echo '
                <form id="frmTinyText" method="post" action="'.$SaveAction.'">
-               <textarea id="mytextarea" name="mytextarea">
+               <textarea id="mytextarea" name="Article">
             '; 
             echo $contenti;
             echo '
@@ -71,20 +71,32 @@ class WorkTinyMain
       if ($this->Arti->GalleryMode==mwgEditing) 
       {
          echo '
+         <style>
+         </style>
+         ';
+      
+         ?>
+         <script>
+         fileStyle="<?php echo $this->fileStyle;?>";
+         </script>
+         <?php
+      
+         echo '
             <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
             <script> tinymce.init
             ({
                selector: "#mytextarea",'.
                //theme: "modern",
-               //setup: function(editor) 
-               //{
-               //   editor.on("init", function(e) 
-               //   {
-               //      console.log("The Editor has initialized.");
-               //   });
-               //},'.
-               //height: 180,'.
-               //width:  780,'.
+               'setup: function(editor) 
+               {
+                  editor.on("init", function(e) 
+                  {
+                     //console.log("fileStyle="+fileStyle);
+                     //console.log("The Editor has initialized.");
+                  });
+               },'.
+               //'height: 360,'.
+               //'width:  780,'.
                'content_css: "'.$this->fileStyle.'",'.
                'plugins:
                [ 
@@ -120,4 +132,5 @@ class WorkTinyMain
       else {}
    }
 }
+
 // ************************************************** WorkTinyMainClass.php ***

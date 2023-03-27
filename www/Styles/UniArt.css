@@ -1,0 +1,130 @@
+/* CSS3, EDGE/CHROME                                         *** UniArt.css ***
+*******************************************************************************
+* TNewArt,----                                      Определить стиль меню при *
+*                                           при назначении новой статьи, ---- *
+*                                                                             *
+* v2.0, 27.03.2023                                 Автор:       Труфанов В.Е. *
+* Copyright © 2020 tve                             Дата создания:  13.12.2020 *
+*******************************************************************************
+*/
+
+.accordion i,.accordion b
+{
+   margin:0;
+   padding:0;
+   border:none;
+   outline:none;
+   background:#ffffff;
+}
+/* 
+ Стиль li для раздела
+*/
+.accordion i
+{
+   font-size:1.8rem;
+   text-shadow:1px 1px 0 rgba(255,255,255,.2);
+   padding-left:3rem;
+   line-height:1.8; 
+}
+/* 
+ Стиль li для материала
+*/
+.accordion b
+{
+   font:normal 10px/32px Arial, sans-serif;
+   font-size:1.6rem;  
+   text-shadow:0 .1rem 0 rgba(0,0,0,.95);
+   border-bottom:1px solid #c9c9c9;
+   padding-left:3rem;
+}
+.sub-menu li:last-child b 
+{ 
+   border:none;
+}
+/* 
+ Идентификационные номера статей и разделов
+*/
+.accordion em
+{
+   position: absolute;
+   top:0;
+   left:0;
+   margin-left:.8rem;
+   color: #a6a6a6;
+   font: normal 10px/32px Arial, sans-serif;
+}
+/*
+ Дочерние элементы для li 
+*/
+.accordion li>b, .accordion li>i
+{
+   display:block;
+   position:relative;
+   min-width:1.1rem;
+   color:#777;
+   overflow:hidden;
+   text-decoration:none;
+}
+/* 
+ Устанавливаем цвета и бордюры разделов 
+*/
+.accordion li>i
+{
+   background:#ffffff;
+   background:-moz-linear-gradient(bottom,#ffffff 0%, #eaeaea 100%);
+   background:-webkit-gradient(linear,left bottom,left top,color-stop(0%,#ffffff),color-stop(100%,#eaeaea));
+   background:-webkit-linear-gradient(bottom,#ffffff 0%,#eaeaea 100%);
+   background:-o-linear-gradient(bottom,#ffffff 0%,#eaeaea 100%);
+   background:-ms-linear-gradient(bottom,#ffffff 0%,#eaeaea 100%);
+   background:linear-gradient(to bottom,#ffffff 0%,#eaeaea 100%);
+}
+/* 
+ Устанавливаем цвета и бордюры пунктов меню со статьями 
+*/
+.accordion li>b
+{
+   color:#797979;
+   background:#e5e5e5;
+}
+/* 
+ Готовим эффект перехода между состояниями 
+*/
+.accordion li .sub-menu 
+{
+   -webkit-transition: height .2s ease-in-out;
+   -moz-transition: height .2s ease-in-out;
+   -o-transition: height .2s ease-in-out;
+   -ms-transition: height .2s ease-in-out;
+   transition: height .2s ease-in-out;
+}
+/* 
+ Выделяем статьи, на которые наезжаем курсором 
+*/
+.uArt:hover b
+{
+   background:#efefef;
+}
+/* 
+ Выделяем разделы, на которые наезжаем курсором 
+*/
+.uCue > i:hover
+{
+   color:#fdfdfd;
+   text-shadow:.1rem .1rem .1rem rgba(255,255,255,.2);
+   background:-moz-linear-gradient(bottom,#696969 0%,#A9A9A9 100%);
+   background:-webkit-gradient(linear,left bottom,left top,color-stop(0%,#696969),color-stop(100%,#A9A9A9));
+   background:-webkit-linear-gradient(bottom,#696969 0%,#A9A9A9 100%);
+   background:-o-linear-gradient(bottom,#696969 0%,#A9A9A9 100%);
+   background:-ms-linear-gradient(bottom,#696969 0%,#A9A9A9 100%);
+   background:linear-gradient(to bottom,#696969 0%,#A9A9A9 100%);
+}
+.uCue > i:hover em
+{
+   color:#fdfdfd;
+   font: normal 12px/34px Arial, sans-serif;
+   font-weight:900; 
+}
+
+/* ********************************************************** UniArt.css *** */
+	
+

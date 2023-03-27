@@ -149,7 +149,9 @@
    color:#993300; 
    font-weight:600;
 }
-/* Кнопка "Жизнь и путешествия"                                              */
+/* 
+ Кнопка "Жизнь и путешествия"                                              
+*/
 #btnLifeMenu
 {
    width: 95%;
@@ -199,67 +201,67 @@
    border-bottom:dashed 1px #ddd;
    */
 }
-
-
-/* Устанавливаем стили при назначении статьи */
-/*
+/* 
+ При назначении новой статьи 
+*/
 #AddArticle
 {
-  margin-top:6rem;
-  padding:0;
-  border:0;
-  vertical-align:baseline;
-  width:100%;
+   margin-top:7.2rem;
+   padding:0;
+   border:0;
+   vertical-align:baseline;
+   width:100%;
+   background:Cornsilk;
 }
 #nsGroup 
 {
-  position:relative;
-  width:100%;
- -webkit-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
- -moz-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
- -ms-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
- -o-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
- transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
- -webkit-transition-delay:1s;
- transition-delay:1s;
+   position:relative;
+   width:100%;
+   -webkit-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -moz-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -ms-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -o-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -webkit-transition-delay:1s;
+   transition-delay:1s;
 }
 #nsName
 {
-  top:2rem;
-  left:1%;
-  width:76%;
+   top:2rem;
+   left:1%;
+   width:76%;
 }
 #nsDate 
 {
-  top:2rem;
-  right:1%;
-  width:15%;
+   top:2rem;
+   right:1%;
+   width:15%;
 }
 #nsName,#nsDate 
 {
-  position:absolute;
-  display:block;
-  height:30px;
-  background:#fff;
-  font-size:10pt;
-  padding-left:20px;
-  color:rgba(0,0,0,0.1);
-  -webkit-box-shadow:1px 1px 20px rgba(0,0,0, 0.2);
-  -moz-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
-  -ms-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
-  -o-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
-  box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
-  border:none;
-  -webkit-border-radius:4px;
-  -moz-border-radius:4px;
-  -ms-border-radius:4px;
-  -o-border-radius:4px;
-  border-radius:4px;
-  -webkit-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
-  -moz-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
-  -ms-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
-  -o-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
-  transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   position:absolute;
+   display:block;
+   height:30px;
+   background:#fff;
+   font-size:10pt;
+   padding-left:20px;
+   color:rgba(0,0,0,0.1);
+   -webkit-box-shadow:1px 1px 20px rgba(0,0,0, 0.2);
+   -moz-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+   -ms-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+   -o-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+   box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
+   border:none;
+   -webkit-border-radius:4px;
+   -moz-border-radius:4px;
+   -ms-border-radius:4px;
+   -o-border-radius:4px;
+   border-radius:4px;
+   -webkit-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -moz-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -ms-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   -o-transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+   transition:all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 #nsName:focus, #nsName:active:focus,
 #nsDate:focus, #nsDate:active:focus, 
@@ -286,8 +288,9 @@
   -o-transition:0.5s;
   transition:0.5s;
 }
+/* 
+ Выбор реквизитов при назначении статьи 
 */
-/* ------------------------------ Выбор реквизитов при назначении статьи --- */
 /*
 .nazst
 {

@@ -78,6 +78,7 @@ function isNichost()
 // ****************************************************************************
 // *      Настроить размеры шрифтов и полосок меню (рождественская версия)    *
 // ****************************************************************************
+/*
 function IniFontChristmas()
 {
    echo '
@@ -101,5 +102,107 @@ function IniFontChristmas()
    </style>
    ';
 }
+*/
+
+// ****************************************************************************
+// *             Построить html-код меню и сделать выбор материала            *
+// ****************************************************************************
+function UniArtMenu($pdo,$clickGru='',$clickOne='') 
+{
+   // Проверяем целостность базы данных (по 10 очередным записям) 
+   // ВРЕМЕННО ЗДЕСЬ
+   ?> 
+   <script> 
+   //   $(document).ready(function() {GetPunktTestBase();})
+   </script> 
+   <?php
+   // Готовим выбор материала
+   $lvl=-1; $cLast='+++'; $nLine=0; $cli=""; 
+   _UniArtMenu($clickGru,$clickOne,$pdo,1,1,$cLast,$nLine,$cli,$lvl);
+}
+// ****************************************************************************
+// *       Сформировать строки меню для выборки записи для редактирования:    *
+// *                    $cli - вставка конца пункта меню                      *            
+// ****************************************************************************
+/*
+<ul class="accordion">
+   <li class="uCue"><i onclick="getNameCue(2)"><em>2</em>Моя жизнь</i>
+      <ul class="sub-menu">
+         <li class="uArt"><b><em>3</em>Особенности устройства винтиков в моей голове</b></li>
+      </ul>
+   </li>
+   <li class="uCue"><i onclick="getNameCue(4)"><em>4</em>Микропутешествия</i>
+      <ul class="sub-menu">
+         <li class="uArt"><b><em>5</em>Киндасово - земля карельского юмора</b></li>
+         <li class="uArt"><b><em>6</em>Гора Сампо. Озеро, светлый лес, тропинка в небо</b></li>
+      </ul>
+   </li>
+   <li class="uCue"><i onclick="getNameCue(13)"><em>13</em>Всякое-разное</i></li>
+   <li class="uCue"><i onclick="getNameCue(16)"><em>16</em>Прогулки</i>
+      <ul class="sub-menu">
+         <li class="uArt"><b><em>17</em>Охота на медведя</b></li>
+      </ul>
+   </li>
+</ul>
+*/
+function _UniArtMenu($clickGru,$clickOne,
+   $pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
+{
+   // Определяем текущий уровень меню
+   $lvl++; 
+   // Выбираем все записи одного родителя
+   $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
+   $stmt = $pdo->query($cSQL);
+   $table = $stmt->fetchAll();
+
+   if (count($table)>0) 
+   {
+      echo('<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
+      // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
+      $nPoint=0;
+      foreach ($table as $row)
+      {
+         $nLine++; 
+         $Uid=$row["uid"]; $Pid=$row["pid"]; $Translit=$row["Translit"];
+         $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
+         if ($cLast<>'+ul') 
+         {
+             $cli="</li>\n";
+             echo($cli); $cLast='-li';
+         }
+         // Готовим onclick li группы материалов или собственно материала
+         $grClick=HandleСlick($clickGru,$Uid);
+         $maClick=HandleСlick($clickOne,$Uid);
+         // Формируем li группы материалов
+         if ($IdCue==-1)
+         {
+            echo('<li class="uCue">'); 
+            echo('<i'.$grClick.'>'.'<em>'.$Uid.'</em>'.$row['NameArt']."</i>"); 
+         } 
+         // Формируем li материала
+         else
+         {
+            $nPoint++;
+            echo('<li class="uArt">'); 
+            echo('<b'.$maClick.'>'.'<em>'.$Uid.'</em>'.$row['NameArt']."</b>"); 
+         }
+         $cLast='+li';
+         _UniArtMenu($clickGru,$clickOne,
+            $pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
+         $lvl--; 
+      }
+      $cli="</li>\n";
+      echo($cli); $cLast='-li'; 
+      echo("</ul>\n");  $cLast='-ul';
+   }
+}
+// Сформировать onclick на разделе или статье
+function HandleСlick($clickIs,$Uid)
+{
+   if ($clickIs=='') $Result='';
+   else $Result=' onclick="'.$clickIs.'('.$Uid.')"';
+   return $Result;
+}
+
 
 // ************************************************************* Common.php *** 

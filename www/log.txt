@@ -550,3 +550,8 @@ Stack trace:
 #1 C:\IttveMe\www\index.php(87): require_once('C:\\IttveMe\\www\\...')
 #2 {main}
   thrown in C:\IttveMe\www\ttools\TArticlesMaker\ArticlesMakerClass.php on line 101
+[27-Mar-2023 14:34:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in C:\IttveMe\www\ttools\TWorkTinyMain\WorkTinyMainClass.php on line 93
+[27-Mar-2023 16:02:29 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 353
+[27-Mar-2023 16:03:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 353
+[27-Mar-2023 16:03:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 353
+[27-Mar-2023 17:03:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\IttveMe\www\ttools\TNewArt\NewArtClass.php on line 55
