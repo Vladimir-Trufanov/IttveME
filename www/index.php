@@ -66,6 +66,14 @@
  * 
 **/
 
+//require_once "ini.php"; 
+   $page='/Pages/Proba/ProbaTest.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+
+echo 'Ghbdtn!';  
+
+
+/*
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once 'iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
@@ -84,7 +92,7 @@ try
 {
    // ---------------------------------------------------------------- ZERO ---
    // Выполняем начальную инициализацию
-   require_once "iniMem.php";   
+   require_once "iniMem.php"; 
    // Заносим в кукисы новые настройки                    
    UpdateTune($urlHome,$c_PresMode,$c_ModeImg,$aPresMode,$aModeImg);
    // ------------------------------------------------------- HEAD and LAST ---
@@ -100,11 +108,10 @@ try
 }
 catch (E_EXCEPTION $e) 
 {
-   /**
-    * ПОМНИТЬ(16.02.2019)! Если в коде сайта включается своя обработка исключений,
-    * то управление выводом ошибок display_errors на сайте NIC.RU отключается и
-    * работает только error_reporting (нужно разрешить обработку всех ошибок)
-   **/
+   // ПОМНИТЬ(16.02.2019)! Если в коде сайта включается своя обработка исключений,
+   // то управление выводом ошибок display_errors на сайте NIC.RU отключается и
+   // работает только error_reporting (нужно разрешить обработку всех ошибок)
+   
    // Подключаем обработку исключений верхнего уровня
    DoorTryPage($e);
 }
@@ -129,6 +136,9 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
       $MakeIs=true;
    }
 }
+*/
+
+
 /*
   Тестирование                                           - HTML -     - CSS -   
 -------------------------------------------------------------------------------

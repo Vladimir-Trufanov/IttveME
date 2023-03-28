@@ -555,3 +555,4 @@ Stack trace:
 [27-Mar-2023 16:03:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 353
 [27-Mar-2023 16:03:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 353
 [27-Mar-2023 17:03:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\IttveMe\www\ttools\TNewArt\NewArtClass.php on line 55
+[28-Mar-2023 15:54:49 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iniMem1.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\index.php on line 87

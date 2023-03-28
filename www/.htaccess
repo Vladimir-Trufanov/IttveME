@@ -55,11 +55,15 @@ php_value upload_max_filesize 3M
 </FilesMatch>
 
 ## Закрываем доступ к файлам с определенными расширениями
-##<FilesMatch "\.(txt|exe|doc|docx|php|js)$">
 <FilesMatch "\.(txt|exe|doc|docx)$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
+
+
+## Показать ошибки PHP на экране можно с помощью следующего двух строк
+## php_flag display_errors on
+## php_value error_reporting -1
 
 ## Два варианта проверки возможности перенаправления URL, вызывающие
 ## перенаправление https://ittve.me/RewriteTest/ на https://example.com/
@@ -87,14 +91,13 @@ RewriteCond %{ENV:HTTPS} !on
 RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ## Перенаправляем ошибки в файл e404.php
-## ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 
-## ErrorDocument 403 http://ittve.me/Reset/e404.php?err=403 
-## ErrorDocument 404 http://ittve.me/Reset/e404.php?err=404 
-## ErrorDocument 405 http://ittve.me/Reset/e404.php?err=405 
-## ErrorDocument 408 http://ittve.me/Reset/e404.php?err=408 
-
-## ErrorDocument 500 http://ittve.me/Reset/e404.php?err=500 
-## ErrorDocument 502 http://ittve.me/Reset/e404.php?err=502 
-## ErrorDocument 504 http://ittve.me/Reset/e404.php?err=504 
+ErrorDocument 400 /e404.php?err=400 
+ErrorDocument 403 /e404.php?err=403 
+ErrorDocument 404 /e404.php?err=404
+ErrorDocument 405 /e404.php?err=405 
+ErrorDocument 408 /e404.php?err=408
+ErrorDocument 500 /e404.php?err=500
+ErrorDocument 502 /e404.php?err=502
+ErrorDocument 504 /e404.php?err=504
  
 ## **************************************************************** .htaccess ***

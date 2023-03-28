@@ -229,13 +229,13 @@
 {
    top:2rem;
    left:1%;
-   width:76%;
+   width:72%;
 }
 #nsDate 
 {
    top:2rem;
    right:1%;
-   width:15%;
+   width:19%;
 }
 #nsName,#nsDate 
 {
@@ -243,7 +243,6 @@
    display:block;
    height:30px;
    background:#fff;
-   font-size:10pt;
    padding-left:20px;
    color:rgba(0,0,0,0.1);
    -webkit-box-shadow:1px 1px 20px rgba(0,0,0, 0.2);
@@ -288,17 +287,22 @@
   -o-transition:0.5s;
   transition:0.5s;
 }
+
+#nsName,#nsDate,.nazst
+{
+   font-size:1.7rem;
+} 
+
 /* 
- Выбор реквизитов при назначении статьи 
+ Выбор реквизитов при назначении новой статьи 
 */
-/*
 .nazst
 {
    padding:0;
    margin:0 .8rem 1rem .8rem;
-   background:transparent;*/
-   /*color: #993300;*/ 
-  /* border:.4rem double gray;
+   background:transparent;
+   color: #993300; 
+   border:.4rem double gray;
 }
 .nazstName
 {
@@ -316,12 +320,6 @@
    margin-left:.8rem;
    margin-bottom:.8rem;
 }
-*/
-
-/*
- * Стили всплывающей кнопки #LeftFooter
- */
-
 
 /* ********************************************************* Content.css *** */	
 	

@@ -43,6 +43,10 @@ class NewArt
          {
             height:100%;
          }
+         #WorkTiny
+         {
+            height:92%;
+         }
       </style>
      ';
    }

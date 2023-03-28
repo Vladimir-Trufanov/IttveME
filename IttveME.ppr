@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	+IttveMe
+	-IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -38,7 +38,7 @@ IttveME
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\Î favicon.doc
-		+www
+		-www
 			-favicon260x260
 				www\favicon260x260\android-chrome-192x192.png
 				www\favicon260x260\android-chrome-256x256.png
@@ -192,7 +192,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -588,8 +588,10 @@ IttveME
 			www\.htaccess
 			www\.user.ini
 			www\Common.php
+			www\ContactUs.css
 			www\deleteArt.php
 			www\deleteImg.php
+			www\e404.php
 			www\getNameCue.php
 			www\index.php
 			www\iniMem.php
@@ -627,51 +629,31 @@ IttveME
 0=www\index.php
 1=www\ttools\TTinyGallery\TinyGalleryClass.php
 2=www\iniMem.php
-3=www\UpSiteCSS.php
-4=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-5=www\ttools\TKwinGallery\KwinGalleryClass.php
-6=www\ttools\TTinyGallery\Dispatch_HEAD.php
-7=www\ttools\TNewArt\NewArtClass.php
-8=www\Common.php
-9=www\Styles\Content.css
-10=www\Styles\ArticleWork.css
-11=www\Styles\UniArt.css
+3=www\.htaccess
+4=www\e404.php
+5=www\ContactUs.css
+6=www\ttools\TNewArt\NewArtClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\.htaccess
 [www\index.php]
-TopLine=80
-Caret=1,92
+TopLine=112
+Caret=12,150
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=463
-Caret=49,481
+TopLine=342
+Caret=56,400
 [www\iniMem.php]
-TopLine=97
+TopLine=71
 Caret=59,110
-[www\UpSiteCSS.php]
-TopLine=38
-Caret=67,55
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=169
-Caret=62,175
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=170
-Caret=41,209
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=55
-Caret=1,93
+[www\.htaccess]
+TopLine=65
+Caret=36,101
+[www\e404.php]
+TopLine=43
+Caret=18,67
+[www\ContactUs.css]
+TopLine=214
+Caret=1,244
 [www\ttools\TNewArt\NewArtClass.php]
-TopLine=59
-Caret=7,98
-[www\Common.php]
-TopLine=111
-Caret=19,129
-[www\Styles\Content.css]
-TopLine=149
-Caret=1,161
-[www\Styles\ArticleWork.css]
-TopLine=47
-Caret=1,70
-[www\Styles\UniArt.css]
-TopLine=13
-Caret=18,52
+TopLine=19
+Caret=1,52

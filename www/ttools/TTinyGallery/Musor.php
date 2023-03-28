@@ -67,32 +67,4 @@ function mmlUdalitRazdelMaterialov_BODY_WorkTiny($Delcue)
    $Delcue->Body();
 }
 
-// ----------------------------------------------------- mmlNaznachitStatyu ---
-// ****************************************************************************
-// *   Построить панель выбранных значений при назначении новой статьи        *
-// ****************************************************************************
-function mmlNaznachitStatyu_BODY_KwinGallery()
-{
-   // Здесь будем выводим кнопку для создания новой записи через js: 
-   // <input type="submit" value="Записать реквизиты статьи" form="frmNaznachitStatyu">
-   // только после выбора/назначения всех трех условий
-   echo '<br><br>
-      <div class="nazst"> 
-         <p class="nazstName"  id="wnCue">Раздел материалов</p>
-         <p class="nazstValue" id="wvCue">'.nstNoVyb.'</p>
-      </div>
-      <div class="nazst"> 
-         <p class="nazstName"  id="wnArt">Новая статья</p>
-         <p class="nazstValue" id="wvArt">'.nstNoNaz.'</p>
-      </div>
-      <div class="nazst"> 
-         <p class="nazstName"  id="wnDat">Дата создания</p>
-         <p class="nazstValue" id="wvDat">'.nstNoVyb.'</p>
-         <div id="nazstSub">
-         </div>
-      </div>
-   ';
-   //$this->Galli->BaseGallery(mwgEditing);
-}
-
 // *********************************************************** WorkTiny.php ***

@@ -10,52 +10,50 @@
 // Выполняем действия  по завершении загрузки страницы
 $(document).ready(function()
 {
-   // 
-  $('#nsDate').on('focusin',function()
-  {
-    $(this).siblings('#nsName').css({
-      'z-index'   :'1',
-      'background':'rgba(0,0,0,.1)',
-    });
-     $(this).css({
-      'z-index' : '2',
-      'background' : '#fff',
+   // *************************************************************************
+   // *              Отследить действия при назначении новой статьи           *
+   // *************************************************************************
+   $('#nsDate').on('focusin',function()
+   {
+      $(this).siblings('#nsName').css({
+         'z-index'   :'1',
+         'background':'rgba(0,0,0,.1)',
       });
-  });
-  
+      $(this).css({
+         'z-index' : '2',
+         'background' : '#fff',
+      });
+   });
    $('#nsName').on('focusin',function(){
-    $(this).siblings('#nsDate').css({
-      'z-index'   :'1',
-      'background':'rgba(0,0,0,.1)'
-    });
-    $(this).css({
-      'z-index' : '2',
-      'background' : '#fff'
-     });
-  });
-  
-  
-  $('#nsDate').on('focusout',function(){
-    $(this).siblings('#nsName').css({
-      'z-index'   :'1',
-      'background':'rgba(0,0,0,.1)'
-    });
-    $(this).css({
-      'z-index' : '2',
-      'background' : '#fff'
-    });
-  });
-  
+      $(this).siblings('#nsDate').css({
+         'z-index'   :'1',
+         'background':'rgba(0,0,0,.1)'
+      });
+      $(this).css({
+         'z-index' : '2',
+         'background' : '#fff'
+      });
+   });
+   $('#nsDate').on('focusout',function(){
+      $(this).siblings('#nsName').css({
+         'z-index'   :'1',
+         'background':'rgba(0,0,0,.1)'
+      });
+      $(this).css({
+         'z-index' : '2',
+         'background' : '#fff'
+      });
+   });
    $('#nsName').on('focusout',function(){
-    $(this).siblings('#nsDate').css({
-      'z-index'   :'1',
-      'background':'rgba(0,0,0,.1)'
-    });
-    $(this).css({
-      'z-index' : '2',
-      'background' : '#fff'
-     });
-  });
+      $(this).siblings('#nsDate').css({
+         'z-index'   :'1',
+         'background':'rgba(0,0,0,.1)'
+      });
+      $(this).css({
+         'z-index' : '2',
+         'background' : '#fff'
+      });
+   });
 })
 // ****************************************************************************
 // *   Вызвать запуск ссылки на страницу с нажатием кнопки управляющего меню  *
@@ -89,9 +87,9 @@ function changeNsName(value)
 // при назначении новой статьи
 function getNameCue(Uid)
 {
-   alert(Uid);
-   /*
-   pathphp="getNameCue.php";
+   //alert(Uid);
+   //
+   pathphp="getNameCue1.php";
    // Делаем запрос на определение наименования раздела материалов
    $.ajax({
       url: pathphp,
@@ -118,7 +116,7 @@ function getNameCue(Uid)
          Dialog_errmess(parm.iif,parm.NameGru,null);
       }
    });
-   */
+   //
 }
 // Вытащить кнопку "Записать реквизиты статьи" по готовности трех параметров:
 // указании названия новой статьи, даты ее создания и выборе группы материалов

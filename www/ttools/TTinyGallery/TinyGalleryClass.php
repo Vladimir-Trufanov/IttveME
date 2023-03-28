@@ -388,13 +388,34 @@ class TinyGallery
       // иначе будем запускать игру со змеёй и градиент
       if ($this->DelayedMessage==imok) 
       {
-         /*
+         // Строим панель выбранных значений при назначении новой статьи 
          if (\prown\isComRequest(mmlNaznachitStatyu))
-            mmlNaznachitStatyu_BODY_KwinGallery();
+         {
+            // Здесь будем выводим кнопку для создания новой записи через js: 
+            // <input type="submit" value="Записать реквизиты статьи" form="frmNaznachitStatyu">
+            // только после выбора/назначения всех трех условий
+            echo '<br><br>
+               <div class="nazst"> 
+                  <p class="nazstName"  id="wnCue">Раздел материалов</p>
+                  <p class="nazstValue" id="wvCue">'.nstNoVyb.'</p>
+               </div>
+               <div class="nazst"> 
+                  <p class="nazstName"  id="wnArt">Новая статья</p>
+                  <p class="nazstValue" id="wvArt">'.nstNoNaz.'</p>
+               </div>
+               <div class="nazst"> 
+                  <p class="nazstName"  id="wnDat">Дата создания</p>
+                  <p class="nazstValue" id="wvDat">'.nstNoVyb.'</p>
+                  <div id="nazstSub">
+                  </div>
+               </div>
+            ';
+         }
+         /*
          else if (\prown\isComRequest(mmlVybratStatyuRedakti))
             $this->KwinGallery_mmlVybratStatyuRedakti();
-         else 
          */
+         else 
          $this->Galli->BaseGallery();
       }
    }
