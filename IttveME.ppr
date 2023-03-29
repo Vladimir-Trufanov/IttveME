@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	-IttveMe
+	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -38,7 +38,7 @@ IttveME
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\Î favicon.doc
-		-www
+		+www
 			-favicon260x260
 				www\favicon260x260\android-chrome-192x192.png
 				www\favicon260x260\android-chrome-256x256.png
@@ -629,31 +629,31 @@ IttveME
 0=www\index.php
 1=www\ttools\TTinyGallery\TinyGalleryClass.php
 2=www\iniMem.php
-3=www\.htaccess
-4=www\e404.php
-5=www\ContactUs.css
-6=www\ttools\TNewArt\NewArtClass.php
+3=www\e404.php
+4=www\ContactUs.css
+5=www\ttools\TNewArt\NewArtClass.php
+6=www\.htaccess
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\index.php
 [www\index.php]
-TopLine=112
-Caret=12,150
+TopLine=69
+Caret=1,93
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=342
+TopLine=361
 Caret=56,400
 [www\iniMem.php]
 TopLine=71
 Caret=59,110
-[www\.htaccess]
-TopLine=65
-Caret=36,101
 [www\e404.php]
-TopLine=43
-Caret=18,67
+TopLine=234
+Caret=1,51
 [www\ContactUs.css]
 TopLine=214
 Caret=1,244
 [www\ttools\TNewArt\NewArtClass.php]
 TopLine=19
 Caret=1,52
+[www\.htaccess]
+TopLine=63
+Caret=55,63

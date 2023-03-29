@@ -60,8 +60,7 @@ php_value upload_max_filesize 3M
     Deny from all
 </FilesMatch>
 
-
-## Показать ошибки PHP на экране можно с помощью следующего двух строк
+## Показываем ошибки PHP на экране с помощью следующих двух строк
 ## php_flag display_errors on
 ## php_value error_reporting -1
 

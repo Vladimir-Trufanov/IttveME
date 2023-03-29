@@ -66,14 +66,11 @@
  * 
 **/
 
-//require_once "ini.php"; 
-   $page='/Pages/Proba/ProbaTest.php';
-   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+// Проверяем возможность обработки ошибок взаимодействия с сервером
+// $page='/Pages/Proba/ProbaTest.php';
+// Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+// echo 'Privet!';  
 
-echo 'Ghbdtn!';  
-
-
-/*
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once 'iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
@@ -136,8 +133,6 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
       $MakeIs=true;
    }
 }
-*/
-
 
 /*
   Тестирование                                           - HTML -     - CSS -   
