@@ -94,6 +94,7 @@ $ImageFile=prown\getComRequest('Image');
 $Edit->Init($aPresMode,$aModeImg,$urlHome,$Duck,$a2048,$Hex,$Paired);
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
+\prown\IniPrownJS();
 DefineJS();
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---

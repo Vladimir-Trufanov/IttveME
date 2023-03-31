@@ -19,7 +19,6 @@
  * articleSite  - тип базы данных (по сайту)
  * pathPhpTools - путь к каталогу с файлами библиотеки прикладных классов;
  * pathPhpPrown - путь к каталогу с файлами библиотеки прикладных функции
- * editdir      - каталог размещения файлов, относительно корневого
  * stylesdir    - каталог стилей элементов разметки и фонтов
  * imgdir       - каталог файлов служебных для сайта изображений
  * jsxdir       - каталог размещения файлов javascript
@@ -31,7 +30,6 @@
  * // Указываем место размещения библиотеки прикладных классов TPhpTools
  * define ("pathPhpTools",$SiteHost.'/TPhpTools/TPhpTools');
  * // Указываем каталоги размещения файлов
- * define("editdir",'ittveEdit');  // файлы, связанные c материалом
  * define("stylesdir",'Styles');   // стили элементов разметки и фонты
  * define("imgdir",'Images');      // служебные для сайта файлы изображений
  * 
@@ -70,6 +68,10 @@ require_once pathPhpPrown."/iniConstMem.php";
 // Подгружаем нужные модули библиотеки прикладных классов
 require_once(pathPhpTools."/CommonTools.php");
 
+// ---------------------------------- Режимы работы с материалом и галереей ---
+define ('mwgViewing', 'просмотр');   
+define ('mwgEditing', 'редактирование');  
+
 class ArticlesMaker
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
@@ -77,7 +79,6 @@ class ArticlesMaker
    public $getArti;             // Транслит текущего материала
    public $GalleryMode;         // Режим работы с материалом и галереей
 
-   protected $editdir;          // Каталог размещения файлов, связанных c материалом
    protected $imgdir;           // Каталог файлов служебных для сайта изображений
 
    protected $basename;         // База материалов: $_SERVER['DOCUMENT_ROOT'].'/itpw';
@@ -87,7 +88,6 @@ class ArticlesMaker
    public function __construct($basename,$username,$password,$note) 
    {
       // Инициализируем свойства класса
-      $this->editdir     = editdir; 
       $this->imgdir      = imgdir; 
       
       $this->basename    = $basename;
@@ -150,7 +150,6 @@ class ArticlesMaker
       // загружаем из класса 
       CompareCopyRoot('bgnoise_lg.jpg',TArticlesMakerDir,$this->imgdir);
       CompareCopyRoot('icons.png',TArticlesMakerDir,$this->imgdir);
-      CompareCopyRoot('getNameCue.php',TArticlesMakerDir);
       CompareCopyRoot('deleteArt.php',TArticlesMakerDir);
       CompareCopyRoot('TestBase.php',TArticlesMakerDir);
    }

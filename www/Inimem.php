@@ -23,6 +23,7 @@ define ("oriPortrait",  'portrait');      // Портретное располо
 define ("nstNoVyb",     "не выбрано");     
 define ("nstNoNaz",     "не назначено");
 define ("nstErr",       'произошла ошибка');  
+define ("nstOk",        'все в порядке');  
 
 // ----------------------------------------- Ошибки обработки аякс-запросов ---
 define ("gncNoCue", 'Статья не найдена в базе'); 
@@ -43,6 +44,7 @@ function DefineJS()
    'nstNoVyb="'            .nstNoVyb.'";'.
    'nstNoNaz="'            .nstNoNaz.'";'.
    'nstErr="'              .nstErr.'";'.
+   'nstOk="'               .nstOk.'";'.
 
    'gncNoCue="'            .gncNoCue.'";'.
 
@@ -63,10 +65,6 @@ define("imgdir",       'Images');                         // каталог сл
 define ("jsxdir",       'Jsx');                           // каталог файлов на javascript
 define ("ChangeSize",  "chs");                            // "Изменить размер базового шрифта"  
 define('nym',          'ittve');                          // префикс имен файлов для фотографий галереи и материалов
-
-// ---------------------------------- Режимы работы с материалом и галереей ---
-define ("mwgViewing", 'просмотр');   
-define ("mwgEditing", 'редактирование');  
 
 //define ("dirLife", "ittveLife"); // каталог активной статьи сайта и её изображений
 //define ("dirEdit", "ittveEdit"); // каталог редактируемой статьи и её изображений

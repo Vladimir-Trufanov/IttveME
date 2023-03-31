@@ -87,33 +87,43 @@ function changeNsName(value)
 // при назначении новой статьи
 function getNameCue(Uid)
 {
-   //alert(Uid);
-   //
-   pathphp="getNameCue1.php";
+   pathphp="getNameCue.php";
+   //alert('pathphp='+pathphp);
    // Делаем запрос на определение наименования раздела материалов
    $.ajax({
       url: pathphp,
       type: 'POST',
       data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
       // Выводим ошибки при выполнении запроса в PHP-сценарии
-      error: function (jqXHR,exception) {SmarttodoError(jqXHR,exception)},
+      error: function (jqXHR,exception) {alert('error');/*SmarttodoError(jqXHR,exception)*/},
       // Обрабатываем ответное сообщение
       success: function(message)
       {
+         console.log('Исх='+message);
+         alert('Исх='+message);
          // Вырезаем из запроса чистое сообщение
-         messa=FreshLabel(message);
+         messa=FreshJSON(message);
          // Получаем параметры ответа
          parm=JSON.parse(messa);
+
+         //console.log('parm.iif='+parm.iif+'  parm.NameGru='+parm.NameGru);
+         //alert('parm.iif='+parm.iif+'  parm.NameGru='+parm.NameGru);
          
-         //$('#Message').html(parm.NameGru+': Указать название и дату для новой статьи');
-         $('#nsCue').attr('value',Uid);
-         $('#nsGru').attr('value',parm.NameGru);
+         if (parm.iif==Err) 
+         { 
+            Error_Info(parm.NameGru)}
+         else
+         {
+            //$('#Message').html(parm.NameGru+': Указать название и дату для новой статьи');
+            $('#nsCue').attr('value',Uid);
+            $('#nsGru').attr('value',parm.NameGru);
          
-         $('#wvCue').html(parm.NameGru);
-         $('#wnCue').css('color','#993300');
-         $('#wvCue').css('color','#993300');
-         test3newArt();
-         Dialog_errmess(parm.iif,parm.NameGru,null);
+            $('#wvCue').html(parm.NameGru);
+            $('#wnCue').css('color','#993300');
+            $('#wvCue').css('color','#993300');
+            test3newArt();
+            //Dialog_errmess(parm.iif,parm.NameGru,null);
+         }
       }
    });
    //

@@ -1,0 +1,1 @@
+Warning: require_once(C:/TPhpTools/TPhpTools/TNotice/NoticeClass1.php): failed to open stream: No such file or directory in C:/IttveMe/www/getNameCue.php on line 32Fatal error: require_once(): Failed opening required 'C:/TPhpTools/TPhpTools/TNotice/NoticeClass1.php' (include_path='.;C:/php/pear') in C:/IttveMe/www/getNameCue.php on line 32

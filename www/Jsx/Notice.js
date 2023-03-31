@@ -87,10 +87,12 @@ function Info_Info(messa)
 function Dialog_errmess(aif,htmlText,titleText,comReload=false)
 {
    // Если передана ошибка, выводим сообщение
-   if (aif==nstErr)
+   if (aif==Err)
    {
       Error_Info(htmlText);
       $("#DialogWind").dialog("close");
+      // Перезагружаем страницу через 2.5 секунды 
+      //if (comReload==true) setTimeout(function() {location.reload();},2500);
    } 
    // При необходимости сообщения не выводим (только контроллируем ошибку)
    else if (titleText==null) {}
@@ -99,9 +101,9 @@ function Dialog_errmess(aif,htmlText,titleText,comReload=false)
    {
       Notice_Info(htmlText,titleText)
       $("#DialogWind").dialog("close");
+      // Перезагружаем страницу через 2.5 секунды 
+      //if (comReload==true) setTimeout(function() {location.reload();},2500);
    }
-   // Перезагружаем страницу через 2.5 секунды 
-   if (comReload==true) setTimeout(function() {location.reload();},2500);
 }
 
 // ************************************************************** Notice.js *** 

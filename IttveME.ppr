@@ -141,7 +141,7 @@ IttveME
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -442,8 +442,8 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
-				-TArticlesMaker
+			+ttools
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\bgnoise_lg.jpg
@@ -452,7 +452,6 @@ IttveME
 					www\ttools\TArticlesMaker\CommonIttvePw.php
 					www\ttools\TArticlesMaker\CommonOwn.php
 					www\ttools\TArticlesMaker\deleteArt.php
-					www\ttools\TArticlesMaker\getNameCue.php
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
 				-TDelArtClass
@@ -512,7 +511,8 @@ IttveME
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
-				-TNewArt
+				+TNewArt
+					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 				-TNewCueClass
 					-img
@@ -600,11 +600,16 @@ IttveME
 			www\ittve-log.txt
 			www\log.txt
 			www\manifest.json
+			www\photo-8i.jpg
 			www\TestBase.php
 			www\ToPlugDebug.php
 			www\UpSite.php
 			www\UpSiteCSS.php
 		-Материалы
+			-Htaccess
+				Материалы\Htaccess\Как отладить RewriteRule.lnk
+				Материалы\Htaccess\Как проверить работает ли файл htaccess на сервере Apache.doc
+				Материалы\Htaccess\Не работает RewriteRule.lnk
 			-Лабиринт
 				Материалы\Лабиринт\easy_maze.png
 				Материалы\Лабиринт\face.png
@@ -625,35 +630,52 @@ IttveME
 		IttveMe.rtf
 		IttveMe.xls
 		README.md
+		Новый2.txt
 [Open project files]
-0=www\index.php
-1=www\ttools\TTinyGallery\TinyGalleryClass.php
+0=..\TPhpPrown\TPhpPrown\iniConstMem.php
+1=www\UpSiteCSS.php
 2=www\iniMem.php
-3=www\e404.php
-4=www\ContactUs.css
-5=www\ttools\TNewArt\NewArtClass.php
-6=www\.htaccess
+3=www\index.php
+4=..\TPhpTools\TPhpTools\CommonTools.js
+5=www\Jsx\WorkTiny.js
+6=..\TPhpTools\TPhpTools\TNotice\Notice.js
+7=www\ttools\TNewArt\getNameCue.php
+8=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+9=www\ttools\TKwinGallery\KwinGalleryClass.php
+10=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
-[www\index.php]
-TopLine=69
-Caret=1,93
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=361
-Caret=56,400
+Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+[..\TPhpPrown\TPhpPrown\iniConstMem.php]
+TopLine=45
+Caret=22,1
+[www\UpSiteCSS.php]
+TopLine=56
+Caret=8,97
 [www\iniMem.php]
-TopLine=71
-Caret=59,110
-[www\e404.php]
-TopLine=234
-Caret=1,51
-[www\ContactUs.css]
-TopLine=214
-Caret=1,244
-[www\ttools\TNewArt\NewArtClass.php]
-TopLine=19
-Caret=1,52
-[www\.htaccess]
+TopLine=61
+Caret=1,68
+[www\index.php]
+TopLine=79
+Caret=59,93
+[..\TPhpTools\TPhpTools\CommonTools.js]
+TopLine=99
+Caret=93,121
+[www\Jsx\WorkTiny.js]
+TopLine=86
+Caret=15,103
+[..\TPhpTools\TPhpTools\TNotice\Notice.js]
 TopLine=63
-Caret=55,63
+Caret=27,70
+[www\ttools\TNewArt\getNameCue.php]
+TopLine=6
+Caret=53,41
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=46
+Caret=1,70
+[www\ttools\TKwinGallery\KwinGalleryClass.php]
+TopLine=152
+Caret=27,183
+[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
+TopLine=27
+Caret=27,49
