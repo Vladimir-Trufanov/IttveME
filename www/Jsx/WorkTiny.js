@@ -82,6 +82,7 @@ function changeNsName(value)
    $('#wnArt').css('color','#993300');
    $('#wvArt').css('color','#993300');
    test3newArt();
+   alert('Проверяем '+value);
 }
 // Задать обработчик аякс-запроса по клику выбора раздела материалов
 // при назначении новой статьи
@@ -114,7 +115,7 @@ function getNameCue(Uid)
          else
          {
             $('#nsCue').attr('value',Uid);
-            $('#nsGru').attr('value',parm.NameGru);
+            $('#nsGru').attr('value',parm.Piati);
          
             $('#wvCue').html(parm.NameGru);
             $('#wnCue').css('color','#993300');

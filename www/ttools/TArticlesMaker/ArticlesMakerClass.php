@@ -616,34 +616,32 @@ class ArticlesMaker
    // *************************************************************************
    public function InsertByTranslit($pdo,$Translit,$pid,$NameArt,$DateArt,$contents)
    {
-    try 
-    {
-      $pdo->beginTransaction();
-      $icontents = htmlspecialchars($contents);	
-      $statement = $pdo->prepare("INSERT INTO [stockpw] ".
-         "([pid], [IdCue], [NameArt], [Translit], [access], [DateArt], [Art]) VALUES ".
-         "(:pid,  :IdCue,  :NameArt,  :Translit,  :access,  :DateArt,  :Art);");
-      $statement->execute([
-         "pid"      => $pid, 
-         "IdCue"    => 0, 
-         "NameArt"  => $NameArt, 
-         "Translit" => $Translit, 
-         "access"   => acsAll, 
-         "DateArt"  => $DateArt, 
-         "Art"      => $icontents
-      ]);
-      $pdo->commit();
-    } 
-    catch (Exception $e) 
-    {
-      // Если в транзакции, то делаем откат изменений
-      if ($pdo->inTransaction()) 
-      {
-         $pdo->rollback();
-      }
-      // Продолжаем исключение
-      throw $e;
-    }
+     try 
+     {
+        $pdo->beginTransaction();
+        $icontents = htmlspecialchars($contents);	
+        $statement = $pdo->prepare("INSERT INTO [stockpw] ".
+           "([pid], [IdCue], [NameArt], [Translit], [access], [DateArt], [Art]) VALUES ".
+           "(:pid,  :IdCue,  :NameArt,  :Translit,  :access,  :DateArt,  :Art);");
+        $statement->execute([
+           "pid"      => $pid, 
+           "IdCue"    => 0, 
+           "NameArt"  => $NameArt, 
+           "Translit" => $Translit, 
+           "access"   => acsAll, 
+           "DateArt"  => $DateArt, 
+           "Art"      => $icontents
+        ]);
+        $pdo->commit();
+        $messa=imok;
+     } 
+     catch (Exception $e) 
+     {
+        $messa=$e->getMessage();
+        // Если в транзакции, то делаем откат изменений
+        if ($pdo->inTransaction()) $pdo->rollback();
+     }
+     return $messa;
    }
    // *************************************************************************
    // *                      Вставить материал по транслиту                   *

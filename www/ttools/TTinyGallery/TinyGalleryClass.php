@@ -215,6 +215,27 @@ class TinyGallery
          // ----------------------------------- 'Вернуться к предыдущей статье'
          else if (\prown\isComRequest(mmlVernutsyaPredState))
          $this->DelayedMessage=mmlVernutsyaPredState_ZERO($this->Arti,$Translit);
+         // Если было назначение нового материала/статьи, 
+         // то делаем запись в базу данных и готовим транслит статьи для установки
+         // кукиса и начала редактирования материала
+         else if ((\prown\getComRequest('nsnCue')<>NULL)&&
+         (\prown\getComRequest('nsnName')<>NULL)&&
+         (\prown\getComRequest('nsnGru')<>NoDefine)&&
+         (\prown\getComRequest('nsnDate')<>NULL))
+         {
+            // Делаем новую запись в базе данных
+            $apdo=$this->Arti->BaseConnect();
+            $NameArt=\prown\getComRequest('nsnName');
+            $DateArt=\prown\getComRequest('nsnDate');
+            $pid=\prown\getComRequest('nsnCue');
+            $Translit=\prown\getTranslit($NameArt);
+            $contents='Новый материал';
+            $this->DelayedMessage=
+               $this->Arti->InsertByTranslit($apdo,$Translit,$pid,$NameArt,$DateArt,$contents);
+            // Готовим кукис текущего материала
+            if ($this->DelayedMessage==imok)
+               $this->Arti->setCurrTranslit($Translit);
+         }
       }
       // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
       if ($this->DelayedMessage==imok)
@@ -239,26 +260,6 @@ class TinyGallery
          }
       }
       /*
-      // Если было назначение нового материала/статьи, 
-      // то делаем запись в базу данных и готовим транслит статьи для установки
-      // кукиса и начала редактирования материала
-      if ((\prown\getComRequest('nsnCue')<>NULL)&&
-      (\prown\getComRequest('nsnName')<>NULL)&&
-      (\prown\getComRequest('nsnGru')<>NoDefine)&&
-      (\prown\getComRequest('nsnDate')<>NULL))
-      {
-         // Делаем новую запись в базе данных
-         $apdo=$this->Arti->BaseConnect();
-         $NameArt=\prown\getComRequest('nsnName');
-         $DateArt=\prown\getComRequest('nsnDate');
-         $pid=\prown\getComRequest('nsnCue');
-         $Translit=\prown\getTranslit($NameArt);
-         $NameGru=\prown\getComRequest('nsnGru');
-         $contents='Новый материал';
-         $this->Arti->InsertByTranslit($apdo,$Translit,$pid,$NameArt,$DateArt,$contents);
-         // Готовим кукис текущего материала
-         $getArti=$Translit;
-      }
       // Если был выбран режим сохранения отредактированного материала, 
       // то сохраняем его    
       $contentNews=\prown\getComRequest('Article');
@@ -406,8 +407,8 @@ class TinyGallery
                <div class="nazst"> 
                   <p class="nazstName"  id="wnDat">Дата создания</p>
                   <p class="nazstValue" id="wvDat">'.nstNoVyb.'</p>
-                  <div id="nazstSub">
-                  </div>
+               </div>
+               <div id="nazstSub">
                </div>
             ';
          }
@@ -415,8 +416,7 @@ class TinyGallery
          else if (\prown\isComRequest(mmlVybratStatyuRedakti))
             $this->KwinGallery_mmlVybratStatyuRedakti();
          */
-         else 
-         $this->Galli->BaseGallery();
+         else $this->Galli->BaseGallery();
       }
    }
    // *************************************************************************

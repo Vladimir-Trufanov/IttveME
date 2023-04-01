@@ -1,3 +1,10 @@
 [01-Apr-2023 08:12:14 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/TPhpPrown/CommonPrown1.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\getNameCue.php on line 43
 [01-Apr-2023 08:13:20 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/TPhpPrown/CommonPrown1.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\getNameCue.php on line 43
 [01-Apr-2023 08:15:16 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/TPhpPrown/CommonPrown1.php' (include_path='.;C:\php\pear') in C:\IttveMe\www\getNameCue.php on line 43
+[01-Apr-2023 20:29:08 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined method ttools\TinyGallery::setCurrTranslit() in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:237
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(164): ttools\TinyGallery->ZeroEditSpace()
+#1 C:\IttveMe\www\iniMem.php(226): ttools\TinyGallery->__construct('C:\\IttveMe\\www', 'http://localhos...', '75', '15', '30', '%', Object(ttools\ArticlesMaker))
+#2 C:\IttveMe\www\index.php(92): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 237

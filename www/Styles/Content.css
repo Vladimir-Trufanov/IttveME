@@ -235,8 +235,13 @@
 {
    top:2rem;
    right:1%;
-   width:19%;
+   width:21%;
 }
+
+#nsName,#nsDate,.nazst
+{
+   font-size:1.8rem; 
+} 
 #nsName,#nsDate 
 {
    position:absolute;
@@ -244,7 +249,7 @@
    height:30px;
    background:#fff;
    padding-left:20px;
-   color:rgba(0,0,0,0.1);
+   color:rgba(0,0,0,0.9);
    -webkit-box-shadow:1px 1px 20px rgba(0,0,0, 0.2);
    -moz-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
    -ms-box-shadow:1px 1px 20px rgba(0,0, 0,0.2);
@@ -287,12 +292,6 @@
   -o-transition:0.5s;
   transition:0.5s;
 }
-
-#nsName,#nsDate,.nazst
-{
-   font-size:1.7rem;
-} 
-
 /* 
  Выбор реквизитов при назначении новой статьи 
 */
@@ -314,11 +313,18 @@
    margin-right:.8rem;
    text-align:right;
 }
-#nazstSub
+input[type=submit] 
 {
-   margin:0;
+   margin-top:2rem;
    margin-left:.8rem;
-   margin-bottom:.8rem;
+   padding:.5rem .8rem;
+   border:.2rem solid gray;
+   cursor:pointer;
+   -webkit-border-radius:.5rem;
+   border-radius:.5rem; 
+   font-weight:600; 
+   font-size:1.8rem; 
+   color: #993300; 
 }
 
 /* ********************************************************* Content.css *** */	
