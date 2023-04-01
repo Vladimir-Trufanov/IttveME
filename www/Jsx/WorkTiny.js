@@ -88,33 +88,31 @@ function changeNsName(value)
 function getNameCue(Uid)
 {
    pathphp="getNameCue.php";
-   //alert('pathphp='+pathphp);
    // Делаем запрос на определение наименования раздела материалов
    $.ajax({
       url: pathphp,
       type: 'POST',
       data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
-      // Выводим ошибки при выполнении запроса в PHP-сценарии
-      error: function (jqXHR,exception) {alert('error');/*SmarttodoError(jqXHR,exception)*/},
+      // Выводим ошибки при невозможности выполнении запроса
+      error: function (jqXHR,exception,errorMsg) 
+      {
+         Error_Info(pathphp+': '+SmarttodoError(jqXHR,exception));
+      },
       // Обрабатываем ответное сообщение
       success: function(message)
       {
-         console.log('Исх='+message);
-         alert('Исх='+message);
          // Вырезаем из запроса чистое сообщение
          messa=FreshJSON(message);
          // Получаем параметры ответа
          parm=JSON.parse(messa);
-
-         //console.log('parm.iif='+parm.iif+'  parm.NameGru='+parm.NameGru);
-         //alert('parm.iif='+parm.iif+'  parm.NameGru='+parm.NameGru);
-         
+         // При ошибке выводим сообщение об ошибке
          if (parm.iif==Err) 
          { 
-            Error_Info(parm.NameGru)}
+            Error_Info(parm.NameGru);
+         }
+         // Если все хорошо, работаем с экраном
          else
          {
-            //$('#Message').html(parm.NameGru+': Указать название и дату для новой статьи');
             $('#nsCue').attr('value',Uid);
             $('#nsGru').attr('value',parm.NameGru);
          
@@ -122,7 +120,6 @@ function getNameCue(Uid)
             $('#wnCue').css('color','#993300');
             $('#wvCue').css('color','#993300');
             test3newArt();
-            //Dialog_errmess(parm.iif,parm.NameGru,null);
          }
       }
    });

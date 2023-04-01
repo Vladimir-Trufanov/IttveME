@@ -19,14 +19,15 @@ define("stylesdir",    'Styles');    // каталог стилей элемен
 define("jsxdir",       'Jsx');       // каталог файлов на javascript
 define("imgdir",       'Images');    // каталог служебных изображений
 define("nstErr",       'произошла ошибка');  
-//try
-//{
-//   $NameGru='Привет!';
+
+// 01.04.2023 При возникновении ошибки в данном обработчике аякс-запроса 
+// текст сообщения уходит в вызывающую процедуру, как успешное выполнение запроса
+
    // Извлекаем пути к библиотекам прикладных функций и классов
    define ("pathPhpPrown",$_POST['pathPrown']);
    define ("pathPhpTools",$_POST['pathTools']);
    // Подгружаем нужные модули библиотек
-   require_once pathPhpPrown."/CommonPrown.php";
+   require_once pathPhpPrown."/CommonPrown1.php";
    require_once pathPhpTools."/TNotice/NoticeClass.php";
    require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
    // Подключаем объект единообразного вывода сообщений
@@ -38,7 +39,7 @@ define("nstErr",       'произошла ошибка');
    $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
    $pdo=$Arti->BaseConnect();
    // Выбираем запись по идентификатору группы материалов
-   $table=$Arti->SelRecord($pdo,$_POST['idCue']+1000); 
+   $table=$Arti->SelRecord($pdo,$_POST['idCue']); 
    // Если записей не найдено, то возвращаем сообщение
    if (count($table)<1)
    {
@@ -57,10 +58,5 @@ define("nstErr",       'произошла ошибка');
    $message=\prown\makeLabel($message,'ghjun5','ghjun5');
    echo $message;
    exit;
-//} 
-//catch (Exception $e) 
-//{
-//   $NameGru=$e->getMessage();
-//}
 
 // ********************************************************* getNameCue.php ***

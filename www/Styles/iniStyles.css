@@ -91,6 +91,11 @@ html,body,#News,#Life,#Gallery,#FooterTiny,#Info
    vertical-align:baseline;
    overflow:auto;
 }
+#DialogWind
+{
+   font-size:1.8rem;
+}
+
 /*
 #Life{background:Azure;}
 #News{background:Cornsilk;}
