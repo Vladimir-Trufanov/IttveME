@@ -72,17 +72,42 @@ function changeNsDate(value)
    newvalue=nsDate.toLocaleDateString()
    $('#wvDat').html(newvalue);
    $('#wnDat').css('color','#993300');
-   $('#wvDat').css('color','#993300');
    test3newArt();
 }
 // Отметить название новой статьи на панели значений
-function changeNsName(value)
+// (только в случае, если транслит статьи - новый,
+// а для этого делаем проверку через аякс-запрос)
+function changeNsName(NameArt)
 {
-   $('#wvArt').html(value);
-   $('#wnArt').css('color','#993300');
-   $('#wvArt').css('color','#993300');
-   test3newArt();
-   alert('Проверяем '+value);
+   pathphp="testNameArt.php";
+   // Делаем запрос на определение наименования раздела материалов
+   $.ajax({
+      url: pathphp,
+      type: 'POST',
+      data: {namearti:NameArt, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      // Выводим ошибки при невозможности выполнении запроса
+      error: function (jqXHR,exception,errorMsg) 
+      {
+         Error_Info(pathphp+': '+SmarttodoError(jqXHR,exception));
+      },
+      // Обрабатываем ответное сообщение
+      success: function(message)
+      {
+         // Вырезаем из запроса чистое сообщение
+         messa=FreshJSON(message);
+         // Получаем параметры ответа
+         parm=JSON.parse(messa);
+         // При ошибке выводим сообщение об ошибке
+         if (parm.iif==Err) Error_Info(parm.NameGru);
+         // Если все хорошо, то хорошо и отмечаем на панели
+         else
+         {
+            $('#wvArt').html(NameArt);
+            $('#wnArt').css('color','#993300');
+            test3newArt();
+         }
+      }
+   });
 }
 // Задать обработчик аякс-запроса по клику выбора раздела материалов
 // при назначении новой статьи

@@ -141,7 +141,7 @@ IttveME
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -192,7 +192,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -443,7 +443,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\bgnoise_lg.jpg
@@ -514,6 +514,7 @@ IttveME
 				+TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
+					www\ttools\TNewArt\testNameArt.php
 				-TNewCueClass
 					-img
 						www\ttools\TNewCueClass\img\aim.png
@@ -602,6 +603,7 @@ IttveME
 			www\manifest.json
 			www\photo-8i.jpg
 			www\TestBase.php
+			www\testNameArt.php
 			www\ToPlugDebug.php
 			www\UpSite.php
 			www\UpSiteCSS.php
@@ -636,21 +638,21 @@ IttveME
 1=www\UpSiteCSS.php
 2=www\iniMem.php
 3=www\index.php
-4=..\TPhpTools\TPhpTools\CommonTools.js
-5=www\Jsx\WorkTiny.js
-6=..\TPhpTools\TPhpTools\TNotice\Notice.js
-7=www\ttools\TNewArt\getNameCue.php
-8=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-9=www\ttools\TKwinGallery\KwinGalleryClass.php
-10=www\Styles\Content.css
-11=www\ttools\TNewArt\NewArtClass.php
-12=www\ttools\TTinyGallery\TinyGalleryClass.php
+4=www\Jsx\WorkTiny.js
+5=..\TPhpTools\TPhpTools\TNotice\Notice.js
+6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+7=www\ttools\TKwinGallery\KwinGalleryClass.php
+8=www\Styles\Content.css
+9=www\ttools\TNewArt\NewArtClass.php
+10=www\ttools\TTinyGallery\TinyGalleryClass.php
+11=www\ttools\TNewArt\testNameArt.php
+12=www\ttools\TArticlesMaker\deleteArt.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TNewArt\NewArtClass.php
+Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
-TopLine=1
-Caret=22,1
+TopLine=43
+Caret=14,49
 [www\UpSiteCSS.php]
 TopLine=58
 Caret=8,97
@@ -660,21 +662,15 @@ Caret=1,68
 [www\index.php]
 TopLine=81
 Caret=1,114
-[..\TPhpTools\TPhpTools\CommonTools.js]
-TopLine=101
-Caret=6,123
 [www\Jsx\WorkTiny.js]
-TopLine=73
-Caret=30,85
+TopLine=78
+Caret=24,82
 [..\TPhpTools\TPhpTools\TNotice\Notice.js]
 TopLine=49
 Caret=31,76
-[www\ttools\TNewArt\getNameCue.php]
-TopLine=24
-Caret=20,44
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=85
-Caret=1,643
+TopLine=378
+Caret=1,402
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=152
 Caret=27,183
@@ -682,8 +678,14 @@ Caret=27,183
 TopLine=293
 Caret=1,320
 [www\ttools\TNewArt\NewArtClass.php]
-TopLine=71
-Caret=49,89
+TopLine=17
+Caret=1,33
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=209
-Caret=1,231
+TopLine=319
+Caret=58,350
+[www\ttools\TNewArt\testNameArt.php]
+TopLine=18
+Caret=40,28
+[www\ttools\TArticlesMaker\deleteArt.php]
+TopLine=1
+Caret=1,15

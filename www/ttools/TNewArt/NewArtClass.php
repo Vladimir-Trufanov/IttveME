@@ -25,10 +25,11 @@ class NewArt
    {
       $this->Arti=$Arti;
       $this->apdo=$apdo;
-      // Проверяем, нужно ли заменить файл для аякс-запроса в корневом каталоге 
-      // и (при его отсутствии, при несовпадении размеров или старой дате) 
+      // Проверяем, нужно ли заменить файлы для аякс-запросов в корневом каталоге 
+      // и (при их отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
       CompareCopyRoot('getNameCue.php','ttools/TNewArt');
+      CompareCopyRoot('testNameArt.php','ttools/TNewArt');
    }
    public function __destruct() 
    {
