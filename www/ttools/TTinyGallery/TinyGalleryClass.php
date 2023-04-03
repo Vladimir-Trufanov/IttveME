@@ -125,6 +125,7 @@ class TinyGallery
    private   $Tune;             // объект "Изменить настройки сайта в браузере"
    private   $ModyArt;          // объект "Редактировать выбранный материал или создать новый"
    private   $NewArt;           // объект "Назначить новую статью"
+   private   $DelArt;           // объект "Удалить материал"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
@@ -139,6 +140,7 @@ class TinyGallery
       $this->Tune=NULL;
       $this->ModyArt=NULL;
       $this->NewArt=NULL;
+      $this->DelArt=NULL;
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
@@ -349,6 +351,9 @@ class TinyGallery
          // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
          elseif (\prown\isComRequest(mmlNaznachitStatyu))
             $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
+         // 14-HEAD этап --------------------------------- ?Com=udalit-material 
+         elseif (\prown\isComRequest(mmlUdalitMaterial))
+            $this->DelArt=mmlUdalitMaterial_HEAD($this->Arti,$this->apdo);
          // Последний-HEAD этап - инициируем разметку для выбранного материала,
          // cтроим рабочую область для выбранной статьи и её галереи, 
          // обеспечиваем просмотр и редактирование 
@@ -376,8 +381,6 @@ class TinyGallery
       if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)) {}
       else if (\prown\isComRequest(mmlVybratStatyuRedakti))
          $this->IniEditSpace_mmlVybratStatyuRedakti();
-      else if (\prown\isComRequest(mmlUdalitMaterial))
-         $this->IniEditSpace_mmlUdalitMaterial();
       */
    }
    // *************************************************************************
@@ -501,6 +504,13 @@ class TinyGallery
          $Title=MakeTitle('Укажите название и дату для новой статьи,<br>'.
             'выберите кликом раздел материалов?',ttMessage);
          $this->_ViewLifeSpace($Title,$this->NewArt);
+      }
+      // 14-BODY этап ------------------------------------ ?Com=udalit-material 
+      elseif (\prown\isComRequest(mmlUdalitMaterial))
+      {
+         $Title=MakeTitle('Выберите материал для удаления,<br>'.
+            'прежде, не забудьте удалить связанные с ним изображения?',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->DelArt);
       }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else

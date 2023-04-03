@@ -25,9 +25,6 @@ define ("nstNoNaz",     "не назначено");
 define ("nstErr",       'произошла ошибка');  
 define ("nstOk",        'все в порядке');  
 
-// ----------------------------------------- Ошибки обработки аякс-запросов ---
-define ("gncNoCue", 'Статья не найдена в базе'); 
-
 // Определения сообщений для PHP
 define ("ajSuccess",            "Функция/процедура выполнена успешно");     
 define ("ajTransparentSuccess", "Преобразование к прозрачному виду успешно");
@@ -45,8 +42,6 @@ function DefineJS()
    'nstNoNaz="'            .nstNoNaz.'";'.
    'nstErr="'              .nstErr.'";'.
    'nstOk="'               .nstOk.'";'.
-
-   'gncNoCue="'            .gncNoCue.'";'.
 
    'ajSuccess="'           .ajSuccess.           '";'.
    'ajTransparentSuccess="'.ajTransparentSuccess.'";'.

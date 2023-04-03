@@ -79,7 +79,6 @@ function mmlSozdatRedaktirovat_HEAD($Arti,$apdo)
    $ModyArt->Head();
    return $ModyArt;
 }
-
 // ****************************************************************************
 // *                        "Назначить новую статью"                          *
 // ****************************************************************************
@@ -89,6 +88,16 @@ function mmlNaznachitStatyu_HEAD($Arti,$apdo)
    $NewArt=new NewArt($Arti,$apdo);
    $NewArt->Head();
    return $NewArt;
+}
+// ****************************************************************************
+// *                            "Удалить материал"                            *
+// ****************************************************************************
+function mmlUdalitMaterial_HEAD($Arti,$apdo)
+{
+   require_once "ttools/TDelArt/DelArtClass.php";
+   $DelArt=new DelArt($Arti,$apdo);
+   $DelArt->Head();
+   return $DelArt;
 }
 
 // ****************************************************** Dispatch_HEAD.php ***

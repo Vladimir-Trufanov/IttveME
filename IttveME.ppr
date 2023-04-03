@@ -451,11 +451,12 @@ IttveME
 					www\ttools\TArticlesMaker\CommonIttveMe.php
 					www\ttools\TArticlesMaker\CommonIttvePw.php
 					www\ttools\TArticlesMaker\CommonOwn.php
-					www\ttools\TArticlesMaker\deleteArt.php
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
-				-TDelArtClass
-					www\ttools\TDelArtClass\DelArtClass.php
+				+TDelArt
+					www\ttools\TDelArt\DelArtClass.php
+					www\ttools\TDelArt\deleteArt.php
+					www\ttools\TDelArt\testForDelArt.php
 				-TDelCueClass
 					-g2048
 						-js
@@ -511,7 +512,7 @@ IttveME
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCueClass
 					www\ttools\TModyCueClass\ModyCueClass.php
-				+TNewArt
+				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -643,49 +644,57 @@ IttveME
 6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 7=www\ttools\TKwinGallery\KwinGalleryClass.php
 8=www\Styles\Content.css
-9=www\ttools\TNewArt\NewArtClass.php
-10=www\ttools\TTinyGallery\TinyGalleryClass.php
-11=www\ttools\TNewArt\testNameArt.php
-12=www\ttools\TArticlesMaker\deleteArt.php
+9=www\ttools\TTinyGallery\TinyGalleryClass.php
+10=www\ttools\TDelArt\DelArtClass.php
+11=www\ttools\TDelArt\deleteArt.php
+12=www\ttools\TDelArt\testForDelArt.php
+13=..\TPhpTools\TPhpTools\CommonTools.js
+14=www\ttools\TNewArt\testNameArt.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
-TopLine=43
-Caret=14,49
+TopLine=61
+Caret=9,90
 [www\UpSiteCSS.php]
 TopLine=58
 Caret=8,97
 [www\iniMem.php]
-TopLine=68
-Caret=1,68
+TopLine=11
+Caret=1,26
 [www\index.php]
-TopLine=81
+TopLine=93
 Caret=1,114
 [www\Jsx\WorkTiny.js]
-TopLine=78
-Caret=24,82
+TopLine=269
+Caret=63,209
 [..\TPhpTools\TPhpTools\TNotice\Notice.js]
 TopLine=49
 Caret=31,76
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=378
-Caret=1,402
+TopLine=396
+Caret=71,408
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=152
 Caret=27,183
 [www\Styles\Content.css]
 TopLine=293
 Caret=1,320
-[www\ttools\TNewArt\NewArtClass.php]
-TopLine=17
-Caret=1,33
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=319
-Caret=58,350
+TopLine=477
+Caret=1,510
+[www\ttools\TDelArt\DelArtClass.php]
+TopLine=6
+Caret=37,32
+[www\ttools\TDelArt\deleteArt.php]
+TopLine=9
+Caret=46,27
+[www\ttools\TDelArt\testForDelArt.php]
+TopLine=104
+Caret=19,129
+[..\TPhpTools\TPhpTools\CommonTools.js]
+TopLine=69
+Caret=44,121
 [www\ttools\TNewArt\testNameArt.php]
-TopLine=18
-Caret=40,28
-[www\ttools\TArticlesMaker\deleteArt.php]
-TopLine=1
-Caret=1,15
+TopLine=39
+Caret=19,51

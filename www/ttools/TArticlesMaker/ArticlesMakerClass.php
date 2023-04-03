@@ -150,7 +150,6 @@ class ArticlesMaker
       // загружаем из класса 
       CompareCopyRoot('bgnoise_lg.jpg',TArticlesMakerDir,$this->imgdir);
       CompareCopyRoot('icons.png',TArticlesMakerDir,$this->imgdir);
-      CompareCopyRoot('deleteArt.php',TArticlesMakerDir);
       CompareCopyRoot('TestBase.php',TArticlesMakerDir);
    }
    // *************************************************************************

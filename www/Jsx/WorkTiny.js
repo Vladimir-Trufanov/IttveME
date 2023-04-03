@@ -175,12 +175,65 @@ function getTranslit(Uid)
 // ****************************************************************************
 function UdalitMater(Uid)
 {
+   // По указанному идентификатору выбираем название статьи и 
+   // проверяем есть ли не удаленные изображения
+   pathphp="testForDelArt.php";
+   // Делаем запрос на определение наименования раздела материалов
+   $.ajax({
+      url: pathphp,
+      type: 'POST',
+      data: {idArt:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      // Выводим ошибки при выполнении запроса в PHP-сценарии
+      error: function (jqXHR,exception) {SmarttodoError(jqXHR,exception)},
+      // Обрабатываем ответное сообщение
+      success: function(message)
+      {
+         //alert(message);
+         //
+         // Вырезаем из запроса чистое сообщение
+         messa=FreshJSON(message);
+         // Получаем параметры ответа
+         parm=JSON.parse(messa);
+         // При ошибке выводим сообщение об ошибке
+         if (parm.iif==Err) 
+         { 
+            Error_Info(parm.NameGru);
+         }
+         // Если все хорошо, работаем с экраном
+         else
+         {
+            $('#DialogWind').dialog
+            ({
+                buttons:[{text:"OK",click:function(){xUdalitMater(Uid)}}]
+            });
+            htmlText="Удалить выбранный материал: "+parm.Piati+"?";
+            Notice_Info(htmlText,"Удалить материал");
+         }
+
+         
+         
+         /*
+         // Вырезаем из запроса чистое сообщение
+         messa=FreshLabel(message);
+         // Получаем параметры ответа
+         parm=JSON.parse(messa);
+         // Выводим результат выполнения
+         if (parm.NameArt==gncNoCue) htmlText=parm.NameArt+' Uid='+Uid;
+         else htmlText=parm.NameArt;
+         $('#DialogWind').html(htmlText);
+         */
+      }
+   });
+   
+   // Выводим информационное окно
+   /*
    $('#DialogWind').dialog
    ({
       buttons:[{text:"OK",click:function(){xUdalitMater(Uid)}}]
    });
    htmlText="Удалить выбранный материал по "+Uid+"?";
    Notice_Info(htmlText,"Удалить материал");
+   */
 }
 function xUdalitMater(Uid)
 {
@@ -200,29 +253,29 @@ function xUdalitMater(Uid)
       success: function(message)
       {
          alert(message);
-               // Вырезаем из запроса чистое сообщение
-               messa=FreshLabel(message);
-               // Получаем параметры ответа
-               parm=JSON.parse(messa);
-               // Выводим результат выполнения
-               if (parm.NameArt==gncNoCue) htmlText=parm.NameArt+' Uid='+Uid;
-               else htmlText=parm.NameArt;
-               $('#DialogWind').html(htmlText);
-            }
-         });
-         // Удаляем кнопку из диалога и увеличиваем задержку до закрытия
-         delayClose=1500;
-         $('#DialogWind').dialog
-         ({
-            buttons:[],
-            hide:{effect:"explode",delay:delayClose,duration:1000,easing:'swing'},
-            title: "Удаление материала",
-         });
-         // Закрываем окно
-         $("#DialogWind").dialog("close");
-         // Перезагружаем страницу через 4 секунды
-         setTimeout(function() {location.reload();}, 4000);
+         // Вырезаем из запроса чистое сообщение
+         messa=FreshLabel(message);
+         // Получаем параметры ответа
+         parm=JSON.parse(messa);
+         // Выводим результат выполнения
+         if (parm.NameArt==gncNoCue) htmlText=parm.NameArt+' Uid='+Uid;
+         else htmlText=parm.NameArt;
+         $('#DialogWind').html(htmlText);
       }
+   });
+   // Удаляем кнопку из диалога и увеличиваем задержку до закрытия
+   delayClose=1500;
+   $('#DialogWind').dialog
+   ({
+      buttons:[],
+      hide:{effect:"explode",delay:delayClose,duration:1000,easing:'swing'},
+      title: "Удаление материала",
+   });
+   // Закрываем окно
+   $("#DialogWind").dialog("close");
+   // Перезагружаем страницу через 4 секунды
+   setTimeout(function() {location.reload();}, 4000);
+}
 
 // ****************************************************************************
 // *       Установить взаимодействие кликов при работе в галерее              *
