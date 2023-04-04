@@ -37,7 +37,7 @@ $table=$Arti->SelRecord($pdo,$_POST['idCue']);
 $count=count($table);
 
 // Если записей не найдено, то готовим сообщение
-if ($count<1) $NameArt=gncNoCue;
+if ($count<1) $NameArt='gncNoCue';
 // Иначе готовим удаление записи
 else
 {

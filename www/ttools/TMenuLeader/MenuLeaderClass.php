@@ -271,7 +271,7 @@ class MenuLeader
          $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
          $this->Punkt($this->cPreMe.mmlVybratStatyuRedakti,'&#xf07c;','Выбрать материал','для изменений');
          $this->Punkt($this->cPreMe.mmlNaznachitStatyu,'&#xf0f6;','Назначить','новую статью');
-         $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Удалить','указанный материал');
+         $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Выбрать и удалить','указанный материал');
          //$cPost='<input type="submit" value="Сохранить материал" form="frmTinyText">';
          //$this->PunktPost('&#xf0ed;',$cPost,"Сохранить материал");
       }

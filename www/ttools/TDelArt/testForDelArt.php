@@ -29,6 +29,7 @@ require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpPrown."/iniConstMem.php";
 require_once pathPhpTools."/TNotice/NoticeClass.php";
 require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
+require_once "ttools/TTinyGallery/Dispatch_ZERO.php";
 
 // Готовим сообщения обработки аякс-запроса
 define ("gncNoCue", 'Статья не найдена в базе'); 
@@ -36,8 +37,9 @@ define ("nstErr",   'произошла ошибка');
 define ("noImage",  'нет изображений');  
 
 // Готовим начальные значения параметров возвращаемого сообщения
-$NameGru='NoDefineART'; $Piati=Err; $iif=Err;
-
+$NameGru='NoDefineART'; $Piati=Err; 
+// Изначально отмечаем, что возвращается ошибка
+$iif=Err;
 // Подключаем объект единообразного вывода сообщений
 $note=new ttools\Notice();
 // Подключаем объект для работы с базой данных материалов
@@ -64,8 +66,28 @@ else
    else
    {
       $Piati=$NameArt; 
-      $NameGru=TestUidImg($Arti,$pdo,$idArt);  
-      if ($NameGru==noImage) $iif=imok;
+      $NameGru=TestUidImg($Arti,$pdo,$idArt,$NameArt); 
+      // Если по выбранной для удаления записи имеются изображения,
+      // то завершаем обработку и отправляем сообщение,
+      // а если изображений нет, то продолжаем анализ
+      if ($NameGru==noImage) 
+      {
+         // Далее проверяем был ли текущим удаляемый транслит 
+         if (IsSet($_COOKIE["PunktMenu"])) $TransCookie=$_COOKIE["PunktMenu"]; else $TransCookie="NoDefine";
+         // Если статья текущего транслита удаляется, то готовим переход на следующую запись 
+         if ($Translit==$TransCookie)
+         {
+            $getArti=$Translit;
+            $NameGru=ttools\mmlVybratSledMaterial_ZERO($Arti,$getArti);
+            // Если произошла ошибка перехода на след.статью,
+            // то возвращаем сообщение, иначе отмечаем успешность всех 
+            // подготовительных действий
+            if ($NameGru==imok) $iif=imok;
+         }
+         // Так как удаляется запись не с текущим транслитом, то
+         // отмечаем успешность всех подготовительных действий
+         else $iif=imok;
+      }
    }
 }
 // Освобождаем память
@@ -77,67 +99,13 @@ echo $message;
 exit;
 
 // Проверить наличие изображений по UID материала
-function TestUidImg($Arti,$pdo,$UnID)
+function TestUidImg($Arti,$pdo,$UnID,$NameArt)
 {
-   $message='Изображения найдены!';
+   $message='Для \"'.$NameArt.'\" найдены изображения! Материал удалять нельзя.';
    // Выбираем ключи всех изображений к записи 
    $table=$Arti->SelImgKeys($pdo,$UnID);
    if (count($table)<1) $message=noImage; 
    return $message;
 }
-
-
-
-
-
-/*
-// Инициализируем константы для работы с ArticlesMakerClass
-define("articleSite",  'IttveMe');   // тип базы данных для управления классом ArticlesMaker 
-define("editdir",      'ittveEdit'); // каталог файлов, связанных c материалом
-define("stylesdir",    'Styles');    // каталог стилей элементов разметки и фонтов
-define("jsxdir",       'Jsx');       // каталог файлов на javascript
-define("imgdir",       'Images');    // каталог служебных изображений
-define("nstErr",       'произошла ошибка');  
-
-// Извлекаем пути к библиотекам прикладных функций и классов
-define ("pathPhpPrown",$_POST['pathPrown']);
-define ("pathPhpTools",$_POST['pathTools']);
-// Подгружаем нужные модули библиотек
-require_once pathPhpPrown."/iniConstMem.php";
-require_once pathPhpPrown."/CommonPrown.php";
-require_once pathPhpPrown."/getTranslit.php";
-require_once pathPhpTools."/TNotice/NoticeClass.php";
-require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
-// Подключаем объект единообразного вывода сообщений
-$note=new ttools\Notice();
-// Готовим начальные значения параметров возвращаемого сообщения
-$NameArt='NoDefineART'; $Piati=0; $iif=Err;
-// Подключаем объект для работы с базой данных материалов
-// (при необходимости создаем базу данных материалов)
-$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; $username='tve'; $password='23ety17'; 
-$Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
-$pdo=$Arti->BaseConnect();
-// Выбираем запись по транслиту названия статьи
-$NameArt=$_POST['namearti'];
-$getArti=prown\getTranslit($NameArt);
-$ErrMessage=$Arti->SelUidPid($pdo,$getArti,$pid,$uid,$NameGru,$NameArt,$DateArt,$contents);
-// Готовим сообщение, если транслит уже есть
-if ($ErrMessage==imok) $NameGru='Название статьи уже есть в базе: \''.$NameArt.'\''; 
-// Готовим соощение, если ошибка запроса
-else $NameGru=$ErrMessage;
-// Готовим сообщение, если транслита нет
-if ($ErrMessage=='Не найдено записей по транслиту: '.$getArti)
-{
-   $NameGru=$ErrMessage;
-   $iif=imok;
-}
-// Освобождаем память
-unset($Arti); unset($pdo); unset($table); unset($note);
-// Возвращаем сообщение
-$message='{"NameGru":"'.$NameGru.'", "Piati":"'.$Piati.'", "iif":"'.$iif.'"}';
-$message=\prown\makeLabel($message,'ghjun5','ghjun5');
-echo $message;
-exit;
-*/
 
 // ****************************************************** testForDelArt.php ***

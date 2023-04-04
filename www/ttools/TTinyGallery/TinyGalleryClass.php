@@ -234,9 +234,15 @@ class TinyGallery
             $contents='Новый материал';
             $this->DelayedMessage=
                $this->Arti->InsertByTranslit($apdo,$Translit,$pid,$NameArt,$DateArt,$contents);
-            // Готовим кукис текущего материала
+            // Готовим кукис текущего материала и загружаем страницу для редактирования
             if ($this->DelayedMessage==imok)
+            {
                $this->Arti->setCurrTranslit($Translit);
+               // Загружаем страницу редактирования нового материала
+               //Header("Location: http://".$_SERVER['HTTP_HOST'].$this->urlHome.'/?artim='.$Translit,true);
+               Header("Location: ".$this->urlHome.'/?artim='.$Translit,true);
+               http://www.ittve.mehttps//www.ittve.me/?artim=novaya
+            }
          }
       }
       // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
