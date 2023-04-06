@@ -39,7 +39,7 @@ input + label
   display: block;
   z-index: 5;
   transform: translate(-50%, -50%);
-  background: url(../TNewCueClass/img/duck_light.png) no-repeat left center;
+  background: url(../TNewCue/img/duck_light.png) no-repeat left center;
   background-position: -138px 0;
 }
 input:checked + label 
@@ -112,7 +112,7 @@ input:checked
   padding:0;
   width:100%;
   height:100%;
-  cursor:url(../TNewCueClass/img/aim.png),text;
+  cursor:url(../TNewCue/img/aim.png),text;
   overflow:hidden;
 }
 #duckbody:before 
@@ -123,5 +123,5 @@ input:checked
   width: 100%;
   height:100%;
   z-index: 1;
-  background: url(../TNewCueClass/img/bg.png) repeat-x bottom left;
+  background: url(../TNewCue/img/bg.png) repeat-x bottom left;
 }

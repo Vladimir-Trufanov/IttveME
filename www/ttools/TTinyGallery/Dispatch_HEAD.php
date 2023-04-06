@@ -110,4 +110,15 @@ function mmlIzmenitNazvanieIkonku_HEAD()
    return $ModyCue;
 }
 
+// ****************************************************************************
+// *                      "Добавить новый раздел материалов"                  *
+// ****************************************************************************
+function mmlDobavitNovyjRazdel_HEAD($game=NULL)
+{
+   require_once "ttools/TNewCue/NewCueClass.php";
+   $Newcue=new NewCue($game);
+   $Newcue->Head();
+   return $Newcue;
+}
+
 // ****************************************************** Dispatch_HEAD.php ***

@@ -28,7 +28,7 @@ class DuckFly
    {
       if ($this->Place=='IttveME')
       {
-         echo '<link rel="stylesheet" type="text/css" href="ttools/TNewCueClass/DuckFly.css">';
+         echo '<link rel="stylesheet" type="text/css" href="ttools/TNewCue/DuckFly.css">';
       }
    }
    public function Play() 

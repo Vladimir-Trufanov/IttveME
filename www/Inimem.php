@@ -222,7 +222,7 @@ $Edit=new ttools\TinyGallery($SiteRoot,$urlHome,
    $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
 
 // Подключаем заменяющую игру для страницы "Добавить новый раздел"
-require_once "ttools/TNewCueClass/gameDuckFlyClass.php";
+require_once "ttools/TNewCue/gameDuckFlyClass.php";
 $Duck=new game\DuckFly('IttveME');
 // Подключаем заменяющую игру для страницы "Удалить раздел материалов"
 require_once "ttools/TDelCueClass/g2048/game2048Class.php";

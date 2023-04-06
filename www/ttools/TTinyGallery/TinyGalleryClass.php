@@ -135,13 +135,13 @@ class TinyGallery
       $this->WhipperSnapper=NULL;
       $this->WorkTinyMain=NULL;
       $this->Newcue=NULL;
+      $this->ModyCue=NULL;
       $this->Delcue=NULL;
       $this->Sayme=NULL;
       $this->Entry=NULL;
       $this->Tune=NULL;
-      $this->ModyArt=NULL;
-      $this->ModyCue=NULL;
       $this->NewArt=NULL;
+      $this->ModyArt=NULL;
       $this->DelArt=NULL;
       
       $this->SiteRoot=$SiteRoot; 
@@ -359,6 +359,9 @@ class TinyGallery
          // 9-HEAD этап -------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
          elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
             $this->ModyCue=mmlIzmenitNazvanieIkonku_HEAD();
+         // 10-HEAD этап ----------------- ?Com=dobavit-novyj-razdel-materialov 
+         elseif (\prown\isComRequest(mmlDobavitNovyjRazdel))
+            $this->NewCue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
          // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
          elseif (\prown\isComRequest(mmlNaznachitStatyu))
             $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
@@ -516,6 +519,13 @@ class TinyGallery
             'Смотрите возможные иконки разделов материалов и статей!',ttMessage);
          $this->_ViewLifeSpace($Title,$this->ModyCue);
       }
+      // 10-BODY этап -------------------- ?Com=dobavit-novyj-razdel-materialov 
+      elseif (\prown\isComRequest(mmlDobavitNovyjRazdel))
+      {
+         //$Title=MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
+         $Title=MakeTitle('Страничка будет следующей зимой, пока постреляйте уток!',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->NewCue);
+      }
       // 13-BODY этап ----------------------------------- ?Com=naznachit-statyu 
       elseif (\prown\isComRequest(mmlNaznachitStatyu))
       {
@@ -543,9 +553,6 @@ class TinyGallery
    private function Dispatch_BODY_WorkTiny()
    {
       $Result=true;
-      // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
-      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-         mmlDobavitNovyjRazdel_BODY_WorkTiny($this->Newcue);
       // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
       else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);

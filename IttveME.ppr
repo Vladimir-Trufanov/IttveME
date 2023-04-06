@@ -507,27 +507,27 @@ IttveME
 				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				+TModyArt
+				-TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
-				+TModyCue
+				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
 				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
-				-TNewCueClass
+				+TNewCue
 					-img
-						www\ttools\TNewCueClass\img\aim.png
-						www\ttools\TNewCueClass\img\bg.png
-						www\ttools\TNewCueClass\img\dog.png
-						www\ttools\TNewCueClass\img\duck_black.png
-						www\ttools\TNewCueClass\img\duck_light.png
-					www\ttools\TNewCueClass\CSS3 - анимация.doc
-					www\ttools\TNewCueClass\DuckFly.css
-					www\ttools\TNewCueClass\gameDuckFlyClass.php
-					www\ttools\TNewCueClass\NewCueClass.php
-					www\ttools\TNewCueClass\Игра на голом HTML.doc
+						www\ttools\TNewCue\img\aim.png
+						www\ttools\TNewCue\img\bg.png
+						www\ttools\TNewCue\img\dog.png
+						www\ttools\TNewCue\img\duck_black.png
+						www\ttools\TNewCue\img\duck_light.png
+					www\ttools\TNewCue\CSS3 - анимация.doc
+					www\ttools\TNewCue\DuckFly.css
+					www\ttools\TNewCue\gameDuckFlyClass.php
+					www\ttools\TNewCue\NewCueClass.php
+					www\ttools\TNewCue\Игра на голом HTML.doc
 				-TSaymeClass
 					-Hextris
 						-images
@@ -644,22 +644,20 @@ IttveME
 5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 6=www\ttools\TKwinGallery\KwinGalleryClass.php
 7=www\ttools\TTinyGallery\TinyGalleryClass.php
-8=www\ttools\TMenuLeader\MenuLeaderClass.php
-9=www\ttools\TModyCue\ModyCueClass.php
-10=www\ttools\TModyArt\ModyArtClass.php
-11=www\ttools\TTinyGallery\Dispatch_HEAD.php
+8=www\ttools\TModyCue\ModyCueClass.php
+9=www\ttools\TNewCue\NewCueClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\ttools\TNewCue\NewCueClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
 TopLine=59
 Caret=9,90
 [www\UpSiteCSS.php]
-TopLine=58
+TopLine=153
 Caret=8,97
 [www\iniMem.php]
-TopLine=97
-Caret=34,97
+TopLine=66
+Caret=29,225
 [www\index.php]
 TopLine=71
 Caret=9,83
@@ -673,17 +671,11 @@ Caret=51,469
 TopLine=144
 Caret=27,183
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=481
-Caret=72,515
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=231
-Caret=1,1
+TopLine=511
+Caret=56,523
 [www\ttools\TModyCue\ModyCueClass.php]
 TopLine=9
 Caret=1,38
-[www\ttools\TModyArt\ModyArtClass.php]
+[www\ttools\TNewCue\NewCueClass.php]
 TopLine=1
-Caret=1,1
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=71
-Caret=17,108
+Caret=78,6
