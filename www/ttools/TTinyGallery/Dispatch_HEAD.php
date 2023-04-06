@@ -99,5 +99,15 @@ function mmlUdalitMaterial_HEAD($Arti,$apdo)
    $DelArt->Head();
    return $DelArt;
 }
+// ****************************************************************************
+// *                   "Изменить заголовок раздела или иконку"                *
+// ****************************************************************************
+function mmlIzmenitNazvanieIkonku_HEAD()
+{
+   require_once "ttools/TModyCue/ModyCueClass.php";
+   $ModyCue=new ModyCue();
+   $ModyCue->Head();
+   return $ModyCue;
+}
 
 // ****************************************************** Dispatch_HEAD.php ***

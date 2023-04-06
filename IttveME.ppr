@@ -453,7 +453,7 @@ IttveME
 					www\ttools\TArticlesMaker\CommonOwn.php
 					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
-				+TDelArt
+				-TDelArt
 					www\ttools\TDelArt\DelArtClass.php
 					www\ttools\TDelArt\deleteArt.php
 					www\ttools\TDelArt\testForDelArt.php
@@ -507,11 +507,11 @@ IttveME
 				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				-TModyArt
+				+TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
-				-TModyCueClass
-					www\ttools\TModyCueClass\ModyCueClass.php
+				+TModyCue
+					www\ttools\TModyCue\ModyCueClass.php
 				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
@@ -566,7 +566,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -604,6 +604,7 @@ IttveME
 			www\manifest.json
 			www\photo-8i.jpg
 			www\TestBase.php
+			www\testForDelArt.php
 			www\testNameArt.php
 			www\ToPlugDebug.php
 			www\UpSite.php
@@ -644,18 +645,21 @@ IttveME
 6=www\ttools\TKwinGallery\KwinGalleryClass.php
 7=www\ttools\TTinyGallery\TinyGalleryClass.php
 8=www\ttools\TMenuLeader\MenuLeaderClass.php
+9=www\ttools\TModyCue\ModyCueClass.php
+10=www\ttools\TModyArt\ModyArtClass.php
+11=www\ttools\TTinyGallery\Dispatch_HEAD.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
-TopLine=61
+TopLine=59
 Caret=9,90
 [www\UpSiteCSS.php]
 TopLine=58
 Caret=8,97
 [www\iniMem.php]
-TopLine=185
-Caret=1,26
+TopLine=97
+Caret=34,97
 [www\index.php]
 TopLine=71
 Caret=9,83
@@ -669,8 +673,17 @@ Caret=51,469
 TopLine=144
 Caret=27,183
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=63
-Caret=36,243
+TopLine=481
+Caret=72,515
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
 TopLine=231
 Caret=1,1
+[www\ttools\TModyCue\ModyCueClass.php]
+TopLine=9
+Caret=1,38
+[www\ttools\TModyArt\ModyArtClass.php]
+TopLine=1
+Caret=1,1
+[www\ttools\TTinyGallery\Dispatch_HEAD.php]
+TopLine=71
+Caret=17,108

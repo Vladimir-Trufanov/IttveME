@@ -119,12 +119,13 @@ class TinyGallery
    private   $WhipperSnapper;   // игра при выводе ошибки
    private   $WorkTinyMain;     // объект "Обеспечить работу с материалом в рабочей области"
    private   $Newcue;           // объект "Добавить новый раздел материалов"
+   private   $NewArt;           // объект "Назначить новую статью"
    private   $Delcue;           // объект "Удалить раздел материалов"
    private   $Sayme;            // объект "Отправить сообщение автору"
    private   $Entry;            // объект "Войти или зарегистрироваться"
    private   $Tune;             // объект "Изменить настройки сайта в браузере"
    private   $ModyArt;          // объект "Редактировать выбранный материал или создать новый"
-   private   $NewArt;           // объект "Назначить новую статью"
+   private   $ModyCue;          // объект "Изменить заголовок раздела или иконку"
    private   $DelArt;           // объект "Удалить материал"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,
@@ -139,6 +140,7 @@ class TinyGallery
       $this->Entry=NULL;
       $this->Tune=NULL;
       $this->ModyArt=NULL;
+      $this->ModyCue=NULL;
       $this->NewArt=NULL;
       $this->DelArt=NULL;
       
@@ -354,6 +356,9 @@ class TinyGallery
          // 8-HEAD этап ----------------- ?Com=sozdat-material-ili-redaktirovat 
          elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
             $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo);
+         // 9-HEAD этап -------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
+         elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
+            $this->ModyCue=mmlIzmenitNazvanieIkonku_HEAD();
          // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
          elseif (\prown\isComRequest(mmlNaznachitStatyu))
             $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
@@ -504,6 +509,13 @@ class TinyGallery
          $Title=MakeTitle('Выберите статью для редактирования?',ttMessage);
          $this->_ViewLifeSpace($Title,$this->ModyArt);
       }
+      // 9-BODY этап ----------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
+      elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
+      {
+         $Title=MakeTitle('Страничка разрешена собственнику сайта. <br>'.
+            'Смотрите возможные иконки разделов материалов и статей!',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->ModyCue);
+      }
       // 13-BODY этап ----------------------------------- ?Com=naznachit-statyu 
       elseif (\prown\isComRequest(mmlNaznachitStatyu))
       {
@@ -534,9 +546,6 @@ class TinyGallery
       // Добавляем новый раздел ---------- ?Com=dobavit-novyj-razdel-materialov
       if (\prown\isComRequest(mmlDobavitNovyjRazdel))
          mmlDobavitNovyjRazdel_BODY_WorkTiny($this->Newcue);
-      // Изменяем раздел или иконку -- ?Com=izmenit-nazvanie-razdela-ili-ikonku
-      else if (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
-         mmlIzmenitNazvanieIkonku_BODY_WorkTiny();
       // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
       else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
          mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);

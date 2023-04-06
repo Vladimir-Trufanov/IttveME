@@ -16,3 +16,24 @@ Stack trace:
 #3 C:\IttveMe\www\index.php(104): require_once('C:\\IttveMe\\www\\...')
 #4 {main}
   thrown in C:\IttveMe\www\ttools\TDelArt\DelArtClass.php on line 68
+[06-Apr-2023 05:57:02 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\TModyCue' not found in C:\IttveMe\www\ttools\TTinyGallery\Dispatch_HEAD.php:108
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(361): ttools\mmlIzmenitNazvanieIkonku_HEAD()
+#1 C:\IttveMe\www\UpSiteCSS.php(94): ttools\TinyGallery->Init(Array, Array, 'http://localhos...', Object(game\DuckFly), Object(game\g2048), Object(game\Hextris), Object(game\PairedCards))
+#2 C:\IttveMe\www\index.php(97): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\Dispatch_HEAD.php on line 108
+[06-Apr-2023 05:58:57 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'ttools\TModyCue' not found in C:\IttveMe\www\ttools\TTinyGallery\Dispatch_HEAD.php:108
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(361): ttools\mmlIzmenitNazvanieIkonku_HEAD()
+#1 C:\IttveMe\www\UpSiteCSS.php(94): ttools\TinyGallery->Init(Array, Array, 'http://localhos...', Object(game\DuckFly), Object(game\g2048), Object(game\Hextris), Object(game\PairedCards))
+#2 C:\IttveMe\www\index.php(97): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\Dispatch_HEAD.php on line 108
+[06-Apr-2023 06:01:02 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to a member function Body() on null in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php:472
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(530): ttools\TinyGallery->_ViewLifeSpace('<div id="TopLin...', NULL)
+#1 C:\IttveMe\www\UpSite.php(48): ttools\TinyGallery->ViewLifeSpace()
+#2 C:\IttveMe\www\index.php(104): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 472
