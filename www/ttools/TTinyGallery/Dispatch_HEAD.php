@@ -109,7 +109,6 @@ function mmlIzmenitNazvanieIkonku_HEAD()
    $ModyCue->Head();
    return $ModyCue;
 }
-
 // ****************************************************************************
 // *                      "Добавить новый раздел материалов"                  *
 // ****************************************************************************
@@ -119,6 +118,16 @@ function mmlDobavitNovyjRazdel_HEAD($game=NULL)
    $Newcue=new NewCue($game);
    $Newcue->Head();
    return $Newcue;
+}
+// ****************************************************************************
+// *                          "Удалить раздел материалов"                     *
+// ****************************************************************************
+function mmlUdalitRazdelMaterialov_HEAD($game=NULL)
+{
+   require_once "ttools/TDelCue/DelCueClass.php";
+   $DelCue=new DelCue($game);
+   $DelCue->Head();
+   return $DelCue;
 }
 
 // ****************************************************** Dispatch_HEAD.php ***

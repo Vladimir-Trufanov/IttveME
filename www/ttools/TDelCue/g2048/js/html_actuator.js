@@ -1,10 +1,12 @@
-function HTMLActuator() {
+function HTMLActuator(MaxTile) 
+{
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
 
   this.score = 0;
+  this.limit = MaxTile; // Добавлено tve 2023.04.10
 }
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
@@ -57,7 +59,9 @@ HTMLActuator.prototype.addTile = function (tile) {
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
-  if (tile.value > 2048) classes.push("tile-super");
+  // Изменено tve 2023.04.10
+  //if (tile.value > 2048) classes.push("tile-super");
+  if (tile.value > self.limit) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
@@ -126,7 +130,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? "Победа!" : "Игра закончена!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;

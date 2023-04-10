@@ -116,11 +116,11 @@ h1.title
 }
 .score-container:after 
 {
-  content: "Score"; 
+  content: "Счет"; 
 }
 .best-container:after 
 {
-  content: "Best"; 
+  content: "Рекорд"; 
 }
 p 
 {

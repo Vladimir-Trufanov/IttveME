@@ -28,8 +28,8 @@ class g2048
    {
       if ($this->Place=='IttveME')
       {
-         echo '<link rel="stylesheet" type="text/css" href="ttools/TDelCueClass/g2048/style/main.css">';
-         //echo '<link rel="apple-touch-icon" href="ttools/TDelCueClass/g2048/meta/apple-touch-icon.png">';
+         echo '<link rel="stylesheet" type="text/css" href="ttools/TDelCue/g2048/style/main.css">';
+         //echo '<link rel="apple-touch-icon" href="ttools/TDelCue/g2048/meta/apple-touch-icon.png">';
          /*
          <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
          <link rel="apple-touch-startup-image" 
@@ -71,8 +71,8 @@ class g2048
       ';
       echo '
          <div class="above-game">
-            <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-            <a class="restart-button">New Game</a>
+            <p class="game-intro">Склейте числа, доберитесь до плитки <strong>2048!</strong></p>
+            <a class="restart-button">Новая игра</a>
          </div>
       ';
       echo '
@@ -80,8 +80,8 @@ class g2048
             <div class="game-message">
                <p></p>
                <div class="lower">
-	              <a class="keep-playing-button">Keep going</a>
-                  <a class="retry-button">Try again</a>
+	              <a class="keep-playing-button">Продолжить игру</a>
+                  <a class="retry-button">Попробовать еще раз</a>
                </div>
             </div>
 
@@ -119,38 +119,33 @@ class g2048
       ';
       echo '
          <p class="game-explanation">
-            <strong class="important">How to play:</strong> 
-            Use your <strong>arrow keys</strong> to move the tiles. 
-            When two tiles with the same number touch, they <strong>merge into one!</strong>
+            <strong class="important">Как играть:</strong> 
+            Используйте <strong>клавиши со стрелками</strong> для перемещения плиток.
+            Когда две плитки с одинаковыми номерами соприкоснутся, они <strong>сольются в одну!</strong>
          </p>
          <hr>
          <p>
-            <strong class="important">Note:</strong> 
-            This site is the official version of 2048. You can play it on your
-            phone via <a href="http://git.io/2048">http://git.io/2048.</a> 
-            All other apps or sites are derivatives or fakes, and should be used with caution.
-         </p>
-         <hr>
-         <p>
-            Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> 
-            Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> 
-            and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+            <strong class="important">Примечание:</strong> 
+            Здесь представлен локализованный вариант игры. 
+            Создатель Габриэле Чирулли (Gabriele Cirulli). 
+            Вы можете перейти к официальной версии игры 2048 на сайте
+            <a href="http://git.io/2048">http://git.io/2048.</a> 
          </p>
       ';
       echo '
          </div>
       ';
       echo '
-         <script src="ttools/TDelCueClass/g2048/js/bind_polyfill.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/classlist_polyfill.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/animframe_polyfill.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/keyboard_input_manager.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/html_actuator.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/grid.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/tile.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/local_storage_manager.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/game_manager.js"></script>
-         <script src="ttools/TDelCueClass/g2048/js/application.js"></script>
+         <script src="ttools/TDelCue/g2048/js/bind_polyfill.js"></script>
+         <script src="ttools/TDelCue/g2048/js/classlist_polyfill.js"></script>
+         <script src="ttools/TDelCue/g2048/js/animframe_polyfill.js"></script>
+         <script src="ttools/TDelCue/g2048/js/keyboard_input_manager.js"></script>
+         <script src="ttools/TDelCue/g2048/js/html_actuator.js"></script>
+         <script src="ttools/TDelCue/g2048/js/grid.js"></script>
+         <script src="ttools/TDelCue/g2048/js/tile.js"></script>
+         <script src="ttools/TDelCue/g2048/js/local_storage_manager.js"></script>
+         <script src="ttools/TDelCue/g2048/js/game_manager.js"></script>
+         <script src="ttools/TDelCue/g2048/js/application.js"></script>
       ';
       echo '
          </div>

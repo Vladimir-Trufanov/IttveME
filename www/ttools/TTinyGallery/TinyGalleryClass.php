@@ -120,7 +120,7 @@ class TinyGallery
    private   $WorkTinyMain;     // объект "Обеспечить работу с материалом в рабочей области"
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $NewArt;           // объект "Назначить новую статью"
-   private   $Delcue;           // объект "Удалить раздел материалов"
+   private   $DelCue;           // объект "Удалить раздел материалов"
    private   $Sayme;            // объект "Отправить сообщение автору"
    private   $Entry;            // объект "Войти или зарегистрироваться"
    private   $Tune;             // объект "Изменить настройки сайта в браузере"
@@ -136,7 +136,7 @@ class TinyGallery
       $this->WorkTinyMain=NULL;
       $this->Newcue=NULL;
       $this->ModyCue=NULL;
-      $this->Delcue=NULL;
+      $this->DelCue=NULL;
       $this->Sayme=NULL;
       $this->Entry=NULL;
       $this->Tune=NULL;
@@ -362,6 +362,9 @@ class TinyGallery
          // 10-HEAD этап ----------------- ?Com=dobavit-novyj-razdel-materialov 
          elseif (\prown\isComRequest(mmlDobavitNovyjRazdel))
             $this->NewCue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+         // 11-HEAD этап ------------------------ ?Com=udalit-razdel-materialov 
+         elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+            $this->DelCue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
          // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
          elseif (\prown\isComRequest(mmlNaznachitStatyu))
             $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
@@ -378,24 +381,6 @@ class TinyGallery
             $this->WorkTinyMain->Head();
          }
       }
-      
-      /*
-      // *************************************************************************
-      // *                     Распределить запросы страниц                      *
-      // *************************************************************************
-      private function Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)
-      {
-      $Result=true;
-      elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
-         $this->Delcue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
-      else $Result=false;
-      return $Result;
-      }
-
-      if ($this->Dispatch_HEAD($NewCueGame,$DelCueGame,$SaymeGame)) {}
-      else if (\prown\isComRequest(mmlVybratStatyuRedakti))
-         $this->IniEditSpace_mmlVybratStatyuRedakti();
-      */
    }
    // *************************************************************************
    // *                 Развернуть область галереи изображений                *
@@ -525,6 +510,14 @@ class TinyGallery
          //$Title=MakeTitle('Добавить новый раздел материалов! '.'&#128152;&#129315;',ttMessage);
          $Title=MakeTitle('Страничка будет следующей зимой, пока постреляйте уток!',ttMessage);
          $this->_ViewLifeSpace($Title,$this->NewCue);
+      }
+      // 11-BODY этап --------------------------- ?Com=udalit-razdel-materialov 
+      elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+      {
+         //$Title=MakeTitle('Удалить раздел материалов! '.'&#128152;&#129315;',ttMessage);
+         $Title=MakeTitle('Страничка будет следующей зимой, а здесь соберите '.
+            'сумму 2048.<br> У меня пока получилось 756!',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->DelCue);
       }
       // 13-BODY этап ----------------------------------- ?Com=naznachit-statyu 
       elseif (\prown\isComRequest(mmlNaznachitStatyu))

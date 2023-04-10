@@ -457,38 +457,38 @@ IttveME
 					www\ttools\TDelArt\DelArtClass.php
 					www\ttools\TDelArt\deleteArt.php
 					www\ttools\TDelArt\testForDelArt.php
-				-TDelCueClass
-					-g2048
-						-js
-							www\ttools\TDelCueClass\g2048\js\animframe_polyfill.js
-							www\ttools\TDelCueClass\g2048\js\application.js
-							www\ttools\TDelCueClass\g2048\js\bind_polyfill.js
-							www\ttools\TDelCueClass\g2048\js\classlist_polyfill.js
-							www\ttools\TDelCueClass\g2048\js\game_manager.js
-							www\ttools\TDelCueClass\g2048\js\grid.js
-							www\ttools\TDelCueClass\g2048\js\html_actuator.js
-							www\ttools\TDelCueClass\g2048\js\keyboard_input_manager.js
-							www\ttools\TDelCueClass\g2048\js\local_storage_manager.js
-							www\ttools\TDelCueClass\g2048\js\tile.js
-						-meta
-							www\ttools\TDelCueClass\g2048\meta\apple-touch-icon.png
-							www\ttools\TDelCueClass\g2048\meta\apple-touch-startup-image-640x1096.png
-							www\ttools\TDelCueClass\g2048\meta\apple-touch-startup-image-640x920.png
-						-style
+				+TDelCue
+					+g2048
+						+js
+							www\ttools\TDelCue\g2048\js\animframe_polyfill.js
+							www\ttools\TDelCue\g2048\js\application.js
+							www\ttools\TDelCue\g2048\js\bind_polyfill.js
+							www\ttools\TDelCue\g2048\js\classlist_polyfill.js
+							www\ttools\TDelCue\g2048\js\game_manager.js
+							www\ttools\TDelCue\g2048\js\grid.js
+							www\ttools\TDelCue\g2048\js\html_actuator.js
+							www\ttools\TDelCue\g2048\js\keyboard_input_manager.js
+							www\ttools\TDelCue\g2048\js\local_storage_manager.js
+							www\ttools\TDelCue\g2048\js\tile.js
+						+meta
+							www\ttools\TDelCue\g2048\meta\apple-touch-icon.png
+							www\ttools\TDelCue\g2048\meta\apple-touch-startup-image-640x1096.png
+							www\ttools\TDelCue\g2048\meta\apple-touch-startup-image-640x920.png
+						+style
 							-fonts
-								www\ttools\TDelCueClass\g2048\style\fonts\clear-sans.css
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Bold-webfont.eot
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Bold-webfont.svg
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Bold-webfont.woff
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Light-webfont.eot
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Light-webfont.svg
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Light-webfont.woff
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Regular-webfont.eot
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Regular-webfont.svg
-								www\ttools\TDelCueClass\g2048\style\fonts\ClearSans-Regular-webfont.woff
-							www\ttools\TDelCueClass\g2048\style\main.css
-						www\ttools\TDelCueClass\g2048\game2048Class.php
-					www\ttools\TDelCueClass\DelCueClass.php
+								www\ttools\TDelCue\g2048\style\fonts\clear-sans.css
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Bold-webfont.eot
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Bold-webfont.svg
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Bold-webfont.woff
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Light-webfont.eot
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Light-webfont.svg
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Light-webfont.woff
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Regular-webfont.eot
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Regular-webfont.svg
+								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Regular-webfont.woff
+							www\ttools\TDelCue\g2048\style\main.css
+						www\ttools\TDelCue\g2048\game2048Class.php
+					www\ttools\TDelCue\DelCueClass.php
 				-TEntryClass
 					-PairedCards
 						www\ttools\TEntryClass\PairedCards\bg.jpg
@@ -516,7 +516,7 @@ IttveME
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
-				+TNewCue
+				-TNewCue
 					-img
 						www\ttools\TNewCue\img\aim.png
 						www\ttools\TNewCue\img\bg.png
@@ -566,7 +566,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -577,7 +577,6 @@ IttveME
 					www\ttools\TTinyGallery\Dispatch_BODY.php
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
-					www\ttools\TTinyGallery\Musor.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
 				-TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
@@ -644,20 +643,21 @@ IttveME
 5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 6=www\ttools\TKwinGallery\KwinGalleryClass.php
 7=www\ttools\TTinyGallery\TinyGalleryClass.php
-8=www\ttools\TModyCue\ModyCueClass.php
-9=www\ttools\TNewCue\NewCueClass.php
+8=www\ttools\TNewCue\NewCueClass.php
+9=www\ttools\TDelCue\DelCueClass.php
+10=www\ttools\TTinyGallery\Dispatch_HEAD.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TNewCue\NewCueClass.php
+Selected=www\ttools\TTinyGallery\Dispatch_HEAD.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
 TopLine=59
 Caret=9,90
 [www\UpSiteCSS.php]
-TopLine=153
+TopLine=58
 Caret=8,97
 [www\iniMem.php]
-TopLine=66
-Caret=29,225
+TopLine=200
+Caret=29,228
 [www\index.php]
 TopLine=71
 Caret=9,83
@@ -671,11 +671,14 @@ Caret=51,469
 TopLine=144
 Caret=27,183
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=511
-Caret=56,523
-[www\ttools\TModyCue\ModyCueClass.php]
-TopLine=9
-Caret=1,38
+TopLine=495
+Caret=13,519
 [www\ttools\TNewCue\NewCueClass.php]
 TopLine=1
 Caret=78,6
+[www\ttools\TDelCue\DelCueClass.php]
+TopLine=1
+Caret=78,6
+[www\ttools\TTinyGallery\Dispatch_HEAD.php]
+TopLine=94
+Caret=1,122

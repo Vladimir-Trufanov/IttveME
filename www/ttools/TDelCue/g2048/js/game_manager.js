@@ -1,10 +1,12 @@
-function GameManager(size, InputManager, Actuator, StorageManager) {
+function GameManager(size, InputManager, Actuator, StorageManager, MaxTile) 
+{
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
   this.storageManager = new StorageManager;
-  this.actuator       = new Actuator;
+  this.actuator       = new Actuator(MaxTile);
 
   this.startTiles     = 2;
+  this.limit          = MaxTile;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -153,7 +155,8 @@ GameManager.prototype.move = function (direction) {
         var next      = self.grid.cellContent(positions.next);
 
         // Only one merger per row traversal?
-        if (next && next.value === tile.value && !next.mergedFrom) {
+        if (next && next.value === tile.value && !next.mergedFrom) 
+        {
           var merged = new Tile(positions.next, tile.value * 2);
           merged.mergedFrom = [tile, next];
 
@@ -166,9 +169,12 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 2048 tile
-          if (merged.value === 2048) self.won = true;
-        } else {
+          // The mighty 2048 tile (изменено tve 2023.04.10)
+          //if (merged.value === 2048) self.won = true;
+          if (merged.value === self.limit) self.won = true;
+        } 
+        else 
+        {
           self.moveTile(tile, positions.farthest);
         }
 
