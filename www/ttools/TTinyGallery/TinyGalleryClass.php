@@ -118,6 +118,7 @@ class TinyGallery
    protected $DelayedMessage;   // отложенное сообщение
    private   $WhipperSnapper;   // игра при выводе ошибки
    private   $WorkTinyMain;     // объект "Обеспечить работу с материалом в рабочей области"
+   private   $ZhizniPuti;       // объект "Подготовить и развернуть меню "Жизнь и путешествия"
    private   $Newcue;           // объект "Добавить новый раздел материалов"
    private   $NewArt;           // объект "Назначить новую статью"
    private   $DelCue;           // объект "Удалить раздел материалов"
@@ -143,6 +144,7 @@ class TinyGallery
       $this->NewArt=NULL;
       $this->ModyArt=NULL;
       $this->DelArt=NULL;
+      $this->ZhizniPuti=NULL;
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
@@ -241,9 +243,7 @@ class TinyGallery
             {
                $this->Arti->setCurrTranslit($Translit);
                // Загружаем страницу редактирования нового материала
-               //Header("Location: http://".$_SERVER['HTTP_HOST'].$this->urlHome.'/?artim='.$Translit,true);
                Header("Location: ".$this->urlHome.'/?artim='.$Translit,true);
-               http://www.ittve.mehttps//www.ittve.me/?artim=novaya
             }
          }
       }
@@ -343,7 +343,7 @@ class TinyGallery
 
          // 3-HEAD этап ---------------------------- ?Com=zhizn-i-puteshestviya
          if (\prown\isComRequest(mmlZhiznIputeshestviya))
-            mmlZhiznIputeshestviya_HEAD();
+            $this->ZhizniPuti=mmlZhiznIputeshestviya_HEAD($this->Arti,$this->apdo);
          // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
          elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
             $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
@@ -353,8 +353,10 @@ class TinyGallery
          // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
          elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
             $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome);
-         // 8-HEAD этап ----------------- ?Com=sozdat-material-ili-redaktirovat 
-         elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
+         // 8(12)-HEAD этап ------------- ?Com=sozdat-material-ili-redaktirovat 
+         elseif 
+            ((\prown\isComRequest(mmlSozdatRedaktirovat))||
+            (\prown\isComRequest(mmlVybratStatyuRedakti)))
             $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo);
          // 9-HEAD этап -------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
          elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
@@ -469,8 +471,11 @@ class TinyGallery
          $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
       }
       // 3-BODY этап ------------------------------- ?Com=zhizn-i-puteshestviya
-      else if (\prown\isComRequest(mmlZhiznIputeshestviya))
-         mmlZhiznIputeshestviya_BODY($this->apdo,$this->Arti);
+      elseif (\prown\isComRequest(mmlZhiznIputeshestviya))
+      {
+         $Title=MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->ZhizniPuti);
+      }
       // 5-BODY этап ------------------------ ?Com=otpravit-avtoru-soobshchenie
       elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
       {
@@ -491,8 +496,8 @@ class TinyGallery
          $Title=MakeTitle('Изменить настройки сайта в браузере! '.'&#128152;&#129315;',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Tune);
       }
-      // 8-BODY этап -------------------- ?Com=sozdat-material-ili-redaktirovat 
-      elseif (\prown\isComRequest(mmlSozdatRedaktirovat))
+      // 8(12)-BODY этап ---------------- ?Com=sozdat-material-ili-redaktirovat 
+      elseif ((\prown\isComRequest(mmlSozdatRedaktirovat))||(\prown\isComRequest(mmlVybratStatyuRedakti)))
       {
          $Title=MakeTitle('Выберите статью для редактирования?',ttMessage);
          $this->_ViewLifeSpace($Title,$this->ModyArt);

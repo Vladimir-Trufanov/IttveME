@@ -341,7 +341,7 @@ class MenuLeader
          $("#btnBody").css(cssValues);
          cssValues = {
             "text-align":"center",
-            "background":"#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left",
+            "background":"#e0e3ec url(../Images/bgnoise_lg.jpg) repeat top left",
          }
          $("#btnBody").css(cssValues);
 

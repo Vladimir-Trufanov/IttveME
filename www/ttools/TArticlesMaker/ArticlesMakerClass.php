@@ -148,8 +148,6 @@ class ArticlesMaker
       // Проверяем, нужно ли заменить файл стилей в каталоге редактирования и,
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
-      CompareCopyRoot('bgnoise_lg.jpg',TArticlesMakerDir,$this->imgdir);
-      CompareCopyRoot('icons.png',TArticlesMakerDir,$this->imgdir);
       CompareCopyRoot('TestBase.php',TArticlesMakerDir);
    }
    // *************************************************************************
@@ -346,10 +344,6 @@ class ArticlesMaker
    public function MakeMenu()
    {
       _MakeMenu($this->basename,$this->username,$this->password);
-   } 
-   public function MakeMyLifeMenu($pdo)
-   {
-      _MakeMyLifeMenu($pdo);
    } 
    // *************************************************************************
    // *    Создать резервную копию базы данных, построить новую базу данных   *

@@ -12,32 +12,12 @@
 // ****************************************************************************
 // *                             "Жизнь и путешествия"                        *
 // ****************************************************************************
-function mmlZhiznIputeshestviya_HEAD()
+function mmlZhiznIputeshestviya_HEAD($Arti,$apdo)
 {
-    // Отключаем разворачивание аккордеона
-    // как в случае, когда создаем заголовок новой статьи. 
-    echo '
-    <style>
-      .accordion li .sub-menu 
-      {
-         height:100%;
-      }
-      .accordion,
-      .accordion ul,
-      .accordion li,
-      .accordion a,
-      .accordion span,
-      .sub-menu li a 
-      {
-         background:#e0e3ec url(../Images/Menu/bgnoise_lg.jpg) repeat top left;
-      }
-      .sub-menu li:hover a
-      {
-         color:#ab4a16;  
-         background:#efefef;
-      }
-    </style>
-    ';
+   require_once "ttools/TZhizniPuti/ZhizniPutiClass.php";
+   $ZhizniPuti=new ZhizniPuti($Arti,$apdo);
+   $ZhizniPuti->Head();
+   return $ZhizniPuti;
 }
 // ****************************************************************************
 // *                         "Отправить сообщение автору"                     *

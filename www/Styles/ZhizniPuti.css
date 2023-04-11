@@ -1,0 +1,173 @@
+/** HTML5/CSS3, EDGE/CHROME                              *** ZhizniPuti.css ***
+ ******************************************************************************
+ * TZhizniPuti                               Построить стили элементов класса *
+ ******************************************************************************
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  21.11.2022
+ Copyright © 2022 tve                                Посл.изменение: 11.04.2023
+*/
+
+/*
+<div id="WorkTiny">
+<ul class="accordion">
+   
+   <li id="moya-zhizn" class="moya-zhizn"> <a href="#moya-zhizn">2 <i class="UniIcon">&#129392;</i> Моя жизнь<span>2</span></a>
+      <ul class="sub-menu">
+      <li> 
+         <a href="?arti=osobennosti-ustrojstva-vintikov-v-moej-golove"><em>3</em>Особенности устройства винтиков в моей голове<span>2010.12.30</span></a>
+      </li>
+      </ul>
+   </li>
+   
+   <li id="mikroputeshestviya" class="mikroputeshestviya"> <a href="#mikroputeshestviya">4 <i class="UniIcon">&#9978;</i> Микропутешествия<span>11</span></a>
+      <ul class="sub-menu">
+      <li> 
+         <a href="?arti=kindasovo-zemlya-karelskogo-yumora"><em>5</em>Киндасово - земля карельского юмора<span>2010.05.20</span></a>
+      </li>
+      <li> 
+         <a href="?arti=gora-sampo-ozero-svetlyj-les-tropinka-v-nebo"><em>6</em>Гора Сампо. Озеро, светлый лес, тропинка в небо<span>2010.06.23</span></a>
+      </li>
+      </ul>
+   </li>
+   
+   <li id="vsyakoe-raznoe" class="vsyakoe-raznoe"> <a href="#vsyakoe-raznoe">13 <i class="UniIcon">&#9994;</i> Всякое-разное</a>
+   </li>
+   
+   <li id="progulki" class="progulki"> <a href="#progulki">16 <i class="UniIcon">&#128692;</i> Прогулки<span>1</span></a>
+      <ul class="sub-menu">
+      <li> 
+         <a href="?arti=ohota-na-medvedya"><em>17</em>Охота на медведя<span>2011.05.06</span></a>
+      </li>
+      </ul>
+   </li>
+</ul>
+</div>
+*/
+
+.accordion,
+.accordion ul,
+.accordion li,
+.accordion a,
+.accordion span
+{
+   margin:0;
+   padding:0;
+   border:none;
+   outline:none;
+   background:#ffffff;
+}
+.accordion
+{
+   padding-top:1.4rem;
+   padding-bottom:1.4rem;
+}
+.accordion li 
+{
+   list-style:none;
+}
+.accordion,
+.accordion ul,
+.accordion li,
+.accordion a,
+.accordion span,
+.sub-menu li a 
+{
+   background:#e0e3ec url(../Images/bgnoise_lg.jpg) repeat top left;
+}   
+.sub-menu li:hover a,
+.sub-menu li:hover a span
+{
+  color:#ab4a16;  
+  background:#efefef;
+}
+.accordion li > a span
+{
+   display:block;
+   position:absolute;
+   -webkit-border-radius:1.5rem;
+   -moz-border-radius:1.5rem;
+   border-radius:1.5rem;
+   -webkit-box-shadow:inset .1rem .1rem .1rem rgba(0,0,0,.2), .1rem .1rem .1rem rgba(255,255,255,.1);
+   -moz-box-shadow:inset .1rem .1rem .1rem rgba(0,0,0,.2), .1rem .1rem .1rem rgba(255,255,255,.1);
+   box-shadow:inset .1rem .1rem .1rem rgba(0,0,0,.2), .1rem .1rem .1rem rgba(255,255,255,.1);
+}
+.accordion li .sub-menu 
+{
+   overflow:hidden;
+   -webkit-transition: height .2s ease-in-out;
+   -moz-transition: height .2s ease-in-out;
+   -o-transition: height .2s ease-in-out;
+   -ms-transition: height .2s ease-in-out;
+   transition: height .2s ease-in-out;
+}
+/* Устанавливаем цвета и бордюры пунктов меню со статьями */
+.sub-menu li a 
+{
+   color:#797979;
+   text-shadow:1px 1px 0 rgba(255,255,255,.2);
+   background:#e5e5e5;
+   border-bottom:1px solid #c9c9c9;
+   -webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,.1),0 1px 0 0 rgba(0,0,0,.1);
+   -moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,.1),0 1px 0 0 rgba(0,0,0,.1);
+   box-shadow:inset 0 1px 0 0 rgba(255,255,255,.1),0 1px 0 0 rgba(0,0,0,.1);
+}
+.sub-menu li:last-child a 
+{ 
+   border:none;
+}
+/* Определяем цвет дат статей и бордюр их */
+.sub-menu li > a span 
+{
+   color:#797979;
+   border:1px solid #c9c9c9;
+}
+/* Выделяем порядковые номера статей в разделах */
+.sub-menu em 
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-left: 14px;
+   color: #a6a6a6;
+   font: normal 10px/32px Arial, sans-serif;
+}
+/* Настраиваем фоны графическими файлами */
+.accordion li > a span,
+.accordion li > i span 
+{
+   background:#e0e3ec url(../Images/bgnoise_lg.jpg) repeat top left;
+}
+/* Настраиваем размеры шрифтов и полосок меню */
+.accordion li > a 
+{
+   font:bold 1.6rem/2.8rem Arial, sans-serif;
+   padding:0 1rem 0 4rem;
+   height:3.2rem;
+}
+.accordion li > a span
+{
+   font:bold 1.4rem/2.0rem Arial, sans-serif;
+   top:.7rem;
+   right:0;
+   padding:0 1rem;
+   margin-right:1rem;
+}
+/* Настраиваем иконки разделов */
+.UniIcon
+{
+   font-size:3.0rem;  
+}
+
+/* Отрабатываем разворачивание аккордеона при такой настройке */
+/*
+.accordion li .sub-menu 
+{
+   height:0;
+}
+.accordion li:target .sub-menu 
+{
+   height: 100%;
+}
+*/
+
+/* ****************************************************** ZhizniPuti.css *** */	

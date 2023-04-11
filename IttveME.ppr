@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveME
-	+IttveMe
+	-IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -38,7 +38,7 @@ IttveME
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\Î favicon.doc
-		+www
+		-www
 			-favicon260x260
 				www\favicon260x260\android-chrome-192x192.png
 				www\favicon260x260\android-chrome-256x256.png
@@ -92,8 +92,6 @@ IttveME
 					www\font-awesome-4.7.0\scss\font-awesome.scss
 				www\font-awesome-4.7.0\HELP-US-OUT.txt
 			-Images
-				-Buttons
-					www\Images\Buttons\tveMenuD.png
 				-Cursors
 					www\Images\Cursors\Less10.cur
 					www\Images\Cursors\Less-anoop.cur
@@ -103,11 +101,9 @@ IttveME
 					www\Images\Cursors\More-move.cur
 					www\Images\Cursors\Move.cur
 					www\Images\Cursors\Unavailable.cur
-				-Menu
-					www\Images\Menu\arrow_down.png
-					www\Images\Menu\arrow_up.png
-					www\Images\Menu\bgnoise_lg.jpg
-					www\Images\Menu\icons.png
+				-iMenu
+					www\Images\iMenu\arrow_down.png
+					www\Images\iMenu\arrow_up.png
 				www\Images\bgnoise_lg.jpg
 				www\Images\icons.png
 				www\Images\Kwinflat.jpg
@@ -205,6 +201,7 @@ IttveME
 				www\Styles\Lobster.ttf
 				www\Styles\UniArt.css
 				www\Styles\WorkTiny.css
+				www\Styles\ZhizniPuti.css
 			-TinyMCE5-8-1
 				-icons
 					-default
@@ -442,7 +439,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -457,9 +454,9 @@ IttveME
 					www\ttools\TDelArt\DelArtClass.php
 					www\ttools\TDelArt\deleteArt.php
 					www\ttools\TDelArt\testForDelArt.php
-				+TDelCue
-					+g2048
-						+js
+				-TDelCue
+					-g2048
+						-js
 							www\ttools\TDelCue\g2048\js\animframe_polyfill.js
 							www\ttools\TDelCue\g2048\js\application.js
 							www\ttools\TDelCue\g2048\js\bind_polyfill.js
@@ -470,11 +467,11 @@ IttveME
 							www\ttools\TDelCue\g2048\js\keyboard_input_manager.js
 							www\ttools\TDelCue\g2048\js\local_storage_manager.js
 							www\ttools\TDelCue\g2048\js\tile.js
-						+meta
+						-meta
 							www\ttools\TDelCue\g2048\meta\apple-touch-icon.png
 							www\ttools\TDelCue\g2048\meta\apple-touch-startup-image-640x1096.png
 							www\ttools\TDelCue\g2048\meta\apple-touch-startup-image-640x920.png
-						+style
+						-style
 							-fonts
 								www\ttools\TDelCue\g2048\style\fonts\clear-sans.css
 								www\ttools\TDelCue\g2048\style\fonts\ClearSans-Bold-webfont.eot
@@ -586,6 +583,8 @@ IttveME
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+				-TZhizniPuti
+					www\ttools\TZhizniPuti\ZhizniPutiClass.php
 			www\.htaccess
 			www\.user.ini
 			www\Common.php
@@ -643,21 +642,21 @@ IttveME
 5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 6=www\ttools\TKwinGallery\KwinGalleryClass.php
 7=www\ttools\TTinyGallery\TinyGalleryClass.php
-8=www\ttools\TNewCue\NewCueClass.php
-9=www\ttools\TDelCue\DelCueClass.php
-10=www\ttools\TTinyGallery\Dispatch_HEAD.php
+8=www\ttools\TZhizniPuti\ZhizniPutiClass.php
+9=www\ttools\TArticlesMaker\CommonIttveMe.php
+10=www\Styles\ZhizniPuti.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\Dispatch_HEAD.php
+Selected=www\ttools\TZhizniPuti\ZhizniPutiClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
 TopLine=59
 Caret=9,90
 [www\UpSiteCSS.php]
-TopLine=58
+TopLine=32
 Caret=8,97
 [www\iniMem.php]
-TopLine=200
-Caret=29,228
+TopLine=86
+Caret=64,89
 [www\index.php]
 TopLine=71
 Caret=9,83
@@ -665,20 +664,20 @@ Caret=9,83
 TopLine=212
 Caret=48,250
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=461
-Caret=51,469
+TopLine=141
+Caret=1,151
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=144
 Caret=27,183
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=495
-Caret=13,519
-[www\ttools\TNewCue\NewCueClass.php]
-TopLine=1
-Caret=78,6
-[www\ttools\TDelCue\DelCueClass.php]
-TopLine=1
-Caret=78,6
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=94
-Caret=1,122
+TopLine=457
+Caret=64,483
+[www\ttools\TZhizniPuti\ZhizniPutiClass.php]
+TopLine=28
+Caret=24,36
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=438
+Caret=1,439
+[www\Styles\ZhizniPuti.css]
+TopLine=133
+Caret=1,172
