@@ -50,7 +50,7 @@ class WorkTinyMain
          {
             $SaveAction=$_SERVER["SCRIPT_NAME"];
             echo '
-               <form id="frmTinyText" method="post" action="'.$SaveAction.'">
+               <form id="frmTinyText" method="get" action="'.$SaveAction.'">
                <textarea id="mytextarea" name="Article">
             '; 
             echo $contenti;

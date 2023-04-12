@@ -230,14 +230,14 @@ class TinyGallery
          (\prown\getComRequest('nsnDate')<>NULL))
          {
             // Делаем новую запись в базе данных
-            $apdo=$this->Arti->BaseConnect();
+            //$apdo=$this->Arti->BaseConnect();
             $NameArt=\prown\getComRequest('nsnName');
             $DateArt=\prown\getComRequest('nsnDate');
             $pid=\prown\getComRequest('nsnCue');
             $Translit=\prown\getTranslit($NameArt);
             $contents='Новый материал';
             $this->DelayedMessage=
-               $this->Arti->InsertByTranslit($apdo,$Translit,$pid,$NameArt,$DateArt,$contents);
+               $this->Arti->InsertByTranslit($this->apdo,$Translit,$pid,$NameArt,$DateArt,$contents);
             // Готовим кукис текущего материала и загружаем страницу для редактирования
             if ($this->DelayedMessage==imok)
             {
@@ -250,6 +250,20 @@ class TinyGallery
       // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
       if ($this->DelayedMessage==imok)
       {
+      
+      
+         // Если был выбран режим сохранения отредактированного материала, 
+         // то сохраняем его    
+         $contentNews=\prown\getComRequest('Article');
+         if ($contentNews<>NULL)
+         {
+            $this->Arti->UpdateByTranslit($this->apdo,$this->Arti->getArti,$contentNews);
+         }
+
+      
+      
+      
+      
          // Вытаскиваем материал для редактирования
          $this->DelayedMessage=$this->Arti->SelUidPid
             ($this->apdo,$Translit,$pidEdit,$uidEdit,$NameGru,$NameArt,$DateArt,$contentsIn);
@@ -294,6 +308,7 @@ class TinyGallery
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       // Подключаем кнопки управляющего меню
       $this->menu=new MenuLeader(ittveme,$this->urlHome);
+      $this->menu->setBtnColor(cBrown);
       $this->menu->Init();
       
       // 1-HEAD этап - 'Если есть отложенное сообщение, то инициируем игру 
@@ -416,10 +431,6 @@ class TinyGallery
                </div>
             ';
          }
-         /*
-         else if (\prown\isComRequest(mmlVybratStatyuRedakti))
-            $this->KwinGallery_mmlVybratStatyuRedakti();
-         */
          else $this->Galli->BaseGallery();
       }
    }
@@ -442,8 +453,14 @@ class TinyGallery
       echo '</div>';
       // Левая часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
-         echo $UserAgent.'<br>';
-         //$this->menu->MakeAnyDiffButton();
+         if ($this->Arti->GalleryMode==mwgEditing)
+         {
+            echo '
+               <p><input type="submit" value="Сохранить новый материал" form="frmTinyText"></p>
+            ';
+            //$this->menu->MakeAnyDiffButton('Сохранить новый материал');
+         }
+         else echo $UserAgent.'<br>';
       echo '</div>';
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';

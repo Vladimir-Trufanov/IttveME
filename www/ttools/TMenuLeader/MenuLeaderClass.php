@@ -55,6 +55,11 @@
 // Возможные типы меню
 define ("ittveme", '-i');
 define ("kwintiny",'-k');
+// Возможные цвета элементов кнопки
+define ("cDarkOrange",'255,140,0');
+define ("cMaroon",'128,0,0');
+define ("cIndianRed",'205,92,92');
+define ("cBrown",'165,42,42');
 
 class MenuLeader
 {
@@ -62,6 +67,7 @@ class MenuLeader
    protected $typemenu;  // тип меню (для ittve.me или kwintiny)
    protected $urlHome;   // начальная страница сайта 
    protected $classdir;  // путь к каталогу файлов класса
+   protected $btnColor;  // цвет элементов кнопки
    // ------------------------------------------ ПРЕФИКСЫ ПАРАМЕТРОВ В МЕНЮ ---
    protected $cPreMe;    // общие для сайта 'ittve.me' 
    protected $ComTiny;   // общие для фрэйма 'kwintiny' 
@@ -72,6 +78,7 @@ class MenuLeader
       $this->typemenu=$typemenu; 
       $this->urlHome=$urlHome; 
       $this->classdir=pathPhpTools.'/TMenuLeader'; 
+      $this->btnColor=cDarkOrange; 
       // Формируем префиксы вызова страниц для сайта 'ittve.me' и localhost
       // if ($this->is_ittveme()) $this->cPreMe='';  else 
       $this->cPreMe='?Com=';
@@ -85,6 +92,10 @@ class MenuLeader
    public function __destruct() 
    {
       echo '<!-- Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK) -->';
+   }
+   public function setBtnColor($btnColor) 
+   {
+      $this->btnColor=$btnColor; 
    }
    // *************************************************************************
    // *                    Настроить стили элементов объекта                  *
@@ -101,14 +112,14 @@ class MenuLeader
             top:-1.52px;
             left:2%;
             width:96%;
-            height:2px;
+            height:3px;
             background:linear-gradient(
                to right,
-               rgba(255,140,0,0) 0%,
-               rgba(255,140,0,0.75) 15%,
-               rgba(255,140,0,0.9) 50%,
-               rgba(255,140,0,0.75) 85%,
-               rgba(255,140,0,0) 100%
+               rgba('.$this->btnColor.',0) 0%,
+               rgba('.$this->btnColor.',0.75) 15%,
+               rgba('.$this->btnColor.',0.9) 50%,
+               rgba('.$this->btnColor.',0.75) 85%,
+               rgba('.$this->btnColor.',0) 100%
             );
             z-index: 1;
          }
@@ -122,11 +133,11 @@ class MenuLeader
             height:2px;
             background:linear-gradient(
                to right,
-               rgba(255,140,0,0) 0%,
-               rgba(255,140,0,0.5) 5%,
-               rgba(255,140,0,0.9) 50%,
-               rgba(255,140,0,0.5) 95%,
-               rgba(255,140,0,0) 100%
+               rgba('.$this->btnColor.',0) 0%,
+               rgba('.$this->btnColor.',0.5) 5%,
+               rgba('.$this->btnColor.',0.9) 50%,
+               rgba('.$this->btnColor.',0.5) 95%,
+               rgba('.$this->btnColor.',0) 100%
             );
             z-index: 1;
          }
@@ -143,7 +154,8 @@ class MenuLeader
             height:30px;
             line-height:24px;
             border-radius:6px;
-            color:#696969;
+            /*color:#696969;*/
+            color:#CD5C5C;
             background:radial-gradient(
                ellipse at center,
                rgba(255,255,255,1) 0%,
@@ -195,7 +207,7 @@ class MenuLeader
          }
       </style>
       ';
-      // Показываем три звездочки       
+      // Показываем три звездочки  
       echo'  
       <style>
       div.glass3hi:before 
@@ -216,8 +228,9 @@ class MenuLeader
           left:calc(10% + 16px);
           width:4px;
           height:2px;
-          background-color:#FF8C00;
-          box-shadow:0 0 8px 3px rgba(255, 140, 0, .99);
+          /*background-color:#FF8C00;*/
+          background-color:rgba('.$this->btnColor.',.99);
+          box-shadow:0 0 8px 3px rgba('.$this->btnColor.',.99);
           z-index:1;
       }
       #hi2 {
@@ -302,7 +315,7 @@ class MenuLeader
    // *************************************************************************
    // *   Создать "всякую-разную" кнопку в подвальной области "LeftFooter"    *
    // *************************************************************************
-   public function MakeAnyDiffButton()
+   public function MakeAnyDiffButton($glass3Html='Всякое-разное')
    {
       // Готовим обработку клика на кнопке "всякое-разное" 
       echo '
@@ -346,7 +359,7 @@ class MenuLeader
          $("#btnBody").css(cssValues);
 
          // Строим "всякую-разную" кнопку
-         let glass3Html="Всякое-разное";
+         let glass3Html="'.$glass3Html.'";
          let glass3=document.createElement("div");
          glass3.setAttribute("id","glass3");
          btnBody.appendChild(glass3);
@@ -354,7 +367,7 @@ class MenuLeader
          // Настраиваем стили рабочей области для кнопки
          cssValues = {
             "position":"relative",
-            "color":"rgba(255,140,0,1.6)",
+            "color":"rgba('.$this->btnColor.',1.6)",
             "font-size":"16px",
             "text-decoration":"none",
             "margin-top":".8rem",
@@ -373,7 +386,7 @@ class MenuLeader
          }
          $("#glass3").css(cssValues);
          cssValues = {
-            "border-color":"rgba(255,140,0,1.6)",
+            "border-color":"rgba('.$this->btnColor.',1.6)",
             "border-image":"none",
             "border-style":"double",
             "border-width":"1px",
