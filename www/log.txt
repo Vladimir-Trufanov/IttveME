@@ -47,3 +47,10 @@ Stack trace:
 #3 {main}
   thrown in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 462
 [11-Apr-2023 18:05:19 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'elseif' (T_ELSEIF) in C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php on line 478
+[13-Apr-2023 14:20:00 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ttools\alert() in C:\IttveMe\www\ttools\TWorkTinyMain\WorkTinyMainClass.php:38
+Stack trace:
+#0 C:\IttveMe\www\ttools\TTinyGallery\TinyGalleryClass.php(398): ttools\WorkTinyMain->Head()
+#1 C:\IttveMe\www\UpSiteCSS.php(94): ttools\TinyGallery->Init(Array, Array, 'http://localhos...', Object(game\DuckFly), Object(game\g2048), Object(game\Hextris), Object(game\PairedCards))
+#2 C:\IttveMe\www\index.php(97): require_once('C:\\IttveMe\\www\\...')
+#3 {main}
+  thrown in C:\IttveMe\www\ttools\TWorkTinyMain\WorkTinyMainClass.php on line 38

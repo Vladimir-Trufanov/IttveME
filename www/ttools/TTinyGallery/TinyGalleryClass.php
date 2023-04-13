@@ -230,7 +230,6 @@ class TinyGallery
          (\prown\getComRequest('nsnDate')<>NULL))
          {
             // Делаем новую запись в базе данных
-            //$apdo=$this->Arti->BaseConnect();
             $NameArt=\prown\getComRequest('nsnName');
             $DateArt=\prown\getComRequest('nsnDate');
             $pid=\prown\getComRequest('nsnCue');
@@ -250,20 +249,15 @@ class TinyGallery
       // Последний-ZERO этап - обеспечиваем работу с материалом в рабочей области
       if ($this->DelayedMessage==imok)
       {
-      
-      
          // Если был выбран режим сохранения отредактированного материала, 
          // то сохраняем его    
          $contentNews=\prown\getComRequest('Article');
          if ($contentNews<>NULL)
          {
             $this->Arti->UpdateByTranslit($this->apdo,$this->Arti->getArti,$contentNews);
+            // После обновления статьи возвращаемся в режим редактирования
+            $this->Arti->GalleryMode=mwgEditing;
          }
-
-      
-      
-      
-      
          // Вытаскиваем материал для редактирования
          $this->DelayedMessage=$this->Arti->SelUidPid
             ($this->apdo,$Translit,$pidEdit,$uidEdit,$NameGru,$NameArt,$DateArt,$contentsIn);
@@ -283,15 +277,6 @@ class TinyGallery
            $this->DelayedMessage=$this->Galli->getDelayedMessage();
          }
       }
-      /*
-      // Если был выбран режим сохранения отредактированного материала, 
-      // то сохраняем его    
-      $contentNews=\prown\getComRequest('Article');
-      if ($contentNews<>NULL)
-      {
-         $this->Arti->UpdateByTranslit($this->apdo,$this->Arti->getArti,$contentNews);
-      }
-      */
    }
    
    // --------------------------------------------------------------------------------------- HEAD and LAST ---
@@ -456,7 +441,7 @@ class TinyGallery
          if ($this->Arti->GalleryMode==mwgEditing)
          {
             echo '
-               <p><input type="submit" value="Сохранить новый материал" form="frmTinyText"></p>
+               <p><input id="inpAll" type="submit" value="Сохранить новый материал" form="frmTinyText"></p>
             ';
             //$this->menu->MakeAnyDiffButton('Сохранить новый материал');
          }
