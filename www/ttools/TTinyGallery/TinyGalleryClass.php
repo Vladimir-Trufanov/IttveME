@@ -293,7 +293,6 @@ class TinyGallery
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       // Подключаем кнопки управляющего меню
       $this->menu=new MenuLeader(ittveme,$this->urlHome);
-      $this->menu->setBtnColor(cBrown);
       $this->menu->Init();
       
       // 1-HEAD этап - 'Если есть отложенное сообщение, то инициируем игру 
@@ -443,7 +442,6 @@ class TinyGallery
             echo '
                <p><input id="inpAll" type="submit" value="Сохранить новый материал" form="frmTinyText"></p>
             ';
-            //$this->menu->MakeAnyDiffButton('Сохранить новый материал');
          }
          else echo $UserAgent.'<br>';
       echo '</div>';
@@ -548,86 +546,8 @@ class TinyGallery
       }
    }
 
-
-   /*
-   private function Dispatch_BODY_WorkTiny()
-   {
-      $Result=true;
-      // Удаляем раздел материалов -------------- ?Com=udalit-razdel-materialov
-      else if (\prown\isComRequest(mmlUdalitRazdelMaterialov))
-         mmlUdalitRazdelMaterialov_BODY_WorkTiny($this->Delcue);
-      else $Result=false;
-      return $Result;
-   }
-
-
-      // Выводим рабочую область редактирования и просмотра
-      if ($this->Dispatch_BODY_WorkTiny()) {}
-      else if (\prown\isComRequest(mmlVybratStatyuRedakti))
-         $this->WorkTiny_mmlVybratStatyuRedakti();
-      else if (\prown\isComRequest(mmlUdalitMaterial))
-         $this->WorkTiny_mmlUdalitMaterial();
-      */
-
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
 
-   private function IniEditSpace_mmlVernutsyaNaGlavnuyu()
-   {
-      \prown\ConsoleLog('IniEditSpace_mmlVernutsyaNaGlavnuyu'); 
-   }
-   private function IniEditSpace_mmlUdalitMaterial()
-   {
-      // Отключаем разворачивание аккордеона
-      // в случае, когда создаем заголовок новой статьи. 
-      echo '
-      <style>
-      .accordion li .sub-menu 
-      {
-         height:100%;
-      }
-      </style>
-      ';
-      
-      echo '
-      <script>
-      </script>
-      ';
-      // Включаем рождественскую версию шрифтов и полосок меню
-      //IniFontChristmas();
-   }
-   private function IniEditSpace_mmlVybratStatyuRedakti()
-   {
-      // Включаем рождественскую версию шрифтов и полосок меню
-      //IniFontChristmas();
-   }
-   private function WorkTiny_mmlVernutsyaNaGlavnuyu()
-   {
-      echo 'WorkTiny_mmlVernutsyaNaGlavnuyu<br>';
-   }
-   private function WorkTiny_mmlUdalitMaterial()
-   {
-      // Выводим заголовочное сообщение
-      MakeTitle('Выбрать материал для удаления',ttMessage);
-      // Строим меню
-      $this->Arti->MakeUniMenu($this->apdo,'','UdalitMater');
-   }
-   // *************************************************************************
-   // *                     Выбрать статью для редактирования                 *
-   // *             (дополнительно проверить целостность базы данных)         *
-   // *************************************************************************
-   private function WorkTiny_mmlVybratStatyuRedakti()
-   {
-      // Выводим заголовочное сообщение
-      MakeTitle('Выбрать статью для редактирования',ttMessage);
-   }
-   private function KwinGallery_mmlVernutsyaNaGlavnuyu()
-   {
-      echo 'KwinGallery_mmlVernutsyaNaGlavnuyu<br>';
-   }
-   private function KwinGallery_mmlVybratStatyuRedakti()
-   {
-      echo 'KwinGallery_mmlVybratStatyuRedakti<br>';
-   }
 }
  
 // *************************************************** TinyGalleryClass.php ***

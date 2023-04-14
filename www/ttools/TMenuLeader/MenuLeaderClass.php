@@ -4,7 +4,7 @@
 
 // ****************************************************************************
 // * TPhpTools                Фрэйм управляющего меню для обобщенной работы в *
-// *               "ittve.me" и "kwintiny" работающего через TinyGalleryClass *
+// *                           "ittve.me", работающего через TinyGalleryClass *
 // *                                                                          *
 // * v2.0, 26.02.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
@@ -54,7 +54,6 @@
 
 // Возможные типы меню
 define ("ittveme", '-i');
-define ("kwintiny",'-k');
 // Возможные цвета элементов кнопки
 define ("cDarkOrange",'255,140,0');
 define ("cMaroon",'128,0,0');
@@ -64,13 +63,11 @@ define ("cBrown",'165,42,42');
 class MenuLeader
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $typemenu;  // тип меню (для ittve.me или kwintiny)
+   protected $typemenu;  // тип меню (для ittve.me)
    protected $urlHome;   // начальная страница сайта 
    protected $classdir;  // путь к каталогу файлов класса
-   protected $btnColor;  // цвет элементов кнопки
    // ------------------------------------------ ПРЕФИКСЫ ПАРАМЕТРОВ В МЕНЮ ---
    protected $cPreMe;    // общие для сайта 'ittve.me' 
-   protected $ComTiny;   // общие для фрэйма 'kwintiny' 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($typemenu,$urlHome) 
    {
@@ -78,12 +75,9 @@ class MenuLeader
       $this->typemenu=$typemenu; 
       $this->urlHome=$urlHome; 
       $this->classdir=pathPhpTools.'/TMenuLeader'; 
-      $this->btnColor=cDarkOrange; 
       // Формируем префиксы вызова страниц для сайта 'ittve.me' и localhost
       // if ($this->is_ittveme()) $this->cPreMe='';  else 
       $this->cPreMe='?Com=';
-      //if ($this->is_ittveme()) $this->ComTiny=''; else 
-      $this->ComTiny='?Com=';
       // Проверяем, нужно ли заменить файл стилей в каталоге редактирования и,
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
@@ -91,158 +85,12 @@ class MenuLeader
    }
    public function __destruct() 
    {
-      echo '<!-- Oliver Knoblich (https://codepen.io/oknoblich/pen/hpltK) -->';
-   }
-   public function setBtnColor($btnColor) 
-   {
-      $this->btnColor=$btnColor; 
    }
    // *************************************************************************
    // *                    Настроить стили элементов объекта                  *
    // *************************************************************************
    public function Init()
    {
-      // Зажигаем верхнюю и нижнюю границы кнопки "Всякое-разное"       
-      echo'  
-      <style>
-         #glass3:before 
-         {
-            position:absolute;
-            content: "";
-            top:-1.52px;
-            left:2%;
-            width:96%;
-            height:3px;
-            background:linear-gradient(
-               to right,
-               rgba('.$this->btnColor.',0) 0%,
-               rgba('.$this->btnColor.',0.75) 15%,
-               rgba('.$this->btnColor.',0.9) 50%,
-               rgba('.$this->btnColor.',0.75) 85%,
-               rgba('.$this->btnColor.',0) 100%
-            );
-            z-index: 1;
-         }
-         #glass3:after 
-         {
-            position:absolute;
-            content:"";
-            top:100%;
-            left:2%;
-            width:96%;
-            height:2px;
-            background:linear-gradient(
-               to right,
-               rgba('.$this->btnColor.',0) 0%,
-               rgba('.$this->btnColor.',0.5) 5%,
-               rgba('.$this->btnColor.',0.9) 50%,
-               rgba('.$this->btnColor.',0.5) 95%,
-               rgba('.$this->btnColor.',0) 100%
-            );
-            z-index: 1;
-         }
-      </style>
-      ';
-      // Показываем наезд указателем на кнопку "Всякое-разное"       
-      echo'  
-      <style>
-         #glass3hover
-         {
-            position:relative;
-            top:-25px;
-            width:323px;
-            height:30px;
-            line-height:24px;
-            border-radius:6px;
-            /*color:#696969;*/
-            color:#CD5C5C;
-            background:radial-gradient(
-               ellipse at center,
-               rgba(255,255,255,1) 0%,
-               rgba(255,255,255,0) 100%
-            );
-            opacity:0.0;
-            transition:all 0.3s ease-in-out;
-            z-index:2;
-            box-shadow:0 0 6px 3px rgba(255,255,255,0.5);
-            border:2px groove rgba(255,255,255,0.5);
-         }
-         div:hover#glass3hover 
-         {
-            opacity: 1.0;
-         }
-      </style>
-      ';
-      // Вырисовываем "начальное стеклышко" кнопки       
-      echo'  
-      <style>
-         #glass3ref 
-         {
-            position:relative;
-            top:-52px;
-            width:400px;
-            height:24px;
-            border-radius:6px;
-            background:linear-gradient(
-               172deg,
-               rgba(255,255,255,0.8) 0%,
-               rgba(255,255,255,0.4) 20%,
-               rgba(255,255,255,0.1) 48%,
-               rgba(255,255,255,0.0) 49%,
-               rgba(255,255,255,0.0) 100%
-            );
-            z-index: 1;
-         }
-      </style>
-      ';
-      // Показываем нажатую кнопку       
-      echo'  
-      <style>
-         div:active#glass3hover  
-         {
-            color:rgba(105,105,105 0.99);
-            line-height:26px;
-            text-shadow:0px 0px 2px rgba(255,255,255,0.99),0px 0px 4px rgba(255,255,255,0.75);
-            border-color:rgba(255,255,255,0.4);
-         }
-      </style>
-      ';
-      // Показываем три звездочки  
-      echo'  
-      <style>
-      div.glass3hi:before 
-      {
-         position:absolute;
-         content:"";
-         top:-2px;
-         left:10%;
-         width:16px;
-         height:3px;
-         z-index:1;
-      }
-      div.glass3hi:after 
-      {
-          position:absolute;
-          content:"";
-          top:-2px;
-          left:calc(10% + 16px);
-          width:4px;
-          height:2px;
-          /*background-color:#FF8C00;*/
-          background-color:rgba('.$this->btnColor.',.99);
-          box-shadow:0 0 8px 3px rgba('.$this->btnColor.',.99);
-          z-index:1;
-      }
-      #hi2 {
-         transform: translate(188px, -48px);
-         z-index: 9;
-      }
-      #hi3 {
-         transform: rotate(90deg) translate(44px,-161px);
-         z-index: 9;
-      }
-      </style>
-      ';
    }
    // *************************************************************************
    // *             Отработать меню управления на сайте "ittve.me"            *
@@ -285,8 +133,6 @@ class MenuLeader
          $this->Punkt($this->cPreMe.mmlVybratStatyuRedakti,'&#xf07c;','Выбрать материал','для изменений');
          $this->Punkt($this->cPreMe.mmlNaznachitStatyu,'&#xf0f6;','Назначить','новую статью');
          $this->Punkt($this->cPreMe.mmlUdalitMaterial,'&#xf1f8;','Выбрать и удалить','указанный материал');
-         //$cPost='<input type="submit" value="Сохранить материал" form="frmTinyText">';
-         //$this->PunktPost('&#xf0ed;',$cPost,"Сохранить материал");
       }
       // Выводим пункты меню управления для работы с разделами
       else if 
@@ -311,126 +157,6 @@ class MenuLeader
       }
       // Закрываем меню
       echo '</ul>';
-   }
-   // *************************************************************************
-   // *   Создать "всякую-разную" кнопку в подвальной области "LeftFooter"    *
-   // *************************************************************************
-   public function MakeAnyDiffButton($glass3Html='Всякое-разное')
-   {
-      // Готовим обработку клика на кнопке "всякое-разное" 
-      echo '
-         <script>
-         function onClickAnyDiff()
-         {
-            console.log("Нажата всякая-разная кнопка!");
-         }
-         </script>
-      ';
-      // Позиционируем элементы кнопки
-      echo '
-      <script>
-      let cssValues; // массив CSS-свойств элемента
-      
-      $(document).ready(function()
-      {
-         let LeftFooter=document.getElementById("LeftFooter");
-
-         // Строим рабочую область для кнопки
-         let btnBody=document.createElement("div");
-         btnBody.setAttribute("id","btnBody");
-         LeftFooter.appendChild(btnBody);
-         // Настраиваем стили рабочей области для кнопки
-         cssValues = {
-            "color":"red",
-            "font-family":"\'Nova Flat\', cursive",
-            "font-size":"12pt",
-            "position":"absolute",
-            "top":"0",
-            "height":"100%",
-            "width":"96%",
-            "margin-left":"1%",
-            "overflow":"hidden",
-         }
-         $("#btnBody").css(cssValues);
-         cssValues = {
-            "text-align":"center",
-            "background":"#e0e3ec url(../Images/bgnoise_lg.jpg) repeat top left",
-         }
-         $("#btnBody").css(cssValues);
-
-         // Строим "всякую-разную" кнопку
-         let glass3Html="'.$glass3Html.'";
-         let glass3=document.createElement("div");
-         glass3.setAttribute("id","glass3");
-         btnBody.appendChild(glass3);
-         $("#glass3").html(glass3Html);
-         // Настраиваем стили рабочей области для кнопки
-         cssValues = {
-            "position":"relative",
-            "color":"rgba('.$this->btnColor.',1.6)",
-            "font-size":"16px",
-            "text-decoration":"none",
-            "margin-top":".8rem",
-            "cursor":"pointer",
-            "width":"324px",
-            "height":"29px",
-            "outline":"0",
-         }
-         $("#glass3").css(cssValues);
-         cssValues = {
-            "line-height":"24px",
-            "padding-left":"0",
-            "padding-right":"0",
-            "margin-left":"auto",
-            "margin-right":"auto",
-         }
-         $("#glass3").css(cssValues);
-         cssValues = {
-            "border-color":"rgba('.$this->btnColor.',1.6)",
-            "border-image":"none",
-            "border-style":"double",
-            "border-width":"1px",
-            "border-radius":"8px",
-            "-webkit-border-radius":"8px",
-            "-moz-border-radius":"8px",
-            "-webkit-transition":"all 0.1s ease-in-out",
-            "-moz-transition":"all 0.1s ease-in-out",
-            "-o-transition":"all 0.1s ease-in-out",
-            "transition":"all 0.1s ease-in-out",
-         }
-         $("#glass3").css(cssValues);
-         
-         // Строим образ "всякой-разной" кнопки при наезде на нее
-         // <div id="glass3hover" onclick="functionToExecute()">This текст</div>
-         let glass3hover=document.createElement("div");
-         glass3hover.setAttribute("id","glass3hover");
-         glass3hover.setAttribute("onclick","onClickAnyDiff()");
-         glass3.appendChild(glass3hover);
-         $("#glass3hover").html(glass3Html);
-         
-         // Строим "начальное стеклышко" кнопки
-         // <div id="glass3ref"></div>
-         let glass3ref=document.createElement("div");
-         glass3ref.setAttribute("id","glass3ref");
-         glass3.appendChild(glass3ref);
-         
-         // Строим три звездочки на кнопке
-         // <div class="glass3hi"></div>
-         // <div id="hi2" class="glass3hi"></div>
-         // <div id="hi3" class="glass3hi"></div>
-         let hi1=document.createElement("div");
-         hi1.setAttribute("class","glass3hi");
-         glass3.appendChild(hi1);
-         let hi2=document.createElement("div");
-         hi2.setAttribute("class","glass3hi");
-         glass3.appendChild(hi2);
-         let hi3=document.createElement("div");
-         hi3.setAttribute("class","glass3hi");
-         glass3.appendChild(hi3);
-         hi2.setAttribute("id","hi2");
-         hi3.setAttribute("id","hi3");
-      });
-      </script>';
    }
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
 
@@ -467,22 +193,6 @@ class MenuLeader
          </li>
       ';
    }
-   /*
-   private function PunktPost($cUniCod,$cPost,$fill)
-   {
-      echo '
-         <li class="link">
-         <span class="prev">'.$cUniCod.'</span>
-         <span class="small">'.$cUniCod.'</span>
-         <span class="full">
-         '.$cPost.'
-         </span>
-         </li>
-      ';
-   }
-   */
-   // <span class="k1"><a href="'.$Punkt.'">'.$fString.'</a></span>
-   // <span class="k2"><a href="'.$Punkt.'">'.$sString.'</a></span>
 } 
 
 // **************************************************** MenuLeaderClass.php ***

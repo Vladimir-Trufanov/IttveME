@@ -101,11 +101,7 @@ IttveME
 					www\Images\Cursors\More-move.cur
 					www\Images\Cursors\Move.cur
 					www\Images\Cursors\Unavailable.cur
-				-iMenu
-					www\Images\iMenu\arrow_down.png
-					www\Images\iMenu\arrow_up.png
 				www\Images\bgnoise_lg.jpg
-				www\Images\icons.png
 				www\Images\Kwinflat.jpg
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
@@ -188,7 +184,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -440,15 +436,12 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
-					www\ttools\TArticlesMaker\bgnoise_lg.jpg
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
 					www\ttools\TArticlesMaker\CommonIttveMe.php
 					www\ttools\TArticlesMaker\CommonIttvePw.php
-					www\ttools\TArticlesMaker\CommonOwn.php
-					www\ttools\TArticlesMaker\icons.png
 					www\ttools\TArticlesMaker\TestBase.php
 				-TDelArt
 					www\ttools\TDelArt\DelArtClass.php
@@ -509,7 +502,7 @@ IttveME
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				+TNewArt
+				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -563,7 +556,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -580,7 +573,7 @@ IttveME
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				+TWorkTinyMain
+				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 				-TZhizniPuti
@@ -640,15 +633,14 @@ IttveME
 3=www\index.php
 4=www\Jsx\WorkTiny.js
 5=www\ttools\TKwinGallery\KwinGalleryClass.php
-6=www\ttools\TTinyGallery\TinyGalleryClass.php
-7=www\ttools\TZhizniPuti\ZhizniPutiClass.php
-8=www\ttools\TArticlesMaker\CommonIttveMe.php
-9=www\ttools\TMenuLeader\MenuLeaderClass.php
-10=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-11=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+6=www\ttools\TZhizniPuti\ZhizniPutiClass.php
+7=www\ttools\TArticlesMaker\CommonIttveMe.php
+8=www\ttools\TModyArt\ModyArtClass.php
+9=www\Common.php
+10=www\ttools\TTinyGallery\TinyGalleryClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
 TopLine=59
 Caret=9,90
@@ -667,21 +659,18 @@ Caret=48,250
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=183
 Caret=27,183
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=227
-Caret=75,258
 [www\ttools\TZhizniPuti\ZhizniPutiClass.php]
 TopLine=36
 Caret=24,36
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
 TopLine=438
 Caret=1,439
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=158
-Caret=26,158
-[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=62
-Caret=51,74
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=83
-Caret=1,113
+[www\ttools\TModyArt\ModyArtClass.php]
+TopLine=39
+Caret=1,48
+[www\Common.php]
+TopLine=68
+Caret=1,78
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=403
+Caret=1,551
