@@ -119,18 +119,26 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
 {
    $MakeIs=false;
    // Изменяем режим представления материалов по полученному параметру
-   $i=prown\getComRequest('pPresMode');
-   if (isset($aPresMode[$i]))
+   $pTarget=prown\getComRequest('pPresMode');
+   for ($i=0; $i<count($aPresMode); $i++) 
    {
-      $c_PresMode=prown\MakeCookie('PresMode',$aPresMode[$i],tStr);   
-      $MakeIs=true;
+      if ($aPresMode[$i]==$pTarget)
+      {
+         $c_PresMode=prown\MakeCookie('PresMode',$aPresMode[$i],tStr);   
+         $MakeIs=true;
+         break;
+      }
    }
-   // Изменяем режим представления выбранной картинки
-   $i=prown\getComRequest('pModeImg');
-   if (isset($aModeImg[$i]))
+   // Изменяем режим представления материалов по полученному параметру
+   $pTarget=prown\getComRequest('pModeImg');
+   for ($i=0; $i<count($aModeImg); $i++) 
    {
-      $c_ModeImg=prown\MakeCookie('ModeImg',$aModeImg[$i],tStr);   
-      $MakeIs=true;
+      if ($aModeImg[$i]==$pTarget)
+      {
+         $c_ModeImg=prown\MakeCookie('ModeImg',$aModeImg[$i],tStr);   
+         $MakeIs=true;
+         break;
+      }
    }
 }
 

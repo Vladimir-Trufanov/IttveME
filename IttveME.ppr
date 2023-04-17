@@ -556,7 +556,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -568,7 +568,7 @@ IttveME
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				-TTuningClass
+				+TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -638,21 +638,22 @@ IttveME
 8=www\ttools\TModyArt\ModyArtClass.php
 9=www\Common.php
 10=www\ttools\TTinyGallery\TinyGalleryClass.php
+11=www\ttools\TTuningClass\TuningClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\ttools\TTuningClass\TuningClass.php
 [..\TPhpPrown\TPhpPrown\iniConstMem.php]
-TopLine=59
+TopLine=58
 Caret=9,90
 [www\UpSiteCSS.php]
-TopLine=19
-Caret=60,56
+TopLine=87
+Caret=6,108
 [www\iniMem.php]
-TopLine=89
-Caret=64,89
+TopLine=105
+Caret=68,115
 [www\index.php]
-TopLine=71
-Caret=9,83
+TopLine=114
+Caret=4,142
 [www\Jsx\WorkTiny.js]
 TopLine=250
 Caret=48,250
@@ -669,8 +670,11 @@ Caret=1,439
 TopLine=39
 Caret=1,48
 [www\Common.php]
-TopLine=68
-Caret=1,78
+TopLine=138
+Caret=28,174
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=403
-Caret=1,551
+TopLine=358
+Caret=62,450
+[www\ttools\TTuningClass\TuningClass.php]
+TopLine=67
+Caret=1,1

@@ -85,7 +85,7 @@ echo'
    </style>
 ';
 // Формируем стили
-setPositionDiv($c_PresMode);
+setPositionDiv();
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
 // переключаем переменную-кукис на другой формат изображения: на странице 
 // или полноформатное изображение                  
@@ -102,8 +102,11 @@ echo '</head>';
 // ****************************************************************************
 // *         Определить изменяемые параметры текущего положения div-ов        *
 // ****************************************************************************
-function setPositionDiv($c_PresMode)
+function setPositionDiv()
 {
+   $c_PresMode=prown\MakeCookie('PresMode'); 
+   //\prown\Alert('$c_PresMode='.$c_PresMode);
+     
    //$c_PresMode=rpmOneRight;
    //$c_PresMode=rpmDoubleRight;
    //$c_PresMode=rpmOneLeft;

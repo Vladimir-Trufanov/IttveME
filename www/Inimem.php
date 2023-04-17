@@ -104,17 +104,18 @@ define ('mmlNaznachitStatyu',            'naznachit-statyu');                   
 define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
 
 // ----------- Режимы представления материалов = Content Presentation Modes ---
-define ("rpmDoubleRight", 'двухколоночный с правосторонней галереей');   
-define ("rpmDoubleLeft",  'двухколоночный с левосторонней галереей');    
-define ("rpmOneRight",    'одноколоночный с правосторонней галереей');     
-define ("rpmOneLeft",     'одноколоночный с левосторонней галереей'); 
+define ("rpmDoubleRight", 'Двухколоночный с правосторонней галереей');   
+define ("rpmDoubleLeft",  'Двухколоночный с левосторонней галереей');    
+define ("rpmOneRight",    'Одноколоночный с правосторонней галереей');     
+define ("rpmOneLeft",     'Одноколоночный с левосторонней галереей'); 
 // Определяем массив режимов представления материалов
-$aPresMode=['1'=>rpmDoubleRight,'2'=>rpmDoubleLeft,'3'=>rpmOneRight,'4'=>rpmOneLeft]; 
+// $aPresMode=[rpmOneRight,rpmOneLeft,rpmDoubleRight,rpmDoubleLeft]; 
+$aPresMode=[rpmOneRight,rpmOneLeft]; 
 // -------------------------------- Режимы представления выбранной картинки ---
-define ("vimExiSize",     'в заданном размере в пикселах ("как есть")');   
-define ("vimOnPage",      'на странице по высоте');   
+define ("vimExiSize",     'В заданном размере в пикселах - как есть');   
+define ("vimOnPage",      'На странице по высоте');   
 // Определяем массив режимов представления выбранной картинки    
-$aModeImg=['1'=>vimExiSize,'2'=>vimOnPage]; 
+$aModeImg=[vimExiSize,vimOnPage]; 
 
 /*
 // --------------------------------- Фоны показываемых картинок/изображений ---

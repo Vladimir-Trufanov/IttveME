@@ -443,7 +443,12 @@ class TinyGallery
                <p><input id="inpAll" type="submit" value="Сохранить новый материал" form="frmTinyText"></p>
             ';
          }
-         else echo $UserAgent.'<br>';
+         else 
+         {
+            echo $UserAgent.'<br>';
+            echo '<a href="https://www.pspad.com/ru/" title="PSPad.com - freeware text editor">'.
+            '<strong>PSPad - замечательный текстовый редактор</strong></a>';
+         }
       echo '</div>';
       // Правая часть подвала, меню управления
       echo '<div id="RightFooter">';
