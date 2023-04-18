@@ -60,6 +60,7 @@ define("imgdir",       'Images');                         // каталог сл
 define ("jsxdir",       'Jsx');                           // каталог файлов на javascript
 define ("ChangeSize",  "chs");                            // "Изменить размер базового шрифта"  
 define('nym',          'ittve');                          // префикс имен файлов для фотографий галереи и материалов
+define('moditap',      'Изменить настройки');             // активатор тапок
 
 //define ("dirLife", "ittveLife"); // каталог активной статьи сайта и её изображений
 //define ("dirEdit", "ittveEdit"); // каталог редактируемой статьи и её изображений
@@ -173,6 +174,7 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
+Moditap(moditap,$c_UserName,$c_PersName);
 
 // Инициализируем настройки, далее они могут быть изменены
 $c_PresMode=prown\MakeCookie('PresMode',rpmOneRight,tStr,true);          // режим представления материалов
@@ -235,5 +237,27 @@ $Hex=new game\Hextris($c_PresMode,'IttveME');
 require_once "ttools/TEntryClass/PairedCards/PairedCardsClass.php";
 $Paired=new game\PairedCards($c_PresMode,'IttveME');
 // end --------------------------------------------------------------- ZERO ---
+
+// ****************************************************************************
+// *                               Проверить тапы                             *
+// ****************************************************************************
+function Moditap($moditap,&$c_UserName,&$c_PersName)
+{
+   //\prown\ConsoleLog('$moditap='.$moditap);
+   $tap=\prown\getComRequest('buttons');
+   //\prown\ConsoleLog('$tap='.$tap);
+   if ($tap<>NULL)
+   {
+      $domen=$_SERVER['HTTP_HOST'];
+      //\prown\ConsoleLog('$domen='.$domen);
+      if (($domen=='ittve.me')||($domen=='www.ittve.me')||($domen=='localhost:83'))
+      {
+         if ($tap==$moditap) $UserName='Гость'; else $UserName="tve"; 
+         $c_UserName=prown\MakeCookie('UserName',$UserName,tStr); 
+         $c_PersName=prown\MakeCookie('PersName',$UserName,tStr); 
+         //\prown\ConsoleLog('$c_UserName='.$c_UserName);
+      }
+   }
+}
 
 // ************************************************************* iniMem.php *** 

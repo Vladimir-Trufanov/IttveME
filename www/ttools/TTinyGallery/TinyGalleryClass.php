@@ -284,7 +284,7 @@ class TinyGallery
    // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
-   public function Init($aPresMode,$aModeImg,$urlHome,
+   public function Init($aPresMode,$aModeImg,$urlHome,$moditap,
       $NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL,$EntryGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
@@ -351,7 +351,7 @@ class TinyGallery
             $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($EntryGame);
          // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
          elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
-            $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome);
+            $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$urlHome,$moditap);
          // 8(12)-HEAD этап ------------- ?Com=sozdat-material-ili-redaktirovat 
          elseif 
             ((\prown\isComRequest(mmlSozdatRedaktirovat))||

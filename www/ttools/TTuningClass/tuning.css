@@ -185,3 +185,23 @@
     opacity: 0;
   }
 }
+
+#inpTaping
+{
+  display:none;
+} 
+#tole,#tori,#bori,#bole
+{
+   width:7rem;
+   height:7rem;
+   position:absolute;
+   display:block;
+   background-color:transparent;
+}
+#tole{top:0;left:0;}
+#tori{top:0;right:0;}
+#bori{bottom:0;right:0;}
+#bole{bottom:0;left:0;}
+
+
+

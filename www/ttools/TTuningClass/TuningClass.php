@@ -21,12 +21,13 @@ class Tuning
    protected $ModeImg;          // настроенный режим представления выбранной картинки
    protected $aModeImg;         // массив режимов представления выбранной картинки 
    protected $ModeImgList;      // список режимов представления выбранной картинки с заголовком
+   protected $moditap;          // активатор тапок
    
    // *************************************************************************
    // *         Проинициализировать свойства классов по настройкам сайта,     *
    // *            запустить изменение свойств для обновления настроек        *
    // *************************************************************************
-   public function __construct($aPresMode,$aModeImg,$urlHome) 
+   public function __construct($aPresMode,$aModeImg,$urlHome,$moditap) 
    {
       $this->urlHome=$urlHome;
       // Выбираем из кукисов настройки сайта
@@ -34,6 +35,7 @@ class Tuning
       $this->aPresMode=$aPresMode;
       $this->ModeImg=\prown\MakeCookie('ModeImg'); 
       $this->aModeImg=$aModeImg;
+      $this->moditap=$moditap;
    }
    public function __destruct() 
    {
@@ -73,6 +75,8 @@ class Tuning
    public function Body()
    {
       echo '<div id="tuning">';
+      
+      echo '<div id=tole></div><div id=tori></div><div id=bori></div><div id=bole></div>';
       echo '<form class="frmTuning" method="post" name="TuningFrm" action="'.$this->urlHome.'">';
       ?> 
       <div class="sel sel--black-panther">
@@ -102,7 +106,10 @@ class Tuning
       <br><br><br><br><br><br>
       <hr class="rule">
       <div id="LineCommon">
-      <button id="btnTuning" class="buttons" type="submit">Изменить настройки</button>
+         <?php
+         echo '<input  id="inpTaping" name= "buttons" type="text" value="'.$this->moditap.'">';
+         echo '<button id="btnTuning" class="buttons" type="submit">'.     $this->moditap.'</button>';
+         ?> 
       </div>
       <?php
       echo '</form>';
