@@ -7,7 +7,7 @@
 // *                  из базы данных по указанному идентификатору и транслиту *    
 // *                                                                          *
 // * v1.0, 17.02.2023                               Автор:      Труфанов В.Е. *
-// * Copyright © 2022 tve                           Дата создания: 17.02.2023 *
+// * Copyright © 2022 tve                           Дата создания: 19.04.2023 *
 // ****************************************************************************
 
 // Готовим начальные значения параметров возвращаемого сообщения
@@ -26,7 +26,7 @@ define("jsxdir",'Jsx');           // файлы javascript
 // Подгружаем нужные модули библиотек
 require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpTools."/TNotice/NoticeClass.php";
-require_once pathPhpTools."/TArticlesMaker/ArticlesMakerClass.php";
+require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 // Подключаем объект единообразного вывода сообщений
 $note=new ttools\Notice();
 // Создаем объект для работы с базой данных материалов

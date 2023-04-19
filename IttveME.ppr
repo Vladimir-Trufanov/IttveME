@@ -133,7 +133,7 @@ IttveME
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -184,14 +184,13 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-Italic.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-Regular.ttf
 					www\Styles\Anonymous_Pro\OFL.txt
-				www\Styles\ArticleWork.css
 				www\Styles\Content.css
 				www\Styles\iniStyles.css
 				www\Styles\Lobster.ttf
@@ -436,7 +435,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -489,7 +488,7 @@ IttveME
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				-TKwinGallery
+				+TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -497,7 +496,7 @@ IttveME
 				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				-TModyArt
+				+TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
@@ -556,8 +555,8 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
-					+WhipperSnapper
+				+TTinyGallery
+					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
 						www\ttools\TTinyGallery\WhipperSnapper\license.txt
@@ -573,10 +572,10 @@ IttveME
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				-TWorkTinyMain
+				+TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-				-TZhizniPuti
+				+TZhizniPuti
 					www\ttools\TZhizniPuti\ZhizniPutiClass.php
 			www\.htaccess
 			www\.user.ini
@@ -627,58 +626,38 @@ IttveME
 		README.md
 		Новый2.txt
 [Open project files]
-0=..\TPhpPrown\TPhpPrown\iniConstMem.php
-1=www\UpSiteCSS.php
-2=www\iniMem.php
-3=www\index.php
-4=www\Jsx\WorkTiny.js
-5=www\ttools\TKwinGallery\KwinGalleryClass.php
-6=www\ttools\TZhizniPuti\ZhizniPutiClass.php
-7=www\ttools\TArticlesMaker\CommonIttveMe.php
-8=www\ttools\TModyArt\ModyArtClass.php
-9=www\ttools\TTinyGallery\TinyGalleryClass.php
-10=www\ttools\TTuningClass\TuningClass.php
-11=www\ttools\TTuningClass\tuning.js
-12=..\TPhpPrown\TPhpPrown\CommonPrown.php
+0=www\iniMem.php
+1=www\index.php
+2=www\Jsx\WorkTiny.js
+3=www\ttools\TKwinGallery\KwinGalleryClass.php
+4=www\ttools\TArticlesMaker\CommonIttveMe.php
+5=www\ttools\TTinyGallery\TinyGalleryClass.php
+6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTuningClass\tuning.js
-[..\TPhpPrown\TPhpPrown\iniConstMem.php]
-TopLine=58
-Caret=9,90
-[www\UpSiteCSS.php]
-TopLine=63
-Caret=51,94
+Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 [www\iniMem.php]
 TopLine=158
 Caret=29,177
 [www\index.php]
-TopLine=51
+TopLine=103
 Caret=4,142
 [www\Jsx\WorkTiny.js]
-TopLine=250
+TopLine=209
 Caret=48,250
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=183
-Caret=27,183
-[www\ttools\TZhizniPuti\ZhizniPutiClass.php]
-TopLine=36
-Caret=24,36
+TopLine=313
+Caret=1,338
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
-TopLine=438
-Caret=1,439
-[www\ttools\TModyArt\ModyArtClass.php]
-TopLine=39
-Caret=1,48
+TopLine=637
+Caret=18,646
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=326
-Caret=1,297
-[www\ttools\TTuningClass\TuningClass.php]
-TopLine=82
-Caret=53,110
-[www\ttools\TTuningClass\tuning.js]
-TopLine=105
-Caret=17,136
-[..\TPhpPrown\TPhpPrown\CommonPrown.php]
-TopLine=135
-Caret=14,177
+TopLine=357
+Caret=22,466
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=629
+Caret=82,657
+[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
+TopLine=63
+Caret=12,152

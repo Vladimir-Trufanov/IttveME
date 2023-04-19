@@ -133,10 +133,10 @@
 }
 .pCard, .taCard 
 {
-   font-size:1rem; 
+   font-size:1.4rem; 
    text-align:center;
    margin:0;
-   padding:.1rem; 
+   padding-bottom:.8rem; 
    border:0;
 }
 .taCard

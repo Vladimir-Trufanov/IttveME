@@ -331,12 +331,22 @@ class KwinGallery
       {
          $aFileImg=unserialize(\prown\MakeCookie('cFileImg'));
          
+         // Проверяем, есть ли фотография с текущим транслитом названия
+         \prown\ConsoleLog($aFileImg["TranslitPic"]);
+         $af=$this->Arti->IsImgByTranslit($this->apdo,$aFileImg["TranslitPic"]);
+         \prown\ConsoleLog(serialize($af));
+         //\prown\ConsoleLog($af["uid"]);
+         //\prown\ConsoleLog($af["NamePic"]);
+         /*
+         // Записываем фотографию в базу данных, 
          $this->DelayedMessage=$this->Arti->InsertImgByTranslit
             ($this->apdo,$this->uid,$aFileImg["NamePic"],$aFileImg["TranslitPic"],
             $aFileImg["Ext"],$aFileImg["mime_type"],$aFileImg["DatePic"],$aFileImg["SizePic"],$_POST['AREAM']);
+         
          if ($this->DelayedMessage<>imok) \prown\Alert($this->DelayedMessage.'[All-]'); 
          else $this->DelayedMessage=$this->Arti->UpdatePicByTranslit($this->apdo,$aFileImg["FileSpec"],$aFileImg["TranslitPic"]);
          if ($this->DelayedMessage<>imok) \prown\Alert($this->DelayedMessage.'[Pic]'); 
+         */
       }
       return $Result;
    }

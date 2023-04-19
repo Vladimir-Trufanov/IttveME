@@ -102,6 +102,7 @@ class WorkTinyMain
          </script>
          <?php
       
+         /*
          echo '
             <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
             <script> tinymce.init
@@ -148,6 +149,7 @@ class WorkTinyMain
             });
             </script>
          ';
+         */
       }
       // В обычном режиме просмотра рабочую область Tiny не создаем  
       else {}
