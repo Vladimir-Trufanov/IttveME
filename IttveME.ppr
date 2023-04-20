@@ -636,7 +636,7 @@ IttveME
 7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+Selected=www\ttools\TKwinGallery\KwinGalleryClass.php
 [www\iniMem.php]
 TopLine=158
 Caret=29,177
@@ -644,20 +644,20 @@ Caret=29,177
 TopLine=103
 Caret=4,142
 [www\Jsx\WorkTiny.js]
-TopLine=209
+TopLine=235
 Caret=48,250
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=313
-Caret=1,338
+TopLine=327
+Caret=1,328
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
 TopLine=637
 Caret=18,646
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=357
+TopLine=427
 Caret=22,466
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=629
-Caret=82,657
+TopLine=595
+Caret=71,695
 [www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=63
+TopLine=114
 Caret=12,152

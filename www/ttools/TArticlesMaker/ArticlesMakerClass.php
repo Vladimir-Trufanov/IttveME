@@ -644,76 +644,24 @@ class ArticlesMaker
      try
      {
        $pdo->beginTransaction();
-       //$cSQL='SELECT [uid],[NamePic] FROM [picturepw] WHERE TranslitPic="'.$TranslitPic.'"'; 
-       //$cSQL='DELETE FROM picturepw WHERE uid='.$uid.' AND TranslitPic="'.$TranslitPic.'"';
-       //$cSQL='SELECT [uid],[NamePic] FROM [picturepw] WHERE [TranslitPic]=[karta-progulki]'; 
-       //$cSQL='SELECT uid,NamePic FROM picturepw WHERE TranslitPic=['.$TranslitPic.']';
-       //$cSQL='SELECT uid,NamePic FROM picturepw WHERE TranslitPic="karta-progulki"';
-       //$cSQL='SELECT uid,NamePic FROM picturepw WHERE uid=127';
-       //$cSQL='SELECT uid,NamePic FROM picturepw WHERE SizePic=454705';
-       //$cSQL='SELECT uid,NamePic FROM picturepw WHERE TranslitPic="raz"';
        \prown\ConsoleLog('$TranslitPic='.$TranslitPic);
-       //$cSQL='SELECT uid,NamePic FROM picturepw WHERE TranslitPic="medved-poshel-tuda"';
        $cSQL='SELECT uid,NamePic FROM picturepw WHERE TranslitPic="'.$TranslitPic.'"';
        $stmt = $pdo->query($cSQL);
        $table = $stmt->fetchAll();
-
-
-       /*
-       $stmt=$pdo->prepare($cSQL);
-       if ($stmt->execute([":TranslitPic"=>$TranslitPic]))
-       {
-         $stmt->bindColumn(1, $uid);
-         $stmt->bindColumn(2, $NamePic);
-         $table=$stmt->fetch(\PDO::FETCH_BOUND) ?
-         ["uid"=>$uid,"NamePic"=>$NamePic,] :
-         ["uid"=>-12, "NamePic"=>'NoName',];
-       } 
-       */
+       if (count($table)>0) $table=["uid"=>$table[0]['uid'],"NamePic"=>$table[0]['NamePic']];
+       else $table=["uid"=>"-12","NamePic"=>['Не найдено']];
        $pdo->commit();
      } 
      catch (PDOException $e) 
      {
        $messa=$e->getMessage();
-       $table=["uid"=>'-99',"NamePic"=>$messa];
+       $table=["uid"=>"-99","NamePic"=>$messa];
        if ($pdo->inTransaction()) $pdo->rollback();
      }
      return $table;
    }
-
-
-
-
-    /*
-    try 
-    {
-      $pdo->beginTransaction();
-      $statement = $pdo->prepare("INSERT INTO [picturepw] ".              
-         "([uid], [NamePic], [TranslitPic], [Ext], [mime_type], [DatePic], [SizePic], [CommPic]) VALUES ".
-         "(:uid,  :NamePic,  :TranslitPic,  :Ext,  :mime_type,  :DatePic,  :SizePic,  :CommPic);");
-      $statement->execute([
-         "uid"         => $uid, 
-         "NamePic"     => $NamePic, 
-         "TranslitPic" => $TranslitPic, 
-         "Ext"         => $Ext, 
-         "mime_type"   => $mime_type, 
-         "DatePic"     => $DatePic, 
-         "SizePic"     => $SizePic, 
-         "CommPic"     => $Comment
-      ]);
-      $pdo->commit();
-      $messa=imok;
-    } 
-    catch (PDOException $e) 
-    {
-       $messa=$e->getMessage();
-       if ($pdo->inTransaction()) $pdo->rollback();
-    }
-    return $messa;
-   }
-   */
    // *************************************************************************
-   // *                      Вставить фотографию по транслиту                 *
+   // *               Вставить реквизиты фотографии по транслиту              *
    // *************************************************************************
    public function InsertImgByTranslit($pdo,$uid,$NamePic,$TranslitPic,$Ext,$mime_type,$DatePic,$SizePic,$Comment)
    {
@@ -744,7 +692,7 @@ class ArticlesMaker
     return $messa;
    }
    // *************************************************************************
-   // *                      Заменить фотографию по транслиту                 *
+   // *                Заменить(вставить) фотографию по транслиту             *
    // *************************************************************************
    public function UpdatePicByTranslit($pdo,$pathToFile,$TranslitPic)
    {

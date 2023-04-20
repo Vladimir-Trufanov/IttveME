@@ -138,12 +138,13 @@ class KwinGallery
       $this->EditImg=\prown\MakeCookie('EditImg',imgdir.'/sampo.jpg',tStr,true);     
       // Если файл был загружен во временное хранилище, то перегружаем его
       // на сервер. Поднимаем из кукиса имя загруженного изображения.
-      $this->EditImg=$this->ifKwinUpload($this->SiteRoot,$this->gallidir,$this->nym,$this->pid,$this->uid);
+      $this->EditImg=$this->ifKwinUpload($this->SiteRoot,$this->gallidir,$this->nym,$this->pid,$this->uid,$cComm);
       // Формируем текст начального комментария перед загрузкой файла
       if ($this->EditImg==imgdir.'/sampo.jpg')
         $this->EditComm="На горе Сампо всем хорошо!";
       else
-        $this->EditComm="Текст комментария";
+        //$this->EditComm="Текст комментария";
+        $this->EditComm=$cComm;
       // Выполняем действия на странице до отправления заголовков страницы: 
       // (устанавливаем кукисы и т.д.)                  
       $this->Zero();
@@ -210,7 +211,6 @@ class KwinGallery
                $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic,$Action='Image');
             else
                $this->GViewImage($row['mime_type'],$table['Pic'],$Comment,$Action='Image');
-               //$this->GViewImage($FileName,$Comment,$Action='Image');
             // Если задан режим редактирования, то выводим изображение для загрузки
             // (как правило, второе при выводе карточек)
             if (($this->Arti->GalleryMode==mwgEditing)&&($i==0)) 
@@ -236,7 +236,6 @@ class KwinGallery
    {
       echo '<div class="Card">';
       echo '<button class="bCard" type="submit" name="'.$Action.'">';
-      //echo '<img class="imgCard" src="'.$FileName.'">';
       echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.base64_encode($DataPic).'"/>';
       echo '</button>';
       echo '<p class="pCard">'.$Comment.'</p>';
@@ -313,19 +312,20 @@ class KwinGallery
    // *   Если файл был загружен во временное хранилище, то перегрузить его   *
    // *       на сервер. Поднять из кукиса имя загруженного изображения.      *
    // *************************************************************************
-   protected function ifKwinUpload($SiteRoot,$gallidir,$nym,$pid,$uid)
+   protected function ifKwinUpload($SiteRoot,$gallidir,$nym,$pid,$uid,&$cComm)
    {
+      $cComm='тили-тили';
       $Result=\prown\MakeCookie('EditImg');
       // Инициируем префикс, имя файла, расширение 
-      $pref=$nym.$pid.'-'.$uid.'-'; $NameLoadp='NoDefine'; $Ext='nodef';
+      $pref=$nym.$pid.'-'.$uid.'-'; $LoadedFile='NoDefine'; $Ext='nodef';
       // Ловим момент, когда файл загружен во временное хранилище
       if (IsSet($_POST["MAX_FILE_SIZE"])) 
       {
          // Перебрасываем файл из временного хранилища
-         $this->DelayedMessage=$this->MakeKwinUpload($SiteRoot,$gallidir,$pref,$NameLoadp,$Ext);
+         $this->DelayedMessage=$this->MakeKwinUpload($SiteRoot,$gallidir,$pref,$LoadedFile,$Ext,$cComm);
          // Отмечаем новое имя загруженного файла
          if ($this->DelayedMessage==imok)
-         $Result=\prown\MakeCookie('EditImg',$gallidir.'/'.$pref.$NameLoadp.'.'.$Ext,tStr);
+         $Result=\prown\MakeCookie('EditImg',$gallidir.'/'.$LoadedFile.'.'.$Ext,tStr);
       }
       if (IsSet($_POST["AREAM"])) 
       {
@@ -352,8 +352,12 @@ class KwinGallery
    }
    // *************************************************************************
    // *      Переместить загруженный файл из временного хранилища на сервер   *
+   // * и вернуть через параметры:                                            *
+   // *                   общее имя загруженного файла для временного показа; *
+   // *                   расширение имени файла;                             *
+   // *                   имя файла, как начальный комментарий к фото         *
    // *************************************************************************
-   protected function MakeKwinUpload($SiteRoot,$gallidir,$pref,&$NameLoadp,&$Ext)
+   protected function MakeKwinUpload($SiteRoot,$gallidir,$pref,&$LoadedFile,&$Ext,&$cComm)
    {
       $DelayedMessage=imok;
       $imgDir=$SiteRoot.'/'.$gallidir;
@@ -361,8 +365,10 @@ class KwinGallery
       $mime_type=$_FILES["loadimg"]["type"]; 
       $FileName=substr($FileName,0,strpos($FileName,'.'));
       $NameLoadp=\prown\getTranslit($FileName);
+      $cComm=$FileName;
       // Перебрасываем файл  
-      $upload=new UploadToServer($imgDir,$pref.$NameLoadp);
+      $LoadedFile='LoadedFile';
+      $upload=new UploadToServer($imgDir,$LoadedFile);
       $DelayedMessage=$upload->move();
       $Ext=$upload->getExt();
       // Если переброска была успешной, 
@@ -370,7 +376,7 @@ class KwinGallery
       if ($this->DelayedMessage==imok)
       {
          // Готовим массив свойств загруженного файла
-         $FileSpec=$imgDir.'/'.$pref.$NameLoadp.'.'.$Ext;
+         $FileSpec=$imgDir.'/'.$LoadedFile.'.'.$Ext;
          $aFileImg = array(
             "NamePic"     => $FileName,
             "TranslitPic" => $NameLoadp,
