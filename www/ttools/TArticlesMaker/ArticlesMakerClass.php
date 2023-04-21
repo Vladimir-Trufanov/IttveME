@@ -78,6 +78,7 @@ class ArticlesMaker
    public $kindMessage;         // Объект вывода сообщений;  
    public $getArti;             // Транслит текущего материала
    public $GalleryMode;         // Режим работы с материалом и галереей
+   public $note;                // Объект вывода сообщений
 
    protected $imgdir;           // Каталог файлов служебных для сайта изображений
 
@@ -89,6 +90,7 @@ class ArticlesMaker
    {
       // Инициализируем свойства класса
       $this->imgdir      = imgdir; 
+      $this->note        = $note; 
       
       $this->basename    = $basename;
       $this->username    = $username;
@@ -644,18 +646,17 @@ class ArticlesMaker
      try
      {
        $pdo->beginTransaction();
-       \prown\ConsoleLog('$TranslitPic='.$TranslitPic);
        $cSQL='SELECT uid,NamePic FROM picturepw WHERE TranslitPic="'.$TranslitPic.'"';
        $stmt = $pdo->query($cSQL);
        $table = $stmt->fetchAll();
-       if (count($table)>0) $table=["uid"=>$table[0]['uid'],"NamePic"=>$table[0]['NamePic']];
-       else $table=["uid"=>"-12","NamePic"=>['Не найдено']];
+       if (count($table)>0) $table=["uid"=>$table[0]['uid'],"NamePic"=>$table[0]['NamePic'],"TranslitPic"=>$TranslitPic];
+       else $table=["uid"=>"-12","NamePic"=>['Не найдено'],"TranslitPic"=>$TranslitPic];
        $pdo->commit();
      } 
-     catch (PDOException $e) 
+     catch (\Exception $e) 
      {
        $messa=$e->getMessage();
-       $table=["uid"=>"-99","NamePic"=>$messa];
+       $table=["uid"=>"-99","NamePic"=>$messa,"TranslitPic"=>$TranslitPic];
        if ($pdo->inTransaction()) $pdo->rollback();
      }
      return $table;
@@ -684,7 +685,7 @@ class ArticlesMaker
       $pdo->commit();
       $messa=imok;
     } 
-    catch (PDOException $e) 
+    catch (\Exception $e) 
     {
        $messa=$e->getMessage();
        if ($pdo->inTransaction()) $pdo->rollback();
@@ -711,7 +712,7 @@ class ArticlesMaker
       $pdo->commit();
       $messa=imok;
     } 
-    catch (PDOException $e) 
+    catch (\Exception $e) 
     {
        $messa=$e->getMessage();
        if ($pdo->inTransaction()) $pdo->rollback();

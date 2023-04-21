@@ -323,7 +323,7 @@ class KwinGallery
       {
          // Перебрасываем файл из временного хранилища
          $this->DelayedMessage=$this->MakeKwinUpload($SiteRoot,$gallidir,$pref,$LoadedFile,$Ext,$cComm);
-         // Отмечаем новое имя загруженного файла
+         // Возвращаем имя файла для показа его перед записью в базу с комментарием
          if ($this->DelayedMessage==imok)
          $Result=\prown\MakeCookie('EditImg',$gallidir.'/'.$LoadedFile.'.'.$Ext,tStr);
       }
@@ -332,21 +332,32 @@ class KwinGallery
          $aFileImg=unserialize(\prown\MakeCookie('cFileImg'));
          
          // Проверяем, есть ли фотография с текущим транслитом названия
-         \prown\ConsoleLog($aFileImg["TranslitPic"]);
          $af=$this->Arti->IsImgByTranslit($this->apdo,$aFileImg["TranslitPic"]);
-         \prown\ConsoleLog(serialize($af));
-         //\prown\ConsoleLog($af["uid"]);
-         //\prown\ConsoleLog($af["NamePic"]);
-         /*
-         // Записываем фотографию в базу данных, 
-         $this->DelayedMessage=$this->Arti->InsertImgByTranslit
-            ($this->apdo,$this->uid,$aFileImg["NamePic"],$aFileImg["TranslitPic"],
-            $aFileImg["Ext"],$aFileImg["mime_type"],$aFileImg["DatePic"],$aFileImg["SizePic"],$_POST['AREAM']);
-         
-         if ($this->DelayedMessage<>imok) \prown\Alert($this->DelayedMessage.'[All-]'); 
-         else $this->DelayedMessage=$this->Arti->UpdatePicByTranslit($this->apdo,$aFileImg["FileSpec"],$aFileImg["TranslitPic"]);
-         if ($this->DelayedMessage<>imok) \prown\Alert($this->DelayedMessage.'[Pic]'); 
-         */
+         // Если ошибка, то выводим сообщение
+         if ($af["uid"]=='-99') $this->DelayedMessage=$af["NamePic"];
+         // Если фото не найдено, то записываем его за 2 операции.
+         elseif($af["uid"]=='-12')
+         {
+            // Вначале записываем реквизиты фото 
+            $this->DelayedMessage=$this->Arti->InsertImgByTranslit
+               ($this->apdo,$this->uid,$aFileImg["NamePic"],$aFileImg["TranslitPic"],
+               $aFileImg["Ext"],$aFileImg["mime_type"],$aFileImg["DatePic"],$aFileImg["SizePic"],$_POST['AREAM']);
+            // Затем добавляем фотографию в базу данных, 
+            if ($this->DelayedMessage==imok) 
+               $this->DelayedMessage=
+               $this->Arti->UpdatePicByTranslit($this->apdo,$aFileImg["FileSpec"],$aFileImg["TranslitPic"]);
+         }
+         // Если фото обнаружено, то докладываем об этом
+         elseif($af["uid"]>0)
+         {
+            $UnID=$af["uid"];
+            $as=$this->Arti->SelRecord($this->apdo,$UnID);
+            if ($as[0]['Translit']==nstErr)
+               $this->DelayedMessage=$as[0]['NameArt'];
+            else    
+               $this->DelayedMessage='Такое изображение загружено в статье "'.
+               $as[0]['NameArt'].'" c идентификатором: '.$af["uid"];
+         }
       }
       return $Result;
    }
