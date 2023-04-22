@@ -636,13 +636,13 @@ IttveME
 7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+Selected=www\iniMem.php
 [www\iniMem.php]
-TopLine=177
-Caret=29,177
+TopLine=200
+Caret=49,212
 [www\index.php]
-TopLine=103
-Caret=4,142
+TopLine=70
+Caret=10,80
 [www\Jsx\WorkTiny.js]
 TopLine=6
 Caret=17,6
@@ -650,7 +650,7 @@ Caret=17,6
 TopLine=354
 Caret=33,354
 [www\ttools\TArticlesMaker\CommonIttveMe.php]
-TopLine=611
+TopLine=35
 Caret=18,633
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=416
