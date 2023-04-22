@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  26.02.2023
-// Copyright © 2023 tve                              Посл.изменение: 14.03.2023
+// Copyright © 2023 tve                              Посл.изменение: 22.04.2023
 
 class WorkTinyMain
 {
@@ -95,12 +95,15 @@ class WorkTinyMain
          <style>
          </style>
          ';
-      
+         // Передаем в Tiny имя файла стилей,
+         // включаем блокировку закрытия страницы редактирования материала 
          ?>
          <script>
          fileStyle="<?php echo $this->fileStyle;?>";
+         window.onbeforeunload = () => false;
          </script>
          <?php
+         // Задаем настройки Tiny
          echo '
             <script src="/TinyMCE5-8-1/tinymce.min.js"></script>
             <script> tinymce.init
