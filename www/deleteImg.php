@@ -30,7 +30,8 @@ require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 // Подключаем объект единообразного вывода сообщений
 $note=new ttools\Notice();
 // Создаем объект для работы с базой данных материалов
-$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; $username='tve'; $password='23ety17'; 
+$basename=$_POST['sh'].'/Base'.'/ittve';    
+$username='tve'; $password='23ety17'; 
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
 $pdo=$Arti->BaseConnect();
 // Определяем ключи поиска

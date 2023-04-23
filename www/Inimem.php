@@ -210,8 +210,6 @@ $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - ра�
 
 // Определяем данные для работы с базой данных материалов 
 $basename=$SiteHost.'/Base'.'/ittve';           // имя базы без расширения 'db3'
-//prown\ConsoleLog('$basename='.$basename);
-//$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; // имя базы без расширения 'db3'
 $username='tve';                                // логин посетителя для авторизации
 $password='23ety17'; 
 

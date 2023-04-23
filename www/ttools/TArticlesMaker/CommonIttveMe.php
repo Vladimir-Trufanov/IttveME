@@ -33,6 +33,8 @@
 // ****************************************************************************
 function _BaseFirstCreate($basename,$username,$password,$aCharters) 
 {
+   \prown\ConsoleLog('$basename1='.$this->basename);
+
    // Получаем спецификацию файла базы данных материалов
    $filename=$basename.'.db3';
    // Проверяем существование и удаляем файл копии базы данных 

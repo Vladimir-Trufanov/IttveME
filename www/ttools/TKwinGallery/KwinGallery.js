@@ -57,7 +57,7 @@ function xDeleteImg(Uid,TranslitPic,Comment,pathPhpTools,pathPhpPrown)
    $.ajax({
       url: "deleteImg.php",
       type: 'POST',
-      data: {uid:Uid, translitpic:TranslitPic, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      data: {uid:Uid,translitpic:TranslitPic,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
       // Выводим ошибки при выполнении запроса в PHP-сценарии
       error: function (jqXHR,exception) 
       {

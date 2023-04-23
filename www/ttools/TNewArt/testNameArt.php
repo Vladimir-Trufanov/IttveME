@@ -36,7 +36,8 @@ $note=new ttools\Notice();
 $NameArt='NoDefineART'; $Piati=0; $iif=Err;
 // Подключаем объект для работы с базой данных материалов
 // (при необходимости создаем базу данных материалов)
-$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; $username='tve'; $password='23ety17'; 
+$basename=$_POST['sh'].'/Base'.'/ittve';           // имя базы без расширения 'db3'
+$username='tve'; $password='23ety17'; 
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
 $pdo=$Arti->BaseConnect();
 // Выбираем запись по транслиту названия статьи

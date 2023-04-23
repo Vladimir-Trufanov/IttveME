@@ -27,7 +27,8 @@ require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once pathPhpPrown."/CommonPrown.php";
 // Подключаем объект для работы с базой данных материалов
 // (при необходимости создаем базу данных материалов)
-$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; $username='tve'; $password='23ety17'; 
+$basename=$_POST['sh'].'/Base'.'/ittve';    
+$username='tve'; $password='23ety17'; 
 $note=NULL;
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
 $pdo=$Arti->BaseConnect();

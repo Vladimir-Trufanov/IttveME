@@ -102,7 +102,7 @@ function changeNsName(NameArt)
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {namearti:NameArt, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      data: {namearti:NameArt, pathTools:pathPhpTools, pathPrown:pathPhpPrown, sh:SiteHost},
       // Выводим ошибки при невозможности выполнении запроса
       error: function (jqXHR,exception,errorMsg) 
       {
@@ -136,7 +136,7 @@ function getNameCue(Uid)
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown, sh:SiteHost},
+      data: {idCue:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
       // Выводим ошибки при невозможности выполнении запроса
       error: function (jqXHR,exception,errorMsg) 
       {
@@ -200,7 +200,7 @@ function UdalitMater(Uid)
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {idArt:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      data: {idArt:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
       // Выводим ошибки при выполнении запроса в PHP-сценарии
       error: function (jqXHR,exception) {SmarttodoError(jqXHR,exception)},
       // Обрабатываем ответное сообщение
@@ -238,7 +238,7 @@ function xUdalitMater(Uid)
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      data: {idCue:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
       // Выводим ошибки при выполнении запроса в PHP-сценарии
       error: function (jqXHR,exception) {SmarttodoError(jqXHR,exception)},
       // Обрабатываем ответное сообщение
