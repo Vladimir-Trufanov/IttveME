@@ -95,7 +95,7 @@ $Edit->Init($aPresMode,$aModeImg,$urlHome,moditap,$Duck,$a2048,$Hex,$Paired);
 $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 \prown\IniPrownJS();
-DefineJS();
+DefineJS($SiteHost);
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---
 

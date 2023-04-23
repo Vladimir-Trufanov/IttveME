@@ -66,11 +66,6 @@
  * 
 **/
 
-// Проверяем возможность обработки ошибок взаимодействия с сервером
-// $page='/Pages/Proba/ProbaTest.php';
-// Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-// echo 'Privet!';  
-
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once 'iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();

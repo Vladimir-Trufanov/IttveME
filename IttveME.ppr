@@ -16,7 +16,7 @@ ProjectFilesOnly=0
 HTServer=localhost
 Extensions=*.*
 [Project tree]
-IttveME
+IttveMe
 	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
@@ -116,6 +116,7 @@ IttveME
 					www\ittveEdit\Охота на медведя\Следы не свежие, но догоним.JPG
 					www\ittveEdit\Охота на медведя\Шапша в половодье.JPG
 					www\ittveEdit\Охота на медведя\Шапша весной.JPG
+				www\ittveEdit\LoadedFile.jpg
 			-jQuery
 				-fil
 					www\jQuery\fil\jquery-3.6.3.min.js
@@ -143,7 +144,7 @@ IttveME
 						www\Old\example\image\a1.jpg
 						www\Old\example\image\a2.png
 						www\Old\example\image\a3.png
-				-ittveLife
+				+ittveLife
 					www\Old\ittveLife\GalleryLife.php
 					www\Old\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 					www\Old\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -184,7 +185,7 @@ IttveME
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -488,12 +489,12 @@ IttveME
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 				-TModyArt
@@ -501,7 +502,7 @@ IttveME
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				-TNewArt
+				+TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -555,7 +556,7 @@ IttveME
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -588,7 +589,6 @@ IttveME
 			www\index.php
 			www\iniMem.php
 			www\iniWorkSpace.php
-			www\ittve.db3
 			www\ittve-log.txt
 			www\log.txt
 			www\manifest.json
@@ -599,6 +599,7 @@ IttveME
 			www\ToPlugDebug.php
 			www\UpSite.php
 			www\UpSiteCSS.php
+			www\ViewImage.php
 		-Материалы
 			-Htaccess
 				Материалы\Htaccess\Как отладить RewriteRule.lnk
@@ -620,44 +621,75 @@ IttveME
 			Построение дерева иерархии\Построение дерева иерархии с помощью PHP.doc
 			Построение дерева иерархии\Редактирование данных в MySql с помощью PHP.doc
 		.gitignore
-		IttveME.ppr
+		IttveMe.ppr
 		IttveMe.rtf
 		IttveMe.xls
 		README.md
-		Новый2.txt
 [Open project files]
-0=www\iniMem.php
-1=www\index.php
-2=www\Jsx\WorkTiny.js
-3=www\ttools\TKwinGallery\KwinGalleryClass.php
-4=www\ttools\TArticlesMaker\CommonIttveMe.php
-5=www\ttools\TTinyGallery\TinyGalleryClass.php
-6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+0=www\index.php
+1=..\fil\IttveMe1\www\ittveEdit\GalleryEdit.php
+2=www\ttools\TKwinGallery\KwinGalleryClass.php
+3=www\ttools\TTinyGallery\TinyGalleryClass.php
+4=www\ViewImage.php
+5=www\UpSite.php
+6=www\Jsx\WorkTiny.js
+7=..\DoorTry\www\Pages\Signaphoto\SignaPhoto.php
+8=www\iniMem.php
+9=www\ttools\TNewArt\NewArtClass.php
+10=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+11=www\ttools\TNewArt\getNameCue.php
+12=www\UpSiteCSS.php
+13=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+14=www\ttools\TArticlesMaker\CommonIttveMe.php
+15=www\ttools\TArticlesMaker\CommonArticlesMaker.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
-[www\iniMem.php]
-TopLine=200
-Caret=49,212
+Selected=www\ttools\TArticlesMaker\CommonArticlesMaker.php
 [www\index.php]
-TopLine=70
-Caret=10,80
-[www\Jsx\WorkTiny.js]
-TopLine=6
-Caret=17,6
+TopLine=68
+Caret=10,75
+[..\fil\IttveMe1\www\ittveEdit\GalleryEdit.php]
+TopLine=1
+Caret=1,31
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=354
-Caret=33,354
-[www\ttools\TArticlesMaker\CommonIttveMe.php]
-TopLine=35
-Caret=18,633
+TopLine=239
+Caret=1,239
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=416
-Caret=98,442
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=441
-Caret=1,456
+TopLine=390
+Caret=1,1
+[www\ViewImage.php]
+TopLine=1
+Caret=1,1
+[www\UpSite.php]
+TopLine=24
+Caret=15,24
+[www\Jsx\WorkTiny.js]
+TopLine=125
+Caret=76,139
+[..\DoorTry\www\Pages\Signaphoto\SignaPhoto.php]
+TopLine=212
+Caret=37,240
+[www\iniMem.php]
+TopLine=24
+Caret=28,35
+[www\ttools\TNewArt\NewArtClass.php]
+TopLine=81
+Caret=24,117
 [www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=97
-Caret=24,118
+TopLine=73
+Caret=12,103
+[www\ttools\TNewArt\getNameCue.php]
+TopLine=21
+Caret=50,39
+[www\UpSiteCSS.php]
+TopLine=87
+Caret=19,98
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=139
+Caret=1,1
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=11
+Caret=1,1
+[www\ttools\TArticlesMaker\CommonArticlesMaker.php]
+TopLine=15
+Caret=1,1

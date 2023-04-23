@@ -97,7 +97,7 @@ function mmlNaznachitStatyu_BODY($pdo)
    $SaveAction=$_SERVER["SCRIPT_NAME"];
    echo '
       <div id="nsGroup">
-      <form id="frmNaznachitStatyu" method="post" action="'.$SaveAction.'">
+      <form id="frmNaznachitStatyu" method="get" action="'.$SaveAction.'">
    ';
    echo '
       <input id="nsName" type="text" name="nsnName" '.$nsnName.

@@ -100,7 +100,7 @@ class WorkTinyMain
          ?>
          <script>
          fileStyle="<?php echo $this->fileStyle;?>";
-         window.onbeforeunload = () => false;
+         //window.onbeforeunload = () => false;
          </script>
          <?php
          // Задаем настройки Tiny

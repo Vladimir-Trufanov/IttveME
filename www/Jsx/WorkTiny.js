@@ -55,12 +55,23 @@ $(document).ready(function()
       });
    });
 })
+
+function ImageClick(imime_type,iDataPic)
+{
+   //alert('ImageClick');
+   console.log(imime_type);
+   //console.log(iDataPic);
+   console.log('RootUrl='+RootUrl);
+   location.replace(RootUrl);
+}
+
+
 // ****************************************************************************
 // *       Отключить блокировку закрытия страницы редактирования материала    *
 // ****************************************************************************
 function SaveTrue() 
 {
-   window.onbeforeunload = () => null;
+   //window.onbeforeunload = () => null;
 } 
 // ****************************************************************************
 // *   Вызвать запуск ссылки на страницу с нажатием кнопки управляющего меню  *
@@ -125,7 +136,7 @@ function getNameCue(Uid)
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown},
+      data: {idCue:Uid, pathTools:pathPhpTools, pathPrown:pathPhpPrown, sh:SiteHost},
       // Выводим ошибки при невозможности выполнении запроса
       error: function (jqXHR,exception,errorMsg) 
       {

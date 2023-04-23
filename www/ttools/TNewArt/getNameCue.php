@@ -35,7 +35,9 @@ $note=new ttools\Notice();
 // Подключаем объект для работы с базой данных материалов
 // (при необходимости создаем базу данных материалов)
 $NameGru='Группа материалов';
-$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; $username='tve'; $password='23ety17'; 
+//$basename=$_SERVER['DOCUMENT_ROOT'].'/ittve'; 
+$basename=$_POST['sh'].'/Base'.'/ittve';         
+$username='tve'; $password='23ety17'; 
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
 $pdo=$Arti->BaseConnect();
 // Выбираем запись по идентификатору группы материалов

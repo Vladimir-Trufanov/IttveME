@@ -17,6 +17,7 @@ define("pathPhpPrown",  $SiteHost.'/TPhpPrown/TPhpPrown');
 define("pathPhpTools",  $SiteHost.'/TPhpTools/TPhpTools'); 
 
 define ("RootDir",      $_SERVER['DOCUMENT_ROOT']); 
+define ("RootUrl",      $_SERVER['SCRIPT_NAME']); 
 define ("oriLandscape", 'landscape');     // Ландшафтное расположение устройства
 define ("oriPortrait",  'portrait');      // Портретное расположение устройства
   
@@ -31,17 +32,19 @@ define ("ajTransparentSuccess", "Преобразование к прозрач�
 define ("ajUndeletionOldFiles", "Ошибка удаления старых файлов");
 
 // Подключить переменные JavaScript, соответствующие определениям в PHP
-function DefineJS()
+function DefineJS($SiteHost)
 {
    $define=
    '<script>'.
    'pathPhpPrown="'        .pathPhpPrown.'";'.
    'pathPhpTools="'        .pathPhpTools.'";'.
    'RootDir="'             .RootDir.'";'.
+   'RootUrl="'             .RootUrl.'";'.
    'nstNoVyb="'            .nstNoVyb.'";'.
    'nstNoNaz="'            .nstNoNaz.'";'.
    'nstErr="'              .nstErr.'";'.
    'nstOk="'               .nstOk.'";'.
+   'SiteHost="'            .$SiteHost.'";'.
 
    'ajSuccess="'           .ajSuccess.           '";'.
    'ajTransparentSuccess="'.ajTransparentSuccess.'";'.

@@ -208,9 +208,9 @@ class KwinGallery
             }
             // Выводим загруженное изображение в карточке
             if ($this->Arti->GalleryMode==mwgEditing) 
-               $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic,$Action='Image');
+               $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic);
             else
-               $this->GViewImage($row['mime_type'],$table['Pic'],$Comment,$Action='Image');
+               $this->GViewImage($row['mime_type'],$table['Pic'],$Comment);
             // Если задан режим редактирования, то выводим изображение для загрузки
             // (как правило, второе при выводе карточек)
             if (($this->Arti->GalleryMode==mwgEditing)&&($i==0)) 
@@ -221,6 +221,8 @@ class KwinGallery
             $i++;
          }
       }
+      // Из галереи задаем режим представления выбранной картинки - "на высоту страницы"
+      $s_ModeImg=\prown\MakeSession('ModeImg',vimOnPage,tInt);           
       return $messa;
    }
    protected function GPicImage($FileName,$Comment)
@@ -232,16 +234,23 @@ class KwinGallery
       echo '<p class="pCard">'.$Comment.'</p>';
       echo '</div>';
    }
-   protected function GViewImage($mime_type,$DataPic,$Comment,$Action='Image')
+   protected function GViewImage($mime_type,$DataPic,$Comment)
    {
+      $iDataPic=base64_encode($DataPic);
+      ?> <script>
+      imime_type="<?php echo $mime_type; ?>";
+      iDataPic="<?php echo $iDataPic; ?>";
+      </script> <?php
+      
       echo '<div class="Card">';
-      echo '<button class="bCard" type="submit" name="'.$Action.'">';
-      echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.base64_encode($DataPic).'"/>';
+      echo '<button class="bCard" type="submit" onclick="ImageClick(imime_type,iDataPic)">';
+      //echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.base64_encode($DataPic).'"/>';
+      echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.$iDataPic.'"/>';
       echo '</button>';
       echo '<p class="pCard">'.$Comment.'</p>';
       echo '</div>';
    }
-   protected function GViewOrDelImage($mime_type,$DataPic,$Comment,$uid,$TranslitPic,$Action='Image')
+   protected function GViewOrDelImage($mime_type,$DataPic,$Comment,$uid,$TranslitPic)
    {
       $FunClick="DeleteImg(".$uid.",'".$TranslitPic."'".",'".$Comment."'".
          ",'".pathPhpTools."'".",'".pathPhpPrown."')";
@@ -252,7 +261,7 @@ class KwinGallery
          'title="Удалить изображение">Удалить
         </button>
       ';
-      echo '<button class="bCard" type="submit" name="'.$Action.'">';
+      echo '<button class="bCard" type="submit">';
       echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.base64_encode($DataPic).'"/>';
       echo '</button>';
       echo '<p class="pCard">'.$Comment.'</p>';
