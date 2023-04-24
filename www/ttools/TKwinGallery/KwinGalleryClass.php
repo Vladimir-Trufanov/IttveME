@@ -237,15 +237,21 @@ class KwinGallery
    protected function GViewImage($mime_type,$DataPic,$Comment)
    {
       $iDataPic=base64_encode($DataPic);
-      ?> <script>
-      imime_type="<?php echo $mime_type; ?>";
-      iDataPic="<?php echo $iDataPic; ?>";
-      </script> <?php
+      $isSrc='"data:'.$mime_type.';base64,'.$iDataPic.'"';
       
       echo '<div class="Card">';
-      echo '<button class="bCard" type="submit" onclick="ImageClick(imime_type,iDataPic)">';
-      //echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.base64_encode($DataPic).'"/>';
-      echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.$iDataPic.'"/>';
+      echo '<button class="bCard" type="submit" onclick="ImageClick(isSrc)">';
+      //echo '<img class="imgCard" src="data:'.$mime_type.';base64,'.$iDataPic.'"/>';
+      //echo '<img class="imgCard" src='.'"data:'.$mime_type.';base64,'.$iDataPic.'"'.'/>';
+      $isSrc='<img class="imgCard" src='.$isSrc.'>';
+      echo $isSrc;
+      \prown\ConsoleLog('1: '.$isSrc);  
+
+      ?> <script>
+      isSrc='<?php echo $isSrc; ?>';
+      </script> <?php
+
+
       echo '</button>';
       echo '<p class="pCard">'.$Comment.'</p>';
       echo '</div>';

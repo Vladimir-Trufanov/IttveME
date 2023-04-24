@@ -134,7 +134,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -144,7 +144,7 @@ IttveMe
 						www\Old\example\image\a1.jpg
 						www\Old\example\image\a2.png
 						www\Old\example\image\a3.png
-				+ittveLife
+				-ittveLife
 					www\Old\ittveLife\GalleryLife.php
 					www\Old\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
 					www\Old\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
@@ -436,14 +436,14 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
 					www\ttools\TArticlesMaker\CommonIttveMe.php
 					www\ttools\TArticlesMaker\CommonIttvePw.php
 					www\ttools\TArticlesMaker\TestBase.php
-				+TDelArt
+				-TDelArt
 					www\ttools\TDelArt\DelArtClass.php
 					www\ttools\TDelArt\deleteArt.php
 					www\ttools\TDelArt\testForDelArt.php
@@ -489,7 +489,7 @@ IttveMe
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -502,7 +502,7 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				-TNewArt
+				+TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -573,7 +573,7 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				+TWorkTinyMain
+				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 				-TZhizniPuti
@@ -589,6 +589,7 @@ IttveMe
 			www\index.php
 			www\iniMem.php
 			www\iniWorkSpace.php
+			www\ittve.db3
 			www\ittve-log.txt
 			www\log.txt
 			www\manifest.json
@@ -633,18 +634,23 @@ IttveMe
 4=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 5=www\ttools\TTinyGallery\TinyGalleryClass.php
 6=www\ttools\TKwinGallery\KwinGalleryClass.php
+7=www\ttools\TNewArt\NewArtClass.php
+8=www\ViewImage.php
+9=www\UpSiteCSS.php
+10=www\UpSite.php
+11=www\Probax.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TKwinGallery\KwinGalleryClass.php
+Selected=www\UpSite.php
 [www\index.php]
-TopLine=75
-Caret=10,75
+TopLine=109
+Caret=18,148
 [www\iniMem.php]
-TopLine=205
-Caret=1,213
+TopLine=167
+Caret=72,183
 [www\Jsx\WorkTiny.js]
-TopLine=282
-Caret=10,291
+TopLine=59
+Caret=6,96
 [www\Common.php]
 TopLine=107
 Caret=1,1
@@ -652,8 +658,23 @@ Caret=1,1
 TopLine=83
 Caret=1,96
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=73
-Caret=4,50
+TopLine=218
+Caret=79,245
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=330
-Caret=25,339
+TopLine=219
+Caret=31,248
+[www\ttools\TNewArt\NewArtClass.php]
+TopLine=78
+Caret=49,100
+[www\ViewImage.php]
+TopLine=91
+Caret=45,112
+[www\UpSiteCSS.php]
+TopLine=61
+Caret=52,61
+[www\UpSite.php]
+TopLine=25
+Caret=1,51
+[www\Probax.php]
+TopLine=1
+Caret=53,2

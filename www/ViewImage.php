@@ -56,7 +56,7 @@ echo '<style type="text/css">';
    }
 echo '</style>';
 
-// Если сессионная переменнаяс существует и она указывает на вывод  
+// Если сессионная переменная существует и она указывает на вывод  
 // полноразмерного изображения, то есть в натуральную величину в пикселах,
 // так его и выводим
 if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimExiSize))
@@ -109,7 +109,9 @@ else
    // На полноформатном готовим возвращение "домой"
    echo '<button id="bImg" type="submit">';
 }
-echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
+echo '<img id="ExtImg" src="'.$ImageFile.'"/>';
+//echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
+//echo 'Привет!';
 echo '</button>';
 echo '</form>';
 

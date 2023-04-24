@@ -56,13 +56,46 @@ $(document).ready(function()
    });
 })
 
-function ImageClick(imime_type,iDataPic)
+   /*
+   //console.log(imime_type);
+   //let iuri=RootUrl+'?MimeType='+imime_type+'&DataPic='+iDataPic;
+   //console.log('iuri='+iuri);
+   let ImageFile='/Images/sampo.jpg';
+   let iuri=RootUrl+'?Image='+ImageFile;
+   //localStorage.setItem('MimeType',imime_type);
+   //localStorage.setItem('DataPic',iDataPic);
+   localStorage.setItem('DataPic',isSrc);
+   location.replace(iuri);
+   */
+
+   /*
+   $.ajax({
+	url: 'Probax.php',
+	method: 'post',
+	data: {Image:'ImageFile'},
+	success: function(data)
+   {
+		alert(data);
+	}
+   });
+   
+   */
+
+
+function ImageClick(isSrc)
 {
-   //alert('ImageClick');
-   console.log(imime_type);
-   //console.log(iDataPic);
-   console.log('RootUrl='+RootUrl);
-   location.replace(RootUrl);
+
+   let ImageFile='/Images/sampo.jpg';
+   let iuri=RootUrl+'?Image='+ImageFile;
+   /*
+   localStorage.setItem('DataPic',isSrc);
+   console.log(isSrc);
+   alert(isSrc);
+   console.log(localStorage.getItem("DataPic"));
+   alert(localStorage.getItem("DataPic"));
+   */
+   location.replace(iuri);
+
 }
 
 
