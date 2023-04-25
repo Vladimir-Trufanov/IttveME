@@ -638,7 +638,6 @@ IttveMe
 8=www\ViewImage.php
 9=www\UpSiteCSS.php
 10=www\UpSite.php
-11=www\Probax.php
 [Selected Project Files]
 Main=
 Selected=www\UpSite.php
@@ -649,8 +648,8 @@ Caret=18,148
 TopLine=167
 Caret=72,183
 [www\Jsx\WorkTiny.js]
-TopLine=59
-Caret=6,96
+TopLine=45
+Caret=1,69
 [www\Common.php]
 TopLine=107
 Caret=1,1
@@ -661,20 +660,17 @@ Caret=1,96
 TopLine=218
 Caret=79,245
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=219
-Caret=31,248
+TopLine=357
+Caret=44,239
 [www\ttools\TNewArt\NewArtClass.php]
 TopLine=78
 Caret=49,100
 [www\ViewImage.php]
-TopLine=91
+TopLine=83
 Caret=45,112
 [www\UpSiteCSS.php]
 TopLine=61
 Caret=52,61
 [www\UpSite.php]
-TopLine=25
-Caret=1,51
-[www\Probax.php]
-TopLine=1
-Caret=53,2
+TopLine=17
+Caret=4,34
