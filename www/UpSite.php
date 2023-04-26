@@ -27,8 +27,44 @@ if ($ImageFile<>NULL)
    <script>
    $(document).ready(function()
    {
+      // Вытаскиваем изображение
       let iSrc=localStorage.getItem("DataPic");
       $("#ExtImg").attr("src",iSrc);
+      // Разворачиваем div
+      $('#DivImg').css('width','100%');
+      $('#DivImg').css('height','100%');
+     
+      // Определяем размеры дива и изображения и левый верхний угол
+      let oDiv=document.getElementById('DivImg')
+      let widthDiv=oDiv.offsetWidth;
+      let heightDiv=oDiv.offsetHeight;
+      console.log('Ширина дива='+widthDiv);
+      console.log('Высота дива='+heightDiv);
+      let topDiv=oDiv.offsetTop;
+      let leftDiv=oDiv.offsetLeft;
+      // Определяем размеры изображения
+      oDiv=document.getElementById('ExtImg')
+      let wImg=oDiv.offsetWidth;
+      let hImg=oDiv.offsetHeight;
+      // Определяем способ выравнивания ('по ширине','по высоте') 
+      // изображения по диву   
+      let AlignImg=getAlignImg(widthDiv,heightDiv,wImg,hImg);
+      console.log(AlignImg);
+      // Назначаем процент ширины изображения от ширины дива (или высоты) 
+      let perWidth=90; // процент  
+      // Расчитываем изображение по центру дива
+      let aCalcPicOnDiv=CalcPicOnDiv(widthDiv,heightDiv,wImg,hImg,AlignImg,perWidth);
+      console.log(aCalcPicOnDiv["widthImg"]);
+      console.log(aCalcPicOnDiv["heightImg"]);
+      // Размещаем изображение
+      let deltoffs=String(aCalcPicOnDiv["nTop"])+'px';
+      $('#ExtImg').css('top',deltoffs);
+      deltoffs=String(aCalcPicOnDiv["nLeft"])+'px';
+      $('#ExtImg').css('left',deltoffs);
+      deltoffs=String(aCalcPicOnDiv["widthImg"])+'px';
+      $('#ExtImg').css('width',deltoffs);
+      deltoffs=String(aCalcPicOnDiv["heightImg"])+'px';
+      $('#ExtImg').css('height',deltoffs);
    })
    </script>
    <?php

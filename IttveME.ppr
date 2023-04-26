@@ -185,7 +185,7 @@ IttveMe
 				www\Old\pic.png
 				www\Old\sampo.jpg
 				www\Old\ViewImage.php
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -435,7 +435,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -502,7 +502,7 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				+TNewArt
+				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -589,11 +589,11 @@ IttveMe
 			www\index.php
 			www\iniMem.php
 			www\iniWorkSpace.php
-			www\ittve.db3
 			www\ittve-log.txt
-			www\log.txt
+			www\Kwinflatic.jpg
 			www\manifest.json
 			www\photo-8i.jpg
+			www\SignaPhotoImg.php
 			www\TestBase.php
 			www\testForDelArt.php
 			www\testNameArt.php
@@ -601,6 +601,7 @@ IttveMe
 			www\UpSite.php
 			www\UpSiteCSS.php
 			www\ViewImage.php
+			www\ViewImageOld.php
 		-Материалы
 			-Htaccess
 				Материалы\Htaccess\Как отладить RewriteRule.lnk
@@ -637,19 +638,21 @@ IttveMe
 7=www\ttools\TNewArt\NewArtClass.php
 8=www\ViewImage.php
 9=www\UpSiteCSS.php
-10=www\UpSite.php
+10=www\SignaPhotoImg.php
+11=www\UpSite.php
+12=www\Styles\iniStyles.css
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\Jsx\WorkTiny.js
 [www\index.php]
 TopLine=109
 Caret=18,148
 [www\iniMem.php]
 TopLine=167
-Caret=72,183
+Caret=44,182
 [www\Jsx\WorkTiny.js]
-TopLine=45
-Caret=1,69
+TopLine=107
+Caret=45,135
 [www\Common.php]
 TopLine=107
 Caret=1,1
@@ -660,17 +663,23 @@ Caret=1,96
 TopLine=218
 Caret=79,245
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=357
-Caret=44,239
+TopLine=197
+Caret=59,219
 [www\ttools\TNewArt\NewArtClass.php]
 TopLine=78
 Caret=49,100
 [www\ViewImage.php]
-TopLine=83
-Caret=45,112
+TopLine=20
+Caret=22,25
 [www\UpSiteCSS.php]
-TopLine=61
+TopLine=39
 Caret=52,61
+[www\SignaPhotoImg.php]
+TopLine=75
+Caret=1,109
 [www\UpSite.php]
-TopLine=17
-Caret=4,34
+TopLine=31
+Caret=22,54
+[www\Styles\iniStyles.css]
+TopLine=87
+Caret=8,111

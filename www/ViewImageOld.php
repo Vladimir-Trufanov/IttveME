@@ -17,57 +17,7 @@
  *   Для возможного вызова картинки их данного модуля, в конце этого модуля 
  * меняется режим страничного вывода на полноформатный и наоборот.
 */
-//$c_FileImg=$ImageFile;
-//$a=getimagesize($c_FileImg);
-//prown\ConsoleLog($c_FileImg);
-
-
-echo '<div id="DivImg">';
-echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
-echo '</div>';
-
-// ****************************************************************************
-// *     Разместить изображение по центру дива: cDiv - идентификатор дива,    *
-// *                   cImg - идентификатор изображения,                      *
-// *  wImg - реальная ширина изображения, hImg - реальная высота изображения  *
-// *        mAligne - первичное выравнивание ('по ширине','по высоте'),       *
-// *    perWidth - процент ширины изображения от ширины дива (или высоты),    *
-// *
-// ****************************************************************************
-function MakeImgOnDiv($cDiv,$cImg,$c_FileImg,$perWidth)
-{
-   // Определяем реальную ширину и высоту изображения
-   $a=getimagesize($c_FileImg);
-   $wImg=$a[0]; $hImg=$a[1];
-   ?> <script>
-   cDiv="<?php echo $cDiv; ?>";
-   cImg="<?php echo $cImg; ?>";
-   wImg="<?php echo $wImg; ?>";
-   hImg="<?php echo $hImg; ?>";
-   perWidth="<?php echo $perWidth; ?>";
-   // Определяем способ выравнивания изображения диву
-   // ('по ширине','по высоте')
-   alignPhoto=getAlignImg(cDiv,cImg,wImg,hImg);
-   // Расчитываем выравнивание и устанавливаем CSS
-   aCalcPicOnDiv=CalcPicOnDiv(cDiv,cImg,wImg,hImg,alignPhoto,perWidth)
-   $("#"+cImg).css("width",String(aCalcPicOnDiv.widthImg)+'px');
-   $("#"+cImg).css("height",String(aCalcPicOnDiv.heightImg)+'px');
-   $("#"+cImg).css("margin-left",String(aCalcPicOnDiv.nLeft)+'px');
-   $("#"+cImg).css("margin-top",String(aCalcPicOnDiv.nTop)+'px');
-   </script> <?php
-}
-
-
-
-
-
-
-
-
-
-
 // Определяем переключаемые стили
-/*
 echo '<style type="text/css">';
    // Если задан цветной фон, то его и готовим
    if (isset($_COOKIE['MakeGround'])&&($c_MakeGround===fimColorGround))
@@ -118,7 +68,7 @@ if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimExiSize))
          / *
          height: 100%; 
          убрано 13.11.2020 мешало qupzille переключать между размерами изображений
-          * /
+         * /
       }
    </style>
    ';
@@ -158,11 +108,14 @@ else
    // На полноформатном готовим возвращение "домой"
    echo '<button id="bImg" type="submit">';
 }
+*/
 echo '<img id="ExtImg" src="'.$ImageFile.'"/>';
 //echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
 //echo 'Привет!';
+/*
 echo '</button>';
 echo '</form>';
+
 // Меняем режим страничного вывода на полноформатный и наоборот,
 // то есть через сессионную переменную переопределяем тип изображения
 if (isset($_SESSION['ModeImg'])&&($_SESSION['ModeImg']==vimOnPage))
@@ -180,6 +133,8 @@ else
 {
    $s_ModeImg=prown\MakeSession('ModeImg',vimOnPage,tInt); 
 }
+*/
+   /*
    list($width, $height, $type, $attr) = getimagesize($ImagePass);
    if ($width>$height)
    {

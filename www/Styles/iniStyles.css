@@ -82,7 +82,7 @@ h1
 }
 */
 /* Выравниваем дивы */
-html,body,#News,#Life,#Gallery,#FooterTiny,#Info
+html,body,#News,#Life,#Gallery,#FooterTiny,#Info,#DivImg
 {
    position:fixed; 
    margin:0;
@@ -103,6 +103,23 @@ html,body,#News,#Life,#Gallery,#FooterTiny,#Info
 #FooterTiny{background:LightGrey;}
 #Info{background:Ivory;}
 */
+
+/* Настраиваем детальное представление изображения */
+#DivImg
+{
+   top:0;
+   left:0;
+   width:0;
+   height:0;
+   background:Ivory;
+}
+#ExtImg
+{
+   position:fixed; 
+   margin:0;
+   padding:0;
+   border:0;
+}
 
 /* ******************************************************* iniStyles.css *** */	
 	
