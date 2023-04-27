@@ -69,32 +69,53 @@ function ImageClick(i2sSrc)
    location.assign(iuri);
 }
 // ****************************************************************************
-// *              Привести ширину дива к ширине изображения и                 *
-// *                      определить соотношение высот                        *
+// *    Изменить размеры изображения так, чтобы оно помещалось внутрь дива    *
 // ****************************************************************************
-
-const ByHeight='Приведенная высота дива больше высоты изображения';
-const ByWidth ='Высота у дива МЕНЬШЕ';
-
-function getAlignImg(widthDiv,heightDiv,wImg,hImg)
+function setAlignImg(widthDiv,heightDiv,wImg,hImg)
 {
-   let alignImg=ByWidth;
-   // Через пропорцию вычисляем высоту     *** widthDiv --> wImg ***
-   // растянутого изображения по ширине:   ***        x --> hImg ***
-   let p_heightDiv=(widthDiv*hImg/wImg);
-   // Сравниваем расчетную высоту изображения с высотой дива и,
-   // если высота изображения превышает высоту дива,
-   // то считаем, что изображение нужно растянуть по высоте
-   if (p_heightDiv>hImg) alignImg=ByHeight;
+   // Определяем коэффициент приведения по ширине
+   let k1=widthDiv/wImg;
+   // Приводим высоту и ширину изображения к диву
+   let p1_widthImg=k1*wImg;
+   let p1_heightImg=k1*hImg;
+   // Если новая высота изображения меньше высоты дива,
+   // то фиксируем
+   if (p1_heightImg<heightDiv)
+   {
+      alignImg=
+      { 
+         "p_widthImg" : p1_widthImg,
+         "p_heightImg": p1_heightImg
+      }
+   }
+   // Иначе приводим по высоте
+   else
+   {
+      let k2=heightDiv/p1_heightImg;
+      let p2_widthImg=k2*p1_widthImg;
+      let p2_heightImg=k2*p1_heightImg;
+      alignImg=
+      { 
+         "p_widthImg" : p2_widthImg,
+         "p_heightImg": p2_heightImg
+      }
+   }
+   // Возвращаем размеры приведенного изображения
+   /*
+   alert
+   (
+      'widthDiv  = '+widthDiv +'    '+'p_widthImg  = '+alignImg["p_widthImg"]+'\n'+
+      'heightDiv = '+heightDiv+'    '+'p_heightImg = '+alignImg["p_heightImg"]+'\n'+
+      ''
+   )
+   */
    return alignImg;
 }
 // ****************************************************************************
-// *                 Расчитать изображение по центру и внутри дива:           *
-// *  wImg - реальная ширина изображения, hImg - реальная высота изображения  *
-// *        mAligne - первичное выравнивание ('по ширине','по высоте'),       *
-// *    perWidth - процент ширины изображения от ширины дива (или высоты)     *
+// *       Расчитать изображение по центру и внутри дива, исходя из того,     *
+// *             что размеры изображения не больше размеров дива              *
 // ****************************************************************************
-function CalcPicOnDiv(widthDiv,heightDiv,wImg,hImg,mAligne,perWidth)
+function CalcPicOnDiv(widthDiv,heightDiv,wImg,hImg,perSize)
 {
    // Определяем возвращаемый массив
    aCalcPicOnDiv=
@@ -104,41 +125,44 @@ function CalcPicOnDiv(widthDiv,heightDiv,wImg,hImg,mAligne,perWidth)
       "nLeft":     10,
       "nTop":      10
    }
-   // Если приведенная высота дива больше высоты изображения, значит нужно
-   // выровнять изображение по ширине, то есть ширину изображения пересчитать
-   // по проценту от ширины дива и отцентрировать изображение по диву
-   if (mAligne==ByHeight)
+   // Если размеры изображения и дива совпадают по ширине
+   if (Math.abs(widthDiv-wImg)<1)
    {
-      // Определяем ширину изображения            *** perWidth --> x        ***
-      // в диве из пропорции:                     *** 100%     --> widthDiv ***
-      widthImg=widthDiv*perWidth/100;
+      // Определяем ширину изображения
+      widthImg=widthDiv*perSize/100;
       aCalcPicOnDiv.widthImg=widthImg;
-      // Определяем высоту изображения            *** wImg     --> hImg     ***  
-      // в диве из пропорции:                     *** widthImg --> x        ***
+      // Определяем высоту изображения                *** wImg     --> hImg ***  
+      // в диве из пропорции:                         *** widthImg --> x    ***
       heightImg=widthImg*hImg/wImg;
       aCalcPicOnDiv.heightImg=heightImg;
    }
-   // Если приведенная высота дива МЕНЬШЕ высоты изображения, значит нужно
-   // выровнять изображение по высоте, то есть высоту изображения пересчитать
-   // по проценту от высоты дива и отцентрировать изображение по диву
    else
    {
-      heightImg=heightDiv*perWidth/100;
+      // Определяем высоту изображения
+      heightImg=heightDiv*perSize/100;
       aCalcPicOnDiv.heightImg=heightImg;
-      widthImg=heightImg*wImg/hImg;            // *** wImg    --> hImg      ***
-      aCalcPicOnDiv.widthImg=widthImg;         // *** x       --> heightImg ***
+      // Определяем ширину изображения               *** wImg --> hImg      ***  
+      // в диве из пропорции:                        *** x    --> heightImg ***
+      widthImg=wImg*heightImg/hImg;
+      aCalcPicOnDiv.widthImg=widthImg;
    }
    // Центрируем изображение по диву
    aCalcPicOnDiv.nLeft=(widthDiv-widthImg)/2;
    aCalcPicOnDiv.nTop=(heightDiv-heightImg)/2;
    // Чуть приподнимаем изображение вверх
    aCalcPicOnDiv.nTop=aCalcPicOnDiv.nTop*0.9;
+   /*
+   alert
+   (
+      'alignImg = '+alignImg+'\n'+
+      'ширина    = '+wImg     +'    '+'высота    = '+hImg     +'\n\n'+
+      'widthDiv  = '+widthDiv +'    '+'widthImg  = '+widthImg +'\n'+
+      'heightDiv = '+heightDiv+'    '+'heightImg = '+heightImg+'\n'+
+      ''
+   )
+   */
    return aCalcPicOnDiv;
 }
-
-
-
-
 // ****************************************************************************
 // *       Отключить блокировку закрытия страницы редактирования материала    *
 // ****************************************************************************
