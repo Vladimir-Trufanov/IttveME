@@ -48,7 +48,11 @@ if ($ImageFile<>NULL)
       // Назначаем процент размера изображения от ширины дива (или высоты) 
       let perSize=90; // процент  
       // Расчитываем изображение по центру дива
-      let aCalcPicOnDiv=CalcPicOnDiv(widthDiv,heightDiv,AlignImg['p_widthImg'],AlignImg['p_heightImg'],perSize);
+      let aCalcPicOnDiv=CalcPicOnDiv(
+         widthDiv,heightDiv,
+         AlignImg['p_widthImg'],AlignImg['p_heightImg'],
+         wImg,hImg,
+         perSize);
       // Размещаем изображение
       let deltoffs=String(aCalcPicOnDiv["nTop"])+'px';
       $('#ExtImg').css('top',deltoffs);

@@ -651,8 +651,8 @@ Caret=18,148
 TopLine=167
 Caret=44,182
 [www\Jsx\WorkTiny.js]
-TopLine=59
-Caret=76,72
+TopLine=79
+Caret=39,160
 [www\Common.php]
 TopLine=107
 Caret=1,1
@@ -678,8 +678,8 @@ Caret=52,61
 TopLine=75
 Caret=1,109
 [www\UpSite.php]
-TopLine=57
-Caret=1,48
+TopLine=29
+Caret=98,59
 [www\Styles\iniStyles.css]
 TopLine=87
 Caret=8,111
