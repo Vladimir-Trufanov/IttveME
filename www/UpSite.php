@@ -22,49 +22,6 @@ $ImageFile=prown\getComRequest('Image');
 if ($ImageFile<>NULL)
 {
    require_once "ViewImage.php";
-
-   ?>
-   <script>
-   $(document).ready(function()
-   {
-      // Вытаскиваем изображение
-      let iSrc=localStorage.getItem("DataPic");
-      $("#ExtImg").attr("src",iSrc);
-      // Разворачиваем div
-      $('#DivImg').css('width','100%');
-      $('#DivImg').css('height','100%');
-      // Определяем размеры дива и изображения и левый верхний угол
-      let oDiv=document.getElementById('DivImg')
-      let widthDiv=oDiv.offsetWidth;
-      let heightDiv=oDiv.offsetHeight;
-      let topDiv=oDiv.offsetTop;
-      let leftDiv=oDiv.offsetLeft;
-      // Определяем размеры изображения
-      oDiv=document.getElementById('ExtImg')
-      let wImg=oDiv.offsetWidth;
-      let hImg=oDiv.offsetHeight;
-      // Изменяем размеры изображения так, чтобы оно помещалось внутрь дива 
-      let AlignImg=setAlignImg(widthDiv,heightDiv,wImg,hImg);
-      // Назначаем процент размера изображения от ширины дива (или высоты) 
-      let perSize=90; // процент  
-      // Расчитываем изображение по центру дива
-      let aCalcPicOnDiv=CalcPicOnDiv(
-         widthDiv,heightDiv,
-         AlignImg['p_widthImg'],AlignImg['p_heightImg'],
-         wImg,hImg,
-         perSize);
-      // Размещаем изображение
-      let deltoffs=String(aCalcPicOnDiv["nTop"])+'px';
-      $('#ExtImg').css('top',deltoffs);
-      deltoffs=String(aCalcPicOnDiv["nLeft"])+'px';
-      $('#ExtImg').css('left',deltoffs);
-      deltoffs=String(aCalcPicOnDiv["widthImg"])+'px';
-      $('#ExtImg').css('width',deltoffs);
-      deltoffs=String(aCalcPicOnDiv["heightImg"])+'px';
-      $('#ExtImg').css('height',deltoffs);
-   })
-   </script>
-   <?php
 }
 // Выводим другие страницы сайта
 else

@@ -91,7 +91,11 @@ IttveMe
 					www\font-awesome-4.7.0\scss\_variables.scss
 					www\font-awesome-4.7.0\scss\font-awesome.scss
 				www\font-awesome-4.7.0\HELP-US-OUT.txt
-			-Images
+			+Images
+				-Anime
+					www\Images\Anime\a1.jpg
+					www\Images\Anime\a2.png
+					www\Images\Anime\a3.png
 				-Cursors
 					www\Images\Cursors\Less10.cur
 					www\Images\Cursors\Less-anoop.cur
@@ -641,18 +645,19 @@ IttveMe
 10=www\SignaPhotoImg.php
 11=www\UpSite.php
 12=www\Styles\iniStyles.css
+13=www\Styles\Content.css
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\UpSiteCSS.php
 [www\index.php]
-TopLine=109
-Caret=18,148
+TopLine=78
+Caret=1,90
 [www\iniMem.php]
-TopLine=167
-Caret=44,182
+TopLine=162
+Caret=1,184
 [www\Jsx\WorkTiny.js]
-TopLine=79
-Caret=39,160
+TopLine=149
+Caret=2,182
 [www\Common.php]
 TopLine=107
 Caret=1,1
@@ -669,17 +674,20 @@ Caret=59,219
 TopLine=78
 Caret=49,100
 [www\ViewImage.php]
-TopLine=20
-Caret=22,25
+TopLine=94
+Caret=1,115
 [www\UpSiteCSS.php]
-TopLine=39
-Caret=52,61
+TopLine=100
+Caret=40,119
 [www\SignaPhotoImg.php]
 TopLine=75
 Caret=1,109
 [www\UpSite.php]
-TopLine=29
-Caret=98,59
+TopLine=6
+Caret=1,26
 [www\Styles\iniStyles.css]
-TopLine=87
-Caret=8,111
+TopLine=83
+Caret=26,114
+[www\Styles\Content.css]
+TopLine=33
+Caret=26,50

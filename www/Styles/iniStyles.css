@@ -111,14 +111,10 @@ html,body,#News,#Life,#Gallery,#FooterTiny,#Info,#DivImg
    left:0;
    width:0;
    height:0;
-   background:Ivory;
+   background:transparent;
 }
 #ExtImg
 {
-   position:fixed; 
-   margin:0;
-   padding:0;
-   border:0;
 }
 
 /* ******************************************************* iniStyles.css *** */	

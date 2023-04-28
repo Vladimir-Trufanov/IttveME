@@ -96,6 +96,44 @@ $note->Init();
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 \prown\IniPrownJS();
 DefineJS($SiteHost);
+
+// Проверяем не требуется ли вывести изображение и выполняем настройки
+$ImageFile=prown\getComRequest('Image');
+if ($ImageFile<>NULL)
+{
+   if ($c_ModeImg==vimOnPage) 
+   {
+      echo '
+      <style>
+      body
+      {
+         background: 
+         url(Images/Anime/a3.png) 90% 90% no-repeat fixed, 
+         url(Images/Anime/a2.png) 40% 40% no-repeat fixed, 
+         url(Images/Anime/a1.jpg) no-repeat fixed;
+         background-size: auto, auto, cover;
+         animation: ball 40s linear infinite;
+      }
+      @keyframes ball 
+      {
+         from { background-position: 1600px 90%, 180% 40%, 0 0; }
+         to { background-position: -2000px 90%, -300px 20%, 0 0; }
+      }
+      </style>
+      ';
+   }
+   else
+   {
+      echo '
+      <style>
+      body
+      {
+      }
+      </style>
+      ';
+   }
+}
+
 echo '</head>'; 
 // end ------------------------------------------------------ HEAD and LAST ---
 

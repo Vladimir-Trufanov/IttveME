@@ -77,7 +77,7 @@ class Tuning
       echo '<div id="tuning">';
       
       echo '<div id=tole></div><div id=tori></div><div id=bori></div><div id=bole></div>';
-      echo '<form class="frmTuning" method="post" name="TuningFrm" action="'.$this->urlHome.'">';
+      echo '<form class="frmTuning" method="get" name="TuningFrm" action="'.$this->urlHome.'">';
       ?> 
       <div class="sel sel--black-panther">
          <select name="pPresMode" id="pPresMode">

@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  11.07.2020
-// Copyright © 2020 tve                              Посл.изменение: 13.11.2020
+// Copyright © 2020 tve                              Посл.изменение: 28.04.2023
 
 /**  ЗАМЕЧАНИЕ:
  *   Данный модуль для вывода картинки запускается из 2 мест: из галереи 
@@ -17,54 +17,106 @@
  *   Для возможного вызова картинки их данного модуля, в конце этого модуля 
  * меняется режим страничного вывода на полноформатный и наоборот.
 */
-//$c_FileImg=$ImageFile;
-//$a=getimagesize($c_FileImg);
-//prown\ConsoleLog($c_FileImg);
-
 
 echo '<div id="DivImg">';
 echo '<img id="ExtImg" src="'.$ImageFile.'" alt="'.$ImageFile.'">';
 echo '</div>';
 
+if ($c_ModeImg==vimOnPage) View_vimOnPage();
+else View_vimExiSize();
+
 // ****************************************************************************
-// *     Разместить изображение по центру дива: cDiv - идентификатор дива,    *
-// *                   cImg - идентификатор изображения,                      *
-// *  wImg - реальная ширина изображения, hImg - реальная высота изображения  *
-// *        mAligne - первичное выравнивание ('по ширине','по высоте'),       *
-// *    perWidth - процент ширины изображения от ширины дива (или высоты),    *
-// *
+// *            Развернуть изображение, как 'Внутри страницы'                 *
 // ****************************************************************************
-function MakeImgOnDiv($cDiv,$cImg,$c_FileImg,$perWidth)
+function View_vimOnPage()
 {
-   // Определяем реальную ширину и высоту изображения
-   $a=getimagesize($c_FileImg);
-   $wImg=$a[0]; $hImg=$a[1];
-   ?> <script>
-   cDiv="<?php echo $cDiv; ?>";
-   cImg="<?php echo $cImg; ?>";
-   wImg="<?php echo $wImg; ?>";
-   hImg="<?php echo $hImg; ?>";
-   perWidth="<?php echo $perWidth; ?>";
-   // Определяем способ выравнивания изображения диву
-   // ('по ширине','по высоте')
-   alignPhoto=getAlignImg(cDiv,cImg,wImg,hImg);
-   // Расчитываем выравнивание и устанавливаем CSS
-   aCalcPicOnDiv=CalcPicOnDiv(cDiv,cImg,wImg,hImg,alignPhoto,perWidth)
-   $("#"+cImg).css("width",String(aCalcPicOnDiv.widthImg)+'px');
-   $("#"+cImg).css("height",String(aCalcPicOnDiv.heightImg)+'px');
-   $("#"+cImg).css("margin-left",String(aCalcPicOnDiv.nLeft)+'px');
-   $("#"+cImg).css("margin-top",String(aCalcPicOnDiv.nTop)+'px');
-   </script> <?php
+   _View_vimOnPage();
 }
-
-
-
-
-
-
-
-
-
+function _View_vimOnPage()
+{
+   ?>
+   <script>
+   $(document).ready(function()
+   {
+      // Вытаскиваем изображение
+      let iSrc=localStorage.getItem("DataPic");
+      $("#ExtImg").attr("src",iSrc);
+      // Настраиваем параметры для центрирования изображения
+      $('#ExtImg').css('position','fixed');
+      $('#ExtImg').css('margin','0');
+      $('#ExtImg').css('padding','0');
+      $('#ExtImg').css('border','0');
+      // Разворачиваем div
+      $('#DivImg').css('width','100%');
+      $('#DivImg').css('height','100%');
+      // Определяем размеры дива и изображения и левый верхний угол
+      let oDiv=document.getElementById('DivImg')
+      let widthDiv=oDiv.offsetWidth;
+      let heightDiv=oDiv.offsetHeight;
+      let topDiv=oDiv.offsetTop;
+      let leftDiv=oDiv.offsetLeft;
+      // Определяем размеры изображения
+      oDiv=document.getElementById('ExtImg')
+      let wImg=oDiv.offsetWidth;
+      let hImg=oDiv.offsetHeight;
+      // Изменяем размеры изображения так, чтобы оно помещалось внутрь дива 
+      let AlignImg=setAlignImg(widthDiv,heightDiv,wImg,hImg);
+      // Назначаем процент размера изображения от ширины дива (или высоты) 
+      let perSize=90; // процент  
+      // Расчитываем изображение по центру дива
+      let aCalcPicOnDiv=CalcPicOnDiv(
+         widthDiv,heightDiv,
+         AlignImg['p_widthImg'],AlignImg['p_heightImg'],
+         wImg,hImg,
+         perSize);
+      // Размещаем изображение
+      let deltoffs=String(aCalcPicOnDiv["nTop"])+'px';
+      $('#ExtImg').css('top',deltoffs);
+      deltoffs=String(aCalcPicOnDiv["nLeft"])+'px';
+      $('#ExtImg').css('left',deltoffs);
+      deltoffs=String(aCalcPicOnDiv["widthImg"])+'px';
+      $('#ExtImg').css('width',deltoffs);
+      deltoffs=String(aCalcPicOnDiv["heightImg"])+'px';
+      $('#ExtImg').css('height',deltoffs);
+   })
+   </script>
+   <?php
+}
+// ****************************************************************************
+// *  Развернуть изображение, как 'В заданном размере в пикселах - как есть'  *
+// ****************************************************************************
+function View_vimExiSize()
+{
+   _View_vimExiSize();
+}
+function _View_vimExiSize()
+{
+   ?>
+   <script>
+   $(document).ready(function()
+   {
+      // Вытаскиваем изображение
+      let iSrc=localStorage.getItem("DataPic");
+      $("#ExtImg").attr("src",iSrc);
+      // Разворачиваем div
+      $('#DivImg').css('width','100%');
+      $('#DivImg').css('height','100%');
+      // Определяем размеры дива и изображения и левый верхний угол
+      let oDiv=document.getElementById('DivImg')
+      let widthDiv=oDiv.offsetWidth;
+      let heightDiv=oDiv.offsetHeight;
+      // Определяем размеры изображения
+      oDiv=document.getElementById('ExtImg')
+      let wImg=oDiv.offsetWidth;
+      let hImg=oDiv.offsetHeight;
+      // Центрируем по горизонтали
+      let deltaX=(widthDiv-wImg)/2;
+      if ((deltaX)>0) $("#ExtImg").css('padding-left',deltaX+'px');
+   })
+   </script>
+   <?php
+}
+// Это старая версия -------------------------------------------- до 2023-04-28
 
 // Определяем переключаемые стили
 /*
