@@ -11,15 +11,11 @@
 // ****************************************************************************
 
 // _BaseFirstCreate($basename,$username,$password,$aCharters)                 - Создать резервную копию базы данных и заново построить новую базу данных
-// _MakeMenu($basename,$username,$password)                                   - Построить html-код меню по базе данных материалов сайта 
-// _MakeTblMenu($basename,$username,$password,$ListFields,$SignAsc,$SignDesc) - Построить html-код в строке ТАБЛИЦЫ меню по базе данных материалов сайта 
-// _ShowSampleMenu()                                                          - Показать пример меню (с использованием smartmenu или без)
 // aRecursLevel(&$array,$data,$pid=0,$level=0)                                - Сформировать массив для представления таблицы до уровня
 // aRecursPath(&$array,&$array_idx_lvl,$data,$pid=0,$level=0,$path="")        - Сформировать массив представления таблицы c указанием путей    
 // aViewLevel($array)                                                         - Вывести содержимое массива в первом виде - до уровня 
 // aViewPath($array)                                                          - Вывести содержимое массива с путями и транслитом  
 // cUidPid($Uid,$Pid,$cLast)                                                  - Обеспечить смещение строк меню при отладке 
-// ShowTreeMe($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
 // sort_link_th($title,$a,$b,$SignAsc,$SignDesc)                              - Включить ссылку в текущую строку таблицы меню с сортировкой по полям
 // SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)                               - Обеспечить иммитацию пробелов смещения строк меню при отладке 
 // CreateTables($pdo,$aCharters)                                              - Создать таблицы базы данных и выполнить начальное заполнение  
@@ -33,8 +29,6 @@
 // ****************************************************************************
 function _BaseFirstCreate($basename,$username,$password,$aCharters) 
 {
-   \prown\ConsoleLog('$basename1='.$this->basename);
-
    // Получаем спецификацию файла базы данных материалов
    $filename=$basename.'.db3';
    // Проверяем существование и удаляем файл копии базы данных 
@@ -90,193 +84,6 @@ function _BaseFirstCreate($basename,$username,$password,$aCharters)
       aViewPath($array);
       \prown\ConsoleLog('Сформирован массив c указанием путей и транслита');
    } 
-}
-// ****************************************************************************
-// *          Построить html-код меню по базе данных материалов сайта         *
-// ****************************************************************************
-function _MakeMenu($basename,$username,$password) 
-{
-   // Подсоединяемся к базе данных
-   $pdo=_BaseConnect($basename,$username,$password);
-   // Готовим параметры и вырисовываем меню
-   $lvl=-1; $cLast='+++';
-   $nLine=0; $cli=""; 
-   // Параметр $otlada при необходимости используется для просмотра в коде
-   // страницы вложенности тегов и вызова рекурсий 
-   $otlada=false;
-   ShowTreeMe($pdo,1,1,$cLast,$nLine,$cli,$lvl,$otlada);
-   unset($pdo);          
-}
-// ****************************************************************************
-// * Построить html-код в строке ТАБЛИЦЫ меню по базе данных материалов сайта *
-// ****************************************************************************
-function _MakeTblMenu($basename,$username,$password,$ListFields,$SignAsc,$SignDesc) 
-{
-   // Подсоединяемся к базе данных
-   $pdo=_BaseConnect($basename,$username,$password);
-   // Формируем массив для сортировок по выбранным полям в возрастающем и 
-   // убывающем порядке по образцу:
-   // $sort_list = array(
-   //   'uid_asc'      => '"uid"',
-   //   'uid_desc'     => '"uid" DESC',
-   //   'pid_asc'      => '"pid"',
-   //   'pid_desc'     => '"pid" DESC',
-   //   'NameArt_asc'  => '"NameArt"',
-   //   'NameArt_desc' => '"NameArt" DESC',
-   //   'IdCue_asc'    => '"IdCue"',
-   //   'IdCue_desc'   => '"IdCue" DESC',
-   // );
-   $sort_list=array();
-   foreach ($ListFields as $key => $value) 
-   {
-      $sort_list = $sort_list+
-      array($key.'_asc' => '"'.$key.'"');
-      $sort_list = $sort_list+
-      array($key.'_desc' => '"'.$key.'" DESC');
-   }
-   // Выбираем из параметра запроса значение GET-переменной и задаем
-   // способ сортировки таблицы
-   $sort = @$_GET['Sort'];
-   if (array_key_exists($sort, $sort_list)) 
-   {
-	   $sort_sql = $sort_list[$sort];
-   } 
-   else 
-   {
-	  $sort_sql = reset($sort_list);
-   }
-   // Формируем список выбранных полей для запроса их значений из базы данных
-   // убывающем порядке по образцу: 'uid,pid,NameArt,IdCue'
-   $fields='';
-   foreach ($ListFields as $key => $value) $fields=$fields.$key.',';
-   $fields=rtrim($fields,',');
-   // Выбираем значения указанных полей из базы данных по образцу:	
-   // $cSQL="SELECT uid,pid,NameArt,IdCue FROM stockpw ORDER BY uid";
-   $cSQL="SELECT ".$fields." FROM stockpw ORDER BY {$sort_sql}";
-   $stmt=$pdo->query($cSQL);
-   $list=$stmt->fetchAll();
-
-   // Формируем таблицу
-   echo '<table id="ipvTable"> <thead> <tr>';
-   foreach ($ListFields as $key => $value) 
-   {
-      echo '<th class="ipvHead">'; 
-      echo sort_link_th($value,$key.'_asc',$key.'_desc',$SignAsc,$SignDesc); 
-      echo '</th>'; 
-   }
-   echo '</tr> </thead> <tbody>';
-   
-   foreach ($list as $row):
-      echo '<tr class="ipvRow">';
-      foreach ($ListFields as $key => $value) 
-      {
-         echo '<td class="ipvColumn">'; echo $row[$key]; echo '</td>'; 
-      }
-      echo '</tr>';
-   endforeach; 
-   echo '</tbody> </table>';
-   unset($pdo);          
-}
-// *************************************************************************
-// *       Показать пример меню (с использованием smartmenu или без)       *
-// *************************************************************************
-function _ShowSampleMenu() 
-{
-   $Menu='
-   <ul class="accordion">
-   <li id="moya-zhizn" class="moya-zhizn"><a href="#moya-zhizn">Моя жизнь<span>495</span></a>
-      <ul class="sub-menu">
-         <li><a href="#osobennosti-ustrojstva-vintikov-v-moej-golove"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
-      </ul>
-   </li>
-   <li id="mikroputeshestviya" class="mikroputeshestviya"><a href="#mikroputeshestviya">Микропутешествия<span>26</span></a>
-   <ul class="sub-menu">
-      <li><a href="#kindasovo-zemlya-karelskogo-yumora"><em>1</em>Киндасово - земля карельского юмора<span>20.06.2010</span></a></li>	
-      <li><a href="#gora-sampo-ozero-svetlyj-les-tropinka-v-nebo"><em>2</em>Гора Сампо. Озеро, светлый лес, тропинка в небо<span>23.06.2010</span></a></li>
-      <li><a href="#part2"><em>3</em>Падозеро, кладбище заключенных лагеря №517<span>03.07.2010</span></a></li>
-      <li><a href="#part2"><em>4</em>Таёжный зоопарк на озере Сямозеро<span>04.07.2010</span></a></li>
-      <li><a href="#part2"><em>5</em>Шелтозер. Так жили вепсы<span>10.07.2010</span></a></li>
-      <li><a href="#part2"><em>6</em>Полоса 2300 - военный аэродром в Гирвасе<span>17.07.2010</span></a></li>
-      <li><a href="#part2"><em>8</em>Чертов стул, кусочек ботанического сада<span>11.09.2010</span></a></li>
-      <li><a href="#part2"><em>10</em>Благовещенский Ионо-Яшезерский мужской монастырь<span>10.10.2010</span></a></li>
-   </ul>                                                                                     
-   </li>
-   <li id="part3" class="vsyakoe-raznoe"><a href="#part3">Всякое-разное<span>58</span></a>
-      <ul class="sub-menu">
-         <li><a href="#part3"><em>1</em>Всякое-разное<span>05.02.1958</span></a></li>
-      </ul>
-   </li>
-   <li id="part4" class="v-kontakte"><a href="#part4">В контакте<span>58</span></a>
-      <ul class="sub-menu">
-         <li><a href="#part4"><em>1</em>В контакте<span>05.02.1958</span></a></li>
-      </ul>
-   </li>
-   <li id="part5" class="moj-mir"><a href="#part5">Мой мир<span>58</span></a>
-      <ul class="sub-menu">
-         <li><a href="#part5"><em>1</em>Мой мир<span>05.02.1958</span></a></li>
-      </ul>
-   </li>
-   <li id="part6" class="progulki"><a href="#part6">Прогулки<span>58</span></a>
-      <ul class="sub-menu">
-         <li><a href="#part6"><em>1</em>Прогулки<span>05.02.1958</span></a></li>
-      </ul>
-   </li>
-   <li id="part22" class="dopolneniya-k-mikroputeshestviyam"><a href="#part22">Дополнения к микропутешествиям<span>58</span></a>
-      <ul class="sub-menu">
-         <li><a href="#part22"><em>1</em>Дополнения к микропутешествиям<span>05.02.1958</span></a></li>
-      </ul>
-   </li>
-   <li id="part99" class="perepechatka"><a href="#part99">Перепечатка<span>58</span></a>
-      <ul class="sub-menu">
-         <li><a href="#part99"><em>1</em>Перепечатка<span>05.02.1958</span></a></li>
-      </ul>
-   </li>
-   </ul>
-   ';
-   echo $Menu;
-}
-// *************************************************************************
-// *                   Показать пример меню (где i вместо a)               *
-// *************************************************************************
-function _ShowProbaMenu() 
-{
-   $Menu='
-   <ul class="accordion">
-   <li id="moya-zhizn" class="moya-zhizn"><i>Моя жизнь<a href="#495"><span>495</span></a></i>
-      <ul class="sub-menu">
-         <li><i><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></i></li>			
-      </ul>
-   </li>
-   <li id="mikroputeshestviya" class="mikroputeshestviya"><i>Микропутешествия<a href="#26"><span>26</span></a></i>
-      <ul class="sub-menu">
-         <li><i><em>12</em>Киндасово - земля карельского юмора<span>20.06.2010</span></i></li>			
-         <li><i><em>13</em>Таёжный зоопарк на озере Сямозеро<span>04.07.2010</span></i></li>			
-      </ul>                                                                                     
-   </li>
-   <li id="vsyakoe-raznoe" class="vsyakoe-raznoe"><i>Всякое-разное<a href="#1958"><span>1958</span></a></i>
-   </li>
-   <li id="progulki" class="progulki"><i>Прогулки<a href="#201"><span>201</span></a></i>
-      <ul class="sub-menu">
-         <li><i><em>21</em>Охота на медведя<span>24.07.2010</span></i></li>			
-      </ul>
-   </li>
-   <li id="dopolneniya" class="dopolneniya"><i>Дополнения к микропутешествиям<a href="#15"><span>15</span></a></i>
-   </li>
-   </ul>
-   ';
-   echo $Menu;
-   // *************************************************************************
-   // *                 Вывести сообщение по вставленному в тег клику         *
-   // *               .'<i onclick="iShowProbaMenu('."'progulki'".')">'.      *
-   // *************************************************************************
-   ?> 
-   <script>
-   function iShowProbaMenu(stri='заглушка')
-   {
-      console.log(stri);
-   }
-   </script>
-   <?php
 }
 // ****************************************************************************
 // *          Сформировать массив для представления таблицы до уровня         *
@@ -438,63 +245,6 @@ function aViewPath($array)
    echo '</table>';
    echo '</pre>';
 }
-// ****************************************************************************
-// *           Сформировать строки меню для записей одного родителя           *
-// ****************************************************************************
-function ShowTreeMe($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
-{
-   // Определяем текущий уровень меню
-   $lvl++; 
-   // Выбираем все записи одного родителя
-   $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
-   $stmt = $pdo->query($cSQL);
-   $table = $stmt->fetchAll();
-
-   if (count($table)>0) 
-   {
-      // Выводим <ul>. Перед ним </li> не выводим.
-      echo(SpacesOnLevel($lvl,$cLast,0,0,$otlada).'<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
-      // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
-      $nPoint=0;
-      foreach ($table as $row)
-      {
-         $nLine++; $cLine=''; 
-         if ($otlada) $cLine=$cLine.' ='.$nLine.'=';
-         $Uid=$row["uid"]; $Pid=$row["pid"]; $Translit=$row["Translit"];
-         $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
-         if ($cLast<>'+ul') 
-         {
-             $cli=SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."</li>\n";
-             echo($cli); $cLast='-li';
-         }
-         // Выводим li и href для раздела (IdCue=-1)
-         // <li id="moya-zhizn" class="moya-zhizn"><a href="#moya-zhizn">Моя жизнь<span>495</span></a>
-         if ($IdCue==-1)
-         {
-            echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada).'<li id="'.$Translit.'" class="'.$Translit.'"> '); 
-            echo('<a href="#'.$Translit.'">'.$Uid.' &#129392; '.$row['NameArt'].$cLine.CountPoint($pdo,$Uid).'</a>'."\n"); 
-         } 
-         // Выводим li и href для статьи
-         // <li><a href="#osobennosti-ustrojstva-vintikov-v-moej-golove"><em>1</em>Особенности устройства винтиков в моей голове<span>01.02.2013</span></a></li>			
-         else
-         {
-            $nPoint++;
-            echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."<li> ");
-            echo('<a href="#'.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
-         }
-         $cLast='+li';
-         ShowTreeMe($pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,$otlada,' class="sub-menu"'); 
-         $lvl--; 
-      }
-      $cli=SpacesOnLevel($lvl,$cLast,0,0,$otlada)."</li>\n";
-      echo($cli); $cLast='-li'; 
-      echo(SpacesOnLevel($lvl,$cLast,0,0,$otlada)."</ul>\n");  $cLast='-ul';
-   }
-}
-
-
-
-
 // ----------------------------------------------------------------------------
 function getIconCue($Translit)
 {

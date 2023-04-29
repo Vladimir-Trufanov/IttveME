@@ -39,6 +39,35 @@ IttveMe
 			Favicon\tveMenuD.png
 			Favicon\О favicon.doc
 		+www
+			-Example
+				-ittveLife
+					www\Example\ittveLife\GalleryLife.php
+					www\Example\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
+					www\Example\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
+					www\Example\ittveLife\ittve01-001-На-Сампо.jpg
+					www\Example\ittveLife\ittve01-001-Подъём-настроения.jpg
+					www\Example\ittveLife\ittve01-001-С-заботой-и-к-мамам.jpg
+					www\Example\ittveLife\ittve01-001-У-ёлочки.png
+					www\Example\ittveLife\ittve01-001-Хочешь-кваску.jpg
+					www\Example\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
+					www\Example\ittveLife\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
+					www\Example\ittveLife\ittve02-065-В-город-c-молоком.jpg
+					www\Example\ittveLife\ittve02-065-Вокруг-прудика.jpg
+					www\Example\ittveLife\ittve02-065-Всем-солнечного-лета.jpg
+					www\Example\ittveLife\ittve02-065-Едем-по-грибку.jpg
+					www\Example\ittveLife\ittve02-065-Здесь-здоровье.jpg
+					www\Example\ittveLife\ittve02-065-На-мостике.jpg
+					www\Example\ittveLife\ittve02-065-Островок.jpg
+					www\Example\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.jpg
+					www\Example\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.txt
+					www\Example\ittveLife\ittve02-065-Пока-аптекарский-садик.jpg
+					www\Example\ittveLife\ittve02-065-Привет-сад.jpg
+					www\Example\ittveLife\ittve02-065-Фонтанчик.jpg
+					www\Example\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
+					www\Example\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
+				www\Example\CommonIttvePw.php
+				www\Example\download.php
+				www\Example\iUserError.php
 			-favicon260x260
 				www\favicon260x260\android-chrome-192x192.png
 				www\favicon260x260\android-chrome-256x256.png
@@ -91,7 +120,7 @@ IttveMe
 					www\font-awesome-4.7.0\scss\_variables.scss
 					www\font-awesome-4.7.0\scss\font-awesome.scss
 				www\font-awesome-4.7.0\HELP-US-OUT.txt
-			+Images
+			-Images
 				-Anime
 					www\Images\Anime\a1.jpg
 					www\Images\Anime\a2.png
@@ -142,53 +171,6 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Old
-				-example
-					-image
-						www\Old\example\image\a1.jpg
-						www\Old\example\image\a2.png
-						www\Old\example\image\a3.png
-				-ittveLife
-					www\Old\ittveLife\GalleryLife.php
-					www\Old\ittveLife\ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html
-					www\Old\ittveLife\ittve01-001-Дождь-празднику-не-помеха.jpg
-					www\Old\ittveLife\ittve01-001-На-Сампо.jpg
-					www\Old\ittveLife\ittve01-001-Подъём-настроения.jpg
-					www\Old\ittveLife\ittve01-001-С-заботой-и-к-мамам.jpg
-					www\Old\ittveLife\ittve01-001-У-ёлочки.png
-					www\Old\ittveLife\ittve01-001-Хочешь-кваску.jpg
-					www\Old\ittveLife\ittve02-065-20140822-Этюд-из-аптекарского-сада.html
-					www\Old\ittveLife\ittve02-065-Автомобиль-что-позабавит-и-повеселит.jpg
-					www\Old\ittveLife\ittve02-065-В-город-c-молоком.jpg
-					www\Old\ittveLife\ittve02-065-Вокруг-прудика.jpg
-					www\Old\ittveLife\ittve02-065-Всем-солнечного-лета.jpg
-					www\Old\ittveLife\ittve02-065-Едем-по-грибку.jpg
-					www\Old\ittveLife\ittve02-065-Здесь-здоровье.jpg
-					www\Old\ittveLife\ittve02-065-На-мостике.jpg
-					www\Old\ittveLife\ittve02-065-Островок.jpg
-					www\Old\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.jpg
-					www\Old\ittveLife\ittve02-065-Первое-впечатление-от-Беларуси.txt
-					www\Old\ittveLife\ittve02-065-Пока-аптекарский-садик.jpg
-					www\Old\ittveLife\ittve02-065-Привет-сад.jpg
-					www\Old\ittveLife\ittve02-065-Фонтанчик.jpg
-					www\Old\ittveLife\ittve02-065-Чай-и-блины-с-медом-это-вкусно.jpg
-					www\Old\ittveLife\ittve02-114-20180922-По-тропе-к-карнизу-реки-Бзерпь.html
-				-Reset
-					www\Old\Reset\e404.php
-					www\Old\Reset\index.php
-				-smartmenus
-					www\Old\smartmenus\jquery.smartmenus.min.js
-					www\Old\smartmenus\sm-blue.css
-					www\Old\smartmenus\sm-core-css.css
-				-TJsPrown
-					www\Old\TJsPrown\TJsPrown.css
-					www\Old\TJsPrown\TJsPrown.js
-				www\Old\download.php
-				www\Old\IttveMe.js
-				www\Old\iUserError.php
-				www\Old\pic.png
-				www\Old\sampo.jpg
-				www\Old\ViewImage.php
 			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
@@ -439,13 +421,12 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
-				-TArticlesMaker
+			+ttools
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
 					www\ttools\TArticlesMaker\CommonIttveMe.php
-					www\ttools\TArticlesMaker\CommonIttvePw.php
 					www\ttools\TArticlesMaker\TestBase.php
 				-TDelArt
 					www\ttools\TDelArt\DelArtClass.php
@@ -506,11 +487,11 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				-TNewArt
+				+TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
-				-TNewCue
+				+TNewCue
 					-img
 						www\ttools\TNewCue\img\aim.png
 						www\ttools\TNewCue\img\bg.png
@@ -597,7 +578,6 @@ IttveMe
 			www\Kwinflatic.jpg
 			www\manifest.json
 			www\photo-8i.jpg
-			www\SignaPhotoImg.php
 			www\TestBase.php
 			www\testForDelArt.php
 			www\testNameArt.php
@@ -605,7 +585,6 @@ IttveMe
 			www\UpSite.php
 			www\UpSiteCSS.php
 			www\ViewImage.php
-			www\ViewImageOld.php
 		-Материалы
 			-Htaccess
 				Материалы\Htaccess\Как отладить RewriteRule.lnk
@@ -635,59 +614,39 @@ IttveMe
 0=www\index.php
 1=www\iniMem.php
 2=www\Jsx\WorkTiny.js
-3=www\Common.php
-4=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-5=www\ttools\TTinyGallery\TinyGalleryClass.php
-6=www\ttools\TKwinGallery\KwinGalleryClass.php
-7=www\ttools\TNewArt\NewArtClass.php
-8=www\ViewImage.php
-9=www\UpSiteCSS.php
-10=www\SignaPhotoImg.php
-11=www\UpSite.php
-12=www\Styles\iniStyles.css
-13=www\Styles\Content.css
+3=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+4=www\ttools\TTinyGallery\TinyGalleryClass.php
+5=www\ttools\TKwinGallery\KwinGalleryClass.php
+6=www\UpSiteCSS.php
+7=www\UpSite.php
+8=www\ttools\TZhizniPuti\ZhizniPutiClass.php
 [Selected Project Files]
 Main=
-Selected=www\UpSiteCSS.php
+Selected=www\ttools\TZhizniPuti\ZhizniPutiClass.php
 [www\index.php]
-TopLine=78
+TopLine=90
 Caret=1,90
 [www\iniMem.php]
-TopLine=162
-Caret=1,184
+TopLine=192
+Caret=1,207
 [www\Jsx\WorkTiny.js]
-TopLine=149
-Caret=2,182
-[www\Common.php]
-TopLine=107
-Caret=1,1
+TopLine=71
+Caret=1,13
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=83
-Caret=1,96
+TopLine=535
+Caret=95,167
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=218
+TopLine=458
 Caret=79,245
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=197
 Caret=59,219
-[www\ttools\TNewArt\NewArtClass.php]
-TopLine=78
-Caret=49,100
-[www\ViewImage.php]
-TopLine=94
-Caret=1,115
 [www\UpSiteCSS.php]
-TopLine=100
-Caret=40,119
-[www\SignaPhotoImg.php]
-TopLine=75
-Caret=1,109
+TopLine=272
+Caret=1,177
 [www\UpSite.php]
-TopLine=6
-Caret=1,26
-[www\Styles\iniStyles.css]
-TopLine=83
-Caret=26,114
-[www\Styles\Content.css]
-TopLine=33
-Caret=26,50
+TopLine=46
+Caret=23,33
+[www\ttools\TZhizniPuti\ZhizniPutiClass.php]
+TopLine=34
+Caret=1,144

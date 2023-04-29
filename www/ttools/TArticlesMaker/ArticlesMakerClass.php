@@ -166,141 +166,6 @@ class ArticlesMaker
       else $this->kindMessage->Info($messa); 
    }
    // *************************************************************************
-   // *           Сформировать строки меню по базе данных материалов          *
-   // *  (общий механизм: $clickGru-вызов процедуры обработки клика по группе *
-   // *   материалов, $clickOne-вызов процедуры обработки клика по материалу) *
-   // *************************************************************************
-   public function MakeUniMenu($pdo,$clickGru='',$clickOne='')
-   {
-      $lvl=-1;      // инициировали текущий уровень меню
-      $cLast='+++'; // инициировали признак типа сформированной строки меню
-      $nLine=0;     // инициировали счетчик сформированных строк меню
-      $cli="";      // сбрасили начальную вставку конца пункта меню
-      $this->_MakeUniMenu($clickGru,$clickOne,$pdo,1,1,$cLast,$nLine,$cli,$lvl);
-   }
-   
-   /*
-   private function _MakeUniMenu($clickGru,$clickOne,
-   $pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
-   {
-      // Определяем текущий уровень меню
-      $lvl++; 
-      // Выбираем все записи одного родителя
-      $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
-      $stmt = $pdo->query($cSQL);
-      $table = $stmt->fetchAll();
-      if (count($table)>0) 
-      {
-         echo('<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
-         // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
-         foreach ($table as $row)
-         {
-            // Инкрементируем счетчик строк
-            $nLine++; 
-            // Выбираем параметры записи
-            $Uid=$row["uid"]; $Pid=$row["pid"]; 
-            $NameArt=$row['NameArt']; $Translit=$row["Translit"];
-            $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
-            // Закрываем предыдущий 'LI'
-            if ($cLast<>'+ul') 
-            {
-                $cli="</li>\n";
-                echo($cli); $cLast='-li';
-            }
-            // Выводим 'LI' группы материалов или собственно материала
-            $grClick=$this->HandleСlick($clickGru,$Uid);
-            $maClick=$this->HandleСlick($clickOne,$Uid);
-            echo('<li>'); 
-            if ($IdCue==-1)
-            {
-               echo('<i'.$grClick.'>'.$NameArt.
-                    '<span id="spa'.$Uid.'">'.$Uid.'.</span>'.
-                    '</i>'."\n");
-            } 
-            else
-            {
-               echo('<i'.$maClick.'><em>'.$Uid.'.</em>'.$NameArt.'</i>'."\n"); 
-            }
-            $cLast='+li';
-            // Заходим на следующую строку
-            $this->_MakeUniMenu($clickGru,$clickOne,
-               $pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
-            $lvl--; 
-         }
-         $cli="</li>\n";
-         echo($cli); $cLast='-li'; 
-         echo("</ul>\n");  $cLast='-ul';
-      }
-   }
-   */
-
-   // Модификация от 22.03.2023
-   private function _MakeUniMenu($clickGru,$clickOne,
-   $pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
-   {
-      // Определяем текущий уровень меню
-      $lvl++; 
-      // Выбираем все записи одного родителя
-      $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
-      $stmt = $pdo->query($cSQL);
-      $table = $stmt->fetchAll();
-      if (count($table)>0) 
-      {
-         echo('<ul'.$FirstUl.'>'."\n"); $cLast='+ul';
-         // Перебираем все записи родителя, подсчитываем количество, формируем пункты меню
-         foreach ($table as $row)
-         {
-            // Инкрементируем счетчик строк
-            $nLine++; 
-            // Выбираем параметры записи
-            $Uid=$row["uid"]; $Pid=$row["pid"]; 
-            $NameArt=$row['NameArt']; $Translit=$row["Translit"];
-            $IdCue=$row["IdCue"]; $DateArt=$row["DateArt"]; 
-            // Закрываем предыдущий 'LI'
-            if ($cLast<>'+ul') 
-            {
-                $cli="</li>\n";
-                echo($cli); $cLast='-li';
-            }
-            // Выводим 'LI' группы материалов или собственно материала
-            $grClick=$this->HandleСlick($clickGru,$Uid);
-            $maClick=$this->HandleСlick($clickOne,$Uid);
-            echo('<li>'); 
-            if ($IdCue==-1)
-            {
-               echo('<i'.$grClick.'>'.$NameArt.
-                    '<span id="spa'.$Uid.'">'.$Uid.'.</span>'.
-                    '</i>'."\n");
-            } 
-            else
-            {
-               echo('<i'.$maClick.'><em>'.$Uid.'.</em>'.$NameArt.'</i>'); 
-               /*echo('<i'.$maClick.'><em>'.$Uid.'.</em>'.$NameArt.'</i>');*/ 
-               /*echo('<a href="?artim='.$Translit.'">'.$NameArt.'</a>'."\n");*/ 
-               /*
-               $href='<a href="?artim='.$Translit.'">'.$NameArt.'</a>';
-               echo('<i>'.$href.'</i>'); 
-               */
-               echo("\n"); 
-            }
-            $cLast='+li';
-            // Заходим на следующую строку
-            $this->_MakeUniMenu($clickGru,$clickOne,
-               $pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
-            $lvl--; 
-         }
-         $cli="</li>\n";
-         echo($cli); $cLast='-li'; 
-         echo("</ul>\n");  $cLast='-ul';
-      }
-   }
-   private function HandleСlick($clickIs,$Uid)
-   {
-      if ($clickIs=='') $Result='';
-      else $Result=' onclick="'.$clickIs.'('.$Uid.')"';
-      return $Result;
-   }
-   // *************************************************************************
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
    public function Init()
@@ -332,43 +197,14 @@ class ArticlesMaker
       return _BaseConnect($this->basename,$this->username,$this->password);
    }
    // *************************************************************************
-   // *     Построить html-код ТАБЛИЦЫ меню по базе данных материалов сайта   *
-   // *                      с сортировкой по полям                           *
-   // *************************************************************************
-   public function MakeTblMenu($ListFields,$SignAsc,$SignDesc)
-   {
-      _MakeTblMenu($this->basename,$this->username,$this->password,
-          $ListFields,$SignAsc,$SignDesc);
-   } 
-   // *************************************************************************
-   // *        Построить html-код меню по базе данных материалов сайта        *
-   // *************************************************************************
-   public function MakeMenu()
-   {
-      _MakeMenu($this->basename,$this->username,$this->password);
-   } 
-   // *************************************************************************
    // *    Создать резервную копию базы данных, построить новую базу данных   *
    // * ($aCharters='-',подключить массив со структурой основной базы данных) *
    // *************************************************************************
    public function BaseFirstCreate($aCharters='-') 
    {
-      if (articleSite==tbsIttveme) 
       _BaseFirstCreate($this->basename,$this->username,$this->password,$aCharters);
-      else
-      _BaseFirstCreate($this->basename,$this->username,$this->password);
    }
-   // *************************************************************************
-   // *                Показать пример меню для конкретного сайта             *
-   // *************************************************************************
-   public function ShowSampleMenu() 
-   {
-      _ShowSampleMenu();
-   }
-   public function ShowProbaMenu() 
-   {
-      _ShowProbaMenu();
-   }
+
    // ----------------------------------------------------- ЗАПРОСЫ ПО БАЗЕ ---
    
    // *************************************************************************
