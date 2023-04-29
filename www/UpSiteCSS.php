@@ -131,44 +131,6 @@ if ($ImageFile<>NULL)
    }
 }
 
-// Определяем данные для работы с базой данных материалов 
-$basename=$SiteHost.'/Base'.'/ittve';           // имя базы без расширения 'db3'
-$username='tve';                                // логин посетителя для авторизации
-$password='23ety17'; 
-
-// Подключаем объект единообразного вывода сообщений
-$note=new ttools\Notice();
-// Подключаем объект для работы с базой данных материалов
-// // (при необходимости создаем базу данных материалов)
-$Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
-
-// При необходимости создаем базу данных материалов
-$BaseCreate='Exist';
-if (!file_exists($basename.'.db3')) 
-{
-   $Arti->BaseFirstCreate();
-   $BaseCreate='Yes';
-}
-
-$Arti->setKindMessage($note);
-// Подключаем объект по редактированию материала - для работы в галерее 
-// и рабочей области редактирования (в том числе создаем объект для управления
-// изображениями в галерее, связанной с материалом сайта из базы данных)
-$WorkTinyHeight='75'; $FooterTinyHeight='15'; $KwinGalleryWidth='30'; $EdIzm='%';
-$Edit=new ttools\TinyGallery($SiteRoot,$urlHome,
-   $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
-// Подключаем заменяющую игру для страницы "Добавить новый раздел"
-require_once "ttools/TNewCue/gameDuckFlyClass.php";
-$Duck=new game\DuckFly('IttveME');
-// Подключаем заменяющую игру для страницы "Удалить раздел материалов"
-require_once "ttools/TDelCue/g2048/game2048Class.php";
-$a2048=new game\g2048('IttveME');
-// Подключаем заменяющую игру для страницы "Отправить сообщение автору"
-require_once "ttools/TSaymeClass/Hextris/gameHextrisClass.php";
-$Hex=new game\Hextris($c_PresMode,'IttveME');
-// Подключаем заменяющую игру для страницы "Войти или зарегистрироваться"
-require_once "ttools/TEntryClass/PairedCards/PairedCardsClass.php";
-$Paired=new game\PairedCards($c_PresMode,'IttveME');
 // Подключаем стили для редактирования материалов
 $Edit->Init($aPresMode,$aModeImg,$urlHome,moditap,$Duck,$a2048,$Hex,$Paired);
 $note->Init();

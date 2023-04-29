@@ -171,7 +171,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -487,11 +487,11 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				+TNewArt
+				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
-				+TNewCue
+				-TNewCue
 					-img
 						www\ttools\TNewCue\img\aim.png
 						www\ttools\TNewCue\img\bg.png
@@ -576,6 +576,7 @@ IttveMe
 			www\iniWorkSpace.php
 			www\ittve-log.txt
 			www\Kwinflatic.jpg
+			www\log.txt
 			www\manifest.json
 			www\photo-8i.jpg
 			www\TestBase.php
@@ -622,28 +623,28 @@ IttveMe
 8=www\ttools\TZhizniPuti\ZhizniPutiClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TZhizniPuti\ZhizniPutiClass.php
+Selected=www\UpSiteCSS.php
 [www\index.php]
 TopLine=90
 Caret=1,90
 [www\iniMem.php]
-TopLine=192
-Caret=1,207
+TopLine=218
+Caret=1,245
 [www\Jsx\WorkTiny.js]
 TopLine=71
 Caret=1,13
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=535
-Caret=95,167
+TopLine=129
+Caret=50,566
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=458
-Caret=79,245
+TopLine=244
+Caret=26,257
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=197
 Caret=59,219
 [www\UpSiteCSS.php]
-TopLine=272
-Caret=1,177
+TopLine=131
+Caret=1,133
 [www\UpSite.php]
 TopLine=46
 Caret=23,33
