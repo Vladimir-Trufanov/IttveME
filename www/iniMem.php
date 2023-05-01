@@ -228,7 +228,7 @@ $Arti->setKindMessage($note);
 // и рабочей области редактирования (в том числе создаем объект для управления
 // изображениями в галерее, связанной с материалом сайта из базы данных)
 $WorkTinyHeight='75'; $FooterTinyHeight='15'; $KwinGalleryWidth='30'; $EdIzm='%';
-$Edit=new ttools\TinyGallery($SiteRoot,$urlHome,
+$Edit=new ttools\TinyGallery($SiteRoot,$urlHome,$SiteDevice,
    $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
 // Подключаем заменяющую игру для страницы "Добавить новый раздел"
 require_once "ttools/TNewCue/gameDuckFlyClass.php";

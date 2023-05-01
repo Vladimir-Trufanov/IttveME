@@ -129,7 +129,7 @@ class TinyGallery
    private   $ModyCue;          // объект "Изменить заголовок раздела или иконку"
    private   $DelArt;           // объект "Удалить материал"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
-   public function __construct($SiteRoot,$urlHome,
+   public function __construct($SiteRoot,$urlHome,$SiteDevice,
       $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
    {
       // Инициализируем свойства класса
@@ -148,6 +148,7 @@ class TinyGallery
       
       $this->SiteRoot=$SiteRoot; 
       $this->urlHome=$urlHome; 
+      $this->SiteDevice=$SiteDevice; 
       $this->fileStyle="Styles/WorkTiny.css";
       $this->editdir=editdir; 
       $this->pidEdit=-1; 
@@ -448,9 +449,12 @@ class TinyGallery
          }
          else 
          {
-            echo $UserAgent.'<br>';
-            echo '<a href="https://www.pspad.com/ru/" title="PSPad.com - freeware text editor">'.
-            '<strong>PSPad - замечательный текстовый редактор</strong></a>';
+            if ($this->SiteDevice=='Computer')
+            {
+               echo $UserAgent.'<br>';
+               echo '<a href="https://www.pspad.com/ru/" title="PSPad.com - freeware text editor">'.
+                  '<strong>PSPad - замечательный текстовый редактор</strong></a>';
+            }
          }
       echo '</div>';
       // Правая часть подвала, меню управления

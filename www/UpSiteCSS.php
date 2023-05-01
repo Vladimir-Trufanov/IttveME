@@ -32,6 +32,12 @@ echo '
 <meta name="msapplication-config" content="/favicon260x260/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 ';
+
+if ($SiteDevice<>Mobile)
+{
+   echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+}
+
 // Подключаем font-awesome 4.7.0
 echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
 // Подключаем jQuery 
@@ -54,21 +60,12 @@ echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/Content.css">';
 echo '<link rel="stylesheet" type="text/css" href="Styles/WorkTiny.css">';
 echo '<link rel="stylesheet" type="text/css" href="ttools/TMenuLeader/MenuLeader.css">';
+echo '<link rel="stylesheet" type="text/css" media="(max-device-width:802px)" href="Styles/mobile.css">';
 
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
 echo '<script src="/Jsx/WorkTiny.js"></script>';
-/*
-// Определяем стили галлереи, определяем стили для показа изображения, 
-// выбранной в галерее картинки, на отдельной странице в ее рамках 
-// или в натуральную величину 
-echo '<link rel="stylesheet" type="text/css" href="Styles/Gallery-Image.css">';
-// Определяем стили меню статей (материалов) 
-echo '<link rel="stylesheet" type="text/css" href="Styles/MenuArticles.css">';
-// Определяем стили страницы редактирования материалов
-echo '<link rel="stylesheet" type="text/css" href="Styles/EditText.css">';
-*/
 // Определяем письменный шрифт, который будем использовать для статей
 // (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')
 echo'  

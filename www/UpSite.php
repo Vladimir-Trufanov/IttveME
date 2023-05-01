@@ -69,7 +69,8 @@ else
    echo '<div id="Info">';
       echo '
       <div id="InfoLeft">
-         Copyright (c) 2019 v2.0  Труфанов Владимир   tve58@inbox.ru<br>
+         Copyright (c) 2019-23 v2.0  Труфанов Владимир   tve58@inbox.ru 
+         <span id="scrwi">1200</span>x<span id="scrhe">720</span>
       </div>
       ';
       echo '<div id="InfoRight">';

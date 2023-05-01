@@ -35,10 +35,6 @@ class PairedCards
       if ($this->Place=='IttveME')
       {
          echo '
-            <!-- 
-         	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin">
-	        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron:400,700">
-            -->
             <link rel="stylesheet" type="text/css" href="ttools/TEntryClass/PairedCards/matchgame.css">
          ';
          echo '
@@ -47,8 +43,6 @@ class PairedCards
             {
                width:100%;
                height:92%;
-               /*background:transparent;*/
-               /*background:white;*/
                overflow:auto;
             }
             </style>

@@ -100,7 +100,6 @@ html,body,#News,#Life,#Gallery,#FooterTiny,#Info,#DivImg
 #Life{background:Azure;}
 #News{background:Cornsilk;}
 #Gallery{background:LightCyan;}
-#FooterTiny{background:LightGrey;}
 #Info{background:Ivory;}
 */
 
@@ -116,6 +115,63 @@ html,body,#News,#Life,#Gallery,#FooterTiny,#Info,#DivImg
 #ExtImg
 {
 }
+
+/* Поднастройки для компьютера (для смартфонов в mobile.css) */
+
+/* Выравниваем по вертикали низ страницы */
+#Life,#News
+{
+   bottom:5.9rem;
+}
+#FooterTiny
+{
+   bottom:1.4rem;
+   height:4.4rem;
+}
+#Info
+{
+   bottom:0;
+   height:1.4rem;
+}
+#btnLifeMenu
+{
+   padding-top:.2rem;
+}
+
+/* Выравниваем по горизонтали вокруг кнопок */
+#LifeMenu
+{
+   left:0;
+   width:5rem;
+}
+#LeftFooter
+{
+   left:5rem;
+   right:24rem;
+}
+#RightFooter
+{
+   width:24rem;
+}
+/* Поднастраиваем управляющее меню */
+.navset .link .prev 
+{
+   font-size:2rem; 
+}
+.navset .link .small 
+{
+   font-size:3.6rem; 
+}
+
+
+/*#FooterTiny{background:LightGrey;}*/
+
+#WorkTiny
+{
+   font-size:1.6rem;
+   padding: 0 1rem 0 1rem;
+}
+
 
 /* ******************************************************* iniStyles.css *** */	
 	

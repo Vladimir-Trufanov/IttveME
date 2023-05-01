@@ -49,7 +49,6 @@ $('.sel__box__options').click(function()
    $currentSel.children('select').prop('selectedIndex', index + 1);
 });
 
-
 function getScreenInfo(setconsole=true)
 {
 // http://qaru.site/questions/83058/getting-the-physical-screen-dimensions-dpi-pixel-density-in-chrome-on-android
@@ -95,7 +94,7 @@ var str =
    'Device Pixel Ratio: '+DevicePixelRatio
 ].join('\n');
 
-if (setconsole) console.log(str);
+//if (setconsole) console.log(str);
 return aScreenInfo;
 }
 

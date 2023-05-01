@@ -22,18 +22,7 @@
 {
    top:0;
    padding:.6rem;
-   bottom:5.9rem;
    z-index:10;
-}
-#FooterTiny
-{
-   bottom:1.4rem;
-   height:4.4rem;
-}
-#Info
-{
-   bottom:0;
-   height:1.4rem;
 }
 #FooterTiny,#Info
 {
@@ -49,20 +38,9 @@
    bottom:0;
    background:transparent; 
 }
-#LifeMenu
-{
-   left:0;
-   width:5rem;
-}
-#LeftFooter
-{
-   left:5rem;
-   right:24rem;
-}
 #RightFooter
 {
    right:0;
-   width:24rem;
 }
 /* 
  Неизменные стили нижней информационной строки
@@ -75,13 +53,11 @@
 #InfoLeft
 {
    float:left;
-   width:50%;
 }
 #InfoRight
 {
    float:right;
    text-align:right;
-   width:50%;
 }
 #InfoLeft,#InfoRight
 {
@@ -154,9 +130,8 @@
 */
 #btnLifeMenu
 {
-   width: 95%;
-   margin-top:.3rem;
-   margin-left:.3rem;
+   width:100%;
+   height:100%;
 }
 #imgLifeMenu
 {

@@ -1,0 +1,84 @@
+/** HTML5/CSS3, EDGE/CHROME                                  *** mobile.css ***
+
+ ******************************************************************************
+ * ittve.me             Выполнить уточняющие настройки для смартфонов 360x800 *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2023 tve                                Посл.изменение: 01.05.2023
+*/
+
+@media (orientation: landscape) 
+{
+   /* Beige-зеленоватость */
+   /* #FooterTiny{background:#F5F5DC;} */ 
+   #WorkTiny
+   {
+      font-size:1rem;
+      padding: 0 1rem 0 1rem;
+   }
+}
+
+@media (orientation: portrait) 
+{
+   /* AliceBlue-серая голубизна */
+   /* #FooterTiny{background:#F0F8FF;} */  
+
+   /* Выравниваем по вертикали низ страницы */
+   #Life,#News
+   {
+      bottom:11.9rem;
+   }
+   #FooterTiny
+   {
+      bottom:1.4rem;
+      height:10.4rem;
+   }
+   #Info
+   {
+      bottom:0;
+      height:1.4rem;
+   }
+   #btnLifeMenu
+   {
+      padding-top:.5rem;
+   }
+   /* Выравниваем по горизонтали вокруг кнопок */
+   #LifeMenu
+   {
+      left:0;
+      width:12rem;
+   }
+   #LeftFooter
+   {
+      left:12rem;
+      right:40rem;
+   }
+   #RightFooter
+   {
+      width:40rem;
+   }
+   /* Поднастраиваем управляющее меню */
+   .navset .link .prev 
+   {
+      font-size:4rem; 
+   }
+   .navset .link .small 
+   {
+      font-size:7.2rem; 
+   }
+
+
+
+
+   #WorkTiny
+   {
+      font-size:2rem;
+      padding: 0 2rem 0 2rem;
+   }
+}
+
+/* ********************************************************** mobile.css *** */	
+	
+
