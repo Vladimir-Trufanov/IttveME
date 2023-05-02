@@ -12,10 +12,10 @@
 // ****************************************************************************
 // *                             "Жизнь и путешествия"                        *
 // ****************************************************************************
-function mmlZhiznIputeshestviya_HEAD($Arti,$apdo)
+function mmlZhiznIputeshestviya_HEAD($Arti,$apdo,$urlHome)
 {
    require_once "ttools/TZhizniPuti/ZhizniPutiClass.php";
-   $ZhizniPuti=new ZhizniPuti($Arti,$apdo);
+   $ZhizniPuti=new ZhizniPuti($Arti,$apdo,$urlHome);
    $ZhizniPuti->Head();
    return $ZhizniPuti;
 }

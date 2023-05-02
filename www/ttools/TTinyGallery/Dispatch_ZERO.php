@@ -12,7 +12,7 @@
 // 2-ZERO этап 
 
 // ----------------------------------------------- 'Выбрать следующий материал'
-function mmlVybratSledMaterial_ZERO($Arti,&$getArti)
+function mmlVybratSledMaterial_ZERO($Arti,&$getArti,$urlHome)
 {
    // Инициируем сообщение в случае успешного поиска и 
    // идентификатор записи для поиска
@@ -37,7 +37,15 @@ function mmlVybratSledMaterial_ZERO($Arti,&$getArti)
       // Если ошибка, то формируем отложенное сообщение
       if ($a[0]["Translit"]==nstErr) $DelayedMessage=$a[0]["NameArt"];
       // Если поиск удачный, то возвращаем найденный транслит
-      else $getArti=$Arti->setCurrTranslit($a[0]["Translit"]); 
+      else 
+      {
+         $getArti=$Arti->setCurrTranslit($a[0]["Translit"]); 
+         // Загружаем страницу редактирования нового материала
+         //Header("Location: ".$urlHome.'/?arti='.$a[0]["Translit"],true);
+
+         
+         //?arti=kindasovo-zemlya-karelskogo-yumora
+      }
    }
    // Возвращаем сообщение
    return $DelayedMessage;

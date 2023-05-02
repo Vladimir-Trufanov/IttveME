@@ -74,7 +74,10 @@ else
       </div>
       ';
       echo '<div id="InfoRight">';
-      echo $SiteDevice." ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
+      if ($messRequest==nstOk)
+         echo $SiteDevice." ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
+      else
+         echo $messRequest.': '.$SiteDevice." ".$c_PersName; 
       echo '</div>';
    echo '</div>';
    }

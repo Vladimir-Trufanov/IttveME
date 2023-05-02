@@ -75,9 +75,26 @@ php_value upload_max_filesize 3M
 ## Включаем преобразование URL
 RewriteEngine On
 
-## Преобразовываем URL-запросы главных страниц сайта
-## RewriteRule ^zhizn-i-puteshestviya$               ?Com=zhizn-i-puteshestviya [L]
-## RewriteRule ^otpravit-avtoru-soobshchenie$        ?Com=otpravit-avtoru-soobshchenie [L]
+## Преобразовываем URL-запросы командных страниц 1 ряда:
+RewriteRule ^zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
+RewriteRule ^vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
+RewriteRule ^vernutsya-k-predydushchej-state$        ?Com=vernutsya-k-predydushchej-state [L]
+RewriteRule ^otpravit-avtoru-soobshchenie$           ?Com=otpravit-avtoru-soobshchenie [L]
+RewriteRule ^vojti-ili-zaregistrirovatsya$           ?Com=vojti-ili-zaregistrirovatsya [L]
+## Преобразовываем URL-запросы командных страниц 2 ряда:
+RewriteRule ^prochitat-o-sajte-izmenit-nastrojki$    ?Com=prochitat-o-sajte-izmenit-nastrojki [L]
+RewriteRule ^sozdat-material-ili-redaktirovat$       ?Com=sozdat-material-ili-redaktirovat [L]
+RewriteRule ^izmenit-nazvanie-razdela-ili-ikonku$    ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
+## Преобразовываем URL-запросы командных страниц 3 ряда:
+RewriteRule ^vybrat-statyu-dlya-redaktirovaniya$     ?Com=vybrat-statyu-dlya-redaktirovaniya [L]
+RewriteRule ^naznachit-statyu$                       ?Com=naznachit-statyu [L]
+RewriteRule ^udalit-material$                        ?Com=udalit-material [L]
+## Командные страницы 4 ряда:
+RewriteRule ^dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
+RewriteRule ^udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
+
+## RewriteRule ^([0-9a-z\-]*)$                       ?arti=$1 [L]
+
 ## RewriteRule ^izmenit-nastrojki-sajta-v-brauzere$  ?Com=izmenit-nastrojki-sajta-v-brauzere [L]
 ## RewriteRule ^vojti-ili-zaregistrirovatsya$        ?Com=vojti-ili-zaregistrirovatsya [L]
 ## RewriteRule ^sozdat-material-ili-redaktirovat$    ?Com=sozdat-material-ili-redaktirovat [L]

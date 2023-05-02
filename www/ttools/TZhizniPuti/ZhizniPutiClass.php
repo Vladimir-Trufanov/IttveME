@@ -13,16 +13,18 @@
 class ZhizniPuti
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $Arti; // объект по работе с базой данных материалов
-   protected $apdo; // подключение к базе данных материалов
+   protected $Arti;    // объект по работе с базой данных материалов
+   protected $apdo;    // подключение к базе данных материалов
+   protected $urlHome; // начальная страница сайта 
    
    // *************************************************************************
    // *                   Проинициализировать свойства класса                 *
    // *************************************************************************
-   public function __construct($Arti,$apdo) 
+   public function __construct($Arti,$apdo,$urlHome) 
    {
       $this->Arti=$Arti;
       $this->apdo=$apdo;
+      $this->urlHome=$urlHome;
    }
    public function __destruct() 
    {
@@ -48,7 +50,7 @@ class ZhizniPuti
    // *************************************************************************
    public function Body() 
    {
-      MakeMyLifeMenu($this->apdo);
+      MakeMyLifeMenu($this->apdo,$this->urlHome);
    }
 }
 
@@ -57,7 +59,7 @@ class ZhizniPuti
 // ****************************************************************************
 // *             Подготовить и развернуть меню "Жизнь и путешествия"          *
 // ****************************************************************************
-function MakeMyLifeMenu($pdo) 
+function MakeMyLifeMenu($pdo,$urlHome) 
 {
    // Готовим параметры и вырисовываем меню
    $lvl=-1; $cLast='+++';
@@ -65,13 +67,13 @@ function MakeMyLifeMenu($pdo)
    // Параметр $otlada при необходимости используется для просмотра в коде
    // страницы вложенности тегов и вызова рекурсий 
    $otlada=false;
-   ShowMyLife($pdo,1,1,$cLast,$nLine,$cli,$lvl,$otlada);
+   ShowMyLife($pdo,$urlHome,1,1,$cLast,$nLine,$cli,$lvl,$otlada);
    unset($pdo);          
 }
 // ****************************************************************************
 // *                       Рекурсивно сгенерировать пункты меню               *
 // ****************************************************************************
-function ShowMyLife($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
+function ShowMyLife($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
 {
    // Определяем текущий уровень меню
    $lvl++; 
@@ -108,10 +110,12 @@ function ShowMyLife($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$F
          {
             $nPoint++;
             echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."<li> ");
-            echo('<a href="?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            //echo('<a href="?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            //echo('<a href="index.php?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            echo('<a href="'.$urlHome.'/?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
          }
          $cLast='+li';
-         ShowMyLife($pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,$otlada,' class="sub-menu"'); 
+         ShowMyLife($pdo,$urlHome,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,$otlada,' class="sub-menu"'); 
          $lvl--; 
       }
       $cli=SpacesOnLevel($lvl,$cLast,0,0,$otlada)."</li>\n";

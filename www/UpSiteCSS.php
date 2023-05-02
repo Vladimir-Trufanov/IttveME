@@ -16,10 +16,10 @@ echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8">';
-// SeoTags()
-echo '<title>Обо мне, путешествиях и ... Черногории</title>';
-echo '<meta name="description" content="Труфанов Владимир Евгеньевич, его жизнь и увлечения, жизнь его близких">';
-echo '<meta name="keywords" content="Труфанов Владимир Евгеньевич, жизнь и увлечения">';
+$messRequest=SeoTags($ttl,$desc,$keys);
+echo '<title>'.$ttl.'</title>';
+echo '<meta name="description" content="'.$desc.'">';
+echo '<meta name="keywords" content="'.$keys.'">';
 // Выводим данные о favicon
 echo '
 <link rel="manifest" href="manifest.json">

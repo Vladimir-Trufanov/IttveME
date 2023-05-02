@@ -211,14 +211,14 @@ class TinyGallery
       // 1-ZERO этап ---------------------------- 'Проверка текущего транслита'
       if ($Translit==NULL)
       {
-         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit);
+         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit,$this->urlHome);
       }
       // 2-ZERO этап 
       if ($this->DelayedMessage==imok) 
       {
          // -------------------------------------- 'Выбрать следующий материал'
          if (\prown\isComRequest(mmlVybratSledMaterial))
-         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit);
+         $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit,$this->urlHome);
          // ----------------------------------- 'Вернуться к предыдущей статье'
          else if (\prown\isComRequest(mmlVernutsyaPredState))
          $this->DelayedMessage=mmlVernutsyaPredState_ZERO($this->Arti,$Translit);
@@ -343,7 +343,7 @@ class TinyGallery
 
          // 3-HEAD этап ---------------------------- ?Com=zhizn-i-puteshestviya
          if (\prown\isComRequest(mmlZhiznIputeshestviya))
-            $this->ZhizniPuti=mmlZhiznIputeshestviya_HEAD($this->Arti,$this->apdo);
+            $this->ZhizniPuti=mmlZhiznIputeshestviya_HEAD($this->Arti,$this->apdo,$this->urlHome);
          // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
          elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
             $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
@@ -424,12 +424,14 @@ class TinyGallery
    // *************************************************************************
    public function ViewFooterSpace($UserAgent)
    {
+      if (isNichost()) $cPreMe=''; else $cPreMe='?Com=';
+
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
          echo '
          <ul id="btnLifeMenu">
          <li>
-            <a href= "'.'?Com='.mmlZhiznIputeshestviya.'">
+            <a href= "'.$cPreMe.mmlZhiznIputeshestviya.'">
             <img id="imgLifeMenu" src="/Images/tveMenuD.png" alt="tveMenuD">
             </a> 
          </li> 
