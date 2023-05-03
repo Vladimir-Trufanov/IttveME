@@ -17,39 +17,40 @@ function SeoTags(&$ttl,&$desc,&$keys)
    $messRequest=nstOk;
    // http://localhost:83/?Com=vybrat-sleduyushchij-material ------------------  не индексировать
    
-   $res=prown\getComRequest('arti');
-   
    // Отрабатываем командные страницы 1 ряда: 
    //                                                     'Жизнь и путешествия'
    //                                              'Выбрать следующий материал'
    //                                              'Вернуться к прежней статье'
    //                                              'Отправить автору сообщение'
    //                                            'Войти или зарегистрироваться'
-   $res=prown\getComRequest();
-   if ($res<>NULL) $messRequest=$res; 
+   //$res=prown\getComRequest();
+   //if ($res<>NULL) $messRequest=$res; 
    
    // Отрабатываем командные страницы 2 ряда (из 'Жизнь и путешествия'): 
    //                                           'Вернуться на главную страницу'
    //                                   'Прочитать о сайте, изменить настройки'
    //                                      'Создать материал или редактировать'
    //                                    'Изменить название раздела или иконку'
-   $res=prown\getComRequest();
-   if ($res<>NULL) $messRequest=$res; 
+   //$res=prown\getComRequest();
+   //if ($res<>NULL) $messRequest=$res; 
    
    // Командные страницы 3 ряда (из 'Создать материал или редактировать'): 
    //                                          'Выбрать материал для изменений'
    //                                                  'Назначить новую статью'
    //                                    'Выбрать и удалить указанный материал'
-   $res=prown\getComRequest();
-   if ($res<>NULL) $messRequest=$res; 
+   //$res=prown\getComRequest();
+   //if ($res<>NULL) $messRequest=$res; 
    
    // Командные страницы 4 ряда (из 'Изменить название раздела или иконку'): 
    //                                        'Добавить новый раздел материалов'
    //                                               'Удалить раздел материалов'
-   $res=prown\getComRequest();
-   if ($res<>NULL) $messRequest=$res; 
+   //$res=prown\getComRequest();
+   //if ($res<>NULL) $messRequest=$res; 
 
    //elseif (\prown\isComRequest(mmlZhiznIputeshestviya))   
+   
+   $res=prown\getComRequest('arti');
+   
    return $messRequest;
 }
 

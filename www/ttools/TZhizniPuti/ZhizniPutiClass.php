@@ -75,8 +75,19 @@ function MakeMyLifeMenu($pdo,$urlHome)
 // ****************************************************************************
 function ShowMyLife($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
 {
+
+   //if (isNichost()) $cPreMe=''; else $cPreMe='?arti=';
+
    // Определяем текущий уровень меню
    $lvl++; 
+   
+   // Выбираем Translit самого себя - родителя
+   //$cSQL="SELECT uid,NameArt,Translit FROM stockpw WHERE uid=".$ParentID;
+   //$stmt = $pdo->query($cSQL);
+   //$table = $stmt->fetchAll();
+   //if (count($table)>0) $TranslitOwn=$table[0]["Translit"];
+   //else $TranslitOwn='TranslitOwn';
+   
    // Выбираем все записи одного родителя
    $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
    $stmt = $pdo->query($cSQL);
@@ -110,9 +121,10 @@ function ShowMyLife($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$
          {
             $nPoint++;
             echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."<li> ");
-            //echo('<a href="?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
-            //echo('<a href="index.php?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
-            echo('<a href="'.$urlHome.'/?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            //if (isNichost()) 
+            //   echo('<a href="'.$urlHome.'/'.$TranslitOwn.'/'.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            //else 
+               echo('<a href="'.$urlHome.'/'.'?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
          }
          $cLast='+li';
          ShowMyLife($pdo,$urlHome,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,$otlada,' class="sub-menu"'); 

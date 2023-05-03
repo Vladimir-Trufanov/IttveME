@@ -75,6 +75,43 @@ php_value upload_max_filesize 3M
 ## Включаем преобразование URL
 RewriteEngine On
 
+
+## 
+# В общем виде (без учета флагов) RewriteRule работает ОЧЕНЬ просто:
+#   взяли строку,
+#   cравнили с регулярным выражением в первом аргументе,
+#   если есть совпадение — заменили всю строку на значение второго аргумента,
+#   передали строку следующему RewriteRule.
+
+# Фантастический пример:
+
+# Запрос: http://mysite.com/info.html
+# В первый RewriteRule попадет "info.html"
+
+# Преобразовываем запрос в произвольную строку.
+# RewriteRule ^info.html$   I saw a turtle in the hole. And it was dancing rock-n-roll.
+# "info.html" -> "I saw a turtle..."
+
+# Заменяем эту строку на внешнюю ссылку.
+# RewriteRule turtle https://example.com/information/index.html
+# "I saw a turtle..." -> "https://example.com/information/index.html"
+
+# Заменяем имя сайта!
+# RewriteRule ^(.*)example.com(.*)$ $1example.org$2
+# "https://example.com/information/index.html" -> "https://example.org/information/index.html"
+
+# Заменяем протокол!
+# RewriteRule ^https:(.*)$ ftp:$1
+# "https://example.org/information/index.html" -> "ftp://example.org/information/index.html"
+
+# Заменяем конечную ссылку.
+# RewriteRule ^(.*)/index.html$ $1/main.php
+# "ftp://example.org/information/index.html" -> "ftp://example.org/information/main.php"
+##
+
+# https://www.ittve.me/progulki/ohota-na-medvedya
+# RewriteRule ^progulki/(.*)$                        ?arti=$1 - не срабатывает!
+
 ## Преобразовываем URL-запросы командных страниц 1 ряда:
 RewriteRule ^zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
 RewriteRule ^vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
@@ -92,15 +129,6 @@ RewriteRule ^udalit-material$                        ?Com=udalit-material [L]
 ## Командные страницы 4 ряда:
 RewriteRule ^dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
 RewriteRule ^udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
-
-## RewriteRule ^([0-9a-z\-]*)$                       ?arti=$1 [L]
-
-## RewriteRule ^izmenit-nastrojki-sajta-v-brauzere$  ?Com=izmenit-nastrojki-sajta-v-brauzere [L]
-## RewriteRule ^vojti-ili-zaregistrirovatsya$        ?Com=vojti-ili-zaregistrirovatsya [L]
-## RewriteRule ^sozdat-material-ili-redaktirovat$    ?Com=sozdat-material-ili-redaktirovat [L]
-## RewriteRule ^dobavit-novyj-razdel-materialov$     ?Com=dobavit-novyj-razdel-materialov [L]
-## RewriteRule ^izmenit-nazvanie-razdela-ili-ikonku$ ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
-## RewriteRule ^udalit-razdel-materialov$            ?Com=udalit-razdel-materialov [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
 RewriteCond %{ENV:HTTPS} !on
