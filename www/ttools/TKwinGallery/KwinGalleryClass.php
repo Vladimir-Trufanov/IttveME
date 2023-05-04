@@ -283,7 +283,13 @@ class KwinGallery
       echo '<button class="bCard" type="submit" onclick="ImageClick(\'';
       echo $isSrc;
       echo '\')">';
-      $i1sSrc='<img class="imgCard" loading="lazy" src="'.$isSrc.'">';
+      
+      $i1sSrc='<img class="imgCard" loading="lazy" src='.
+      //$i1sSrc='<img class="imgCard" src='.
+      "\n".
+      '"'.$isSrc.'"'.
+      "\n".
+      '>';
       echo $i1sSrc;
       echo '</button>';
       echo '<p class="pCard">'.$Comment.'</p>';
