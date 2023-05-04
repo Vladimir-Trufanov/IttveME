@@ -70,7 +70,8 @@ else
       echo '
       <div id="InfoLeft">
          Copyright (c) 2019-23 v2.0  Труфанов Владимир   tve58@inbox.ru 
-         <span id="scrwi">1200</span>x<span id="scrhe">720</span>
+         <span id="scrwi">1200</span>x<span id="scrhe">720</span>,
+         <span id="lazy">*</span>
       </div>
       ';
       echo '<div id="InfoRight">';

@@ -32,7 +32,7 @@ define ("ajTransparentSuccess", "Преобразование к прозрач�
 define ("ajUndeletionOldFiles", "Ошибка удаления старых файлов");
 
 // Подключить переменные JavaScript, соответствующие определениям в PHP
-function DefineJS($SiteHost)
+function DefineJS($SiteHost,$urlHome)
 {
    $define=
    '<script>'.
@@ -45,6 +45,7 @@ function DefineJS($SiteHost)
    'nstErr="'              .nstErr.'";'.
    'nstOk="'               .nstOk.'";'.
    'SiteHost="'            .$SiteHost.'";'.
+   'urlHome="'             .$urlHome.'";'.
 
    'ajSuccess="'           .ajSuccess.           '";'.
    'ajTransparentSuccess="'.ajTransparentSuccess.'";'.

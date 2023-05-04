@@ -22,13 +22,13 @@ function MakeTitle($NameGru,$NameArt,$DateArt='')
       $echo=$echo.'<div id="TopLine">'; 
       if ($NameArt=='')
       {
-         $echo=$echo.'<div id="NameGru">'.$NameGru.'</div>'; 
+         $echo=$echo.'<div id="NameGru">'.'<h1>'.$NameGru.'</h1>'.'</div>'; 
          $echo=$echo.'<div id="NameArt">'.'</div>'; 
       }
       else
       {
          $echo=$echo.'<div id="NameGru">'.$NameGru.':'.'</div>'; 
-         $echo=$echo.'<div id="NameArt">'.$NameArt.' ['.$DateArt.']'.'</div>'; 
+         $echo=$echo.'<div id="NameArt">'.'<h1>'.$NameArt.' ['.$DateArt.']'.'</h1>'.'</div>'; 
       } 
       $echo=$echo.'</div>'; 
    }

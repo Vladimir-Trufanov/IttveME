@@ -89,7 +89,7 @@ setPositionDiv();
 $ImageFile=prown\getComRequest('Image');
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 \prown\IniPrownJS();
-DefineJS($SiteHost);
+DefineJS($SiteHost,$urlHome);
 
 // Проверяем не требуется ли вывести изображение и выполняем настройки
 $ImageFile=prown\getComRequest('Image');

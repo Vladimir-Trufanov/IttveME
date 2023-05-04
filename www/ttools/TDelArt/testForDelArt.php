@@ -79,7 +79,7 @@ else
          if ($Translit==$TransCookie)
          {
             $getArti=$Translit;
-            $NameGru=ttools\mmlVybratSledMaterial_ZERO($Arti,$getArti);
+            $NameGru=ttools\mmlVybratSledMaterial_ZERO($Arti,$getArti,$_POST['urll']);
             // Если произошла ошибка перехода на след.статью,
             // то возвращаем сообщение, иначе отмечаем успешность всех 
             // подготовительных действий

@@ -171,7 +171,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -423,13 +423,13 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
 					www\ttools\TArticlesMaker\CommonIttveMe.php
 					www\ttools\TArticlesMaker\TestBase.php
-				-TDelArt
+				+TDelArt
 					www\ttools\TDelArt\DelArtClass.php
 					www\ttools\TDelArt\deleteArt.php
 					www\ttools\TDelArt\testForDelArt.php
@@ -562,7 +562,7 @@ IttveMe
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-				+TZhizniPuti
+				-TZhizniPuti
 					www\ttools\TZhizniPuti\ZhizniPutiClass.php
 			www\.htaccess
 			www\.user.ini
@@ -623,45 +623,53 @@ IttveMe
 6=www\UpSiteTTL.php
 7=www\UpSite.php
 8=www\UpSiteCSS.php
-9=www\.htaccess
-10=www\Common.php
-11=www\ttools\TZhizniPuti\ZhizniPutiClass.php
+9=www\Styles\iniStyles.css
+10=www\ttools\TArticlesMaker\CommonIttveMe.php
+11=www\ttools\TArticlesMaker\CommonArticlesMaker.php
+12=www\ttools\TTinyGallery\Dispatch_BODY.php
+13=www\Styles\WorkTiny.css
 [Selected Project Files]
 Main=
-Selected=www\UpSiteTTL.php
+Selected=www\Styles\WorkTiny.css
 [www\index.php]
-TopLine=61
-Caret=74,78
+TopLine=78
+Caret=9,78
 [www\iniMem.php]
-TopLine=83
-Caret=67,104
+TopLine=35
+Caret=37,35
 [www\Jsx\WorkTiny.js]
-TopLine=1
-Caret=1,17
+TopLine=15
+Caret=41,23
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=527
 Caret=50,566
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=406
-Caret=1,428
+TopLine=465
+Caret=27,472
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=180
-Caret=59,219
+TopLine=256
+Caret=52,286
 [www\UpSiteTTL.php]
-TopLine=18
+TopLine=16
 Caret=1,53
 [www\UpSite.php]
-TopLine=45
-Caret=1,77
+TopLine=51
+Caret=27,74
 [www\UpSiteCSS.php]
-TopLine=15
-Caret=1,20
-[www\.htaccess]
-TopLine=101
-Caret=1,111
-[www\Common.php]
-TopLine=49
-Caret=22,66
-[www\ttools\TZhizniPuti\ZhizniPutiClass.php]
-TopLine=101
-Caret=15,126
+TopLine=67
+Caret=20,92
+[www\Styles\iniStyles.css]
+TopLine=137
+Caret=19,170
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=27
+Caret=86,426
+[www\ttools\TArticlesMaker\CommonArticlesMaker.php]
+TopLine=1
+Caret=1,1
+[www\ttools\TTinyGallery\Dispatch_BODY.php]
+TopLine=1
+Caret=39,31
+[www\Styles\WorkTiny.css]
+TopLine=36
+Caret=1,59

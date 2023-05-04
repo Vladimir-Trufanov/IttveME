@@ -20,7 +20,7 @@
 }
 #tLife
 {
-   padding:.2rem 0 .8rem 0;
+   padding:.2rem 1rem .8rem 1rem;
 }  
 #WorkTiny
 {
@@ -56,7 +56,6 @@
 #NameArt
 {
    float:right;
-   margin-right:.5rem;
 }
 /* 
  Рабочая область Tiny                                                      

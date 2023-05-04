@@ -14,7 +14,17 @@ $(document).ready(function()
    let ihe=window.screen.height; 
    $('#scrwi').html(iwe);
    $('#scrhe').html(ihe);
-
+   
+   if ('loading' in HTMLImageElement.prototype) 
+   { 
+     // Поддерживается
+     $('#lazy').html('lazy YES');
+   } 
+   else 
+   {
+     // Применить полифилл или JavaScript
+     $('#lazy').html('lazy no');
+   }
    // *************************************************************************
    // *              Отследить действия при назначении новой статьи           *
    // *************************************************************************
@@ -332,7 +342,7 @@ function UdalitMater(Uid)
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {idArt:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
+      data: {idArt:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost,urll:urlHome},
       // Выводим ошибки при выполнении запроса в PHP-сценарии
       error: function (jqXHR,exception) {SmarttodoError(jqXHR,exception)},
       // Обрабатываем ответное сообщение
