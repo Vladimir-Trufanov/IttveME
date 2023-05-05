@@ -288,6 +288,19 @@ class TinyGallery
    public function Init($aPresMode,$aModeImg,$urlHome,$moditap,
       $NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL,$EntryGame=NULL)
    {
+      // Настраиваем диалоговое окно для изображения
+      echo '
+         <style>
+           .ui-widget-header 
+           {
+              /*
+              background:lightgreen;
+              color:blue;
+              font-size:20px;
+              */
+           }
+         </style>
+      ';
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
       // <script src="/Jsx/CommonTools.js"></script>
@@ -451,7 +464,7 @@ class TinyGallery
          }
          else 
          {
-            if ($this->SiteDevice=='Computer')
+             if ($this->SiteDevice=='Computer')
             {
                echo $UserAgent.'<br>';
                echo '<a href="https://www.pspad.com/ru/" title="PSPad.com - freeware text editor">'.
@@ -472,6 +485,7 @@ class TinyGallery
       echo '<div id="tLife">';
          echo $Title;
       echo '</div>';
+
       echo '<div id="WorkTiny">';
          $oBody->Body();
       echo '</div>';

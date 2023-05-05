@@ -139,16 +139,6 @@ IttveMe
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
-				-Охота на медведя
-					www\ittveEdit\Охота на медведя\Бревно на медведя.jpg
-					www\ittveEdit\Охота на медведя\Карта прогулки.jpg
-					www\ittveEdit\Охота на медведя\Медведь пошел туда.JPG
-					www\ittveEdit\Охота на медведя\Медведь шел след в след.JPG
-					www\ittveEdit\Охота на медведя\Размыло дорогу.JPG
-					www\ittveEdit\Охота на медведя\След в след.JPG
-					www\ittveEdit\Охота на медведя\Следы не свежие, но догоним.JPG
-					www\ittveEdit\Охота на медведя\Шапша в половодье.JPG
-					www\ittveEdit\Охота на медведя\Шапша весной.JPG
 				www\ittveEdit\LoadedFile.jpg
 			-jQuery
 				-fil
@@ -167,11 +157,11 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -423,13 +413,13 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
 					www\ttools\TArticlesMaker\CommonIttveMe.php
 					www\ttools\TArticlesMaker\TestBase.php
-				+TDelArt
+				-TDelArt
 					www\ttools\TDelArt\DelArtClass.php
 					www\ttools\TDelArt\deleteArt.php
 					www\ttools\TDelArt\testForDelArt.php
@@ -475,12 +465,12 @@ IttveMe
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				-TKwinGallery
+				+TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 				-TModyArt
@@ -542,7 +532,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -571,6 +561,7 @@ IttveMe
 			www\deleteArt.php
 			www\deleteImg.php
 			www\e404.php
+			www\getImgBase64.php
 			www\getNameCue.php
 			www\index.php
 			www\iniMem.php
@@ -616,36 +607,48 @@ IttveMe
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
-2=www\Jsx\WorkTiny.js
-3=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-4=www\ttools\TTinyGallery\TinyGalleryClass.php
-5=www\ttools\TKwinGallery\KwinGalleryClass.php
-6=www\UpSiteCSS.php
-7=www\UpSite.php
+2=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+3=www\ttools\TTinyGallery\TinyGalleryClass.php
+4=www\ttools\TKwinGallery\KwinGalleryClass.php
+5=www\UpSiteCSS.php
+6=www\UpSite.php
+7=www\ViewImage.php
+8=www\ttools\TKwinGallery\KwinGallery.js
+9=www\getImgBase64.php
+10=www\Jsx\WorkTiny.js
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\getImgBase64.php
 [www\index.php]
 TopLine=78
 Caret=9,78
 [www\iniMem.php]
 TopLine=35
 Caret=37,35
-[www\Jsx\WorkTiny.js]
-TopLine=80
-Caret=65,94
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=368
-Caret=20,371
+TopLine=378
+Caret=1,382
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=465
-Caret=27,472
+TopLine=253
+Caret=2,467
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=259
-Caret=1,285
+Caret=33,203
 [www\UpSiteCSS.php]
-TopLine=104
+TopLine=89
 Caret=2,89
 [www\UpSite.php]
-TopLine=9
-Caret=82,25
+TopLine=7
+Caret=5,28
+[www\ViewImage.php]
+TopLine=17
+Caret=1,56
+[www\ttools\TKwinGallery\KwinGallery.js]
+TopLine=59
+Caret=1,112
+[www\getImgBase64.php]
+TopLine=53
+Caret=7,77
+[www\Jsx\WorkTiny.js]
+TopLine=167
+Caret=1,196

@@ -373,16 +373,18 @@ class ArticlesMaker
      try
      {
        $pdo->beginTransaction();
-       $cSQL='SELECT [Pic] FROM [picturepw] WHERE uid=:uid AND TranslitPic=:TranslitPic';
+       $cSQL='SELECT [Pic],[mime_type] FROM [picturepw] WHERE uid=:uid AND TranslitPic=:TranslitPic';
        $stmt=$pdo->prepare($cSQL);
        if ($stmt->execute([":uid"=>$uid, ":TranslitPic"=>$TranslitPic]))
        {
          $stmt->bindColumn(1, $Pic, \PDO::PARAM_LOB);
+         $stmt->bindColumn(2, $mime_type);
          $table=$stmt->fetch(\PDO::FETCH_BOUND)?
          [
             "uid"         => $uid,
             "TranslitPic" => $TranslitPic,
-            "Pic"         => $Pic
+            "Pic"         => $Pic,
+            "mime_type"   => $mime_type
          ]:null;
        } 
        $pdo->commit();
@@ -393,7 +395,8 @@ class ArticlesMaker
        $table=[
           "uid"          => $uid,
           "TranslitPic"  => Err,
-          "Pic"          => $messa
+          "Pic"          => $messa,
+          "mime_type"    => 'mime_type'
        ];
        if ($pdo->inTransaction()) $pdo->rollback();
      }
