@@ -210,7 +210,7 @@ class KwinGallery
             if ($this->Arti->GalleryMode==mwgEditing) 
                $this->GViewOrDelImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic);
             else
-               $this->GViewImage($row['mime_type'],$table['Pic'],$Comment);
+               $this->GViewImage($row['mime_type'],$table['Pic'],$Comment,$uid,$TranslitPic);
             // Если задан режим редактирования, то выводим изображение для загрузки
             // (как правило, второе при выводе карточек)
             if (($this->Arti->GalleryMode==mwgEditing)&&($i==0)) 
@@ -234,7 +234,7 @@ class KwinGallery
       echo '<p class="pCard">'.$Comment.'</p>';
       echo '</div>';
    }
-   protected function GViewImage($mime_type,$DataPic,$Comment)
+   protected function GViewImage($mime_type,$DataPic,$Comment,$uid,$TranslitPic)
    {
       // Формируем изображение, как base64 (например уменьшенный значок 
       // Kwinflatic.jpg):
@@ -280,9 +280,18 @@ class KwinGallery
       $isSrc='data:'.$mime_type.';base64,'.$iDataPic.'';
       // Делаем разметку
       echo '<div class="Card">';
+      
+      // через клик передаём $uid,$TranslitPic картинки
+      echo '<button class="bCard" type="submit" onclick="ImageClick(';
+      echo $uid.',\''.$TranslitPic.'\'';
+      echo ')">';
+      
+      /*
+      // через клик передаём картинку в base64
       echo '<button class="bCard" type="submit" onclick="ImageClick(\'';
       echo $isSrc;
       echo '\')">';
+      */
       
       $i1sSrc='<img class="imgCard" loading="lazy" src='.
       //$i1sSrc='<img class="imgCard" src='.

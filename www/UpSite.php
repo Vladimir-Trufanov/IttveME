@@ -21,7 +21,8 @@ $ImageFile=prown\getComRequest('Image');
 // Проверяем не требуется ли просто вывести изображение и выводим его
 if ($ImageFile<>NULL)
 {
-   require_once "ViewImage.php";
+   //require_once "ViewImage.php";
+   echo "ViewImage.php ".'$ImageFile='.$ImageFile.', uid='.prown\getComRequest('Uid');
 }
 // Выводим другие страницы сайта
 else
