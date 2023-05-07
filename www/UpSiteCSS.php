@@ -65,6 +65,7 @@ echo '<link rel="stylesheet" type="text/css" media="(max-device-width:802px)" hr
 // Подключаем скрипты внутренних классов 
 echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
+echo '<script src="/ttools/TViewImage/ViewImage.js"></script>';
 echo '<script src="/Jsx/WorkTiny.js"></script>';
 // Определяем письменный шрифт, который будем использовать для статей
 // (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')

@@ -157,7 +157,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -465,7 +465,7 @@ IttveMe
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -549,6 +549,10 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
+				+TViewImage
+					www\ttools\TViewImage\getImgBase64_old.php
+					www\ttools\TViewImage\ViewImage.js
+					www\ttools\TViewImage\ViewImage.php
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
@@ -578,7 +582,6 @@ IttveMe
 			www\UpSite.php
 			www\UpSiteCSS.php
 			www\UpSiteTTL.php
-			www\ViewImage.php
 		-Материалы
 			-Htaccess
 				Материалы\Htaccess\Как отладить RewriteRule.lnk
@@ -612,10 +615,10 @@ IttveMe
 4=www\ttools\TKwinGallery\KwinGalleryClass.php
 5=www\UpSiteCSS.php
 6=www\UpSite.php
-7=www\ViewImage.php
-8=www\ttools\TKwinGallery\KwinGallery.js
+7=www\Jsx\WorkTiny.js
+8=www\getNameCue.php
 9=www\getImgBase64.php
-10=www\Jsx\WorkTiny.js
+10=www\ttools\TViewImage\ViewImage.js
 [Selected Project Files]
 Main=
 Selected=www\getImgBase64.php
@@ -629,26 +632,26 @@ Caret=37,35
 TopLine=378
 Caret=1,382
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=253
+TopLine=428
 Caret=2,467
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=259
-Caret=33,203
+Caret=68,285
 [www\UpSiteCSS.php]
-TopLine=89
-Caret=2,89
+TopLine=38
+Caret=48,68
 [www\UpSite.php]
-TopLine=7
-Caret=5,28
-[www\ViewImage.php]
-TopLine=17
-Caret=1,56
-[www\ttools\TKwinGallery\KwinGallery.js]
-TopLine=59
-Caret=1,112
-[www\getImgBase64.php]
-TopLine=53
-Caret=7,77
+TopLine=52
+Caret=43,69
 [www\Jsx\WorkTiny.js]
-TopLine=167
-Caret=1,196
+TopLine=28
+Caret=1,58
+[www\getNameCue.php]
+TopLine=25
+Caret=1,1
+[www\getImgBase64.php]
+TopLine=32
+Caret=1,68
+[www\ttools\TViewImage\ViewImage.js]
+TopLine=187
+Caret=1,1
