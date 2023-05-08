@@ -14,23 +14,10 @@
 // Начинаем html-страницу
 echo '<body>'; 
 
-// Выбираем имя файла, если был запрос к сайту на вывод изображения,
-// переключаем переменную-кукис на другой формат изображения: на странице 
-// или полноформатное изображение                  
-$ImageFile=prown\getComRequest('Image');
-// Проверяем не требуется ли просто вывести изображение и выводим его
-if ($ImageFile<>NULL)
+// Тормозим, если создавалась база данных
+// (для продолжения нужно будет из браузера обновить страницу)
+if ($BaseCreate<>'Yes')
 {
-   //require_once "ViewImage.php";
-   echo "ViewImage.php ".'$ImageFile='.$ImageFile.', uid='.prown\getComRequest('Uid');
-}
-// Выводим другие страницы сайта
-else
-{
-   // Тормозим, если создавалась база данных
-   // (для продолжения нужно будет из браузера обновить страницу)
-   if ($BaseCreate<>'Yes')
-   {
    // Выводим страницу
    echo '<div id="News">';
       /* 
@@ -75,6 +62,13 @@ else
          <span id="lazy">*</span>
       </div>
       ';
+      
+      // Окошечко для детального показа выбранного изображения
+      echo '
+      <div id="ImgDialogWind">
+      </div>
+      ';
+      
       echo '<div id="InfoRight">';
       if ($messRequest==nstOk)
          echo $SiteDevice." ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
@@ -82,8 +76,8 @@ else
          echo $messRequest.': '.$SiteDevice." ".$c_PersName; 
       echo '</div>';
    echo '</div>';
-   }
 }
+
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';
