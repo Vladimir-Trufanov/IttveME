@@ -86,7 +86,7 @@ function iniImageClick(iUid,iTranslitPic,Comment)
    let diaWidth=widthBody;
    let diaHeight=heightBody; 
    // Формируем заголовок окна
-   let diaTitle='ititle='+widthBody+'x'+heightBody+' '+uid+' '+TranslitPic;
+   let diaTitle=Comment+' '+widthBody+'x'+heightBody+' '+uid+' '+TranslitPic;
 
    // Строим диалоговое окно
    let isHide=true;
@@ -270,7 +270,7 @@ function getImgBase64(iUid,iTranslitPic,Comment)
          // Выбираем изображение в формате base64
          isSrc=getSrc(parm.NameArt);
          // Инициируем диалоговое окно
-         iniImageClick(iUid,iTranslitPic,Comment);
+         iniImageClick(iUid,iTranslitPic,parm.Piati);
          // Выводим изображение в диалоговом окне jQuery
          let messa='<img src="'+isSrc+'" alt="tutorialsPoint">';
          $('#ImgDialogWind').html(messa);

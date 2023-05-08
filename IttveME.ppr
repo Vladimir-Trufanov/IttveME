@@ -413,7 +413,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -619,6 +619,7 @@ IttveMe
 8=www\getImgBase64.php
 9=www\ttools\TViewImage\ViewImage.js
 10=www\Jsx\WorkTiny.js
+11=www\ttools\TArticlesMaker\CommonIttveMe.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TViewImage\ViewImage.js
@@ -629,8 +630,8 @@ Caret=9,78
 TopLine=35
 Caret=37,35
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=378
-Caret=1,382
+TopLine=386
+Caret=21,397
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=428
 Caret=2,467
@@ -647,11 +648,14 @@ Caret=29,68
 TopLine=25
 Caret=1,1
 [www\getImgBase64.php]
-TopLine=29
-Caret=1,68
+TopLine=33
+Caret=44,66
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=67
-Caret=28,87
+TopLine=74
+Caret=28,89
 [www\Jsx\WorkTiny.js]
-TopLine=192
+TopLine=205
 Caret=1,244
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=404
+Caret=17,416
