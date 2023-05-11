@@ -59,7 +59,10 @@ else
    $messa=imok;
    $iDataPic=base64_encode($NameArt);
    $NameArt='data:'.$mime_type.';base64,'.$iDataPic.'';
-   $Piati=$table["CommPic"].' '.$table["Width"].'x'.$table["Height"]; 
+   if (($table["Width"]<0.1)||($table["Height"]<0.1))
+      $Piati=$table["CommPic"].' '; 
+   else
+      $Piati=$table["CommPic"].': '.$table["Width"].'x'.$table["Height"]; 
    $iif='NoDefine';
 }
 // Возвращаем сообщение

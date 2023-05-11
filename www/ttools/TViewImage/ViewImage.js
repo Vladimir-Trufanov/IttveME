@@ -86,7 +86,7 @@ function iniImageClick(iUid,iTranslitPic,Comment)
    let diaWidth=widthBody;
    let diaHeight=heightBody; 
    // Формируем заголовок окна
-   let diaTitle=Comment+' '+widthBody+'x'+heightBody+' '+uid+' '+TranslitPic;
+   let diaTitle=Comment+' ['+widthBody+'x'+heightBody+']';
 
    // Строим диалоговое окно
    let isHide=true;

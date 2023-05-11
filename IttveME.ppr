@@ -622,7 +622,7 @@ IttveMe
 11=www\ttools\TArticlesMaker\CommonIttveMe.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TViewImage\ViewImage.js
+Selected=www\ttools\TKwinGallery\KwinGalleryClass.php
 [www\index.php]
 TopLine=78
 Caret=9,78
@@ -630,14 +630,14 @@ Caret=9,78
 TopLine=35
 Caret=37,35
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=386
-Caret=21,397
+TopLine=511
+Caret=35,533
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=428
 Caret=2,467
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=285
-Caret=68,285
+TopLine=423
+Caret=1,443
 [www\UpSiteCSS.php]
 TopLine=47
 Caret=48,68
@@ -649,10 +649,10 @@ TopLine=25
 Caret=1,1
 [www\getImgBase64.php]
 TopLine=33
-Caret=44,66
+Caret=35,63
 [www\ttools\TViewImage\ViewImage.js]
 TopLine=74
-Caret=28,89
+Caret=34,88
 [www\Jsx\WorkTiny.js]
 TopLine=205
 Caret=1,244

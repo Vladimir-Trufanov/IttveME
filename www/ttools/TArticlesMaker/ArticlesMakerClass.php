@@ -514,14 +514,14 @@ class ArticlesMaker
    // *************************************************************************
    // *               Вставить реквизиты фотографии по транслиту              *
    // *************************************************************************
-   public function InsertImgByTranslit($pdo,$uid,$NamePic,$TranslitPic,$Ext,$mime_type,$DatePic,$SizePic,$Comment)
+   public function InsertImgByTranslit($pdo,$uid,$NamePic,$TranslitPic,$Ext,$mime_type,$DatePic,$SizePic,$Comment,$Width,$Height)
    {
     try 
     {
       $pdo->beginTransaction();
       $statement = $pdo->prepare("INSERT INTO [picturepw] ".              
-         "([uid], [NamePic], [TranslitPic], [Ext], [mime_type], [DatePic], [SizePic], [CommPic]) VALUES ".
-         "(:uid,  :NamePic,  :TranslitPic,  :Ext,  :mime_type,  :DatePic,  :SizePic,  :CommPic);");
+         "([uid], [NamePic], [TranslitPic], [Ext], [mime_type], [DatePic], [SizePic], [CommPic], [Width], [Height]) VALUES ".
+         "(:uid,  :NamePic,  :TranslitPic,  :Ext,  :mime_type,  :DatePic,  :SizePic,  :CommPic,  :Width,  :Height);");
       $statement->execute([
          "uid"         => $uid, 
          "NamePic"     => $NamePic, 
@@ -530,7 +530,9 @@ class ArticlesMaker
          "mime_type"   => $mime_type, 
          "DatePic"     => $DatePic, 
          "SizePic"     => $SizePic, 
-         "CommPic"     => $Comment
+         "CommPic"     => $Comment, 
+         "Width"       => $Width, 
+         "Height"      => $Height
       ]);
       $pdo->commit();
       $messa=imok;

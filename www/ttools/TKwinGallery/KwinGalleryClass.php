@@ -6,7 +6,7 @@
 // * TPhpTools                 Фрэйм галереи изображений, связанных с текущим *
 // *                   материалом (uid) из выбранной (указанной) группы (pid) *
 // *                                                                          *
-// * v2.0, 17.02.2023                              Автор:       Труфанов В.Е. *
+// * v2.0, 09.05.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
@@ -404,7 +404,8 @@ class KwinGallery
             // Вначале записываем реквизиты фото 
             $this->DelayedMessage=$this->Arti->InsertImgByTranslit
                ($this->apdo,$this->uid,$aFileImg["NamePic"],$aFileImg["TranslitPic"],
-               $aFileImg["Ext"],$aFileImg["mime_type"],$aFileImg["DatePic"],$aFileImg["SizePic"],$_POST['AREAM']);
+               $aFileImg["Ext"],$aFileImg["mime_type"],$aFileImg["DatePic"],
+               $aFileImg["SizePic"],$_POST['AREAM'],$aFileImg["Width"],$aFileImg["Height"]);
             // Затем добавляем фотографию в базу данных, 
             if ($this->DelayedMessage==imok) 
                $this->DelayedMessage=
@@ -433,6 +434,14 @@ class KwinGallery
    // *************************************************************************
    protected function MakeKwinUpload($SiteRoot,$gallidir,$pref,&$LoadedFile,&$Ext,&$cComm)
    {
+      // Выбираем размеры изображения
+      $size=getimagesize($_FILES["loadimg"]["tmp_name"]);
+      if ($size===false) {$Width=0;$Height=0;}
+      else 
+      {
+         list($Width,$Height,$type,$attr)=$size;
+      }  
+      // Выбираем основные параметры 
       $DelayedMessage=imok;
       $imgDir=$SiteRoot.'/'.$gallidir;
       $FileName=$_FILES["loadimg"]["name"]; 
@@ -458,6 +467,8 @@ class KwinGallery
             "mime_type"   => $mime_type,
             "SizePic"     => $_FILES["loadimg"]["size"],
             "DatePic"     => date('d.m.Y',filectime($FileSpec)),
+            "Width"       => $Width,
+            "Height"      => $Height,
             "FileSpec"    => $FileSpec,
          );
          // Складываем массив в кукис
