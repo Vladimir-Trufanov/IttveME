@@ -61,6 +61,7 @@ define ("TKwinGalleryDir",$SiteRoot.'/ttools/TKwinGallery');
 require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpPrown."/getTranslit.php";
 require_once pathPhpPrown."/MakeCookie.php";
+require_once pathPhpPrown."/MakeRID.php";
 require_once pathPhpPrown."/iniConstMem.php";
 // Подгружаем нужные модули библиотеки прикладных классов
 require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
@@ -450,7 +451,7 @@ class KwinGallery
       $NameLoadp=\prown\getTranslit($FileName);
       $cComm=$FileName;
       // Перебрасываем файл  
-      $LoadedFile='LoadedFile';
+      $LoadedFile=\prown\MakeRID();
       $upload=new UploadToServer($imgDir,$LoadedFile);
       $DelayedMessage=$upload->move();
       $Ext=$upload->getExt();
