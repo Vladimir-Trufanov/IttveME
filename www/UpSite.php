@@ -52,6 +52,14 @@ if ($BaseCreate<>'Yes')
    echo '<div id="FooterTiny">';
       //echo (prown\getTranslit('Изменить настройки, прочитать о сайте'));
       $Edit->ViewFooterSpace($UserAgent);
+      
+      /*
+      echo '
+      <a href="codingbeautydev.com">Coding Beauty</a><br>
+      Try to close the tab or browser  
+      ';
+      */ 
+        
    echo '</div>';
    // Выводим нижнюю информационную строку
    echo '<div id="Info">';

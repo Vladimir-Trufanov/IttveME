@@ -10,6 +10,17 @@
 // Выполняем действия  по завершении загрузки страницы
 $(document).ready(function()
 {
+   // Стандартный вариант предупреждения перед закрытием страницы 
+   /*
+   window.addEventListener('beforeunload', function (event) 
+   {
+      // Запускаем диалог по закрытию страницы
+      event.returnValue = '';
+   })
+   */
+   
+   onbeforeunload = (event) => {EraseFiles();};
+
    // *************************************************************************
    // *              Отследить действия при назначении новой статьи           *
    // *************************************************************************
@@ -55,10 +66,6 @@ $(document).ready(function()
       });
    });
 })
-
-
-
-
 
 // ****************************************************************************
 // *                   Убедиться, что изображение внутри дива                 *
@@ -412,60 +419,6 @@ function alf3SaveImgComm()
    document.getElementById('insCard').click(); // "submit"
 } 
 
-/*
-function readFile(input) 
-{
-  file = input.files[0];
-  reader = new FileReader();
-  reader.readAsText(file);
-  reader.onload = function() 
-  {
-    ss=reader.result;
-    console.log(ss);
-    $('#imgCardi').attr('src',ss); 
-  };
-  reader.onerror = function() 
-  {
-    console.log(reader.error);
-  };
-  // $('#imgCardi').attr('src',reader.result);
-}
-*/
-
-/*
-// При изменении состояния input file 
-function alf2LoadFile(input) 
-{
-   console.log('Articles.js');
-   file = input.files[0];
-   nname=file.name;
-   ddate=file.lastModified;
-   console.log('File name: '+nname); 
-   console.log('Last modified: '+ddate); 
-   
-   niname='ittveEdit/'+nname;
-   $('#imgCardi').attr('src',niname); 
-   $('.taCard').css('background','yellow');
-}
-
-function readFile(input) 
-{
-  file = input.files[0];
-  reader = new FileReader();
-  reader.readAsText(file);
-  reader.onload = function() 
-  {
-    ss=reader.result;
-    console.log(ss);
-    $('#imgCardi').attr('src',ss); 
-  };
-  reader.onerror = function() 
-  {
-    console.log(reader.error);
-  };
-  // $('#imgCardi').attr('src',reader.result);
-}
-*/
 
 /*
 // Готовим обработку события при изменении положения устройства
@@ -537,13 +490,7 @@ function alf1MaintainProp()
       $('#MaintainCtrl').prop('checked',true);
    }   
 } 
-function alf1sFindFile() 
-   {document.getElementById('my_shidden_file').click();} 
-function alf2sLoadFile()
-{
-   document.getElementById('my_shidden_load').click();
-   alfEraseFiles();
-}
+*/
 // ****************************************************************************
 // *                      Выйти на главную страницу сайта                     *
 // ****************************************************************************
@@ -572,6 +519,26 @@ function formatDateTime(date)
    if (ss < 10) ss = '0' + ss;
    return yy+'-'+mm+'-'+dd+' '+hh+':'+ii+':'+ss;
 }
-*/
+function EraseFiles() 
+{
+   $.ajax({
+      type:'POST',                        // тип запроса
+      url: 'EraseFiles.php',           // скрипт обработчика
+      dataType: "json",
+      data:  {first:1, second:"second"},  // данные которые мы передаем
+      cache: true,  // запрошенные страницы кэшировать браузером (задаем явно для IE)
+      processData: false,                 // отключаем, так как передаем файл
+      // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
+      success:function(data)
+      {
+         alert(data[0].text);
+      },
+      // Отмечаем безуспешное удаление старых файлов
+      error:function(data)
+      {
+         alert(formatDateTime(new Date())+' '+ajUndeletionOldFiles+'!');
+      }
+   });
+} 
 
 // ************************************************************ WorkTiny.js *** 

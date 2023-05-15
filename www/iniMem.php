@@ -18,18 +18,11 @@ define("pathPhpTools",  $SiteHost.'/TPhpTools/TPhpTools');
 
 define ("RootDir",      $_SERVER['DOCUMENT_ROOT']); 
 define ("RootUrl",      $_SERVER['SCRIPT_NAME']); 
-define ("oriLandscape", 'landscape');     // Ландшафтное расположение устройства
-define ("oriPortrait",  'portrait');      // Портретное расположение устройства
   
 define ("nstNoVyb",     "не выбрано");     
 define ("nstNoNaz",     "не назначено");
 define ("nstErr",       'произошла ошибка');  
 define ("nstOk",        'все в порядке');  
-
-// Определения сообщений для PHP
-define ("ajSuccess",            "Функция/процедура выполнена успешно");     
-define ("ajTransparentSuccess", "Преобразование к прозрачному виду успешно");
-define ("ajUndeletionOldFiles", "Ошибка удаления старых файлов");
 
 // Подключить переменные JavaScript, соответствующие определениям в PHP
 function DefineJS($SiteHost,$urlHome)
@@ -46,10 +39,6 @@ function DefineJS($SiteHost,$urlHome)
    'nstOk="'               .nstOk.'";'.
    'SiteHost="'            .$SiteHost.'";'.
    'urlHome="'             .$urlHome.'";'.
-
-   'ajSuccess="'           .ajSuccess.           '";'.
-   'ajTransparentSuccess="'.ajTransparentSuccess.'";'.
-   'ajUndeletionOldFiles="'.ajUndeletionOldFiles.'";'.
    '</script>';
    echo $define;
 }   

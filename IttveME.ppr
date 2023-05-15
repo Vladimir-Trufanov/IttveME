@@ -38,6 +38,121 @@ IttveMe
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\О favicon.doc
+		-IttvePW
+			-backlight
+				IttvePW\backlight\c99-styles.css
+				IttvePW\backlight\example.c
+				IttvePW\backlight\index.php
+				IttvePW\backlight\styles.css
+				IttvePW\backlight\template.php
+				IttvePW\backlight\Раскраска кода - 1 часть.doc
+				IttvePW\backlight\Раскраска кода - 2 часть.doc
+				IttvePW\backlight\Раскраска кода - 3 часть.doc
+			-Favicon
+				-favicon260x260
+					IttvePW\Favicon\favicon260x260\android-chrome-192x192.png
+					IttvePW\Favicon\favicon260x260\android-chrome-256x256.png
+					IttvePW\Favicon\favicon260x260\android-chrome-512x512.png
+					IttvePW\Favicon\favicon260x260\apple-touch-icon.png
+					IttvePW\Favicon\favicon260x260\browserconfig.xml
+					IttvePW\Favicon\favicon260x260\favicon.ico
+					IttvePW\Favicon\favicon260x260\favicon-16x16.png
+					IttvePW\Favicon\favicon260x260\favicon-32x32.png
+					IttvePW\Favicon\favicon260x260\mstile-150x150.png
+					IttvePW\Favicon\favicon260x260\safari-pinned-tab.svg
+				-Simple
+					IttvePW\Favicon\Simple\favicon.ico
+				IttvePW\Favicon\favicon_package_v0.16.zip
+				IttvePW\Favicon\ittvepw.png
+				IttvePW\Favicon\IttvePW-favicon.doc
+			-Материалы
+				-TErrEvent Delphi
+					IttvePW\Материалы\TErrEvent Delphi\erANYMesUni.dcu
+					IttvePW\Материалы\TErrEvent Delphi\erANYMesUni.pas
+					IttvePW\Материалы\TErrEvent Delphi\erBDEMesUni.dcu
+					IttvePW\Материалы\TErrEvent Delphi\erBDEMesUni.pas
+					IttvePW\Материалы\TErrEvent Delphi\erDatabaseMesUni.pas
+					IttvePW\Материалы\TErrEvent Delphi\erDATMesUni.dcu
+					IttvePW\Материалы\TErrEvent Delphi\erDATMesUni.pas
+					IttvePW\Материалы\TErrEvent Delphi\ErrEvent.bmp
+					IttvePW\Материалы\TErrEvent Delphi\ErrEvent.dcr
+					IttvePW\Материалы\TErrEvent Delphi\ErrEvent.dcu
+					IttvePW\Материалы\TErrEvent Delphi\ErrEvent.pas
+					IttvePW\Материалы\TErrEvent Delphi\erTVEMesUni.dcu
+					IttvePW\Материалы\TErrEvent Delphi\erTVEMesUni.pas
+				-TLaziTools
+					-TErrEvent
+						-ErrEventTest
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventTest.ico
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventTest.lpi
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventTest.lpr
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventTest.lps
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventTest.res
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventtestFrm.lfm
+							IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventTest\ErrEventtestFrm.pas
+						IttvePW\Материалы\TLaziTools\TErrEvent\erANYMesUni.pas
+						IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventAlerts.pas
+						IttvePW\Материалы\TLaziTools\TErrEvent\ErrEventClass.pas
+						IttvePW\Материалы\TLaziTools\TErrEvent\Автоматическая обработка ошибок со скриншотом экрана.doc
+						IttvePW\Материалы\TLaziTools\TErrEvent\Стандартные классы исключений.xls
+					IttvePW\Материалы\TLaziTools\LaziprownAlerts.pas
+					IttvePW\Материалы\TLaziTools\LaziprownOutfit.pas
+					IttvePW\Материалы\TLaziTools\LazitoolsOutfit.pas
+				-TreeActions
+					-www
+						IttvePW\Материалы\TreeActions\www\index.php
+					IttvePW\Материалы\TreeActions\TreeActions.php
+					IttvePW\Материалы\TreeActions\Рекурсия на PHP — алгоритм, применение.doc
+				-Картинки для кнопок
+					-Img-прозрачным фоном
+						IttvePW\Материалы\Картинки для кнопок\Img-прозрачным фоном\favicon16.png
+						IttvePW\Материалы\Картинки для кнопок\Img-прозрачным фоном\Java.png
+						IttvePW\Материалы\Картинки для кнопок\Img-прозрачным фоном\Lazarus.png
+						IttvePW\Материалы\Картинки для кнопок\Img-прозрачным фоном\Menu.png
+						IttvePW\Материалы\Картинки для кнопок\Img-прозрачным фоном\Php.png
+						IttvePW\Материалы\Картинки для кнопок\Img-прозрачным фоном\Tiny.png
+					-Img-черновые
+						-Menu-svg
+							IttvePW\Материалы\Картинки для кнопок\Img-черновые\Menu-svg\menu1.svg
+							IttvePW\Материалы\Картинки для кнопок\Img-черновые\Menu-svg\menu2.svg
+							IttvePW\Материалы\Картинки для кнопок\Img-черновые\Menu-svg\menu3.svg
+							IttvePW\Материалы\Картинки для кнопок\Img-черновые\Menu-svg\Ссылка на разработчика SVG - Menu.doc
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Java.jpg
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Lazarus1.png
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Lazarus2.png
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Menu.jpg
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Php.jpg
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Php-slon.jpg
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\Tiny.png
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\TinyLogo.png
+						IttvePW\Материалы\Картинки для кнопок\Img-черновые\TinyMCE.png
+					-Svg-прозрачным фоном
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Java.svg
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Lazarus.svg
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Menu.svg
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Php.svg
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Tiny.svg
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Tiny1.svg
+						IttvePW\Материалы\Картинки для кнопок\Svg-прозрачным фоном\Ttt.svg
+				-Кукисы
+					IttvePW\Материалы\Кукисы\Cookies.doc
+					IttvePW\Материалы\Кукисы\Массив в Cookie.doc
+				-Ошибки
+					IttvePW\Материалы\Ошибки\Как найти ошибку в своем коде.doc
+					IttvePW\Материалы\Ошибки\Настройка вывода ошибок PHP.doc
+					IttvePW\Материалы\Ошибки\Решение проблемы - Cannot add header information - headers already sent.doc
+				-Сессии
+					IttvePW\Материалы\Сессии\Настройка сессий во время выполнения.doc
+					IttvePW\Материалы\Сессии\Сессии в PHP.doc
+					IttvePW\Материалы\Сессии\Увеличить время жизни сессии в PHP.doc
+				-Управление
+					IttvePW\Материалы\Управление\Параметры и кукисы IttvePW.xls
+				IttvePW\Материалы\Cобытия Java Script на смартфоне ОПЫТ1.doc
+				IttvePW\Материалы\Как сделать редирект на мобильную версию сайта.doc
+				IttvePW\Материалы\Что такое UTM-метки и как их применять.doc
+				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
+			IttvePW\var1.txt
+			IttvePW\var2.txt
 		+www
 			-Example
 				-ittveLife
@@ -139,7 +254,6 @@ IttveMe
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
-				www\ittveEdit\LoadedFile.jpg
 			-jQuery
 				-fil
 					www\jQuery\fil\jquery-3.6.3.min.js
@@ -157,11 +271,11 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -413,7 +527,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -470,10 +584,10 @@ IttveMe
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
-				+TModyArt
+				-TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
@@ -549,8 +663,7 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				+TViewImage
-					www\ttools\TViewImage\getImgBase64_old.php
+				-TViewImage
 					www\ttools\TViewImage\ViewImage.js
 					www\ttools\TViewImage\ViewImage.php
 				-TWorkTinyMain
@@ -565,12 +678,14 @@ IttveMe
 			www\deleteArt.php
 			www\deleteImg.php
 			www\e404.php
+			www\EraseFiles.php
 			www\getImgBase64.php
 			www\getNameCue.php
 			www\index.php
 			www\iniMem.php
 			www\iniWorkSpace.php
 			www\ittve-log.txt
+			www\IttveMeDef.php
 			www\Kwinflatic.jpg
 			www\log.txt
 			www\manifest.json
@@ -615,21 +730,18 @@ IttveMe
 4=www\ttools\TKwinGallery\KwinGalleryClass.php
 5=www\UpSiteCSS.php
 6=www\UpSite.php
-7=www\getNameCue.php
-8=www\getImgBase64.php
-9=www\ttools\TViewImage\ViewImage.js
-10=www\Jsx\WorkTiny.js
-11=..\TPhpPrown\TPhpPrown\MakeRID.php
-12=..\TPhpPrown\TPhpPrown\getBrowscap.php
+7=www\Jsx\WorkTiny.js
+8=www\IttveMeDef.php
+9=www\EraseFiles.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TKwinGallery\KwinGalleryClass.php
+Selected=www\EraseFiles.php
 [www\index.php]
 TopLine=78
 Caret=9,78
 [www\iniMem.php]
-TopLine=35
-Caret=37,35
+TopLine=13
+Caret=1,42
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=493
 Caret=35,533
@@ -640,26 +752,17 @@ Caret=9,440
 TopLine=431
 Caret=2,455
 [www\UpSiteCSS.php]
-TopLine=47
-Caret=48,68
+TopLine=85
+Caret=17,96
 [www\UpSite.php]
-TopLine=28
-Caret=29,68
-[www\getNameCue.php]
-TopLine=24
-Caret=1,1
-[www\getImgBase64.php]
-TopLine=33
-Caret=35,63
-[www\ttools\TViewImage\ViewImage.js]
-TopLine=74
-Caret=34,88
+TopLine=52
+Caret=31,80
 [www\Jsx\WorkTiny.js]
-TopLine=205
-Caret=1,244
-[..\TPhpPrown\TPhpPrown\MakeRID.php]
-TopLine=31
-Caret=1,51
-[..\TPhpPrown\TPhpPrown\getBrowscap.php]
 TopLine=1
-Caret=1,1
+Caret=4,22
+[www\IttveMeDef.php]
+TopLine=2
+Caret=25,25
+[www\EraseFiles.php]
+TopLine=10
+Caret=37,34

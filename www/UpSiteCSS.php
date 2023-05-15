@@ -91,6 +91,9 @@ $ImageFile=prown\getComRequest('Image');
 // Подключаем переменные JavaScript, соответствующие определениям в PHP
 \prown\IniPrownJS();
 DefineJS($SiteHost,$urlHome);
+// Подключаем дополнительные совместные определения для модулей PHP и JS
+require_once 'IttveMeDef.php';
+DefinePHPtoJS();
 
 // Проверяем не требуется ли вывести изображение и выполняем настройки
 $ImageFile=prown\getComRequest('Image');
