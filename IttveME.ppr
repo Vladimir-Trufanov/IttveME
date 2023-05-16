@@ -592,7 +592,7 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				-TNewArt
+				+TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -743,8 +743,8 @@ Caret=9,78
 TopLine=13
 Caret=1,42
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=493
-Caret=35,533
+TopLine=191
+Caret=7,175
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=430
 Caret=9,440
@@ -759,10 +759,10 @@ TopLine=52
 Caret=31,80
 [www\Jsx\WorkTiny.js]
 TopLine=1
-Caret=4,22
+Caret=49,20
 [www\IttveMeDef.php]
 TopLine=2
-Caret=25,25
+Caret=57,14
 [www\EraseFiles.php]
-TopLine=10
-Caret=37,34
+TopLine=19
+Caret=40,55
