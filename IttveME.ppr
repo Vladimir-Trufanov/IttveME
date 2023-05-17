@@ -592,7 +592,7 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				+TNewArt
+				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -732,18 +732,21 @@ IttveMe
 6=www\UpSite.php
 7=www\Jsx\WorkTiny.js
 8=www\IttveMeDef.php
-9=www\EraseFiles.php
+9=..\TPhpPrown\TPhpPrown\CommonPrown.php
+10=www\EraseFiles.php
+11=www\deleteImg.php
+12=www\ttools\TKwinGallery\KwinGallery.js
 [Selected Project Files]
 Main=
-Selected=www\EraseFiles.php
+Selected=www\ttools\TKwinGallery\KwinGallery.js
 [www\index.php]
 TopLine=78
 Caret=9,78
 [www\iniMem.php]
 TopLine=13
-Caret=1,42
+Caret=1,26
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=191
+TopLine=175
 Caret=7,175
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=430
@@ -758,11 +761,20 @@ Caret=17,96
 TopLine=52
 Caret=31,80
 [www\Jsx\WorkTiny.js]
-TopLine=1
-Caret=49,20
+TopLine=505
+Caret=12,534
 [www\IttveMeDef.php]
 TopLine=2
 Caret=57,14
+[..\TPhpPrown\TPhpPrown\CommonPrown.php]
+TopLine=237
+Caret=1,244
 [www\EraseFiles.php]
-TopLine=19
-Caret=40,55
+TopLine=1
+Caret=39,48
+[www\deleteImg.php]
+TopLine=32
+Caret=6,21
+[www\ttools\TKwinGallery\KwinGallery.js]
+TopLine=59
+Caret=1,75

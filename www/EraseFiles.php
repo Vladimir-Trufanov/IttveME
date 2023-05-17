@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                            *** ajaEraseFiles.php ***
+// PHP7/HTML5, EDGE/CHROME                               *** EraseFiles.php ***
 
 // ****************************************************************************
 // * SignaPhoto             Отработать ajax-запрос для удаления старых файлов *
@@ -7,12 +7,12 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  25.11.2021
-// Copyright © 2021 tve                              Посл.изменение: 04.03.2022
+// Copyright © 2021 tve                              Посл.изменение: 17.05.2023
 
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
-$SiteHost=$_WORKSPACE[wsSiteHost];      // Каталог хостинга
+$SiteHost=$_WORKSPACE[wsSiteHost]; // Каталог хостинга
 // Подключаем совместные определения(переменные) для модулей PHP и JS
 require_once 'IttveMeDef.php';
 // Подключаем файлы библиотеки прикладных модулей:
@@ -25,7 +25,7 @@ $curdate=date("Ymd");
 // Инициируем контрольную трассировку
 // и список удаленных файлов
 $s='Curdate='.$curdate."\n";
-$delis='';
+$delis=$s;
 // Вытаскиваем упорядоченный список файлов каталога
 $files1=scandir(imgDir);
 foreach ($files1 as $filename) 
@@ -35,7 +35,8 @@ foreach ($files1 as $filename)
    if (!is_dir($specfile)) 
    {
       $datefile=date("Ymd", filemtime($specfile));
-      $s=$s.$filename.': '.$datefile;
+      $ones=$filename.': '.$datefile;
+      $s=$s.$ones;
       $delta=$curdate-$datefile;
       // Удаляем старые файлы (более 1 дня)
       // и делаем отметку в трассировочном файле
@@ -44,8 +45,7 @@ foreach ($files1 as $filename)
          $isOldFiles=true;
          unlink($specfile);
          $s=$s." УДАЛЕН";
-         $delis=$delis.$s."\n";
-
+         $delis=$delis.$ones." УДАЛЕН"."\n";
       }
       // Готовим следующую строку трассировки
       $s=$s."\n";
@@ -53,30 +53,35 @@ foreach ($files1 as $filename)
 }
 // Трассируем в файл список удаленных
 if ($isOldFiles) EraseFilesTrass($delis);
-
 // Передаем данные в формате JSON
 // (если нет передачи данных, то по аякс-запросу вернется ошибка)
-$user_info=array(); 
-//$user_info[]=array('text'=>date("Y-m-d H:i:s").' Удалены старые файлы!');
-//$user_info[]=array('text'=>'Удалены старые файлы!');
 $user_info[]=array('text'=>$s);
 restore_error_handler();
 echo json_encode($user_info);
+
 // ****************************************************************************
 // *                 Обыграть ошибки удаления старых файлов                   *
 // ****************************************************************************
 function EraseFilesHandler($errno,$errstr,$errfile,$errline)
 {
    $modul='EraseFilesHandler';
-   \prown\putErrorInfo($modul,$errno,$errstr,$errfile,
-      $errline,imgDir."/EraseFiles.txt");
+   \prown\putErrorInfo($modul,$errno,$errstr,$errfile,$errline,
+   $_SERVER['DOCUMENT_ROOT']."/ittve-log.txt");
 }
 // ****************************************************************************
 // *                 Оттрассировать удаление старых файлов                    *
 // ****************************************************************************
-function EraseFilesTrass($s)
+function EraseFilesTrass($delis)
 {
-   $modul='EraseFilesTrass';
-   \prown\putErrorInfo($modul,0,$s,'errfile',0,$_SERVER['DOCUMENT_ROOT']."/ittve-log.txt");
+   if ($delis=='') {}
+   else
+   {
+      // Отрезаем последний переход на новую строку
+      $delis=substr($delis,0,strlen($delis)-1);
+      // Выводим сообщение в лог-файл
+      $modul='EraseFilesTrass';
+      \prown\putErrorInfo($modul,0,$delis,onlyMess,0,
+      $_SERVER['DOCUMENT_ROOT']."/ittve-log.txt");
+   }
 }
-// ****************************************************** ajaEraseFiles.php ***
+// ********************************************************* EraseFiles.php ***

@@ -68,15 +68,10 @@ function xDeleteImg(Uid,TranslitPic,Comment,pathPhpTools,pathPhpPrown)
       // Обрабатываем ответное сообщение
       success: function(message)
       {
-         console.log(message);
          // Вырезаем из запроса чистое сообщение
          messa=FreshLabel(message);
-         //console.log(messa);
          // Получаем параметры ответа
          parm=JSON.parse(messa);
-         //console.log(parm.NameArt);
-         //console.log(parm.Piati);
-         //console.log(parm.iif);
          DialogWindMessage(parm.iif,parm.NameArt,'Удаляется изображение "'+Comment+'"!');
       }
    });

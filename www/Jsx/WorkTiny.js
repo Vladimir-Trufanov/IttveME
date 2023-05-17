@@ -531,7 +531,7 @@ function EraseFiles()
       // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
       success:function(data)
       {
-         alert(data[0].text);
+         //alert(data[0].text);
       },
       // Отмечаем безуспешное удаление старых файлов
       error:function(data)
