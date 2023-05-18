@@ -84,6 +84,12 @@
    border:.4rem double gray;
    margin-bottom:.2rem;  
 }
+/* Центрируем изображение по диву */
+.Card 
+{
+    text-align: center;
+    vertical-align: middle;
+}
 .bCard
 {
    cursor:pointer;

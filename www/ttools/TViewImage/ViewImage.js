@@ -129,112 +129,59 @@ function iniImageClick(iUid,iTranslitPic,Comment)
      $('#lazy').html('lazy no');
    }
 }
-
-
 // ****************************************************************************
 // *        Переключиться на детальный просмотр выбранного изображения        *
 // *               (через клик получаем uid,TranslitPic картинки)             *
 // ****************************************************************************
 function ImageClick(uid,TranslitPic)
 {
-
-
-
-
-
-   // Готовим url для показа изображения
-   // let iuri=RootUrl+'?Image='+TranslitPic+'&Uid='+uid;
-   // alert(iuri);
-   // Переключаемся на страницу просмотра изображения
-   // location.assign(iuri);
-
    // Делаем запрос изображения
    getImgBase64(uid,TranslitPic,'Comment');
-
-   /*
-   ifBody=document.body;
+   //ViewDebug(uid,TranslitPic);
+}
+// ****************************************************************************
+// *               Вывести информацию всякую-разную при отладке               *
+// ****************************************************************************
+function ViewDebug(uid,TranslitPic)
+{
+   let cAlert='';
+   // Готовим url с параметрами, который мог быть для показа изображения
+   let iuri=RootUrl+'?Image='+TranslitPic+'&Uid='+uid;
+   // cAlert=cAlert+'imgUri='+iuri+"\n";
+   // Могли переключиться на страницу просмотра изображения
+   // location.assign(iuri);
+   
+   // Определяем размеры тела страницы
+   let ifBody=document.body;
    let widthBody=ifBody.offsetWidth;
    let heightBody=ifBody.offsetHeight;
-
-   $('#ImgDialogWind').dialog
-   ({
-      title:'ititle='+widthBody+'x'+heightBody+' '+uid+' '+TranslitPic,
-      width:widthBody,
-      height:heightBody,
-   });
+   cAlert=cAlert+'widthBody='+widthBody+'  heightBody='+heightBody+"\n";
    
-   let messa='<img src="'+isSrc+'" alt="tutorialsPoint">';
-   $('#ImgDialogWind').html(messa);
+   // Определяем ширину колонки галереи
+   let ifGallery=document.getElementById('Gallery');
+   let widthGallery=ifGallery.offsetWidth;
 
-   $('#ImgDialogWind').dialog("open");  
-   */ 
+   // Определяем ширину дива галереи
+   let ifCard=document.getElementById('d'+uid);
+   let widthCard=ifCard.offsetWidth;
+   let heightCard=ifCard.offsetHeight;
+   // Определяем ширину кнопки в диве галереи
+   let ifbCard=document.getElementById('b'+uid);
+   let widthbCard=ifbCard.offsetWidth;
+   let heightbCard=ifbCard.offsetHeight;
 
+   // Определяем ширину и высоту изображения кнопки в диве галереи
+   let ifiCard=document.getElementById('i'+uid);
+   let widthiCard=ifiCard.offsetWidth;
+   let heightiCard=ifiCard.offsetHeight;
+   
+   cAlert=cAlert+'uid='+uid+'   TranslitPic='+TranslitPic+"\n";
+   cAlert=cAlert+'widthGallery='+widthGallery+"\n";
+   cAlert=cAlert+'widthCard='+widthCard+'   heightCard='+heightCard+"\n";
+   cAlert=cAlert+'widthbCard='+widthbCard+'   heightbCard='+heightbCard+"\n";
+   cAlert=cAlert+'widthiCard='+widthiCard+'   heightiCard='+heightiCard+"\n";
+   alert(cAlert);
 }
-
-/*
-function getImgBase64(iUid,iTranslitPic,Comment)
-{
-   uid=iUid;
-   TranslitPic=iTranslitPic;
-   //isSrc='Images/sampo.jpg'
-   // Задаем константу диагностирования ошибке в ответе на запрос
-   Err="Произошла ошибка";
-   // Выполняем запрос на удаление выбранного изображения c данными 
-   $.ajax({
-      url: "getImgBase64.php",
-      type: 'POST',
-      data: {uid:iUid,translitpic:iTranslitPic,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
-      // Выводим ошибки при выполнении запроса в PHP-сценарии
-      error: function (jqXHR,exception) 
-      {
-         aif=Err;
-         messi=SmarttodoError(jqXHR,exception);       
-         DialogWindMessage(Err,messi,' ');
-      },
-      // Обрабатываем ответное сообщение
-      success: function(message)
-      {
-         // Вырезаем из запроса чистое сообщение
-         //let messai=FreshLabel(message);
-         // Получаем параметры ответа
-         //parm=JSON.parse(messai);
-         
-         //isSrc=DialogImgMessage(parm.iif,parm.NameArt);
-    
-         ifBody=document.body;
-         let widthBody=ifBody.offsetWidth;
-         let heightBody=ifBody.offsetHeight;
-
-         $('#ImgDialogWind').dialog
-         ({
-            title:'ititle='+widthBody+'x'+heightBody+' '+uid+' '+TranslitPic,
-            width:widthBody,
-            height:heightBody,
-         });
-   
-      //isSrc=parm.NameArt;
-      isSrc=message;
-      //   alert('isSrc='+isSrc);
-
-
-      let messa='<img src="'+isSrc+'" alt="tutorialsPoint">';
-         //let messa='img src=tutorialsPoint';
-         $('#ImgDialogWind').html(messa);
-
-         $('#ImgDialogWind').dialog("open");  
-    / *     
-         alert('parm.iif='+parm.iif);
-   * /      
-         
-         
-         
-         
-      }
-   });
-   
-}
-*/
-
 // ****************************************************************************
 // *                     Отправить аякс-запрос на изображение                 *
 // *                      и показать полученное изображение                   *

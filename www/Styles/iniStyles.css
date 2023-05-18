@@ -83,7 +83,7 @@ h1
    margin:0;
 }
 /* Выравниваем дивы */
-#News,#Life,#Gallery,#FooterTiny,#Info,#DivImg
+#News,#Life,#Gallery,#FooterTiny,#Info
 {
    position:fixed; 
    margin:0;
@@ -107,6 +107,10 @@ h1
 /* Настраиваем детальное представление изображения */
 #DivImg
 {
+   position:fixed; 
+   overflow:auto;
+   border:0;
+
    top:0;
    left:0;
    width:0;

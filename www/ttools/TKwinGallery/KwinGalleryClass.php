@@ -280,10 +280,10 @@ class KwinGallery
       $iDataPic=base64_encode($DataPic);
       $isSrc='data:'.$mime_type.';base64,'.$iDataPic.'';
       // Делаем разметку
-      echo '<div class="Card">';
+      echo '<div '.'id="d'.$uid.'" class="Card">';
       
       // через клик передаём $uid,$TranslitPic картинки
-      echo '<button class="bCard" type="submit" onclick="ImageClick(';
+      echo '<button '.'id="b'.$uid.'" class="bCard" type="submit" onclick="ImageClick(';
       echo $uid.',\''.$TranslitPic.'\'';
       echo ')">';
       
@@ -294,7 +294,7 @@ class KwinGallery
       echo '\')">';
       */
       
-      $i1sSrc='<img class="imgCard" loading="lazy" src='.
+      $i1sSrc='<img '.'id="i'.$uid.'" class="imgCard" loading="lazy" src='.
       //$i1sSrc='<img class="imgCard" src='.
       "\n".
       '"'.$isSrc.'"'.
