@@ -523,7 +523,7 @@ function EraseFiles()
 {
    $.ajax({
       type:'POST',                        // тип запроса
-      url: 'EraseFiles.php',           // скрипт обработчика
+      url: 'EraseFiles.php',              // скрипт обработчика
       dataType: "json",
       data:  {first:1, second:"second"},  // данные которые мы передаем
       cache: true,  // запрошенные страницы кэшировать браузером (задаем явно для IE)

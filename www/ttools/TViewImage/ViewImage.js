@@ -3,7 +3,7 @@
 // ****************************************************************************
 // * TViewImage        Модули отдельного детального представления изображений *
 // *                                                                          *
-// * v2.0, 07.05.2023                               Автор:      Труфанов В.Е. *
+// * v2.1, 19.05.2023                               Автор:      Труфанов В.Е. *
 // * Copyright © 2023 tve                           Дата создания: 09.01.2023 *
 // ****************************************************************************
 
@@ -13,39 +13,26 @@
 // ****************************************************************************
 $(document).ready(function()
 {
+})
+// ****************************************************************************
+// *     Инициировать диалоговое окно для детального показа изображения       *
+// ****************************************************************************
+function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
+{
 
-   /*
    // Создаем див для диалогового окна, в котором будет разворачиваться 
    // изображение для детального рассмотрения
-   let imgdiv=document.createElement('div');
-   imgdiv.innerHTML="<p>Привет, мир!</p>";
-   imgdiv.id="ImgDialogWind";
-   document.body.append(imgdiv);
+   // 08.05.2023 див уже включен в разметку
+   // let imgdiv=document.createElement('div');
+   // imgdiv.id="ImgDialogWind";
+   // document.body.append(imgdiv);
 
-   // Строим диалоговое окно
-   let isHide=true;
-   let delayClose=250;
-   let durClose=1000;
-   let diaWidth=1000;
-   let diaHeight=600; 
+   // Извлекаем размеры тела страницы (окна диалога)
+   ifBody=document.body;
+   let diaWidth=ifBody.offsetWidth;
+   let diaHeight=ifBody.offsetHeight;
    
-   $('#ImgDialogWind').dialog(
-   {
-      bgiframe:true,      // совместимость с IE6
-      closeOnEscape:true, // закрывать при нажатии Esc
-      modal:true,         // модальное окно
-      resizable:true,     // разрешено изменение размера
-      autoOpen:false,     // сразу диалог не открывать
-      
-      position:'left top',
-      height:diaHeight,   
-      width:diaWidth,
-      draggable:true, 
-      show:{effect:"fade",delay:100,duration:1500},
-      hide:{effect:"explode",delay:delayClose,duration:durClose,easing:'swing'},
-      title:"Привет, мир!",
-   });
-   
+   /*
    // Определяем, реализован ли в браузере механизм отложенного
    // показа изображений и показываем результат проверки в lazy-окошке (span)
    // нижней информационной строки
@@ -65,29 +52,26 @@ $(document).ready(function()
      $('#lazy').html('lazy no');
    }
    */
-})
-
-function iniImageClick(iUid,iTranslitPic,Comment)
-{
    
+   // Включаем изображение в диалоговом окне jQuery
+   let messa='<img id="ImgDialog" src="'+isSrc+'" alt="tutorialsPoint">';
+   $('#ImgDialogWind').html(messa);
 
-   // Создаем див для диалогового окна, в котором будет разворачиваться 
-   // изображение для детального рассмотрения
-   // 08.05.2023 див уже включен в разметку
-   // let imgdiv=document.createElement('div');
-   // imgdiv.id="ImgDialogWind";
-   // document.body.append(imgdiv);
-
-   // Извлекаем размеры тела страницы
-   ifBody=document.body;
-   let widthBody=ifBody.offsetWidth;
-   let heightBody=ifBody.offsetHeight;
-   // Назначаем размеры окна диалога
-   let diaWidth=widthBody;
-   let diaHeight=heightBody; 
    // Формируем заголовок окна
-   let diaTitle=Comment+' ['+widthBody+'x'+heightBody+']';
-
+   var diaTitle=Comment+' ['+diaWidth+'x'+diaHeight+']';
+   let cAlert='wimg='+wimg+'   himg='+himg;
+   diaTitle=diaTitle+'   '+cAlert;
+   
+   // Позиционируем изображение 'Внутри страницы'
+   if (ModeImg==vimOnPage) 
+   {
+      View_vimOnPage(diaWidth,diaHeight,wimg,himg);
+   }
+   // Позиционируем изображение 'В заданном размере в пикселах - как есть'
+   else 
+   {
+      View_vimExiSize(diaWidth,diaHeight,wimg,himg);
+   }
    // Строим диалоговое окно
    let isHide=true;
    let delayClose=250;
@@ -109,24 +93,47 @@ function iniImageClick(iUid,iTranslitPic,Comment)
       show:{effect:"fade",delay:100,duration:1500},
       hide:{effect:"explode",delay:delayClose,duration:durClose,easing:'swing'},
    });
-   
-   // Определяем, реализован ли в браузере механизм отложенного
-   // показа изображений и показываем результат проверки в lazy-окошке (span)
-   // нижней информационной строки
-   let iwe=window.screen.width;
-   let ihe=window.screen.height; 
-   $('#scrwi').html(iwe);
-   $('#scrhe').html(ihe);
-   
-   if ('loading' in HTMLImageElement.prototype) 
-   { 
-     // Поддерживается
-     $('#lazy').html('lazy YES');
-   } 
-   else 
+}
+// ****************************************************************************
+// *                 Позиционировать изображение 'Внутри страницы'            *
+// ****************************************************************************
+function View_vimOnPage(wWin,hWin,wImg,hImg)
+{
+   if (View_isInside(wWin,hWin,wImg,hImg)) {}
+   else
    {
-     // Применить полифилл или JavaScript
-     $('#lazy').html('lazy no');
+   }
+}
+// ****************************************************************************
+// *  Позиционировать изображение 'В заданном размере в пикселах - как есть'  *
+// ****************************************************************************
+function View_vimExiSize(wWin,hWin,wImg,hImg)
+{
+   if (View_isInside(wWin,hWin,wImg,hImg)) {}
+   else
+   {
+      // Здесь полагаемся на браузер
+   }
+}
+// ****************************************************************************
+// *    Позиционировать изображение 'Если изображение уже внутри страницы'    *
+// ****************************************************************************
+function View_isInside(wWin,hWin,wImg,hImg)
+{
+   let Result=false;
+   if (wImg <= wWin && hImg <= hWin) 
+   {
+      // Получаем координаты top и left
+      let top  = $('#ImgDialog').offset().top;
+      let left = $('#ImgDialog').offset().left;
+      // Пересчитываем смещения (.7 смещаем вверх для благоприятного восприятия)
+      let xOffset=0; let yOffset=0; 
+      if (wImg>0) xOffset=(wWin-wImg)/2;
+      if (hImg>0) yOffset=(hWin-hImg)/2*.7;  
+      // Изменяем координаты позиции элемента
+      $('#ImgDialog').offset({top: top+yOffset, left: left+xOffset});
+      // Отмечаем, что уже отпозиционировали
+      Result=true;
    }
 }
 // ****************************************************************************
@@ -217,34 +224,10 @@ function getImgBase64(iUid,iTranslitPic,Comment)
          // Выбираем изображение в формате base64
          isSrc=getSrc(parm.NameArt);
          // Инициируем диалоговое окно
-         iniImageClick(iUid,iTranslitPic,parm.Piati);
-         // Выводим изображение в диалоговом окне jQuery
-         let messa='<img src="'+isSrc+'" alt="tutorialsPoint">';
-         $('#ImgDialogWind').html(messa);
+         iniImageClick(iUid,iTranslitPic,parm.Piati,isSrc,parm.wimg,parm.himg);
          $('#ImgDialogWind').dialog("open");  
       }
    });
-}
-// ****************************************************************************
-// *             Вывести диалоговое окно с сообщением (или с ошибкой)         *
-// ****************************************************************************
-function DialogImgMessage(aif,messi)
-{
-   /*
-   isSrc=Err;
-   // Если передана ошибка, выводим сообщение
-   if (aif==Err)
-   {
-      //Error_Info(messi);
-      alert(messi);
-   } 
-   // Выбираем изображение
-   else 
-   {
-      isSrc=getSrc(messi)
-   }
-   return isSrc;
-   */
 }
 // ****************************************************************************
 // *             Взять изображение в формате Base64 или подставить            *

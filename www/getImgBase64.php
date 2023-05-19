@@ -6,7 +6,7 @@
 // * TKwinGallery                     Удалить выбранное изображение c данными *
 // *                  из базы данных по указанному идентификатору и транслиту *    
 // *                                                                          *
-// * v1.0, 17.02.2023                               Автор:      Труфанов В.Е. *
+// * v1.1, 19.05.2023                               Автор:      Труфанов В.Е. *
 // * Copyright © 2022 tve                           Дата создания: 19.04.2023 *
 // ****************************************************************************
 
@@ -60,13 +60,21 @@ else
    $iDataPic=base64_encode($NameArt);
    $NameArt='data:'.$mime_type.';base64,'.$iDataPic.'';
    if (($table["Width"]<0.1)||($table["Height"]<0.1))
+   {
       $Piati=$table["CommPic"].' '; 
+      $wimg=0;
+      $himg=0;
+   }
    else
-      $Piati=$table["CommPic"].': '.$table["Width"].'x'.$table["Height"]; 
+   {
+      $Piati=$table["CommPic"].': '.$table["Width"].'x'.$table["Height"];
+      $wimg=$table["Width"];
+      $himg=$table["Height"];
+   } 
    $iif='NoDefine';
 }
 // Возвращаем сообщение
-$message='{"NameArt":"'.$NameArt.'", "Piati":"'.$Piati.'", "iif":"'.$iif.'"}';
+$message='{"NameArt":"'.$NameArt.'", "Piati":"'.$Piati.'", "iif":"'.$iif.'", "wimg":"'.$wimg.'", "himg":"'.$himg.'"}';
 $message=\prown\makeLabel($message,'ghjun5','ghjun5');
 echo $message;
 exit;

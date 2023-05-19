@@ -13,8 +13,6 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
 $SiteHost=$_WORKSPACE[wsSiteHost]; // Каталог хостинга
-// Подключаем совместные определения(переменные) для модулей PHP и JS
-require_once 'IttveMeDef.php';
 // Подключаем файлы библиотеки прикладных модулей:
 require_once $SiteHost.'/TPhpPrown/TPhpPrown'."/CommonPrown.php";
 set_error_handler("EraseFilesHandler");
@@ -24,8 +22,8 @@ $isOldFiles=false;
 $curdate=date("Ymd"); 
 // Инициируем контрольную трассировку
 // и список удаленных файлов
-$s='Curdate='.$curdate."\n";
-$delis=$s;
+$start='Curdate='.$curdate."\n";
+$delis=$start; $s=$start;
 // Вытаскиваем упорядоченный список файлов каталога
 $files1=scandir(imgDir);
 foreach ($files1 as $filename) 
@@ -52,7 +50,7 @@ foreach ($files1 as $filename)
    }
 }
 // Трассируем в файл список удаленных
-if ($isOldFiles) EraseFilesTrass($delis);
+if ($isOldFiles) EraseFilesTrass($delis,$start);
 // Передаем данные в формате JSON
 // (если нет передачи данных, то по аякс-запросу вернется ошибка)
 $user_info[]=array('text'=>$s);
@@ -71,9 +69,9 @@ function EraseFilesHandler($errno,$errstr,$errfile,$errline)
 // ****************************************************************************
 // *                 Оттрассировать удаление старых файлов                    *
 // ****************************************************************************
-function EraseFilesTrass($delis)
+function EraseFilesTrass($delis,$start)
 {
-   if ($delis=='') {}
+   if ($delis==$start) {}
    else
    {
       // Отрезаем последний переход на новую строку

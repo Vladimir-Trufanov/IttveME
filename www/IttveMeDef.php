@@ -19,6 +19,8 @@ define ("oriPortrait",  'portrait');   // Портретное располож�
 define ("ajSuccess",            "Функция/процедура выполнена успешно");     
 define ("ajUndeletionOldFiles", "Ошибка удаления старых файлов");
 
+define ("ModeImg", $c_ModeImg);       
+
 // ****************************************************************************
 // *         Подключить межязыковые (PHP-JScript) определения внутри HTML     *
 // ****************************************************************************
@@ -32,6 +34,10 @@ function DefinePHPtoJS()
    
    'oriLandscape="'        .oriLandscape. '";'.
    'oriPortrait="'         .oriPortrait.  '";'.
+   
+   'vimExiSize="'          .vimExiSize. '";'.
+   'vimOnPage="'           .vimOnPage.  '";'.
+   'ModeImg="'             .ModeImg.  '";'.
    
    'ajSuccess="'           .ajSuccess.           '";'.
    'ajUndeletionOldFiles="'.ajUndeletionOldFiles.'";'.

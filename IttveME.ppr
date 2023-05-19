@@ -249,11 +249,28 @@ IttveMe
 					www\Images\Cursors\More-move.cur
 					www\Images\Cursors\Move.cur
 					www\Images\Cursors\Unavailable.cur
+				-Охота на медведя
+					www\Images\Охота на медведя\Бревно на медведя.jpg
+					www\Images\Охота на медведя\Гоша и Мила.jpg
+					www\Images\Охота на медведя\Гошан.jpg
+					www\Images\Охота на медведя\Дед-сын-и-внук.png
+					www\Images\Охота на медведя\Карта прогулки.jpg
+					www\Images\Охота на медведя\Медведь пошел туда.JPG
+					www\Images\Охота на медведя\Медведь шел след в след.JPG
+					www\Images\Охота на медведя\Размыло дорогу.JPG
+					www\Images\Охота на медведя\След в след.JPG
+					www\Images\Охота на медведя\Следы не свежие, но догоним.JPG
+					www\Images\Охота на медведя\Хорошенькая.png
+					www\Images\Охота на медведя\Шапша в половодье.JPG
+					www\Images\Охота на медведя\Шапша весной.JPG
 				www\Images\bgnoise_lg.jpg
 				www\Images\Kwinflat.jpg
+				www\Images\RedPoint.jpg
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
+				www\ittveEdit\Win10Ch0De--1.gif
+				www\ittveEdit\Win10Ch0De--1.jpg
 			-jQuery
 				-fil
 					www\jQuery\fil\jquery-3.6.3.min.js
@@ -526,7 +543,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -663,7 +680,7 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				+TViewImage
+				-TViewImage
 					www\ttools\TViewImage\ViewImage.js
 					www\ttools\TViewImage\ViewImage.php
 				-TWorkTinyMain
@@ -687,7 +704,6 @@ IttveMe
 			www\ittve-log.txt
 			www\IttveMeDef.php
 			www\Kwinflatic.jpg
-			www\log.txt
 			www\manifest.json
 			www\photo-8i.jpg
 			www\TestBase.php
@@ -718,7 +734,7 @@ IttveMe
 			Построение дерева иерархии\Построение дерева иерархии с помощью PHP.doc
 			Построение дерева иерархии\Редактирование данных в MySql с помощью PHP.doc
 		.gitignore
-		IttveMe.ppr
+		IttveME.ppr
 		IttveMe.rtf
 		IttveMe.xls
 		README.md
@@ -731,18 +747,20 @@ IttveMe
 5=www\UpSiteCSS.php
 6=www\UpSite.php
 7=www\Jsx\WorkTiny.js
-8=www\Styles\Content.css
-9=www\ttools\TViewImage\ViewImage.php
-10=www\Styles\iniStyles.css
+8=www\ttools\TViewImage\ViewImage.php
+9=www\Styles\Content.css
+10=www\ttools\TViewImage\ViewImage.js
+11=www\EraseFiles.php
+12=www\IttveMeDef.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\iniStyles.css
+Selected=www\IttveMeDef.php
 [www\index.php]
-TopLine=78
+TopLine=80
 Caret=9,78
 [www\iniMem.php]
-TopLine=13
-Caret=1,26
+TopLine=209
+Caret=39,170
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=175
 Caret=7,175
@@ -750,23 +768,29 @@ Caret=7,175
 TopLine=420
 Caret=40,432
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=310
-Caret=29,313
+TopLine=268
+Caret=86,286
 [www\UpSiteCSS.php]
-TopLine=85
-Caret=17,96
+TopLine=91
+Caret=14,96
 [www\UpSite.php]
-TopLine=38
-Caret=30,50
+TopLine=2
+Caret=16,76
 [www\Jsx\WorkTiny.js]
-TopLine=494
-Caret=47,474
-[www\Styles\Content.css]
-TopLine=85
-Caret=1,92
+TopLine=479
+Caret=41,526
 [www\ttools\TViewImage\ViewImage.php]
-TopLine=11
-Caret=22,21
-[www\Styles\iniStyles.css]
-TopLine=109
-Caret=1,119
+TopLine=15
+Caret=1,27
+[www\Styles\Content.css]
+TopLine=89
+Caret=1,1
+[www\ttools\TViewImage\ViewImage.js]
+TopLine=104
+Caret=17,132
+[www\EraseFiles.php]
+TopLine=44
+Caret=1,16
+[www\IttveMeDef.php]
+TopLine=9
+Caret=1,22
