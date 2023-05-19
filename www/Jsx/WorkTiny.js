@@ -67,6 +67,8 @@ $(document).ready(function()
    });
 })
 
+
+/*
 // ****************************************************************************
 // *                   Убедиться, что изображение внутри дива                 *
 // ****************************************************************************
@@ -122,14 +124,14 @@ function setAlignImg(widthDiv,heightDiv,wImg,hImg)
       }
    }
    // Возвращаем размеры приведенного изображения
-   /*
+   / *
    alert
    (
       'widthDiv  = '+widthDiv +'    '+'p_widthImg  = '+alignImg["p_widthImg"]+'\n'+
       'heightDiv = '+heightDiv+'    '+'p_heightImg = '+alignImg["p_heightImg"]+'\n'+
       ''
    )
-   */
+   * /
    return alignImg;
 }
 // ****************************************************************************
@@ -180,7 +182,7 @@ function CalcPicOnDiv(widthDiv,heightDiv,p_widthImg,p_heightImg,wImg,hImg,perSiz
    aCalcPicOnDiv.nTop=(heightDiv-heightImg)/2;
    // Чуть приподнимаем изображение вверх
    aCalcPicOnDiv.nTop=aCalcPicOnDiv.nTop*0.9;
-   /*
+   / *
    alert
    (
       'alignImg = '+alignImg+'\n'+
@@ -189,9 +191,10 @@ function CalcPicOnDiv(widthDiv,heightDiv,p_widthImg,p_heightImg,wImg,hImg,perSiz
       'heightDiv = '+heightDiv+'    '+'heightImg = '+heightImg+'\n'+
       ''
    )
-   */
+   * /
    return aCalcPicOnDiv;
 }
+*/
 // ****************************************************************************
 // *       Отключить блокировку закрытия страницы редактирования материала    *
 // ****************************************************************************
