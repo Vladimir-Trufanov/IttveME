@@ -50,8 +50,8 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
 
    // Извлекаем размеры тела страницы (окна диалога)
    ifBody=document.body;
-   let diaWidth=ifBody.offsetWidth;   
-   let diaHeight=ifBody.offsetHeight;
+   var diaWidth=ifBody.offsetWidth;   
+   var diaHeight=ifBody.offsetHeight;
    //let diaWidth=ifBody.clientWidth;   
    //let diaHeight=ifBody.clientHeight;
    
@@ -62,7 +62,8 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
    // Формируем заголовок окна
    var diaTitle=Comment+' ['+diaWidth+'x'+diaHeight+']';
    //let cAlert='wimg='+wimg+'   himg='+himg;
-   let cAlert='p_widthImg='+AlignImg['p_widthImg']+'   p_heightImg='+AlignImg['p_heightImg'];
+   //let cAlert='p_widthImg='+AlignImg['p_widthImg']+'   p_heightImg='+AlignImg['p_heightImg'];
+   let cAlert='';
    diaTitle=diaTitle+'   '+cAlert;
 
    // Строим диалоговое окно
@@ -85,14 +86,39 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
       draggable:true, 
       show:{effect:"fade",delay:100,duration:1500},
       hide:{effect:"explode",delay:delayClose,duration:durClose,easing:'swing'},
+      
+      //resizeStop: function(event, ui) 
+      open: function(event, ui) 
+      {
+        alert
+        (
+        "width: " + $(this).outerWidth() + ", height: " + $(this).outerHeight() +"\n"+ 
+        "width: " + $(this).innerWidth() + ", height: " + $(this).innerHeight()
+        );        
+      }
+      
+      
    });
+   //$('#ImgDialogWind').dialog("open");  
+   $('#ImgDialogWind').dialog(
+   {
+      //width:diaWidth-130,
+   });
+
+   //ifDialogWind=document.getElementById('ImgDialogWind');
+   //alert('1 '+ifDialogWind.offsetWidth+'-'+ifDialogWind.offsetHeight);
+   //diaWidth=ifDialogWind.offsetWidth;
+   //diaHeight=ifDialogWind.offsetHeight;
+ 
    
    // Включаем изображение в диалоговое окно jQuery: width="189" height="255" 
-   wpimg=wimg; hpimg=himg;
+   //wpimg=wimg; hpimg=himg;
+   wpimg=diaWidth-100; hpimg=diaHeight-80;
    let messa='<img id="ImgDialog" src="'+isSrc+'" '+
        'width="'+wpimg+'" height="'+hpimg+
        '" alt="tutorialsPoint">';
    $('#ImgDialogWind').html(messa);
+   //alert('2 '+ifDialogWind.offsetWidth+'-'+ifDialogWind.offsetHeight);
    
    // Позиционируем изображение 'Внутри страницы'
    if (ModeImg==vimOnPage) 
@@ -114,6 +140,12 @@ function View_vimOnPage(wWin,hWin,wImg,hImg,AlignImg)
    if (View_isInside(wWin,hWin,wImg,hImg)) {}
    else
    {
+   
+       //    alert($('#ImgDialogWind').outerWidth());        
+       // alert($('#ImgDialogWind').outerHeight());    
+        
+      //  $( '#ImgDialogWind' ).dialog( "moveToTop" );    
+
       // Назначаем процент размера изображения от ширины дива (или высоты) 
       let perSize=100; //90; // процент  
       // Расчитываем изображение по центру дива
@@ -136,6 +168,8 @@ function View_vimOnPage(wWin,hWin,wImg,hImg,AlignImg)
       }
       */
       
+      /*
+      
       // Получаем координаты top и left
       let top_vimOnPage  = $('#ImgDialog').offset().top;
       let left_vimOnPage = $('#ImgDialog').offset().left;
@@ -145,11 +179,15 @@ function View_vimOnPage(wWin,hWin,wImg,hImg,AlignImg)
       xOffset=0; yOffset=0; 
       // Изменяем координаты позиции элемента
       $('#ImgDialog').offset({top:top_vimOnPage+yOffset, left:left_vimOnPage+xOffset});
-
+      */
+      
       // Устанавливаем новые размеры
+      /*
       wpimg=aCalcPicOnDiv['widthImg']; hpimg=aCalcPicOnDiv['heightImg'];
+      wpimg=wWin-100; hpimg=hWin-50;
       $('#ImgDialog').attr('width',wpimg);
       $('#ImgDialog').attr('height',hpimg);
+      */
    }
 }
 // ****************************************************************************
