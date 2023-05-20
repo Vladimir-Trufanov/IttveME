@@ -784,8 +784,8 @@ Caret=1,72
 TopLine=89
 Caret=1,1
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=33
-Caret=26,58
+TopLine=111
+Caret=18,145
 [www\EraseFiles.php]
 TopLine=16
 Caret=1,16
@@ -793,8 +793,8 @@ Caret=1,16
 TopLine=9
 Caret=1,22
 [www\Jsx\WorkTiny.js]
-TopLine=169
-Caret=3,197
+TopLine=263
+Caret=1,290
 [www\getImgBase64.php]
 TopLine=43
 Caret=1,1

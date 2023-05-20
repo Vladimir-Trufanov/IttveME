@@ -26,11 +26,6 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
    // let imgdiv=document.createElement('div');
    // imgdiv.id="ImgDialogWind";
    // document.body.append(imgdiv);
-
-   // Извлекаем размеры тела страницы (окна диалога)
-   ifBody=document.body;
-   let diaWidth=ifBody.offsetWidth;
-   let diaHeight=ifBody.offsetHeight;
    
    /*
    // Определяем, реализован ли в браузере механизм отложенного
@@ -52,30 +47,24 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
      $('#lazy').html('lazy no');
    }
    */
-   
-   // Включаем изображение в диалоговом окне jQuery: width="189" height="255" 
-   //wpimg=320; hpimg=320;
-   wpimg=wimg; hpimg=himg;
-   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
-       'width="'+wpimg+'" height="'+hpimg+
-       '" alt="tutorialsPoint">';
-   $('#ImgDialogWind').html(messa);
 
+   // Извлекаем размеры тела страницы (окна диалога)
+   ifBody=document.body;
+   let diaWidth=ifBody.offsetWidth;   
+   let diaHeight=ifBody.offsetHeight;
+   //let diaWidth=ifBody.clientWidth;   
+   //let diaHeight=ifBody.clientHeight;
+   
+   // Пересчитываем для информации, размеры изображения так, чтобы оно 
+   // помещалось внутрь дива 
+   let AlignImg=setAlignImg(diaWidth,diaHeight,wimg,himg);
+   
    // Формируем заголовок окна
    var diaTitle=Comment+' ['+diaWidth+'x'+diaHeight+']';
-   let cAlert='wimg='+wimg+'   himg='+himg;
+   //let cAlert='wimg='+wimg+'   himg='+himg;
+   let cAlert='p_widthImg='+AlignImg['p_widthImg']+'   p_heightImg='+AlignImg['p_heightImg'];
    diaTitle=diaTitle+'   '+cAlert;
-   
-   // Позиционируем изображение 'Внутри страницы'
-   if (ModeImg==vimOnPage) 
-   {
-      View_vimOnPage(diaWidth,diaHeight,wimg,himg);
-   }
-   // Позиционируем изображение 'В заданном размере в пикселах - как есть'
-   else 
-   {
-      View_vimExiSize(diaWidth,diaHeight,wimg,himg);
-   }
+
    // Строим диалоговое окно
    let isHide=true;
    let delayClose=250;
@@ -97,41 +86,70 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
       show:{effect:"fade",delay:100,duration:1500},
       hide:{effect:"explode",delay:delayClose,duration:durClose,easing:'swing'},
    });
+   
+   // Включаем изображение в диалоговое окно jQuery: width="189" height="255" 
+   wpimg=wimg; hpimg=himg;
+   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+       'width="'+wpimg+'" height="'+hpimg+
+       '" alt="tutorialsPoint">';
+   $('#ImgDialogWind').html(messa);
+   
+   // Позиционируем изображение 'Внутри страницы'
+   if (ModeImg==vimOnPage) 
+   {
+      View_vimOnPage(diaWidth,diaHeight,wimg,himg,AlignImg);
+   }
+   // Позиционируем изображение 'В заданном размере в пикселах - как есть'
+   else 
+   {
+      View_vimExiSize(diaWidth,diaHeight,wimg,himg);
+   }
+
 }
 // ****************************************************************************
 // *                 Позиционировать изображение 'Внутри страницы'            *
 // ****************************************************************************
-function View_vimOnPage(wWin,hWin,wImg,hImg)
+function View_vimOnPage(wWin,hWin,wImg,hImg,AlignImg)
 {
    if (View_isInside(wWin,hWin,wImg,hImg)) {}
    else
    {
-      // Изменяем размеры изображения так, чтобы оно помещалось внутрь дива 
-      let AlignImg=setAlignImg(wWin,hWin,wImg,hImg);
       // Назначаем процент размера изображения от ширины дива (или высоты) 
-      let perSize=90; // процент  
+      let perSize=100; //90; // процент  
       // Расчитываем изображение по центру дива
-      let aCalcPicOnDiv=CalcPicOnDiv(
+      let aCalcPicOnDiv=CalcPicOnDiv
+      (
          wWin,hWin,
          AlignImg['p_widthImg'],AlignImg['p_heightImg'],
          wImg,hImg,
-         perSize);
-   
-         aCalcPicOnDiv=
-         { 
-            "widthImg":  320,
-            "heightImg": 320,
-            "nLeft":     100,
-            "nTop":      100
-         }
+         perSize
+      );
       
-         // Получаем координаты top и left
-         let top  = $('#ImgDialog').offset().top;
-         let left = $('#ImgDialog').offset().left;
-         // Добавляем смещения
-         let xOffset=aCalcPicOnDiv['nLeft']; let yOffset=aCalcPicOnDiv['nTop']; 
-         // Изменяем координаты позиции элемента
-         $('#ImgDialog').offset({top: top+yOffset, left: left+xOffset});
+      /*
+      // Формируем отладочный массив
+      aCalcPicOnDiv=
+      { 
+         "widthImg":  320,
+         "heightImg": 320,
+         "nLeft":     100,
+         "nTop":      100
+      }
+      */
+      
+      // Получаем координаты top и left
+      let top_vimOnPage  = $('#ImgDialog').offset().top;
+      let left_vimOnPage = $('#ImgDialog').offset().left;
+      console.log('top_vimOnPage='+top_vimOnPage+'  left_vimOnPage='+left_vimOnPage);
+      // Добавляем смещения
+      let xOffset=aCalcPicOnDiv['nLeft']; let yOffset=aCalcPicOnDiv['nTop']; 
+      xOffset=0; yOffset=0; 
+      // Изменяем координаты позиции элемента
+      $('#ImgDialog').offset({top:top_vimOnPage+yOffset, left:left_vimOnPage+xOffset});
+
+      // Устанавливаем новые размеры
+      wpimg=aCalcPicOnDiv['widthImg']; hpimg=aCalcPicOnDiv['heightImg'];
+      $('#ImgDialog').attr('width',wpimg);
+      $('#ImgDialog').attr('height',hpimg);
    }
 }
 // ****************************************************************************
@@ -150,20 +168,25 @@ function View_vimExiSize(wWin,hWin,wImg,hImg)
 // ****************************************************************************
 function View_isInside(wWin,hWin,wImg,hImg)
 {
-   let Result=false;
+   Result=false;
    if (wImg <= wWin && hImg <= hWin) 
    {
       // Получаем координаты top и left
-      let top  = $('#ImgDialog').offset().top;
-      let left = $('#ImgDialog').offset().left;
+      top_View_isInside  = $('#ImgDialog').offset().top;
+      left_View_isInside = $('#ImgDialog').offset().left;
       // Пересчитываем смещения (.7 смещаем вверх для благоприятного восприятия)
-      let xOffset=0; let yOffset=0; 
-      if (wImg>0) xOffset=(wWin-wImg)/2;
-      if (hImg>0) yOffset=(hWin-hImg)/2*.7;  
+      xOffset_View_isInside=0; yOffset_View_isInside=0; 
+      if (wImg>0) xOffset_View_isInside=(wWin-wImg)/2;
+      if (hImg>0) yOffset_View_isInside=(hWin-hImg)/2*.7;  
       // Изменяем координаты позиции элемента
-      $('#ImgDialog').offset({top: top+yOffset, left: left+xOffset});
+      $('#ImgDialog').offset
+      ({
+         top:  top_View_isInside  + yOffset_View_isInside, 
+         left: left_View_isInside + xOffset_View_isInside
+      });
       // Отмечаем, что уже отпозиционировали
       Result=true;
+      return Result;
    }
 }
 // ****************************************************************************
@@ -171,57 +194,33 @@ function View_isInside(wWin,hWin,wImg,hImg)
 // ****************************************************************************
 function setAlignImg(widthDiv,heightDiv,wImg,hImg)
 {
-   /*
-   // Если размеры изображения меньше размеров дива,
-   // то изображение оставляем как есть
-   if (isImgInDiv(widthDiv,heightDiv,wImg,hImg))
+   // Определяем коэффициент приведения по ширине
+   let k1=widthDiv/wImg;
+   // Приводим высоту и ширину изображения к диву
+   let p1_widthImg=k1*wImg;
+   let p1_heightImg=k1*hImg;
+   // Если новая высота изображения меньше высоты дива,
+   // то фиксируем
+   if (p1_heightImg<heightDiv)
    {
       alignImg=
       { 
-         "p_widthImg" : wImg,
-         "p_heightImg": hImg
+         "p_widthImg" : p1_widthImg,
+         "p_heightImg": p1_heightImg
       }
    }
+   // Иначе приводим по высоте
    else
    {
-   */
-      // Определяем коэффициент приведения по ширине
-      let k1=widthDiv/wImg;
-      // Приводим высоту и ширину изображения к диву
-      let p1_widthImg=k1*wImg;
-      let p1_heightImg=k1*hImg;
-      // Если новая высота изображения меньше высоты дива,
-      // то фиксируем
-      if (p1_heightImg<heightDiv)
-      {
-         alignImg=
-         { 
-            "p_widthImg" : p1_widthImg,
-            "p_heightImg": p1_heightImg
-         }
+      let k2=heightDiv/p1_heightImg;
+      let p2_widthImg=k2*p1_widthImg;
+      let p2_heightImg=k2*p1_heightImg;
+      alignImg=
+      { 
+         "p_widthImg" : p2_widthImg,
+         "p_heightImg": p2_heightImg
       }
-      // Иначе приводим по высоте
-      else
-      {
-         let k2=heightDiv/p1_heightImg;
-         let p2_widthImg=k2*p1_widthImg;
-         let p2_heightImg=k2*p1_heightImg;
-         alignImg=
-         { 
-            "p_widthImg" : p2_widthImg,
-            "p_heightImg": p2_heightImg
-         }
-      }
-   //}
-   // Возвращаем размеры приведенного изображения
-   /*
-   alert
-   (
-      'widthDiv  = '+widthDiv +'    '+'p_widthImg  = '+alignImg["p_widthImg"]+'\n'+
-      'heightDiv = '+heightDiv+'    '+'p_heightImg = '+alignImg["p_heightImg"]+'\n'+
-      ''
-   )
-   */
+   }
    return alignImg;
 }
 // ****************************************************************************
@@ -238,35 +237,24 @@ function CalcPicOnDiv(widthDiv,heightDiv,p_widthImg,p_heightImg,wImg,hImg,perSiz
       "nLeft":     10,
       "nTop":      10
    }
-   /*
-   // Если размеры изображения меньше размеров дива,
-   // то изображение оставляем как есть
-   if (isImgInDiv(widthDiv,heightDiv,wImg,hImg))
+   // Если размеры изображения и дива совпадают по ширине
+   if (Math.abs(widthDiv-p_widthImg)<1)
    {
-      widthImg=wImg;
-      heightImg=hImg;
+      // Определяем ширину изображения
+      widthImg=widthDiv*perSize/100;
+      // Определяем высоту изображения             *** wImg     --> hImg ***  
+      // в диве из пропорции:                      *** widthImg --> x    ***
+      heightImg=widthImg*hImg/wImg;
    }
    else
    {
-   */
-      // Если размеры изображения и дива совпадают по ширине
-      if (Math.abs(widthDiv-p_widthImg)<1)
-      {
-         // Определяем ширину изображения
-         widthImg=widthDiv*perSize/100;
-         // Определяем высоту изображения             *** wImg     --> hImg ***  
-         // в диве из пропорции:                      *** widthImg --> x    ***
-         heightImg=widthImg*hImg/wImg;
-      }
-      else
-      {
-         // Определяем высоту изображения
-         heightImg=heightDiv*perSize/100;
-         // Определяем ширину изображения            *** wImg --> hImg      ***  
-         // в диве из пропорции:                     *** x    --> heightImg ***
-         widthImg=wImg*heightImg/hImg;
-      }
-   //}
+      // Определяем высоту изображения
+      heightImg=heightDiv*perSize/100;
+      // Определяем ширину изображения            *** wImg --> hImg      ***  
+      // в диве из пропорции:                     *** x    --> heightImg ***
+      widthImg=wImg*heightImg/hImg;
+   }
+   //
    aCalcPicOnDiv.widthImg=widthImg;
    aCalcPicOnDiv.heightImg=heightImg;
    // Центрируем изображение по диву
