@@ -113,54 +113,70 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
          '" alt="tutorialsPoint">';
          $('#ImgDialogWind').html(messa);
    */
-   
-   wpimg='100%'; hpimg='100%';
-   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
-       'width="'+wpimg+'" height="'+hpimg+
-       '" alt="tutorialsPoint">';
-   $('#ImgDialogWind').html(messa);
-     
    // Позиционируем изображение 'Внутри страницы'
    if (ModeImg==vimOnPage) 
    {
-      View_vimOnPage(diaWidth,diaHeight,wimg,himg);
+      aCalcPicOnDiv=View_vimOnPage(diaWidth,diaHeight,wimg,himg);
    }
    // Позиционируем изображение 'В заданном размере в пикселах - как есть'
    else 
    {
-      View_vimExiSize(diaWidth,diaHeight,wimg,himg);
+      aCalcPicOnDiv=View_vimExiSize(diaWidth,diaHeight,wimg,himg);
    }
-
+   // Укладываем изображение в диалоговое окно 
+   // wpimg='100%'; hpimg='100%';
+   wpimg=String(aCalcPicOnDiv.wpimg)+'%';
+   hpimg=String(aCalcPicOnDiv.hpimg)+'%';
+   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+       'width="'+wpimg+'" height="'+hpimg+
+       '" alt="tutorialsPoint">';
+   $('#ImgDialogWind').html(messa);
 }
 // ****************************************************************************
 // *                 Позиционировать изображение 'Внутри страницы'            *
 // ****************************************************************************
 function View_vimOnPage(wWin,hWin,wImg,hImg)
 {
-   if (View_isInside(wWin,hWin,wImg,hImg)) {}
-   else
+   // Проверяем вложенность размеров изображения в размеры дива
+   let aCalcPicOnDiv=View_isInside(wWin,hWin,wImg,hImg);
+   // Изображение не вложено, пересчитываем размеры в процентах 
+   if (aCalcPicOnDiv.wpimg==100 && aCalcPicOnDiv.hpimg==100) 
    {
+      aCalcPicOnDiv.wpimg=96;
+      aCalcPicOnDiv.hpimg=96; 
    }
+   // Передаем размеры изображения в процентах
+   return aCalcPicOnDiv;
 }
 // ****************************************************************************
 // *  Позиционировать изображение 'В заданном размере в пикселах - как есть'  *
 // ****************************************************************************
 function View_vimExiSize(wWin,hWin,wImg,hImg)
 {
-   if (View_isInside(wWin,hWin,wImg,hImg)) {}
-   else
+   // Проверяем вложенность размеров изображения в размеры дива
+   let aCalcPicOnDiv=View_isInside(wWin,hWin,wImg,hImg);
+   // Изображение не вложено, пересчитываем размеры в процентах 
+   if (aCalcPicOnDiv.wpimg==100 && aCalcPicOnDiv.hpimg==100) 
    {
-      // Здесь полагаемся на браузер
+      aCalcPicOnDiv.wpimg=150;
+      aCalcPicOnDiv.hpimg=150; 
    }
+   // Передаем размеры изображения в процентах
+   return aCalcPicOnDiv;
 }
 // ****************************************************************************
 // *    Позиционировать изображение 'Если изображение уже внутри страницы'    *
 // ****************************************************************************
 function View_isInside(wWin,hWin,wImg,hImg)
 {
-   Result=false;
+   // Инициируем параметры возвращаемого массива
+   let wpimg=100; let hpimg=100;
+   
+   // Пересчитываем параметры возвращаемого массива
+   // если изображение внутри дива
    if (wImg <= wWin && hImg <= hWin) 
    {
+      wpimg=50; hpimg=50;
       /*
       // Получаем координаты top и left
       top_View_isInside  = $('#ImgDialog').offset().top;
@@ -176,10 +192,10 @@ function View_isInside(wWin,hWin,wImg,hImg)
          left: left_View_isInside + xOffset_View_isInside
       });
       */
-      // Отмечаем, что уже отпозиционировали
-      Result=true;
-      return Result;
    }
+   // Возвращаем начальные или измененные размеры в процентах
+   aCalcPicOnDiv={"wpimg":hpimg,"hpimg":hpimg}
+   return aCalcPicOnDiv;
 }
 // ****************************************************************************
 // *    Пересчитать в проценты размеры изображенияозиционировать изображение 'Если изображение уже внутри страницы'    *
