@@ -90,11 +90,13 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
       //resizeStop: function(event, ui) 
       open: function(event, ui) 
       {
+        /*
         alert
         (
         "width: " + $(this).outerWidth() + ", height: " + $(this).outerHeight() +"\n"+ 
         "width: " + $(this).innerWidth() + ", height: " + $(this).innerHeight()
-        );        
+        ); 
+        */       
       }
       
       
@@ -113,12 +115,17 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
    
    // Включаем изображение в диалоговое окно jQuery: width="189" height="255" 
    //wpimg=wimg; hpimg=himg;
+   /*
    wpimg=diaWidth-100; hpimg=diaHeight-80;
    let messa='<img id="ImgDialog" src="'+isSrc+'" '+
        'width="'+wpimg+'" height="'+hpimg+
        '" alt="tutorialsPoint">';
    $('#ImgDialogWind').html(messa);
    //alert('2 '+ifDialogWind.offsetWidth+'-'+ifDialogWind.offsetHeight);
+   */
+   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+       'alt="tutorialsPoint">';
+   $('#ImgDialogWind').html(messa);
    
    // Позиционируем изображение 'Внутри страницы'
    if (ModeImg==vimOnPage) 
@@ -168,17 +175,25 @@ function View_vimOnPage(wWin,hWin,wImg,hImg,AlignImg)
       }
       */
       
-      /*
+      let innerHeight=$('#ImgDialogWind').innerHeight();
+      console.log("height: "+innerHeight); 
+      let innerWidth=$('#ImgDialogWind').innerWidth();
+      console.log("width: "+innerWidth);  
       
+      $('#ImgDialog').css('width','50%');
+      $('#ImgDialog').css('height','50%');
+      //$('#ImgDialog').css('margin-left','50%');
+
       // Получаем координаты top и left
       let top_vimOnPage  = $('#ImgDialog').offset().top;
       let left_vimOnPage = $('#ImgDialog').offset().left;
       console.log('top_vimOnPage='+top_vimOnPage+'  left_vimOnPage='+left_vimOnPage);
       // Добавляем смещения
-      let xOffset=aCalcPicOnDiv['nLeft']; let yOffset=aCalcPicOnDiv['nTop']; 
-      xOffset=0; yOffset=0; 
+      //let xOffset=aCalcPicOnDiv['nLeft']; let yOffset=aCalcPicOnDiv['nTop']; 
+      xOffset=460; yOffset=0; 
       // Изменяем координаты позиции элемента
       $('#ImgDialog').offset({top:top_vimOnPage+yOffset, left:left_vimOnPage+xOffset});
+      /*
       */
       
       // Устанавливаем новые размеры
@@ -227,6 +242,10 @@ function View_isInside(wWin,hWin,wImg,hImg)
       return Result;
    }
 }
+
+/*
+*/
+
 // ****************************************************************************
 // *    Изменить размеры изображения так, чтобы оно помещалось внутрь дива    *
 // ****************************************************************************

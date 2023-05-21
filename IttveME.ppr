@@ -292,7 +292,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -747,6 +747,8 @@ IttveMe
 5=www\UpSiteCSS.php
 6=www\UpSite.php
 7=www\ttools\TViewImage\ViewImage.js
+8=www\Styles\iniStyles.css
+9=www\Jsx\WorkTiny.js
 [Selected Project Files]
 Main=
 Selected=www\ttools\TViewImage\ViewImage.js
@@ -772,5 +774,11 @@ Caret=14,96
 TopLine=56
 Caret=29,76
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=102
-Caret=4,120
+TopLine=55
+Caret=1,182
+[www\Styles\iniStyles.css]
+TopLine=171
+Caret=15,180
+[www\Jsx\WorkTiny.js]
+TopLine=201
+Caret=1,222
