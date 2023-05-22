@@ -60,7 +60,6 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
    let isHide=true;
    let delayClose=250;
    let durClose=1000;
-   
    $('#ImgDialogWind').dialog(
    {
       bgiframe:true,      // совместимость с IE6
@@ -123,14 +122,109 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
    {
       aCalcPicOnDiv=View_vimExiSize(diaWidth,diaHeight,wimg,himg);
    }
-   // Укладываем изображение в диалоговое окно 
-   // wpimg='100%'; hpimg='100%';
-   wpimg=String(aCalcPicOnDiv.wpimg)+'%';
-   hpimg=String(aCalcPicOnDiv.hpimg)+'%';
-   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
-       'width="'+wpimg+'" height="'+hpimg+
-       '" alt="tutorialsPoint">';
-   $('#ImgDialogWind').html(messa);
+   // Включаем изображение в диалоговое окно,
+   // если изображение внутри дива: "когда внутри",
+   // центрируем изображение по центру дива 
+   if (wimg <= diaWidth && himg <= diaHeight) 
+   {
+      /*
+      $('#ImgDialogWind').css('display','flex');
+      $('#ImgDialogWind').css('align-items','center');
+      $('#ImgDialogWind').css('justify-content','center');
+      */
+      
+      //let ptop=Math.floor((100-aCalcPicOnDiv.hpimg)/2);
+      //$('#ImgDialog').css('top',String(ptop)+'%');
+      //$('#ImgDialog').css('margin-top','50%');
+   
+      //console.log('wimg <= diaWidth && himg <= diaHeight');
+   
+      //$('#ImgDialog').css('margin-top','121px');
+      //$('#ImgDialog').css('margin-left','227px');
+      
+      //margin-top:121px;
+      //margin-left:227px;
+
+      
+      /*
+      wpimg=String(aCalcPicOnDiv.wpimg)+'%';
+      hpimg=String(aCalcPicOnDiv.hpimg)+'%';
+      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+         'width="'+wpimg+'" height="'+hpimg+
+         '" alt="tutorialsPoint">';
+      $('#ImgDialogWind').html(messa);
+      */
+   }
+   else if (wimg <= diaWidth && himg > diaHeight) 
+   {
+      console.log('wimg <= diaWidth && himg > diaHeight');
+      
+      $('#ImgDialogWind').css('display','block');
+      //$('#ImgDialogWind').css('align-items','center');
+      //$('#ImgDialogWind').css('justify-content','center');
+
+
+      $('#ImgDialog').css('display','block');
+     
+      /*
+      $('#ImgDialog').css('margin','auto');
+      $('#ImgDialog').css('position','absolute');
+      $('#ImgDialog').css('left','0');                                              
+      $('#ImgDialog').css('right','0'); 
+      */                                             
+
+      
+      //$('#ImgDialog').css('margin','0 auto');
+      //$('#ImgDialog').css('margin-left','auto');
+      //$('#ImgDialog').css('margin-right','auto');
+
+      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+         'alt="tutorialsPoint">';
+      $('#ImgDialogWind').html(messa);
+   }
+   // Включаем изображение в диалоговое окно,
+   // если ширина изображения больше ширины дива и
+   // высота изображения больше высоты дива: "когда снаружи"
+   else
+   {
+      $('#ImgDialogWind').css('display','block');
+      $('#ImgDialog').css('display','block');
+      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+         'alt="tutorialsPoint">';
+      $('#ImgDialogWind').html(messa);
+   }
+   
+   
+   
+   
+   /*
+   {
+      $('#ImgDialogWind').css('display','flex');
+      $('#ImgDialogWind').css('align-items','center');
+      $('#ImgDialogWind').css('justify-content','center');
+      
+      wpimg=String(aCalcPicOnDiv.wpimg)+'%';
+      hpimg=String(aCalcPicOnDiv.hpimg)+'%';
+      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+         'width="'+wpimg+'" height="'+hpimg+
+         '" alt="tutorialsPoint">';
+      $('#ImgDialogWind').html(messa);
+   }
+   else
+   //if (aCalcPicOnDiv.wpimg==0 && aCalcPicOnDiv.hpimg==0) 
+   {
+      //$('#ImgDialogWind').css('display','block');
+      $('#ImgDialog').css('display','block');
+      //$('#ImgDialog').css('margin-left','auto');
+      //$('#ImgDialog').css('margin-right','auto');
+      $('#ImgDialog').css('margin',' 0 auto');
+
+
+      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+         'alt="tutorialsPoint">';
+      $('#ImgDialogWind').html(messa);
+   }
+   */
 }
 // ****************************************************************************
 // *                 Позиционировать изображение 'Внутри страницы'            *
@@ -158,8 +252,8 @@ function View_vimExiSize(wWin,hWin,wImg,hImg)
    // Изображение не вложено, пересчитываем размеры в процентах 
    if (aCalcPicOnDiv.wpimg==100 && aCalcPicOnDiv.hpimg==100) 
    {
-      aCalcPicOnDiv.wpimg=150;
-      aCalcPicOnDiv.hpimg=150; 
+      aCalcPicOnDiv.wpimg=0;
+      aCalcPicOnDiv.hpimg=0; 
    }
    // Передаем размеры изображения в процентах
    return aCalcPicOnDiv;
@@ -177,58 +271,40 @@ function View_isInside(wWin,hWin,wImg,hImg)
    if (wImg <= wWin && hImg <= hWin) 
    {
       wpimg=50; hpimg=50;
-      /*
-      // Получаем координаты top и left
-      top_View_isInside  = $('#ImgDialog').offset().top;
-      left_View_isInside = $('#ImgDialog').offset().left;
-      // Пересчитываем смещения (.7 смещаем вверх для благоприятного восприятия)
-      xOffset_View_isInside=0; yOffset_View_isInside=0; 
-      if (wImg>0) xOffset_View_isInside=(wWin-wImg)/2;
-      if (hImg>0) yOffset_View_isInside=(hWin-hImg)/2*.7;  
-      // Изменяем координаты позиции элемента
-      $('#ImgDialog').offset
-      ({
-         top:  top_View_isInside  + yOffset_View_isInside, 
-         left: left_View_isInside + xOffset_View_isInside
-      });
-      */
+      // Определяем процент по ширине    100%  ->  wWin
+      //                                   x%  ->  wImg
+      if (wWin>0) wpimg=Math.floor(98*wImg/wWin);
+      
+      // Определяем процент по высоте    100%  ->  hWin
+      //                                   x%  ->  hImg
+      if (hWin>0) hpimg=Math.floor(98*hImg/hWin);
    }
+
+      let cwpimg=String(wpimg)+'%';
+      let chpimg=String(hpimg)+'%';
+      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+         'width="'+cwpimg+'" height="'+chpimg+
+         '" alt="tutorialsPoint">';
+      $('#ImgDialogWind').html(messa);
+   
+      // Получаем координаты top и left
+      let top_vimOnPage  = $('#ImgDialog').offset().top;
+      let left_vimOnPage = $('#ImgDialog').offset().left;
+      console.log('top_vimOnPage='+top_vimOnPage+'  left_vimOnPage='+left_vimOnPage);
+      // Добавляем смещения
+      //let xOffset=aCalcPicOnDiv['nLeft']; let yOffset=aCalcPicOnDiv['nTop']; 
+      xOffset=227; yOffset=121; 
+      // Изменяем координаты позиции элемента
+      $('#ImgDialog').offset({top:top_vimOnPage+yOffset, left:left_vimOnPage+xOffset});
+   
+   
+   
+   
+   
    // Возвращаем начальные или измененные размеры в процентах
-   aCalcPicOnDiv={"wpimg":hpimg,"hpimg":hpimg}
+   aCalcPicOnDiv={"wpimg":wpimg,"hpimg":hpimg}
    return aCalcPicOnDiv;
 }
-// ****************************************************************************
-// *    Пересчитать в проценты размеры изображенияозиционировать изображение 'Если изображение уже внутри страницы'    *
-// ****************************************************************************
-
-/*
-function View_isInside(wWin,hWin,wImg,hImg)
-{
-   Result=false;
-   if (wImg <= wWin && hImg <= hWin) 
-   {
-      / *
-      // Получаем координаты top и left
-      top_View_isInside  = $('#ImgDialog').offset().top;
-      left_View_isInside = $('#ImgDialog').offset().left;
-      // Пересчитываем смещения (.7 смещаем вверх для благоприятного восприятия)
-      xOffset_View_isInside=0; yOffset_View_isInside=0; 
-      if (wImg>0) xOffset_View_isInside=(wWin-wImg)/2;
-      if (hImg>0) yOffset_View_isInside=(hWin-hImg)/2*.7;  
-      // Изменяем координаты позиции элемента
-      $('#ImgDialog').offset
-      ({
-         top:  top_View_isInside  + yOffset_View_isInside, 
-         left: left_View_isInside + xOffset_View_isInside
-      });
-      * /
-      // Отмечаем, что уже отпозиционировали
-      Result=true;
-      return Result;
-   }
-}
-*/
-
 // ****************************************************************************
 // *        Переключиться на детальный просмотр выбранного изображения        *
 // *               (через клик получаем uid,TranslitPic картинки)             *

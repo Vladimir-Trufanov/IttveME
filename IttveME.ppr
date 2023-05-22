@@ -749,6 +749,7 @@ IttveMe
 7=www\ttools\TViewImage\ViewImage.js
 8=www\Styles\iniStyles.css
 9=www\Jsx\WorkTiny.js
+10=www\Styles\Content.css
 [Selected Project Files]
 Main=
 Selected=www\ttools\TViewImage\ViewImage.js
@@ -765,7 +766,7 @@ Caret=7,175
 TopLine=420
 Caret=40,432
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=268
+TopLine=270
 Caret=86,286
 [www\UpSiteCSS.php]
 TopLine=91
@@ -774,11 +775,14 @@ Caret=14,96
 TopLine=54
 Caret=29,76
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=154
-Caret=1,195
+TopLine=265
+Caret=41,286
 [www\Styles\iniStyles.css]
-TopLine=163
+TopLine=166
 Caret=1,199
 [www\Jsx\WorkTiny.js]
 TopLine=201
 Caret=1,222
+[www\Styles\Content.css]
+TopLine=11
+Caret=1,37
