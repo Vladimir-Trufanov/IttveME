@@ -250,10 +250,12 @@ IttveMe
 					www\Images\Cursors\Move.cur
 					www\Images\Cursors\Unavailable.cur
 				-Охота на медведя
+					www\Images\Охота на медведя\goggle-eyed.gif
 					www\Images\Охота на медведя\Бревно на медведя.jpg
 					www\Images\Охота на медведя\Гоша и Мила.jpg
 					www\Images\Охота на медведя\Гошан.jpg
 					www\Images\Охота на медведя\Дед-сын-и-внук.png
+					www\Images\Охота на медведя\Дождь празднику не помеха.jpg
 					www\Images\Охота на медведя\Карта прогулки.jpg
 					www\Images\Охота на медведя\Медведь пошел туда.JPG
 					www\Images\Охота на медведя\Медведь шел след в след.JPG
@@ -264,13 +266,12 @@ IttveMe
 					www\Images\Охота на медведя\Шапша в половодье.JPG
 					www\Images\Охота на медведя\Шапша весной.JPG
 				www\Images\bgnoise_lg.jpg
+				www\Images\K1154-714.jpg
 				www\Images\Kwinflat.jpg
 				www\Images\RedPoint.jpg
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
-				www\ittveEdit\Win10Ch0De--1.gif
-				www\ittveEdit\Win10Ch0De--1.jpg
 			-jQuery
 				-fil
 					www\jQuery\fil\jquery-3.6.3.min.js
@@ -288,11 +289,11 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -543,7 +544,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -680,9 +681,10 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				-TViewImage
+				+TViewImage
 					www\ttools\TViewImage\ViewImage.js
 					www\ttools\TViewImage\ViewImage.php
+					www\ttools\TViewImage\ViewImageOld.js
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
@@ -704,6 +706,7 @@ IttveMe
 			www\ittve-log.txt
 			www\IttveMeDef.php
 			www\Kwinflatic.jpg
+			www\log.txt
 			www\manifest.json
 			www\photo-8i.jpg
 			www\TestBase.php
@@ -725,6 +728,7 @@ IttveMe
 				Материалы\Лабиринт\Лабиринт.doc
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
+			Материалы\Размеры и прокрутка элементов.doc
 			Материалы\Транзакции базы данных с PDO.doc
 		-Построение дерева иерархии
 			Построение дерева иерархии\index.php
@@ -736,7 +740,7 @@ IttveMe
 		.gitignore
 		IttveME.ppr
 		IttveMe.rtf
-		IttveMe.xls
+		IttveME.xls
 		README.md
 [Open project files]
 0=www\index.php
@@ -746,10 +750,10 @@ IttveMe
 4=www\ttools\TKwinGallery\KwinGalleryClass.php
 5=www\UpSiteCSS.php
 6=www\UpSite.php
-7=www\ttools\TViewImage\ViewImage.js
-8=www\Styles\iniStyles.css
-9=www\Jsx\WorkTiny.js
-10=www\Styles\Content.css
+7=www\Styles\iniStyles.css
+8=www\Jsx\WorkTiny.js
+9=www\ttools\TViewImage\ViewImage.js
+10=www\ttools\TViewImage\ViewImageOld.js
 [Selected Project Files]
 Main=
 Selected=www\ttools\TViewImage\ViewImage.js
@@ -774,15 +778,15 @@ Caret=14,96
 [www\UpSite.php]
 TopLine=54
 Caret=29,76
-[www\ttools\TViewImage\ViewImage.js]
-TopLine=226
-Caret=45,228
 [www\Styles\iniStyles.css]
-TopLine=131
+TopLine=106
 Caret=1,106
 [www\Jsx\WorkTiny.js]
 TopLine=201
 Caret=1,222
-[www\Styles\Content.css]
-TopLine=11
-Caret=1,37
+[www\ttools\TViewImage\ViewImage.js]
+TopLine=104
+Caret=1,79
+[www\ttools\TViewImage\ViewImageOld.js]
+TopLine=81
+Caret=2,96
