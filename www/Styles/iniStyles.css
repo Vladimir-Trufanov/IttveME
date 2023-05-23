@@ -102,6 +102,7 @@ h1
 #News{background:Cornsilk;}
 #Gallery{background:LightCyan;}
 #Info{background:Ivory;}
+#FooterTiny{background:LightGrey;}
 */
 
 /* Настраиваем детальное представление изображения */
@@ -170,8 +171,6 @@ h1
    font-size:3.6rem; 
 }
 
-/*#FooterTiny{background:LightGrey;}*/
-
 #WorkTiny
 {
    font-size:1.6rem;
@@ -179,27 +178,13 @@ h1
 }
 #ImgDialogWind
 {
-   margin:0;
-   padding:0;
-   border:0;
    width:100%;
    height:100%;
    overflow:auto;
-   /* 
-   display:block;    
-   vertical-align: middle;
-   text-align: center; 
-   */
-   
+   /*background:Azure;*/
 }
 #ImgDialog
 {
-   border:0;
-   padding:0;
-
-   /* 
-   margin:0;
-   */
 }
 
 /* ******************************************************* iniStyles.css *** */	

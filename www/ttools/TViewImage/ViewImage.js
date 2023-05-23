@@ -76,42 +76,6 @@ function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
       show:{effect:"fade",delay:100,duration:1500},
       hide:{effect:"explode",delay:delayClose,duration:durClose,easing:'swing'},
    });
-   
-   /* !!! Все позицинирования изображения исходят из того, что позиционирование
-      осуществляется при опоре на CSS. Изначально считается, что изображение
-      '#ImgDialog' 100-процентно размазано по окну диалога '#ImgDialogWind'.
-      
-      А далее размеры пересчитываются на ширину и высоту с меньшим процентом и
-      продолжают центрироваться посредством CSS в display:flex виде.
-      
-   CSS:
-      #ImgDialogWind
-      {
-         margin:0;
-         padding:0;
-         border:0;
-         width:100%;
-         height:100%;
-         overflow:auto;
-         // центрируем изображение по центру дива //
-         display:flex;
-         align-items:center;
-         justify-content:center;
-      }
-      #ImgDialog
-      {
-         margin:0;
-         padding:0;
-         border:0;
-      }
-      
-   JS:
-      wpimg='100%'; hpimg='130%';
-      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
-         'width="'+wpimg+'" height="'+hpimg+
-         '" alt="tutorialsPoint">';
-         $('#ImgDialogWind').html(messa);
-   */
    // Позиционируем изображение 'Внутри страницы'
    if (ModeImg==vimOnPage) 
    {
@@ -265,7 +229,6 @@ function View_isInside(wWin,hWin,wImg,hImg)
 {
    // Инициируем параметры возвращаемого массива
    let wpimg=100; let hpimg=100;
-   
    // Пересчитываем параметры возвращаемого массива
    // если изображение внутри дива
    if (wImg <= wWin && hImg <= hWin) 
@@ -273,34 +236,29 @@ function View_isInside(wWin,hWin,wImg,hImg)
       wpimg=50; hpimg=50;
       // Определяем процент по ширине    100%  ->  wWin
       //                                   x%  ->  wImg
-      if (wWin>0) wpimg=Math.floor(98*wImg/wWin);
+      if (wWin>0) wpimg=Math.floor(100*wImg/wWin);
       
       // Определяем процент по высоте    100%  ->  hWin
       //                                   x%  ->  hImg
-      if (hWin>0) hpimg=Math.floor(98*hImg/hWin);
+      if (hWin>0) hpimg=Math.floor(100*hImg/hWin);
    }
-
-      let cwpimg=String(wpimg)+'%';
-      let chpimg=String(hpimg)+'%';
-      let messa='<img id="ImgDialog" src="'+isSrc+'" '+
-         'width="'+cwpimg+'" height="'+chpimg+
-         '" alt="tutorialsPoint">';
-      $('#ImgDialogWind').html(messa);
-   
-      // Получаем координаты top и left
-      let top_vimOnPage  = $('#ImgDialog').offset().top;
-      let left_vimOnPage = $('#ImgDialog').offset().left;
-      console.log('top_vimOnPage='+top_vimOnPage+'  left_vimOnPage='+left_vimOnPage);
-      // Добавляем смещения
-      //let xOffset=aCalcPicOnDiv['nLeft']; let yOffset=aCalcPicOnDiv['nTop']; 
-      xOffset=227; yOffset=121; 
-      // Изменяем координаты позиции элемента
-      $('#ImgDialog').offset({top:top_vimOnPage+yOffset, left:left_vimOnPage+xOffset});
-   
-   
-   
-   
-   
+   // Вкладываем изображение в диалоговое окно
+   let cwpimg=String(wpimg)+'%';
+   let chpimg=String(hpimg)+'%';
+   let messa='<img id="ImgDialog" src="'+isSrc+'" '+
+      'width="'+cwpimg+'" height="'+chpimg+
+      '" alt="tutorialsPoint">';
+   $('#ImgDialogWind').html(messa);
+   // Пересчитываем смещения для левого верхнего угла изображения
+   let xOffset=Math.floor((wWin-wImg)/2);
+   let yOffset=Math.floor((hWin-hImg)/2);
+   // xOffset=227; yOffset=121; 
+   console.log('left='+xOffset+'  top='+yOffset);
+   // Получаем координаты top и left
+   let top_vimOnPage  = $('#ImgDialog').offset().top;
+   let left_vimOnPage = $('#ImgDialog').offset().left;
+   // Изменяем координаты позиции элемента
+   $('#ImgDialog').offset({top:top_vimOnPage+yOffset, left:left_vimOnPage+xOffset});
    // Возвращаем начальные или измененные размеры в процентах
    aCalcPicOnDiv={"wpimg":wpimg,"hpimg":hpimg}
    return aCalcPicOnDiv;
