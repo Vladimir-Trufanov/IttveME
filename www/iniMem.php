@@ -110,10 +110,11 @@ define ("vimExiSize",     'В заданном размере в пиксела�
 define ("vimOnPage",      'Внутри страницы');   
 // Определяем массив режимов представления выбранной картинки    
 $aModeImg=[vimExiSize,vimOnPage]; 
-// --------------------------------- Фоны показываемых картинок/изображений ---
-define ("fimWhiteGround", 1);    // обычный белый фон 
-define ("fimColorGround", 2);    // фон с помощью цветной картинки
-define ("fimAnimation",   3);    // анимационный фон
+// --------------------------------- Фоны отдельно показываемых изображений ---
+define ("fimWhiteGround", 'Обычный белый фон');     
+define ("fimColorGround", 'Фон с помощью цветной картинки');    
+define ("fimAnimation",   'Анимационный фон');     
+$aPhoneImg=[fimWhiteGround,fimAnimation]; 
 
 // Подключаем прикладные функции TPhpPrown
 require_once pathPhpPrown."/CommonPrown.php";
@@ -168,8 +169,7 @@ Moditap(moditap,$c_UserName,$c_PersName);
 // Инициализируем настройки, далее они могут быть изменены
 $c_PresMode=prown\MakeCookie('PresMode',rpmOneRight,tStr,true);         // режим представления материалов
 $c_ModeImg=prown\MakeCookie('ModeImg',vimExiSize,tStr,true);            // режим представления выбранной картинки
-$c_MakeGround=prown\MakeCookie('MakeGround',fimWhiteGround,tInt,true);  // фон показываемых картинок/изображений
-//$c_MakeGround=prown\MakeCookie('MakeGround',fimAnimation,tInt);       // фон показываемых картинок/изображений
+$c_PhoneImg=prown\MakeCookie('PhoneImg',fimWhiteGround,tStr,true);      // фон отдельно показываемых изображений
 
 //$с_PageImg=prown\MakeCookie('PageImg','ittve01-001-Подъём-настроения.jpg',tStr,true); 
 

@@ -125,14 +125,11 @@
 {
   border-bottom: 4px solid rgba(0, 0, 0, 0.3);
 }
-.sel--black-panther 
-{
-  z-index: 3;
-}
-.sel--superman 
-{
-  z-index: 2;
-}
+
+.sel--PresMode{z-index:4;}
+.sel--ModeImg {z-index:3;}
+.sel--PhoneImg{z-index:2;}
+
 @-webkit-keyframes fadeInUp 
 {
   from 
@@ -190,6 +187,7 @@
 {
   display:none;
 } 
+
 #tole,#tori,#bori,#bole
 {
    width:7rem;

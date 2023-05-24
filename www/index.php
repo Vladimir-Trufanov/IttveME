@@ -86,7 +86,7 @@ try
    // Выполняем начальную инициализацию
    require_once "iniMem.php"; 
    // Заносим в кукисы новые настройки                    
-   UpdateTune($urlHome,$c_PresMode,$c_ModeImg,$aPresMode,$aModeImg);
+   UpdateTune($urlHome,$c_PresMode,$c_ModeImg,$c_PhoneImg,$aPresMode,$aModeImg,$aPhoneImg);
    // ------------------------------------------------------- HEAD and LAST ---
    // Подключаем персональные стили для настольной и мобильной версий
    require_once "UpSiteTTL.php";
@@ -111,7 +111,7 @@ catch (E_EXCEPTION $e)
 // ****************************************************************************
 // *                      Занести в кукисы новые настройки                    *
 // ****************************************************************************
-function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
+function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,&$c_PhoneImg,$aPresMode,$aModeImg,$aPhoneImg)
 {
    $MakeIs=false;
    // Изменяем режим представления материалов по полученному параметру
@@ -125,13 +125,24 @@ function UpdateTune($urlHome,&$c_PresMode,&$c_ModeImg,$aPresMode,$aModeImg)
          break;
       }
    }
-   // Изменяем режим представления материалов по полученному параметру
+   // Изменяем режим представления выбранной картинки по полученному параметру
    $pTarget=prown\getComRequest('pModeImg');
    for ($i=0; $i<count($aModeImg); $i++) 
    {
       if ($aModeImg[$i]==$pTarget)
       {
          $c_ModeImg=prown\MakeCookie('ModeImg',$aModeImg[$i],tStr);   
+         $MakeIs=true;
+         break;
+      }
+   }
+   // Изменяем фон отдельно показываемого изображения  по полученному параметру
+   $pTarget=prown\getComRequest('pPhoneImg');
+   for ($i=0; $i<count($aPhoneImg); $i++) 
+   {
+      if ($aPhoneImg[$i]==$pTarget)
+      {
+         $c_PhoneImg=prown\MakeCookie('PhoneImg',$aPhoneImg[$i],tStr);   
          $MakeIs=true;
          break;
       }

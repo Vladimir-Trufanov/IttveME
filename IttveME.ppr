@@ -272,6 +272,7 @@ IttveMe
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
+				www\ittveEdit\Win10Ch0De--1.jpg
 			-jQuery
 				-fil
 					www\jQuery\fil\jquery-3.6.3.min.js
@@ -676,12 +677,12 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				-TTuningClass
+				+TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				+TViewImage
+				-TViewImage
 					www\ttools\TViewImage\ViewImage.js
 					www\ttools\TViewImage\ViewImage.php
 					www\ttools\TViewImage\ViewImageOld.js
@@ -750,43 +751,35 @@ IttveMe
 4=www\ttools\TKwinGallery\KwinGalleryClass.php
 5=www\UpSiteCSS.php
 6=www\UpSite.php
-7=www\Styles\iniStyles.css
-8=www\Jsx\WorkTiny.js
-9=www\ttools\TViewImage\ViewImage.js
-10=www\ttools\TViewImage\ViewImageOld.js
+7=www\Jsx\WorkTiny.js
+8=www\ttools\TViewImage\ViewImage.js
 [Selected Project Files]
 Main=
-Selected=www\ttools\TViewImage\ViewImage.js
+Selected=www\index.php
 [www\index.php]
-TopLine=78
-Caret=9,78
+TopLine=136
+Caret=12,160
 [www\iniMem.php]
-TopLine=146
-Caret=39,170
+TopLine=162
+Caret=1,173
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=175
 Caret=7,175
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=420
-Caret=40,432
+TopLine=283
+Caret=57,288
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=270
 Caret=86,286
 [www\UpSiteCSS.php]
-TopLine=91
-Caret=14,96
+TopLine=125
+Caret=45,136
 [www\UpSite.php]
-TopLine=54
+TopLine=32
 Caret=29,76
-[www\Styles\iniStyles.css]
-TopLine=106
-Caret=1,106
 [www\Jsx\WorkTiny.js]
 TopLine=201
 Caret=1,222
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=104
+TopLine=85
 Caret=1,79
-[www\ttools\TViewImage\ViewImageOld.js]
-TopLine=81
-Caret=2,96
