@@ -114,7 +114,7 @@ $aModeImg=[vimExiSize,vimOnPage];
 define ("fimWhiteGround", 'Обычный белый фон');     
 define ("fimColorGround", 'Фон с помощью цветной картинки');    
 define ("fimAnimation",   'Анимационный фон');     
-$aPhoneImg=[fimWhiteGround,fimAnimation]; 
+$aPhoneImg=[fimWhiteGround,fimColorGround,fimAnimation]; 
 
 // Подключаем прикладные функции TPhpPrown
 require_once pathPhpPrown."/CommonPrown.php";

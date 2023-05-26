@@ -294,7 +294,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -677,12 +677,12 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				+TTuningClass
+				-TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				-TViewImage
+				+TViewImage
 					www\ttools\TViewImage\ViewImage.js
 					www\ttools\TViewImage\ViewImage.php
 					www\ttools\TViewImage\ViewImageOld.js
@@ -752,34 +752,46 @@ IttveMe
 5=www\UpSiteCSS.php
 6=www\UpSite.php
 7=www\Jsx\WorkTiny.js
-8=www\ttools\TViewImage\ViewImage.js
+8=www\ttools\TViewImage\ViewImage.php
+9=www\ttools\TViewImage\ViewImage.js
+10=www\Styles\iniStyles.css
+11=www\ToPlugDebug.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\UpSiteCSS.php
 [www\index.php]
-TopLine=136
-Caret=12,160
+TopLine=83
+Caret=4,100
 [www\iniMem.php]
-TopLine=162
-Caret=1,173
+TopLine=215
+Caret=43,117
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=175
 Caret=7,175
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=283
-Caret=57,288
+TopLine=279
+Caret=1,293
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=270
 Caret=86,286
 [www\UpSiteCSS.php]
-TopLine=125
-Caret=45,136
+TopLine=101
+Caret=1,109
 [www\UpSite.php]
-TopLine=32
-Caret=29,76
+TopLine=57
+Caret=4,91
 [www\Jsx\WorkTiny.js]
 TopLine=201
 Caret=1,222
+[www\ttools\TViewImage\ViewImage.php]
+TopLine=127
+Caret=1,160
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=85
-Caret=1,79
+TopLine=7
+Caret=1,1
+[www\Styles\iniStyles.css]
+TopLine=96
+Caret=24,104
+[www\ToPlugDebug.php]
+TopLine=15
+Caret=1,23

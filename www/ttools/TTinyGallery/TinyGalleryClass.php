@@ -288,22 +288,8 @@ class TinyGallery
    public function Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap,
       $NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL,$EntryGame=NULL)
    {
-      // Настраиваем диалоговое окно для изображения
-      echo '
-         <style>
-           .ui-widget-header 
-           {
-              /*
-              background:lightgreen;
-              color:blue;
-              font-size:20px;
-              */
-           }
-         </style>
-      ';
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
-      // <script src="/Jsx/CommonTools.js"></script>
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       // Подключаем кнопки управляющего меню
       $this->menu=new MenuLeader(ittveme,$this->urlHome);

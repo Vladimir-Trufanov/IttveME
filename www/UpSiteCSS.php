@@ -94,44 +94,58 @@ DefineJS($SiteHost,$urlHome);
 // Подключаем дополнительные совместные определения для модулей PHP и JS
 require_once 'IttveMeDef.php';
 DefinePHPtoJS();
-
-// Проверяем не требуется ли вывести изображение и выполняем настройки
-$ImageFile=prown\getComRequest('Image');
-if ($ImageFile<>NULL)
+// Определяем стили изображения в диалоговом окне
+echo '<style>';
+// Настраиваем диалоговое окно для изображения
+echo '
+   .ui-widget-header 
+   {
+      /*
+      background:lightgreen;
+      color:blue;
+      font-size:20px;
+      */
+   }
+';
+// Если задан цветной фон, то его и готовим
+if (isset($_COOKIE['PhoneImg'])&&($c_PhoneImg===fimColorGround))
 {
-   if ($c_ModeImg==vimOnPage) 
+   echo '
+   #ImgDialogWind
    {
-      echo '
-      <style>
-      body
-      {
-         background: 
-         url(Images/Anime/a3.png) 90% 90% no-repeat fixed, 
-         url(Images/Anime/a2.png) 40% 40% no-repeat fixed, 
-         url(Images/Anime/a1.jpg) no-repeat fixed;
-         background-size: auto, auto, cover;
-         animation: ball 40s linear infinite;
-      }
-      @keyframes ball 
-      {
-         from { background-position: 1600px 90%, 180% 40%, 0 0; }
-         to { background-position: -2000px 90%, -300px 20%, 0 0; }
-      }
-      </style>
-      ';
-   }
-   else
-   {
-      echo '
-      <style>
-      body
-      {
-      }
-      </style>
-      ';
-   }
+      background: url(Images/Anime/a1.jpg) 100% 100% no-repeat;
+      background-size: cover;
+   }';
 }
-
+// Если задана анимация, то её и готовим
+else if (isset($_COOKIE['PhoneImg'])&&($c_PhoneImg===fimAnimation))
+{
+   echo '
+   #ImgDialogWind
+   {
+      background: 
+      url(Images/Anime/a3.png) 90% 90% no-repeat,
+      url(Images/Anime/a2.png) 40% 40% no-repeat fixed, 
+      url(Images/Anime/a1.jpg) 100% 100% no-repeat;
+      background-size: auto, auto, cover;
+      animation: ball 36s linear infinite;
+   }
+   @keyframes ball 
+   {
+      from {background-position: 1200px 90%, 180%  40%, 0 0; }
+      to   {background-position: -400px 90%,-300px 20%, 0 0; }
+   }';
+}
+// Иначе оставляем белый фон
+else
+{
+   echo '
+   #ImgDialogWind
+   {
+      background: white;
+   }';
+}
+echo '</style>';
 // Подключаем стили для редактирования материалов
 $Edit->Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,moditap,$Duck,$a2048,$Hex,$Paired);
 $note->Init();

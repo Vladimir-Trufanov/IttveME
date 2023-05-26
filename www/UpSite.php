@@ -45,6 +45,7 @@ if ($BaseCreate<>'Yes')
    echo '</div>';
    echo '<div id="Life">'; 
       $Edit->ViewLifeSpace();
+      // prown\ViewGlobal(avgCOOKIE);
    echo '</div>';
    echo '<div id="Gallery">';
       $Edit->ViewGallerySpace();
@@ -85,7 +86,9 @@ if ($BaseCreate<>'Yes')
       echo '</div>';
    echo '</div>';
 }
-
+// Выводим контрольные значения в консоль
+// prown\ConsoleLog('$_COOKIE["PhoneImg"]='.$_COOKIE['PhoneImg']);
+// prown\ConsoleLog('$c_PhoneImg='.$c_PhoneImg);
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';
