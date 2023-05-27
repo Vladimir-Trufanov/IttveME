@@ -13,9 +13,6 @@
 // Определяем полный путь каталога хранения изображений 
 define ("imgDir", $_SERVER['DOCUMENT_ROOT'].'/ittveEdit'); 
 
-define ("oriLandscape", 'landscape');  // Ландшафтное расположение устройства
-define ("oriPortrait",  'portrait');   // Портретное расположение устройства
-
 define ("ajSuccess",            "Функция/процедура выполнена успешно");     
 define ("ajUndeletionOldFiles", "Ошибка удаления старых файлов");
 

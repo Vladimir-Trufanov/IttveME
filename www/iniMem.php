@@ -22,7 +22,10 @@ define ("RootUrl",      $_SERVER['SCRIPT_NAME']);
 define ("nstNoVyb",     "не выбрано");     
 define ("nstNoNaz",     "не назначено");
 define ("nstErr",       'произошла ошибка');  
-define ("nstOk",        'все в порядке');  
+define ("nstOk",        'все в порядке'); 
+
+define ("oriLandscape", 'landscape');  // Ландшафтное расположение устройства
+define ("oriPortrait",  'portrait');   // Портретное расположение устройства
 
 // Подключить переменные JavaScript, соответствующие определениям в PHP
 function DefineJS($SiteHost,$urlHome)
@@ -151,9 +154,9 @@ $c_PersEntry=prown\MakeCookie('PersEntry',$c_PersEntry+1,tInt);
 // Изменяем счетчик посещений за сессию                 
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);              
 $s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);   
-
 // echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
 // echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
+
 // Если после авторизации изменилось имя пользователя,
 // то перенастраиваем счетчики и посетителя
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин авторизованного посетителя
@@ -164,6 +167,16 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
+
+// Меняем кукис ориентации устройства 
+$c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr,true);             // ориентация устройства
+if (IsSet($_GET["orient"]))
+{
+   if ($_GET["orient"]==oriLandscape) $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr); 
+   if ($_GET["orient"]==oriPortrait)  $c_Orient=prown\MakeCookie('Orient',oriPortrait,tStr); 
+   if ($SiteDevice==Computer) $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr); 
+}
+
 Moditap(moditap,$c_UserName,$c_PersName);
 
 // Инициализируем настройки, далее они могут быть изменены

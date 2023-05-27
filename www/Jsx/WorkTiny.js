@@ -66,135 +66,6 @@ $(document).ready(function()
       });
    });
 })
-
-
-/*
-// ****************************************************************************
-// *                   Убедиться, что изображение внутри дива                 *
-// ****************************************************************************
-function isImgInDiv(widthDiv,heightDiv,wImg,hImg)
-{
-   let Result=true;
-   if (widthDiv<wImg || heightDiv<hImg) Result=false;
-   return Result;
-}
-// ****************************************************************************
-// *    Изменить размеры изображения так, чтобы оно помещалось внутрь дива    *
-// ****************************************************************************
-function setAlignImg(widthDiv,heightDiv,wImg,hImg)
-{
-   // Если размеры изображения меньше размеров дива,
-   // то изображение оставляем как есть
-   if (isImgInDiv(widthDiv,heightDiv,wImg,hImg))
-   {
-      alignImg=
-      { 
-         "p_widthImg" : wImg,
-         "p_heightImg": hImg
-      }
-   }
-   else
-   {
-      // Определяем коэффициент приведения по ширине
-      let k1=widthDiv/wImg;
-      // Приводим высоту и ширину изображения к диву
-      let p1_widthImg=k1*wImg;
-      let p1_heightImg=k1*hImg;
-      // Если новая высота изображения меньше высоты дива,
-      // то фиксируем
-      if (p1_heightImg<heightDiv)
-      {
-         alignImg=
-         { 
-            "p_widthImg" : p1_widthImg,
-            "p_heightImg": p1_heightImg
-         }
-      }
-      // Иначе приводим по высоте
-      else
-      {
-         let k2=heightDiv/p1_heightImg;
-         let p2_widthImg=k2*p1_widthImg;
-         let p2_heightImg=k2*p1_heightImg;
-         alignImg=
-         { 
-            "p_widthImg" : p2_widthImg,
-            "p_heightImg": p2_heightImg
-         }
-      }
-   }
-   // Возвращаем размеры приведенного изображения
-   / *
-   alert
-   (
-      'widthDiv  = '+widthDiv +'    '+'p_widthImg  = '+alignImg["p_widthImg"]+'\n'+
-      'heightDiv = '+heightDiv+'    '+'p_heightImg = '+alignImg["p_heightImg"]+'\n'+
-      ''
-   )
-   * /
-   return alignImg;
-}
-// ****************************************************************************
-// *       Расчитать изображение по центру и внутри дива, исходя из того,     *
-// *             что размеры изображения не больше размеров дива              *
-// ****************************************************************************
-function CalcPicOnDiv(widthDiv,heightDiv,p_widthImg,p_heightImg,wImg,hImg,perSize)
-{
-   // Определяем возвращаемый массив
-   aCalcPicOnDiv=
-   { 
-      "widthImg":  320,
-      "heightImg": 320,
-      "nLeft":     10,
-      "nTop":      10
-   }
-   // Если размеры изображения меньше размеров дива,
-   // то изображение оставляем как есть
-   if (isImgInDiv(widthDiv,heightDiv,wImg,hImg))
-   {
-      widthImg=wImg;
-      heightImg=hImg;
-   }
-   else
-   {
-      // Если размеры изображения и дива совпадают по ширине
-      if (Math.abs(widthDiv-p_widthImg)<1)
-      {
-         // Определяем ширину изображения
-         widthImg=widthDiv*perSize/100;
-         // Определяем высоту изображения             *** wImg     --> hImg ***  
-         // в диве из пропорции:                      *** widthImg --> x    ***
-         heightImg=widthImg*hImg/wImg;
-      }
-      else
-      {
-         // Определяем высоту изображения
-         heightImg=heightDiv*perSize/100;
-         // Определяем ширину изображения            *** wImg --> hImg      ***  
-         // в диве из пропорции:                     *** x    --> heightImg ***
-         widthImg=wImg*heightImg/hImg;
-      }
-   }
-   aCalcPicOnDiv.widthImg=widthImg;
-   aCalcPicOnDiv.heightImg=heightImg;
-   // Центрируем изображение по диву
-   aCalcPicOnDiv.nLeft=(widthDiv-widthImg)/2;
-   aCalcPicOnDiv.nTop=(heightDiv-heightImg)/2;
-   // Чуть приподнимаем изображение вверх
-   aCalcPicOnDiv.nTop=aCalcPicOnDiv.nTop*0.9;
-   / *
-   alert
-   (
-      'alignImg = '+alignImg+'\n'+
-      'ширина    = '+wImg     +'    '+'высота    = '+hImg     +'\n\n'+
-      'widthDiv  = '+widthDiv +'    '+'widthImg  = '+widthImg +'\n'+
-      'heightDiv = '+heightDiv+'    '+'heightImg = '+heightImg+'\n'+
-      ''
-   )
-   * /
-   return aCalcPicOnDiv;
-}
-*/
 // ****************************************************************************
 // *       Отключить блокировку закрытия страницы редактирования материала    *
 // ****************************************************************************
@@ -421,9 +292,6 @@ function alf3SaveImgComm()
 {
    document.getElementById('insCard').click(); // "submit"
 } 
-
-
-/*
 // Готовим обработку события при изменении положения устройства
 function doOnOrientationChange()
 // http://greymag.ru/?p=175, 07.09.2011. При повороте устройства браузер 
@@ -468,11 +336,9 @@ function OnOrientationChange(xOrient)
    }
 }
 // ****************************************************************************
-// *     Изменить цвет поля ввода процентов смещения штампа в малозаметный,   *
-// * указав таким образом пользователю, что при сохранении пропорциональности *
-// *                    штампа, данное поле не работает                       *
+// *                          Пример обращения с jQuery                       *
 // ****************************************************************************
-function alf1MaintainProp()
+function Example_jQuery()
 {
    if (document.getElementById('MaintainProp').checked) 
    {
@@ -493,13 +359,12 @@ function alf1MaintainProp()
       $('#MaintainCtrl').prop('checked',true);
    }   
 } 
-*/
 // ****************************************************************************
 // *                      Выйти на главную страницу сайта                     *
 // ****************************************************************************
-function alf1Home()
+function alfHome()
 {
-   alfEraseFiles();
+   EraseFiles();
    location.replace(urlHome);
 }   
 // ****************************************************************************

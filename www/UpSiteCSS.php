@@ -33,7 +33,7 @@ echo '
 <meta name="theme-color" content="#ffffff">
 ';
 
-if ($SiteDevice<>Mobile)
+if ($SiteDevice==Mobile)
 {
    echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 }
@@ -46,14 +46,6 @@ echo '
     <link rel="stylesheet" type="text/css" href="/jQuery/jquery-ui.min.css">
     <script src="/jQuery/jquery-ui.min.js"></script>
 ';
-// Подключаем базовый шрифт
-/*
-echo '
-   <link rel="stylesheet"
-   href="Styles/Anonymous_Pro?family=Anonymous+Pro:400,400i,700,700i&amp;
-   subset=cyrillic">
-';
-*/
 // Выполняем сброс стилей и устанавливаем начальные настройки стилей
 echo '<link rel="stylesheet" type="text/css" href="Styles/iniStyles.css">';
 // Позиционируем элементы, подключаем стили
@@ -67,6 +59,7 @@ echo '<script src="/ttools/TArticlesMaker/ArticlesMaker.js"></script>';
 echo '<script src="/ttools/TKwinGallery/KwinGallery.js"></script>';
 echo '<script src="/ttools/TViewImage/ViewImage.js"></script>';
 echo '<script src="/Jsx/WorkTiny.js"></script>';
+/*
 // Определяем письменный шрифт, который будем использовать для статей
 // (! потом попробуем внедрить его в TinyMCE, пока для тега '<p>')
 echo'  
@@ -82,6 +75,7 @@ echo'
    }
    </style>
 ';
+*/
 // Формируем стили
 setPositionDiv();
 // Выбираем имя файла, если был запрос к сайту на вывод изображения,
@@ -146,6 +140,28 @@ else
    }';
 }
 echo '</style>';
+
+// Подключаем обнаружение ориентации устройства по завершению загрузки страницы
+?> <script>
+xOrient="<?php echo $c_Orient;?>";
+$(document).ready(function() {
+   window.addEventListener('orientationchange',doOnOrientationChange);
+   OnOrientationChange(xOrient);
+});
+</script> <?php
+
+cssDivPosition($SiteDevice,$c_Orient);
+// Определяем uri вызова страниц с различной ориентацией
+$SignaUrl=$_SERVER['SCRIPT_NAME'].'?orient='.oriLandscape;
+$SignaPortraitUrl=$_SERVER['SCRIPT_NAME'].'?orient='.oriPortrait;
+// Подключаем сайтовые(SignaPhoto) функции Js и
+// инициализируем обработчики
+?> <script>
+   // Назначаем uri вызова страниц с различной ориентацией
+   SignaUrl="<?php echo $SignaUrl;?>";
+   SignaPortraitUrl="<?php echo $SignaPortraitUrl;?>";
+</script> <?php
+
 // Подключаем стили для редактирования материалов
 $Edit->Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,moditap,$Duck,$a2048,$Hex,$Paired);
 $note->Init();
@@ -284,5 +300,95 @@ function rOneRight()
    ";
    echo "</style>";
 }
+// ****************************************************************************
+// *                       Спозиционировать основные дивы                     *
+// ****************************************************************************
+function cssDivPosition($SiteDevice,$_Orient)
+{
+   if ($_Orient==oriLandscape)
+   {
+      // Мобильный телефон
+      if ($SiteDevice==Mobile)
+      {
+         ?> <style>
+         /*
+         body{font-size:.6rem;}
+        
+         #ViewTuneIn{padding:0;margin:0;width:100%;hight:100%;}
+         .checkbox-label{height:2rem;width:3.8rem;margin:.6rem auto;}
+
+         #percML{float:left;width:40%;padding:.4rem .4rem;margin:0;}
+         #checkML{float:right;width:60%;padding:.4rem .4rem;margin:0;}
+         
+         #All,#Lead {position:fixed; height:100%;}
+         #All {left:0;  width:80%; }
+         #Lead {right:0; width:20%;}  
+         #View  {width:48%; float:left;  height:100%;}
+         #Proba {width:52%; float:right; height:100%;}         
+         #Photo {height:82%;}
+         #Stamp {height:18%;} 
+         
+         .navButtons {position:fixed;}
+         #bLoadimg {top:10px; right:68px;}
+         #bSubscribe {top:10px; right:9px;}
+         #bTunein {top:70px; right:68px;}
+         #bHome {bottom:10px; right:9px}
+         #bLoadStamp {bottom:10px; right:68px}
+         */
+         </style> <?php
+      }
+      // Компьютер
+      else
+      {
+         ?> <style>
+         /*
+         body,#btnTune{font-size:1rem;}
+         #ViewTuneIn{padding:2rem;margin:2rem;}
+         
+         .checkbox-label{height:2rem;width:3.8rem;margin:.6rem auto;}
+         
+         #All,#Lead {position:fixed; height:100%;}
+         #All {left:0;  width:92%; }
+         #Lead {right:0; width:8%;}  
+         #View  {width:48%; float:left;  height:100%;}
+         #Proba {width:52%; float:right; height:100%;}         
+         #Photo {height:82%;}
+         #Stamp {height:18%;} 
+         .navButtons {margin-top:1rem;}
+         .navButtons {position:relative;}
+         */
+         </style> <?php
+      };
+   }
+   else
+   {
+      ?> 
+      <style>
+      /*
+      body,#btnTune{font-size:.9rem;}
+      #ViewTuneIn{padding:.7rem;margin:.7rem;}
+      .checkbox-label{height:2rem;width:3.8rem;margin:.6rem auto;}
+
+      
+      #All,#Lead {position:fixed; width:100%;}
+      #All {top:0; height:88%;}
+      #Lead {bottom:0; height:12%;}  
+      
+      #View  {width:48%; float:left;  height:100%;}
+      #Proba {width:52%; float:right; height:100%;}         
+      #Photo {height:82%;}
+      #Stamp {height:18%;} 
+      
+      #bLoadImg,#bSubscribe,#bTunein,#bLoadStamp {float:left;}
+      #bHome{float:right; margin-right:1rem;}
+      .navButtons {margin-left:1rem; margin-top:.4rem;}
+      .navButtons {position:relative;}
+      */
+         
+      </style>
+      <?php
+   }
+}
+
 
 // <!-- --> ************************************************* UpSiteCSS.php ***
