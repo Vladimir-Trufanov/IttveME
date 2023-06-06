@@ -18,6 +18,12 @@ echo '<body>';
 // (для продолжения нужно будет из браузера обновить страницу)
 if ($BaseCreate<>'Yes')
 {
+   // Подготавливаем окошечко для детального показа выбранного изображения
+   echo '
+      <div id="ImgDialogWind">
+      </div>
+   ';
+
    // Выводим страницу
    echo '<div id="News">';
       /* 
@@ -64,26 +70,26 @@ if ($BaseCreate<>'Yes')
    echo '</div>';
    // Выводим нижнюю информационную строку
    echo '<div id="Info">';
-      echo '
-      <div id="InfoLeft">
-         Copyright (c) 2019-23 v2.0  Труфанов Владимир   tve58@inbox.ru 
-         <span id="scrwi">1200</span>x<span id="scrhe">720</span>,
-         <span id="lazy">*</span>
-      </div>
-      ';
-      
-      // Окошечко для детального показа выбранного изображения
-      echo '
-      <div id="ImgDialogWind">
-      </div>
-      ';
-      
+      echo '<div id="InfoLeft">';
+         echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 
+         echo '
+            <span id="scrwi"> 1200</span>x<span id="scrhe">720</span>
+         ';
+         /*
+         echo '
+            Copyright (c) 2019-23 v2.0  Труфанов Владимир   tve58@inbox.ru 
+            <span id="scrwi">1200</span>x<span id="scrhe">720</span>,
+            <span id="lazy">*</span>
+         ';
+         */
+      echo '</div>';
       echo '<div id="InfoRight">';
       if ($messRequest==nstOk)
          echo $SiteDevice." ".$c_PersName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
       else
          echo $messRequest.': '.$SiteDevice." ".$c_PersName; 
       echo '</div>';
+      
    echo '</div>';
 }
 // Выводим контрольные значения в консоль
@@ -92,5 +98,27 @@ if ($BaseCreate<>'Yes')
 // Выводим завершающие теги страницы
 echo '</body>'; 
 echo '</html>';
+
+// ****************************************************************************
+// *                     Показать ориентацию и устройство                     *
+// ****************************************************************************
+function infDivPosition($SiteDevice,$_Orient)
+{
+   if ($_Orient==oriLandscape)
+   {
+      // Мобильный телефон - oriLandscape
+      if ($SiteDevice==Mobile)
+      {
+      }
+      // Компьютер - oriLandscape
+      else
+      {
+      }
+   }
+   // Мобильный телефон - oriPortrait
+   else
+   {
+   }
+}
 
 // <!-- --> **************************************************** UpSite.php ***

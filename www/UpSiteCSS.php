@@ -307,7 +307,7 @@ function cssDivPosition($SiteDevice,$_Orient)
 {
    if ($_Orient==oriLandscape)
    {
-      // Мобильный телефон
+      // Мобильный телефон - oriLandscape
       if ($SiteDevice==Mobile)
       {
          ?> <style>
@@ -337,7 +337,7 @@ function cssDivPosition($SiteDevice,$_Orient)
          */
          </style> <?php
       }
-      // Компьютер
+      // Компьютер - oriLandscape
       else
       {
          ?> <style>
@@ -360,6 +360,7 @@ function cssDivPosition($SiteDevice,$_Orient)
          </style> <?php
       };
    }
+   // Мобильный телефон - oriPortrait
    else
    {
       ?> 
@@ -389,6 +390,5 @@ function cssDivPosition($SiteDevice,$_Orient)
       <?php
    }
 }
-
 
 // <!-- --> ************************************************* UpSiteCSS.php ***

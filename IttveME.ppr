@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	-IttveMe
+	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -153,7 +153,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		-www
+		+www
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -293,7 +293,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -544,7 +544,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -681,7 +681,7 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				-TViewImage
+				+TViewImage
 					www\ttools\TViewImage\ViewImage.js
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
@@ -749,34 +749,38 @@ IttveMe
 5=www\UpSiteCSS.php
 6=www\UpSite.php
 7=www\Jsx\WorkTiny.js
-8=www\IttveMeDef.php
+8=www\Styles\iniStyles.css
+9=www\ttools\TViewImage\ViewImage.js
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\UpSiteCSS.php
 [www\index.php]
 TopLine=78
 Caret=4,100
 [www\iniMem.php]
-TopLine=143
-Caret=1,29
+TopLine=141
+Caret=86,176
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=175
 Caret=7,175
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=279
+TopLine=293
 Caret=1,293
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=270
+TopLine=252
 Caret=86,286
 [www\UpSiteCSS.php]
-TopLine=135
-Caret=29,153
+TopLine=39
+Caret=37,153
 [www\UpSite.php]
-TopLine=55
-Caret=4,91
+TopLine=50
+Caret=31,76
 [www\Jsx\WorkTiny.js]
-TopLine=304
-Caret=1,338
-[www\IttveMeDef.php]
-TopLine=4
-Caret=1,15
+TopLine=143
+Caret=1,166
+[www\Styles\iniStyles.css]
+TopLine=152
+Caret=1,183
+[www\ttools\TViewImage\ViewImage.js]
+TopLine=52
+Caret=1,1
