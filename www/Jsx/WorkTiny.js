@@ -10,6 +10,25 @@
 // Выполняем действия  по завершении загрузки страницы
 $(document).ready(function()
 {
+   // Определяем, реализован ли в браузере механизм отложенного
+   // показа изображений и показываем результат проверки в lazy-окошке (span)
+   // нижней информационной строки
+   let iwe=window.screen.width;
+   let ihe=window.screen.height; 
+   $('#scrwi').html(iwe);
+   $('#scrhe').html(ihe);
+   
+   if ('loading' in HTMLImageElement.prototype) 
+   { 
+     // Поддерживается
+     $('#lazy').html('lazy:YES');
+   } 
+   else 
+   {
+     // Применить полифилл или JavaScript
+     $('#lazy').html('lazy:no');
+   }
+
    // Стандартный вариант предупреждения перед закрытием страницы 
    /*
    window.addEventListener('beforeunload', function (event) 

@@ -73,7 +73,8 @@ if ($BaseCreate<>'Yes')
       echo '<div id="InfoLeft">';
          echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 
          echo '
-            <span id="scrwi"> 1200</span>x<span id="scrhe">720</span>
+            <span id="scrwi"> 1203</span>x<span id="scrhe">721</span> 
+            <span id="lazy"></span>
          ';
          /*
          echo '
@@ -102,6 +103,7 @@ echo '</html>';
 // ****************************************************************************
 // *                     Показать ориентацию и устройство                     *
 // ****************************************************************************
+/*
 function infDivPosition($SiteDevice,$_Orient)
 {
    if ($_Orient==oriLandscape)
@@ -120,5 +122,6 @@ function infDivPosition($SiteDevice,$_Orient)
    {
    }
 }
+*/
 
 // <!-- --> **************************************************** UpSite.php ***

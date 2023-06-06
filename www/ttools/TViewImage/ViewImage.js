@@ -20,34 +20,6 @@ $(document).ready(function()
 function iniImageClick(iUid,iTranslitPic,Comment,isSrc,wimg,himg)
 {
 
-   // Создаем див для диалогового окна, в котором будет разворачиваться 
-   // изображение для детального рассмотрения
-   // 08.05.2023 див уже включен в разметку
-   // let imgdiv=document.createElement('div');
-   // imgdiv.id="ImgDialogWind";
-   // document.body.append(imgdiv);
-   
-   /*
-   // Определяем, реализован ли в браузере механизм отложенного
-   // показа изображений и показываем результат проверки в lazy-окошке (span)
-   // нижней информационной строки
-   let iwe=window.screen.width;
-   let ihe=window.screen.height; 
-   $('#scrwi').html(iwe);
-   $('#scrhe').html(ihe);
-   
-   if ('loading' in HTMLImageElement.prototype) 
-   { 
-     // Поддерживается
-     $('#lazy').html('lazy YES');
-   } 
-   else 
-   {
-     // Применить полифилл или JavaScript
-     $('#lazy').html('lazy no');
-   }
-   */
-
    // Извлекаем размеры тела страницы (окна диалога)
    ifBody=document.body;
    var diaWidth=ifBody.offsetWidth;   
