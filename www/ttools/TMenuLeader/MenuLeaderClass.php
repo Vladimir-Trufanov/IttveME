@@ -6,7 +6,7 @@
 // * TPhpTools                Фрэйм управляющего меню для обобщенной работы в *
 // *                           "ittve.me", работающего через TinyGalleryClass *
 // *                                                                          *
-// * v2.0, 26.02.2023                              Автор:       Труфанов В.Е. *
+// * v2.1, 12.06.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
@@ -76,9 +76,8 @@ class MenuLeader
       $this->urlHome=$urlHome; 
       $this->classdir=pathPhpTools.'/TMenuLeader'; 
       // Формируем префиксы вызова страниц для сайта 'ittve.me' и localhost
-      //if ($this->is_ittveme()) $this->cPreMe='';  
-      //else 
-      $this->cPreMe='?Com=';
+      if ($this->is_ittveme()) $this->cPreMe='com-';  
+      else                     $this->cPreMe='?Com=';
       // Проверяем, нужно ли заменить файл стилей в каталоге редактирования и,
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
@@ -184,7 +183,7 @@ class MenuLeader
       // Формируем идентификатор для отработки кнопки "small" по юникоду
       $idsmall=substr($cUniCod,3,4); 
       echo '
-         <li class="link">
+         <li class="link" title="'.$this->SayPref().'">
          <span class="prev">'.$cUniCod.'</span>
          <span class="small" onclick="PunktClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
          <span class="full">
@@ -193,6 +192,10 @@ class MenuLeader
          </span>
          </li>
       ';
+   }
+   private function SayPref()
+   {
+      return $this->cPreMe;
    }
 } 
 

@@ -1,12 +1,11 @@
-## PHP-APACHE                                                   *** .htaccess ***
+## PHP-APACHE                                                 *** .htaccess ***
 ##
 ## ****************************************************************************
 ## * ittve.me                              Произвести локальные установки PHP *
 ## ****************************************************************************
 ##
-##                                                   Автор:       Труфанов В.Е.
-##                                                   Дата создания:  01.11.2016
-## Copyright © 2016 tve                              Посл.изменение: 18.11.2022
+## v2.1, 12.06.2023                                   Автор:      Труфанов В.Е.
+## Copyright © 2023 tve                               Дата создания: 18.11.2022
 
 ## Устанавливаем кодировку сайта по умолчанию
 AddDefaultCharset utf-8
@@ -113,22 +112,22 @@ RewriteEngine On
 # RewriteRule ^progulki/(.*)$                        ?arti=$1 - не срабатывает!
 
 ## Преобразовываем URL-запросы командных страниц 1 ряда:
-# RewriteRule ^zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
-# RewriteRule ^vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
-# RewriteRule ^vernutsya-k-predydushchej-state$        ?Com=vernutsya-k-predydushchej-state [L]
-# RewriteRule ^otpravit-avtoru-soobshchenie$           ?Com=otpravit-avtoru-soobshchenie [L]
-# RewriteRule ^vojti-ili-zaregistrirovatsya$           ?Com=vojti-ili-zaregistrirovatsya [L]
+RewriteRule ^com-zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
+RewriteRule ^com-vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
+RewriteRule ^com-vernutsya-k-predydushchej-state$        ?Com=vernutsya-k-predydushchej-state [L]
+RewriteRule ^com-otpravit-avtoru-soobshchenie$           ?Com=otpravit-avtoru-soobshchenie [L]
+RewriteRule ^com-vojti-ili-zaregistrirovatsya$           ?Com=vojti-ili-zaregistrirovatsya [L]
 ## Преобразовываем URL-запросы командных страниц 2 ряда:
-# RewriteRule ^prochitat-o-sajte-izmenit-nastrojki$    ?Com=prochitat-o-sajte-izmenit-nastrojki [L]
-# RewriteRule ^sozdat-material-ili-redaktirovat$       ?Com=sozdat-material-ili-redaktirovat [L]
-# RewriteRule ^izmenit-nazvanie-razdela-ili-ikonku$    ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
+RewriteRule ^com-prochitat-o-sajte-izmenit-nastrojki$    ?Com=prochitat-o-sajte-izmenit-nastrojki [L]
+RewriteRule ^com-sozdat-material-ili-redaktirovat$       ?Com=sozdat-material-ili-redaktirovat [L]
+RewriteRule ^com-izmenit-nazvanie-razdela-ili-ikonku$    ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
 ## Преобразовываем URL-запросы командных страниц 3 ряда:
-# RewriteRule ^vybrat-statyu-dlya-redaktirovaniya$     ?Com=vybrat-statyu-dlya-redaktirovaniya [L]
-# RewriteRule ^naznachit-statyu$                       ?Com=naznachit-statyu [L]
-# RewriteRule ^udalit-material$                        ?Com=udalit-material [L]
+RewriteRule ^com-vybrat-statyu-dlya-redaktirovaniya$     ?Com=vybrat-statyu-dlya-redaktirovaniya [L]
+RewriteRule ^com-naznachit-statyu$                       ?Com=naznachit-statyu [L]
+RewriteRule ^com-udalit-material$                        ?Com=udalit-material [L]
 ## Командные страницы 4 ряда:
-# RewriteRule ^dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
-# RewriteRule ^udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
+RewriteRule ^com-dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
+RewriteRule ^com-udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
 RewriteCond %{ENV:HTTPS} !on

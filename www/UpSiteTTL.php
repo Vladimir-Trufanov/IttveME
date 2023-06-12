@@ -5,7 +5,7 @@
 // * ittve.me                Сформировать персональные Seo-тэги страниц сайта *
 // ****************************************************************************
 
-// v1.0, 02.05.2023                                   Автор:      Труфанов В.Е.
+// v1.1, 12.06.2023                                   Автор:      Труфанов В.Е.
 // Copyright © 2020 tve                               Дата создания: 02.05.2023
 
 function SeoTags(&$ttl,&$desc,&$keys)
@@ -13,7 +13,7 @@ function SeoTags(&$ttl,&$desc,&$keys)
    $ttl='Обо мне, путешествиях и ... Черногории';
    $desc='Труфанов Владимир Евгеньевич, его жизнь и увлечения, жизнь его близких';
    $keys='Труфанов Владимир Евгеньевич, жизнь, увлечения';
-
+   // Изначально считаем, что формирование тегов произошло успешно
    $messRequest=nstOk;
    // http://localhost:83/?Com=vybrat-sleduyushchij-material ------------------  не индексировать
    
@@ -23,6 +23,12 @@ function SeoTags(&$ttl,&$desc,&$keys)
    //                                              'Вернуться к прежней статье'
    //                                              'Отправить автору сообщение'
    //                                            'Войти или зарегистрироваться'
+   if (\prown\isComRequest(mmlZhiznIputeshestviya))
+   {
+      //$Title=MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
+      //$this->_ViewLifeSpace($Title,$this->ZhizniPuti);
+   }
+
    //$res=prown\getComRequest();
    //if ($res<>NULL) $messRequest=$res; 
    
@@ -49,6 +55,7 @@ function SeoTags(&$ttl,&$desc,&$keys)
 
    //elseif (\prown\isComRequest(mmlZhiznIputeshestviya))   
    
+   // Отрабатываем страницы с материалом 
    $res=prown\getComRequest('arti');
    
    return $messRequest;

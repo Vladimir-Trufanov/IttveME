@@ -423,8 +423,11 @@ class TinyGallery
    // *************************************************************************
    public function ViewFooterSpace($UserAgent)
    {
-      //if (isNichost()) $cPreMe=''; else 
-      $cPreMe='?Com=';
+      if (isNichost()) $cPreMe='com-'; 
+      else             $cPreMe='?Com=';
+
+      //if ($this->is_ittveme()) $this->cPreMe='com-';  
+      //else                     $this->cPreMe='?Com=';
 
       // Кнопка главного меню 
       echo '<div id="LifeMenu">';
