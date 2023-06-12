@@ -5,10 +5,8 @@
 // ****************************************************************************
 // * ittve.me             Подготовить и развернуть меню "Жизнь и путешествия" * 
 // ****************************************************************************
-
-//                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  26.02.2023
-// Copyright © 2023 tve                              Посл.изменение: 03.04.2023
+// v1.1, 12.06.2023                                  Автор:       Труфанов В.Е.
+// Copyright © 2019 tve                              Дата создания:  18.12.2019 
 
 class ZhizniPuti
 {
@@ -16,7 +14,6 @@ class ZhizniPuti
    protected $Arti;    // объект по работе с базой данных материалов
    protected $apdo;    // подключение к базе данных материалов
    protected $urlHome; // начальная страница сайта 
-   
    // *************************************************************************
    // *                   Проинициализировать свойства класса                 *
    // *************************************************************************
@@ -75,24 +72,12 @@ function MakeMyLifeMenu($pdo,$urlHome)
 // ****************************************************************************
 function ShowMyLife($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$otlada,$FirstUl=' class="accordion"')
 {
-
-   //if (isNichost()) $cPreMe=''; else $cPreMe='?arti=';
-
    // Определяем текущий уровень меню
    $lvl++; 
-   
-   // Выбираем Translit самого себя - родителя
-   //$cSQL="SELECT uid,NameArt,Translit FROM stockpw WHERE uid=".$ParentID;
-   //$stmt = $pdo->query($cSQL);
-   //$table = $stmt->fetchAll();
-   //if (count($table)>0) $TranslitOwn=$table[0]["Translit"];
-   //else $TranslitOwn='TranslitOwn';
-   
    // Выбираем все записи одного родителя
    $cSQL="SELECT uid,NameArt,Translit,pid,IdCue,DateArt FROM stockpw WHERE pid=".$ParentID." ORDER BY uid";
    $stmt = $pdo->query($cSQL);
    $table = $stmt->fetchAll();
-
    if (count($table)>0) 
    {
       // Выводим <ul>. Перед ним </li> не выводим.
@@ -122,7 +107,7 @@ function ShowMyLife($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$
             $nPoint++;
             echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."<li> ");
             //if (isNichost()) 
-            //   echo('<a href="'.$urlHome.'/'.$TranslitOwn.'/'.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            //   echo('<a href="'.$urlHome.'/'.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
             //else 
                echo('<a href="'.$urlHome.'/'.'?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
          }

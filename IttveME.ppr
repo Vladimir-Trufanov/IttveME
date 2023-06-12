@@ -792,11 +792,11 @@ Caret=1,23
 TopLine=4
 Caret=9,29
 [www\.htaccess]
-TopLine=103
-Caret=52,115
+TopLine=73
+Caret=2,100
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=1
-Caret=1,11
+TopLine=87
+Caret=84,105
 [www\ttools\TZhizniPuti\ZhizniPutiClass.php]
-TopLine=67
-Caret=1,1
+TopLine=79
+Caret=15,111

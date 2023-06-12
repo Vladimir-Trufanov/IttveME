@@ -74,7 +74,6 @@ php_value upload_max_filesize 3M
 ## Включаем преобразование URL
 RewriteEngine On
 
-
 ## 
 # В общем виде (без учета флагов) RewriteRule работает ОЧЕНЬ просто:
 #   взяли строку,
@@ -84,19 +83,22 @@ RewriteEngine On
 
 # Фантастический пример:
 
-# Запрос: http://mysite.com/info.html
+# Запрос: https://ittve.me/info.html
 # В первый RewriteRule попадет "info.html"
 
-# Преобразовываем запрос в произвольную строку.
-# RewriteRule ^info.html$   I saw a turtle in the hole. And it was dancing rock-n-roll.
-# "info.html" -> "I saw a turtle..."
+# Преобразовываем запрос в произвольную строку:
+# "info.html" -> "Eto-izuchenie-RewriteRule-v-htaccess-faile"
+RewriteRule ^info.html$   Eto-izuchenie-RewriteRule-v-htaccess-faile 
 
-# Заменяем эту строку на внешнюю ссылку.
-# RewriteRule turtle https://example.com/information/index.html
-# "I saw a turtle..." -> "https://example.com/information/index.html"
+# Заменяем полученную строку по фрагменту на вызов с параметром:
+# "izuchenie" -> "?Com=prochitat-o-sajte-izmenit-nastrojki"
+RewriteRule izuchenie ?Com=prochitat-o-sajte-izmenit-nastrojki
 
-# Заменяем имя сайта!
-# RewriteRule ^(.*)example.com(.*)$ $1example.org$2
+# Заменяем параметр!
+#RewriteRule ^(.*)prochitat-o-sajte-izmenit-nastrojki(.*)$ $1zhizn-i-puteshestviya$2
+#RewriteRule ^\?(.*)prochitat-o-sajte-izmenit-nastrojki$ ?$1zhizn-i-puteshestviya
+#RewriteRule ^\?Com=prochitat-o-sajte-izmenit-nastrojki$ ?Com=vybrati-sleduyushchij-material
+#RewriteRule ^(.*)prochitat-o-sajte-izmenit-nastrojki$ $1zhizn-i-puteshestviya
 # "https://example.com/information/index.html" -> "https://example.org/information/index.html"
 
 # Заменяем протокол!
@@ -107,9 +109,6 @@ RewriteEngine On
 # RewriteRule ^(.*)/index.html$ $1/main.php
 # "ftp://example.org/information/index.html" -> "ftp://example.org/information/main.php"
 ##
-
-# https://www.ittve.me/progulki/ohota-na-medvedya
-# RewriteRule ^progulki/(.*)$                        ?arti=$1 - не срабатывает!
 
 ## Преобразовываем URL-запросы командных страниц 1 ряда:
 RewriteRule ^com-zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
@@ -128,6 +127,9 @@ RewriteRule ^com-udalit-material$                        ?Com=udalit-material [L
 ## Командные страницы 4 ряда:
 RewriteRule ^com-dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
 RewriteRule ^com-udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
+
+## Получаем страницы со статьями: https://www.ittve.me/ohota-na-medvedya
+#RewriteRule ^(.*)$                                       ?arti=$1 - не срабатывает!
 
 ## Перенаправляем все запросы с HTTP на HTTPS
 RewriteCond %{ENV:HTTPS} !on
