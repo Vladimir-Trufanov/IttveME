@@ -74,62 +74,39 @@ php_value upload_max_filesize 3M
 ## Включаем преобразование URL
 RewriteEngine On
 
-## 
-# В общем виде (без учета флагов) RewriteRule работает ОЧЕНЬ просто:
-#   взяли строку,
-#   cравнили с регулярным выражением в первом аргументе,
-#   если есть совпадение — заменили всю строку на значение второго аргумента,
-#   передали строку следующему RewriteRule.
-
-# Фантастический пример:
-
-# Запрос: https://ittve.me/info.html
-# В первый RewriteRule попадет "info.html"
-
-# Преобразовываем запрос в произвольную строку:
-# "info.html" -> "Eto-izuchenie-RewriteRule-v-htaccess-faile"
-RewriteRule ^info.html$   Eto-izuchenie-RewriteRule-v-htaccess-faile 
-
-# Заменяем полученную строку по фрагменту на вызов с параметром:
-# "izuchenie" -> "?Com=prochitat-o-sajte-izmenit-nastrojki"
-RewriteRule izuchenie ?Com=prochitat-o-sajte-izmenit-nastrojki
-
-# Заменяем параметр!
 #RewriteRule ^(.*)prochitat-o-sajte-izmenit-nastrojki(.*)$ $1zhizn-i-puteshestviya$2
 #RewriteRule ^\?(.*)prochitat-o-sajte-izmenit-nastrojki$ ?$1zhizn-i-puteshestviya
 #RewriteRule ^\?Com=prochitat-o-sajte-izmenit-nastrojki$ ?Com=vybrati-sleduyushchij-material
 #RewriteRule ^(.*)prochitat-o-sajte-izmenit-nastrojki$ $1zhizn-i-puteshestviya
 # "https://example.com/information/index.html" -> "https://example.org/information/index.html"
-
 # Заменяем протокол!
 # RewriteRule ^https:(.*)$ ftp:$1
 # "https://example.org/information/index.html" -> "ftp://example.org/information/index.html"
-
 # Заменяем конечную ссылку.
 # RewriteRule ^(.*)/index.html$ $1/main.php
 # "ftp://example.org/information/index.html" -> "ftp://example.org/information/main.php"
 ##
 
 ## Преобразовываем URL-запросы командных страниц 1 ряда:
-RewriteRule ^com-zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
-RewriteRule ^com-vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
-RewriteRule ^com-vernutsya-k-predydushchej-state$        ?Com=vernutsya-k-predydushchej-state [L]
-RewriteRule ^com-otpravit-avtoru-soobshchenie$           ?Com=otpravit-avtoru-soobshchenie [L]
-RewriteRule ^com-vojti-ili-zaregistrirovatsya$           ?Com=vojti-ili-zaregistrirovatsya [L]
+## RewriteRule ^com-zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestviya [L]
+## RewriteRule ^com-vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
+## RewriteRule ^com-vernutsya-k-predydushchej-state$        ?Com=vernutsya-k-predydushchej-state [L]
+## RewriteRule ^com-otpravit-avtoru-soobshchenie$           ?Com=otpravit-avtoru-soobshchenie [L]
+## RewriteRule ^com-vojti-ili-zaregistrirovatsya$           ?Com=vojti-ili-zaregistrirovatsya [L]
 ## Преобразовываем URL-запросы командных страниц 2 ряда:
-RewriteRule ^com-prochitat-o-sajte-izmenit-nastrojki$    ?Com=prochitat-o-sajte-izmenit-nastrojki [L]
-RewriteRule ^com-sozdat-material-ili-redaktirovat$       ?Com=sozdat-material-ili-redaktirovat [L]
-RewriteRule ^com-izmenit-nazvanie-razdela-ili-ikonku$    ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
+## RewriteRule ^com-prochitat-o-sajte-izmenit-nastrojki$    ?Com=prochitat-o-sajte-izmenit-nastrojki [L]
+## RewriteRule ^com-sozdat-material-ili-redaktirovat$       ?Com=sozdat-material-ili-redaktirovat [L]
+## RewriteRule ^com-izmenit-nazvanie-razdela-ili-ikonku$    ?Com=izmenit-nazvanie-razdela-ili-ikonku [L]
 ## Преобразовываем URL-запросы командных страниц 3 ряда:
-RewriteRule ^com-vybrat-statyu-dlya-redaktirovaniya$     ?Com=vybrat-statyu-dlya-redaktirovaniya [L]
-RewriteRule ^com-naznachit-statyu$                       ?Com=naznachit-statyu [L]
-RewriteRule ^com-udalit-material$                        ?Com=udalit-material [L]
+## RewriteRule ^com-vybrat-statyu-dlya-redaktirovaniya$     ?Com=vybrat-statyu-dlya-redaktirovaniya [L]
+## RewriteRule ^com-naznachit-statyu$                       ?Com=naznachit-statyu [L]
+## RewriteRule ^com-udalit-material$                        ?Com=udalit-material [L]
 ## Командные страницы 4 ряда:
-RewriteRule ^com-dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
-RewriteRule ^com-udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
+## RewriteRule ^com-dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razdel-materialov [L]
+## RewriteRule ^com-udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
 
-## Получаем страницы со статьями: https://www.ittve.me/ohota-na-medvedya
-#RewriteRule ^(.*)$                                       ?arti=$1 - не срабатывает!
+## Получаем страницы со статьями: https://www.ittve.me/pre/progulki-ohota-na-medvedya
+## RewriteRule ^progulki-(.*)$                                   ?arti=$1 [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
 RewriteCond %{ENV:HTTPS} !on

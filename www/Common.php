@@ -76,6 +76,40 @@ function isNichost()
    return $Result;
 }
 // ****************************************************************************
+// *       Проверить соответствие запроса разрешенной команде управления      *
+// ****************************************************************************
+
+// ------------------------------------ Тексты запросов для меню управления ---
+define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');       // 1 из главной
+define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');     // 2 из главной
+define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');               // 3
+define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');      // 4
+
+define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');        // 5 из главной
+define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');        // 6 из главной
+
+define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki'); // 7 из 3    
+define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat');    // 8 из 3
+define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku'); // 9 из 3    
+
+define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');     // 10 из 9
+define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov');            // 11 из 9
+define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');  // 12 из 9
+
+define ('mmlNaznachitStatyu',            'naznachit-statyu');                    // 13 из 8
+define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
+
+function testComRequest($mml) 
+{
+   // Определяем массив запросов для меню управления
+   $aLeadRequest=[
+      mmlVybratSledMaterial,mmlVernutsyaPredState,mmlZhiznIputeshestviya,mmlVernutsyaNaGlavnuyu,
+      mmlOtpravitAvtoruSoobshchenie,mmlVojtiZaregistrirovatsya,
+      mmlIzmenitNastrojkiSajta,mmlSozdatRedaktirovat,mmlIzmenitNazvanieIkonku,
+      mmlDobavitNovyjRazdel,mmlUdalitRazdelMaterialov,mmlVybratStatyuRedakti,
+      mmlNaznachitStatyu,mmlUdalitMaterial]; 
+}
+// ****************************************************************************
 // *             Построить html-код меню и сделать выбор материала            *
 // ****************************************************************************
 function UniArtMenu($pdo,$clickGru='',$clickOne='') 

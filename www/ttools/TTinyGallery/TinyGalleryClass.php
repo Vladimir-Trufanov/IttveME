@@ -79,6 +79,8 @@
  * 
 **/
 
+require_once "Common.php";
+
 require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpTools."/CommonTools.php";
 require_once "ttools/TTinyGallery/Dispatch_ZERO.php";
@@ -217,6 +219,7 @@ class TinyGallery
       if ($this->DelayedMessage==imok) 
       {
          // -------------------------------------- 'Выбрать следующий материал'
+         testComRequest(mmlVybratSledMaterial);
          if (\prown\isComRequest(mmlVybratSledMaterial))
          $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit,$this->urlHome);
          // ----------------------------------- 'Вернуться к предыдущей статье'
@@ -423,8 +426,9 @@ class TinyGallery
    // *************************************************************************
    public function ViewFooterSpace($UserAgent)
    {
-      if (isNichost()) $cPreMe='com-'; 
-      else             $cPreMe='?Com=';
+      //if (isNichost()) $cPreMe='com-'; 
+      //else             
+      $cPreMe='?Com=';
 
       //if ($this->is_ittveme()) $this->cPreMe='com-';  
       //else                     $this->cPreMe='?Com=';

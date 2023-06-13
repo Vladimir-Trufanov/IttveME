@@ -293,7 +293,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -752,24 +752,23 @@ IttveMe
 8=www\Styles\iniStyles.css
 9=www\ttools\TViewImage\ViewImage.js
 10=www\UpSiteTTL.php
-11=www\.htaccess
-12=www\ttools\TMenuLeader\MenuLeaderClass.php
-13=www\ttools\TZhizniPuti\ZhizniPutiClass.php
+11=www\ttools\TMenuLeader\MenuLeaderClass.php
+12=www\Common.php
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=78
+TopLine=8
 Caret=4,100
 [www\iniMem.php]
-TopLine=14
-Caret=10,25
+TopLine=177
+Caret=52,213
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
 TopLine=175
 Caret=7,175
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=417
-Caret=9,430
+TopLine=201
+Caret=46,222
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=252
 Caret=86,286
@@ -777,8 +776,8 @@ Caret=86,286
 TopLine=8
 Caret=21,19
 [www\UpSite.php]
-TopLine=51
-Caret=25,88
+TopLine=59
+Caret=63,75
 [www\Jsx\WorkTiny.js]
 TopLine=4
 Caret=28,24
@@ -791,12 +790,9 @@ Caret=1,23
 [www\UpSiteTTL.php]
 TopLine=4
 Caret=9,29
-[www\.htaccess]
-TopLine=73
-Caret=2,100
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=87
-Caret=84,105
-[www\ttools\TZhizniPuti\ZhizniPutiClass.php]
+TopLine=1
+Caret=1,12
+[www\Common.php]
 TopLine=79
-Caret=15,111
+Caret=51,100

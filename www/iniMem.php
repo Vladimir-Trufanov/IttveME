@@ -6,9 +6,8 @@
 // *                              проинициализировать общесайтовые переменные *
 // ****************************************************************************
 
-//                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 24.02.2023
+// v2.2, 13.06.2023                                  Автор:       Труфанов В.Е. 
+// Copyright © 2019 tve                              Дата создания:  13.01.2019 
 
 require_once "Common.php";  
 // --------------------------------- Межязыковые (PHP-JScript) определения  ---
@@ -79,27 +78,6 @@ define ("mesCookiNoMes", 2);     // "Кукисы в Вашем браузере
 define ("mesCookiUserNo", 3);    // "Разрешить использование кукисов для Вашего удобства?" 
 define ("mesCookiUserYes", 4);   // Сообщение не выводить
 */
-
-// ------------------------------------ Тексты запросов для меню управления ---
-define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');       // 1 из главной
-define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');     // 2 из главной
-define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');               // 3
-define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');      // 4
-
-define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');        // 5 из главной
-define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');        // 6 из главной
-
-define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki'); // 7 из 3    
-define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat');    // 8 из 3
-define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku'); // 9 из 3    
-
-define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');     // 10 из 9
-define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov');            // 11 из 9
-define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');  // 12 из 9
-
-define ('mmlNaznachitStatyu',            'naznachit-statyu');                    // 13 из 8
-define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
-
 // ----------- Режимы представления материалов = Content Presentation Modes ---
 define ("rpmDoubleRight", 'Двухколоночный с правосторонней галереей');   
 define ("rpmDoubleLeft",  'Двухколоночный с левосторонней галереей');    
@@ -231,8 +209,8 @@ $Arti->setKindMessage($note);
 // и рабочей области редактирования (в том числе создаем объект для управления
 // изображениями в галерее, связанной с материалом сайта из базы данных)
 $WorkTinyHeight='75'; $FooterTinyHeight='15'; $KwinGalleryWidth='30'; $EdIzm='%';
-$Edit=new ttools\TinyGallery($SiteRoot,$urlHome,$SiteDevice,
-   $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
+$Edit=new ttools\TinyGallery($SiteRoot,$urlHome,$SiteDevice,$WorkTinyHeight,
+   $FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
 // Подключаем заменяющую игру для страницы "Добавить новый раздел"
 require_once "ttools/TNewCue/gameDuckFlyClass.php";
 $Duck=new game\DuckFly('IttveME');

@@ -6,6 +6,7 @@
 // * TPhpTools                Фрэйм управляющего меню для обобщенной работы в *
 // *                           "ittve.me", работающего через TinyGalleryClass *
 // ****************************************************************************
+
 // v2.1, 12.06.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2022 tve                              Дата создания:  18.12.2019 
 
@@ -75,8 +76,9 @@ class MenuLeader
       $this->urlHome=$urlHome; 
       $this->classdir=pathPhpTools.'/TMenuLeader'; 
       // Формируем префиксы вызова страниц для сайта 'ittve.me' и localhost
-      if ($this->is_ittveme()) $this->cPreMe='com-';  
-      else                     $this->cPreMe='?Com=';
+      //if ($this->is_ittveme()) $this->cPreMe='com-';  
+      //else                     
+      $this->cPreMe='?Com=';
       // Проверяем, нужно ли заменить файл стилей в каталоге редактирования и,
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
@@ -101,12 +103,14 @@ class MenuLeader
       // Выводим пункты меню управления для страниц из меню "Жизнь и путешествия"
       if (\prown\isComRequest(mmlZhiznIputeshestviya))
       {
+         // Через кнопку 'Вернуться на главную страницу' на странице  "Жизнь 
+         // и путешествия" отлаживаем RewriteRule в .htaccess
+         // $this->Punkt('info.html','&#xf015;','Вернуться','на главную страницу'); // 1 проба
+         // $this->Punkt('https://www.ittve.me/progulki-ohota-na-medvedya','&#xf015;','Вернуться','на главную страницу'); // 1 проба
+         $this->Punkt('/zhizn-i-puteshestviya','&#xf015;','Вернуться','на главную страницу'); // 1 проба
+         
+                                                          
          //$this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
-         //$this->Punkt('info.html','&#xf015;','Вернуться','на главную страницу'); 
-         //$this->Punkt('Eto-izuchenie-RewriteRule-v-htaccess-faile','&#xf015;','Вернуться','на главную страницу');
-         
-         
-         $this->Punkt('info.html','&#xf015;','Вернуться','на главную страницу'); 
          $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
          $this->Punkt($this->cPreMe.mmlIzmenitNazvanieIkonku,'&#xf086;','Изменить название','раздела или иконку');

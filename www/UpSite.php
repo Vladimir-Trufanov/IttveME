@@ -71,11 +71,16 @@ if ($BaseCreate<>'Yes')
    // Выводим нижнюю информационную строку
    echo '<div id="Info">';
       echo '<div id="InfoLeft">';
+      
+         echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
+
+         /*
          echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 
          echo '
             <span id="scrwi"> 1203</span>x<span id="scrhe">721</span> 
             <span id="lazy"></span>
          ';
+         */
          /*
          echo '
             Copyright (c) 2019-23 v2.0  Труфанов Владимир   tve58@inbox.ru 
