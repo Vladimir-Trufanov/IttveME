@@ -79,8 +79,6 @@
  * 
 **/
 
-require_once "Common.php";
-
 require_once pathPhpPrown."/CommonPrown.php";
 require_once pathPhpTools."/CommonTools.php";
 require_once "ttools/TTinyGallery/Dispatch_ZERO.php";
@@ -219,7 +217,6 @@ class TinyGallery
       if ($this->DelayedMessage==imok) 
       {
          // -------------------------------------- 'Выбрать следующий материал'
-         testComRequest(mmlVybratSledMaterial);
          if (\prown\isComRequest(mmlVybratSledMaterial))
          $this->DelayedMessage=mmlVybratSledMaterial_ZERO($this->Arti,$Translit,$this->urlHome);
          // ----------------------------------- 'Вернуться к предыдущей статье'
@@ -426,14 +423,9 @@ class TinyGallery
    // *************************************************************************
    public function ViewFooterSpace($UserAgent)
    {
-      //if (isNichost()) $cPreMe='com-'; 
-      //else             
-      $cPreMe='?Com=';
-
-      //if ($this->is_ittveme()) $this->cPreMe='com-';  
-      //else                     $this->cPreMe='?Com=';
-
-      // Кнопка главного меню 
+      // Формируем префиксы вызова страниц для сайта 'ittve.me' или localhost
+      if (isNichost()) $cPreMe='com-'; else $cPreMe='?Com=';
+      // Выводим кнопку главного меню 
       echo '<div id="LifeMenu">';
          echo '
          <ul id="btnLifeMenu">
@@ -445,7 +437,7 @@ class TinyGallery
          </ul>
          ';
       echo '</div>';
-      // Левая часть подвала для сообщений, разворачиваемых в три строки
+      // Готовим левую часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
          if ($this->Arti->GalleryMode==mwgEditing)
          {
@@ -466,7 +458,7 @@ class TinyGallery
             }
          }
       echo '</div>';
-      // Правая часть подвала, меню управления
+      // Готовим правую часть подвала, меню управления
       echo '<div id="RightFooter">';
          $this->menu->Menu(); 
       echo '</div>';

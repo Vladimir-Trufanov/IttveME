@@ -7,7 +7,7 @@
 // *                           "ittve.me", работающего через TinyGalleryClass *
 // ****************************************************************************
 
-// v2.1, 12.06.2023                                  Автор:       Труфанов В.Е. 
+// v2.2, 15.06.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2022 tve                              Дата создания:  18.12.2019 
 
 /**
@@ -75,10 +75,8 @@ class MenuLeader
       $this->typemenu=$typemenu; 
       $this->urlHome=$urlHome; 
       $this->classdir=pathPhpTools.'/TMenuLeader'; 
-      // Формируем префиксы вызова страниц для сайта 'ittve.me' и localhost
-      //if ($this->is_ittveme()) $this->cPreMe='com-';  
-      //else                     
-      $this->cPreMe='?Com=';
+      // Формируем префиксы вызова страниц для сайта 'ittve.me' или localhost
+      if (isNichost()) $this->cPreMe='com-'; else $this->cPreMe='?Com=';
       // Проверяем, нужно ли заменить файл стилей в каталоге редактирования и,
       // (при его отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
@@ -106,11 +104,9 @@ class MenuLeader
          // Через кнопку 'Вернуться на главную страницу' на странице  "Жизнь 
          // и путешествия" отлаживаем RewriteRule в .htaccess
          // $this->Punkt('info.html','&#xf015;','Вернуться','на главную страницу'); // 1 проба
-         // $this->Punkt('https://www.ittve.me/progulki-ohota-na-medvedya','&#xf015;','Вернуться','на главную страницу'); // 1 проба
-         $this->Punkt('/zhizn-i-puteshestviya','&#xf015;','Вернуться','на главную страницу'); // 1 проба
-         
+         //$this->Punkt('https://www.ittve.me/ittve-ohota-na-medvedya','&#xf015;','Вернуться','на главную страницу'); // 1 проба
                                                           
-         //$this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
+         $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
          $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
          $this->Punkt($this->cPreMe.mmlIzmenitNazvanieIkonku,'&#xf086;','Изменить название','раздела или иконку');
@@ -168,21 +164,6 @@ class MenuLeader
    }
    // --------------------------------------------------- ВНУТРЕННИЕ МЕТОДЫ ---
 
-   // *************************************************************************
-   // *   Определить работаем ли на хостинге сайта 'ittve.me' или localhost   *
-   // *************************************************************************
-   private function is_ittveme()
-   { 
-      $Result=false;
-      if (
-        ($_SERVER['HTTP_HOST']=='ittve.me')||
-        ($_SERVER['HTTP_HOST']=='www.ittve.me')||
-        ($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
-      {  
-         $Result=true;
-      }
-      return $Result;
-   }
    // *************************************************************************
    // *                  Вывести кнопку меню управления страницей             *
    // *************************************************************************

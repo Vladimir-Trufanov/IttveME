@@ -106,10 +106,10 @@ function ShowMyLife($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$
          {
             $nPoint++;
             echo(SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)."<li> ");
-            //if (isNichost()) 
-            //   echo('<a href="'.$urlHome.'/'.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
-            //else 
-               echo('<a href="'.$urlHome.'/'.'?arti='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n"); 
+            $endline=$Translit.'">'.'<em>'.$Uid.'</em>'.
+               $row['NameArt'].$cLine.'<span>'.$DateArt.'</span>'.'</a>'."\n";
+            if (isNichost()) echo('<a href="'.$urlHome.'/'.handmy.'-'.$endline); 
+            else echo('<a href="'.$urlHome.'/'.'?arti='  .$endline); 
          }
          $cLast='+li';
          ShowMyLife($pdo,$urlHome,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,$otlada,' class="sub-menu"'); 

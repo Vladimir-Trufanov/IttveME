@@ -10,7 +10,9 @@
 // Copyright © 2019 tve                              Дата создания:  13.01.2019 
 
 require_once "Common.php";  
+
 // --------------------------------- Межязыковые (PHP-JScript) определения  ---
+define("handmy",        'ittve');       // Сигнатура статей сайта
 
 define("pathPhpPrown",  $SiteHost.'/TPhpPrown/TPhpPrown'); 
 define("pathPhpTools",  $SiteHost.'/TPhpTools/TPhpTools'); 
@@ -31,6 +33,7 @@ function DefineJS($SiteHost,$urlHome)
 {
    $define=
    '<script>'.
+   'handmy="'              .handmy.'";'.
    'pathPhpPrown="'        .pathPhpPrown.'";'.
    'pathPhpTools="'        .pathPhpTools.'";'.
    'RootDir="'             .RootDir.'";'.

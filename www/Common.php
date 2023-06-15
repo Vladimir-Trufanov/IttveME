@@ -99,8 +99,18 @@ define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya'); 
 define ('mmlNaznachitStatyu',            'naznachit-statyu');                    // 13 из 8
 define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
 
+/*
+
+// ---------------------------------------- Результат проверки URI страницы ---
+define ('xUriOk',      1);   // URI соответствует запросу для тестирования
+define ('xUriNoslash', 2);   // в URI нет первого слэша
+define ('xUriMain',    3);   // в URI только 1 слэш - выход на главную страницу
+define ('xUriNo',      4);   // URI неправильный
+define ('xUriReal',    5);   // URI является разрешенной командой
+
 function testComRequest($mml) 
 {
+   $Result=xUriNo;
    // Определяем массив запросов для меню управления
    $aLeadRequest=[
       mmlVybratSledMaterial,mmlVernutsyaPredState,mmlZhiznIputeshestviya,mmlVernutsyaNaGlavnuyu,
@@ -108,7 +118,35 @@ function testComRequest($mml)
       mmlIzmenitNastrojkiSajta,mmlSozdatRedaktirovat,mmlIzmenitNazvanieIkonku,
       mmlDobavitNovyjRazdel,mmlUdalitRazdelMaterialov,mmlVybratStatyuRedakti,
       mmlNaznachitStatyu,mmlUdalitMaterial]; 
+   // Выбираем URI, который был предоставлен для доступа к этой странице; 
+   // например, '/index.html' или '/zhizn-i-puteshestviya'.
+   $inUri=$_SERVER["REQUEST_URI"];
+   $slash=substr($inUri,0,1);
+   if ($slash<>'/')
+      $Result=xUriNoslash;
+   else
+   {
+      // Выбираем все, что после слэша, может это соответствует запросу
+      $xUri=substr($inUri,1);
+      // Проверяем Uri на соответствие разрешенной команде
+      foreach ($aLeadRequest as $val) 
+      {
+         if ($val==$xUri)
+         {
+            $Result=xUriReal;
+            break;
+         }
+      }
+      // Проверяем Uri на соответствие тесту
+      if ($Result==xUriReal)
+      {
+         if ($xUri==$mml) $Result=xUriOk;
+      }
+   }
+   return $Result;
 }
+*/
+
 // ****************************************************************************
 // *             Построить html-код меню и сделать выбор материала            *
 // ****************************************************************************
