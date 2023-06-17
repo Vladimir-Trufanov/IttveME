@@ -6,7 +6,7 @@
 // * TPhpTools                     Блок функций класса TArticleMaker для базы *
 // *                                      данных материалов сайта "ittve.me". *
 // *                                                                          *
-// * v1.0, 23.12.2022                              Автор:       Труфанов В.Е. *
+// * v1.2, 17.06.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  13.11.2022 *
 // ****************************************************************************
 
@@ -313,14 +313,16 @@ function CreateTables($pdo,$aCharters)
       ]);
       // Создаём таблицу материалов (основу для построения меню)  
       $sql='CREATE TABLE stockpw ('.
-         'uid      INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пункта меню (раздел или статья сайта)
-         'pid      INTEGER NOT NULL REFERENCES stockpw(uid),'.    // указатель элемента уровнем выше - uid родителя	
-         'IdCue    INTEGER NOT NULL REFERENCES cue(IdCue),'.      // указатель раздела статьи
-         'NameArt  VARCHAR NOT NULL,'.                            // заголовок материала = статьи сайта
-         'Translit VARCHAR NOT NULL,'.                            // транслит заголовка
-         'access   INTEGER NOT NULL,'.                            // доступ к пунктам меню (All/Autor)
-         'DateArt  VARCHAR NOT NULL,'.                            // дата статьи сайта/юникод иконки раздела
-         'Art      TEXT)';                                        // материал = статья сайта
+         'uid         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пункта меню (раздел или статья сайта)
+         'pid         INTEGER NOT NULL REFERENCES stockpw(uid),'.    // указатель элемента уровнем выше - uid родителя	
+         'IdCue       INTEGER NOT NULL REFERENCES cue(IdCue),'.      // указатель раздела статьи
+         'NameArt     VARCHAR NOT NULL,'.                            // заголовок материала = статьи сайта
+         'Translit    VARCHAR NOT NULL,'.                            // транслит заголовка
+         'access      INTEGER NOT NULL,'.                            // доступ к пунктам меню (All/Autor)
+         'DateArt     VARCHAR NOT NULL,'.                            // дата статьи сайта/юникод иконки раздела
+         'description TEXT,'.                                        // описание статьи
+         'keywords    TEXT,'.                                        // ключевые слова статьи
+         'Art         TEXT)';                                        // материал = статья сайта
       $st = $pdo->query($sql);
       
       // Заполняем таблицу материалов в начальном состоянии (на 2022-12-20)

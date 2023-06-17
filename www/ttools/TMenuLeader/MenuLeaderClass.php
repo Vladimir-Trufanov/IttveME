@@ -7,7 +7,7 @@
 // *                           "ittve.me", работающего через TinyGalleryClass *
 // ****************************************************************************
 
-// v2.2, 15.06.2023                                  Автор:       Труфанов В.Е. 
+// v2.3, 17.06.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2022 tve                              Дата создания:  18.12.2019 
 
 /**
@@ -150,6 +150,14 @@ class MenuLeader
          $this->Punkt($this->cPreMe.mmlDobavitNovyjRazdel,'&#xf0f2;','Добавить новый','раздел материалов');
          $this->Punkt($this->cPreMe.mmlUdalitRazdelMaterialov,'&#xf1f8;','Удалить раздел','материалов');
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
+      }
+      // Выводим пункты меню управления в режиме редактирования материала
+      else if (\prown\getComRequest('artim')<>NULL) 
+      {
+         $this->Punkt($this->cPreMe.mmlVybratSledMaterial,'&#xf0a7;','Выбрать следующий','материал');
+         $this->Punkt($this->cPreMe.mmlVernutsyaPredState,'&#xf0a6;','Вернуться к прежней','статье');
+         $this->Punkt($this->cPreMe.mmlRedaktiOpisanie,'&#xf27a;','Редактировать','описание статьи');
+         $this->Punkt($this->cPreMe.mmlSohranitNovyjMaterial,'&#xf0c7;','Сохранить','новый материал');
       }
       // Выводим пункты меню главной страницы
       else

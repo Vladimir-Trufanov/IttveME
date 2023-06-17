@@ -57,7 +57,6 @@ if ($BaseCreate<>'Yes')
       $Edit->ViewGallerySpace();
    echo '</div>'; 
    echo '<div id="FooterTiny">';
-      //echo (prown\getTranslit('Изменить настройки, прочитать о сайте'));
       $Edit->ViewFooterSpace($UserAgent);
       
       /*
@@ -71,8 +70,12 @@ if ($BaseCreate<>'Yes')
    // Выводим нижнюю информационную строку
    echo '<div id="Info">';
       echo '<div id="InfoLeft">';
-      
-         echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
+
+         // Выводим строку с текстом запроса
+         // echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
+
+         // Выводим строку с контрольным транслитом
+         echo (prown\getTranslit('Сохранить новый материал'));
 
          /*
          echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 

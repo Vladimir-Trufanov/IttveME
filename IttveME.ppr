@@ -545,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -753,20 +753,21 @@ IttveMe
 9=www\ttools\TViewImage\ViewImage.js
 10=www\UpSiteTTL.php
 11=www\ttools\TMenuLeader\MenuLeaderClass.php
+12=www\Common.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\Common.php
 [www\index.php]
-TopLine=55
+TopLine=65
 Caret=3,84
 [www\iniMem.php]
-TopLine=8
+TopLine=5
 Caret=44,15
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=175
-Caret=7,175
+TopLine=87
+Caret=1,115
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=395
+TopLine=137
 Caret=46,427
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=252
@@ -775,8 +776,8 @@ Caret=86,286
 TopLine=1
 Caret=21,19
 [www\UpSite.php]
-TopLine=59
-Caret=66,75
+TopLine=53
+Caret=6,65
 [www\Jsx\WorkTiny.js]
 TopLine=4
 Caret=28,24
@@ -791,4 +792,7 @@ TopLine=4
 Caret=9,29
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
 TopLine=1
-Caret=12,10
+Caret=1,12
+[www\Common.php]
+TopLine=21
+Caret=1,81

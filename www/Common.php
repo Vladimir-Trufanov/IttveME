@@ -5,10 +5,79 @@
 // * ittve.me                                        Блок общих функций сайта *
 // ****************************************************************************
 
-//                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  05.03.2019
-// Copyright © 2019 tve                              Посл.изменение: 03.12.2022
+// v1.3, 17.06.2023                                  Автор:       Труфанов В.Е. 
+// Copyright © 2019 tve                              Дата создания:  05.03.2019 
 
+// ****************************************************************************
+// *       Проверить соответствие запроса разрешенной команде управления      *
+// ****************************************************************************
+// ------------------------------------ Тексты запросов для меню управления ---
+define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');       // 1 из главной
+define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');     // 2 из главной
+define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');               // 3
+define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');      // 4
+
+define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');        // 5 из главной
+define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');        // 6 из главной
+
+define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki'); // 7 из 3    
+define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat');    // 8 из 3
+define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku'); // 9 из 3    
+
+define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');     // 10 из 9
+define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov');            // 11 из 9
+define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');  // 12 из 9
+
+define ('mmlNaznachitStatyu',            'naznachit-statyu');                    // 13 из 8
+define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
+define ('mmlRedaktiOpisanie',            'redaktirovat-opisanie-stati');         // 15 из 12
+define ('mmlSohranitNovyjMaterial',      'sohranit-novyj-material');             // 16 из 12
+/*
+// ---------------------------------------- Результат проверки URI страницы ---
+define ('xUriOk',      1);   // URI соответствует запросу для тестирования
+define ('xUriNoslash', 2);   // в URI нет первого слэша
+define ('xUriMain',    3);   // в URI только 1 слэш - выход на главную страницу
+define ('xUriNo',      4);   // URI неправильный
+define ('xUriReal',    5);   // URI является разрешенной командой
+
+function testComRequest($mml) 
+{
+   $Result=xUriNo;
+   // Определяем массив запросов для меню управления
+   $aLeadRequest=[
+      mmlVybratSledMaterial,mmlVernutsyaPredState,mmlZhiznIputeshestviya,mmlVernutsyaNaGlavnuyu,
+      mmlOtpravitAvtoruSoobshchenie,mmlVojtiZaregistrirovatsya,
+      mmlIzmenitNastrojkiSajta,mmlSozdatRedaktirovat,mmlIzmenitNazvanieIkonku,
+      mmlDobavitNovyjRazdel,mmlUdalitRazdelMaterialov,mmlVybratStatyuRedakti,
+      mmlNaznachitStatyu,mmlUdalitMaterial]; 
+   // Выбираем URI, который был предоставлен для доступа к этой странице; 
+   // например, '/index.html' или '/zhizn-i-puteshestviya'.
+   $inUri=$_SERVER["REQUEST_URI"];
+   $slash=substr($inUri,0,1);
+   if ($slash<>'/')
+      $Result=xUriNoslash;
+   else
+   {
+      // Выбираем все, что после слэша, может это соответствует запросу
+      $xUri=substr($inUri,1);
+      // Проверяем Uri на соответствие разрешенной команде
+      foreach ($aLeadRequest as $val) 
+      {
+         if ($val==$xUri)
+         {
+            $Result=xUriReal;
+            break;
+         }
+      }
+      // Проверяем Uri на соответствие тесту
+      if ($Result==xUriReal)
+      {
+         if ($xUri==$mml) $Result=xUriOk;
+      }
+   }
+   return $Result;
+}
+*/
 // ****************************************************************************
 // *               Определить что работает двухколоночный режим, но           *
 // *                     показываются не новости и статья                     *
@@ -75,78 +144,6 @@ function isNichost()
    }
    return $Result;
 }
-// ****************************************************************************
-// *       Проверить соответствие запроса разрешенной команде управления      *
-// ****************************************************************************
-
-// ------------------------------------ Тексты запросов для меню управления ---
-define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');       // 1 из главной
-define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');     // 2 из главной
-define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');               // 3
-define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');      // 4
-
-define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');        // 5 из главной
-define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');        // 6 из главной
-
-define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki'); // 7 из 3    
-define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat');    // 8 из 3
-define ('mmlIzmenitNazvanieIkonku',      'izmenit-nazvanie-razdela-ili-ikonku'); // 9 из 3    
-
-define ('mmlDobavitNovyjRazdel',         'dobavit-novyj-razdel-materialov');     // 10 из 9
-define ('mmlUdalitRazdelMaterialov',     'udalit-razdel-materialov');            // 11 из 9
-define ('mmlVybratStatyuRedakti',        'vybrat-statyu-dlya-redaktirovaniya');  // 12 из 9
-
-define ('mmlNaznachitStatyu',            'naznachit-statyu');                    // 13 из 8
-define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
-
-/*
-
-// ---------------------------------------- Результат проверки URI страницы ---
-define ('xUriOk',      1);   // URI соответствует запросу для тестирования
-define ('xUriNoslash', 2);   // в URI нет первого слэша
-define ('xUriMain',    3);   // в URI только 1 слэш - выход на главную страницу
-define ('xUriNo',      4);   // URI неправильный
-define ('xUriReal',    5);   // URI является разрешенной командой
-
-function testComRequest($mml) 
-{
-   $Result=xUriNo;
-   // Определяем массив запросов для меню управления
-   $aLeadRequest=[
-      mmlVybratSledMaterial,mmlVernutsyaPredState,mmlZhiznIputeshestviya,mmlVernutsyaNaGlavnuyu,
-      mmlOtpravitAvtoruSoobshchenie,mmlVojtiZaregistrirovatsya,
-      mmlIzmenitNastrojkiSajta,mmlSozdatRedaktirovat,mmlIzmenitNazvanieIkonku,
-      mmlDobavitNovyjRazdel,mmlUdalitRazdelMaterialov,mmlVybratStatyuRedakti,
-      mmlNaznachitStatyu,mmlUdalitMaterial]; 
-   // Выбираем URI, который был предоставлен для доступа к этой странице; 
-   // например, '/index.html' или '/zhizn-i-puteshestviya'.
-   $inUri=$_SERVER["REQUEST_URI"];
-   $slash=substr($inUri,0,1);
-   if ($slash<>'/')
-      $Result=xUriNoslash;
-   else
-   {
-      // Выбираем все, что после слэша, может это соответствует запросу
-      $xUri=substr($inUri,1);
-      // Проверяем Uri на соответствие разрешенной команде
-      foreach ($aLeadRequest as $val) 
-      {
-         if ($val==$xUri)
-         {
-            $Result=xUriReal;
-            break;
-         }
-      }
-      // Проверяем Uri на соответствие тесту
-      if ($Result==xUriReal)
-      {
-         if ($xUri==$mml) $Result=xUriOk;
-      }
-   }
-   return $Result;
-}
-*/
-
 // ****************************************************************************
 // *             Построить html-код меню и сделать выбор материала            *
 // ****************************************************************************
