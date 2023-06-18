@@ -99,6 +99,35 @@ function PunktClick(idClick)
 {
    document.getElementById(idClick).click(); 
 }
+function PunkwClick(idClick)
+{
+   $('#ImgDialogWind').dialog({
+      bgiframe:true,      // совместимость с IE6
+      closeOnEscape:true, // закрывать при нажатии Esc
+      modal:true,         // модальное окно
+      resizable:true,     // разрешено изменение размера
+      autoOpen:false,     // сразу диалог не открывать
+      title:'Описание статьи',
+      width:300,
+      height:280,
+      
+      beforeClose: function() 
+      {
+         alert('beforeClose');
+      },
+      open: function() 
+      {
+         alert('open');
+      }
+   });
+   
+   $('#ImgDialogWind').html('<textarea id="AreaDescript"></textarea>');
+   $('#ImgDialogWind').css('padding',0);
+   $('#ImgDialogWind').css('background','white');
+   
+   $('#ImgDialogWind').dialog('open');
+
+}
 // ****************************************************************************
 // *            Отработать действия при назначении новой статьи               *
 // ****************************************************************************

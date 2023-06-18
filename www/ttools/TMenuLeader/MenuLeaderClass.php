@@ -156,7 +156,7 @@ class MenuLeader
       {
          $this->Punkt($this->cPreMe.mmlVybratSledMaterial,'&#xf0a7;','Выбрать следующий','материал');
          $this->Punkt($this->cPreMe.mmlVernutsyaPredState,'&#xf0a6;','Вернуться к прежней','статье');
-         $this->Punkt($this->cPreMe.mmlRedaktiOpisanie,'&#xf27a;','Редактировать','описание статьи');
+         $this->Punkw($this->cPreMe.mmlRedaktiOpisanie,'&#xf27a;','Редактировать','описание статьи');
          $this->Punkt($this->cPreMe.mmlSohranitNovyjMaterial,'&#xf0c7;','Сохранить','новый материал');
       }
       // Выводим пункты меню главной страницы
@@ -187,6 +187,28 @@ class MenuLeader
             <span class="k1"><a href="'.$Punkt.'" id="'.$idsmall.'">'.$fString.'</a></span>
             <span class="k2"><a href="'.$Punkt.'">'.$sString.'</a></span>
          </span>
+         </li>
+      ';
+   }
+
+   // *************************************************************************
+   // *                  Вывести кнопку меню управления страницей             *
+   // *************************************************************************
+   private function Punkw($Punkt,$cUniCod,$fString,$sString)
+   {
+      // Формируем идентификатор для отработки кнопки "small" по юникоду
+      $idsmall=substr($cUniCod,3,4); 
+      echo '
+         <li class="link" title="'.$this->SayPref().'">
+         <span class="prev">'.$cUniCod.'</span>
+         <span class="small" onclick="PunkwClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
+         <span class="full">  
+            <span class="k1" onclick="PunkwClick(\''.$idsmall.'\')"><a href="#" id="'.$idsmall.'">'.$fString.'</a></span>
+            <span class="k2" onclick="PunkwClick(\''.$idsmall.'\')"><a href="#">'.$sString.'</a></span>
+            <!--
+            <span class="k1"  onclick="PunkwClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
+            <span class="k2"> onclick="PunkwClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
+            -->
          </li>
       ';
    }
