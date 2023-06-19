@@ -19,12 +19,9 @@ echo '<body>';
 if ($BaseCreate<>'Yes')
 {
    // Подготавливаем окошечко для детального показа выбранного изображения
+   // или описания текущей статьи
    echo '
       <div id="ImgDialogWind">
-      <textarea id="AreaDescript" rows="4"></textarea>
-      <!--
-      <textarea name="comment" cols="40" rows="3"></textarea>
-      -->
       </div>
    ';
 

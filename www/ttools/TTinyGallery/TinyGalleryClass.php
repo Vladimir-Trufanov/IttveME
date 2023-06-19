@@ -356,7 +356,7 @@ class TinyGallery
          elseif 
             ((\prown\isComRequest(mmlSozdatRedaktirovat))||
             (\prown\isComRequest(mmlVybratStatyuRedakti)))
-            $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo);
+            $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo,$this->urlHome);
          // 9-HEAD этап -------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
          elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
             $this->ModyCue=mmlIzmenitNazvanieIkonku_HEAD();

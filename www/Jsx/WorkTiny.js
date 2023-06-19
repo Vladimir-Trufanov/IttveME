@@ -101,6 +101,17 @@ function PunktClick(idClick)
 }
 function PunkwClick(idClick)
 {
+   
+   $('#ImgDialogWind').html('<textarea id="AreaDescript"></textarea>');
+   $('#ImgDialogWind').css('padding',0);
+   $('#ImgDialogWind').css('background','white');
+
+   var $area = $("#AreaDescript");
+   var Description='';
+   $area.on("change",function(event){
+     Description=event.target.value;
+   })
+
    $('#ImgDialogWind').dialog({
       bgiframe:true,      // совместимость с IE6
       closeOnEscape:true, // закрывать при нажатии Esc
@@ -113,17 +124,14 @@ function PunkwClick(idClick)
       
       beforeClose: function() 
       {
-         alert('beforeClose');
+         alert(Description);
       },
       open: function() 
       {
-         alert('open');
+         Description='Новое описание статьи';
+         $('#AreaDescript').html(Description);
       }
    });
-   
-   $('#ImgDialogWind').html('<textarea id="AreaDescript"></textarea>');
-   $('#ImgDialogWind').css('padding',0);
-   $('#ImgDialogWind').css('background','white');
    
    $('#ImgDialogWind').dialog('open');
 

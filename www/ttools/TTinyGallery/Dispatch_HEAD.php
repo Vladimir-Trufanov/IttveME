@@ -52,10 +52,10 @@ function mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$aPhoneImg,$urlHome,
 // ****************************************************************************
 // *             "Редактировать выбранный материал или создать новый"         *
 // ****************************************************************************
-function mmlSozdatRedaktirovat_HEAD($Arti,$apdo)
+function mmlSozdatRedaktirovat_HEAD($Arti,$apdo,$urlHome)
 {
    require_once "ttools/TModyArt/ModyArtClass.php";
-   $ModyArt=new ModyArt($Arti,$apdo);
+   $ModyArt=new ModyArt($Arti,$apdo,$urlHome);
    $ModyArt->Head();
    return $ModyArt;
 }

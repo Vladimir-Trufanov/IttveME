@@ -8,23 +8,25 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  04.02.2023
-// Copyright © 2023 tve                              Посл.изменение: 22.03.2023
+// Copyright © 2023 tve                              Посл.изменение: 19.06.2023
 
 require_once "Common.php";  
 
 class ModyArt
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $Arti; // объект по работе с базой данных материалов
-   protected $apdo; // подключение к базе данных материалов
-   
+   protected $Arti;     // объект по работе с базой данных материалов
+   protected $apdo;     // подключение к базе данных материалов
+   protected $urlHome;  // начальная страница сайта
+
    // *************************************************************************
    // *         ----Проинициализировать свойства классов по настройкам сайта,     *
    // *************************************************************************
-   public function __construct($Arti,$apdo) 
+   public function __construct($Arti,$apdo,$urlHome) 
    {
       $this->Arti=$Arti;
       $this->apdo=$apdo;
+      $this->urlHome=$urlHome;
    }
    public function __destruct() 
    {
@@ -51,7 +53,7 @@ class ModyArt
    // *************************************************************************
    public function Body()
    {
-      ModyArtMenu($this->apdo);
+      ModyArtMenu($this->apdo,$this->urlHome);
    }
 }
 
@@ -60,7 +62,7 @@ class ModyArt
 // ****************************************************************************
 // *             Построить html-код меню и сделать выбор материала            *
 // ****************************************************************************
-function ModyArtMenu($pdo) 
+function ModyArtMenu($pdo,$urlHome) 
 {
    // Проверяем целостность базы данных (по 10 очередным записям) 
    // ВРЕМЕННО ЗДЕСЬ
@@ -71,7 +73,7 @@ function ModyArtMenu($pdo)
    <?php
    // Готовим выбор материала
    $lvl=-1; $cLast='+++'; $nLine=0; $cli=""; 
-   _ModyArtMenu($pdo,1,1,$cLast,$nLine,$cli,$lvl);
+   _ModyArtMenu($pdo,$urlHome,1,1,$cLast,$nLine,$cli,$lvl);
 }
 // ****************************************************************************
 // *       Сформировать строки меню для выборки записи для редактирования:    *
@@ -101,7 +103,7 @@ function ModyArtMenu($pdo)
 </li>
 </ul>
 */
-function _ModyArtMenu($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
+function _ModyArtMenu($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl=' class="accordion"')
 {
    // Определяем текущий уровень меню
    $lvl++; 
@@ -135,10 +137,21 @@ function _ModyArtMenu($pdo,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl,$FirstUl
          {
             $nPoint++;
             echo("<li> ");
+            //echo('<a href="?artim='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
+            echo('<a href="'.$urlHome.'/'.'?artim='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
+            
+            /*
+            if (isNichost()) 
+               echo('<a href="'.$urlHome.'/'.handmy.'-'.$endline); 
+            else 
+               echo('<a href="'.$urlHome.'/'.'?arti='  .$endline); 
             echo('<a href="?artim='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
+            */
+            
+            
          }
          $cLast='+li';
-         _ModyArtMenu($pdo,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
+         _ModyArtMenu($pdo,$urlHome,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
          $lvl--; 
       }
       $cli="</li>\n";

@@ -203,11 +203,11 @@ class MenuLeader
          <span class="prev">'.$cUniCod.'</span>
          <span class="small" onclick="PunkwClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
          <span class="full">  
+            <span class="k1" onclick="PunkwClick(\''.$idsmall.'\')"><a>'.$fString.'</a></span>
+            <span class="k2" onclick="PunkwClick(\''.$idsmall.'\')"><a>'.$sString.'</a></span>
+            <!--
             <span class="k1" onclick="PunkwClick(\''.$idsmall.'\')"><a href="#" id="'.$idsmall.'">'.$fString.'</a></span>
             <span class="k2" onclick="PunkwClick(\''.$idsmall.'\')"><a href="#">'.$sString.'</a></span>
-            <!--
-            <span class="k1"  onclick="PunkwClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
-            <span class="k2"> onclick="PunkwClick(\''.$idsmall.'\')">'.$cUniCod.'</span>
             -->
          </li>
       ';
