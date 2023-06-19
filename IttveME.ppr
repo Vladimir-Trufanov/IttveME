@@ -603,6 +603,7 @@ IttveMe
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
 				+TMenuLeader
+					www\ttools\TMenuLeader\getDescript.php
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 				-TModyArt
@@ -610,7 +611,7 @@ IttveMe
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				-TNewArt
+				+TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -686,7 +687,7 @@ IttveMe
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-				+TZhizniPuti
+				-TZhizniPuti
 					www\ttools\TZhizniPuti\ZhizniPutiClass.php
 			www\.htaccess
 			www\.user.ini
@@ -752,27 +753,24 @@ IttveMe
 8=www\Styles\iniStyles.css
 9=www\ttools\TViewImage\ViewImage.js
 10=www\ttools\TMenuLeader\MenuLeaderClass.php
-11=www\ttools\TMenuLeader\MenuLeader.css
-12=www\ttools\TModyArt\ModyArtClass.php
-13=www\ttools\TZhizniPuti\ZhizniPutiClass.php
-14=www\ttools\TTinyGallery\Dispatch_HEAD.php
+11=www\ttools\TMenuLeader\getDescript.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\Jsx\WorkTiny.js
 [www\index.php]
 TopLine=65
 Caret=73,78
 [www\iniMem.php]
-TopLine=7
-Caret=44,15
+TopLine=11
+Caret=73,40
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=87
-Caret=1,115
+TopLine=281
+Caret=1,302
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=345
-Caret=93,359
+TopLine=284
+Caret=71,295
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=346
+TopLine=286
 Caret=86,286
 [www\UpSiteCSS.php]
 TopLine=133
@@ -781,26 +779,17 @@ Caret=1,164
 TopLine=13
 Caret=34,22
 [www\Jsx\WorkTiny.js]
-TopLine=101
-Caret=27,127
+TopLine=147
+Caret=1,171
 [www\Styles\iniStyles.css]
 TopLine=155
 Caret=1,190
 [www\ttools\TViewImage\ViewImage.js]
-TopLine=19
-Caret=1,46
+TopLine=149
+Caret=87,62
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=182
-Caret=2,210
-[www\ttools\TMenuLeader\MenuLeader.css]
-TopLine=10
-Caret=22,42
-[www\ttools\TModyArt\ModyArtClass.php]
-TopLine=5
-Caret=52,25
-[www\ttools\TZhizniPuti\ZhizniPutiClass.php]
-TopLine=85
-Caret=25,73
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=47
-Caret=57,55
+TopLine=53
+Caret=1,87
+[www\ttools\TMenuLeader\getDescript.php]
+TopLine=31
+Caret=13,60

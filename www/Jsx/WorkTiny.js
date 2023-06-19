@@ -99,15 +99,55 @@ function PunktClick(idClick)
 {
    document.getElementById(idClick).click(); 
 }
-function PunkwClick(idClick)
+// ****************************************************************************
+// *  Сформировать диалог для редактирования описания (Description) страницы  *
+// ****************************************************************************
+function PunkwClick(Uid)
 {
-   
-   $('#ImgDialogWind').html('<textarea id="AreaDescript"></textarea>');
+   let Description='Описания нет!';
+   pathphp="getDescript.php";
+   // Делаем запрос на определение наименования раздела материалов
+   $.ajax({
+      url: pathphp,
+      type: 'POST',
+      data: {uidEdit:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
+      // Выводим ошибки при невозможности выполнении запроса
+      error: function (jqXHR,exception,errorMsg) 
+      {
+         Error_Info(pathphp+': '+SmarttodoError(jqXHR,exception));
+      },
+      // Обрабатываем ответное сообщение
+      success: function(message)
+      {
+         // Вырезаем из запроса чистое сообщение
+         messa=FreshJSON(message);
+         // Получаем параметры ответа
+         parm=JSON.parse(messa);
+         // При ошибке выводим сообщение об ошибке
+         if (parm.iif==nstErr) 
+         { 
+            Error_Info(parm.NameGru);
+         }
+         // Если все хорошо, выбираем описание
+         else
+         {
+            Description=parm.NameGru;
+            PunkwOpen(Description);
+         }
+      }
+   });
+}
+// ****************************************************************************
+// *     Вызвать диалог для редактирования описания (Description) страницы    *
+// ****************************************************************************
+function PunkwOpen(inDescription)
+{
+   $('#ImgDialogWind').html('<textarea id="AreaDescript">'+inDescription+'</textarea>');
    $('#ImgDialogWind').css('padding',0);
    $('#ImgDialogWind').css('background','white');
 
    var $area = $("#AreaDescript");
-   var Description='';
+   let Description='Описания нет!';
    $area.on("change",function(event){
      Description=event.target.value;
    })
@@ -125,16 +165,9 @@ function PunkwClick(idClick)
       beforeClose: function() 
       {
          alert(Description);
-      },
-      open: function() 
-      {
-         Description='Новое описание статьи';
-         $('#AreaDescript').html(Description);
       }
    });
-   
    $('#ImgDialogWind').dialog('open');
-
 }
 // ****************************************************************************
 // *            Отработать действия при назначении новой статьи               *

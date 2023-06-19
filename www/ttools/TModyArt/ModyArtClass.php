@@ -130,25 +130,13 @@ function _ModyArtMenu($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl
          if ($IdCue==-1)
          {
             echo('<li id="'.$Translit.'" class="'.$Translit.'"> '); 
-            //echo('<a href="#'.$Translit.'">'.$Uid.' '.$row['NameArt'].'</a>'."\n"); 
             echo('<i>'.$row['NameArt'].'</i>'."\n"); 
          } 
          else
          {
             $nPoint++;
             echo("<li> ");
-            //echo('<a href="?artim='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
             echo('<a href="'.$urlHome.'/'.'?artim='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
-            
-            /*
-            if (isNichost()) 
-               echo('<a href="'.$urlHome.'/'.handmy.'-'.$endline); 
-            else 
-               echo('<a href="'.$urlHome.'/'.'?arti='  .$endline); 
-            echo('<a href="?artim='.$Translit.'">'.'<em>'.$Uid.'</em>'.$row['NameArt'].$cLine.'</a>'."\n"); 
-            */
-            
-            
          }
          $cLast='+li';
          _ModyArtMenu($pdo,$urlHome,$Uid,$Pid,$cLast,$nLine,$cli,$lvl,' class="sub-menu"'); 
@@ -159,6 +147,5 @@ function _ModyArtMenu($pdo,$urlHome,$ParentID,$PidIn,&$cLast,&$nLine,&$cli,&$lvl
       echo("</ul>\n");  $cLast='-ul';
    }
 }
-
 
 // ******************************************************* ModyArtClass.php ***

@@ -292,7 +292,7 @@ class TinyGallery
       $this->Arti->Init();
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       // Подключаем кнопки управляющего меню
-      $this->menu=new MenuLeader(ittveme,$this->urlHome);
+      $this->menu=new MenuLeader(ittveme,$this->urlHome,$this->uidEdit);
       $this->menu->Init();
       
       // 1-HEAD этап - 'Если есть отложенное сообщение, то инициируем игру 

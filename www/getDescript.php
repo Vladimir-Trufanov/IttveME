@@ -1,17 +1,17 @@
 <?php
 
-// PHP7/HTML5, EDGE/CHROME                               *** getNameCue.php ***
+// PHP7/HTML5, EDGE/CHROME                              *** getDescript.php ***
 
 // ****************************************************************************
-// * TArticleMaker       По указанному идентификатору в аякс-запросе вытащить *
-// *                         данные о группе материалов и вернуть на страницу *
+// * TMenuLeader         По указанному идентификатору в аякс-запросе вытащить *
+// *                                описание (description) текущего материала *
 // *                                                                          *
-// * v1.1, 19.06.2023                              Автор:       Труфанов В.Е. *
-// * Copyright © 2022 tve                          Дата создания:  13.11.2022 *
+// * v1.0, 19.06.2023                              Автор:       Труфанов В.Е. *
+// * Copyright © 2022 tve                          Дата создания:  19.06.2023 *
 // ****************************************************************************
 
 // Готовим начальные значения параметров возвращаемого сообщения
-$NameGru='NoDefine'; $Piati=0; $iif=true;
+$NameGru='NoDefine'; $Piati=0; $iif='все хорошо';
 // Инициализируем константы
 define("articleSite",  'IttveMe');   // тип базы данных для управления классом ArticlesMaker 
 define("editdir",      'ittveEdit'); // каталог файлов, связанных c материалом
@@ -34,30 +34,30 @@ require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 $note=new ttools\Notice();
 // Подключаем объект для работы с базой данных материалов
 // (при необходимости создаем базу данных материалов)
-$NameGru='Группа материалов';
+$NameGru='Описание материала';
 
 $basename=$_POST['sh'].'/Base'.'/ittve';         
 $username='tve'; $password='23ety17'; 
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
 $pdo=$Arti->BaseConnect();
 // Выбираем запись по идентификатору группы материалов
-$table=$Arti->SelRecord($pdo,$_POST['idCue']); 
+$table=$Arti->SelRecord($pdo,$_POST['uidEdit']); 
 // Если записей не найдено, то возвращаем сообщение
 if (count($table)<1)
 {
-   $NameGru='Записей с материалом по идентификатору '.$_POST['idCue'].' не найдено!';
-   $iif=Err;
+   $NameGru='Записей с материалом по идентификатору '.$_POST['uidEdit'].' не найдено!';
+   $iif=nstErr;
 }
 // Если возникло исключение при работе с базой данных, то ретранслируем ошибку
 else if ($table[0]['Translit']==nstErr)
 {
    $NameGru=$table[0]['NameArt'];    
-   $iif=Err;
+   $iif=nstErr;
 }
 else
 {
    // Выделяем из записи элементы
-   $NameGru=$table[0]['NameArt'];
+   $NameGru=$table[0]['description'];
    $Piati=$table[0]['Translit'];
 }
 // Освобождаем память
@@ -68,4 +68,4 @@ $message=\prown\makeLabel($message,'ghjun5','ghjun5');
 echo $message;
 exit;
 
-// ********************************************************* getNameCue.php ***
+// ******************************************************** getDescript.php ***
