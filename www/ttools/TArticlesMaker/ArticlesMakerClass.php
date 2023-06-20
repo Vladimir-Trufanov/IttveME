@@ -604,5 +604,36 @@ class ArticlesMaker
       throw $e;
     }
    }
+   // *************************************************************************
+   // *    Записать в базу данных описание (description) текущего материала   *
+   // *************************************************************************
+   public function PutDescript($pdo,$Uid,$Descript,$modedesc,&$NameGru,&$iif) 
+   {
+      try 
+      {
+         $pdo->beginTransaction();
+         if ($modedesc=='update') 
+         {
+            $statement=$pdo->prepare
+            ("UPDATE [stockpw] SET [description]=:description WHERE [uid]=:uid;");
+         }
+         else
+         {
+            $statement = $pdo->prepare
+            ("INSERT INTO [stockpw] ([description]) VALUES (:description) WHERE [uid]=:uid;");
+         }
+         $statement->execute(["description"=>$Descript,"uid"=>$Uid]);
+         $pdo->commit();
+
+         $NameGru='Описание материала записано в базу';
+         $iif='все хорошо';
+      } 
+       catch (\Exception $e) 
+       {
+          $NameGru=$e->getMessage();
+          $iif=nstErr;
+          if ($pdo->inTransaction()) $pdo->rollback();
+       }
+   }
 }
 // ************************************************* ArticlesMakerClass.php ***

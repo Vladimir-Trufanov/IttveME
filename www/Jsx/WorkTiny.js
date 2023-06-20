@@ -132,7 +132,7 @@ function PunkwClick(Uid)
          else
          {
             Description=parm.NameGru;
-            PunkwOpen(Description);
+            PunkwOpen(Uid,Description);
          }
       }
    });
@@ -140,14 +140,14 @@ function PunkwClick(Uid)
 // ****************************************************************************
 // *     Вызвать диалог для редактирования описания (Description) страницы    *
 // ****************************************************************************
-function PunkwOpen(inDescription)
+function PunkwOpen(Uid,inDescription)
 {
-   $('#ImgDialogWind').html('<textarea id="AreaDescript">'+inDescription+'</textarea>');
+   let Description=inDescription;
+   $('#ImgDialogWind').html('<textarea id="AreaDescript">'+Description+'</textarea>');
    $('#ImgDialogWind').css('padding',0);
    $('#ImgDialogWind').css('background','white');
 
    var $area = $("#AreaDescript");
-   let Description='Описания нет!';
    $area.on("change",function(event){
      Description=event.target.value;
    })
@@ -161,13 +161,47 @@ function PunkwOpen(inDescription)
       title:'Описание статьи',
       width:300,
       height:280,
-      
       beforeClose: function() 
       {
-         alert(Description);
+         putDescript(Uid,Description);
       }
    });
    $('#ImgDialogWind').dialog('open');
+}
+//
+function putDescript(Uid,Description)
+{
+   pathphp="putDescript.php";
+   // Делаем запрос на определение наименования раздела материалов
+   $.ajax({
+      url: pathphp,
+      type: 'POST',
+      data: {uidEdit:Uid,pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost,Descript:Description},
+      // Выводим ошибки при невозможности выполнении запроса
+      error: function (jqXHR,exception,errorMsg) 
+      {
+         alert(pathphp+': '+SmarttodoError(jqXHR,exception));
+      },
+      // Обрабатываем ответное сообщение
+      success: function(message)
+      {
+         // Вырезаем из запроса чистое сообщение
+         messa=FreshJSON(message);
+         // Получаем параметры ответа
+         parm=JSON.parse(messa);
+         // При ошибке выводим сообщение об ошибке
+         if (parm.iif==nstErr) 
+         { 
+            alert(parm.NameGru);
+         }
+         // Если все хорошо, то все хорошо
+         else
+         {
+            //alert(parm.NameGru);
+         }
+      }
+   });
+   //alert(Description);
 }
 // ****************************************************************************
 // *            Отработать действия при назначении новой статьи               *

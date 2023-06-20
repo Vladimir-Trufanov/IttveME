@@ -545,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -606,12 +606,13 @@ IttveMe
 					www\ttools\TMenuLeader\getDescript.php
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
+					www\ttools\TMenuLeader\putDescript.php
 				-TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
-				+TNewArt
+				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
 					www\ttools\TNewArt\NewArtClass.php
 					www\ttools\TNewArt\testNameArt.php
@@ -682,7 +683,7 @@ IttveMe
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
 					www\ttools\TTuningClass\TuningClass.php
-				+TViewImage
+				-TViewImage
 					www\ttools\TViewImage\ViewImage.js
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
@@ -697,6 +698,7 @@ IttveMe
 			www\deleteImg.php
 			www\e404.php
 			www\EraseFiles.php
+			www\getDescript.php
 			www\getImgBase64.php
 			www\getNameCue.php
 			www\index.php
@@ -751,9 +753,8 @@ IttveMe
 6=www\UpSite.php
 7=www\Jsx\WorkTiny.js
 8=www\Styles\iniStyles.css
-9=www\ttools\TViewImage\ViewImage.js
-10=www\ttools\TMenuLeader\MenuLeaderClass.php
-11=www\ttools\TMenuLeader\getDescript.php
+9=www\ttools\TMenuLeader\MenuLeaderClass.php
+10=www\ttools\TMenuLeader\putDescript.php
 [Selected Project Files]
 Main=
 Selected=www\Jsx\WorkTiny.js
@@ -764,14 +765,14 @@ Caret=73,78
 TopLine=11
 Caret=73,40
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=281
-Caret=1,302
+TopLine=598
+Caret=30,618
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=284
 Caret=71,295
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=286
-Caret=86,286
+TopLine=406
+Caret=27,399
 [www\UpSiteCSS.php]
 TopLine=133
 Caret=1,164
@@ -779,17 +780,14 @@ Caret=1,164
 TopLine=13
 Caret=34,22
 [www\Jsx\WorkTiny.js]
-TopLine=147
-Caret=1,171
+TopLine=173
+Caret=12,204
 [www\Styles\iniStyles.css]
 TopLine=155
 Caret=1,190
-[www\ttools\TViewImage\ViewImage.js]
-TopLine=149
-Caret=87,62
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
 TopLine=53
-Caret=1,87
-[www\ttools\TMenuLeader\getDescript.php]
-TopLine=31
-Caret=13,60
+Caret=27,87
+[www\ttools\TMenuLeader\putDescript.php]
+TopLine=21
+Caret=39,46

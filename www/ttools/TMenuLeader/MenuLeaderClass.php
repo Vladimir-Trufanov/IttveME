@@ -84,6 +84,7 @@ class MenuLeader
       // и (при их отсутствии, при несовпадении размеров или старой дате) 
       // загружаем из класса 
       CompareCopyRoot('getDescript.php','ttools/TMenuLeader');
+      CompareCopyRoot('putDescript.php','ttools/TMenuLeader');
    }
    public function __destruct() 
    {
