@@ -602,12 +602,12 @@ IttveMe
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\getDescript.php
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 					www\ttools\TMenuLeader\putDescript.php
-				-TModyArt
+				+TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
@@ -755,23 +755,25 @@ IttveMe
 8=www\Styles\iniStyles.css
 9=www\ttools\TMenuLeader\MenuLeaderClass.php
 10=www\ttools\TMenuLeader\putDescript.php
+11=www\ttools\TModyArt\ModyArtClass.php
+12=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
 [Selected Project Files]
 Main=
-Selected=www\Jsx\WorkTiny.js
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
 TopLine=65
 Caret=73,78
 [www\iniMem.php]
-TopLine=11
+TopLine=25
 Caret=73,40
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=598
-Caret=30,618
+TopLine=91
+Caret=2,111
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=284
-Caret=71,295
+TopLine=426
+Caret=1,461
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=406
+TopLine=399
 Caret=27,399
 [www\UpSiteCSS.php]
 TopLine=133
@@ -780,14 +782,20 @@ Caret=1,164
 TopLine=13
 Caret=34,22
 [www\Jsx\WorkTiny.js]
-TopLine=173
-Caret=12,204
+TopLine=102
+Caret=28,98
 [www\Styles\iniStyles.css]
-TopLine=155
-Caret=1,190
+TopLine=159
+Caret=1,195
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=53
-Caret=27,87
+TopLine=141
+Caret=1,166
 [www\ttools\TMenuLeader\putDescript.php]
 TopLine=21
 Caret=39,46
+[www\ttools\TModyArt\ModyArtClass.php]
+TopLine=1
+Caret=1,1
+[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
+TopLine=39
+Caret=18,74

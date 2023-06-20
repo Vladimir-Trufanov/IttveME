@@ -32,27 +32,6 @@ class WorkTinyMain
    {
       if ($this->game<>NULL) $this->game->Head();
       else $this->IniTiny(); 
-      /*
-      // Если режим редактирования, то подправляем кнопку выполнения выбора
-      if ($this->Arti->GalleryMode==mwgEditing) 
-      {
-         \prown\Alert('456');
-         echo '
-         <style>
-         / *input[type=submit]* / 
-         #inpAll
-         {
-            / *
-            margin-top:2rem;
-            margin-left:.8rem;
-            padding:.5rem .8rem;
-            / *
-            color: red;
-         }
-         </style>
-        ';
-      }
-      */
    }
    public function Body() 
    {

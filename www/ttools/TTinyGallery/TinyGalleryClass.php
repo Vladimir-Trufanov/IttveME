@@ -292,7 +292,7 @@ class TinyGallery
       $this->Arti->Init();
       echo '<script src="/'.jsxdir.'/CommonTools.js"></script>';
       // Подключаем кнопки управляющего меню
-      $this->menu=new MenuLeader(ittveme,$this->urlHome,$this->uidEdit);
+      $this->menu=new MenuLeader(ittveme,$this->urlHome,$this->uidEdit,$this->Arti);
       $this->menu->Init();
       
       // 1-HEAD этап - 'Если есть отложенное сообщение, то инициируем игру 
@@ -439,23 +439,24 @@ class TinyGallery
       echo '</div>';
       // Готовим левую часть подвала для сообщений, разворачиваемых в три строки
       echo '<div id="LeftFooter">';
+         // Выводим доп.информацию по странице
+         if ($this->SiteDevice=='Computer')
+         {
+            echo $UserAgent.'<br>';
+            //echo '<a href="https://www.pspad.com/ru/" title="PSPad.com - freeware text editor">'.
+            //   '<strong>PSPad - замечательный текстовый редактор</strong></a>';
+         }
+         // В режиме редактирования добавляем невидимую кнопку
          if ($this->Arti->GalleryMode==mwgEditing)
          {
             // Подготавливаем отключение блокировки закрытия страницы редактирования материала
             $inpClick=' onclick="SaveTrue()" ';
             // Включаем кнопку сохранения материала
             echo '
-               <p><input '.$inpClick.'id="inpAll" type="submit" value="Сохранить новый материал" form="frmTinyText"></p>
+               <div id="SaveDiv"> 
+               <input '.$inpClick.'id="inpAll" type="submit" value="Сохранить новый материал" form="frmTinyText">
+               </div>
             ';
-         }
-         else 
-         {
-             if ($this->SiteDevice=='Computer')
-            {
-               echo $UserAgent.'<br>';
-               echo '<a href="https://www.pspad.com/ru/" title="PSPad.com - freeware text editor">'.
-                  '<strong>PSPad - замечательный текстовый редактор</strong></a>';
-            }
          }
       echo '</div>';
       // Готовим правую часть подвала, меню управления

@@ -67,12 +67,14 @@ class MenuLeader
    protected $urlHome;   // начальная страница сайта 
    protected $classdir;  // путь к каталогу файлов класса
    protected $uidEdit;   // идентификатор статьи в базе данных
+   protected $Arti;      // объект по работе с базой данных
    // ------------------------------------------ ПРЕФИКСЫ ПАРАМЕТРОВ В МЕНЮ ---
    protected $cPreMe;    // общие для сайта 'ittve.me' 
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
-   public function __construct($typemenu,$urlHome,$uidEdit) 
+   public function __construct($typemenu,$urlHome,$uidEdit,$Arti) 
    {
       // Инициализируем свойства класса
+      $this->Arti=$Arti;
       $this->typemenu=$typemenu; 
       $this->urlHome=$urlHome; 
       $this->uidEdit=$uidEdit;
@@ -156,12 +158,16 @@ class MenuLeader
          $this->Punkt($this->cPreMe.mmlSozdatRedaktirovat,'&#xf044;','Создать материал','или редактировать');
       }
       // Выводим пункты меню управления в режиме редактирования материала
-      else if (\prown\getComRequest('artim')<>NULL) 
+      else if 
+      (
+         (\prown\getComRequest('artim')<>NULL)|| 
+         ((\prown\getComRequest('Article')<>NULL)&&($this->Arti->GalleryMode==mwgEditing))
+      )
       {
          $this->Punkt($this->cPreMe.mmlVybratSledMaterial,'&#xf0a7;','Выбрать следующий','материал');
          $this->Punkt($this->cPreMe.mmlVernutsyaPredState,'&#xf0a6;','Вернуться к прежней','статье');
-         $this->Punkw($this->cPreMe.mmlRedaktiOpisanie,'&#xf27a;','Редактировать','описание статьи',$this->uidEdit);
-         $this->Punkt($this->cPreMe.mmlSohranitNovyjMaterial,'&#xf0c7;','Сохранить','новый материал');
+         $this->Punkw('&#xf27a;','Редактировать','описание статьи',$this->uidEdit);
+         $this->Punki('&#xf0c7;','Сохранить','новый материал','inpAll');
       }
       // Выводим пункты меню главной страницы
       else
@@ -194,14 +200,11 @@ class MenuLeader
          </li>
       ';
    }
-
    // *************************************************************************
-   // *                  Вывести кнопку меню управления страницей             *
+   // *               Вывести кнопку "Редактировать описание статьи"          *
    // *************************************************************************
-   private function Punkw($Punkt,$cUniCod,$fString,$sString,$uidEdit)
+   private function Punkw($cUniCod,$fString,$sString,$uidEdit)
    {
-      // Формируем идентификатор для отработки кнопки "small" по юникоду
-      $idsmall=substr($cUniCod,3,4); 
       echo '
          <li class="link" title="'.$this->SayPref().'">
          <span class="prev">'.$cUniCod.'</span>
@@ -209,6 +212,21 @@ class MenuLeader
          <span class="full">  
             <span class="k1" onclick="PunkwClick(\''.$uidEdit.'\')"><a>'.$fString.'</a></span>
             <span class="k2" onclick="PunkwClick(\''.$uidEdit.'\')"><a>'.$sString.'</a></span>
+         </li>
+      ';
+   }
+   // *************************************************************************
+   // *               Вывести кнопку "Сохранить новый материал"               *
+   // *************************************************************************
+   private function Punki($cUniCod,$fString,$sString,$idClick)
+   {
+      echo '
+         <li class="link" title="'.$this->SayPref().'">
+         <span class="prev">'.$cUniCod.'</span>
+         <span class="small" onclick="PunktClick(\''.$idClick.'\')">'.$cUniCod.'</span>
+         <span class="full">  
+            <span class="k1" onclick="PunktClick(\''.$idClick.'\')"><a>'.$fString.'</a></span>
+            <span class="k2" onclick="PunktClick(\''.$idClick.'\')"><a>'.$sString.'</a></span>
          </li>
       ';
    }
