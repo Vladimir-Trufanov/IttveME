@@ -757,11 +757,12 @@ IttveMe
 10=www\ttools\TMenuLeader\putDescript.php
 11=www\ttools\TModyArt\ModyArtClass.php
 12=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+13=www\ToPlugDebug.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\UpSite.php
 [www\index.php]
-TopLine=65
+TopLine=71
 Caret=73,78
 [www\iniMem.php]
 TopLine=25
@@ -770,8 +771,8 @@ Caret=73,40
 TopLine=91
 Caret=2,111
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=426
-Caret=1,461
+TopLine=436
+Caret=7,436
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=399
 Caret=27,399
@@ -779,13 +780,13 @@ Caret=27,399
 TopLine=133
 Caret=1,164
 [www\UpSite.php]
-TopLine=13
-Caret=34,22
+TopLine=71
+Caret=58,79
 [www\Jsx\WorkTiny.js]
-TopLine=102
+TopLine=98
 Caret=28,98
 [www\Styles\iniStyles.css]
-TopLine=159
+TopLine=157
 Caret=1,195
 [www\ttools\TMenuLeader\MenuLeaderClass.php]
 TopLine=141
@@ -799,3 +800,6 @@ Caret=1,1
 [www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
 TopLine=39
 Caret=18,74
+[www\ToPlugDebug.php]
+TopLine=19
+Caret=14,43

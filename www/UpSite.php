@@ -76,7 +76,7 @@ if ($BaseCreate<>'Yes')
          // echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
 
          // Выводим строку с контрольным транслитом
-         echo (prown\getTranslit('Сохранить новый материал'));
+         echo (prown\getTranslit('длительности нот и пауз'));
 
          /*
          echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 

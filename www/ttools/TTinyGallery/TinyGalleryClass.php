@@ -388,6 +388,22 @@ class TinyGallery
    // *************************************************************************
    public function ViewGallerySpace()
    {
+      /*
+      //$privatekey='*-*';
+      echo 'Privet!<br>';
+      $config=array(
+        "digest_alg"       => "sha512",
+        "private_key_bits" => 2048,
+        "private_key_type" => OPENSSL_KEYTYPE_RSA,
+      );
+      $res=openssl_pkey_new($config);
+      //echo $privatekey.'<br>*-*';
+      openssl_pkey_export($res,$privatekey);
+      //echo $privatekey.'<br>*-*';
+      */
+      
+      //phpinfo();
+      
       // Запускаем галерею, если нет отложенного сообщения, 
       // иначе будем запускать игру со змеёй и градиент
       if ($this->DelayedMessage==imok) 
@@ -417,6 +433,7 @@ class TinyGallery
          }
          else $this->Galli->BaseGallery();
       }
+      
    }
    // *************************************************************************
    // *              Развернуть область подвала (кнопок управления)           *
