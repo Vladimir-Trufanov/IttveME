@@ -545,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -597,7 +597,7 @@ IttveMe
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				-TKwinGallery
+				+TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -607,7 +607,7 @@ IttveMe
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
 					www\ttools\TMenuLeader\putDescript.php
-				+TModyArt
+				-TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
 				-TModyCue
@@ -678,7 +678,7 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				-TTuningClass
+				+TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -746,12 +746,44 @@ IttveMe
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
+2=www\ttools\TKwinGallery\KwinGallery.js
+3=www\ttools\TTinyGallery\TinyGalleryClass.php
+4=www\ttools\TTinyGallery\Dispatch_HEAD.php
+5=www\ttools\TTuningClass\tuning.css
+6=www\ttools\TTuningClass\TuningClass.php
+7=www\ttools\TTuningClass\tuning.js
+8=www\ToPlugDebug.php
+9=www\UpSite.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=3
+TopLine=87
 Caret=15,9
 [www\iniMem.php]
-TopLine=31
-Caret=53,58
+TopLine=196
+Caret=18,235
+[www\ttools\TKwinGallery\KwinGallery.js]
+TopLine=33
+Caret=7,44
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=386
+Caret=1,412
+[www\ttools\TTinyGallery\Dispatch_HEAD.php]
+TopLine=36
+Caret=10,45
+[www\ttools\TTuningClass\tuning.css]
+TopLine=167
+Caret=25,198
+[www\ttools\TTuningClass\TuningClass.php]
+TopLine=56
+Caret=28,129
+[www\ttools\TTuningClass\tuning.js]
+TopLine=102
+Caret=25,102
+[www\ToPlugDebug.php]
+TopLine=21
+Caret=14,55
+[www\UpSite.php]
+TopLine=47
+Caret=14,58

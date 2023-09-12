@@ -52,7 +52,7 @@ function fsd($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost)
 // ****************************************************************************
 function ViewDebug($SiteDevice,$SiteRoot,$SiteAbove,$SiteHost)
 {
-$DebugNews=ck;
+$DebugNews=pi;
 
 if ($DebugNews==gb) fgb();
 elseif ($DebugNews==js) fjs();

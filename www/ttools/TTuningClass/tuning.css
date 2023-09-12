@@ -195,6 +195,7 @@
    position:absolute;
    display:block;
    background-color:transparent;
+   background-color:blue;
 }
 #tole{top:0;left:0;}
 #tori{top:0;right:0;}

@@ -99,7 +99,7 @@ return aScreenInfo;
 }
 
 // Обрабатываем клики на тапках
-var itap; var lview=false;
+var itap; var lview=true;
 document.addEventListener("click",clickHandler,false);
 function clickHandler(event)
 {
@@ -127,6 +127,7 @@ function clickHandler(event)
       if (lview) console.log('bole'+itap);
       //if (lview) alert('bole'+itap);
    }
+   
    if (itap==7) 
    {
       if (lview) console.log('all='+itap);
