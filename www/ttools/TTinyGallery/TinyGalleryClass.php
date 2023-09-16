@@ -449,8 +449,8 @@ class TinyGallery
    
    public function ViewGallerySpace()
    {
-      $this->OtherGallery();   
-      //$this->ViewGallery();   
+      //$this->OtherGallery();   
+      $this->ViewGallery();   
    }
    // *************************************************************************
    // *              Развернуть область подвала (кнопок управления)           *

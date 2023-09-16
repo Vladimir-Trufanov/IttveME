@@ -255,6 +255,7 @@ function getIconCue($Translit)
    else if ($Translit=='moj-mir') $icon='&#10024;';
    else if ($Translit=='perepechatka') $icon='&#9924;';
    else if ($Translit=='progulki') $icon='&#128692;';
+   else if ($Translit=='igry') $icon='&#127922;';
    else $icon='&#9925;'; 
    return '<i class="UniIcon">'.$icon.'</i>';
 }

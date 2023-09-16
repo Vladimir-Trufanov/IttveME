@@ -194,6 +194,7 @@
    height:7rem;
    position:absolute;
    display:block;
+   display:none;
    background-color:transparent;
    background-color:blue;
 }

@@ -545,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -588,7 +588,7 @@ IttveMe
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
 				-TEntryClass
-					-PairedCards
+					+PairedCards
 						www\ttools\TEntryClass\PairedCards\bg.jpg
 						www\ttools\TEntryClass\PairedCards\deck.png
 						www\ttools\TEntryClass\PairedCards\matchgame.css
@@ -666,7 +666,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -688,7 +688,7 @@ IttveMe
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-				-TZhizniPuti
+				+TZhizniPuti
 					www\ttools\TZhizniPuti\ZhizniPutiClass.php
 			www\.htaccess
 			www\.user.ini
@@ -746,44 +746,28 @@ IttveMe
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
-2=www\ttools\TKwinGallery\KwinGallery.js
+2=www\ttools\TEntryClass\PairedCards\PairedCardsClass.php
 3=www\ttools\TTinyGallery\TinyGalleryClass.php
-4=www\ttools\TTinyGallery\Dispatch_HEAD.php
-5=www\ttools\TTuningClass\tuning.css
-6=www\ttools\TTuningClass\TuningClass.php
-7=www\ttools\TTuningClass\tuning.js
-8=www\ToPlugDebug.php
-9=www\UpSite.php
+4=www\ttools\TKwinGallery\KwinGalleryClass.php
+5=www\UpSite.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=87
+TopLine=9
 Caret=15,9
 [www\iniMem.php]
-TopLine=196
+TopLine=215
 Caret=18,235
-[www\ttools\TKwinGallery\KwinGallery.js]
-TopLine=33
-Caret=7,44
+[www\ttools\TEntryClass\PairedCards\PairedCardsClass.php]
+TopLine=3
+Caret=109,6
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=386
-Caret=1,412
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=36
-Caret=10,45
-[www\ttools\TTuningClass\tuning.css]
-TopLine=167
-Caret=25,198
-[www\ttools\TTuningClass\TuningClass.php]
-TopLine=56
-Caret=28,129
-[www\ttools\TTuningClass\tuning.js]
-TopLine=102
-Caret=25,102
-[www\ToPlugDebug.php]
-TopLine=21
-Caret=14,55
+TopLine=427
+Caret=7,453
+[www\ttools\TKwinGallery\KwinGalleryClass.php]
+TopLine=295
+Caret=1,1
 [www\UpSite.php]
-TopLine=47
-Caret=14,58
+TopLine=41
+Caret=1,1
