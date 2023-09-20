@@ -378,6 +378,7 @@ class TinyGallery
          else 
          {
             require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
+            require_once "ttools/TGames/Dispatch_GAME.php";
             $this->WorkTinyMain=new WorkTinyMain($this->Arti,$this->fileStyle,$this->contents);
             $this->WorkTinyMain->Head();
          }

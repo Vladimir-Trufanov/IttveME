@@ -18,10 +18,11 @@ class WorkTinyMain
    private $game;          // игра, замещающая страницу (при необходимости) 
    private $contents;      // текущий материал
    
-   public function __construct($Arti,$fileStyle,$contents,$game=NULL) 
+   public function __construct($Arti,$fileStyle,$contents) //,$game=NULL) 
    {
       $this->Arti=$Arti;
-      $this->game=$game;
+      //$this->game=$game;
+      $this->game=NULL;
       $this->fileStyle=$fileStyle;
       $this->contents=$contents;
    }
@@ -41,6 +42,7 @@ class WorkTinyMain
       else
       {
          //\prown\Alert('GalleryMode='.$this->Arti->GalleryMode); 
+         \prown\ConsoleLog('GalleryMode='.$this->Arti->getArti); 
          // Формируем контент страницы   
          if ($this->contents<>NULL) $contenti=$this->contents;
          else $contenti='';

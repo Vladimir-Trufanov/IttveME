@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	+IttveMe
+	-IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -153,7 +153,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		+www
+		-www
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -254,7 +254,7 @@ IttveMe
 					www\Images\Охота на медведя\Бревно на медведя.jpg
 					www\Images\Охота на медведя\Гоша и Мила.jpg
 					www\Images\Охота на медведя\Гошан.jpg
-					www\Images\Охота на медведя\Дед-сын-и-внук.png
+					www\Images\Охота на медведя\Дед-сын-и-внук1.png
 					www\Images\Охота на медведя\Дождь празднику не помеха.jpg
 					www\Images\Охота на медведя\Карта прогулки.jpg
 					www\Images\Охота на медведя\Медведь пошел туда.JPG
@@ -272,6 +272,7 @@ IttveMe
 				www\Images\sampo.jpg
 				www\Images\tveMenuD.png
 			-ittveEdit
+				www\ittveEdit\Будущая-школьница-перед-майскими.jpg
 			-jQuery
 				-fil
 					www\jQuery\fil\jquery-3.6.3.min.js
@@ -544,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -588,7 +589,7 @@ IttveMe
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
 				-TEntryClass
-					+PairedCards
+					-PairedCards
 						www\ttools\TEntryClass\PairedCards\bg.jpg
 						www\ttools\TEntryClass\PairedCards\deck.png
 						www\ttools\TEntryClass\PairedCards\matchgame.css
@@ -597,7 +598,9 @@ IttveMe
 						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
 						www\ttools\TEntryClass\PairedCards\table.jpg
 					www\ttools\TEntryClass\EntryClass.php
-				+TKwinGallery
+				-TGames
+					www\ttools\TGames\Dispatch_GAME.php
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -666,7 +669,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -678,7 +681,7 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				+TTuningClass
+				-TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -688,7 +691,7 @@ IttveMe
 				-TWorkTinyMain
 					www\ttools\TWorkTinyMain\gameProbaClass.php
 					www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-				+TZhizniPuti
+				-TZhizniPuti
 					www\ttools\TZhizniPuti\ZhizniPutiClass.php
 			www\.htaccess
 			www\.user.ini
@@ -710,6 +713,7 @@ IttveMe
 			www\log.txt
 			www\manifest.json
 			www\photo-8i.jpg
+			www\putDescript.php
 			www\TestBase.php
 			www\testForDelArt.php
 			www\testNameArt.php
@@ -722,6 +726,9 @@ IttveMe
 				Материалы\Htaccess\Как отладить RewriteRule.lnk
 				Материалы\Htaccess\Как проверить работает ли файл htaccess на сервере Apache.doc
 				Материалы\Htaccess\Не работает RewriteRule.lnk
+			-Openssl в PHP
+				Материалы\Openssl в PHP\Openssl ГОСТ на PHP.doc
+				Материалы\Openssl в PHP\TinyGalleryClass.php
 			-Лабиринт
 				Материалы\Лабиринт\easy_maze.png
 				Материалы\Лабиринт\face.png
@@ -748,26 +755,38 @@ IttveMe
 1=www\iniMem.php
 2=www\ttools\TEntryClass\PairedCards\PairedCardsClass.php
 3=www\ttools\TTinyGallery\TinyGalleryClass.php
-4=www\ttools\TKwinGallery\KwinGalleryClass.php
-5=www\UpSite.php
+4=www\UpSite.php
+5=www\ttools\TEntryClass\EntryClass.php
+6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+8=www\ttools\TGames\Dispatch_GAME.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\UpSite.php
 [www\index.php]
 TopLine=9
 Caret=15,9
 [www\iniMem.php]
-TopLine=215
-Caret=18,235
+TopLine=204
+Caret=6,215
 [www\ttools\TEntryClass\PairedCards\PairedCardsClass.php]
-TopLine=3
-Caret=109,6
+TopLine=7
+Caret=134,13
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=427
-Caret=7,453
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=295
-Caret=1,1
+TopLine=359
+Caret=54,381
 [www\UpSite.php]
-TopLine=41
-Caret=1,1
+TopLine=51
+Caret=55,79
+[www\ttools\TEntryClass\EntryClass.php]
+TopLine=4
+Caret=15,13
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=82
+Caret=7,105
+[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
+TopLine=17
+Caret=27,45
+[www\ttools\TGames\Dispatch_GAME.php]
+TopLine=1
+Caret=22,9
