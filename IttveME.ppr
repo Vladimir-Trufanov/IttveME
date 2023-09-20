@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	-IttveMe
+	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -153,7 +153,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		-www
+		+www
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -545,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -588,17 +588,17 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				-TEntryClass
-					-PairedCards
-						www\ttools\TEntryClass\PairedCards\bg.jpg
-						www\ttools\TEntryClass\PairedCards\deck.png
-						www\ttools\TEntryClass\PairedCards\matchgame.css
-						www\ttools\TEntryClass\PairedCards\matchgame.js
-						www\ttools\TEntryClass\PairedCards\PairedCardsClass.php
-						www\ttools\TEntryClass\PairedCards\popup_bg.jpg
-						www\ttools\TEntryClass\PairedCards\table.jpg
+				+TEntryClass
 					www\ttools\TEntryClass\EntryClass.php
-				-TGames
+				+TGames
+					+PairedCards
+						www\ttools\TGames\PairedCards\bg.jpg
+						www\ttools\TGames\PairedCards\deck.png
+						www\ttools\TGames\PairedCards\matchgame.css
+						www\ttools\TGames\PairedCards\matchgame.js
+						www\ttools\TGames\PairedCards\PairedCardsClass.php
+						www\ttools\TGames\PairedCards\popup_bg.jpg
+						www\ttools\TGames\PairedCards\table.jpg
 					www\ttools\TGames\Dispatch_GAME.php
 				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
@@ -753,40 +753,48 @@ IttveMe
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
-2=www\ttools\TEntryClass\PairedCards\PairedCardsClass.php
-3=www\ttools\TTinyGallery\TinyGalleryClass.php
-4=www\UpSite.php
-5=www\ttools\TEntryClass\EntryClass.php
-6=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-7=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-8=www\ttools\TGames\Dispatch_GAME.php
+2=www\ttools\TTinyGallery\TinyGalleryClass.php
+3=www\UpSite.php
+4=www\ttools\TEntryClass\EntryClass.php
+5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+6=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
+7=www\ttools\TGames\Dispatch_GAME.php
+8=www\UpSiteCSS.php
+9=www\ttools\TTinyGallery\Dispatch_HEAD.php
+10=www\ttools\TGames\PairedCards\PairedCardsClass.php
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\ttools\TGames\PairedCards\PairedCardsClass.php
 [www\index.php]
-TopLine=9
-Caret=15,9
+TopLine=55
+Caret=10,80
 [www\iniMem.php]
-TopLine=204
-Caret=6,215
-[www\ttools\TEntryClass\PairedCards\PairedCardsClass.php]
-TopLine=7
-Caret=134,13
+TopLine=129
+Caret=15,224
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=359
-Caret=54,381
+TopLine=347
+Caret=63,351
 [www\UpSite.php]
-TopLine=51
+TopLine=53
 Caret=55,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=4
-Caret=15,13
+TopLine=3
+Caret=36,18
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=82
+TopLine=66
 Caret=7,105
 [www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=17
-Caret=27,45
+TopLine=16
+Caret=51,26
 [www\ttools\TGames\Dispatch_GAME.php]
 TopLine=1
-Caret=22,9
+Caret=1,24
+[www\UpSiteCSS.php]
+TopLine=130
+Caret=84,169
+[www\ttools\TTinyGallery\Dispatch_HEAD.php]
+TopLine=7
+Caret=29,38
+[www\ttools\TGames\PairedCards\PairedCardsClass.php]
+TopLine=59
+Caret=36,91

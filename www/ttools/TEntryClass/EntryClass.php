@@ -13,32 +13,32 @@
 class Entrying
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $game;          // Игра, замещающая страницу (при необходимости) 
+   //protected $game;          // Игра, замещающая страницу (при необходимости) 
    
-   public function __construct($game=NULL) 
+   public function __construct() //$game=NULL) 
    {
-      $this->game=$game;
+      //$this->game=$game;
    }
    public function __destruct() 
    {
    }
    public function Head() 
    {
-      if ($this->game<>NULL) $this->game->Head();
+      //if ($this->game<>NULL) $this->game->Head();
    }
    public function Body() 
    {
       // Запускаем замещение страницы
-      if ($this->game<>NULL) $this->game->Play();
+      //if ($this->game<>NULL) $this->game->Play();
       // Выводим страницу
-      else
-      {
+      //else
+      //{
          echo 'Выполняем вход или регистрируемся на сайте!<br>';
          echo '
          ';
          echo '
          ';
-      }
+      //}
    }
 }
 // ********************************************************* EntryClass.php ***

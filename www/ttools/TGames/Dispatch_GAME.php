@@ -9,25 +9,17 @@
 // * Copyright © 2023 tve                          Дата создания:  20.09.2023 *
 // ****************************************************************************
 
-// ****************************************************************************
-// *                             "Жизнь и путешествия"                        *
-// ****************************************************************************
-function ammlZhiznIputeshestviya_HEAD($Arti,$apdo,$urlHome)
+function DispathGame($getArti)
 {
-   require_once "ttools/TZhizniPuti/ZhizniPutiClass.php";
-   $ZhizniPuti=new ZhizniPuti($Arti,$apdo,$urlHome);
-   $ZhizniPuti->Head();
-   return $ZhizniPuti;
-}
-// ****************************************************************************
-// *                         "Войти или зарегистрироваться"                   *
-// ****************************************************************************
-function ammlVojtiZaregistrirovatsya_HEAD($game=NULL)
-{
-   require_once "ttools/TEntryClass/EntryClass.php";
-   $Entry=new Entrying($game);
-   $Entry->Head();
-   return $Entry;
+   $game=NULL;
+   if ($getArti=='vybrat-parnye-karty')
+   {
+      //require_once $SiteHost."/ttools/TEntryClass/PairedCards/PairedCardsClass.php";
+      require_once "PairedCards/PairedCardsClass.php";
+      $Paired=new \game\PairedCards(); //$c_PresMode,'IttveME');
+      $game=$Paired;
+   }
+   return $game;
 }
 
 // ****************************************************** Dispatch_HEAD.php ***

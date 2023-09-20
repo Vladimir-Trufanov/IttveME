@@ -22,7 +22,8 @@ class WorkTinyMain
    {
       $this->Arti=$Arti;
       //$this->game=$game;
-      $this->game=NULL;
+      //$this->game=NULL;
+      $this->game=DispathGame($this->Arti->getArti);
       $this->fileStyle=$fileStyle;
       $this->contents=$contents;
    }

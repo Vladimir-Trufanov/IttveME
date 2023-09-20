@@ -13,13 +13,13 @@
 class PairedCards
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $Place;  // приложение, в которое встроена игра
+   //protected $Place;  // приложение, в которое встроена игра
 
-   public function __construct($c_PresMode,$Place='Other') 
+   public function __construct() //$c_PresMode,$Place='Other') 
    {
       // Инициализируем свойства класса
-      $this->Place=$Place;
-      $this->c_PresMode=$c_PresMode;
+      //$this->Place=$Place;
+      //$this->c_PresMode=$c_PresMode;
    }
    public function __destruct() 
    {
@@ -32,10 +32,10 @@ class PairedCards
    // Подключить стили игры
    public function Head() 
    {
-      if ($this->Place=='IttveME')
-      {
+      //if ($this->Place=='IttveME')
+      //{
          echo '
-            <link rel="stylesheet" type="text/css" href="ttools/TEntryClass/PairedCards/matchgame.css">
+            <link rel="stylesheet" type="text/css" href="ttools/TGames/PairedCards/matchgame.css">
          ';
          echo '
             <style>
@@ -47,7 +47,7 @@ class PairedCards
             }
             </style>
          ';
-      }
+      //}
    }
    public function Play() 
    {
@@ -88,7 +88,7 @@ class PairedCards
 			   </div>
 	        </div>
          </section>
-         <script src="ttools/TEntryClass/PairedCards/matchgame.js"></script>
+         <script src="ttools/TGames/PairedCards/matchgame.js"></script>
       ';
       echo '
          </div>

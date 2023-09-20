@@ -166,7 +166,7 @@ else
 echo '</style>';
 
 // Подключаем стили для редактирования материалов
-$Edit->Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,moditap,$Duck,$a2048,$Hex,$Paired);
+$Edit->Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,moditap,$Duck,$a2048,$Hex); //,$Paired);
 $note->Init();
 echo '</head>'; 
 
