@@ -12,14 +12,11 @@
 
 class PairedCards
 {
-   // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   //protected $Place;  // приложение, в которое встроена игра
-
-   public function __construct() //$c_PresMode,$Place='Other') 
+   public function __construct($Arti) 
    {
-      // Инициализируем свойства класса
-      //$this->Place=$Place;
-      //$this->c_PresMode=$c_PresMode;
+      // Обновляем при необходимости базу данных
+      require_once $_SERVER['DOCUMENT_ROOT'].'/ttools/TGames/UpdateBase_GAME.php';
+      \ttools\UpdateBaseGame($Arti);
    }
    public function __destruct() 
    {
@@ -32,22 +29,19 @@ class PairedCards
    // Подключить стили игры
    public function Head() 
    {
-      //if ($this->Place=='IttveME')
-      //{
-         echo '
-            <link rel="stylesheet" type="text/css" href="ttools/TGames/PairedCards/matchgame.css">
-         ';
-         echo '
-            <style>
-            #WorkTiny
-            {
-               width:100%;
-               height:92%;
-               overflow:auto;
+      echo '
+         <link rel="stylesheet" type="text/css" href="ttools/TGames/PairedCards/matchgame.css">
+      ';
+      echo '
+         <style>
+         #WorkTiny
+         {
+            width:100%;
+            height:92%;
+            overflow:auto;
             }
-            </style>
-         ';
-      //}
+         </style>
+      ';
    }
    public function Play() 
    {
@@ -56,6 +50,8 @@ class PairedCards
       ';
       echo '
 	     <div id="timer">
+      ';
+      echo '
 		    Пройденное время: <span id="elapsed-time">00:00</span>
 	     </div>
 	     <section id="game">		

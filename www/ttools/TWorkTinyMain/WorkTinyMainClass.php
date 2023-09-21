@@ -18,12 +18,10 @@ class WorkTinyMain
    private $game;          // игра, замещающая страницу (при необходимости) 
    private $contents;      // текущий материал
    
-   public function __construct($Arti,$fileStyle,$contents) //,$game=NULL) 
+   public function __construct($Arti,$fileStyle,$contents)  
    {
       $this->Arti=$Arti;
-      //$this->game=$game;
-      //$this->game=NULL;
-      $this->game=DispathGame($this->Arti->getArti);
+      $this->game=DispathGame($Arti);
       $this->fileStyle=$fileStyle;
       $this->contents=$contents;
    }

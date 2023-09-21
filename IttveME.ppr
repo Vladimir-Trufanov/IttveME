@@ -588,7 +588,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				+TEntryClass
+				-TEntryClass
 					www\ttools\TEntryClass\EntryClass.php
 				+TGames
 					+PairedCards
@@ -600,6 +600,7 @@ IttveMe
 						www\ttools\TGames\PairedCards\popup_bg.jpg
 						www\ttools\TGames\PairedCards\table.jpg
 					www\ttools\TGames\Dispatch_GAME.php
+					www\ttools\TGames\UpdateBase_GAME.php
 				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
@@ -758,21 +759,17 @@ IttveMe
 4=www\ttools\TEntryClass\EntryClass.php
 5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 6=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-7=www\ttools\TGames\Dispatch_GAME.php
-8=www\UpSiteCSS.php
-9=www\ttools\TTinyGallery\Dispatch_HEAD.php
-10=www\ttools\TGames\PairedCards\PairedCardsClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TGames\PairedCards\PairedCardsClass.php
+Selected=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 [www\index.php]
-TopLine=55
-Caret=10,80
+TopLine=1
+Caret=8,9
 [www\iniMem.php]
-TopLine=129
-Caret=15,224
+TopLine=171
+Caret=26,69
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=347
+TopLine=534
 Caret=63,351
 [www\UpSite.php]
 TopLine=53
@@ -781,20 +778,8 @@ Caret=55,79
 TopLine=3
 Caret=36,18
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=66
-Caret=7,105
+TopLine=208
+Caret=20,223
 [www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=16
-Caret=51,26
-[www\ttools\TGames\Dispatch_GAME.php]
-TopLine=1
-Caret=1,24
-[www\UpSiteCSS.php]
-TopLine=130
-Caret=84,169
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
-TopLine=7
-Caret=29,38
-[www\ttools\TGames\PairedCards\PairedCardsClass.php]
-TopLine=59
-Caret=36,91
+TopLine=20
+Caret=1,45

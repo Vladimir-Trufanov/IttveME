@@ -9,17 +9,16 @@
 // * Copyright © 2023 tve                          Дата создания:  20.09.2023 *
 // ****************************************************************************
 
-function DispathGame($getArti)
+function DispathGame($Arti)
 {
    $game=NULL;
-   if ($getArti=='vybrat-parnye-karty')
+   if ($Arti->getArti=='vybrat-parnye-karty')
    {
-      //require_once $SiteHost."/ttools/TEntryClass/PairedCards/PairedCardsClass.php";
       require_once "PairedCards/PairedCardsClass.php";
-      $Paired=new \game\PairedCards(); //$c_PresMode,'IttveME');
+      $Paired=new \game\PairedCards($Arti); 
       $game=$Paired;
    }
    return $game;
 }
 
-// ****************************************************** Dispatch_HEAD.php ***
+// ****************************************************** Dispatch_GAME.php ***
