@@ -499,6 +499,38 @@ class ArticlesMaker
      return $messa;
    }
    // *************************************************************************
+   // *                      Вставить вызов игры по транслиту                 *
+   // *************************************************************************
+   public function InsGameByTranslit($pdo,$Translit,$NameArt,$DateArt,$contents)
+   {
+     try 
+     {
+        $pdo->beginTransaction();
+        $icontents = htmlspecialchars($contents);	
+        $statement = $pdo->prepare("INSERT INTO [stockpw] ".
+           "([pid], [IdCue], [NameArt], [Translit], [access], [DateArt], [Art]) VALUES ".
+           "(:pid,  :IdCue,  :NameArt,  :Translit,  :access,  :DateArt,  :Art);");
+        $statement->execute([
+           "pid"      => 22, 
+           "IdCue"    => 2, 
+           "NameArt"  => $NameArt, 
+           "Translit" => $Translit, 
+           "access"   => acsAll, 
+           "DateArt"  => $DateArt, 
+           "Art"      => $icontents
+        ]);
+        $pdo->commit();
+        $messa=imok;
+     } 
+     catch (Exception $e) 
+     {
+        $messa=$e->getMessage();
+        // Если в транзакции, то делаем откат изменений
+        if ($pdo->inTransaction()) $pdo->rollback();
+     }
+     return $messa;
+   }
+   // *************************************************************************
    // *             Проверить, есть ли фотография по транслиту                *
    // *************************************************************************
    public function IsImgByTranslit($pdo,$TranslitPic)

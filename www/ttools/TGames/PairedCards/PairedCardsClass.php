@@ -14,9 +14,6 @@ class PairedCards
 {
    public function __construct($Arti) 
    {
-      // Обновляем при необходимости базу данных
-      require_once $_SERVER['DOCUMENT_ROOT'].'/ttools/TGames/UpdateBase_GAME.php';
-      \ttools\UpdateBaseGame($Arti);
    }
    public function __destruct() 
    {

@@ -286,7 +286,7 @@ class TinyGallery
    // *        Установить стили пространства редактирования материала         *
    // *************************************************************************
    public function Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap,
-      $NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL) //,$EntryGame=NULL)
+      $NewCueGame=NULL,$DelCueGame=NULL,$SaymeGame=NULL)
    {
       // Настраиваемся на файлы стилей и js-скрипты
       $this->Arti->Init();
@@ -295,93 +295,92 @@ class TinyGallery
       $this->menu=new MenuLeader(ittveme,$this->urlHome,$this->uidEdit,$this->Arti);
       $this->menu->Init();
       
+      // Настраиваем размеры частей рабочей области редактирования
+      /*
+      echo '
+      <style>
+      #KwinGallery
+      {
+         width:'.$this->KwinGalleryWidth.$this->EdIzm.';'.'
+         height:'.($this->WorkTinyHeight+$this->FooterTinyHeight).$this->EdIzm.';'.'
+      }
+      #WorkTiny,#FooterTiny
+      {
+         width:'.(100-$this->KwinGalleryWidth).$this->EdIzm.';'.'
+      }
+      #WorkTiny
+      {
+         height:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
+      }
+      #FooterTiny
+      {
+         top:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
+         height:'.$this->FooterTinyHeight.$this->EdIzm.';'.'
+      }
+      </style>
+      ';
+      */
+
+      // -------------------------------------------------------------------
+      // это вставка на случай, пока используется игра DuckFly 
+      // (для игры нужно убрать все полосы прокрутки)
+      if (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
+      else
+         echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
+      // -------------------------------------------------------------------
+ 
+      // 3-HEAD этап ---------------------------- ?Com=zhizn-i-puteshestviya
+      if (\prown\isComRequest(mmlZhiznIputeshestviya))
+         $this->ZhizniPuti=mmlZhiznIputeshestviya_HEAD($this->Arti,$this->apdo,$this->urlHome);
+      // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
+      elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
+         $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
+      // 6-HEAD этап --------------------- ?Com=vojti-ili-zaregistrirovatsya
+      elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
+         $this->Entry=mmlVojtiZaregistrirovatsya_HEAD(); 
+      // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
+      elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
+         $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap);
+      // 8(12)-HEAD этап ------------- ?Com=sozdat-material-ili-redaktirovat 
+      elseif 
+         ((\prown\isComRequest(mmlSozdatRedaktirovat))||
+         (\prown\isComRequest(mmlVybratStatyuRedakti)))
+         $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo,$this->urlHome);
+      // 9-HEAD этап -------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
+      elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
+         $this->ModyCue=mmlIzmenitNazvanieIkonku_HEAD();
+      // 10-HEAD этап ----------------- ?Com=dobavit-novyj-razdel-materialov 
+      elseif (\prown\isComRequest(mmlDobavitNovyjRazdel))
+         $this->NewCue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
+      // 11-HEAD этап ------------------------ ?Com=udalit-razdel-materialov 
+      elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
+         $this->DelCue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
+      // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
+      elseif (\prown\isComRequest(mmlNaznachitStatyu))
+         $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
+      // 14-HEAD этап --------------------------------- ?Com=udalit-material 
+      elseif (\prown\isComRequest(mmlUdalitMaterial))
+         $this->DelArt=mmlUdalitMaterial_HEAD($this->Arti,$this->apdo);
+ 
       // 1-HEAD этап - 'Если есть отложенное сообщение, то инициируем игру 
       // со змеёй и анимацию фона'
-      if ($this->DelayedMessage<>imok)
+      elseif ($this->DelayedMessage<>imok)
       {
          require_once "ttools/TTinyGallery/WhipperSnapper/gameWhipperSnapperClass.php";
          $this->WhipperSnapper=new \game\WhipperSnapper('IttveME');
          $this->WhipperSnapper->Head();
       }
-      else
+ 
+      // Последний-HEAD этап - инициируем разметку для выбранного материала,
+      // cтроим рабочую область для выбранной статьи и её галереи, 
+      // обеспечиваем просмотр и редактирование 
+      else 
       {
-         // Настраиваем размеры частей рабочей области редактирования
-         /*
-         echo '
-         <style>
-         #KwinGallery
-         {
-            width:'.$this->KwinGalleryWidth.$this->EdIzm.';'.'
-            height:'.($this->WorkTinyHeight+$this->FooterTinyHeight).$this->EdIzm.';'.'
-         }
-         #WorkTiny,#FooterTiny
-         {
-            width:'.(100-$this->KwinGalleryWidth).$this->EdIzm.';'.'
-         }
-         #WorkTiny
-         {
-            height:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
-         }
-         #FooterTiny
-         {
-            top:'.$this->WorkTinyHeight.$this->EdIzm.';'.'
-            height:'.$this->FooterTinyHeight.$this->EdIzm.';'.'
-         }
-         </style>
-         ';
-         */
-
-         // -------------------------------------------------------------------
-         // это вставка на случай, пока используется игра DuckFly 
-         // (для игры нужно убрать все полосы прокрутки)
-         if (\prown\isComRequest(mmlDobavitNovyjRazdel))
-            echo '<style> #Life,#WorkTiny{overflow:hidden;} </style>';
-         else
-            echo '<style> #Life,#WorkTiny{overflow:auto;} </style>';
-         // -------------------------------------------------------------------
-
-         // 3-HEAD этап ---------------------------- ?Com=zhizn-i-puteshestviya
-         if (\prown\isComRequest(mmlZhiznIputeshestviya))
-            $this->ZhizniPuti=mmlZhiznIputeshestviya_HEAD($this->Arti,$this->apdo,$this->urlHome);
-         // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
-         elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
-            $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
-         // 6-HEAD этап --------------------- ?Com=vojti-ili-zaregistrirovatsya
-         elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
-            $this->Entry=mmlVojtiZaregistrirovatsya_HEAD(); //$EntryGame);
-         // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
-         elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
-            $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap);
-         // 8(12)-HEAD этап ------------- ?Com=sozdat-material-ili-redaktirovat 
-         elseif 
-            ((\prown\isComRequest(mmlSozdatRedaktirovat))||
-            (\prown\isComRequest(mmlVybratStatyuRedakti)))
-            $this->ModyArt=mmlSozdatRedaktirovat_HEAD($this->Arti,$this->apdo,$this->urlHome);
-         // 9-HEAD этап -------------- ?Com=izmenit-nazvanie-razdela-ili-ikonku 
-         elseif (\prown\isComRequest(mmlIzmenitNazvanieIkonku))
-            $this->ModyCue=mmlIzmenitNazvanieIkonku_HEAD();
-         // 10-HEAD этап ----------------- ?Com=dobavit-novyj-razdel-materialov 
-         elseif (\prown\isComRequest(mmlDobavitNovyjRazdel))
-            $this->NewCue=mmlDobavitNovyjRazdel_HEAD($NewCueGame);
-         // 11-HEAD этап ------------------------ ?Com=udalit-razdel-materialov 
-         elseif (\prown\isComRequest(mmlUdalitRazdelMaterialov))
-            $this->DelCue=mmlUdalitRazdelMaterialov_HEAD($DelCueGame);
-         // 13-HEAD этап -------------------------------- ?Com=naznachit-statyu 
-         elseif (\prown\isComRequest(mmlNaznachitStatyu))
-            $this->NewArt=mmlNaznachitStatyu_HEAD($this->Arti,$this->apdo);
-         // 14-HEAD этап --------------------------------- ?Com=udalit-material 
-         elseif (\prown\isComRequest(mmlUdalitMaterial))
-            $this->DelArt=mmlUdalitMaterial_HEAD($this->Arti,$this->apdo);
-         // Последний-HEAD этап - инициируем разметку для выбранного материала,
-         // cтроим рабочую область для выбранной статьи и её галереи, 
-         // обеспечиваем просмотр и редактирование 
-         else 
-         {
-            require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
-            require_once "ttools/TGames/Dispatch_GAME.php";
-            $this->WorkTinyMain=new WorkTinyMain($this->Arti,$this->fileStyle,$this->contents);
-            $this->WorkTinyMain->Head();
-         }
+         require_once "ttools/TWorkTinyMain/WorkTinyMainClass.php";
+         require_once "ttools/TGames/Dispatch_GAME.php";
+         $this->WorkTinyMain=new WorkTinyMain($this->Arti,$this->fileStyle,$this->contents);
+         $this->WorkTinyMain->Head();
       }
    }
    // *************************************************************************
@@ -514,14 +513,8 @@ class TinyGallery
    }
    public function ViewLifeSpace()
    {
-      // Если отложенное сообщение, то готовим заголовок и игру со змеёй
-      if ($this->DelayedMessage<>imok) 
-      {
-         $Title=MakeTitle($this->DelayedMessage,ttError);
-         $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
-      }
       // 3-BODY этап ------------------------------- ?Com=zhizn-i-puteshestviya
-      elseif (\prown\isComRequest(mmlZhiznIputeshestviya))
+      if (\prown\isComRequest(mmlZhiznIputeshestviya))
       {
          $Title=MakeTitle('Жизнь и путешествия! '.'&#128152;&#129315;',ttMessage);
          $this->_ViewLifeSpace($Title,$this->ZhizniPuti);
@@ -587,6 +580,14 @@ class TinyGallery
          $Title=MakeTitle('Выберите материал для удаления,<br>'.
             'прежде, не забудьте удалить связанные с ним изображения?',ttMessage);
          $this->_ViewLifeSpace($Title,$this->DelArt);
+      }
+
+      // Если отложенное сообщение, то готовим заголовок и игру со змеёй
+      elseif ($this->DelayedMessage<>imok) 
+      {
+         //\prown\Alert($this->DelayedMessage);
+         $Title=MakeTitle($this->DelayedMessage,ttError);
+         $this->_ViewLifeSpace($Title,$this->WhipperSnapper);
       }
       // Последний-BODY этап - обеспечиваем работу с материалом в рабочей области
       else

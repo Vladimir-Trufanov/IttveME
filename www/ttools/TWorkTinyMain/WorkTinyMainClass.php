@@ -40,8 +40,7 @@ class WorkTinyMain
       // Выводим страницу
       else
       {
-         //\prown\Alert('GalleryMode='.$this->Arti->GalleryMode); 
-         \prown\ConsoleLog('GalleryMode='.$this->Arti->getArti); 
+         //\prown\ConsoleLog('GalleryMode='.$this->Arti->getArti); 
          // Формируем контент страницы   
          if ($this->contents<>NULL) $contenti=$this->contents;
          else $contenti='';
