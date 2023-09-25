@@ -13,31 +13,43 @@
 class Entrying
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   //protected $game;          // Игра, замещающая страницу (при необходимости) 
    
    public function __construct() //$game=NULL) 
    {
-      //$this->game=$game;
    }
    public function __destruct() 
    {
    }
    public function Head() 
    {
-      //if ($this->game<>NULL) $this->game->Head();
+      ?>
+      <link rel="stylesheet" href="ttools/TEntryClass/InteractiveSpooky.css">
+      <?php
+           
+      echo'  
+         <style>
+         @font-face 
+         {
+            font-family: Pacifico; 
+            src: url(ttools/TTuningClass/Pacifico-Regular.ttf); 
+         }
+         </style>
+      ';
    }
    public function Body() 
    {
-      // Запускаем замещение страницы
-      //if ($this->game<>NULL) $this->game->Play();
-      // Выводим страницу
-      //else
-      //{
+      
+      require_once "InteractiveSpooky.php"; 
+
+      
+      /*
          echo 'Выполняем вход или регистрируемся на сайте!<br>';
          echo '
          ';
          echo '
          ';
+      */
+      
       //}
    }
 }

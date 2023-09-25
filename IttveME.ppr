@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	-IttveMe
+	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 		-Favicon
@@ -153,7 +153,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		-www
+		+www
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -290,7 +290,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -545,7 +545,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -588,8 +588,13 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				-TEntryClass
+				+TEntryClass
 					www\ttools\TEntryClass\EntryClass.php
+					www\ttools\TEntryClass\InteractiveSpooky.css
+					www\ttools\TEntryClass\InteractiveSpooky.js
+					www\ttools\TEntryClass\InteractiveSpooky.php
+					www\ttools\TEntryClass\license.txt
+					www\ttools\TEntryClass\README.txt
 				-TGames
 					-PairedCards
 						www\ttools\TGames\PairedCards\bg.jpg
@@ -681,7 +686,7 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				-TTuningClass
+				+TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -757,41 +762,33 @@ IttveMe
 2=www\ttools\TTinyGallery\TinyGalleryClass.php
 3=www\UpSite.php
 4=www\ttools\TEntryClass\EntryClass.php
-5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-6=www\ttools\TWorkTinyMain\WorkTinyMainClass.php
-7=www\ttools\TGames\Dispatch_GAME.php
-8=www\ttools\TGames\PairedCards\PairedCardsClass.php
-9=www\UpdateBase_GAME.php
+5=www\ttools\TEntryClass\InteractiveSpooky.php
+6=www\ttools\TEntryClass\InteractiveSpooky.css
+7=www\ttools\TEntryClass\InteractiveSpooky.js
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\ttools\TEntryClass\InteractiveSpooky.css
 [www\index.php]
-TopLine=1
-Caret=8,9
+TopLine=126
+Caret=12,165
 [www\iniMem.php]
-TopLine=197
-Caret=1,214
+TopLine=182
+Caret=68,193
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=565
-Caret=1,592
+TopLine=517
+Caret=10,532
 [www\UpSite.php]
-TopLine=40
-Caret=55,79
+TopLine=32
+Caret=23,53
 [www\ttools\TEntryClass\EntryClass.php]
 TopLine=3
-Caret=36,18
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=498
-Caret=63,506
-[www\ttools\TWorkTinyMain\WorkTinyMainClass.php]
-TopLine=8
-Caret=12,43
-[www\ttools\TGames\Dispatch_GAME.php]
-TopLine=1
-Caret=1,1
-[www\ttools\TGames\PairedCards\PairedCardsClass.php]
-TopLine=1
-Caret=80,22
-[www\UpdateBase_GAME.php]
-TopLine=10
-Caret=94,43
+Caret=1,38
+[www\ttools\TEntryClass\InteractiveSpooky.php]
+TopLine=3
+Caret=1,74
+[www\ttools\TEntryClass\InteractiveSpooky.css]
+TopLine=12
+Caret=1,18
+[www\ttools\TEntryClass\InteractiveSpooky.js]
+TopLine=28
+Caret=52,67

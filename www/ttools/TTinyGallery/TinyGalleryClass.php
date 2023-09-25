@@ -529,8 +529,8 @@ class TinyGallery
       // 6-BODY этап ------------------------ ?Com=vojti-ili-zaregistrirovatsya
       elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
       {
-         //$Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
-         $Title=MakeTitle('Страница еще не готова, но Вы можете поиграть. Ваша задача - выбрать все парные карты!<br>',ttMessage);
+         $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+         //$Title=MakeTitle('Страница еще не готова, но Вы можете поиграть. Ваша задача - выбрать все парные карты!<br>',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Entry);
       }
       // 7-BODY этап ----------------- ?Com=prochitat-o-sajte-izmenit-nastrojki
