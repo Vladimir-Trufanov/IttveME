@@ -290,7 +290,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -589,6 +589,7 @@ IttveMe
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
 				+TEntryClass
+					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.php
 					www\ttools\TEntryClass\InteractiveSpooky.css
 					www\ttools\TEntryClass\InteractiveSpooky.js
@@ -686,7 +687,7 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				+TTuningClass
+				-TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -765,9 +766,10 @@ IttveMe
 5=www\ttools\TEntryClass\InteractiveSpooky.php
 6=www\ttools\TEntryClass\InteractiveSpooky.css
 7=www\ttools\TEntryClass\InteractiveSpooky.js
+8=www\ttools\TEntryClass\EmailRegistration.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\InteractiveSpooky.css
+Selected=www\ttools\TEntryClass\EntryClass.php
 [www\index.php]
 TopLine=126
 Caret=12,165
@@ -778,17 +780,20 @@ Caret=68,193
 TopLine=517
 Caret=10,532
 [www\UpSite.php]
-TopLine=32
+TopLine=14
 Caret=23,53
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=3
-Caret=1,38
+TopLine=33
+Caret=7,93
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=3
+TopLine=36
 Caret=1,74
 [www\ttools\TEntryClass\InteractiveSpooky.css]
 TopLine=12
 Caret=1,18
 [www\ttools\TEntryClass\InteractiveSpooky.js]
-TopLine=28
+TopLine=29
 Caret=52,67
+[www\ttools\TEntryClass\EmailRegistration.php]
+TopLine=69
+Caret=74,104
