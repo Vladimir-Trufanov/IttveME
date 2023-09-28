@@ -80,31 +80,25 @@ if (isset($_REQUEST['doGo']))
       echo $error; 
    }
 }
- 
-?>
 
+echo 'Отправляем письмо.<br>';
+//echo '<form class="frmTuning" method="get" name="TuningFrm" action="'.$this->urlHome.'">';
+echo '<form method="get" action="'.$this->urlHome.'">';
+
+?> 
 <!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Регистрация</title>
-</head>
-<body>
--->
-    Привет!<br>
-    <form action="<?= $_SERVER['SCRIPT_NAME'] ?>" method="get">
-<!-- 
+        <form action="<?= $_SERVER['SCRIPT_NAME'] ?>" method="get">
         <p>Логин: <input type="text" name="login"> <samp style="color:red">*</samp></p>
         <p>EMail: <input type="email" name="email"><samp style="color:red">*</samp></p>
         <p>Пароль: <input type="password" name="pass"><samp style="color:red">*</samp></p>
 -->
-        <p>Повторите пароль: <input type="password" name="pass_rep"><samp style="color:red">*</samp></p>
-        <p><input type="submit" value="Зарегистрироваться" name="doGo"></p>
+        <p>Логин: <input type="text" name="login"> <samp style="color:red">*</samp></p>
+        <p>EMail: <input type="email" name="email"><samp style="color:red">*</samp></p>
+        <p>Пароль: <input type="password" name="pass"><samp style="color:red">*</samp></p>
+        
+        <p>Повторите пароль: 
+           <input type="password" name="pass_rep">  <samp style="color:red">*</samp></p>
+        <p><input type="hidden"   name="Com" value="vojti-ili-zaregistrirovatsya"></p>
+        <p><input type="submit"   name="doGo" value="Зарегистрироваться"></p>
     </form>
-<!-- 
-</body>
-</html>
--->
+

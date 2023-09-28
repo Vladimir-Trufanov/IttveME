@@ -13,11 +13,9 @@
 class Entrying
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
-   protected $urlHome;          // начальная страница сайта 
    
-   public function __construct($urlHome) 
+   public function __construct() //$game=NULL) 
    {
-      $this->urlHome=$urlHome;
    }
    public function __destruct() 
    {
@@ -42,11 +40,35 @@ class Entrying
    {
       
       //require_once "InteractiveSpooky.php"; 
-      require_once "EmailRegistration.php"; 
+      //require_once "EmailRegistration.php"; 
       
-      /*
-      // Вариант отправки HTML-письма для несколько получателей
       echo 'Отправляем письмо.<br>';
+      
+      // 1 вариант отправки письма
+      /*
+      $message = "Электронное письмо\r\nНачальная строка\r\nФинальная строка";
+      // На случай если какая-то строка письма длиннее 70 символов мы используем wordwrap()
+      $message = wordwrap($message, 70, "\r\n");
+      // Отправляем
+      mail('tve58@inbox.ru', 'My Subject', $message);
+      */
+      
+      // 2 вариант отправки письма
+      /*
+      $to      = 'tve58@inbox.ru';
+      $subject = 'the subject';
+      $message = 'hello';
+      $headers = 'From: webmaster@example.com' . "\r\n" .
+         'Reply-To: webmaster@example.com' . "\r\n" .
+         'X-Mailer: PHP/' . phpversion();
+      mail($to, $subject, $message, $headers);
+      */
+
+      // echo 'Вроде ушло!<br>';
+      
+      // 3 вариант отправки письма (HTML-письмо)
+
+      // несколько получателей
       $to  = 'tve58@inbox.ru' . ', '; // обратите внимание на запятую
       $to .= 'tve@karelia.ru';
       // тема письма
@@ -89,7 +111,9 @@ class Entrying
       $err=mail($to, $subject, $message, $headers);
       if ($err) echo 'Письмо ушло!';
       else echo 'Ошибка при отправке письма';
-      */
+     
+      
+      
    }
 }
 // ********************************************************* EntryClass.php ***

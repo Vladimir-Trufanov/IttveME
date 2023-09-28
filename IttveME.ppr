@@ -687,7 +687,7 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				-TTuningClass
+				+TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -762,14 +762,13 @@ IttveMe
 1=www\iniMem.php
 2=www\ttools\TTinyGallery\TinyGalleryClass.php
 3=www\UpSite.php
-4=www\ttools\TEntryClass\EntryClass.php
-5=www\ttools\TEntryClass\InteractiveSpooky.php
-6=www\ttools\TEntryClass\InteractiveSpooky.css
-7=www\ttools\TEntryClass\InteractiveSpooky.js
-8=www\ttools\TEntryClass\EmailRegistration.php
+4=www\ttools\TEntryClass\InteractiveSpooky.php
+5=www\ttools\TEntryClass\InteractiveSpooky.css
+6=www\ttools\TEntryClass\EmailRegistration.php
+7=www\ttools\TEntryClass\EntryClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryClass.php
+Selected=www\ttools\TEntryClass\EmailRegistration.php
 [www\index.php]
 TopLine=126
 Caret=12,165
@@ -777,23 +776,20 @@ Caret=12,165
 TopLine=182
 Caret=68,193
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=517
-Caret=10,532
+TopLine=321
+Caret=63,341
 [www\UpSite.php]
 TopLine=14
 Caret=23,53
-[www\ttools\TEntryClass\EntryClass.php]
-TopLine=33
-Caret=7,93
 [www\ttools\TEntryClass\InteractiveSpooky.php]
 TopLine=36
 Caret=1,74
 [www\ttools\TEntryClass\InteractiveSpooky.css]
 TopLine=12
 Caret=1,18
-[www\ttools\TEntryClass\InteractiveSpooky.js]
-TopLine=29
-Caret=52,67
 [www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=69
-Caret=74,104
+TopLine=65
+Caret=9,99
+[www\ttools\TEntryClass\EntryClass.php]
+TopLine=26
+Caret=1,50

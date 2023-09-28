@@ -338,7 +338,7 @@ class TinyGallery
          $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
       // 6-HEAD этап --------------------- ?Com=vojti-ili-zaregistrirovatsya
       elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
-         $this->Entry=mmlVojtiZaregistrirovatsya_HEAD(); 
+         $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($urlHome); 
       // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
       elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
          $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap);

@@ -5,7 +5,7 @@
 // ****************************************************************************
 // * TinyGalleryClass          Блок функций при загрузке страниц на фазе HEAD *
 // *                                                                          *
-// * v1.0, 18.03.2022                              Автор:       Труфанов В.Е. *
+// * v1.1, 28.09.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  13.11.2022 *
 // ****************************************************************************
 
@@ -32,15 +32,15 @@ function mmlOtpravitAvtoruSoobshchenie_HEAD($game=NULL)
 // ****************************************************************************
 // *                         "Войти или зарегистрироваться"                   *
 // ****************************************************************************
-function mmlVojtiZaregistrirovatsya_HEAD() //$game=NULL)
+function mmlVojtiZaregistrirovatsya_HEAD($urlHome)
 {
    require_once "ttools/TEntryClass/EntryClass.php";
-   $Entry=new Entrying(); //$game);
+   $Entry=new Entrying($urlHome); 
    $Entry->Head();
    return $Entry;
 }
 // ****************************************************************************
-// *                         "Войти или зарегистрироваться"                   *
+// *                 " Изменить настройки сайта в браузере"                   *
 // ****************************************************************************
 function mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap)
 {
