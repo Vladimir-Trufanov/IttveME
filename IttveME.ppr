@@ -788,8 +788,8 @@ Caret=1,74
 TopLine=12
 Caret=1,18
 [www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=65
-Caret=9,99
+TopLine=53
+Caret=80,63
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=26
-Caret=1,50
+TopLine=56
+Caret=73,60
