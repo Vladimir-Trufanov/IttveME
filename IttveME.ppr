@@ -546,7 +546,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -591,6 +591,7 @@ IttveMe
 				+TEntryClass
 					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.php
+					www\ttools\TEntryClass\EntryTable.php
 					www\ttools\TEntryClass\InteractiveSpooky.css
 					www\ttools\TEntryClass\InteractiveSpooky.js
 					www\ttools\TEntryClass\InteractiveSpooky.php
@@ -687,7 +688,7 @@ IttveMe
 					www\ttools\TTinyGallery\Dispatch_HEAD.php
 					www\ttools\TTinyGallery\Dispatch_ZERO.php
 					www\ttools\TTinyGallery\TinyGalleryClass.php
-				+TTuningClass
+				-TTuningClass
 					www\ttools\TTuningClass\Pacifico-Regular.ttf
 					www\ttools\TTuningClass\tuning.css
 					www\ttools\TTuningClass\tuning.js
@@ -741,6 +742,11 @@ IttveMe
 				Материалы\Лабиринт\face.png
 				Материалы\Лабиринт\maze.png
 				Материалы\Лабиринт\Лабиринт.doc
+			-Работа с почтой - в том числе на локальном сервере
+				Материалы\Работа с почтой - в том числе на локальном сервере\EntryClass.php
+				Материалы\Работа с почтой - в том числе на локальном сервере\php.ini
+				Материалы\Работа с почтой - в том числе на локальном сервере\sendmail.php
+				Материалы\Работа с почтой - в том числе на локальном сервере\Как тестировать отправку писем в PHP на Windows.doc
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
 			Материалы\Размеры и прокрутка элементов.doc
@@ -760,36 +766,48 @@ IttveMe
 [Open project files]
 0=www\index.php
 1=www\iniMem.php
-2=www\ttools\TTinyGallery\TinyGalleryClass.php
-3=www\UpSite.php
-4=www\ttools\TEntryClass\InteractiveSpooky.php
-5=www\ttools\TEntryClass\InteractiveSpooky.css
-6=www\ttools\TEntryClass\EmailRegistration.php
-7=www\ttools\TEntryClass\EntryClass.php
+2=www\UpSite.php
+3=www\ttools\TEntryClass\InteractiveSpooky.php
+4=www\ttools\TEntryClass\EmailRegistration.php
+5=www\ttools\TEntryClass\EntryClass.php
+6=www\Common.php
+7=www\ttools\TMenuLeader\MenuLeaderClass.php
+8=www\ttools\TTinyGallery\TinyGalleryClass.php
+9=www\ttools\TEntryClass\EntryTable.php
+10=www\ttools\TArticlesMaker\CommonIttveMe.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EmailRegistration.php
+Selected=www\Common.php
 [www\index.php]
 TopLine=126
 Caret=12,165
 [www\iniMem.php]
-TopLine=182
+TopLine=154
 Caret=68,193
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=321
-Caret=63,341
 [www\UpSite.php]
-TopLine=14
-Caret=23,53
+TopLine=61
+Caret=45,79
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=36
-Caret=1,74
-[www\ttools\TEntryClass\InteractiveSpooky.css]
-TopLine=12
-Caret=1,18
+TopLine=43
+Caret=13,56
 [www\ttools\TEntryClass\EmailRegistration.php]
 TopLine=53
 Caret=80,63
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=56
-Caret=73,60
+TopLine=30
+Caret=31,44
+[www\Common.php]
+TopLine=10
+Caret=113,22
+[www\ttools\TMenuLeader\MenuLeaderClass.php]
+TopLine=167
+Caret=45,178
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=1
+Caret=1,1
+[www\ttools\TEntryClass\EntryTable.php]
+TopLine=4
+Caret=4,66
+[www\ttools\TArticlesMaker\CommonIttveMe.php]
+TopLine=45
+Caret=1,62

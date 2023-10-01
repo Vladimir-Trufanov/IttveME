@@ -5,20 +5,23 @@
 // * ittve.me                                        Блок общих функций сайта *
 // ****************************************************************************
 
-// v1.3, 17.06.2023                                  Автор:       Труфанов В.Е. 
+// v1.4, 01.10.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2019 tve                              Дата создания:  05.03.2019 
 
 // ****************************************************************************
 // *       Проверить соответствие запроса разрешенной команде управления      *
 // ****************************************************************************
-// ------------------------------------ Тексты запросов для меню управления ---
+// -------------------------------------------- Запросы для меню управления ---
 define ('mmlVybratSledMaterial',         'vybrat-sleduyushchij-material');       // 1 из главной
 define ('mmlVernutsyaPredState',         'vernutsya-k-predydushchej-state');     // 2 из главной
 define ('mmlZhiznIputeshestviya',        'zhizn-i-puteshestviya');               // 3
 define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');      // 4
 
 define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');        // 5 из главной
-define ('mmlVojtiZaregistrirovatsya',    'vojti-ili-zaregistrirovatsya');        // 6 из главной
+define ('mmlVojti',                      'vojti');                               // 6 из главной
+define ('mmlPropustit',                  'propustit');                           // вход подтвержден, пропустить
+define ('mmlZaregistrirovatsya',         'zaregistrirovatsya');  
+define ('mmlPodtverdit',                 'podtverdit');  
 
 define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki'); // 7 из 3    
 define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat');    // 8 из 3
@@ -32,6 +35,7 @@ define ('mmlNaznachitStatyu',            'naznachit-statyu');                   
 define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
 define ('mmlRedaktiOpisanie',            'redaktirovat-opisanie-stati');         // 15 из 12
 define ('mmlSohranitNovyjMaterial',      'sohranit-novyj-material');             // 16 из 12
+
 /*
 // ---------------------------------------- Результат проверки URI страницы ---
 define ('xUriOk',      1);   // URI соответствует запросу для тестирования
@@ -46,7 +50,7 @@ function testComRequest($mml)
    // Определяем массив запросов для меню управления
    $aLeadRequest=[
       mmlVybratSledMaterial,mmlVernutsyaPredState,mmlZhiznIputeshestviya,mmlVernutsyaNaGlavnuyu,
-      mmlOtpravitAvtoruSoobshchenie,mmlVojtiZaregistrirovatsya,
+      mmlOtpravitAvtoruSoobshchenie,mmlVojti,
       mmlIzmenitNastrojkiSajta,mmlSozdatRedaktirovat,mmlIzmenitNazvanieIkonku,
       mmlDobavitNovyjRazdel,mmlUdalitRazdelMaterialov,mmlVybratStatyuRedakti,
       mmlNaznachitStatyu,mmlUdalitMaterial]; 
@@ -88,7 +92,7 @@ function isProchieRegimy()
    if ((prown\isComRequest(mmlZhiznIputeshestviya))||
       (prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))||
       (prown\isComRequest(mmlIzmenitNastrojkiSajta))||
-      (prown\isComRequest(mmlVojtiZaregistrirovatsya))||
+      (prown\isComRequest(mmlVojti))||
       (prown\isComRequest(mmlSozdatRedaktirovat)))
    $Result=true;
    return $Result;

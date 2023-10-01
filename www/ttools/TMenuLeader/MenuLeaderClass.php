@@ -122,13 +122,13 @@ class MenuLeader
       (
          \prown\isComRequest(mmlIzmenitNastrojkiSajta)||
          \prown\isComRequest(mmlOtpravitAvtoruSoobshchenie)||
-         \prown\isComRequest(mmlVojtiZaregistrirovatsya)
+         \prown\isComRequest(mmlVojti)
       )
       {
          $this->Punkt($this->urlHome,'&#xf015;','Вернуться','на главную страницу');
          $this->Punkt($this->cPreMe.mmlIzmenitNastrojkiSajta,'&#xf013;','Прочитать о сайте,','изменить настройки');
          $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
-         $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
+         $this->Punkt($this->cPreMe.mmlVojti,'&#xf007;','Войти или','зарегистрироваться');
       }
       // Выводим пункты меню управления по авторскому редактированию
       else if 
@@ -175,7 +175,7 @@ class MenuLeader
          $this->Punkt($this->cPreMe.mmlVybratSledMaterial,'&#xf0a7;','Выбрать следующий','материал');
          $this->Punkt($this->cPreMe.mmlVernutsyaPredState,'&#xf0a6;','Вернуться к прежней','статье');
          $this->Punkt($this->cPreMe.mmlOtpravitAvtoruSoobshchenie,'&#xf01c;','Отправить автору','сообщение');
-         $this->Punkt($this->cPreMe.mmlVojtiZaregistrirovatsya,'&#xf007;','Войти или','зарегистрироваться');
+         $this->Punkt($this->cPreMe.mmlVojti,'&#xf007;','Войти или','зарегистрироваться');
       }
       // Закрываем меню
       echo '</ul>';

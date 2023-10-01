@@ -9,8 +9,8 @@
 //                                                   Дата создания:  04.02.2023
 // Copyright © 2023 tve                              Посл.изменение: 25.09.2023
 
+echo '<form method="post" action="#">';
 ?>
-<form method="post" action="#">
 
    <svg width="200px" height="200px" viewBox="0 0 200 200" aria-labelledby="svg-desc">
    
@@ -48,7 +48,7 @@
       <legend>Email</legend>
       <div>
          <input type="email" name="email" id="email"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required />
-         <div class="placeholder">e.g. username@example.com</div>
+         <div class="placeholder">username@example.com</div>
       </div>
    </fieldset>
    
@@ -65,9 +65,10 @@
          <input type="submit" name="submit" id="submit" value="Войти"/>
       </div>
   </fieldset>
-  
-</form>
 
+<?php 
+echo '</form>';
+?>
 <footer>
    По мотивам <a href="https://codepen.io/alvaromontoro/pen/bmwmKJ">Alvaro Montoro</a>
    <!-- -->

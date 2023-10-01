@@ -346,8 +346,8 @@ class TinyGallery
          // 5-HEAD этап --------------------- ?Com=otpravit-avtoru-soobshchenie
          elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
             $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
-         // 6-HEAD этап --------------------- ?Com=vojti-ili-zaregistrirovatsya
-         elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
+         // 6-HEAD этап -------------------------------------------- ?Com=vojti
+         elseif (\prown\isComRequest(mmlVojti))
             $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($EntryGame);
          // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
          elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
@@ -532,8 +532,8 @@ class TinyGallery
          $Title=MakeTitle('Отправка сообщений будет сделана осенью, пока крутите Хекстрис!<br>',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Sayme);
       }
-      // 6-BODY этап ------------------------ ?Com=vojti-ili-zaregistrirovatsya
-      elseif (\prown\isComRequest(mmlVojtiZaregistrirovatsya))
+      // 6-BODY этап ----------------------------------------------- ?Com=vojti
+      elseif (\prown\isComRequest(mmlVojti))
       {
          //$Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
          $Title=MakeTitle('Страница еще не готова, но Вы можете поиграть. Ваша задача - выбрать все парные карты!<br>',ttMessage);

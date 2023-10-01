@@ -40,9 +40,9 @@ class Entrying
    }
    public function Body() 
    {
-      
-      //require_once "InteractiveSpooky.php"; 
-      require_once "EmailRegistration.php"; 
+      require_once "InteractiveSpooky.php"; 
+      require_once "EntryTable.php"; 
+      //require_once "EmailRegistration.php"; 
       
       /*
       // Вариант отправки HTML-письма для несколько получателей

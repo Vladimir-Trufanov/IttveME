@@ -76,7 +76,7 @@ if ($BaseCreate<>'Yes')
          // echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
 
          // Выводим строку с контрольным транслитом
-         echo (prown\getTranslit('Выбрать парные карты'));
+         echo (prown\getTranslit('Пропустить'));
 
          /*
          echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 
