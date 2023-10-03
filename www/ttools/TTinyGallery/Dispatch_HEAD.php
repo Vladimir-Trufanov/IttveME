@@ -32,10 +32,8 @@ function mmlOtpravitAvtoruSoobshchenie_HEAD($game=NULL)
 // ****************************************************************************
 // *                         "Войти или зарегистрироваться"                   *
 // ****************************************************************************
-function mmlVojtiZaregistrirovatsya_HEAD($urlHome)
+function mmlVojtiZaregistrirovatsya_HEAD($urlHome,$Entry)
 {
-   require_once "ttools/TEntryClass/EntryClass.php";
-   $Entry=new Entrying($urlHome); 
    $Entry->Head();
    return $Entry;
 }

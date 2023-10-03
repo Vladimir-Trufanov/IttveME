@@ -6,18 +6,24 @@
 // * ittve.me                           Войти или зарегистрироваться на сайте * 
 // ****************************************************************************
 
-//                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  04.02.2018
-// Copyright © 2018 tve                              Посл.изменение: 11.12.2022
+
+// v1.1, 03.10.2023                                  Автор:       Труфанов В.Е. 
+// Copyright © 2019 tve                              Дата создания:  05.03.2019 
 
 class Entrying
 {
    // ----------------------------------------------------- СВОЙСТВА КЛАССА ---
    protected $urlHome;          // начальная страница сайта 
+   protected $basename;         // База материалов: $_SERVER['DOCUMENT_ROOT'].'/itpw';
+   protected $username;         // Логин для доступа к базе данных
+   protected $password;         // Пароль
    
-   public function __construct($urlHome) 
+   public function __construct($urlHome,$basename,$username,$password) 
    {
       $this->urlHome=$urlHome;
+      $this->basename=$basename;
+      $this->username=$username;
+      $this->password=$password;
    }
    public function __destruct() 
    {
@@ -42,6 +48,10 @@ class Entrying
    {
       require_once "InteractiveSpooky.php"; 
       require_once "EntryTable.php"; 
+      // При необходимости создаём таблицу пользователей ittve.me в базе данных 
+      $pdo=_BaseConnect($this->basename,$this->username,$this->password);
+      CreateMeUsers($pdo,'-');
+
       //require_once "EmailRegistration.php"; 
       
       /*

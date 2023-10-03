@@ -3,10 +3,10 @@
 // PHP7/HTML5, EDGE/CHROME                               *** EntryTable.php ***
 
 // ****************************************************************************
-// * TPhpTools                       Блок функций класса TEntryClass для базы *
-// *                                          пользователей сайта "ittve.me". *
+// * TPhpTools                     Блок функций класса TEntryClass для работы *
+// *                                с таблицей пользователей сайта "ittve.me" *
 // *                                                                          *
-// * v1.0, 01.10.2023                              Автор:       Труфанов В.Е. *
+// * v1.1, 03.10.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  01.10.2023 *
 // ****************************************************************************
 
@@ -21,8 +21,8 @@
 // CreateMeUsers($pdo,$aCharters)                                                - Создать таблицу пользователей ittve.me в базе данных
 
 // -------------------------------------------------------- ЗАПРОСЫ ПО БАЗЕ ---
-// CountPoint($pdo,$ParentID)  - Выбрать число записей по родителю                  
-// SelRecord($pdo,$UnID)       - Выбрать запись по идентификатору 
+// ---CountPoint($pdo,$ParentID)  - Выбрать число записей по родителю                  
+// ---SelRecord($pdo,$UnID)       - Выбрать запись по идентификатору 
 
 // ****************************************************************************
 // *          Создать таблицу пользователей ittve.me в базе данных            *
@@ -51,7 +51,7 @@ function CreateMeUsers($pdo,$aCharters)
          "([uip], [email], [passiv], [phone], [art]) VALUES ".
          "(:uip,  :email,  :passiv,  :phone,  :art);");
       foreach ($aCharters as
-          [$uip,  $email,  $passiv,  $NameArt,  $Translit,  $access,  $DateArt,  $Art])
+          [$uip,  $email,  $passiv,  $phone,  $art])
       $statement->execute([
          "uip"    => $uip, 
          "email"  => $email, 

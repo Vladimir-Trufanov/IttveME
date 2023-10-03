@@ -130,7 +130,7 @@ class TinyGallery
    private   $DelArt;           // объект "Удалить материал"
    // ------------------------------------------------------- МЕТОДЫ КЛАССА ---
    public function __construct($SiteRoot,$urlHome,$SiteDevice,
-      $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti) 
+      $WorkTinyHeight,$FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti,$Entry) 
    {
       // Инициализируем свойства класса
       $this->WhipperSnapper=NULL;
@@ -139,7 +139,6 @@ class TinyGallery
       $this->ModyCue=NULL;
       $this->DelCue=NULL;
       $this->Sayme=NULL;
-      $this->Entry=NULL;
       $this->Tune=NULL;
       $this->NewArt=NULL;
       $this->ModyArt=NULL;
@@ -156,6 +155,7 @@ class TinyGallery
       
       // Регистрируем объект по работе с базой данных материалов
       $this->Arti=$Arti;
+      $this->Entry=$Entry;
       // Считываем предопределенные размеры частей рабочей области редактирования
       $this->WorkTinyHeight=$WorkTinyHeight;
       $this->FooterTinyHeight=$FooterTinyHeight;
@@ -338,7 +338,7 @@ class TinyGallery
          $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
       // 6-HEAD этап -------------------------------------------- ?Com=vojti
       elseif (\prown\isComRequest(mmlVojti))
-         $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($urlHome); 
+         $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($urlHome,$this->Entry); 
       // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
       elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
          $this->Tune=mmlIzmenitNastrojkiSajta_HEAD($aPresMode,$aModeImg,$aPhoneImg,$urlHome,$moditap);

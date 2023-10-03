@@ -55,8 +55,6 @@ define ("acsAll",   1);      // доступ разрешен всем
 define ("acsClose", 2);      // закрыт, статья в разработке
 define ("acsAutor", 4);      // только автору-хозяину сайта
 
-// Подгружаем общие функции класса
-require_once("CommonArticlesMaker.php"); 
 // Подгружаем модули функций класса, связанные с конкретным сайтом
 if (articleSite==tbsIttveme) require_once("CommonIttveMe.php"); 
 elseif (articleSite==tbsIttvepw) require_once("CommonIttvePw.php"); 

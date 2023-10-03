@@ -119,6 +119,8 @@ require_once pathPhpTools."/TNotice/NoticeClass.php";
 // Подключаем внутренние классы
 require_once "ttools/TMenuLeader/MenuLeaderClass.php";
 require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
+require_once("ttools/TArticlesMaker/CommonArticlesMaker.php"); 
+require_once "ttools/TEntryClass/EntryClass.php";
 require_once "ttools/TTinyGallery/TinyGalleryClass.php";
 require_once "ttools/TKwinGallery/KwinGalleryClass.php";
 
@@ -140,13 +142,17 @@ $s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);
 
 // Если после авторизации изменилось имя пользователя,
 // то перенастраиваем счетчики и посетителя
-$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин авторизованного посетителя
-$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true); // логин посетителя
+$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин посетителя
+$c_Pass=prown\MakeCookie('Pass',"Гость",tStr,true);         // пароль посетителя
+
+$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true); // логин посетителя после входа-регистрации
+$c_PersPass=prown\MakeCookie('PersPass',"Гость",tStr,true); // пароль посетителя после входа-регистрации
 if ($c_PersName<>$c_UserName)
 {
    $c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
-   $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
+   $c_UserName=prown\MakeCookie('UserName',$c_PersName,tStr); 
+   $c_Pass=prown\MakeCookie('Pass',$c_PersPass,tStr);        
 }
 
 // Меняем кукис ориентации устройства 
@@ -196,9 +202,9 @@ $password='23ety17';
 
 // Подключаем объект единообразного вывода сообщений
 $note=new ttools\Notice();
-// Подключаем объект для работы с базой данных материалов
-// // (при необходимости создаем базу данных материалов)
+// Подключаем объекты для работы с базой данных материалов и пользователей 
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
+$Entry=new ttools\Entrying($urlHome,$basename,$username,$password); 
 
 // При необходимости создаем базу данных материалов
 $BaseCreate='Exist';
@@ -220,7 +226,7 @@ if (versi==32)
 // изображениями в галерее, связанной с материалом сайта из базы данных)
 $WorkTinyHeight='75'; $FooterTinyHeight='15'; $KwinGalleryWidth='30'; $EdIzm='%';
 $Edit=new ttools\TinyGallery($SiteRoot,$urlHome,$SiteDevice,$WorkTinyHeight,
-   $FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti);
+   $FooterTinyHeight,$KwinGalleryWidth,$EdIzm,$Arti,$Entry);
 // Подключаем заменяющую игру для страницы "Добавить новый раздел"
 require_once "ttools/TNewCue/gameDuckFlyClass.php";
 $Duck=new game\DuckFly('IttveME');
