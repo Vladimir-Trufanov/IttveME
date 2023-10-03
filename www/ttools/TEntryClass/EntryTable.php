@@ -32,36 +32,45 @@ function CreateMeUsers($pdo,$aCharters)
    try 
    {
       $pdo->beginTransaction();
-      // Создаём таблицу пользователей
-      $sql='CREATE TABLE meusers ('.
-         'uip         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пользователя
-         'email       VARCHAR NOT NULL UNIQUE,'.                     // адрес электронной почты пользователя
-         'passiv      VARCHAR NOT NULL,'.                            // зашифрованный пароль
-         'phone       VARCHAR,'.                                     // телефон
-         'art         TEXT)';                                        // дополнительная информация из VK
+      // Определяем существует ли таблица пользователей
+      $sql='PRAGMA table_info(meusers);';
       $st = $pdo->query($sql);
-      // Заполняем таблицу пользователей в начальном состоянии (на 2023-10-01)
-      // (назначаем массив с начальной структурой таблицы)
-      if ($aCharters=='-'){
-      $aCharters=[                                                          
-         [ 1, 'tve58@inbox.ru', 'x58', '+7921-4524295','20' ],
-         [ 2, 'tve@karelia.ru', 'x00', '+7911-6603087','20' ]
-      ];}       
-      $statement = $pdo->prepare("INSERT INTO [meusers] ".
-         "([uip], [email], [passiv], [phone], [art]) VALUES ".
-         "(:uip,  :email,  :passiv,  :phone,  :art);");
-      foreach ($aCharters as
-          [$uip,  $email,  $passiv,  $phone,  $art])
-      $statement->execute([
-         "uip"    => $uip, 
-         "email"  => $email, 
-         "passiv" => $passiv, 
-         "phone"  => $phone, 
-         "art"    => $art
-      ]);
-      // Создаем индекс по email в таблице пользователей      
-      $sql='CREATE INDEX IF NOT EXISTS iemail ON meusers (email)';
-      $st = $pdo->query($sql);
+      $table = $st->fetchAll();
+      $count = count($table);
+      // Если таблицы нет, то создаем ее
+      if ($count==0)
+      {
+         // Создаём таблицу пользователей
+         $sql='CREATE TABLE meusers ('.
+            'uip         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пользователя
+            'email       VARCHAR NOT NULL UNIQUE,'.                     // адрес электронной почты пользователя
+            'passiv      VARCHAR NOT NULL,'.                            // зашифрованный пароль
+            'phone       VARCHAR,'.                                     // телефон
+            'art         TEXT)';                                        // дополнительная информация из VK
+         $st = $pdo->query($sql);
+         // Заполняем таблицу пользователей в начальном состоянии (на 2023-10-01)
+         // (назначаем массив с начальной структурой таблицы)
+         if ($aCharters=='-'){
+         $aCharters=[                                                          
+            [ 1, 'tve58@inbox.ru', 'x58', '+7921-4524295','20' ],
+            [ 2, 'tve@karelia.ru', 'x00', '+7911-6603087','20' ]
+         ];}       
+         $statement = $pdo->prepare("INSERT INTO [meusers] ".
+            "([uip], [email], [passiv], [phone], [art]) VALUES ".
+            "(:uip,  :email,  :passiv,  :phone,  :art);");
+         foreach ($aCharters as
+             [$uip,  $email,  $passiv,  $phone,  $art])
+         $statement->execute([
+            "uip"    => $uip, 
+            "email"  => $email, 
+            "passiv" => $passiv, 
+            "phone"  => $phone, 
+            "art"    => $art
+         ]);
+         // Создаем индекс по email в таблице пользователей      
+         $sql='CREATE INDEX IF NOT EXISTS iemail ON meusers (email)';
+         $st = $pdo->query($sql);
+      }
       $pdo->commit();
    } 
    catch (Exception $e) 
