@@ -72,6 +72,10 @@ echo '<form method="get" action="'.$this->urlHome.'">';
 <?php 
 echo '</form>';
 ?>
+
+
+
+
 <footer>
    По мотивам <a href="https://codepen.io/alvaromontoro/pen/bmwmKJ">Alvaro Montoro</a>
    <!-- -->

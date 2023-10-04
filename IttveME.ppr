@@ -546,7 +546,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				+TArticlesMaker
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -612,7 +612,7 @@ IttveMe
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\getDescript.php
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
@@ -767,16 +767,17 @@ IttveMe
 0=www\index.php
 1=www\iniMem.php
 2=www\UpSite.php
-3=www\ttools\TEntryClass\InteractiveSpooky.php
-4=www\ttools\TEntryClass\EntryClass.php
-5=www\Common.php
-6=www\ttools\TMenuLeader\MenuLeaderClass.php
-7=www\ttools\TTinyGallery\TinyGalleryClass.php
-8=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-9=www\ttools\TTinyGallery\Dispatch_HEAD.php
+3=www\ttools\TEntryClass\EntryClass.php
+4=www\ttools\TTinyGallery\TinyGalleryClass.php
+5=www\ttools\TArticlesMaker\ArticlesMakerClass.php
+6=www\ttools\TEntryClass\EntryTable.php
+7=www\ttools\TArticlesMaker\CommonArticlesMaker.php
+8=www\ttools\TEntryClass\InteractiveSpooky.css
+9=www\ttools\TEntryClass\InteractiveSpooky.php
+10=www\ttools\TEntryClass\InteractiveSpooky.js
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\ttools\TEntryClass\InteractiveSpooky.js
 [www\index.php]
 TopLine=129
 Caret=12,168
@@ -786,24 +787,27 @@ Caret=1,167
 [www\UpSite.php]
 TopLine=66
 Caret=43,81
-[www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=35
-Caret=1,48
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=25
-Caret=1,52
-[www\Common.php]
-TopLine=1
-Caret=1,10
-[www\ttools\TMenuLeader\MenuLeaderClass.php]
-TopLine=105
-Caret=45,178
+TopLine=41
+Caret=10,51
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=323
 Caret=1,341
 [www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=343
-Caret=1,374
-[www\ttools\TTinyGallery\Dispatch_HEAD.php]
+TopLine=411
+Caret=1,438
+[www\ttools\TEntryClass\EntryTable.php]
+TopLine=10
+Caret=1,90
+[www\ttools\TArticlesMaker\CommonArticlesMaker.php]
+TopLine=14
+Caret=1,1
+[www\ttools\TEntryClass\InteractiveSpooky.css]
 TopLine=1
-Caret=52,35
+Caret=1,138
+[www\ttools\TEntryClass\InteractiveSpooky.php]
+TopLine=41
+Caret=41,53
+[www\ttools\TEntryClass\InteractiveSpooky.js]
+TopLine=1
+Caret=4,23

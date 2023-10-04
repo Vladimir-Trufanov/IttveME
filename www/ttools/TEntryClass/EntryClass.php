@@ -49,6 +49,7 @@ class Entrying
       if (\prown\isComRequest(mmlVojti))
       {
          require_once "InteractiveSpooky.php"; 
+         //require_once "i2.php"; 
       }
 
       /*
