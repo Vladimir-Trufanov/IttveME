@@ -5,10 +5,10 @@
 // ****************************************************************************
 // * ittve.me                           Войти или зарегистрироваться на сайте * 
 // ****************************************************************************
-
-
-// v1.1, 03.10.2023                                  Автор:       Труфанов В.Е. 
-// Copyright © 2019 tve                              Дата создания:  05.03.2019 
+// *                                                                          *
+// * v1.1, 03.10.2023                              Автор:       Труфанов В.Е. *
+// * Copyright © 2022 tve                          Дата создания:  01.10.2022 *
+// ****************************************************************************
 
 class Entrying
 {
@@ -45,13 +45,20 @@ class Entrying
       ';
    }
    public function Body() 
-   {
+   { 
+      if (\prown\isComRequest(mmlVojti))
+      {
+         require_once "InteractiveSpooky.php"; 
+      }
+
+      /*
       require_once "InteractiveSpooky.php"; 
       require_once "EntryTable.php"; 
       // При необходимости создаём таблицу пользователей ittve.me в базе данных 
       $pdo=_BaseConnect($this->basename,$this->username,$this->password);
       CreateMeUsers($pdo,'-');
-
+      */
+      
       //require_once "EmailRegistration.php"; 
       
       /*

@@ -87,7 +87,7 @@ echo 'Заполняем форму ввода сведений!<br>';
 
 echo '<form method="get" action="'.$this->urlHome.'">';
 ?> 
-        <p><input type="hidden"   name="Com" value="vojti-ili-zaregistrirovatsya"></p>
+        <p><input type="hidden"   name="Com" value="vojti"></p>
         <p>Логин: <input type="text" name="login"> <samp style="color:red">*</samp></p>
         <p>EMail: <input type="email" name="email"><samp style="color:red">*</samp></p>
         <p>Пароль: <input type="password" name="pass"><samp style="color:red">*</samp></p>

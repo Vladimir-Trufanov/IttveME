@@ -52,8 +52,8 @@ function CreateMeUsers($pdo,$aCharters)
          // (назначаем массив с начальной структурой таблицы)
          if ($aCharters=='-'){
          $aCharters=[                                                          
-            [ 1, 'tve58@inbox.ru', 'x58', '+7921-4524295','20' ],
-            [ 2, 'tve@karelia.ru', 'x00', '+7911-6603087','20' ]
+            [ 1, 'tve58@inbox.ru', 'x58-315A', '+7921-4524295','20' ],
+            [ 2, 'tve@karelia.ru', 'x00-315A', '+7911-6603087','20' ]
          ];}       
          $statement = $pdo->prepare("INSERT INTO [meusers] ".
             "([uip], [email], [passiv], [phone], [art]) VALUES ".
@@ -218,7 +218,7 @@ function aViewLevel($array)
    echo '<pre>';
    // Выводим шапку
    echo '<table border=2>';
-   echo '<tr>';
+   eÿ o  䱦翴 >';
    echo '<td>UID</td>'; 
    echo '<td>'.str_pad('PID',4," ",STR_PAD_LEFT).'</td>'; 
    echo '<td> NAMEART</td>'; 

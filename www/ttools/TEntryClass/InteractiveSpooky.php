@@ -9,7 +9,7 @@
 //                                                   Дата создания:  04.02.2023
 // Copyright © 2023 tve                              Посл.изменение: 25.09.2023
 
-echo '<form method="post" action="#">';
+echo '<form method="get" action="'.$this->urlHome.'">';
 ?>
 
    <svg width="200px" height="200px" viewBox="0 0 200 200" aria-labelledby="svg-desc">
@@ -43,7 +43,10 @@ echo '<form method="post" action="#">';
    </g>
   
    </svg>
-   
+ 
+   <!--
+   <p><input type="hidden"   name="Com" value="vojti"></p>
+    -->
    <fieldset id="email-field" class="with-placeholder">
       <legend>Email</legend>
       <div>

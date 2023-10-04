@@ -121,6 +121,7 @@ require_once "ttools/TMenuLeader/MenuLeaderClass.php";
 require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once("ttools/TArticlesMaker/CommonArticlesMaker.php"); 
 require_once "ttools/TEntryClass/EntryClass.php";
+require_once "ttools/TEntryClass/EntryTable.php"; 
 require_once "ttools/TTinyGallery/TinyGalleryClass.php";
 require_once "ttools/TKwinGallery/KwinGalleryClass.php";
 
@@ -140,21 +141,42 @@ $s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);
 // echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
 // echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
 
+// Определяем данные для работы с базой данных материалов 
+$basename=$SiteHost.'/Base'.'/ittve';           // имя базы без расширения 'db3'
+$email='tve@karelia.ru';                        // email посетителя
+$username='tve';                                // логин посетителя для авторизации
+$password='23ety17'; 
+// Подключаем объект единообразного вывода сообщений
+$note=new ttools\Notice();
+// Подключаем объекты для работы с базой данных материалов и пользователей 
+$Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
+$Entry=new ttools\Entrying($urlHome,$basename,$username,$password); 
+// При необходимости создаем базу данных материалов
+$BaseCreate='Exist';
+if (!file_exists($basename.'.db3')) 
+{
+   $Arti->BaseFirstCreate();
+   $BaseCreate='Yes';
+}
+$Arti->setKindMessage($note);
+// При отсутствии создаём таблицу пользователей ittve.me в базе данных 
+$pdo=ttools\_BaseConnect($basename,$username,$password);
+ttools\CreateMeUsers($pdo,'-'); 
 // Если после авторизации изменилось имя пользователя,
 // то перенастраиваем счетчики и посетителя
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин посетителя
 $c_Pass=prown\MakeCookie('Pass',"Гость",tStr,true);         // пароль посетителя
-
-$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true); // логин посетителя после входа-регистрации
-$c_PersPass=prown\MakeCookie('PersPass',"Гость",tStr,true); // пароль посетителя после входа-регистрации
-if ($c_PersName<>$c_UserName)
+$c_PersName=prown\getComRequest('email');
+if ($c_PersName<>NULL) 
 {
-   $c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);
-   $s_Counter=prown\MakeSession('Counter',1,tInt); 
-   $c_UserName=prown\MakeCookie('UserName',$c_PersName,tStr); 
-   $c_Pass=prown\MakeCookie('Pass',$c_PersPass,tStr);        
+   if ($c_PersName<>$c_UserName)
+   {
+      $c_UserName=prown\MakeCookie('UserName',$c_PersName,tStr); 
+      $c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);
+      $s_Counter=prown\MakeSession('Counter',1,tInt); 
+      $c_Pass=prown\MakeCookie('Pass',prown\getComRequest('password'),tStr);        
+   }
 }
-
 // Меняем кукис ориентации устройства 
 $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr,true);             // ориентация устройства
 if (IsSet($_GET["orient"]))
@@ -193,27 +215,6 @@ else
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
 $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - разворачивать новости при загрузке
 */
-
-// Определяем данные для работы с базой данных материалов 
-$basename=$SiteHost.'/Base'.'/ittve';           // имя базы без расширения 'db3'
-$email='tve@karelia.ru';                        // email посетителя
-$username='tve';                                // логин посетителя для авторизации
-$password='23ety17'; 
-
-// Подключаем объект единообразного вывода сообщений
-$note=new ttools\Notice();
-// Подключаем объекты для работы с базой данных материалов и пользователей 
-$Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
-$Entry=new ttools\Entrying($urlHome,$basename,$username,$password); 
-
-// При необходимости создаем базу данных материалов
-$BaseCreate='Exist';
-if (!file_exists($basename.'.db3')) 
-{
-   $Arti->BaseFirstCreate();
-   $BaseCreate='Yes';
-}
-$Arti->setKindMessage($note);
 // Добавляем в базу данных материалов запись для вызова новой игры 
 // при инициирующей это версии сайта
 if (versi==32)
