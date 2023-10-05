@@ -82,7 +82,7 @@ RewriteRule ^com-zhizn-i-puteshestviya$                  ?Com=zhizn-i-puteshestv
 RewriteRule ^com-vybrat-sleduyushchij-material$          ?Com=vybrat-sleduyushchij-material [L]
 RewriteRule ^com-vernutsya-k-predydushchej-state$        ?Com=vernutsya-k-predydushchej-state [L]
 RewriteRule ^com-otpravit-avtoru-soobshchenie$           ?Com=otpravit-avtoru-soobshchenie [L]
-RewriteRule ^com-vojti-ili-zaregistrirovatsya$           ?Com=vojti-ili-zaregistrirovatsya [L]
+RewriteRule ^com-vojti$                                  ?Com=vojti [L]
 ## Преобразовываем URL-запросы командных страниц 2 ряда:
 RewriteRule ^com-prochitat-o-sajte-izmenit-nastrojki$    ?Com=prochitat-o-sajte-izmenit-nastrojki [L]
 RewriteRule ^com-sozdat-material-ili-redaktirovat$       ?Com=sozdat-material-ili-redaktirovat [L]

@@ -13,7 +13,7 @@
 const mBolee8       = "Символов в поле должно быть более 8";
 const mNeruss       = "Не должно быть русских букв (Мы их все равно любим!)";
 const mNelatPropisi = "Не должно быть прописных (больших) латинских букв";
-const mEmneformat   = "Адрес email не соответствует формату [a-z]@[a-z].[a-z] \r\n (например: tve@karelia.ru, tve58@inbox.ru)";
+const mEmneformat   = "Адрес email не соответствует разрешённому формату \r\n (например: tve@karelia.ru, tve58@inbox.ru)";
 const mParolBolee8  = "Набранный пароль должен содержать более 8 символов";
 const mNumbers      = "Должны присутствовать цифры (одна или более)";
 const mSpecsim      = "Должен присутствовать хотя бы один специальный символ,  \r\n например из набора +-*_#@!?%&$~%^";
@@ -137,7 +137,7 @@ const emailCtrl = document.getElementById("email");
 emailCtrl.addEventListener("input", (event) => 
 {
    // Определяем формат email и проверяем по регулярному выражению 
-   var remail=/([a-z]+)@([a-z]+)\.([a-z]+)/;
+   var remail=/([a-z0-9]+)@([a-z0-9]+)\.([a-z]+)/;
    var OK=remail.exec(emailCtrl.value);
    // Делаем проверку на число символов в поле ввода
    if (emailCtrl.value.length<8) emailCtrl.setCustomValidity(mBolee8)
