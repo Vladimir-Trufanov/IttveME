@@ -290,7 +290,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			-Jsx
+			+Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -597,8 +597,8 @@ IttveMe
 					www\ttools\TEntryClass\InteractiveSpooky.php
 					www\ttools\TEntryClass\license.txt
 					www\ttools\TEntryClass\README.txt
-				-TGames
-					-PairedCards
+				+TGames
+					+PairedCards
 						www\ttools\TGames\PairedCards\bg.jpg
 						www\ttools\TGames\PairedCards\deck.png
 						www\ttools\TGames\PairedCards\matchgame.css
@@ -797,17 +797,17 @@ Caret=1,341
 TopLine=411
 Caret=1,438
 [www\ttools\TEntryClass\EntryTable.php]
-TopLine=10
-Caret=1,90
+TopLine=60
+Caret=33,95
 [www\ttools\TArticlesMaker\CommonArticlesMaker.php]
 TopLine=14
 Caret=1,1
 [www\ttools\TEntryClass\InteractiveSpooky.css]
-TopLine=1
+TopLine=99
 Caret=1,138
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=41
-Caret=41,53
+TopLine=1
+Caret=47,62
 [www\ttools\TEntryClass\InteractiveSpooky.js]
 TopLine=1
-Caret=4,23
+Caret=1,87

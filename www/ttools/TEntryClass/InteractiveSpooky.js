@@ -8,21 +8,19 @@
 // * Copyright © 2023 tve                           Дата создания: 01.04.2023 *
 // ****************************************************************************
 
-document.querySelectorAll("fieldset.with-placeholder input").forEach(function (el, idx) 
-{
-   el.addEventListener("focus", function () 
-   {
-      this.parentNode.querySelector(".placeholder").classList.add("active");
-   });
-   el.addEventListener("blur", function () 
-   {
-      if (this.value == "") 
-      {
-         this.parentNode.querySelector(".placeholder").classList.remove("active");
-      }
-   });
-});
+// Добавляем к штатным, дополнительные контроли правильности заполнения адреса электронной почты и пароля
+// (по опыту лучше их вставлять в обработчик addEventListener нежели в blur)
+const mBolee8       = "Символов в поле должно быть более 8";
+const mNeruss       = "Не должно быть русских букв (Мы их все равно любим!)";
+const mNelatPropisi = "Не должно быть прописных (больших) латинских букв";
+const mEmneformat   = "Адрес email не соответствует формату [a-z]@[a-z].[a-z] \r\n (например: tve@karelia.ru, tve58@inbox.ru)";
+const mParolBolee8  = "Набранный пароль должен содержать более 8 символов";
+const mNumbers      = "Должны присутствовать цифры (одна или более)";
+const mSpecsim      = "Должен присутствовать хотя бы один специальный символ,  \r\n например из набора +-*_#@!?%&$~%^";
 
+// ----------------------------------------------------------------------------
+//         Изменить положение глаз при вводе символов в поле редактирования
+// ----------------------------------------------------------------------------
 function updateMouthEyes() 
 {
    if (email.value.length > 0) 
@@ -49,7 +47,64 @@ function updateMouthEyes()
    pupilRight.setAttribute("cx", 78 + movePos);
    pupilLeft.setAttribute("cx", 113 + movePos);
 }
+// ----------------------------------------------------------------------------
+//                     Проверить присутствие русских букв
+// ----------------------------------------------------------------------------
+function isRuss(cValue)
+{ 
+   let Result;
+   // Определяем проверку русских букв
+   let re=/[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ]+/;
+   Result=re.exec(cValue);
+   return Result;
+}
+// ----------------------------------------------------------------------------
+//                 Проверить присутствие прописных латинских букв
+// ----------------------------------------------------------------------------
+function isLatPropisi(cValue)
+{ 
+   let Result;
+   let re=/[A-Z]+/;
+   Result=re.exec(cValue);
+   return Result;
+}
+// ----------------------------------------------------------------------------
+//                          Проверить присутствие цифр
+// ----------------------------------------------------------------------------
+function isNumbers(cValue)
+{ 
+   let Result;
+   let re=/\d/;
+   Result=re.exec(cValue);
+   return Result;
+}
+// ----------------------------------------------------------------------------
+//                Проверить присутствие специальных символов 
+// ----------------------------------------------------------------------------
+function isSpecsim(cValue)
+{ 
+   let Result;
+   let re=/[\+\-*_#@!%?&=\[\]\{\}~\^\$\(\)\/№\.,:;\\'"`]+/;
+   Result=re.exec(cValue);
+   return Result;
+}
 
+// Поднимаем и уменьшаем подсказку при входе в поле редактирования
+document.querySelectorAll("fieldset.with-placeholder input").forEach(function (el, idx) 
+{
+   el.addEventListener("focus", function () 
+   {
+      this.parentNode.querySelector(".placeholder").classList.add("active");
+   });
+   el.addEventListener("blur", function () 
+   {
+      if (this.value == "") 
+      {
+         this.parentNode.querySelector(".placeholder").classList.remove("active");
+      }
+   });
+});
+// Обеспечиваем движение глазками при вводе email
 var email = document.querySelector("#email");
 email.addEventListener("focus", updateMouthEyes);
 email.addEventListener("input", updateMouthEyes);
@@ -76,19 +131,39 @@ password.addEventListener("blur", function ()
    document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 191,90 194,114 192,125 191,137 172,109 155,116");
    document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 25,92 9,108 11,124 13,141 27,115 48,119");
 });
-// Добавляем к штатным, дополнительные контроли правильности заполнения адреса электронной почты
-// (по опыту лучше их вставлять в обработчик addEventListener нежели в blur)
+
+// Выполняем дополнительный контроль email
 const emailCtrl = document.getElementById("email");
 emailCtrl.addEventListener("input", (event) => 
 {
-   if (emailCtrl.value.length<8)
-   {
-      emailCtrl.setCustomValidity("мало");
-   }
-   else 
-   {
-      emailCtrl.setCustomValidity("");
-   }
+   // Определяем формат email и проверяем по регулярному выражению 
+   var remail=/([a-z]+)@([a-z]+)\.([a-z]+)/;
+   var OK=remail.exec(emailCtrl.value);
+   // Делаем проверку на число символов в поле ввода
+   if (emailCtrl.value.length<8) emailCtrl.setCustomValidity(mBolee8)
+   // Делаем проверку на присутствие русских букв
+   else if (isRuss(emailCtrl.value)) emailCtrl.setCustomValidity(mNeruss)
+   // Делаем проверку на присутствие больших латинских букв"
+   else if (isLatPropisi(emailCtrl.value)) emailCtrl.setCustomValidity(mNelatPropisi)
+   // Делаем проверку по формату: "tve@karelia.ru", "tve58@inbox.ru"
+   else if (!OK) emailCtrl.setCustomValidity(mEmneformat)
+   // Все правильно
+   else emailCtrl.setCustomValidity("");
+});
+// Выполняем дополнительный контроль пароля
+const passCtrl = document.getElementById("password");
+passCtrl.addEventListener("input", (event) => 
+{
+   // Делаем проверку на отсутствие специальных символов
+   if (!isSpecsim(passCtrl.value)) passCtrl.setCustomValidity(mSpecsim+' в пароле: "'+passCtrl.value+'"')
+   // Делаем проверку на число символов в поле ввода
+   else if (passCtrl.value.length<8) passCtrl.setCustomValidity(mParolBolee8+': "'+passCtrl.value+'"')
+   // Делаем проверку на присутствие русских букв
+   else if (isRuss(passCtrl.value)) passCtrl.setCustomValidity(mNeruss+': "'+passCtrl.value+'"')
+   // Делаем проверку на отсутствие цифр
+   else if (!isNumbers(passCtrl.value)) passCtrl.setCustomValidity(mNumbers+': "'+passCtrl.value+'"')
+   // Все правильно
+   else passCtrl.setCustomValidity("");
 });
 
 // *************************************************** InteractiveSpooky.js ***

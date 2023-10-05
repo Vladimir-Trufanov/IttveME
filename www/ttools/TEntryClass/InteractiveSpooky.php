@@ -55,10 +55,11 @@ echo '<form method="get" action="'.$this->urlHome.'">';
       </div>
    </fieldset>
    
-   <fieldset id="password-field">
+   <fieldset id="password-field" class="with-placeholder">
       <legend>Пароль</legend>
       <div>
          <input type="password" name="password" id="password"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required />
+         <div class="placeholder">x58-315A или +ERF*c156789</div>
       </div>
    </fieldset>
    
@@ -72,10 +73,6 @@ echo '<form method="get" action="'.$this->urlHome.'">';
 <?php 
 echo '</form>';
 ?>
-
-
-
-
 <footer>
    По мотивам <a href="https://codepen.io/alvaromontoro/pen/bmwmKJ">Alvaro Montoro</a>
    <!-- -->
