@@ -6,12 +6,12 @@
 // *                              проинициализировать общесайтовые переменные *
 // ****************************************************************************
 
-// v2.2, 13.06.2023                                  Автор:       Труфанов В.Е. 
+// v2.4, 06.10.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2019 tve                              Дата создания:  13.01.2019 
 
 require_once "Common.php";  
 
-// --------------------------------- Межязыковые (PHP-JScript) определения  ---
+// ---------------------------------- Межязыковые (PHP-JScript) определения ---
 define("handmy",        'ittve');       // Сигнатура статей сайта
 
 define("pathPhpPrown",  $SiteHost.'/TPhpPrown/TPhpPrown'); 
@@ -28,9 +28,36 @@ define ("nstOk",        'все в порядке');
 define ("oriLandscape", 'landscape');  // Ландшафтное расположение устройства
 define ("oriPortrait",  'portrait');   // Портретное расположение устройства
 
-// Подключить переменные JavaScript, соответствующие определениям в PHP
+// -------------- Дополнительные контроли адреса электронной почты и пароля ---
+define ("mEmneformat",   'Адрес email не соответствует разрешённому формату \r\n (правильно, например: tve@karelia.ru, tve58@inbox.ru)'); //   
+define ("mBolee8",       "Должно быть быть более 8 символов");     
+define ("mMenee21",      "Не должно быть менее 21 символа");  
+define ("mNoSpace",      "Не должны содержаться пробелы"); 
+define ("mNeruss",       "Не должно быть русских букв (Мы их все равно любим!)");   
+define ("mNelatPropisi", "Не должно быть прописных (больших) латинских букв"); 
+define ("mDalatPropisi", "Должна быть хотя бы одна прописная (большая) латинская буква");  
+define ("mNumbers",      "Должны присутствовать цифры (одна или более)"); 
+define ("mSpecsim",      'Должен присутствовать хотя бы один специальный символ, \r\n например из набора +-*_#@!?%&$~%^'); 
+
+// Подключить переменные и константы JavaScript, соответствующие определениям в PHP
 function DefineJS($SiteHost,$urlHome)
 {
+   // Добавляем к штатным, дополнительные контроли правильности заполнения адреса электронной почты и пароля
+   // (по опыту будем их вставлять в обработчик addEventListener нежели в blur)
+   $defCtrlInput=
+   '<script>'.
+   'const mEmneformat="'   .mEmneformat.'";'.
+   'const mBolee8="'       .mBolee8.'";'.
+   'const mMenee21="'      .mMenee21.'";'.
+   'const mNoSpace="'      .mNoSpace.'";'.
+   'const mNeruss="'       .mNeruss.'";'.
+   'const mNelatPropisi="' .mNelatPropisi.'";'.
+   'const mDalatPropisi="' .mDalatPropisi.'";'.
+   'const mNumbers="'      .mNumbers.'";'.
+   'const mSpecsim="'      .mSpecsim.'";'.
+   '</script>';
+   echo $defCtrlInput;
+
    $define=
    '<script>'.
    'handmy="'              .handmy.'";'.
@@ -99,6 +126,9 @@ define ("fimWhiteGround", 'Обычный белый фон');
 define ("fimColorGround", 'Фон с помощью цветной картинки');    
 define ("fimAnimation",   'Анимационный фон');     
 $aPhoneImg=[fimWhiteGround,fimColorGround,fimAnimation]; 
+
+// Считаем, что iniMem отработает хорошо
+$iniMem=nstOk;
 
 // Подключаем прикладные функции TPhpPrown
 require_once pathPhpPrown."/CommonPrown.php";

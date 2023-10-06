@@ -598,7 +598,7 @@ IttveMe
 					www\ttools\TEntryClass\license.txt
 					www\ttools\TEntryClass\README.txt
 				+TGames
-					+PairedCards
+					-PairedCards
 						www\ttools\TGames\PairedCards\bg.jpg
 						www\ttools\TGames\PairedCards\deck.png
 						www\ttools\TGames\PairedCards\matchgame.css
@@ -612,7 +612,7 @@ IttveMe
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
 					www\ttools\TKwinGallery\sampo.jpg
-				+TMenuLeader
+				-TMenuLeader
 					www\ttools\TMenuLeader\getDescript.php
 					www\ttools\TMenuLeader\MenuLeader.css
 					www\ttools\TMenuLeader\MenuLeaderClass.php
@@ -767,35 +767,27 @@ IttveMe
 0=www\index.php
 1=www\iniMem.php
 2=www\UpSite.php
-3=www\ttools\TTinyGallery\TinyGalleryClass.php
-4=www\ttools\TArticlesMaker\ArticlesMakerClass.php
-5=www\ttools\TArticlesMaker\CommonArticlesMaker.php
-6=www\.htaccess
-7=www\ttools\TEntryClass\InteractiveSpooky.js
+3=www\ttools\TEntryClass\InteractiveSpooky.js
+4=www\UpSiteTTL.php
+5=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\InteractiveSpooky.js
+Selected=www\iniMem.php
 [www\index.php]
-TopLine=129
-Caret=12,168
+TopLine=75
+Caret=1,77
 [www\iniMem.php]
-TopLine=154
-Caret=1,167
+TopLine=1
+Caret=15,9
 [www\UpSite.php]
-TopLine=66
+TopLine=12
 Caret=43,81
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=323
-Caret=1,341
-[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
-TopLine=411
-Caret=1,438
-[www\ttools\TArticlesMaker\CommonArticlesMaker.php]
-TopLine=14
-Caret=1,1
-[www\.htaccess]
-TopLine=72
-Caret=54,85
 [www\ttools\TEntryClass\InteractiveSpooky.js]
 TopLine=1
-Caret=65,16
+Caret=1,13
+[www\UpSiteTTL.php]
+TopLine=11
+Caret=1,1
+[www\UpSiteCSS.php]
+TopLine=23
+Caret=1,54

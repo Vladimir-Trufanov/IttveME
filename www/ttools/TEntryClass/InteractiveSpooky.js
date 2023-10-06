@@ -4,19 +4,12 @@
 // * TPhpTools                               Блок общих функций на JavaScript *
 // *                                         для входа и регистрации на сайте *
 // *                                                                          *
-// * v1.2, 04.10.2023                               Автор:      Труфанов В.Е. *
+// * v1.3, 06.10.2023                               Автор:      Труфанов В.Е. *
 // * Copyright © 2023 tve                           Дата создания: 01.04.2023 *
 // ****************************************************************************
 
 // Добавляем к штатным, дополнительные контроли правильности заполнения адреса электронной почты и пароля
-// (по опыту лучше их вставлять в обработчик addEventListener нежели в blur)
-const mBolee8       = "Символов в поле должно быть более 8";
-const mNeruss       = "Не должно быть русских букв (Мы их все равно любим!)";
-const mNelatPropisi = "Не должно быть прописных (больших) латинских букв";
-const mEmneformat   = "Адрес email не соответствует разрешённому формату \r\n (например: tve@karelia.ru, tve58@inbox.ru)";
-const mParolBolee8  = "Набранный пароль должен содержать более 8 символов";
-const mNumbers      = "Должны присутствовать цифры (одна или более)";
-const mSpecsim      = "Должен присутствовать хотя бы один специальный символ,  \r\n например из набора +-*_#@!?%&$~%^";
+// (по опыту лучше их вставлять в обработчик addEventListener нежели в blur) ----------------- iniMem.php
 
 // ----------------------------------------------------------------------------
 //         Изменить положение глаз при вводе символов в поле редактирования
@@ -53,7 +46,6 @@ function updateMouthEyes()
 function isRuss(cValue)
 { 
    let Result;
-   // Определяем проверку русских букв
    let re=/[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ]+/;
    Result=re.exec(cValue);
    return Result;
@@ -65,6 +57,16 @@ function isLatPropisi(cValue)
 { 
    let Result;
    let re=/[A-Z]+/;
+   Result=re.exec(cValue);
+   return Result;
+}
+// ----------------------------------------------------------------------------
+//                      Проверить присутствие пробелов
+// ----------------------------------------------------------------------------
+function isSpaces(cValue)
+{ 
+   let Result;
+   let re=/[\s]+/;
    Result=re.exec(cValue);
    return Result;
 }
@@ -139,8 +141,11 @@ emailCtrl.addEventListener("input", (event) =>
    // Определяем формат email и проверяем по регулярному выражению 
    var remail=/([a-z0-9]+)@([a-z0-9]+)\.([a-z]+)/;
    var OK=remail.exec(emailCtrl.value);
-   // Делаем проверку на число символов в поле ввода
+   // Делаем проверки на число символов в поле ввода
    if (emailCtrl.value.length<8) emailCtrl.setCustomValidity(mBolee8)
+   else if (emailCtrl.value.length>21) emailCtrl.setCustomValidity(mMenee21)
+   // Проверяем присутствие пробелов
+   else if (isSpaces(emailCtrl.value)) emailCtrl.setCustomValidity(mNoSpace)
    // Делаем проверку на присутствие русских букв
    else if (isRuss(emailCtrl.value)) emailCtrl.setCustomValidity(mNeruss)
    // Делаем проверку на присутствие больших латинских букв"
@@ -157,7 +162,12 @@ passCtrl.addEventListener("input", (event) =>
    // Делаем проверку на отсутствие специальных символов
    if (!isSpecsim(passCtrl.value)) passCtrl.setCustomValidity(mSpecsim+' в пароле: "'+passCtrl.value+'"')
    // Делаем проверку на число символов в поле ввода
-   else if (passCtrl.value.length<8) passCtrl.setCustomValidity(mParolBolee8+': "'+passCtrl.value+'"')
+   else if (passCtrl.value.length<8) passCtrl.setCustomValidity(mBolee8+': "'+passCtrl.value+'"')
+   else if (passCtrl.value.length>21) passCtrl.setCustomValidity(mMenee21+': "'+passCtrl.value+'"')
+   // Проверяем присутствие пробелов
+   else if (isSpaces(passCtrl.value)) passCtrl.setCustomValidity(mNoSpace+': "'+passCtrl.value+'"')
+   // Проверяем присутствие хотя бы одной прописной латинской буквы
+   else if (!isLatPropisi(passCtrl.value)) passCtrl.setCustomValidity(mDalatPropisi+': "'+passCtrl.value+'"')
    // Делаем проверку на присутствие русских букв
    else if (isRuss(passCtrl.value)) passCtrl.setCustomValidity(mNeruss+': "'+passCtrl.value+'"')
    // Делаем проверку на отсутствие цифр

@@ -51,7 +51,8 @@ echo '
 // Подключаем обнаружение ориентации устройства по завершению загрузки страницы
 ?> <script>
 xOrient="<?php echo $c_Orient;?>";
-$(document).ready(function() {
+$(document).ready(function() 
+{
    window.addEventListener('orientationchange',doOnOrientationChange);
    OnOrientationChange(xOrient);
 });
