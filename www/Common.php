@@ -19,9 +19,6 @@ define ('mmlVernutsyaNaGlavnuyu',        'vernutsya-na-glavnuyu-stranicu');     
 
 define ('mmlOtpravitAvtoruSoobshchenie', 'otpravit-avtoru-soobshchenie');        // 5 из главной
 define ('mmlVojti',                      'vojti');                               // 6 из главной
-define ('mmlPropustit',                  'propustit');                           // вход подтвержден, пропустить
-define ('mmlZaregistrirovatsya',         'zaregistrirovatsya');  
-define ('mmlPodtverdit',                 'podtverdit');  
 
 define ('mmlIzmenitNastrojkiSajta',      'prochitat-o-sajte-izmenit-nastrojki'); // 7 из 3    
 define ('mmlSozdatRedaktirovat',         'sozdat-material-ili-redaktirovat');    // 8 из 3
@@ -35,6 +32,13 @@ define ('mmlNaznachitStatyu',            'naznachit-statyu');                   
 define ('mmlUdalitMaterial',             'udalit-material');                     // 14 из 8
 define ('mmlRedaktiOpisanie',            'redaktirovat-opisanie-stati');         // 15 из 12
 define ('mmlSohranitNovyjMaterial',      'sohranit-novyj-material');             // 16 из 12
+
+// -- Значения параметра enMode URL-запросов для этапов ввода и регистрации ---
+//                                        NULL                                   Выполнить ввод email и пароля (зарегистрироваться)
+define ('entProverit',                   'proverit');                        //  Проверить пароль и email 
+define ('entPropustit',                  'propustit');                       //  Пропустить на сайт с новым паролем, или как гостя
+define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
+define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт
 
 /*
 // ---------------------------------------- Результат проверки URI страницы ---

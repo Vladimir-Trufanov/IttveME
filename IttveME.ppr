@@ -676,7 +676,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -770,18 +770,21 @@ IttveMe
 3=www\ttools\TEntryClass\InteractiveSpooky.js
 4=www\UpSiteTTL.php
 5=www\UpSiteCSS.php
+6=www\ttools\TEntryClass\EntryClass.php
+7=www\ttools\TTinyGallery\TinyGalleryClass.php
+8=www\Common.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\Common.php
 [www\index.php]
-TopLine=75
-Caret=1,77
+TopLine=87
+Caret=28,108
 [www\iniMem.php]
-TopLine=1
-Caret=15,9
+TopLine=71
+Caret=18,259
 [www\UpSite.php]
-TopLine=12
-Caret=43,81
+TopLine=31
+Caret=27,54
 [www\ttools\TEntryClass\InteractiveSpooky.js]
 TopLine=1
 Caret=1,13
@@ -791,3 +794,12 @@ Caret=1,1
 [www\UpSiteCSS.php]
 TopLine=23
 Caret=1,54
+[www\ttools\TEntryClass\EntryClass.php]
+TopLine=31
+Caret=1,1
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=497
+Caret=44,530
+[www\Common.php]
+TopLine=8
+Caret=31,40
