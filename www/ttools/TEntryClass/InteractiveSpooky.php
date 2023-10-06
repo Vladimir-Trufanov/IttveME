@@ -72,6 +72,20 @@ echo '<form method="get" action="'.$this->urlHome.'">';
 
 <?php 
 echo '</form>';
+
+/*
+echo '<form method="get" action="'.$this->urlHome.'">';
+echo '
+  <div>
+     <input type="submit" name="registry" id="registry" value="Зарегистрироваться"/>
+  </div>
+';
+*/
+echo '</form>';
+
+
+
+
 ?>
 <footer>
    По мотивам <a href="https://codepen.io/alvaromontoro/pen/bmwmKJ">Alvaro Montoro</a>
