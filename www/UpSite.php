@@ -76,7 +76,7 @@ if ($BaseCreate<>'Yes')
          // echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
 
          // Выводим строку с контрольным транслитом
-         echo (prown\getTranslit('Пропустить'));
+         echo (prown\getTranslit('Транзисторы'));
          // При отладке выводим пароль
          if ($c_Pass==NULL) echo(' NULL'); else echo(' '.$c_Pass);
 

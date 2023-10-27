@@ -45,8 +45,13 @@ echo '<form method="get" action="'.$this->urlHome.'">';
    </svg>
  
    <!--
-   <p><input type="hidden"   name="Com" value="vojti"></p>
     -->
+   
+   <?php 
+   echo '<input type="hidden"   name="Com" value="vojti">';
+   echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
+   ?>
+
    <fieldset id="email-field" class="with-placeholder">
       <legend>Email</legend>
       <div>

@@ -43,6 +43,14 @@ class Entrying
          }
          </style>
       ';
+      
+      if (\prown\isComRequest(entProverit,'enMode')) 
+      {
+         ?>
+         <link rel="stylesheet" href="ttools/TEntryClass/LoginScreen.css">
+         <script src="ttools/TEntryClass/LoginScreen.js"></script>
+         <?php
+      }
    }
    
    // *************************************************************************
@@ -137,7 +145,8 @@ class Entrying
    // *************************************************************************
    private function enMode_entProverit() 
    {
-      echo '*** enMode_entProverit ***<br>';
+      echo '*** enMode_entProverit='.entProverit.'***<br>';
+      require_once "LoginScreen.php"; 
    } 
    // *************************************************************************
    // *     Пропустить пользователя на сайт с новым паролем, или как гостя    * 

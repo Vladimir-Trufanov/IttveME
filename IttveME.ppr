@@ -20,6 +20,8 @@ IttveMe
 	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
+			BpWin\Выполнить вход и регистрацию на сайте.bp1
+			BpWin\Концепция четвертой версии сайта.bp1
 		-Favicon
 			-favicon260x260
 				Favicon\favicon260x260\android-chrome-192x192.png
@@ -290,7 +292,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -589,6 +591,8 @@ IttveMe
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
 				+TEntryClass
+					-_LoginScreen
+						www\ttools\TEntryClass\_LoginScreen\index.html
 					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.php
 					www\ttools\TEntryClass\EntryTable.php
@@ -596,8 +600,11 @@ IttveMe
 					www\ttools\TEntryClass\InteractiveSpooky.js
 					www\ttools\TEntryClass\InteractiveSpooky.php
 					www\ttools\TEntryClass\license.txt
+					www\ttools\TEntryClass\LoginScreen.css
+					www\ttools\TEntryClass\LoginScreen.js
+					www\ttools\TEntryClass\LoginScreen.php
 					www\ttools\TEntryClass\README.txt
-				+TGames
+				-TGames
 					-PairedCards
 						www\ttools\TGames\PairedCards\bg.jpg
 						www\ttools\TGames\PairedCards\deck.png
@@ -676,7 +683,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -767,47 +774,47 @@ IttveMe
 0=www\index.php
 1=www\iniMem.php
 2=www\UpSite.php
-3=www\ttools\TEntryClass\InteractiveSpooky.js
-4=www\UpSiteTTL.php
-5=www\UpSiteCSS.php
-6=www\ttools\TEntryClass\EntryClass.php
-7=www\ttools\TTinyGallery\TinyGalleryClass.php
-8=www\Common.php
-9=www\ttools\TEntryClass\InteractiveSpooky.php
-10=..\TPhpPrown\TPhpPrown\CommonPrown.php
+3=www\ttools\TEntryClass\EntryClass.php
+4=www\Common.php
+5=www\ttools\TEntryClass\InteractiveSpooky.php
+6=www\ttools\TTinyGallery\TinyGalleryClass.php
+7=www\ttools\TEntryClass\EntryTable.php
+8=www\ttools\TEntryClass\LoginScreen.js
+9=www\ttools\TEntryClass\LoginScreen.css
+10=www\ttools\TEntryClass\LoginScreen.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\InteractiveSpooky.php
+Selected=www\ttools\TEntryClass\LoginScreen.js
 [www\index.php]
-TopLine=1
+TopLine=87
 Caret=28,108
 [www\iniMem.php]
-TopLine=109
+TopLine=79
 Caret=18,259
 [www\UpSite.php]
-TopLine=31
-Caret=27,54
-[www\ttools\TEntryClass\InteractiveSpooky.js]
-TopLine=1
-Caret=1,13
-[www\UpSiteTTL.php]
-TopLine=1
-Caret=1,7
-[www\UpSiteCSS.php]
-TopLine=23
-Caret=1,54
+TopLine=87
+Caret=46,79
 [www\ttools\TEntryClass\EntryClass.php]
 TopLine=125
-Caret=7,132
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=503
-Caret=18,502
+Caret=36,149
 [www\Common.php]
-TopLine=6
-Caret=80,37
+TopLine=28
+Caret=21,38
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=51
-Caret=3,83
-[..\TPhpPrown\TPhpPrown\CommonPrown.php]
-TopLine=135
-Caret=23,140
+TopLine=27
+Caret=25,47
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=501
+Caret=1,1
+[www\ttools\TEntryClass\EntryTable.php]
+TopLine=59
+Caret=23,90
+[www\ttools\TEntryClass\LoginScreen.js]
+TopLine=1
+Caret=25,1
+[www\ttools\TEntryClass\LoginScreen.css]
+TopLine=1
+Caret=25,1
+[www\ttools\TEntryClass\LoginScreen.php]
+TopLine=1
+Caret=16,1
