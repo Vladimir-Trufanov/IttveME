@@ -1,5 +1,7 @@
 /*---------- на русском the prefixer -------------*/
-body {
+/*
+body 
+{
   font-family: "Open Sans", sans-serif;
   background-color: #cddc39;
   -webkit-transition: 0.3s;
@@ -8,8 +10,10 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+*/
 
-.login {
+.login 
+{
   position: relative;
   background: #fbfbfb;
   display: block;

@@ -1,5 +1,6 @@
   /*-------- на русском --------*/
-$(document).ready(function(){
+$(document).ready(function()
+{
 
    $('form').find('.btn').on('click',function(){
       $(this).parent().css({

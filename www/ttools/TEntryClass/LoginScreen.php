@@ -15,14 +15,18 @@
 </html>
 -->
 <form class="login">
+  <span class="links">
+    Пароль не найден,<br>
+    что будем делать?
+    <!-- 
+    <a href="#">signup</a>
+    <a href="#">forgot password ?</a>
+    -->
+  </span>
   <div class="form-group">
     <input type="text" class="user" name="user" placeholder="type your user name">
     <input type="password" class="pwd" name="pwd" placeholder="type your password">
   </div>
-  <span class="links">
-    <a href="#">signup</a>
-    <a href="#">forgot password ?</a>
-  </span>
   <br>
   <input type="button" class="btn" value="login">     
 </form>
