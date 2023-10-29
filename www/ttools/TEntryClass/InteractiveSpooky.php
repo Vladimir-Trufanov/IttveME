@@ -49,7 +49,7 @@ echo '<form method="get" action="'.$this->urlHome.'">';
    
    <?php 
    echo '<input type="hidden"   name="Com" value="vojti">';
-   echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
+   echo '<input type="hidden"   name="enMode" value="'.entPropustit.'">';
    ?>
 
    <fieldset id="email-field" class="with-placeholder">
@@ -71,7 +71,7 @@ echo '<form method="get" action="'.$this->urlHome.'">';
    <fieldset id="submit-field">
       <legend></legend>
       <div>
-         <input type="submit" name="submit" id="submit" value="Войти"/>
+         <input type="submit" name="submit" id="submit" value="Войти" onclick="CtrlEmailPass()"/>
       </div>
   </fieldset>
 
@@ -96,7 +96,6 @@ echo '</form>';
    По мотивам <a href="https://codepen.io/alvaromontoro/pen/bmwmKJ">Alvaro Montoro</a>
    <!-- -->
 </footer>
-<script  src="ttools/TEntryClass/InteractiveSpooky.js"></script>
 <?php
 
 // ---------------------------------------------  *** InteractiveSpooky.php ***

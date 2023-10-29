@@ -32,6 +32,7 @@ class Entrying
    {
       ?>
       <link rel="stylesheet" href="ttools/TEntryClass/InteractiveSpooky.css">
+      <script src="ttools/TEntryClass/EntryClass.js"></script>
       <?php
            
       echo'  
@@ -44,11 +45,10 @@ class Entrying
          </style>
       ';
       
-      if (\prown\isComRequest(entProverit,'enMode')) 
+      if (\prown\isComRequest(entZamenit,'enMode')) 
       {
          ?>
          <link rel="stylesheet" href="ttools/TEntryClass/LoginScreen.css">
-         <script src="ttools/TEntryClass/LoginScreen.js"></script>
          <?php
       }
    }
@@ -60,11 +60,10 @@ class Entrying
    { 
       $enMode=\prown\getComRequest('enMode');
       // Если поступила команда на вход в систему по email и паролю, 
-      // то выполняем ввод email и пароля
+      // то выполняем ввод email и пароля, проверяем пароль и email по базе 
+      // данных, принимаем решение: "Пропустить на сайт, как гостя", 
+      // "Заменить пароль" или "Зарегистрироваться"               
       if ($enMode==NULL) $this->enMode_NULL(); 
-      // Проверяем пароль и email по базе данных, принимаем решение: "Пропустить 
-      // на сайт, как гостя", "Заменить пароль" или "Зарегистрироваться"               
-      else if (\prown\isComRequest(entProverit,'enMode')) $this->enMode_entProverit(); 
       // Заменяем пароль 
       else if (\prown\isComRequest(entZamenit,'enMode')) $this->enMode_entZamenit(); 
       // Пропускаем пользователя на сайт с новым паролем, или как гостя 
