@@ -180,7 +180,7 @@ $password='23ety17';
 $note=new ttools\Notice();
 // Подключаем объекты для работы с базой данных материалов и пользователей 
 $Arti=new ttools\ArticlesMaker($basename,$username,$password,$note);
-$Entry=new ttools\Entrying($urlHome,$basename,$username,$password); 
+$Entry=new ttools\Entrying($urlHome,$basename,$username,$password,$note); 
 // При необходимости создаем базу данных материалов
 $BaseCreate='Exist';
 if (!file_exists($basename.'.db3')) 

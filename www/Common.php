@@ -36,6 +36,7 @@ define ('mmlSohranitNovyjMaterial',      'sohranit-novyj-material');            
 // -- Значения параметра enMode URL-запросов для этапов ввода и регистрации ---
 //                                        NULL                               //  Выполнить ввод email и пароля (зарегистрироваться)
 define ('entPropustit',                  'propustit');                       //  Пропустить на сайт с новым паролем, или как гостя
+define ('entProverit',                   'proverit');                        //  Проверить пароль и email
 define ('entZamenit',                    'zamenit');                         //  Заменить пароль
 define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
 define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт

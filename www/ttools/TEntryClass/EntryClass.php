@@ -6,7 +6,7 @@
 // * ittve.me                           Войти или зарегистрироваться на сайте * 
 // ****************************************************************************
 // *                                                                          *
-// * v2.0, 06.10.2023                              Автор:       Труфанов В.Е. *
+// * v2.1, 30.10.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  01.10.2022 *
 // ****************************************************************************
 
@@ -18,12 +18,13 @@ class Entrying
    protected $username;         // Логин для доступа к базе данных
    protected $password;         // Пароль
    
-   public function __construct($urlHome,$basename,$username,$password) 
+   public function __construct($urlHome,$basename,$username,$password,$note) 
    {
       $this->urlHome=$urlHome;
       $this->basename=$basename;
       $this->username=$username;
       $this->password=$password;
+      $this->note= $note; 
    }
    public function __destruct() 
    {
@@ -60,10 +61,12 @@ class Entrying
    { 
       $enMode=\prown\getComRequest('enMode');
       // Если поступила команда на вход в систему по email и паролю, 
-      // то выполняем ввод email и пароля, проверяем пароль и email по базе 
-      // данных, принимаем решение: "Пропустить на сайт, как гостя", 
-      // "Заменить пароль" или "Зарегистрироваться"               
+      // то выполняем ввод email и пароля
       if ($enMode==NULL) $this->enMode_NULL(); 
+      // Проверяем пароль и email по базе данных, 
+      // принимаем решение: "Пропустить на сайт, как гостя", 
+      // "Заменить пароль" или "Зарегистрироваться"               
+      else if (\prown\isComRequest(entProverit,'enMode')) $this->enMode_entProverit(); 
       // Заменяем пароль 
       else if (\prown\isComRequest(entZamenit,'enMode')) $this->enMode_entZamenit(); 
       // Пропускаем пользователя на сайт с новым паролем, или как гостя 
@@ -164,6 +167,15 @@ class Entrying
    private function enMode_entProverit() 
    {
       echo '*** enMode_entProverit='.entProverit.'***<br>';
+      
+      echo '
+      <div id="screpa">
+      <input id="toggle" type="checkbox">
+      <label id="lbltoggle" class="switch pristine" for="toggle">
+	   <div class="handle">
+      </div>
+      </label>
+      ';
    } 
    // *************************************************************************
    // *                               Заменить пароль                         * 

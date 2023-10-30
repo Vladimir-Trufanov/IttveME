@@ -136,5 +136,171 @@ footer
   font-size: 1rem;
 }
 
+
+#screpa 
+{
+	font-size: 16px;
+	line-height: 1.5;
+
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root 
+{
+	--gray: #969696;
+	--green: #55f655;
+	--dur: 0.5s;
+}
+#screpa 
+{
+	background: #f6c957;
+	display: flex;
+	height: 100vh;
+}
+#toggle 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+}
+.switch, .switch:before, .switch:after {
+	display: block;
+}
+.switch:before, .switch:after, .handle {
+	position: absolute;
+}
+.switch, .switch:before {
+	box-shadow:
+		0 0.15em 0 #fff6 inset,
+		0 0.3em 0 #fff6 inset,
+		0.25em 0 0 #fff6 inset,
+		0 -0.25em 0 #fff6 inset,
+		0 0.5em 0 inset,
+		0.5em 0 0 inset,
+		0 -0.5em 0 inset,
+		0 0.75em 0 #0002 inset,
+		0 0.25em 0 #0002;
+}
+.switch:before, .switch:after {
+	content: "";
+}
+.switch {
+	border-radius: 2em 0 0 2em;
+	color: #969696;
+	cursor: pointer;
+	margin: auto;
+	position: relative;
+	width: 12em;
+	height: 4em;
+	transform: translateX(-2em);
+}
+.switch:before {
+	border-radius: 1.5em 0 0 1.5em;
+	top: 0.5em;
+	right: 0;
+	width: 8em;
+	height: 3em;
+}
+.switch:after {
+	border-radius: 0 1.75em 1.75em 0;
+	box-shadow:
+		0 0.15em 0 #fff6 inset,
+		0 0.3em 0 #fff6 inset,
+		-0.25em 0 0 #fff6 inset,
+		0 -0.25em 0 #fff6 inset,
+		0 0.5em 0 inset,
+		-0.5em 0 0 inset,
+		0 -0.5em 0 inset,
+		0 0.75em 0 #0002 inset,
+		0 0.25em 0 #0002;
+	left: 100%;
+	width: 4em;
+	height: 3.5em;
+}
+.handle {
+	animation: off var(--dur) linear;
+	background-color: var(--gray);
+	background-image:
+		radial-gradient(100% 100% at 65% 65%,#fff6 6.5%,#fff0 7%),
+		radial-gradient(200% 200% at 33% 33%,#fff 4.5%,#fff0 5% 26.5%,#0003 27%);
+	border-radius: 50%;
+	box-shadow:
+		0.1em 0.1em 0 #0002 inset,
+		-0.25em -0.25em 0 #fff3 inset,
+		0 0.5em 0 #0002;
+	top: -0.5em;
+	left: -0.5em;
+	width: 5em;
+	height: 5em;
+	z-index: 1;
+}
+.pristine .handle {
+	animation: none;
+}
+#toggle:checked + .switch .handle {
+	animation: on var(--dur) linear forwards;
+}
+
+@keyframes on {
+	from {
+		transform: translate(0,0) scale(1,1);
+	}
+	10% {
+		transform: translate(1.25em,0) scale(1,1);
+	}
+	20% {
+		transform: translate(3.5em,0) scale(1.1,1.1);
+	}
+	70% {
+		transform: translate(10.5em,0) scale(1.1,1.1);
+	}
+	75% {
+		transform: translate(11em,-0.25em) scale(1,1);
+	}
+	80% {
+		transform: translate(12.5em,-0.25em) scale(1,1);
+	}
+	90% {
+		background-color: var(--gray);
+		transform: translate(11.5em,-0.25em) scale(1,1);
+	}
+	to { 
+		background-color: var(--green);
+		transform: translate(12.25em,-0.25em) scale(1,1);
+	}
+}
+@keyframes off {
+	from {
+		background-color: var(--green);
+		transform: translate(12.25em,-0.25em) scale(1,1);
+	}
+	10% {
+		transform: translate(12.25em,0) scale(1,1);
+	}
+	20% {
+		transform: translate(11.5em,0) scale(1.1,1.1);
+	}
+	70% {
+		transform: translate(3.5em,0) scale(1.1,1.1);
+	}
+	75% {
+		transform: translate(1.25em,0) scale(1,1);
+	}
+	80% {
+		transform: translate(-0.5em,0) scale(1,1);
+	}
+	90% {
+		background-color: var(--green);
+		transform: translate(0.5em,0) scale(1,1);
+	}
+	to {
+		background-color: var(--gray);
+		transform: translate(0,0) scale(1,1);
+	}
+}
+
 /* *********************************************** InteractiveSpooky.css *** */	
 

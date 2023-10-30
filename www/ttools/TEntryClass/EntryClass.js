@@ -117,6 +117,17 @@ $(document).ready(function()
          else passCtrl.setCustomValidity("");
       });
    }
+   
+   // Про скрепку
+   const imgToggle = document.getElementById("toggle");
+   if (imgToggle != null)
+   {
+      imgToggle.addEventListener("change",function()
+      {
+	      let label = document.querySelector("#lbltoggle");
+	      label.classList.remove("pristine");
+      });
+   }
 })
 
 // ****************************************************************************
@@ -204,6 +215,7 @@ function isSpecsim(cValue)
 
 // -------------------------------------- ОБРАБОТКА ВВОДА ЭЛ.ПОЧТЫ И ПАРОЛЯ ---
 
+/*
 function CtrlEmailPass()
 {
    let passiv=$('#password').val();
@@ -236,13 +248,24 @@ function CtrlEmailPass()
          // Если все хорошо, выбираем описание
          else
          {
+            Notice_Info('messa','Оk',true,250);
             //Description=parm.NameGru;
-            Error_Info('Все хорошо!');
+            //Error_Info('Все хорошо!');
+            //alert('Все хорошо!');
+            //setTimeout(function() {location.reload();},2500);
+            
+            $('#DialogWind').html('DialogWind messa');
+            $('#DialogWind').dialog("open");
+
+            $('#ImgDialogWind"').html('ImgDialogWind" messa');
+            $('#ImgDialogWind"').dialog("open");
+
+
          }
       }
    });
-
 }
+*/
 
 // ********************************************************** EntryClass.js ***
 

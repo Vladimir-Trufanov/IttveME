@@ -49,7 +49,7 @@ echo '<form method="get" action="'.$this->urlHome.'">';
    
    <?php 
    echo '<input type="hidden"   name="Com" value="vojti">';
-   echo '<input type="hidden"   name="enMode" value="'.entPropustit.'">';
+   echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
    ?>
 
    <fieldset id="email-field" class="with-placeholder">
@@ -71,7 +71,7 @@ echo '<form method="get" action="'.$this->urlHome.'">';
    <fieldset id="submit-field">
       <legend></legend>
       <div>
-         <input type="submit" name="submit" id="submit" value="Войти" onclick="CtrlEmailPass()"/>
+         <input type="submit" name="submit" id="submit" value="Войти"/>
       </div>
   </fieldset>
 
