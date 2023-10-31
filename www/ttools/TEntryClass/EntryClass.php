@@ -32,7 +32,7 @@ class Entrying
    public function Head() 
    {
       ?>
-      <link rel="stylesheet" href="ttools/TEntryClass/InteractiveSpooky.css">
+      <link rel="stylesheet" href="ttools/TEntryClass/EntryClass.css">
       <script src="ttools/TEntryClass/EntryClass.js"></script>
       <?php
            
@@ -166,16 +166,7 @@ class Entrying
    // *************************************************************************
    private function enMode_entProverit() 
    {
-      echo '*** enMode_entProverit='.entProverit.'***<br>';
-      
-      echo '
-      <div id="screpa">
-      <input id="toggle" type="checkbox">
-      <label id="lbltoggle" class="switch pristine" for="toggle">
-	   <div class="handle">
-      </div>
-      </label>
-      ';
+      require_once "Proverit.php"; 
    } 
    // *************************************************************************
    // *                               Заменить пароль                         * 

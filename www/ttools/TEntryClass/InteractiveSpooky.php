@@ -9,7 +9,8 @@
 //                                                   Дата создания:  04.02.2023
 // Copyright © 2023 tve                              Посл.изменение: 25.09.2023
 
-echo '<form method="get" action="'.$this->urlHome.'">';
+echo '<div id="EntryClass">';
+echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
 ?>
 
    <svg width="200px" height="200px" viewBox="0 0 200 200" aria-labelledby="svg-desc">
@@ -77,6 +78,7 @@ echo '<form method="get" action="'.$this->urlHome.'">';
 
 <?php 
 echo '</form>';
+echo '</div>';
 
 /*
 echo '<form method="get" action="'.$this->urlHome.'">';
@@ -85,8 +87,8 @@ echo '
      <input type="submit" name="registry" id="registry" value="Зарегистрироваться"/>
   </div>
 ';
-*/
 echo '</form>';
+*/
 
 
 

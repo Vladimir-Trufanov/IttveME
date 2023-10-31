@@ -592,11 +592,11 @@ IttveMe
 					www\ttools\TDelCue\DelCueClass.php
 				+TEntryClass
 					www\ttools\TEntryClass\EmailRegistration.php
+					www\ttools\TEntryClass\EntryClass.css
 					www\ttools\TEntryClass\EntryClass.js
 					www\ttools\TEntryClass\EntryClass.php
 					www\ttools\TEntryClass\EntryTable.php
-					www\ttools\TEntryClass\InteractiveSpooky.css
-					www\ttools\TEntryClass\InteractiveSpooky.php
+					www\ttools\TEntryClass\Proverit.php
 					www\ttools\TEntryClass\license.txt
 					www\ttools\TEntryClass\LoginScreen.css
 					www\ttools\TEntryClass\LoginScreen.js
@@ -774,13 +774,13 @@ IttveMe
 2=www\UpSite.php
 3=www\ttools\TEntryClass\EntryClass.php
 4=www\Common.php
-5=www\ttools\TEntryClass\InteractiveSpooky.php
+5=www\ttools\TEntryClass\Proverit.php
 6=www\ttools\TTinyGallery\TinyGalleryClass.php
 7=www\ttools\TEntryClass\EntryClass.js
-8=www\ttools\TEntryClass\InteractiveSpooky.css
+8=www\ttools\TEntryClass\EntryClass.css
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryClass.js
+Selected=www\ttools\TEntryClass\EntryClass.php
 [www\index.php]
 TopLine=87
 Caret=28,108
@@ -788,23 +788,23 @@ Caret=28,108
 TopLine=174
 Caret=72,183
 [www\UpSite.php]
-TopLine=57
-Caret=46,79
+TopLine=49
+Caret=51,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=153
-Caret=27,174
+TopLine=148
+Caret=1,169
 [www\Common.php]
-TopLine=28
-Caret=21,39
-[www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=65
-Caret=70,74
+TopLine=32
+Caret=28,45
+[www\ttools\TEntryClass\Proverit.php]
+TopLine=1
+Caret=1,15
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=501
 Caret=1,1
 [www\ttools\TEntryClass\EntryClass.js]
 TopLine=99
-Caret=1,127
-[www\ttools\TEntryClass\InteractiveSpooky.css]
-TopLine=235
-Caret=8,243
+Caret=43,4
+[www\ttools\TEntryClass\EntryClass.css]
+TopLine=9
+Caret=27,31

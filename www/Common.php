@@ -41,6 +41,10 @@ define ('entZamenit',                    'zamenit');                         // 
 define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
 define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт
 
+// -------------------------------------- Результат проверки email и пароля ---
+define ('tstEmailNeNajdenen',            'Адрес электронной почты не зарегистрирован'); 
+define ('tstParolNevernyj',              'Пароль неверный');                   
+
 /*
 // ---------------------------------------- Результат проверки URI страницы ---
 define ('xUriOk',      1);   // URI соответствует запросу для тестирования

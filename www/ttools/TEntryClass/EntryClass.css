@@ -1,33 +1,25 @@
-/** HTML5/CSS3, EDGE/CHROME                       *** InteractiveSpooky.css ***
+/** HTML5/CSS3, EDGE/CHROME                              *** EntryClass.css ***
 
  ******************************************************************************
  * ittve.me       Выполнить настройки стилей для входа и регистрации на сайте * 
+ *                                                                            *
+ * v1.2, 31.10.2023                                 Автор:      Труфанов В.Е. *
+ * Copyright © 2023 tve                             Дата создания: 07.01.2023 *
  ******************************************************************************
 
-                                                     Автор:       Труфанов В.Е.
-                                                     Дата создания:  07.01.2023
- Copyright © 2023 tve                                Посл.изменение: 24.09.2023
 */
 
 #Life
 {
-  /* Frankenstein Green? * /
-  --dark-main-color: #57ad68;
-  --darker-main-color: #227744;
-  */
   --dark-main-color: #ee7c11;
   --darker-main-color: #bf6d1c;
-  
-  /*--light-main-color: #293532; */
-  /*--light-main-color: rgba(235,97,35, 0.4)*/ /*#221925*/;
-  /*background: var(--light-main-color);*/
   font-size: 16px;
   margin: 0;
   padding: 0;
   font-family: 'Pacifico';
 }
 
-form 
+#EntryClass 
 {
   display: inline-block;
   background: #f5f5f5;
@@ -43,7 +35,7 @@ form
   border-radius: 4px;
 }
 
-form svg 
+#EntryForm svg
 {
   margin: auto auto;
   display: block;
@@ -147,17 +139,20 @@ footer
 	margin: 0;
 	padding: 0;
 }
+
 :root 
 {
 	--gray: #969696;
 	--green: #55f655;
 	--dur: 0.5s;
 }
+
 #screpa 
 {
-	background: #f6c957;
+	/*background: #f6c957;*/
 	display: flex;
-	height: 100vh;
+	/*height: 100vh;*/
+	height: 100%;
 }
 #toggle 
 {
@@ -302,5 +297,5 @@ footer
 	}
 }
 
-/* *********************************************** InteractiveSpooky.css *** */	
+/* ****************************************************** EntryClass.css *** */	
 
