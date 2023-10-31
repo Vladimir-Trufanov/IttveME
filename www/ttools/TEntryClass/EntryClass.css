@@ -106,6 +106,25 @@ fieldset input
   outline-color: var(--dark-main-color);
 }
 
+#GrayInput 
+{
+  display: block;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 1.8rem;
+  position: relative;
+  outline-color: var(--dark-main-color);
+  
+  border: 0;
+  color: Gainsboro;
+  background: Silver;
+  cursor: not-allowed;
+  font-family: Roboto, K2D, Arial, Verdana, Sans-serif;
+  z-index: 3;
+}
+
 fieldset.with-placeholder input 
 {
   padding: 1.3rem 1rem 0.7rem 1rem;

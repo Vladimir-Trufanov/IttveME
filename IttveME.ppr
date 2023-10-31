@@ -596,11 +596,12 @@ IttveMe
 					www\ttools\TEntryClass\EntryClass.js
 					www\ttools\TEntryClass\EntryClass.php
 					www\ttools\TEntryClass\EntryTable.php
-					www\ttools\TEntryClass\Proverit.php
+					www\ttools\TEntryClass\InteractiveSpooky.php
 					www\ttools\TEntryClass\license.txt
 					www\ttools\TEntryClass\LoginScreen.css
 					www\ttools\TEntryClass\LoginScreen.js
 					www\ttools\TEntryClass\LoginScreen.php
+					www\ttools\TEntryClass\Proverit.php
 					www\ttools\TEntryClass\README.txt
 				-TGames
 					-PairedCards
@@ -778,9 +779,10 @@ IttveMe
 6=www\ttools\TTinyGallery\TinyGalleryClass.php
 7=www\ttools\TEntryClass\EntryClass.js
 8=www\ttools\TEntryClass\EntryClass.css
+9=www\ttools\TEntryClass\LoginScreen.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryClass.php
+Selected=www\ttools\TEntryClass\EntryClass.css
 [www\index.php]
 TopLine=87
 Caret=28,108
@@ -795,16 +797,19 @@ TopLine=148
 Caret=1,169
 [www\Common.php]
 TopLine=32
-Caret=28,45
+Caret=1,43
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=1
-Caret=1,15
+TopLine=29
+Caret=12,38
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=501
 Caret=1,1
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=99
+TopLine=4
 Caret=43,4
 [www\ttools\TEntryClass\EntryClass.css]
-TopLine=9
-Caret=27,31
+TopLine=145
+Caret=12,174
+[www\ttools\TEntryClass\LoginScreen.php]
+TopLine=1
+Caret=25,18
