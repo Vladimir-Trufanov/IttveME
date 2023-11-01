@@ -52,6 +52,18 @@ class Entrying
          <link rel="stylesheet" href="ttools/TEntryClass/LoginScreen.css">
          <?php
       }
+
+      // Проверяем пароль и email по базе данных, 
+      // принимаем решение: "Пропустить на сайт, как гостя", 
+      // "Заменить пароль" или "Зарегистрироваться"               
+      if (\prown\isComRequest(entProverit,'enMode')) 
+      {
+      ?>
+         <script>tstEmailPass();</script>
+      <?php
+      }
+
+
    }
    
    // *************************************************************************

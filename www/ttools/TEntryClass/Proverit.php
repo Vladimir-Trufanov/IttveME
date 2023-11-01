@@ -10,6 +10,7 @@
 // * Copyright © 2023 tve                           Дата создания: 25.09.2023 *
 // ****************************************************************************
 
+/*
 // -------------------------------------- Результат проверки email и пароля ---
 define ('tstEmailNeNajdenen',            'Адрес электронной почты не зарегистрирован'); 
 define ('tstParolNevernyj',              'Пароль неверный');                   
@@ -32,8 +33,14 @@ else
    echo 'gfggfhhjjkdkl<br>';
    echo 'gfggfhhjjkdkl';
 }
+*/
+
+echo '<div id="EntryClass">';
+
+echo 'gfggfhhjjkdkl<br>';
+echo 'gfggfhhjjkdkl';
 ManyLines(2);
-echo '<span id="GrayInput">Зарегистрироваться</span>';
+echo '<span id="GrayInput"> </span>';
 
 ManyLines(6);
 
@@ -48,7 +55,7 @@ echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
 <fieldset id="submit-field">
    <legend></legend>
    <div>
-      <input type="submit" name="submit" id="submit" value="Пройти на сайт, как гость"/>
+      <input type="submit" name="submit" id="submit" value=" "/>
    </div>
 </fieldset>
 <?php 
@@ -80,6 +87,7 @@ function ManyLines($nLine)
       echo '<br>';
    }
 }
+/*
 // ****************************************************************************
 // *                 Проверить пароль и email по базе данных                  *
 // ****************************************************************************
@@ -88,6 +96,7 @@ function tstEmailPassword()
    $Result=tstEmailNeNajdenen;
    return $Result;
 }
+*/
 
 // *********************************************************** Proverit.php ***
 
