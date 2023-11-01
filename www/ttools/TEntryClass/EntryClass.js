@@ -128,7 +128,7 @@ $(document).ready(function()
 	      let label = document.querySelector("#lbltoggle");
 	      label.classList.remove("pristine");
          
-         toggleScrepa(null);
+         //toggleScrepa(null);
          
          /*
          // Если кнопка на скрепке зеленая, то активно 
@@ -149,8 +149,14 @@ $(document).ready(function()
          */
       });
    }
+
+      // Проверяем пароль и email по базе данных, 
+      // принимаем решение: "Пропустить на сайт, как гостя", 
+      // "Заменить пароль" или "Зарегистрироваться"   
    
-   toggleScrepa(tstEmailNeNajdenen);
+   document.getElementById("toggle").checked = true;
+   tstEmailPass();
+
 
 })
 
@@ -244,7 +250,27 @@ function isSpecsim(cValue)
 // ****************************************************************************
 function tstEmailPass()
 {
-   let Result=tstEmailNeNajdenen;
+   let mode=tstEmailNeNajdenen;
+   // Включам константы для состояния 'Адрес электронной почты не зарегистрирован'); 
+   if (mode==tstEmailNeNajdenen)
+   {
+      var eprMessa = 'Адрес электронной почты не зарегистрирован,<br>что будем делать?';
+      var eprGrayInput = 'Зарегистрироваться';
+      var eprInput = 'Пройти на сайт, как гость';
+   }
+   else if (mode==tstParolNevernyj)
+   {
+      var eprMessa = 'Пароль неверный, замените его<br>или пройдите на сайт, как гость';
+      var eprGrayInput = 'Заменить пароль';
+      var eprInput = 'Пройти на сайт, как гость';
+   }
+   else
+   {
+      var eprMessa = 'Ошибка 3498<br>tstEmailPass()';
+      var eprGrayInput = 'eprGrayInput';
+      var eprInput = 'eprInput';
+   }
+   toggleScrepa(mode,eprMessa,eprGrayInput,eprInput);
    console.log('tstEmailPass()');
 }
 // ****************************************************************************
@@ -252,30 +278,39 @@ function tstEmailPass()
 // *                 серой кнопки ("замороженного действия")                  *
 // *                  и кнопки submit ("активного действия")                  *
 // ****************************************************************************
-function toggleScrepa(mode)
+function toggleScrepa(mode,eprMessa,eprGrayInput,eprInput)
 {
    if (mode==null)
    {
       // Если кнопка на скрепке зеленая, то активно 
       if (document.getElementById('toggle').checked) 
       {
+         $('#GrayInput').html(eprInput);
+         $('#submit').attr('value',eprGrayInput);
+         /*
          console.log("checked");
          //$('#submit').html("checked");
          $('#submit').css('color','red');
          $('#submit').attr('value',"checked");
+         */
       } 
       else 
       {
+         $('#GrayInput').html(eprGrayInput);
+         $('#submit').attr('value',eprInput);
+         /*
          console.log("You didn't check it! Let me check it for you.");
          //$('#submit').html("You didn't check it!");
          $('#submit').css('color','blue');
          $('#submit').attr('value',"You didn't check it!");
+         */
       }
    }
-   else if (mode==tstEmailNeNajdenen)
+   else
    {
-      $('#GrayInput').html("Зарегистрироваться");
-      $('#submit').attr('value',"Пройти на сайт, как гость");
+      $('#Messa').html(eprMessa);
+      $('#GrayInput').html(eprGrayInput);
+      $('#submit').attr('value',eprInput);
    }
 }
 

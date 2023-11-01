@@ -36,12 +36,9 @@ else
 */
 
 echo '<div id="EntryClass">';
-
-echo 'gfggfhhjjkdkl<br>';
-echo 'gfggfhhjjkdkl';
+echo '<span id="Messa"> <br> </span>';
 ManyLines(2);
 echo '<span id="GrayInput"> </span>';
-
 ManyLines(6);
 
 echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
@@ -76,6 +73,7 @@ echo '
       </label>
    </div>
 ';
+
 
 // ****************************************************************************
 // *                          Вывести в див пустые строки                     *
