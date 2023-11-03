@@ -35,10 +35,13 @@ else
 }
 */
 
+// Строим разметку страницы для проверки пароля и email по базе данных и
+// принятия решения: "Пропустить на сайт, как гостя", "Заменить пароль" 
+// или "Зарегистрироваться" 
 echo '<div id="EntryClass">';
 echo '<span id="Messa"> <br> </span>';
 ManyLines(2);
-echo '<span id="GrayInput"> </span>';
+echo '<span id="GrayInput" title = "Неактивное действие"> </span>';
 ManyLines(6);
 
 echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
@@ -67,13 +70,17 @@ echo '</div>';
 echo '
    <div id="screpa">
       <input id="toggle" type="checkbox">
-      <label id="lbltoggle" class="switch pristine" for="toggle">
+      <label id="lbltoggle" class="switch pristine" for="toggle" 
+         title = "Нажмите для смены активного действия на кнопке">
 	      <div class="handle">
          </div>
       </label>
    </div>
 ';
-
+// Выполняем обработку страницы js-скриптами
+?>
+<script>proba12();</script>
+<?php
 
 // ****************************************************************************
 // *                          Вывести в див пустые строки                     *

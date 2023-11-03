@@ -39,8 +39,10 @@ define ("mDalatPropisi", "Должна быть хотя бы одна проп�
 define ("mNumbers",      "Должны присутствовать цифры (одна или более)"); 
 define ("mSpecsim",      'Должен присутствовать хотя бы один специальный символ, \r\n например из набора +-*_#@!?%&$~%^'); 
 // -------------------------------------- Результат проверки email и пароля ---
-define ('tstEmailNeNajdenen',            'Адрес электронной почты не зарегистрирован'); 
-define ('tstParolNevernyj',              'Пароль неверный');                   
+define ('tstEmailNeNajdenen',    'Адрес электронной почты не зарегистрирован'); 
+define ('tstParolNevernyj',      'Пароль неверный');                   
+define ('tstEmailParolVerny',    'Пароль и email верны');  
+define ('tstRegistraciiNet',     'Пароль и email не зарегистрированы');                 
 
 // Подключить переменные и константы JavaScript, соответствующие определениям в PHP
 function DefineJS($SiteHost,$urlHome)
@@ -76,6 +78,8 @@ function DefineJS($SiteHost,$urlHome)
    'urlHome="'             .$urlHome.'";'.
    'tstEmailNeNajdenen="'  .tstEmailNeNajdenen.'";'.
    'tstParolNevernyj="'    .tstParolNevernyj.'";'.
+   'tstEmailParolVerny="'  .tstEmailParolVerny.'";'.
+   'tstRegistraciiNet="'   .tstRegistraciiNet.'";'.
    '</script>';
    echo $define;
 }   
