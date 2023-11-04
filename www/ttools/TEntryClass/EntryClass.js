@@ -4,7 +4,7 @@
 // * ittve.me                                Блок общих функций на JavaScript *
 // *                                         для входа и регистрации на сайте *
 // *                                                                          *
-// * v1.5, 31.10.2023                               Автор:      Труфанов В.Е. *
+// * v1.6, 04.11.2023                               Автор:      Труфанов В.Е. *
 // * Copyright © 2023 tve                           Дата создания: 01.04.2023 *
 // ****************************************************************************
 
@@ -210,8 +210,8 @@ function isSpecsim(cValue)
 function tstEmailPass()
 {
    let mode;
-   mode=tstEmailNeNajdenen;
-   //mode=tstParolNevernyj;
+   //mode=tstEmailNeNajdenen;
+   mode=tstParolNevernyj;
    return mode;
 }
 // ****************************************************************************
@@ -286,8 +286,12 @@ function CtrlEmailPass()
    });
 }
 */
-
-function proba12()
+// ****************************************************************************
+// *      Проверить пароль и email по базе данных и подготовить решения:      *
+// *           "Пропустить на сайт, как гостя", "Заменить пароль" или         *
+// *                            "Зарегистрироваться"                          *
+// ****************************************************************************
+function Proverit()
 {
    $(document).ready(function()
    {
@@ -296,7 +300,6 @@ function proba12()
       var eprInput;       // Активное действие по результату проверки
       // Выполняем проверку email и пароля 
       let mode=tstEmailPass();
-
       // Включам константы для состояния 'Адрес электронной почты не зарегистрирован'); 
       if (mode==tstEmailNeNajdenen)
       {
@@ -335,7 +338,7 @@ function proba12()
             toggleScrepa(eprGrayInput,eprInput,eprMessa);
          });
       }
-      console.log(eprMessa);
+      //console.log(eprMessa);
    })
 }
 

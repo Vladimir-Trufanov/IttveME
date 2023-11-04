@@ -3,12 +3,11 @@
  ******************************************************************************
  * ittve.me       Выполнить настройки стилей для входа и регистрации на сайте * 
  *                                                                            *
- * v1.2, 31.10.2023                                 Автор:      Труфанов В.Е. *
+ * v1.3, 04.11.2023                                 Автор:      Труфанов В.Е. *
  * Copyright © 2023 tve                             Дата создания: 07.01.2023 *
  ******************************************************************************
 
 */
-
 #Life
 {
   --dark-main-color: #ee7c11;
@@ -18,7 +17,6 @@
   padding: 0;
   font-family: 'Pacifico';
 }
-
 #EntryClass 
 {
   display: inline-block;
@@ -34,27 +32,23 @@
   box-sizing: border-box;
   border-radius: 4px;
 }
-
 #EntryForm svg
 {
   margin: auto auto;
   display: block;
 }
-
 fieldset 
 {
   border: 0;
   padding: 0;
   margin: 1.2rem 0 0 0;
 }
-
 legend 
 {
   margin: 0;
   padding: 0;
   color: var(--darker-main-color);
 }
-
 fieldset > div 
 {
   border: 3px solid var(--dark-main-color);
@@ -63,13 +57,11 @@ fieldset > div
   margin-top: 0.5rem;
   background: white;
 }
-
 fieldset#submit-field > div 
 {
   border-color: var(--darker-main-color);
   background: var(--darker-main-color);
 }
-
 fieldset .placeholder 
 {
   position: absolute;
@@ -83,14 +75,12 @@ fieldset .placeholder
   color: #666;
   pointer-events: none;
 }
-
 fieldset .placeholder.active 
 {
   font-size: 0.8rem;
   color: #999;
   margin-top: -0.8rem;
 }
-
 fieldset input 
 {
   display: block;
@@ -105,31 +95,10 @@ fieldset input
   z-index: 3;
   outline-color: var(--dark-main-color);
 }
-
-#GrayInput 
-{
-  display: block;
-  width: 100%;
-  height: 50%;
-  box-sizing: border-box;
-  padding: 1rem;
-  font-size: 1.8rem;
-  position: relative;
-  outline-color: var(--dark-main-color);
-  
-  border: 0;
-  color: Gainsboro;
-  background: Silver;
-  cursor: not-allowed;
-  font-family: Roboto, K2D, Arial, Verdana, Sans-serif;
-  z-index: 3;
-}
-
 fieldset.with-placeholder input 
 {
   padding: 1.3rem 1rem 0.7rem 1rem;
 }
-
 fieldset input[type=submit] 
 {
   border: 0;
@@ -137,7 +106,6 @@ fieldset input[type=submit]
   cursor: pointer;
   font-family: Roboto, K2D, Arial, Verdana, Sans-serif;
 }
-
 footer 
 {
   position: absolute;
@@ -146,30 +114,48 @@ footer
   font-family: 'Pacifico';
   font-size: 1rem;
 }
-
-
+/* Стилизация пространства скрепки выбора */
+#GrayInput 
+{
+  display: block;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  outline-color: var(--dark-main-color);
+  
+  border: 0;
+  color: Gainsboro;
+  background: #CACACA;
+  cursor: not-allowed;
+  font-family: Roboto, K2D, Arial, Verdana, Sans-serif;
+  z-index: 3;
+}
+#Messa 
+{
+  display: block;
+  font-size: 2.0rem;
+  text-align: center;
+}
+/* Размещаем пространство для скрепки */
 #screpa 
 {
-	font-size: 16px;
-	line-height: 1.5;
-
 	border: 0;
 	box-sizing: border-box;
+	/*margin: 3rem 0 0 0;*/
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 2rem;
+	display: flex;
+	height: 100%;
 }
-
 :root 
 {
 	--gray: #969696;
 	--green: #55f655;
 	--dur: 0.5s;
-}
-
-#screpa 
-{
-	display: flex;
-	height: 100%;
 }
 #toggle 
 {
@@ -178,6 +164,7 @@ footer
 	left: 0;
 	transform: translateX(-100%);
 }
+/* Стилизуем изображение скрепки */
 .switch, .switch:before, .switch:after {
 	display: block;
 }
@@ -196,10 +183,12 @@ footer
 		0 0.75em 0 #0002 inset,
 		0 0.25em 0 #0002;
 }
-.switch:before, .switch:after {
+.switch:before, .switch:after 
+{
 	content: "";
 }
-.switch {
+.switch 
+{
 	border-radius: 2em 0 0 2em;
 	color: #969696;
 	cursor: pointer;
@@ -209,14 +198,16 @@ footer
 	height: 4em;
 	transform: translateX(-2em);
 }
-.switch:before {
+.switch:before 
+{
 	border-radius: 1.5em 0 0 1.5em;
 	top: 0.5em;
 	right: 0;
 	width: 8em;
 	height: 3em;
 }
-.switch:after {
+.switch:after 
+{
 	border-radius: 0 1.75em 1.75em 0;
 	box-shadow:
 		0 0.15em 0 #fff6 inset,
@@ -232,7 +223,9 @@ footer
 	width: 4em;
 	height: 3.5em;
 }
-.handle {
+/* Управление черно-зеленой кнопкой на скрепке */
+.handle 
+{
 	animation: off var(--dur) linear;
 	background-color: var(--gray);
 	background-image:
@@ -243,16 +236,18 @@ footer
 		0.1em 0.1em 0 #0002 inset,
 		-0.25em -0.25em 0 #fff3 inset,
 		0 0.5em 0 #0002;
-	top: -0.5em;
+   top: -0.5em;
 	left: -0.5em;
 	width: 5em;
 	height: 5em;
 	z-index: 1;
 }
-.pristine .handle {
+.pristine .handle 
+{
 	animation: none;
 }
-#toggle:checked + .switch .handle {
+#toggle:checked + .switch .handle 
+{
 	animation: on var(--dur) linear forwards;
 }
 
