@@ -84,6 +84,31 @@ function CreateMeUsers($pdo,$aCharters)
      throw $e;
    }
 }
+// *************************************************************************
+// * Выбрать запись по идентификатору                                      *
+// *              (например, узнать наименование группы по идентификатору: *
+// *          $table=SelRecord($pdo,$pid); $NameGru=$table[0]['NameArt'];) *
+// *************************************************************************
+function SelRecParema($pdo,$email)
+{
+   /*
+   try
+   {
+      $pdo->beginTransaction();
+      $cSQL='SELECT * FROM meusers WHERE uid='.$UnID;
+      $stmt = $pdo->query($cSQL);
+      $table = $stmt->fetchAll();
+      $pdo->commit();
+   } 
+   catch (\Exception $e) 
+   {
+      $messa=$e->getMessage();
+      $table=array(array("NameArt"=>$messa,"Translit"=>nstErr,));
+      if ($pdo->inTransaction()) $pdo->rollback();
+   }
+   return $table; 
+   */
+}
 // ****************************************************************************
 // *                    Проверить правильность набранного пароля              *
 // ****************************************************************************

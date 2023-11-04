@@ -292,7 +292,7 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
@@ -548,7 +548,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -591,6 +591,7 @@ IttveMe
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
 				+TEntryClass
+					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.css
 					www\ttools\TEntryClass\EntryClass.js
@@ -710,6 +711,7 @@ IttveMe
 			www\.user.ini
 			www\Common.php
 			www\ContactUs.css
+			www\CtrlEmailPass.php
 			www\deleteArt.php
 			www\deleteImg.php
 			www\e404.php
@@ -779,45 +781,49 @@ IttveMe
 6=www\ttools\TTinyGallery\TinyGalleryClass.php
 7=www\ttools\TEntryClass\EntryClass.js
 8=www\ttools\TEntryClass\EntryClass.css
-9=www\ttools\TEntryClass\LoginScreen.php
-10=www\Jsx\WorkTiny.js
-11=www\ttools\TEntryClass\InteractiveSpooky.php
+9=www\Jsx\WorkTiny.js
+10=www\ttools\TEntryClass\CtrlEmailPass.php
+11=www\ttools\TEntryClass\EntryTable.php
+12=www\ttools\TArticlesMaker\ArticlesMakerClass.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TEntryClass\EntryClass.js
 [www\index.php]
-TopLine=108
+TopLine=72
 Caret=28,108
 [www\iniMem.php]
-TopLine=43
-Caret=51,43
+TopLine=181
+Caret=19,192
 [www\UpSite.php]
 TopLine=79
 Caret=50,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=38
-Caret=1,38
+TopLine=67
+Caret=87,74
 [www\Common.php]
 TopLine=16
 Caret=1,43
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=9
-Caret=1,20
+TopLine=2
+Caret=1,16
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=501
-Caret=1,1
+TopLine=187
+Caret=1,206
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=197
-Caret=4,214
+TopLine=233
+Caret=94,248
 [www\ttools\TEntryClass\EntryClass.css]
 TopLine=105
 Caret=22,132
-[www\ttools\TEntryClass\LoginScreen.php]
-TopLine=1
-Caret=25,18
 [www\Jsx\WorkTiny.js]
 TopLine=251
 Caret=1,284
-[www\ttools\TEntryClass\InteractiveSpooky.php]
+[www\ttools\TEntryClass\CtrlEmailPass.php]
+TopLine=7
+Caret=43,18
+[www\ttools\TEntryClass\EntryTable.php]
 TopLine=1
-Caret=1,1
+Caret=23,1
+[www\ttools\TArticlesMaker\ArticlesMakerClass.php]
+TopLine=93
+Caret=23,108

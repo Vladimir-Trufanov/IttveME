@@ -212,6 +212,7 @@ function tstEmailPass()
    let mode;
    //mode=tstEmailNeNajdenen;
    mode=tstParolNevernyj;
+   CtrlEmailPass();
    return mode;
 }
 // ****************************************************************************
@@ -235,19 +236,16 @@ function toggleScrepa(eprGrayInput,eprInput,eprMessa)
    }
 }
 
-/*
 function CtrlEmailPass()
 {
-   let passiv=$('#password').val();
-   let emaili=$('#email').val();
-   //alert('Привет! '+passiv+' -> '+emaili);
-   //let Description='Описания нет!';
+   let passiv=passi;
+   let emaili=email;
    pathphp="CtrlEmailPass.php";
    // Делаем запрос на определение наименования раздела материалов
    $.ajax({
       url: pathphp,
       type: 'POST',
-      data: {pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost},
+      data: {pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost,password:passiv,email:emaili},
       // Выводим ошибки при невозможности выполнении запроса
       error: function (jqXHR,exception,errorMsg) 
       {
@@ -268,24 +266,28 @@ function CtrlEmailPass()
          // Если все хорошо, выбираем описание
          else
          {
-            Notice_Info('messa','Оk',true,250);
-            //Description=parm.NameGru;
-            //Error_Info('Все хорошо!');
             //alert('Все хорошо!');
-            //setTimeout(function() {location.reload();},2500);
+            //alert(messa);
+            alert(parm.NameGru);
+ 
+             //Notice_Info('messa','Оk',true,250);
             
+            //Error_Info('Все хорошо!');
+           //setTimeout(function() {location.reload();},2500);
+            
+            /*
             $('#DialogWind').html('DialogWind messa');
             $('#DialogWind').dialog("open");
 
             $('#ImgDialogWind"').html('ImgDialogWind" messa');
             $('#ImgDialogWind"').dialog("open");
-
+            */
 
          }
       }
    });
 }
-*/
+
 // ****************************************************************************
 // *      Проверить пароль и email по базе данных и подготовить решения:      *
 // *           "Пропустить на сайт, как гостя", "Заменить пароль" или         *
@@ -293,6 +295,9 @@ function CtrlEmailPass()
 // ****************************************************************************
 function Proverit()
 {
+   console.log('email='+email);
+   console.log('passi='+passi);
+
    $(document).ready(function()
    {
       var eprMessa;       // Сообщение по результату проверки email и пароля

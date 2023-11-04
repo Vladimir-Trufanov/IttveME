@@ -25,6 +25,10 @@ class Entrying
       $this->username=$username;
       $this->password=$password;
       $this->note= $note; 
+      // Проверяем, нужно ли заменить файл проверки пароля через аякс в 
+      // корневом каталоге и (при его отсутствии, при несовпадении размеров или
+      // старой дате) загружаем из класса 
+      CompareCopyRoot('CtrlEmailPass.php','ttools/TEntryClass/');
    }
    public function __destruct() 
    {
@@ -67,7 +71,7 @@ class Entrying
       // Проверяем пароль и email по базе данных, 
       // принимаем решение: "Пропустить на сайт, как гостя", 
       // "Заменить пароль" или "Зарегистрироваться"               
-      else if (\prown\isComRequest(entProverit,'enMode')) $this->enMode_entProverit(); 
+      else if (\prown\isComRequest(entProverit,'enMode')) $this->enMode_entProverit();
       // Заменяем пароль 
       else if (\prown\isComRequest(entZamenit,'enMode')) $this->enMode_entZamenit(); 
       // Пропускаем пользователя на сайт с новым паролем, или как гостя 
