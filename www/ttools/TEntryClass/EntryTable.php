@@ -6,23 +6,23 @@
 // * TPhpTools                     Блок функций класса TEntryClass для работы *
 // *                                с таблицей пользователей сайта "ittve.me" *
 // *                                                                          *
-// * v1.1, 03.10.2023                              Автор:       Труфанов В.Е. *
+// * v1.2, 05.11.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  01.10.2023 *
 // ****************************************************************************
 
-// ---_UserFirstCreate($basename,$username,$password,$aCharters)                 - Создать резервную копию базы данных и заново построить новую базу данных
-// ---aRecursLevel(&$array,$data,$pid=0,$level=0)                                - Сформировать массив для представления таблицы до уровня
-// ---aRecursPath(&$array,&$array_idx_lvl,$data,$pid=0,$level=0,$path="")        - Сформировать массив представления таблицы c указанием путей    
-// ---aViewLevel($array)                                                         - Вывести содержимое массива в первом виде - до уровня 
-// ---aViewPath($array)                                                          - Вывести содержимое массива с путями и транслитом  
-// ---cUidPid($Uid,$Pid,$cLast)                                                  - Обеспечить смещение строк меню при отладке 
-// ---sort_link_th($title,$a,$b,$SignAsc,$SignDesc)                              - Включить ссылку в текущую строку таблицы меню с сортировкой по полям
-// ---SpacesOnLevel($lvl,$cLast,$Uid,$Pid,$otlada)                               - Обеспечить иммитацию пробелов смещения строк меню при отладке 
-// CreateMeUsers($pdo,$aCharters)                                                - Создать таблицу пользователей ittve.me в базе данных
-
-// -------------------------------------------------------- ЗАПРОСЫ ПО БАЗЕ ---
-// ---CountPoint($pdo,$ParentID)  - Выбрать число записей по родителю                  
-// ---SelRecord($pdo,$UnID)       - Выбрать запись по идентификатору 
+// Инициализируем константы по результатам проверки email и пароля 
+define('tstEmailNeNajden',      'Адрес электронной почты не зарегистрирован'); 
+define('tstParolNevernyj',      'Пароль неверный');                   
+define('tstEmailParolVerny',    'Пароль и email верны');  
+define('tstErr',                'Произошла ошибка');  
+$tstEmailPass=
+'<script>'.
+   'tstEmailNeNajden="'    .tstEmailNeNajden.'";'.
+   'tstParolNevernyj="'    .tstParolNevernyj.'";'.
+   'tstEmailParolVerny="'  .tstEmailParolVerny.'";'.
+   'tstErr="'              .tstErr.'";'.
+'</script>';
+echo $tstEmailPass;
 
 // ****************************************************************************
 // *          Создать таблицу пользователей ittve.me в базе данных            *
@@ -91,11 +91,10 @@ function CreateMeUsers($pdo,$aCharters)
 // *************************************************************************
 function SelRecParema($pdo,$email)
 {
-   /*
    try
    {
       $pdo->beginTransaction();
-      $cSQL='SELECT * FROM meusers WHERE uid='.$UnID;
+      $cSQL='SELECT * FROM meusers WHERE email='.$email;
       $stmt = $pdo->query($cSQL);
       $table = $stmt->fetchAll();
       $pdo->commit();
@@ -103,11 +102,10 @@ function SelRecParema($pdo,$email)
    catch (\Exception $e) 
    {
       $messa=$e->getMessage();
-      $table=array(array("NameArt"=>$messa,"Translit"=>nstErr,));
+      $table=array(array("phone"=>tstErr,"art"=>$messa,));
       if ($pdo->inTransaction()) $pdo->rollback();
    }
    return $table; 
-   */
 }
 // ****************************************************************************
 // *                    Проверить правильность набранного пароля              *

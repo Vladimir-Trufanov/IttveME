@@ -210,7 +210,7 @@ function isSpecsim(cValue)
 function tstEmailPass()
 {
    let mode;
-   //mode=tstEmailNeNajdenen;
+   //mode=tstEmailNeNajden;
    mode=tstParolNevernyj;
    CtrlEmailPass();
    return mode;
@@ -249,7 +249,8 @@ function CtrlEmailPass()
       // Выводим ошибки при невозможности выполнении запроса
       error: function (jqXHR,exception,errorMsg) 
       {
-         Error_Info(pathphp+': '+SmarttodoError(jqXHR,exception));
+         //Error_Info(pathphp+': '+SmarttodoError(jqXHR,exception));
+         alert(pathphp+': '+SmarttodoError(jqXHR,exception));
       },
       // Обрабатываем ответное сообщение
       success: function(message)
@@ -259,9 +260,10 @@ function CtrlEmailPass()
          // Получаем параметры ответа
          parm=JSON.parse(messa);
          // При ошибке выводим сообщение об ошибке
-         if (parm.iif==nstErr) 
+         if (parm.Piati==-1) 
          { 
-            Error_Info(parm.NameGru);
+            //Error_Info(parm.NameGru);
+            alert(parm.NameGru);
          }
          // Если все хорошо, выбираем описание
          else
@@ -306,7 +308,7 @@ function Proverit()
       // Выполняем проверку email и пароля 
       let mode=tstEmailPass();
       // Включам константы для состояния 'Адрес электронной почты не зарегистрирован'); 
-      if (mode==tstEmailNeNajdenen)
+      if (mode==tstEmailNeNajden)
       {
          eprMessa = 'Адрес электронной почты не зарегистрирован,<br>что будем делать?';
          eprGrayInput = 'Зарегистрироваться';

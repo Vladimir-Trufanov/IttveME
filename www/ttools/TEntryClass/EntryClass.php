@@ -29,6 +29,11 @@ class Entrying
       // корневом каталоге и (при его отсутствии, при несовпадении размеров или
       // старой дате) загружаем из класса 
       CompareCopyRoot('CtrlEmailPass.php','ttools/TEntryClass/');
+      /*
+      // При необходимости создаём таблицу пользователей ittve.me в базе данных 
+      $pdo=_BaseConnect($this->basename,$this->username,$this->password);
+      CreateMeUsers($pdo,'-');
+      */
    }
    public function __destruct() 
    {
@@ -82,15 +87,7 @@ class Entrying
       else if (\prown\isComRequest(entPodtverdit,'enMode')) $this->enMode_entPodtverdit(); 
       // Внутренняя ошибка
       else echo('Ошибка Entrying->Body 2023-10-06');
-      
-      /*
-      require_once "InteractiveSpooky.php"; 
-      require_once "EntryTable.php"; 
-      // При необходимости создаём таблицу пользователей ittve.me в базе данных 
-      $pdo=_BaseConnect($this->basename,$this->username,$this->password);
-      CreateMeUsers($pdo,'-');
-      */
-      
+
       //require_once "EmailRegistration.php"; 
       
       /*
