@@ -43,6 +43,12 @@ if (count($table)<1)
    $NameGru=tstEmailNeNajden;
    $Piati=0;
 }
+// Если возникло исключение при работе с базой данных, то ретранслируем ошибку
+else if ($table[0]['phone']==tstErr)
+{
+   $NameGru=$table[0]['art'];
+   $Piati=-1;
+}
 // Если пароли не совпали, то возвращаем 'Пароль неверный' 
 else if ($table[0]['passiv'] != $passi)
 {
@@ -50,19 +56,13 @@ else if ($table[0]['passiv'] != $passi)
    $Piati=0;
 }
 // Если пароли и email совпали, то возвращаем 'Пароль и email верны' 
-else if (($table[0]['passiv']==$passi) and ($table[0]['email'] != $email))
+else if (($table[0]['passiv']==$passi) and ($table[0]['email'] == $email))
 {
    $NameGru=tstEmailParolVerny;
    $Piati=0;
 }
-// Если возникло исключение при работе с базой данных, то ретранслируем ошибку
-else if ($table[0]['phone']==tstErr)
-{
-   $NameGru=$table[0]['art'];
-   $Piati=-1;
-}
 // Освобождаем память
-unset($pdo); unset($table); unset($note);
+unset($pdo); unset($table);
 // Возвращаем сообщение
 $message='{"NameGru":"'.$NameGru.'", "Piati":"'.$Piati.'", "iif":"'.$iif.'"}';
 $message=\prown\makeLabel($message,'ghjun5','ghjun5');

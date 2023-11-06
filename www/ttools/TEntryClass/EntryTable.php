@@ -15,12 +15,14 @@ define('tstEmailNeNajden',      'Адрес электронной почты н
 define('tstParolNevernyj',      'Пароль неверный');                   
 define('tstEmailParolVerny',    'Пароль и email верны');  
 define('tstErr',                'Произошла ошибка');  
+define('tst396',                '396: Ошибка начального состояния');  
 $tstEmailPass=
 '<script>'.
    'tstEmailNeNajden="'    .tstEmailNeNajden.'";'.
    'tstParolNevernyj="'    .tstParolNevernyj.'";'.
    'tstEmailParolVerny="'  .tstEmailParolVerny.'";'.
    'tstErr="'              .tstErr.'";'.
+   'tst396="'              .tst396.'";'.
 '</script>';
 echo $tstEmailPass;
 
@@ -84,24 +86,22 @@ function CreateMeUsers($pdo,$aCharters)
      throw $e;
    }
 }
-// *************************************************************************
-// * Выбрать запись по идентификатору                                      *
-// *              (например, узнать наименование группы по идентификатору: *
-// *          $table=SelRecord($pdo,$pid); $NameGru=$table[0]['NameArt'];) *
-// *************************************************************************
+// ****************************************************************************
+// *                Выбрать запись по номеру электронной почты                *
+// ****************************************************************************
 function SelRecParema($pdo,$email)
 {
    try
    {
       $pdo->beginTransaction();
-      $cSQL='SELECT * FROM meusers WHERE email='.$email;
+      $cSQL='SELECT * FROM meusers WHERE email="'.$email.'"';
       $stmt = $pdo->query($cSQL);
       $table = $stmt->fetchAll();
       $pdo->commit();
    } 
    catch (\Exception $e) 
    {
-      $messa=$e->getMessage();
+      $messa=addslashes($e->getMessage());
       $table=array(array("phone"=>tstErr,"art"=>$messa,));
       if ($pdo->inTransaction()) $pdo->rollback();
    }

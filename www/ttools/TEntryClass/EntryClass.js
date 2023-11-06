@@ -212,7 +212,7 @@ function tstEmailPass()
    let mode;
    //mode=tstEmailNeNajden;
    mode=tstParolNevernyj;
-   CtrlEmailPass();
+   mode=CtrlEmailPass();
    return mode;
 }
 // ****************************************************************************
@@ -238,6 +238,7 @@ function toggleScrepa(eprGrayInput,eprInput,eprMessa)
 
 function CtrlEmailPass()
 {
+   let modeCtrl=tst396;
    let passiv=passi;
    let emaili=email;
    pathphp="CtrlEmailPass.php";
@@ -247,11 +248,19 @@ function CtrlEmailPass()
       type: 'POST',
       data: {pathTools:pathPhpTools,pathPrown:pathPhpPrown,sh:SiteHost,password:passiv,email:emaili},
       // Выводим ошибки при невозможности выполнении запроса
+      /*
       error: function (jqXHR,exception,errorMsg) 
       {
-         //Error_Info(pathphp+': '+SmarttodoError(jqXHR,exception));
          alert(pathphp+': '+SmarttodoError(jqXHR,exception));
       },
+      */
+      /*
+      error: function(xhr, status, error) 
+      {
+         console.log("Error occured. Status: " + status);
+         $("#Gallery").text(xhr.responseText);
+      },
+      */
       // Обрабатываем ответное сообщение
       success: function(message)
       {
@@ -265,29 +274,16 @@ function CtrlEmailPass()
             //Error_Info(parm.NameGru);
             alert(parm.NameGru);
          }
-         // Если все хорошо, выбираем описание
+         // Если все хорошо, выводим результат аякс-запроса
          else
          {
-            //alert('Все хорошо!');
-            //alert(messa);
-            alert(parm.NameGru);
- 
-             //Notice_Info('messa','Оk',true,250);
-            
-            //Error_Info('Все хорошо!');
-           //setTimeout(function() {location.reload();},2500);
-            
-            /*
-            $('#DialogWind').html('DialogWind messa');
-            $('#DialogWind').dialog("open");
-
-            $('#ImgDialogWind"').html('ImgDialogWind" messa');
-            $('#ImgDialogWind"').dialog("open");
-            */
-
+            console.log(parm.NameGru);
+            modeCtrl=parm.NameGru;
+            //Notice_Info(parm.NameGru,"Проверка email и пароля успешна!");
          }
       }
    });
+   return modeCtrl;
 }
 
 // ****************************************************************************
@@ -306,7 +302,9 @@ function Proverit()
       var eprGrayInput;   // Неактивное действие по результату проверки
       var eprInput;       // Активное действие по результату проверки
       // Выполняем проверку email и пароля 
-      let mode=tstEmailPass();
+      //let mode=tstEmailPass();
+      let mode=CtrlEmailPass();
+      alert('mode='+mode)
       // Включам константы для состояния 'Адрес электронной почты не зарегистрирован'); 
       if (mode==tstEmailNeNajden)
       {
