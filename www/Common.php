@@ -5,7 +5,7 @@
 // * ittve.me                                        Блок общих функций сайта *
 // ****************************************************************************
 
-// v1.4, 01.10.2023                                  Автор:       Труфанов В.Е. 
+// v1.5, 07.11.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2019 tve                              Дата создания:  05.03.2019 
 
 // ****************************************************************************
@@ -35,11 +35,20 @@ define ('mmlSohranitNovyjMaterial',      'sohranit-novyj-material');            
 
 // -- Значения параметра enMode URL-запросов для этапов ввода и регистрации ---
 //                                        NULL                               //  Выполнить ввод email и пароля (зарегистрироваться)
-define ('entPropustit',                  'propustit');                       //  Пропустить на сайт с новым паролем, или как гостя
+define ('entPropustit',                  'propustit');                       //  Пропустить на сайт, как гостя
 define ('entProverit',                   'proverit');                        //  Проверить пароль и email
 define ('entZamenit',                    'zamenit');                         //  Заменить пароль
 define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
-define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт
+define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт c email и паролем
+$actEmailPass=
+'<script>'.
+   'entPropustit="'          .entPropustit.'";'.
+   'entProverit="'           .entProverit.'";'.
+   'entZamenit="'            .entZamenit.'";'.
+   'entZaregistrirovatsya="' .entZaregistrirovatsya.'";'.
+   'entPodtverdit="'         .entPodtverdit.'";'.
+'</script>';
+echo $actEmailPass;
 
 /*
 // ---------------------------------------- Результат проверки URI страницы ---
