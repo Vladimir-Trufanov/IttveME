@@ -16,13 +16,11 @@ $passi=htmlspecialchars($_GET["password"]);
 // Строим разметку страницы для проверки пароля и email по базе данных и
 // принятия решения: "Пропустить на сайт, как гостя", "Заменить пароль" 
 // или "Зарегистрироваться" 
-
 echo '<div id="EntryClass">';
 echo '<span id="Messa"> <br> </span>';
 ManyLines(2);
 ManyLines(6);
 echo '<span id="GrayInput" title = "Неактивное действие"> </span>';
-
 echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
 echo '<input type="hidden"   name="Com" value="vojti">';
 echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
@@ -41,7 +39,6 @@ echo '</div>';
    По мотивам <a href="https://codepen.io/jkantner">Jon Kantner</a>
 </footer>
 <?php
-
 //Выполняем разметку скрепки переключения 
 echo '
    <div id="screpa">
@@ -53,16 +50,18 @@ echo '
       </label>
    </div>
 ';
-
-// Выполняем обработку страницы js-скриптами
+// Выполняем обработку страницы js-скриптами:
+// проверяем пароль и email по базе данных
 ?>
 <script>
-   var email = "<?php echo $email; ?>";
-   var passi = "<?php echo $passi; ?>";
-   Proverit();
+   $(document).ready(function()
+   {
+      var email = "<?php echo $email; ?>";
+      var passi = "<?php echo $passi; ?>";
+      Proverit(email,passi);
+   })
 </script>
 <?php
-
 // ****************************************************************************
 // *                          Вывести в див пустые строки                     *
 // ****************************************************************************
@@ -75,5 +74,4 @@ function ManyLines($nLine)
 }
 
 // *********************************************************** Proverit.php ***
-
                                                       

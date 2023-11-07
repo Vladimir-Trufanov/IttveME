@@ -785,7 +785,7 @@ IttveMe
 10=www\ttools\TEntryClass\EntryTable.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryClass.js
+Selected=www\ttools\TEntryClass\Proverit.php
 [www\index.php]
 TopLine=72
 Caret=28,108
@@ -802,19 +802,19 @@ Caret=9,34
 TopLine=16
 Caret=1,43
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=2
-Caret=1,16
+TopLine=38
+Caret=1,77
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=187
+TopLine=171
 Caret=1,206
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=287
-Caret=19,286
+TopLine=179
+Caret=61,208
 [www\ttools\TEntryClass\EntryClass.css]
 TopLine=105
 Caret=22,132
 [www\ttools\TEntryClass\CtrlEmailPass.php]
-TopLine=33
+TopLine=18
 Caret=15,18
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=1
