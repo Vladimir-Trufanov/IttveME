@@ -23,8 +23,8 @@ ManyLines(2);
 ManyLines(6);
 echo '<span id="GrayInput" title = "Неактивное действие"> </span>';
 echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
-echo '<input type="hidden"   name="Com" value="vojti">';
-echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
+echo '<input type="hidden" name="Com" value="vojti">';
+echo '<input type="hidden" name="enMode" id="enMode"  value="'.entProverit.'">';
 ?>
 <fieldset id="submit-field">
    <legend></legend>

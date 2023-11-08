@@ -6,7 +6,7 @@
 // *                              проинициализировать общесайтовые переменные *
 // ****************************************************************************
 
-// v2.4, 06.10.2023                                  Автор:       Труфанов В.Е. 
+// v2.5, 08.11.2023                                  Автор:       Труфанов В.Е. 
 // Copyright © 2019 tve                              Дата создания:  13.01.2019 
 
 require_once "Common.php";  
@@ -157,19 +157,10 @@ require_once "ttools/TKwinGallery/KwinGalleryClass.php";
 
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');
+// Пропускаем пользователя на сайт
+SiteEntry($c_UserName,$c_PersName,$c_PersMai,$c_Pass,$c_BrowEntry,$c_PersEntry,$s_Counter);
 
-// Изменяем счетчик запросов сайта из браузера и, таким образом,       
-// регистрируем новую загрузку страницы
-$c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true); 
-$c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
-// Изменяем счетчик посещений текущим посетителем      
-$c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);           
-$c_PersEntry=prown\MakeCookie('PersEntry',$c_PersEntry+1,tInt);
-// Изменяем счетчик посещений за сессию                 
-$s_Counter=prown\MakeSession('Counter',0,tInt,true);              
-$s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);   
-// echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
-// echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
+
 
 // Определяем данные для работы с базой данных материалов 
 $basename=$SiteHost.'/Base'.'/ittve';           // имя базы без расширения 'db3'
@@ -192,8 +183,11 @@ $Arti->setKindMessage($note);
 // При отсутствии создаём таблицу пользователей ittve.me в базе данных 
 $pdo=ttools\_BaseConnect($basename,$username,$password);
 ttools\CreateMeUsers($pdo,'-'); 
+
+
 // Если после авторизации изменилось имя пользователя,
 // то перенастраиваем счетчики и посетителя
+/*
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин посетителя
 $c_Pass=prown\MakeCookie('Pass',"Гость",tStr,true);         // пароль посетителя
 $c_PersName=prown\getComRequest('email');
@@ -207,6 +201,8 @@ if ($c_PersName<>NULL)
       $c_Pass=prown\MakeCookie('Pass',prown\getComRequest('password'),tStr);        
    }
 }
+*/
+
 // Меняем кукис ориентации устройства 
 $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr,true);             // ориентация устройства
 if (IsSet($_GET["orient"]))
@@ -293,6 +289,61 @@ function Moditap($moditap,&$c_UserName,&$c_PersName)
          //\prown\ConsoleLog('$c_UserName='.$c_UserName);
       }
    }
+}
+// ****************************************************************************
+// *                                    Пройти на сайт                        *
+// ****************************************************************************
+function SiteEntry(&$c_UserName,&$c_PersName,&$c_PersMai,&$c_Pass,&$c_BrowEntry,&$c_PersEntry,&$s_Counter)
+{
+   // Инициируем в браузере авторизованное имя пользователя (сейчас после 2023-11-08,
+   // в первой версии механизма авторизации это либо "Гость", либо email после регистрации)
+   $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); 
+   // Инициируем в браузере текущего пользователя, пароль, email
+   $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true); 
+   $c_PersMail=prown\MakeCookie('PersMail',"username@example.com",tStr,true); 
+   $c_Pass=prown\MakeCookie('Pass',"Гость",tStr,true);   
+   // Изменяем счетчик запросов сайта из браузера и, таким образом,       
+   // регистрируем новую загрузку страницы
+   $c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true); 
+   $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
+   // Изменяем счетчик посещений текущим посетителем      
+   $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);           
+   $c_PersEntry=prown\MakeCookie('PersEntry',$c_PersEntry+1,tInt);
+   // Изменяем счетчик посещений за сессию                 
+   $s_Counter=prown\MakeSession('Counter',0,tInt,true);              
+   $s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);   
+  
+   // echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
+   // echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
+
+   // По умолчанию, выбираем парамнтры из кукисов
+   $c_UserName=prown\MakeCookie('UserName'); 
+   $c_PersName=prown\MakeCookie('PersName'); 
+   $c_PersMail=prown\MakeCookie('PersMail'); 
+   $c_Pass=prown\MakeCookie('Pass');   
+   
+   // Если после авторизации изменилось имя пользователя,
+   // то перенастраиваем счетчики и посетителя
+
+/*
+
+$email=htmlspecialchars($_POST["email"]);
+
+$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true); // логин посетителя
+$c_Pass=prown\MakeCookie('Pass',"Гость",tStr,true);         // пароль посетителя
+$c_PersName=prown\getComRequest('email');
+if ($c_PersName<>NULL) 
+{
+   if ($c_PersName<>$c_UserName)
+   {
+      $c_UserName=prown\MakeCookie('UserName',$c_PersName,tStr); 
+      $c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);
+      $s_Counter=prown\MakeSession('Counter',1,tInt); 
+      $c_Pass=prown\MakeCookie('Pass',prown\getComRequest('password'),tStr);        
+   }
+}
+*/
+
 }
 
 // ************************************************************* iniMem.php *** 

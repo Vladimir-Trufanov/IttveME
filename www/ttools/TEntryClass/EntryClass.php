@@ -68,7 +68,7 @@ class Entrying
    public function Body() 
    { 
       $enMode=\prown\getComRequest('enMode');
-      \prown\Alert('$enMode='.$enMode);
+      //\prown\Alert('$enMode='.$enMode);
 
       // Если поступила команда на вход в систему по email и паролю, 
       // то выполняем ввод email и пароля

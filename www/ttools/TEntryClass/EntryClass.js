@@ -276,6 +276,17 @@ function CtrlEmailPass(emaili,passiv)
                actInput = entPropustit;
                toggleScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,actInput);
             }
+            // Закрываем дивы и проходим на сайт при состоянии 'Пароль и email верны'); 
+            else if (modeCtrl==tstEmailParolVerny)
+            {
+               // Готовим новые кукисы по регистрации
+               
+               // Закрываем дивы и проходим на сайт
+               document.getElementById('screpa').style.display = 'none';            
+               document.getElementById('EntryClass').style.display = 'none';            
+               $('#enMode').attr('value',entPodtverdit);
+               document.getElementById('submit').click();
+            }
             else
             {
                eprMessa = 'Ошибка 3498<br>tstEmailPass()';
@@ -308,6 +319,10 @@ function ViewActionScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,a
       $('#submit').attr('value',eprInput);
       $('#enMode').attr('value',actInput);
    }
+   console.log('ViewActionScrepa - enMode: '+$('#enMode').attr('value'));
+   console.log('ViewActionScrepa - enMode: '+$('#enMode').val());
+   console.log('ViewActionScrepa - submit: '+$('#submit').attr('value'));
+   console.log('ViewActionScrepa - submit: '+$('#submit').val());
 }
 // ****************************************************************************
 // *   Установить начальное состояние (или состояния после выбора) для серой  *
@@ -320,7 +335,6 @@ function toggleScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,actIn
    if (imgToggle != null)
    {
       // Задаем начальное состояние скрепки
-      // document.getElementById("toggle").checked = true;
       imgToggle.checked = false;
       ViewActionScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,actInput);
       // Обрабатываем изменение состояние скрепки
