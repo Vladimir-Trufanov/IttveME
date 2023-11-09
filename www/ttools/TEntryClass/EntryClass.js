@@ -280,7 +280,9 @@ function CtrlEmailPass(emaili,passiv)
             else if (modeCtrl==tstEmailParolVerny)
             {
                // Готовим новые кукисы по регистрации
-               
+               document.cookie = "UserName="+emaili;
+               document.cookie = 'PersMail='+emaili;
+               document.cookie = 'PersPass='+passiv;
                // Закрываем дивы и проходим на сайт
                document.getElementById('screpa').style.display = 'none';            
                document.getElementById('EntryClass').style.display = 'none';            

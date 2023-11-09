@@ -52,10 +52,10 @@ if ($BaseCreate<>'Yes')
    echo '</div>';
    echo '<div id="Life">'; 
       $Edit->ViewLifeSpace();
-      // prown\ViewGlobal(avgCOOKIE);
    echo '</div>';
    echo '<div id="Gallery">';
       $Edit->ViewGallerySpace();
+      //prown\ViewGlobal(avgCOOKIE);
    echo '</div>'; 
    echo '<div id="FooterTiny">';
       $Edit->ViewFooterSpace($UserAgent);
@@ -78,7 +78,7 @@ if ($BaseCreate<>'Yes')
          // Выводим строку с контрольным транслитом
          echo (prown\getTranslit('Регистрации нет'));
          // При отладке выводим пароль
-         if ($c_Pass==NULL) echo(' NULL'); else echo(' '.$c_Pass);
+         echo(' '.$c_PersPass.'->'.$c_UserName);
 
          /*
          echo '$SiteDevice='.$SiteDevice." ".'$c_Orient='.$c_Orient; 
@@ -96,10 +96,13 @@ if ($BaseCreate<>'Yes')
          */
       echo '</div>';
       echo '<div id="InfoRight">';
+      /*
       if ($messRequest==nstOk)
          echo $SiteDevice." ".$c_UserName." ".$_SESSION['Counter'].".".$c_PersEntry."[".$c_BrowEntry."]"; 
       else
          echo $messRequest.': '.$SiteDevice." ".$c_PersName; 
+      */
+      echo $SiteDevice.": ".$c_PersName.".".$c_PersEntry."[".$c_BrowEntry."]".$_SESSION['Counter']; 
       echo '</div>';
       
    echo '</div>';

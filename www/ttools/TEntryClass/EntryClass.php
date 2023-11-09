@@ -152,7 +152,26 @@ class Entrying
    // *************************************************************************
    private function enMode_entPodtverdit() 
    {
-      echo '*** enMode_entPodtverdit ***<br>';
+      echo '*** Этого входа не должно было быть! ***';
+      /* в TinyGalleryClass в HEAD и BODY должны присутствовать вставки:
+      
+      // 6-HEAD этап -------------------------------------------- ?Com=vojti
+      // Здесь обработка входа на сайт: в случае, когда пароль и email подтвержены
+      // и, таким образом, в баузере сформированы новые кукисы пароля и email,
+      // то пропускаем mmlVojti и отрабатываем вход на сайт
+      elseif ((\prown\isComRequest(mmlVojti)) and !(\prown\isComRequest(entPodtverdit,'enMode')))
+         $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($urlHome,$this->Entry); 
+ 
+      // 6-BODY этап ----------------------------------------------- ?Com=vojti
+      // Здесь обработка входа на сайт: в случае, когда пароль и email подтвержены
+      // и, таким образом, в баузере сформированы новые кукисы пароля и email,
+      // то пропускаем mmlVojti и отрабатываем вход на сайт
+      elseif ((\prown\isComRequest(mmlVojti)) and !(\prown\isComRequest(entPodtverdit,'enMode')))
+      {
+         $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+         $this->_ViewLifeSpace($Title,$this->Entry);
+      }
+      */
    }
    // *************************************************************************
    // *     Пропустить пользователя на сайт с новым паролем, или как гостя    * 

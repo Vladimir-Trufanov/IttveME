@@ -7,7 +7,7 @@
 // *                 и галереи изображений, связанной с этим материалом (uid) *
 // *                                    из выбранной (указанной) группы (pid) *
 // *                                                                          *
-// * v3.0, 22.04.2023                              Автор:       Труфанов В.Е. *
+// * v3.1, 09.11.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
@@ -337,7 +337,10 @@ class TinyGallery
       elseif (\prown\isComRequest(mmlOtpravitAvtoruSoobshchenie))
          $this->Sayme=mmlOtpravitAvtoruSoobshchenie_HEAD($SaymeGame);
       // 6-HEAD этап -------------------------------------------- ?Com=vojti
-      elseif (\prown\isComRequest(mmlVojti))
+      // Здесь обработка входа на сайт: в случае, когда пароль и email подтвержены
+      // и, таким образом, в баузере сформированы новые кукисы пароля и email,
+      // то пропускаем mmlVojti и отрабатываем вход на сайт
+      elseif ((\prown\isComRequest(mmlVojti)) and !(\prown\isComRequest(entPodtverdit,'enMode')))
          $this->Entry=mmlVojtiZaregistrirovatsya_HEAD($urlHome,$this->Entry); 
       // 7-HEAD этап -------------- ?Com=prochitat-o-sajte-izmenit-nastrojki 
       elseif (\prown\isComRequest(mmlIzmenitNastrojkiSajta))
@@ -527,10 +530,12 @@ class TinyGallery
          $this->_ViewLifeSpace($Title,$this->Sayme);
       }
       // 6-BODY этап ----------------------------------------------- ?Com=vojti
-      elseif (\prown\isComRequest(mmlVojti))
+      // Здесь обработка входа на сайт: в случае, когда пароль и email подтвержены
+      // и, таким образом, в баузере сформированы новые кукисы пароля и email,
+      // то пропускаем mmlVojti и отрабатываем вход на сайт
+      elseif ((\prown\isComRequest(mmlVojti)) and !(\prown\isComRequest(entPodtverdit,'enMode')))
       {
          $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
-         //$Title=MakeTitle('Страница еще не готова, но Вы можете поиграть. Ваша задача - выбрать все парные карты!<br>',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Entry);
       }
       // 7-BODY этап ----------------- ?Com=prochitat-o-sajte-izmenit-nastrojki
