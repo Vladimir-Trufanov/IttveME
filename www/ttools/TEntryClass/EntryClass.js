@@ -280,9 +280,9 @@ function CtrlEmailPass(emaili,passiv)
             else if (modeCtrl==tstEmailParolVerny)
             {
                // Готовим новые кукисы по регистрации
-               document.cookie = "UserName="+emaili;
-               document.cookie = 'PersMail='+emaili;
-               document.cookie = 'PersPass='+passiv;
+               setdefCookie("UserName",emaili);
+               setdefCookie("PersMail",emaili);
+               setdefCookie("PersPass",passiv);
                // Закрываем дивы и проходим на сайт
                document.getElementById('screpa').style.display = 'none';            
                document.getElementById('EntryClass').style.display = 'none';            
@@ -349,6 +349,17 @@ function toggleScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,actIn
          ViewActionScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,actInput);
       });
    }
+}
+// ****************************************************************************
+// *                      Установить кукис по умолчанию                       *
+// ****************************************************************************
+function setdefCookie(cName,cValue)
+{
+   // Назначаем время жизни кукиса 512 дней
+   let datecu = new Date(Date.now() + 44236800e3);
+   datecu = datecu.toUTCString();
+   // Готовим кукисы
+   document.cookie = cName+'='+cValue+'; path=/; expires='+datecu+'; samesite=strict';
 }
 
 // ********************************************************** EntryClass.js ***

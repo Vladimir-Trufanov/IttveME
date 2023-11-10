@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	+IttveMe
+	-IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 			BpWin\Выполнить вход и регистрацию на сайте.bp1
@@ -155,7 +155,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		+www
+		-www
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -547,8 +547,8 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
-				+TArticlesMaker
+			-ttools
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -590,7 +590,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				+TEntryClass
+				-TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.css
@@ -755,6 +755,7 @@ IttveMe
 				Материалы\Работа с почтой - в том числе на локальном сервере\php.ini
 				Материалы\Работа с почтой - в том числе на локальном сервере\sendmail.php
 				Материалы\Работа с почтой - в том числе на локальном сервере\Как тестировать отправку писем в PHP на Windows.doc
+			Материалы\Как работать с кукисами на js.doc
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
 			Материалы\Размеры и прокрутка элементов.doc
@@ -783,18 +784,17 @@ IttveMe
 8=www\ttools\TEntryClass\EntryClass.css
 9=www\ttools\TEntryClass\CtrlEmailPass.php
 10=www\ttools\TEntryClass\EntryTable.php
-11=..\TPhpPrown\TPhpPrown\CommonPrown.php
 [Selected Project Files]
 Main=
-Selected=www\UpSite.php
+Selected=www\iniMem.php
 [www\index.php]
 TopLine=100
 Caret=28,108
 [www\iniMem.php]
-TopLine=151
-Caret=1,162
+TopLine=272
+Caret=1,309
 [www\UpSite.php]
-TopLine=44
+TopLine=54
 Caret=7,57
 [www\ttools\TEntryClass\EntryClass.php]
 TopLine=148
@@ -803,14 +803,14 @@ Caret=9,174
 TopLine=19
 Caret=23,42
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=39
+TopLine=28
 Caret=1,28
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=512
 Caret=1,541
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=268
-Caret=52,285
+TopLine=280
+Caret=1,286
 [www\ttools\TEntryClass\EntryClass.css]
 TopLine=109
 Caret=22,132
@@ -820,6 +820,3 @@ Caret=75,14
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=1
 Caret=54,16
-[..\TPhpPrown\TPhpPrown\CommonPrown.php]
-TopLine=157
-Caret=39,172

@@ -291,16 +291,13 @@ function SiteEntry(&$c_UserName,&$c_PersName,&$c_PersMail,&$c_PersPass,&$c_BrowE
    // Изменяем счетчик посещений за сессию                 
    $s_Counter=prown\MakeSession('Counter',0,tInt,true);              
    $s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);   
-  
    // echo "Вы обновили эту страницу ".$_SESSION['Counter']." раз. ";
    // echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
-
    // По умолчанию, выбираем параметры из кукисов
    $c_UserName=prown\MakeCookie('UserName'); 
    $c_PersName=prown\MakeCookie('PersName'); 
    $c_PersMail=prown\MakeCookie('PersMail'); 
    $c_PersPass=prown\MakeCookie('PersPass');   
-   
    // Если после авторизации изменилось имя пользователя,
    // то перенастраиваем счетчики и посетителя
    if ($c_PersName<>$c_UserName)
