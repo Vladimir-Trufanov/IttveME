@@ -10,7 +10,7 @@
 // Copyright © 2023 tve                              Посл.изменение: 25.09.2023
 
 echo '<div id="EntryClass">';
-echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
+echo '<form id="EntryForm" method="post" action="'.$this->urlHome.'">';
 ?>
 
    <svg width="200px" height="200px" viewBox="0 0 200 200" aria-labelledby="svg-desc">

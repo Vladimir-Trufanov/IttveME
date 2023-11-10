@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	-IttveMe
+	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 			BpWin\Выполнить вход и регистрацию на сайте.bp1
@@ -155,7 +155,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		-www
+		+www
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -547,7 +547,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -590,7 +590,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				-TEntryClass
+				+TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.css
@@ -784,9 +784,11 @@ IttveMe
 8=www\ttools\TEntryClass\EntryClass.css
 9=www\ttools\TEntryClass\CtrlEmailPass.php
 10=www\ttools\TEntryClass\EntryTable.php
+11=www\ttools\TEntryClass\InteractiveSpooky.php
+12=..\TPhpPrown\TPhpPrown\CommonPrown.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\ttools\TEntryClass\EntryClass.js
 [www\index.php]
 TopLine=100
 Caret=28,108
@@ -797,26 +799,32 @@ Caret=1,309
 TopLine=54
 Caret=7,57
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=148
-Caret=9,174
+TopLine=169
+Caret=72,187
 [www\Common.php]
-TopLine=19
-Caret=23,42
+TopLine=166
+Caret=1,181
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=28
-Caret=1,28
+TopLine=39
+Caret=38,5
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=512
+TopLine=524
 Caret=1,541
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=280
-Caret=1,286
+TopLine=272
+Caret=10,212
 [www\ttools\TEntryClass\EntryClass.css]
 TopLine=109
 Caret=22,132
 [www\ttools\TEntryClass\CtrlEmailPass.php]
-TopLine=14
+TopLine=1
 Caret=75,14
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=1
 Caret=54,16
+[www\ttools\TEntryClass\InteractiveSpooky.php]
+TopLine=35
+Caret=40,13
+[..\TPhpPrown\TPhpPrown\CommonPrown.php]
+TopLine=163
+Caret=1,187
