@@ -137,29 +137,21 @@ require_once pathPhpPrown."/iniConstMem.php";
 require_once pathPhpPrown."/MakeCookie.php";
 require_once pathPhpPrown."/MakeSession.php";
 require_once pathPhpPrown."/ViewGlobal.php";
-//require_once pathPhpPrown."/MakeUserError.php";
-//require_once pathPhpPrown."/ViewSimpleArray.php";
-
 // Подключаем прикладные классы TPhpTools
 require_once pathPhpTools."/TPageStarter/PageStarterClass.php";
 require_once pathPhpTools."/TNotice/NoticeClass.php";
-//require_once pathPhpTools."/iniToolsMessage.php";
-//require_once pathPhpTools."/TUploadToServer/UploadToServerClass.php";
-   
 // Подключаем внутренние классы
 require_once "ttools/TMenuLeader/MenuLeaderClass.php";
 require_once "ttools/TArticlesMaker/ArticlesMakerClass.php";
 require_once("ttools/TArticlesMaker/CommonArticlesMaker.php"); 
-require_once "ttools/TEntryClass/EntryClass.php";
-require_once "ttools/TEntryClass/EntryTable.php"; 
 require_once "ttools/TTinyGallery/TinyGalleryClass.php";
 require_once "ttools/TKwinGallery/KwinGalleryClass.php";
-
+require_once "ttools/TEntryClass/EntryTable.php"; 
+require_once "ttools/TEntryClass/EntryClass.php";
 // Выполняем запуск сессии и работу с лог-файлом
 $oMainStarter = new PageStarter('ittveme','ittve-log');
 // Пропускаем пользователя на сайт
 SiteEntry($c_UserName,$c_PersName,$c_PersMail,$c_PersPass,$c_BrowEntry,$c_PersEntry,$s_Counter);
-
 // Определяем данные для работы с базой данных материалов 
 $basename=$SiteHost.'/Base'.'/ittve';           // имя базы без расширения 'db3'
 $email='tve@karelia.ru';                        // email посетителя
@@ -181,7 +173,6 @@ $Arti->setKindMessage($note);
 // При отсутствии создаём таблицу пользователей ittve.me в базе данных 
 $pdo=ttools\_BaseConnect($basename,$username,$password);
 ttools\CreateMeUsers($pdo,'-'); 
-
 // Меняем кукис ориентации устройства 
 $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr,true);             // ориентация устройства
 if (IsSet($_GET["orient"]))
@@ -190,11 +181,11 @@ if (IsSet($_GET["orient"]))
    if ($_GET["orient"]==oriPortrait)  $c_Orient=prown\MakeCookie('Orient',oriPortrait,tStr); 
    if ($SiteDevice==Computer) $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr); 
 }
-
 Moditap(moditap,$c_UserName,$c_PersName);
-
 // Инициализируем настройки, далее они могут быть изменены
 $c_PresMode=prown\MakeCookie('PresMode',rpmOneRight,tStr,true);         // режим представления материалов
+
+/*
 $c_ModeImg=prown\MakeCookie('ModeImg',vimExiSize,tStr,true);            // режим представления выбранной картинки
 $c_PhoneImg=prown\MakeCookie('PhoneImg',fimWhiteGround,tStr,true);      // фон отдельно показываемых изображений
 
@@ -206,7 +197,7 @@ $c_PhoneImg=prown\MakeCookie('PhoneImg',fimWhiteGround,tStr,true);      // фо�
 // Инициализируем параметры страницы сайта 
 //$p_ittveLife="ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
 //$p_ittveNews="ittve01-001-20130201-Особенности-устройства-винтиков-в-моей-голове.html";
-
+*/
 
 /*
 if ($SiteDevice==Mobile) 
@@ -242,9 +233,6 @@ $a2048=new game\g2048('IttveME');
 // Подключаем заменяющую игру для страницы "Отправить сообщение автору"
 require_once "ttools/TSaymeClass/Hextris/gameHextrisClass.php";
 $Hex=new game\Hextris($c_PresMode,'IttveME');
-// Подключаем заменяющую игру для страницы "Войти или зарегистрироваться"
-//require_once "ttools/TEntryClass/PairedCards/PairedCardsClass.php";
-//$Paired=new game\PairedCards($c_PresMode,'IttveME');
 
 // end --------------------------------------------------------------- ZERO ---
 

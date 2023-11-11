@@ -113,6 +113,7 @@ DefineJS($SiteHost,$urlHome);
 // Подключаем дополнительные совместные определения для модулей PHP и JS
 require_once 'IttveMeDef.php';
 DefinePHPtoJS();
+DefEmailPass();
 // Определяем стили изображения в диалоговом окне
 echo '<style>';
 // Настраиваем диалоговое окно для изображения
@@ -167,7 +168,7 @@ else
 echo '</style>';
 
 // Подключаем стили для редактирования материалов
-$Edit->Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,moditap,$Duck,$a2048,$Hex); //,$Paired);
+$Edit->Init($aPresMode,$aModeImg,$aPhoneImg,$urlHome,moditap,$Duck,$a2048,$Hex); 
 $note->Init();
 echo '</head>'; 
 

@@ -10,22 +10,6 @@
 // * Copyright © 2022 tve                          Дата создания:  01.10.2023 *
 // ****************************************************************************
 
-// Инициализируем константы по результатам проверки email и пароля 
-define('tstEmailNeNajden',      'Адрес электронной почты не зарегистрирован'); 
-define('tstParolNevernyj',      'Пароль неверный');                   
-define('tstEmailParolVerny',    'Пароль и email верны');  
-define('tstErr',                'Произошла ошибка');  
-define('tst396',                '396: Ошибка начального состояния');  
-$tstEmailPass=
-'<script>'.
-   'tstEmailNeNajden="'    .tstEmailNeNajden.'";'.
-   'tstParolNevernyj="'    .tstParolNevernyj.'";'.
-   'tstEmailParolVerny="'  .tstEmailParolVerny.'";'.
-   'tstErr="'              .tstErr.'";'.
-   'tst396="'              .tst396.'";'.
-'</script>';
-echo $tstEmailPass;
-
 // ****************************************************************************
 // *          Создать таблицу пользователей ittve.me в базе данных            *
 // ****************************************************************************

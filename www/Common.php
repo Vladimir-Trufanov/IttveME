@@ -40,15 +40,35 @@ define ('entProverit',                   'proverit');                        // 
 define ('entZamenit',                    'zamenit');                         //  Заменить пароль
 define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
 define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт c email и паролем
-$actEmailPass=
-'<script>'.
-   'entPropustit="'          .entPropustit.'";'.
-   'entProverit="'           .entProverit.'";'.
-   'entZamenit="'            .entZamenit.'";'.
-   'entZaregistrirovatsya="' .entZaregistrirovatsya.'";'.
-   'entPodtverdit="'         .entPodtverdit.'";'.
-'</script>';
-echo $actEmailPass;
+
+define('tstEmailNeNajden',      'Адрес электронной почты не зарегистрирован'); 
+define('tstParolNevernyj',      'Пароль неверный');                   
+define('tstEmailParolVerny',    'Пароль и email верны');  
+define('tstErr',                'Произошла ошибка');  
+define('tst396',                '396: Ошибка начального состояния');  
+
+function DefEmailPass()
+{
+   $actEmailPass=
+   '<script>'.
+      'entPropustit="'          .entPropustit.'";'.
+      'entProverit="'           .entProverit.'";'.
+      'entZamenit="'            .entZamenit.'";'.
+      'entZaregistrirovatsya="' .entZaregistrirovatsya.'";'.
+      'entPodtverdit="'         .entPodtverdit.'";'.
+   '</script>';
+   echo $actEmailPass;
+
+   $tstEmailPass=
+   '<script>'.
+      'tstEmailNeNajden="'      .tstEmailNeNajden.'";'.
+      'tstParolNevernyj="'      .tstParolNevernyj.'";'.
+      'tstEmailParolVerny="'    .tstEmailParolVerny.'";'.
+      'tstErr="'                .tstErr.'";'.
+      'tst396="'                .tst396.'";'.
+   '</script>';
+   echo $tstEmailPass;
+}
 
 /*
 // ---------------------------------------- Результат проверки URI страницы ---
