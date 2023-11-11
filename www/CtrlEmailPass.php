@@ -14,6 +14,7 @@
 define ("pathPhpPrown",$_POST['pathPrown']);
 define ("pathPhpTools",$_POST['pathTools']);
 // Подгружаем нужные модули библиотек
+require_once "Common.php";  
 require_once pathPhpPrown."/CommonPrown.php";
 require_once "ttools/TEntryClass/EntryTable.php";
 // Готовим начальные значения возвращаемого сообщения, как ошибки обработки

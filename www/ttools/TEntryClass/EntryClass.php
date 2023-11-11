@@ -59,9 +59,23 @@ class Entrying
          <link rel="stylesheet" href="ttools/TEntryClass/LoginScreen.css">
          <?php
       }
-
+      // При поступлении команды 'Пропустить на сайт, как гостя' 
+      // готовим кукисы входа для гостя и перегружаем сайт
+      if (\prown\isComRequest(entPropustit,'enMode')) 
+      {
+         ?>
+         <script>
+         $(document).ready(function()
+         {
+            setdefCookie("UserName","Гость");
+            setdefCookie("PersMail","Гость");
+            setdefCookie("PersPass","Гость");
+            location.replace(urlHome);
+         })
+         </script>
+         <?php
+      }
    }
-   
    // *************************************************************************
    // *             Выполнить этапы по вводу и регистрации на сайте           * 
    // *************************************************************************
@@ -204,6 +218,7 @@ class Entrying
    private function enMode_entZaregistrirovatsya() 
    {
       echo '*** enMode_entZaregistrirovatsya ***<br>';
-   }
+      require_once "InteractiveSpooky.php"; 
+  }
 }
 // ********************************************************* EntryClass.php ***

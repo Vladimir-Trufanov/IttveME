@@ -126,7 +126,7 @@ function updateMouthEyes()
 {
    if (email.value.length > 0) 
    {
-         if (email.value.indexOf("@") > 0 && email.value.indexOf("@") < email.value.length - 1) 
+      if (email.value.indexOf("@") > 0 && email.value.indexOf("@") < email.value.length - 1) 
       {
          document.querySelector("#mouth").setAttribute("d", "M 75,115 C 79,110 92,117 102,117 111,117 123,111 127,114 131,117 123,136 102,136 81,137 73,121 75,115 Z");
       } 
@@ -254,7 +254,7 @@ function CtrlEmailPass(emaili,passiv)
             let eprInput;       // Текст активного действия по результату проверки
             let actInput;       // Активное действие по результату проверки
             modeCtrl=parm.NameGru;
-            //console.log('modeCtrl='+modeCtrl);
+            console.log('modeCtrl='+modeCtrl);
             
             // Переключаем разметку по состоянию 'Адрес электронной почты не 
             // зарегистрирован', готовим параметры и запускаем одну из страниц:
@@ -273,7 +273,7 @@ function CtrlEmailPass(emaili,passiv)
             // 'Заменить пароль' или 'Пройти на сайт, как гость'
             else if (modeCtrl==tstParolNevernyj)
             {
-               eprMessa = 'Пароль неверный, замените его<br>или пройдите на сайт, как гость';
+               eprMessa = 'Пароль "'+passiv+'" - неверный, замените его<br>или пройдите на сайт, как гость';
                eprGrayInput = 'Заменить пароль';
                eprInput = 'Пройти на сайт, как гость';
                actGrayInput = entZamenit;
