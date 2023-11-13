@@ -72,6 +72,8 @@ function MakeGhost()
 function MakeEmailPass($enMode)
 {
    ?>
+   <fieldset>
+   </fieldset>
    <fieldset id="email-field" class="with-placeholder">
       <legend>Email</legend>
       <div>
@@ -79,6 +81,100 @@ function MakeEmailPass($enMode)
          <div class="placeholder">username@example.com</div>
       </div>
    </fieldset>
+   <input type="checkbox" id="checkpass"/>
+   <div id="checkdiv"> 
+   <label id="checklbl">Пароль</label>
+   </div>
+   
+   <div class="checkbox1"> 
+      <!-- 
+      <h2>Checkbox 1</h2>  
+      <h3>Q.What is your most favourite food?</h3> 
+      --> 
+      <ul style="list-style-type:none;">  
+         <li><input type="checkbox" /><label>Burger</label></li>  
+         <li><input type="checkbox" /><label>Pizza</label></li>  
+         <!--
+         <li><input type="checkbox" /><label>Burger</label></li>  
+         <li><input type="checkbox" /><label>Pizza</label></li>  
+         <li><input type="checkbox" /><label>SandWitch</label></li>  
+         <li><input type="checkbox" /><label>Chicken with Rice</label></li>  
+         <li><input type="checkbox" /><label>Chicken with Paratha</label></li>
+         -->  
+      </ul>  
+  </div>  
+      
+    <script> 
+    /* 
+    $('ul li').click(function() 
+    {  
+        var CheckBox = $(this).find('input[type="checkbox"]');  
+        if (CheckBox.attr('checked')) 
+        {  
+            CheckBox.attr('checked', false);  
+        } 
+        else 
+        {  
+            CheckBox.attr('checked', true);  
+        }  
+    }) 
+    */ 
+    $('#checkdiv').click(function() 
+    { 
+       let checkpass = $('#checkpass');
+       let checklbl = $('#checklbl');  
+       //checkpass.click();
+       $('#checkdiv').click(function() 
+       { 
+          if (checkpass.attr('checked')) 
+          {
+             console.log('checked'); 
+             checkpass.attr('checked',false);  
+             //checklbl.html("\f21b");
+          } 
+          else
+          {
+             console.log('off'); 
+             checkpass.attr('checked',true);  
+             //checklbl.html("\f06e");
+          }
+       })  
+       /*  
+       console.log('checkdiv'); 
+       console.log(document.getElementById('checklbl').style.color); 
+        if (checklbl.html=="\f06e")
+        {
+           checklbl.html("\f21b");
+        }
+        else
+        {
+           checklbl.html("\f06e");
+        }
+       //checkpass.click();
+       //if (checkpass.attr('checked')) {checklbl.html("\f06e");}
+       */
+       /*
+       if (checkpass.attr('checked')) 
+       {
+          //checklbl.html("\f21b");
+          checkpass.attr('checked',false);  
+       } 
+       else 
+       {  
+          //checklbl.html("\f06e");
+          checkpass.attr('checked',true);  
+       }
+       */
+    })  
+    </script>  
+    
+
+   
+   
+   
+   
+   
+   
    <?php
    MakePassword('password-field1','Пароль','password');
    if ($enMode==entZaregistrirovatsya)

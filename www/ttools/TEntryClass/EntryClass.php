@@ -41,6 +41,51 @@ class Entrying
       ?>
       <link rel="stylesheet" href="ttools/TEntryClass/EntryClass.css">
       <script src="ttools/TEntryClass/EntryClass.js"></script>
+      
+      
+      
+      
+      
+ 
+<style>  
+    input[type=checkbox] 
+    {  
+        display: none;  
+    }  
+      
+    input[type=checkbox]/*+label:before*/ 
+    {  
+        font-family: FontAwesome;  
+        display: inline-block;  
+    }  
+    .checkbox1 input[type=checkbox]+label:before 
+    {  
+        content: "\f21b";  
+        color:red; 
+    }  
+    .checkbox1 input[type=checkbox]:checked+label:before 
+    {  
+        content: "\f06e";
+        color:green; 
+    } 
+    #checklbl
+    {
+       color:green; 
+    } 
+</style>  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <?php
            
       echo'  

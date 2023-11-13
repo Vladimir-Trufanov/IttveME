@@ -48,6 +48,58 @@ echo '
 ';
 
 
+
+
+?>  
+<style>  
+    input[type=checkbox] {  
+        display: none;  
+    }  
+      
+    input[type=checkbox]+label:before {  
+        font-family: FontAwesome;  
+        display: inline-block;  
+    }  
+    /* checkbox1 */  
+    /* unchecked icon */  
+      
+    .checkbox1 input[type=checkbox]+label:before {  
+        content: "\f096";  
+        letter-spacing: 10px;  
+    }  
+    /* checked icon */  
+      
+    .checkbox1 input[type=checkbox]:checked+label:before {  
+        letter-spacing: 5px;  
+        content: "\f046";  
+    }  
+</style>  
+
+
+<script>  
+    $('ul li').click(function() {  
+        var CheckBox = $(this).find('input[type="checkbox"]');  
+        if (CheckBox.attr('checked')) {  
+            CheckBox.attr('checked', false);  
+        } else {  
+            CheckBox.attr('checked', true);  
+        }  
+  
+    })  
+</script>  
+
+
+<?php
+
+
+
+
+
+
+
+
+
+
 // Подключаем обнаружение ориентации устройства по завершению загрузки страницы
 ?> <script>
 xOrient="<?php echo $c_Orient;?>";

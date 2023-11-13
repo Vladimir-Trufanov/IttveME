@@ -165,4 +165,113 @@ https://www.ittve.me/zhizn-i-puteshestviya              22.11.2022 - 22.11.2022
 https://www.ittve.me/sozdat-material-ili-redaktirovat   xx.11.2022 - 22.11.2022
 */
 
+
+function ProbaAwes()
+{
+?>
+   
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+    <meta charset="utf-8" />  
+    <title>Custom Checkbox using </title>  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+    <style>  
+        body {  
+            font-size: 20px;  
+        }  
+    </style>  
+
+
+<style>  
+    input[type=checkbox] 
+    {  
+        display: none;  
+    }  
+      
+    input[type=checkbox]+label:before 
+    {  
+        font-family: FontAwesome;  
+        display: inline-block;  
+    }  
+    /* checkbox1 */  
+    /* unchecked icon */  
+      
+    .checkbox1 input[type=checkbox]+label:before 
+    {  
+        /*content: "\f096";*/  
+        /*content: "\f13e";*/  
+        content: "\f21b";  
+        color:red; 
+        /*letter-spacing: 10px;*/  
+    }  
+    /* checked icon */  
+    .checkbox1 input[type=checkbox]:checked+label:before 
+    {  
+        /*letter-spacing: 5px;*/  
+        /*content: "\f046";*/ 
+        /*content: "\f09c";*/
+        content: "\f06e";
+        color:green; 
+    }  
+</style>  
+
+
+
+
+
+
+
+</head>  
+  
+<body>
+
+
+
+
+
+
+  
+    <div class="checkbox1">  
+        <h2>Checkbox 1</h2>  
+        <h3>Q.What is your most favourite food?</h3>  
+        <ul style="list-style-type:none;">  
+            <li><input type="checkbox" /><label>Burger</label></li>  
+            <li><input type="checkbox" /><label>Pizza</label></li>  
+            <li><input type="checkbox" /><label>SandWitch</label></li>  
+            <li><input type="checkbox" /><label>Chicken with Rice</label></li>  
+            <li><input type="checkbox" /><label>Chicken with Paratha</label></li>  
+        </ul>  
+    </div>  
+    
+    <script>  
+    $('ul li').click(function() {  
+        var CheckBox = $(this).find('input[type="checkbox"]');  
+        if (CheckBox.attr('checked')) {  
+            CheckBox.attr('checked', false);  
+        } else {  
+            CheckBox.attr('checked', true);  
+        }  
+  
+    })  
+    </script>  
+    
+    
+    
+    
+</body>  
+  
+</html>     
+
+<?php
+}
+
+
+
+
+
+
+
 ?> <!-- --> <?php // ******************************************** index.php ***

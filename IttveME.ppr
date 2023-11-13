@@ -296,7 +296,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			-Styles
+			+Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -784,21 +784,23 @@ IttveMe
 8=www\ttools\TEntryClass\EntryClass.css
 9=www\ttools\TEntryClass\EntryTable.php
 10=www\ttools\TEntryClass\InteractiveSpooky.php
+11=www\UpSiteCSS.php
+12=www\Styles\Content.css
 [Selected Project Files]
 Main=
 Selected=www\ttools\TEntryClass\InteractiveSpooky.php
 [www\index.php]
-TopLine=129
-Caret=12,168
+TopLine=226
+Caret=1,261
 [www\iniMem.php]
 TopLine=260
 Caret=44,267
 [www\UpSite.php]
-TopLine=18
-Caret=7,57
+TopLine=89
+Caret=1,59
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=185
-Caret=57,99
+TopLine=45
+Caret=14,71
 [www\Common.php]
 TopLine=35
 Caret=112,38
@@ -809,14 +811,20 @@ Caret=1,57
 TopLine=305
 Caret=54,344
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=137
-Caret=7,129
+TopLine=284
+Caret=79,294
 [www\ttools\TEntryClass\EntryClass.css]
-TopLine=109
-Caret=22,132
+TopLine=279
+Caret=1,311
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=12
 Caret=1,12
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=59
-Caret=1,89
+TopLine=107
+Caret=14,138
+[www\UpSiteCSS.php]
+TopLine=52
+Caret=12,89
+[www\Styles\Content.css]
+TopLine=101
+Caret=1,132
