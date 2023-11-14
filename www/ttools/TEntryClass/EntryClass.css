@@ -309,9 +309,18 @@ footer
 	}
 }
 
+/* Управление переключателем видимости пароля */
 #checkdiv
 {
-   background: yellow;
+   font-family:FontAwesome;  
+   z-index:10;
+	background:transparent;
+   position:absolute;
+	top:33.4rem;
+	right:2rem;
+   color:green;
+   font-size:2rem;
+   cursor:pointer;
 }
 
 /* ****************************************************** EntryClass.css *** */	

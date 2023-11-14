@@ -59,6 +59,9 @@ $(document).ready(function()
    var password = document.querySelector("#password");
    if (password != null)
    {
+   
+      //if ($('#password').attr('type')=="password")
+      //{
       password.addEventListener("focus", function () 
       {
          document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 145,68 105,51 103,62 102,74 123,117 155,116");
@@ -69,6 +72,9 @@ $(document).ready(function()
          document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 191,90 194,114 192,125 191,137 172,109 155,116");
          document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 25,92 9,108 11,124 13,141 27,115 48,119");
       });
+      //}
+      
+      
    }
    // Выполняем дополнительный контроль email
    const emailCtrl = document.getElementById("email");

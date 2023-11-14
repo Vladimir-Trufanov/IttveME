@@ -81,126 +81,28 @@ function MakeEmailPass($enMode)
          <div class="placeholder">username@example.com</div>
       </div>
    </fieldset>
+   <div id="checkdiv" class="checkbox__text">&#xf06e</div>
 
-     <!-- 
-   <label id="checkdiv" class="checkbox">
-	  <input id="checkpass" type="checkbox"/>
-   </label>
-     -->
-	  <div class="checkbox__text">Якс</div>
-
-      
     <script>
-    
-       $('.checkbox__text').click(function() 
+       let checkdiv=$('#checkdiv');
+       checkdiv.click(function() 
        {
-          //console.log('checkdiv'); 
-          if ($('.checkbox__text').css('z-index')==10)
+          if (checkdiv.css('z-index')==10)
           {
-             $('.checkbox__text').css('background','red');
-             $('.checkbox__text').css('z-index',11);
-             $('.checkbox__text').html('&#xf21b');
+             checkdiv.css('color','red');
+             checkdiv.css('z-index',11);
+             checkdiv.html('&#xf21b');
+             $('#password').attr('type',"text");
           }
           else
           {
-             $('.checkbox__text').css('background','green');
-             $('.checkbox__text').css('z-index',10);
-             $('.checkbox__text').html('&#xf06e');
+             checkdiv.css('color','green');
+             checkdiv.css('z-index',10);
+             checkdiv.html('&#xf06e');
+             $('#password').attr('type',"password");
           }
-       })  
-
-    
-    
-    /*
-    let checkpass = $('#checkpass');
-    if (checkpass.attr('checked')) 
-    {
-       console.log('checked'); 
-    } 
-    else
-    {
-       console.log('off'); 
-    }
-    */
-    
-    
-     
-    /*
-    $('#checkdiv').click(function() 
-    { 
-       console.log('checkdiv'); 
-       let checkpass = $('#checkpass');
-       let checklbl = $('#checklbl'); 
-       checkpass.click(); 
-       if (checkpass.attr('checked')) 
-       {
-          console.log('checked'); 
-             //checkpass.attr('checked',false);  
-             //checklbl.html("\f21b");
-       } 
-       else
-       {
-          console.log('off'); 
-             //checkpass.attr('checked',true);  
-             //checklbl.html("\f06e");
-       }
-       
-       / *
-       * /
-       //checkpass.click();
-          / *
-       $('#checkdiv').click(function() 
-       {
-          if (checkpass.attr('checked')) 
-          {
-             console.log('checked'); 
-             checkpass.attr('checked',false);  
-             //checklbl.html("\f21b");
-          } 
-          else
-          {
-             console.log('off'); 
-             checkpass.attr('checked',true);  
-             //checklbl.html("\f06e");
-          }
-       })  
-          * /
-       / *  
-       console.log('checkdiv'); 
-       console.log(document.getElementById('checklbl').style.color); 
-        if (checklbl.html=="\f06e")
-        {
-           checklbl.html("\f21b");
-        }
-        else
-        {
-           checklbl.html("\f06e");
-        }
-       //checkpass.click();
-       //if (checkpass.attr('checked')) {checklbl.html("\f06e");}
-       * /
-       / *
-       if (checkpass.attr('checked')) 
-       {
-          //checklbl.html("\f21b");
-          checkpass.attr('checked',false);  
-       } 
-       else 
-       {  
-          //checklbl.html("\f06e");
-          checkpass.attr('checked',true);  
-       }
-       * /
-    }) 
-    */ 
+       })
     </script>  
-    
-
-   
-   
-   
-   
-   
    
    <?php
    MakePassword('password-field1','Пароль','password');
