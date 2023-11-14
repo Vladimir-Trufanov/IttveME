@@ -81,51 +81,76 @@ function MakeEmailPass($enMode)
          <div class="placeholder">username@example.com</div>
       </div>
    </fieldset>
-   <input type="checkbox" id="checkpass"/>
-   <div id="checkdiv"> 
-   <label id="checklbl">Пароль</label>
-   </div>
-   
-   <div class="checkbox1"> 
-      <!-- 
-      <h2>Checkbox 1</h2>  
-      <h3>Q.What is your most favourite food?</h3> 
-      --> 
-      <ul style="list-style-type:none;">  
-         <li><input type="checkbox" /><label>Burger</label></li>  
-         <li><input type="checkbox" /><label>Pizza</label></li>  
-         <!--
-         <li><input type="checkbox" /><label>Burger</label></li>  
-         <li><input type="checkbox" /><label>Pizza</label></li>  
-         <li><input type="checkbox" /><label>SandWitch</label></li>  
-         <li><input type="checkbox" /><label>Chicken with Rice</label></li>  
-         <li><input type="checkbox" /><label>Chicken with Paratha</label></li>
-         -->  
-      </ul>  
-  </div>  
+
+     <!-- 
+   <label id="checkdiv" class="checkbox">
+	  <input id="checkpass" type="checkbox"/>
+   </label>
+     -->
+	  <div class="checkbox__text">Якс</div>
+
       
-    <script> 
-    /* 
-    $('ul li').click(function() 
-    {  
-        var CheckBox = $(this).find('input[type="checkbox"]');  
-        if (CheckBox.attr('checked')) 
-        {  
-            CheckBox.attr('checked', false);  
-        } 
-        else 
-        {  
-            CheckBox.attr('checked', true);  
-        }  
-    }) 
-    */ 
+    <script>
+    
+       $('.checkbox__text').click(function() 
+       {
+          //console.log('checkdiv'); 
+          if ($('.checkbox__text').css('z-index')==10)
+          {
+             $('.checkbox__text').css('background','red');
+             $('.checkbox__text').css('z-index',11);
+             $('.checkbox__text').html('&#xf21b');
+          }
+          else
+          {
+             $('.checkbox__text').css('background','green');
+             $('.checkbox__text').css('z-index',10);
+             $('.checkbox__text').html('&#xf06e');
+          }
+       })  
+
+    
+    
+    /*
+    let checkpass = $('#checkpass');
+    if (checkpass.attr('checked')) 
+    {
+       console.log('checked'); 
+    } 
+    else
+    {
+       console.log('off'); 
+    }
+    */
+    
+    
+     
+    /*
     $('#checkdiv').click(function() 
     { 
+       console.log('checkdiv'); 
        let checkpass = $('#checkpass');
-       let checklbl = $('#checklbl');  
+       let checklbl = $('#checklbl'); 
+       checkpass.click(); 
+       if (checkpass.attr('checked')) 
+       {
+          console.log('checked'); 
+             //checkpass.attr('checked',false);  
+             //checklbl.html("\f21b");
+       } 
+       else
+       {
+          console.log('off'); 
+             //checkpass.attr('checked',true);  
+             //checklbl.html("\f06e");
+       }
+       
+       / *
+       * /
        //checkpass.click();
+          / *
        $('#checkdiv').click(function() 
-       { 
+       {
           if (checkpass.attr('checked')) 
           {
              console.log('checked'); 
@@ -139,7 +164,8 @@ function MakeEmailPass($enMode)
              //checklbl.html("\f06e");
           }
        })  
-       /*  
+          * /
+       / *  
        console.log('checkdiv'); 
        console.log(document.getElementById('checklbl').style.color); 
         if (checklbl.html=="\f06e")
@@ -152,8 +178,8 @@ function MakeEmailPass($enMode)
         }
        //checkpass.click();
        //if (checkpass.attr('checked')) {checklbl.html("\f06e");}
-       */
-       /*
+       * /
+       / *
        if (checkpass.attr('checked')) 
        {
           //checklbl.html("\f21b");
@@ -164,8 +190,9 @@ function MakeEmailPass($enMode)
           //checklbl.html("\f06e");
           checkpass.attr('checked',true);  
        }
-       */
-    })  
+       * /
+    }) 
+    */ 
     </script>  
     
 
