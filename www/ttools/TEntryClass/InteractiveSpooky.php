@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  04.02.2023
-// Copyright © 2023 tve                              Посл.изменение: 25.09.2023
+// Copyright © 2023 tve                              Посл.изменение: 14.11.2023
 
 $enMode=\prown\getComRequest('enMode');
 
@@ -82,28 +82,6 @@ function MakeEmailPass($enMode)
       </div>
    </fieldset>
    <div id="checkdiv" class="checkbox__text">&#xf06e</div>
-
-    <script>
-       let checkdiv=$('#checkdiv');
-       checkdiv.click(function() 
-       {
-          if (checkdiv.css('z-index')==10)
-          {
-             checkdiv.css('color','red');
-             checkdiv.css('z-index',11);
-             checkdiv.html('&#xf21b');
-             $('#password').attr('type',"text");
-          }
-          else
-          {
-             checkdiv.css('color','green');
-             checkdiv.css('z-index',10);
-             checkdiv.html('&#xf06e');
-             $('#password').attr('type',"password");
-          }
-       })
-    </script>  
-   
    <?php
    MakePassword('password-field1','Пароль','password');
    if ($enMode==entZaregistrirovatsya)

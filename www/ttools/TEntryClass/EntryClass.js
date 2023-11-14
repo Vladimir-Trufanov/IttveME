@@ -4,7 +4,7 @@
 // * ittve.me                                Блок общих функций на JavaScript *
 // *                                         для входа и регистрации на сайте *
 // *                                                                          *
-// * v1.8, 10.11.2023                               Автор:      Труфанов В.Е. *
+// * v1.9, 14.11.2023                               Автор:      Труфанов В.Е. *
 // * Copyright © 2023 tve                           Дата создания: 01.04.2023 *
 // ****************************************************************************
 
@@ -59,23 +59,39 @@ $(document).ready(function()
    var password = document.querySelector("#password");
    if (password != null)
    {
-   
-      //if ($('#password').attr('type')=="password")
-      //{
       password.addEventListener("focus", function () 
       {
-         document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 145,68 105,51 103,62 102,74 123,117 155,116");
-         document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 54,64 103,48 106,64 108,80 65,121 48,119");
+      if ($('#password').attr('type')=="password")
+      {
+         CloseEyesHands();
+      }
       });
       password.addEventListener("blur", function () 
       {
-         document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 191,90 194,114 192,125 191,137 172,109 155,116");
-         document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 25,92 9,108 11,124 13,141 27,115 48,119");
+         RemoveHandsFromEyes();
       });
-      //}
-      
-      
    }
+   // Управляем глазками при переключении видимости пароля
+   var checkdiv=$('#checkdiv');
+   checkdiv.click(function() 
+   {
+      if (checkdiv.css('z-index')==10)
+      {
+         checkdiv.css('color','red');
+         checkdiv.css('z-index',11);
+         checkdiv.html('&#xf21b');
+         $('#password').attr('type',"text");
+         RemoveHandsFromEyes();
+      }
+      else
+      {
+         checkdiv.css('color','green');
+         checkdiv.css('z-index',10);
+         checkdiv.html('&#xf06e');
+         $('#password').attr('type',"password");
+         CloseEyesHands();
+      }
+   })
    // Выполняем дополнительный контроль email
    const emailCtrl = document.getElementById("email");
    if (emailCtrl != null)
@@ -153,6 +169,29 @@ function updateMouthEyes()
    pupilLeft.setAttribute("cy", 76);
    pupilRight.setAttribute("cx", 78 + movePos);
    pupilLeft.setAttribute("cx", 113 + movePos);
+   RemoveHandsFromEyes();
+   
+   /*
+         document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 191,90 194,114 192,125 191,137 172,109 155,116");
+         document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 25,92 9,108 11,124 13,141 27,115 48,119");
+   */
+   
+}
+// ****************************************************************************
+// *           закрыть глаза руками = close your eyes with your hands         *
+// ****************************************************************************
+function CloseEyesHands() 
+{
+   document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 145,68 105,51 103,62 102,74 123,117 155,116");
+   document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 54,64 103,48 106,64 108,80 65,121 48,119");
+}
+// ****************************************************************************
+// *           убрать руки от глаз = remove your hands from your eyes         *
+// ****************************************************************************
+function RemoveHandsFromEyes() 
+{
+   document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 191,90 194,114 192,125 191,137 172,109 155,116");
+   document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 25,92 9,108 11,124 13,141 27,115 48,119");
 }
 
 // ------------------------------ ДОПОЛНИТЕЛЬНЫЕ КОНТРОЛИ ВВОДА И ОБРАБОТКИ ---

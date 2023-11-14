@@ -791,7 +791,7 @@ IttveMe
 15=..\TPhpTools\TPhpTools\TUnicodeUser\UnicodeUserClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\InteractiveSpooky.php
+Selected=www\ttools\TEntryClass\EntryClass.css
 [www\index.php]
 TopLine=129
 Caret=12,168
@@ -802,8 +802,8 @@ Caret=44,267
 TopLine=59
 Caret=1,59
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=35
-Caret=1,44
+TopLine=1
+Caret=17,9
 [www\Common.php]
 TopLine=35
 Caret=112,38
@@ -814,17 +814,17 @@ Caret=1,57
 TopLine=305
 Caret=54,344
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=55
-Caret=9,74
+TopLine=29
+Caret=14,7
 [www\ttools\TEntryClass\EntryClass.css]
-TopLine=287
+TopLine=288
 Caret=11,323
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=12
 Caret=1,12
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=80
-Caret=79,85
+TopLine=1
+Caret=75,10
 [www\UpSiteCSS.php]
 TopLine=52
 Caret=1,70
