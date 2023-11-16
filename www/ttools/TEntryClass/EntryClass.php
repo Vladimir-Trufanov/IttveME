@@ -217,7 +217,6 @@ class Entrying
    // *************************************************************************
    private function enMode_entZaregistrirovatsya() 
    {
-      echo '*** enMode_entZaregistrirovatsya ***<br>';
       require_once "InteractiveSpooky.php"; 
   }
 }

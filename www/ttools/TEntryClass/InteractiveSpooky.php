@@ -90,12 +90,38 @@ function MakeEmailPass($enMode)
    } 
    ?>
    <fieldset id="submit-field">
-      <legend></legend>
-      <div>
-         <input type="submit" name="submit" id="submit" value="Войти"/>
-      </div>
+   <legend></legend>
+   <div>
+   <?php
+   if ($enMode==entZaregistrirovatsya)
+   {
+      echo '<input type="submit" name="submit" id="submit" value="'.'Зарегистрироваться'.'"/>';
+   }
+   else
+   {
+      echo '<input type="submit" name="submit" id="submit" value="'.'Войти'.'"/>';
+   }
+   ?>
+   </div>
    </fieldset>
    <?php
+   // В режиме регистрации подставляем значения email и пароля
+   if ($enMode==entZaregistrirovatsya)
+   {
+   ?>
+   <script>
+   $(document).ready(function()
+      {
+         $('.placeholder').css('display','none');
+         let iem = localStorage.getItem("emaili");
+         let ipa = localStorage.getItem("passiv");
+         $('#email').attr('value',iem);
+         $('#password').attr('value',ipa);
+         $('#dblpassword').attr('value',ipa);
+      })
+   </script>
+   <?php
+   }
 }
 // ****************************************************************************
 // *                 Готовим разметку для ввода email и паролей               *

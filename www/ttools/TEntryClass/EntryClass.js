@@ -71,6 +71,21 @@ $(document).ready(function()
          RemoveHandsFromEyes();
       });
    }
+   var dblpassword = document.querySelector("#dblpassword");
+   if (dblpassword != null)
+   {
+      dblpassword.addEventListener("focus", function () 
+      {
+      if ($('#dblpassword').attr('type')=="password")
+      {
+         CloseEyesHands();
+      }
+      });
+      dblpassword.addEventListener("blur", function () 
+      {
+         RemoveHandsFromEyes();
+      });
+   }
    // Управляем глазками при переключении видимости пароля
    var checkdiv=$('#checkdiv');
    checkdiv.click(function() 
@@ -81,6 +96,7 @@ $(document).ready(function()
          checkdiv.css('z-index',11);
          checkdiv.html('&#xf21b');
          $('#password').attr('type',"text");
+         $('#dblpassword').attr('type',"text");
          RemoveHandsFromEyes();
       }
       else
@@ -89,6 +105,7 @@ $(document).ready(function()
          checkdiv.css('z-index',10);
          checkdiv.html('&#xf06e');
          $('#password').attr('type',"password");
+         $('#dblpassword').attr('type',"password");
          CloseEyesHands();
       }
    })
@@ -170,12 +187,6 @@ function updateMouthEyes()
    pupilRight.setAttribute("cx", 78 + movePos);
    pupilLeft.setAttribute("cx", 113 + movePos);
    RemoveHandsFromEyes();
-   
-   /*
-         document.querySelector("#ghost-arm-left").setAttribute("d", "M 155,88 C 191,90 194,114 192,125 191,137 172,109 155,116");
-         document.querySelector("#ghost-arm-right").setAttribute("d", "M 45,89 C 25,92 9,108 11,124 13,141 27,115 48,119");
-   */
-   
 }
 // ****************************************************************************
 // *           закрыть глаза руками = close your eyes with your hands         *
@@ -293,6 +304,10 @@ function CtrlEmailPass(emaili,passiv)
          // Если все хорошо, обрабатываем результат аякс-запроса
          else
          {
+            // Сохраняем в память браузера email и пароль
+            localStorage.setItem("emaili",emaili);
+            localStorage.setItem("passiv",passiv);
+            // Разбираем результат аякс-запроса
             let eprMessa;       // Сообщение по результату проверки email и пароля
             let eprGrayInput;   // Текст неактивного действия по результату проверки
             let actGrayInput;   // Неактивное действие по результату проверки

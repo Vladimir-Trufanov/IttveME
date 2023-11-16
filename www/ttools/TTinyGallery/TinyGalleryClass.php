@@ -535,7 +535,10 @@ class TinyGallery
       // то пропускаем mmlVojti и отрабатываем вход на сайт
       elseif ((\prown\isComRequest(mmlVojti)) and !(\prown\isComRequest(entPodtverdit,'enMode')))
       {
-         $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+         if (\prown\isComRequest(entZaregistrirovatsya,'enMode'))
+            $Title=MakeTitle('Зарегистрироваться на сайте! '.'&#128152;&#129315;',ttMessage);
+         else
+            $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Entry);
       }
       // 7-BODY этап ----------------- ?Com=prochitat-o-sajte-izmenit-nastrojki
