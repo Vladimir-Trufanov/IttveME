@@ -90,10 +90,10 @@ echo '<form method="get" action="'.$this->urlHome.'">';
         <p><input type="hidden"   name="Com" value="vojti"></p>
         <p>Логин: <input type="text" name="login"> <samp style="color:red">*</samp></p>
         <p>EMail: <input type="email" name="email"><samp style="color:red">*</samp></p>
-        <p>Пароль: <input type="password" name="pass"><samp style="color:red">*</samp></p>
+        <p>Пароль: <input type="text" name="pass"><samp style="color:red">*</samp></p>
         
         <p>Повторите пароль: 
-           <input type="password" name="pass_rep">  <samp style="color:red">*</samp></p>
+           <input type="text" name="pass_rep">  <samp style="color:red">*</samp></p>
         <p><input type="submit"   name="doGo" value="Зарегистрироваться"></p>
 <?php
 echo '</form>';

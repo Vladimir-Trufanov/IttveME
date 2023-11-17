@@ -4,7 +4,7 @@
 // * ittve.me                                Блок общих функций на JavaScript *
 // *                                         для входа и регистрации на сайте *
 // *                                                                          *
-// * v1.9, 14.11.2023                               Автор:      Труфанов В.Е. *
+// * v1.10, 17.11.2023                               Автор:      Труфанов В.Е. *
 // * Copyright © 2023 tve                           Дата создания: 01.04.2023 *
 // ****************************************************************************
 
@@ -133,28 +133,46 @@ $(document).ready(function()
          else emailCtrl.setCustomValidity("");
       });
    }
-   // Выполняем дополнительный контроль пароля
+   // Выполняем дополнительные контроли паролей
    const passCtrl = document.getElementById("password");
-   if (passCtrl != null)
+   const passDblCtrl = document.getElementById("dblpassword");
+   //passwordCtrl(passDblCtrl);
+   passwordCtrl(passCtrl); 
+   passwordDblCtrl(passCtrl,passDblCtrl);
+   function passwordCtrl(passCtrl)
    {
-      passCtrl.addEventListener("input", (event) => 
+      if (passCtrl != null)
       {
-         // Делаем проверку на отсутствие специальных символов
-         if (!isSpecsim(passCtrl.value)) passCtrl.setCustomValidity(mSpecsim+' в пароле: "'+passCtrl.value+'"')
-         // Делаем проверку на число символов в поле ввода
-         else if (passCtrl.value.length<8) passCtrl.setCustomValidity(mBolee8+': "'+passCtrl.value+'"')
-         else if (passCtrl.value.length>21) passCtrl.setCustomValidity(mMenee21+': "'+passCtrl.value+'"')
-         // Проверяем присутствие пробелов
-         else if (isSpaces(passCtrl.value)) passCtrl.setCustomValidity(mNoSpace+': "'+passCtrl.value+'"')
-         // Проверяем присутствие хотя бы одной прописной латинской буквы
-         else if (!isLatPropisi(passCtrl.value)) passCtrl.setCustomValidity(mDalatPropisi+': "'+passCtrl.value+'"')
-         // Делаем проверку на присутствие русских букв
-         else if (isRuss(passCtrl.value)) passCtrl.setCustomValidity(mNeruss+': "'+passCtrl.value+'"')
-         // Делаем проверку на отсутствие цифр
-         else if (!isNumbers(passCtrl.value)) passCtrl.setCustomValidity(mNumbers+': "'+passCtrl.value+'"')
-         // Все правильно
-         else passCtrl.setCustomValidity("");
-      });
+         passCtrl.addEventListener("input", (event) => 
+         {
+            // Делаем проверку на отсутствие специальных символов
+            if (!isSpecsim(passCtrl.value)) passCtrl.setCustomValidity(mSpecsim+' в пароле: "'+passCtrl.value+'"')
+            // Делаем проверку на число символов в поле ввода
+            else if (passCtrl.value.length<8) passCtrl.setCustomValidity(mBolee8+': "'+passCtrl.value+'"')
+            else if (passCtrl.value.length>21) passCtrl.setCustomValidity(mMenee21+': "'+passCtrl.value+'"')
+            // Проверяем присутствие пробелов
+            else if (isSpaces(passCtrl.value)) passCtrl.setCustomValidity(mNoSpace+': "'+passCtrl.value+'"')
+            // Проверяем присутствие хотя бы одной прописной латинской буквы
+            else if (!isLatPropisi(passCtrl.value)) passCtrl.setCustomValidity(mDalatPropisi+': "'+passCtrl.value+'"')
+            // Делаем проверку на присутствие русских букв
+            else if (isRuss(passCtrl.value)) passCtrl.setCustomValidity(mNeruss+': "'+passCtrl.value+'"')
+            // Делаем проверку на отсутствие цифр
+            else if (!isNumbers(passCtrl.value)) passCtrl.setCustomValidity(mNumbers+': "'+passCtrl.value+'"')
+            // Все правильно
+            else passCtrl.setCustomValidity(""); 
+         });
+      }
+   }
+   function passwordDblCtrl(passCtrl,passDblCtrl)
+   {
+      if ((passCtrl!=null)&&(passDblCtrl!=null))
+      {
+         passDblCtrl.addEventListener("input", (event) => 
+         {
+            if (passCtrl.value!=passDblCtrl.value) passDblCtrl.setCustomValidity(mPassNoDbl)
+            else passDblCtrl.setCustomValidity("");
+         });
+      }
    }
 })
 

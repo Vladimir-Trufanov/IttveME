@@ -102,7 +102,6 @@ class Entrying
       // Внутренняя ошибка
       else echo('Ошибка Entrying->Body 2023-10-06');
 
-      //require_once "EmailRegistration.php"; 
       
       /*
       // Вариант отправки HTML-письма для несколько получателей
@@ -218,6 +217,7 @@ class Entrying
    private function enMode_entZaregistrirovatsya() 
    {
       require_once "InteractiveSpooky.php"; 
+      //require_once "EmailRegistration.php"; 
   }
 }
 // ********************************************************* EntryClass.php ***
