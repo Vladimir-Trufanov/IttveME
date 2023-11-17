@@ -12,12 +12,12 @@
 $enMode=\prown\getComRequest('enMode');
 
 echo '<div id="EntryClass">';
-echo '<form id="EntryForm" method="post" action="'.$this->urlHome.'">';
+echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
 // Строим улыбающегося призрака
 MakeGhost();
 // Готовим скрытые поля ввода для управленческих параметров
-echo '<input type="hidden"   name="Com" value="vojti">';
-echo '<input type="hidden"   name="enMode" value="'.entProverit.'">';
+echo '<input type="hidden" name="Com" id="Com" value="vojti">';
+echo '<input type="hidden" name="enMode" id="enMode" value="'.entProverit.'">';
 // Готовим разметку для ввода email и паролей
 MakeEmailPass($enMode);
 echo '</form>';
@@ -118,6 +118,7 @@ function MakeEmailPass($enMode)
          $('#email').attr('value',iem);
          $('#password').attr('value',ipa);
          $('#dblpassword').attr('value',ipa);
+         $('#enMode').attr('value',entOtpravitPismo);
       })
    </script>
    <?php

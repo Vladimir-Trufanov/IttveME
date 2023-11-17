@@ -40,6 +40,7 @@ define ('entProverit',                   'proverit');                        // 
 define ('entZamenit',                    'zamenit');                         //  Заменить пароль
 define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
 define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт c email и паролем
+define ('entOtpravitPismo',              'otpravit-pismo');                  //  Отправить письмо для подтверждения регистрации
 
 define('tstEmailNeNajden',      'Адрес электронной почты не зарегистрирован'); 
 define('tstParolNevernyj',      'Пароль неверный');                   
@@ -56,6 +57,7 @@ function DefEmailPass()
       'entZamenit="'            .entZamenit.'";'.
       'entZaregistrirovatsya="' .entZaregistrirovatsya.'";'.
       'entPodtverdit="'         .entPodtverdit.'";'.
+      'entOtpravitPismo="'      .entOtpravitPismo.'";'.
    '</script>';
    echo $actEmailPass;
 

@@ -99,6 +99,9 @@ class Entrying
       else if (\prown\isComRequest(entZaregistrirovatsya,'enMode')) $this->enMode_entZaregistrirovatsya(); 
       // Подтверждаем регистрацию, пропускаем на сайт с заданным паролем
       else if (\prown\isComRequest(entPodtverdit,'enMode')) $this->enMode_entPodtverdit(); 
+      // При поступлении команды 'Отправить письмо для подтверждения регистрации' 
+      // отправляем письмо и перегружаем сайт
+      else if (\prown\isComRequest(entOtpravitPismo,'enMode')) $this->enMode_entOtpravitPismo();  
       // Внутренняя ошибка
       else echo('Ошибка Entrying->Body 2023-10-06');
 
@@ -218,6 +221,47 @@ class Entrying
    {
       require_once "InteractiveSpooky.php"; 
       //require_once "EmailRegistration.php"; 
-  }
+   }
+   // *************************************************************************
+   // *      При поступлении команды 'Отправить письмо для подтверждения      *
+   // *          регистрации' отправляем письмо и перегружаем сайт            * 
+   // *************************************************************************
+   private function enMode_entOtpravitPismo() 
+   {
+      echo '*** enMode_entOtpravitPismo ***<br>';
+      $login = $_REQUEST['password'];
+      $email = $_REQUEST['email'];
+      // Пароль хешируется
+      $pass = password_hash($_REQUEST['password'],PASSWORD_DEFAULT);
+      // хешируем хеш, который состоит из логина и времени
+      $hash = md5($login.time());
+      
+      echo 'Проверки выполнены! Отправляем письмо.<br>';
+
+      // Для отправки HTML-письма устанавливаем заголовки
+      $headers  = 'MIME-Version:1.0'."\r\n";
+      $headers .= 'Content-type:text/html;charset=utf-8'."\r\n";
+      //$headers .= "To: <$email>\r\n";
+      //$headers .= "From: <tve58@inbox.ru>\r\n";
+      // Тема письма
+      $subject = "Подтвердите Email для сайта ittve.me";
+      // Текст письма
+      $message = '
+         <html>
+         <head>
+            <title>Подтвердите Email</title>
+         </head>
+         <body>
+            <p>Что бы подтвердить Email, перейдите по <a href="'.$this->urlHome.'?hash='.$hash.'">ссылке на ittve.me</a></p>
+         </body>
+         </html>
+      ';
+      
+      // Отправляем
+      $err=mail($email,$subject,$message,$headers);
+      if ($err) echo 'Письмо ушло!<br>';
+      else echo 'Ошибка при отправке письма<br>';
+
+   }
 }
 // ********************************************************* EntryClass.php ***

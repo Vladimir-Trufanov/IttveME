@@ -136,8 +136,8 @@ $(document).ready(function()
    // Выполняем дополнительные контроли паролей
    const passCtrl = document.getElementById("password");
    const passDblCtrl = document.getElementById("dblpassword");
-   //passwordCtrl(passDblCtrl);
    passwordCtrl(passCtrl); 
+   //passwordCtrl(passDblCtrl);
    passwordDblCtrl(passCtrl,passDblCtrl);
    function passwordCtrl(passCtrl)
    {
@@ -175,7 +175,6 @@ $(document).ready(function()
       }
    }
 })
-
 // ****************************************************************************
 // *      Изменить положение глаз при вводе символов в поле редактирования    *
 // ****************************************************************************
@@ -323,8 +322,7 @@ function CtrlEmailPass(emaili,passiv)
          else
          {
             // Сохраняем в память браузера email и пароль
-            localStorage.setItem("emaili",emaili);
-            localStorage.setItem("passiv",passiv);
+            setEmailPass(emaili,passiv);
             // Разбираем результат аякс-запроса
             let eprMessa;       // Сообщение по результату проверки email и пароля
             let eprGrayInput;   // Текст неактивного действия по результату проверки
@@ -405,10 +403,12 @@ function ViewActionScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,a
       $('#submit').attr('value',eprInput);
       $('#enMode').attr('value',actInput);
    }
+   /*
    console.log('ViewActionScrepa - enMode: '+$('#enMode').attr('value'));
    console.log('ViewActionScrepa - enMode: '+$('#enMode').val());
    console.log('ViewActionScrepa - submit: '+$('#submit').attr('value'));
    console.log('ViewActionScrepa - submit: '+$('#submit').val());
+   */
 }
 // ****************************************************************************
 // *   Установить начальное состояние (или состояния после выбора) для серой  *
@@ -444,6 +444,28 @@ function setdefCookie(cName,cValue)
    datecu = datecu.toUTCString();
    // Готовим кукисы
    document.cookie = cName+'='+cValue+'; path=/; expires='+datecu+'; samesite=strict';
+}
+// ****************************************************************************
+// *              Сохранить в память браузера email и пароль                  *
+// *                 перед отправкой email для регистрации                    *
+// ****************************************************************************
+/*
+function preEmail()
+{
+   let emaili=$('#email').attr('value');
+   let passiv=$('#password').attr('value');
+   setEmailPass(emaili,passiv);
+   console.log(emaili+'->'+passiv);
+   alert('Отправить email для регистрации!');
+}
+*/
+// ****************************************************************************
+// *                  Сохранить в память браузера email и пароль              *
+// ****************************************************************************
+function setEmailPass(emaili,passiv)
+{
+   localStorage.setItem("emaili",emaili);
+   localStorage.setItem("passiv",passiv);
 }
 
 // ********************************************************** EntryClass.js ***
