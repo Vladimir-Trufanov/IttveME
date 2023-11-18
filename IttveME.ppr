@@ -799,8 +799,8 @@ Caret=20,41
 TopLine=59
 Caret=128,70
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=228
-Caret=48,235
+TopLine=350
+Caret=18,386
 [www\Common.php]
 TopLine=17
 Caret=26,43

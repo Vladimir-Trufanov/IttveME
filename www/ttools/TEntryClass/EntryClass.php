@@ -229,6 +229,9 @@ class Entrying
    private function enMode_entOtpravitPismo() 
    {
       echo '*** enMode_entOtpravitPismo ***<br>';
+      //otpravka($this->urlHome);
+      otpravka5($this->urlHome);
+      /*
       $login = $_REQUEST['password'];
       $email = $_REQUEST['email'];
       // Пароль хешируется
@@ -261,7 +264,128 @@ class Entrying
       $err=mail($email,$subject,$message,$headers);
       if ($err) echo 'Письмо ушло!<br>';
       else echo 'Ошибка при отправке письма<br>';
-
+      */
    }
+}
+function otpravka($urlHome)
+{
+      $login = $_REQUEST['password'];
+      $email = $_REQUEST['email'];
+      // Пароль хешируется
+      $pass = password_hash($_REQUEST['password'],PASSWORD_DEFAULT);
+      // хешируем хеш, который состоит из логина и времени
+      $hash = md5($login.time());
+      
+      echo 'Проверки выполнены! Отправляем письмо.<br>';
+
+      // Для отправки HTML-письма устанавливаем заголовки
+      $headers  = 'MIME-Version:1.0'."\r\n";
+      $headers .= 'Content-type:text/html;charset=utf-8'."\r\n";
+      //$headers .= "To: <$email>\r\n";
+      //$headers .= "From: <tve58@inbox.ru>\r\n";
+      // Тема письма
+      $subject = "Подтвердите Email для сайта ittve.me";
+      // Текст письма
+      $message = '
+         <html>
+         <head>
+            <title>Подтвердите Email</title>
+         </head>
+         <body>
+            <p>Что бы подтвердить Email, перейдите по <a href="'.$urlHome.'?hash='.$hash.'">ссылке на ittve.me</a></p>
+         </body>
+         </html>
+      ';
+      
+      // Отправляем
+      $err=mail($email,$subject,$message,$headers);
+      if ($err) echo 'Письмо ушло!<br>';
+      else echo 'Ошибка при отправке письма<br>';
+}
+// Пример1 Отправка письма.
+function otpravka1($urlHome)
+{
+   // mail(string $to,string $subject,string $message,array|string $additional_headers = [],string $additional_params = ""): bool
+   // Сообщение
+   $message = "Line 1\r\nLine 2\r\nLine 3";
+   // На случай если какая-то строка письма длиннее 70 символов мы используем wordwrap()
+   $message = wordwrap($message, 70, "\r\n");
+   // Отправляем
+   mail('tve58@inbox.ru', 'My Subject', $message);
+}
+// Пример2 Отправка письма с дополнительными заголовками.
+function otpravka2($urlHome)
+{
+   // mail(string $to,string $subject,string $message,array|string $additional_headers = [],string $additional_params = ""): bool
+   $to      = 'tve58@inbox.ru';
+   $subject = 'the subject';
+   $message = 'hello';
+   $headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: tve@karelia.ru' . "\r\n" .
+    'X-Mailer: EntryClass/ittve-me';
+   mail($to, $subject, $message, $headers);
+}
+// Пример3 Отправка письма с дополнительными заголовками, переданными массивом
+// (доступно с PHP 7.2.0)
+function otpravka3($urlHome)
+{
+   $to      = 'tve58@inbox.ru';
+   $subject = 'the subject';
+   $message = 'hello';
+   $headers = array(
+    'From'     => 'webmaster@example.com',
+    'Reply-To' => 'webmaster@example.com',
+    'X-Mailer' => 'PHP/' . phpversion()
+   );
+   mail($to, $subject, $message, $headers);
+}
+// Пример4 Отправка письма с дополнительными аргументами командной строки.
+// Параметр additional_params может быть использован для передачи 
+// дополнительных параметров программе, используемой для отправки писем с 
+// помощью директивы sendmail_path.
+function otpravka4($urlHome)
+{
+   // mail(      string $to, string $subject, string $message, array|string $additional_headers = [], string $additional_params = ""): bool
+   mail   ('tve58@inbox.ru',   'the subject',   'the message',                                  null,      '-fwebmaster@example.com');
+}
+// Пример5 Отправка HTML-сообщения.
+function otpravka5($urlHome)
+{
+   // несколько получателей
+   $to = 'tve58@inbox.ru, tve@karelia.ru'; // обратите внимание на запятую
+   // тема письма
+   $subject = 'Регистрация пользователя на сайте ittve.me [subject]';
+   // текст письма
+   $message = '
+      <html>
+      <head>
+         <title>Регистрация пользователя на сайте ittve.me [title]</title>
+      </head>
+      <body>
+      <p>Регистрация пользователя на сайте ittve.me</p>
+      <table>
+        <tr>
+          <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
+        </tr>
+        <tr>
+          <td>Johny</td><td>10th</td><td>August</td><td>1970</td>
+        </tr>
+        <tr>
+          <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
+        </tr>
+      </table>
+      </body>
+      </html>
+   ';
+   // Для отправки HTML-письма должен быть установлен заголовок Content-type
+   $headers[] = 'MIME-Version: 1.0';
+   $headers[] = 'Content-type: text/html; charset=utf-8';
+   // Дополнительные заголовки
+   $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
+   $headers[] = 'From: Birthday Reminder <birthday@example.com>';
+   $headers[] = 'Cc: birthdayarchive@example.com';
+   $headers[] = 'Bcc: birthdaycheck@example.com';
+   // Отправляем
+   mail($to, $subject, $message, implode("\r\n", $headers));
 }
 // ********************************************************* EntryClass.php ***
