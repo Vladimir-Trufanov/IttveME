@@ -283,7 +283,7 @@ function isSpecsim(cValue)
 // ****************************************************************************
 function CtrlEmailPass(emaili,passiv)
 {
-   //console.log('email='+emaili+'  passi='+passiv);
+   console.log('email='+emaili+'  passi='+passiv);
    let modeCtrl=tst396;
    pathphp="CtrlEmailPass.php";
    // Делаем запрос на определение наименования раздела материалов
@@ -310,6 +310,7 @@ function CtrlEmailPass(emaili,passiv)
       {
          // Вырезаем из запроса чистое сообщение
          messa=FreshJSON(message);
+         console.log('messa='+messa);
          // Получаем параметры ответа
          parm=JSON.parse(messa);
          // При ошибке выводим сообщение об ошибке

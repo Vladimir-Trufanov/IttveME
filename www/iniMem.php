@@ -173,8 +173,8 @@ if (!file_exists($basename.'.db3'))
 }
 $Arti->setKindMessage($note);
 // При отсутствии создаём таблицу пользователей ittve.me в базе данных 
-$pdo=ttools\_BaseConnect($basename,$username,$password);
-ttools\CreateMeUsers($pdo,'-'); 
+//$pdo=ttools\_BaseConnect($basename,$username,$password);
+//ttools\CreateMeUsers($pdo,'-'); 
 // Меняем кукис ориентации устройства 
 $c_Orient=prown\MakeCookie('Orient',oriLandscape,tStr,true);             // ориентация устройства
 if (IsSet($_GET["orient"]))

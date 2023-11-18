@@ -30,7 +30,8 @@ function CreateMeUsers($pdo,$aCharters)
          $sql='CREATE TABLE meusers ('.
             'uip         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пользователя
             'email       VARCHAR NOT NULL UNIQUE,'.                     // адрес электронной почты пользователя
-            'passiv      VARCHAR NOT NULL,'.                            // зашифрованный пароль
+            'passiv      VARCHAR NOT NULL,'.                            // измененный пароль
+            'iv          VARCHAR NOT NULL,'.                            // ненулевой вектор
             'phone       VARCHAR,'.                                     // телефон
             'art         TEXT)';                                        // дополнительная информация из VK
          $st = $pdo->query($sql);
@@ -42,17 +43,21 @@ function CreateMeUsers($pdo,$aCharters)
             [ 2, 'tve@karelia.ru', 'x00-315A', '+7911-6603087','20' ]
          ];}       
          $statement = $pdo->prepare("INSERT INTO [meusers] ".
-            "([uip], [email], [passiv], [phone], [art]) VALUES ".
-            "(:uip,  :email,  :passiv,  :phone,  :art);");
-         foreach ($aCharters as
-             [$uip,  $email,  $passiv,  $phone,  $art])
-         $statement->execute([
-            "uip"    => $uip, 
-            "email"  => $email, 
-            "passiv" => $passiv, 
-            "phone"  => $phone, 
-            "art"    => $art
-         ]);
+            "([uip], [email], [passiv], [iv], [phone], [art]) VALUES ".
+            "(:uip,  :email,  :passiv,  :iv,  :phone,  :art);");
+         foreach ($aCharters as [$uip,  $email,  $original,  $phone,  $art])
+         {
+            setModiPass($original,$passiv,$iv);
+            $statement->execute
+            ([
+               "uip"    => $uip, 
+               "email"  => $email, 
+               "passiv" => $passiv,  
+               "iv"     => $iv,
+               "phone"  => $phone, 
+               "art"    => $art
+            ]);
+         }
          // Создаем индекс по email в таблице пользователей      
          $sql='CREATE INDEX IF NOT EXISTS iemail ON meusers (email)';
          $st = $pdo->query($sql);
@@ -71,6 +76,19 @@ function CreateMeUsers($pdo,$aCharters)
    }
 }
 // ****************************************************************************
+// *                      Изменить и восстановить пароль                      *
+// ****************************************************************************
+define ('fimPassi','tve_openssl_random_pseudo_bytesx');
+function setModiPass($original,&$passiv,&$iv)
+{
+   $iv = openssl_random_pseudo_bytes(16);                                               
+   $passiv = openssl_encrypt($original,"aes-256-cbc",fimPassi,OPENSSL_RAW_DATA,$iv); 
+}
+function getModiPass(&$original,$passiv,$iv)
+{
+   $original = openssl_decrypt($passiv,"aes-256-cbc",fimPassi,OPENSSL_RAW_DATA,$iv);
+}
+// ****************************************************************************
 // *                Выбрать запись по номеру электронной почты                *
 // ****************************************************************************
 function SelRecParema($pdo,$email)
@@ -81,6 +99,7 @@ function SelRecParema($pdo,$email)
       $cSQL='SELECT * FROM meusers WHERE email="'.$email.'"';
       $stmt = $pdo->query($cSQL);
       $table = $stmt->fetchAll();
+      getModiPass($table[0]['passiv'],$table[0]['passiv'],$table[0]['iv']);
       $pdo->commit();
    } 
    catch (\Exception $e) 

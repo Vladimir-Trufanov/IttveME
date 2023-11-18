@@ -396,7 +396,8 @@ class TinyGallery
    
       // Шифруем текст
       $original_data = "Привет, tve!";                                                               // исходные данные
-      $key = openssl_random_pseudo_bytes(32);                                                        // генерация ключа
+      $key = 'tve_openssl_random_pseudo_bytesx';                                                        // генерация ключа
+      //$key = openssl_random_pseudo_bytes(32);                                                        // генерация ключа
       $iv = openssl_random_pseudo_bytes(16);                                                         // генерация инициализирующего вектора
       $encrypted_data = openssl_encrypt($original_data, "aes-256-cbc", $key, OPENSSL_RAW_DATA, $iv); // зашифровывание данных
    
@@ -410,9 +411,22 @@ class TinyGallery
       
       // Расшифровываем текст
       $decrypted_data = openssl_decrypt($encrypted_data, "aes-256-cbc", $key, OPENSSL_RAW_DATA, $iv); // расшифровка данных
+
+
+
+      echo '$original_data ='.$original_data.'<br>';
+      
+      /*
+      echo '$key           ='.$key.'<br>'; 
+      $ckey = htmlspecialchars ($key);
+      echo '$ckey          ='.$ckey.'<br>'; 
+      //echo '$iv           ='.htmlentities($iv).'<br>'; 
+      //echo '$key          ='.htmlentities($key).'<br>'; 
+      //echo '$iv           ='.htmlentities($iv).'<br>'; 
+      */
       echo $decrypted_data; // Hello, world!
       
-      /* 2 опыт
+      /* 2 опыт          
       phpinfo();
       */
    } 
