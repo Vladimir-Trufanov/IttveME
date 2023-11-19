@@ -99,7 +99,8 @@ function SelRecParema($pdo,$email)
       $cSQL='SELECT * FROM meusers WHERE email="'.$email.'"';
       $stmt = $pdo->query($cSQL);
       $table = $stmt->fetchAll();
-      getModiPass($table[0]['passiv'],$table[0]['passiv'],$table[0]['iv']);
+      if (count($table)>0)
+         getModiPass($table[0]['passiv'],$table[0]['passiv'],$table[0]['iv']);
       $pdo->commit();
    } 
    catch (\Exception $e) 

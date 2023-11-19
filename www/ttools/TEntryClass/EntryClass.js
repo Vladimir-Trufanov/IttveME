@@ -379,6 +379,7 @@ function CtrlEmailPass(emaili,passiv)
                eprInput = 'eprInput';
                toggleScrepa(eprGrayInput,eprInput,eprMessa,modeCtrl,actGrayInput,actInput);
             }
+            console.log('modeCtrl1='+modeCtrl);
          }
       }
    });
@@ -446,20 +447,10 @@ function setdefCookie(cName,cValue)
    // Готовим кукисы
    document.cookie = cName+'='+cValue+'; path=/; expires='+datecu+'; samesite=strict';
 }
-// ****************************************************************************
-// *              Сохранить в память браузера email и пароль                  *
-// *                 перед отправкой email для регистрации                    *
-// ****************************************************************************
-/*
 function preEmail()
 {
-   let emaili=$('#email').attr('value');
-   let passiv=$('#password').attr('value');
-   setEmailPass(emaili,passiv);
-   console.log(emaili+'->'+passiv);
-   alert('Отправить email для регистрации!');
+   let x='tve_openssl_random_pseudo_bytesx';
 }
-*/
 // ****************************************************************************
 // *                  Сохранить в память браузера email и пароль              *
 // ****************************************************************************

@@ -229,9 +229,11 @@ class Entrying
    private function enMode_entOtpravitPismo() 
    {
       echo '*** enMode_entOtpravitPismo ***<br>';
-      //otpravka($this->urlHome);
-      otpravka5($this->urlHome);
-      /*
+      otpravkaFinal($this->urlHome);
+   }
+}
+   function otpravkaFinal($urlHome)
+   {
       $login = $_REQUEST['password'];
       $email = $_REQUEST['email'];
       // Пароль хешируется
@@ -242,12 +244,9 @@ class Entrying
       echo 'Проверки выполнены! Отправляем письмо.<br>';
 
       // Для отправки HTML-письма устанавливаем заголовки
-      $headers  = 'MIME-Version:1.0'."\r\n";
-      $headers .= 'Content-type:text/html;charset=utf-8'."\r\n";
-      //$headers .= "To: <$email>\r\n";
-      //$headers .= "From: <tve58@inbox.ru>\r\n";
+      $to = $email; //'tve58@inbox.ru';
       // Тема письма
-      $subject = "Подтвердите Email для сайта ittve.me";
+      $subject = "Подтвердите 56 Email для сайта ittve.me";
       // Текст письма
       $message = '
          <html>
@@ -255,17 +254,23 @@ class Entrying
             <title>Подтвердите Email</title>
          </head>
          <body>
-            <p>Что бы подтвердить Email, перейдите по <a href="'.$this->urlHome.'?hash='.$hash.'">ссылке на ittve.me</a></p>
+            <p>Что бы подтвердить Email, перейдите по <a href="'.$urlHome.'?hash='.$hash.'">ссылке на ittve.me</a></p>
          </body>
          </html>
       ';
-      
+
+      $headers =
+      'MIME-Version:1.0'."\r\n".
+      'Content-type:text/html;charset=utf-8'."\r\n". 
+      'From: tve@karelia.ru' . "\r\n" .
+      'Reply-To: tve@karelia.ru' . "\r\n" .
+      'Bcc: tve58@inbox.ru' . "\r\n" .
+      'X-Mailer: EntryClass/ittve-me';
       // Отправляем
-      $err=mail($email,$subject,$message,$headers);
+      //$err=mail($email,$subject,$message,$headers);
+      $err=mail($to,$subject,$message,$headers);
       if ($err) echo 'Письмо ушло!<br>';
       else echo 'Ошибка при отправке письма<br>';
-      */
-   }
 }
 function otpravka($urlHome)
 {
@@ -320,7 +325,8 @@ function otpravka2($urlHome)
    $to      = 'tve58@inbox.ru';
    $subject = 'the subject';
    $message = 'hello';
-   $headers = 'From: webmaster@example.com' . "\r\n" .
+   $headers = 
+    'From: webmaster@example.com' . "\r\n" .
     'Reply-To: tve@karelia.ru' . "\r\n" .
     'X-Mailer: EntryClass/ittve-me';
    mail($to, $subject, $message, $headers);

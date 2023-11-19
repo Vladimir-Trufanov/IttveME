@@ -548,7 +548,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
 			+ttools
-				-TArticlesMaker
+				+TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -614,7 +614,7 @@ IttveMe
 						www\ttools\TGames\PairedCards\popup_bg.jpg
 						www\ttools\TGames\PairedCards\table.jpg
 					www\ttools\TGames\Dispatch_GAME.php
-				-TKwinGallery
+				+TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -786,21 +786,23 @@ IttveMe
 10=www\ttools\TEntryClass\InteractiveSpooky.php
 11=www\UpSiteCSS.php
 12=www\ttools\TEntryClass\CtrlEmailPass.php
+13=www\ttools\TKwinGallery\KwinGalleryClass.php
+14=www\getImgBase64.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryTable.php
+Selected=www\ttools\TEntryClass\EntryClass.php
 [www\index.php]
-TopLine=53
+TopLine=129
 Caret=12,168
 [www\iniMem.php]
 TopLine=164
 Caret=3,177
 [www\UpSite.php]
-TopLine=8
+TopLine=31
 Caret=128,70
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=7
-Caret=9,34
+TopLine=243
+Caret=7,267
 [www\Common.php]
 TopLine=53
 Caret=1,74
@@ -808,17 +810,17 @@ Caret=1,74
 TopLine=27
 Caret=1,57
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=444
-Caret=7,470
+TopLine=404
+Caret=1,445
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=290
-Caret=36,313
+TopLine=426
+Caret=9,452
 [www\ttools\TEntryClass\EntryClass.css]
 TopLine=288
 Caret=11,323
 [www\ttools\TEntryClass\EntryTable.php]
-TopLine=78
-Caret=1,102
+TopLine=61
+Caret=53,81
 [www\ttools\TEntryClass\InteractiveSpooky.php]
 TopLine=84
 Caret=1,98
@@ -826,5 +828,11 @@ Caret=1,98
 TopLine=1
 Caret=1,1
 [www\ttools\TEntryClass\CtrlEmailPass.php]
-TopLine=31
-Caret=29,54
+TopLine=35
+Caret=1,68
+[www\ttools\TKwinGallery\KwinGalleryClass.php]
+TopLine=274
+Caret=44,297
+[www\getImgBase64.php]
+TopLine=44
+Caret=1,1

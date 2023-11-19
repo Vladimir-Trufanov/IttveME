@@ -54,6 +54,7 @@ else if ($table[0]['phone']==tstErr)
 else if ($table[0]['passiv'] != $passi)
 {
    $NameGru=tstParolNevernyj;
+   $NameGru=$table[0]['passiv'].'!='.$passi;
    $Piati=0;
 }
 // Если пароли и email совпали, то возвращаем 'Пароль и email верны' 
