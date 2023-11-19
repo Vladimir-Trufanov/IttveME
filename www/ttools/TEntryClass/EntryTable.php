@@ -76,19 +76,6 @@ function CreateMeUsers($pdo,$aCharters)
    }
 }
 // ****************************************************************************
-// *                      Изменить и восстановить пароль                      *
-// ****************************************************************************
-define ('fimPassi','tve_openssl_random_pseudo_bytesx');
-function setModiPass($original,&$passiv,&$iv)
-{
-   $iv = openssl_random_pseudo_bytes(16);                                               
-   $passiv = openssl_encrypt($original,"aes-256-cbc",fimPassi,OPENSSL_RAW_DATA,$iv); 
-}
-function getModiPass(&$original,$passiv,$iv)
-{
-   $original = openssl_decrypt($passiv,"aes-256-cbc",fimPassi,OPENSSL_RAW_DATA,$iv);
-}
-// ****************************************************************************
 // *                Выбрать запись по номеру электронной почты                *
 // ****************************************************************************
 function SelRecParema($pdo,$email)

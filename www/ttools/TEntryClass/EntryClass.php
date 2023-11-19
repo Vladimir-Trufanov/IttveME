@@ -236,17 +236,26 @@ class Entrying
    {
       $login = $_REQUEST['password'];
       $email = $_REQUEST['email'];
-      // Пароль хешируется
-      $pass = password_hash($_REQUEST['password'],PASSWORD_DEFAULT);
-      // хешируем хеш, который состоит из логина и времени
-      $hash = md5($login.time());
       
-      echo 'Проверки выполнены! Отправляем письмо.<br>';
-
+      // Plaintext password entered by the user 
+      $plaintext_password = $login; 
+      // The hash of the password that can be stored in the database 
+      $hash = password_hash($plaintext_password,PASSWORD_DEFAULT); 
+      // Verify the hash against the password entered 
+      $verify = password_verify($plaintext_password, $hash); 
+      // Print the result depending if they match 
+      if ($verify) 
+      { 
+         echo 'Password Verified!<br>'; 
+      } 
+      else 
+      { 
+         echo 'Incorrect Password!<br>'; 
+      } 
       // Для отправки HTML-письма устанавливаем заголовки
       $to = $email; //'tve58@inbox.ru';
       // Тема письма
-      $subject = "Подтвердите 56 Email для сайта ittve.me";
+      $subject = "Подтвердите адрес электронной почты для сайта";
       // Текст письма
       $message = '
          <html>
@@ -254,20 +263,23 @@ class Entrying
             <title>Подтвердите Email</title>
          </head>
          <body>
-            <p>Что бы подтвердить Email, перейдите по <a href="'.$urlHome.'?hash='.$hash.'">ссылке на ittve.me</a></p>
+            <p>
+            <a href="'.$urlHome.
+            '?hash='  .$hash              .'&enMode='.entPoSsylkeIzPisma.
+            '&plain=' .$plaintext_password.'&pismo=' .$email.'">
+            Что бы подтвердить Email, перейдите по ссылке на сайт <b>www.ittve.me</b>
+            </a>
+            </p>
          </body>
          </html>
       ';
-
       $headers =
       'MIME-Version:1.0'."\r\n".
       'Content-type:text/html;charset=utf-8'."\r\n". 
-      'From: tve@karelia.ru' . "\r\n" .
+      'From: Регистрация на www.ittve.me <tve@karelia.ru>'."\r\n" . 
       'Reply-To: tve@karelia.ru' . "\r\n" .
-      'Bcc: tve58@inbox.ru' . "\r\n" .
       'X-Mailer: EntryClass/ittve-me';
       // Отправляем
-      //$err=mail($email,$subject,$message,$headers);
       $err=mail($to,$subject,$message,$headers);
       if ($err) echo 'Письмо ушло!<br>';
       else echo 'Ошибка при отправке письма<br>';

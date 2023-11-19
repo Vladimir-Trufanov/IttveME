@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	+IttveMe
+	-IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 			BpWin\Выполнить вход и регистрацию на сайте.bp1
@@ -155,7 +155,10 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		+www
+		-www
+			-.well-known
+				-pki-validation
+					www\.well-known\pki-validation\gsdv.txt
 			-Example
 				-ittveLife
 					www\Example\ittveLife\GalleryLife.php
@@ -292,11 +295,11 @@ IttveMe
 				www\jQuery\jquery-1.11.1.min.map
 				www\jQuery\jquery-ui.min.css
 				www\jQuery\jquery-ui.min.js
-			+Jsx
+			-Jsx
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -547,8 +550,8 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
-				+TArticlesMaker
+			-ttools
+				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
 					www\ttools\TArticlesMaker\CommonArticlesMaker.php
@@ -590,14 +593,16 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				+TEntryClass
+				-TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
+					www\ttools\TEntryClass\DumyUPechki.php
 					www\ttools\TEntryClass\EmailRegistration.php
 					www\ttools\TEntryClass\EntryClass.css
 					www\ttools\TEntryClass\EntryClass.js
 					www\ttools\TEntryClass\EntryClass.php
 					www\ttools\TEntryClass\EntryTable.php
 					www\ttools\TEntryClass\InteractiveSpooky.php
+					www\ttools\TEntryClass\Kalinichenko-Dumy-y-pechki-1897.jpg
 					www\ttools\TEntryClass\license.txt
 					www\ttools\TEntryClass\LoginScreen.css
 					www\ttools\TEntryClass\LoginScreen.js
@@ -614,7 +619,7 @@ IttveMe
 						www\ttools\TGames\PairedCards\popup_bg.jpg
 						www\ttools\TGames\PairedCards\table.jpg
 					www\ttools\TGames\Dispatch_GAME.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -627,7 +632,7 @@ IttveMe
 				-TModyArt
 					www\ttools\TModyArt\ModyArt.css
 					www\ttools\TModyArt\ModyArtClass.php
-				+TModyCue
+				-TModyCue
 					www\ttools\TModyCue\ModyCueClass.php
 				-TNewArt
 					www\ttools\TNewArt\getNameCue.php
@@ -779,39 +784,35 @@ IttveMe
 3=www\ttools\TEntryClass\EntryClass.php
 4=www\Common.php
 5=www\ttools\TEntryClass\Proverit.php
-6=www\ttools\TTinyGallery\TinyGalleryClass.php
-7=www\ttools\TEntryClass\EntryClass.js
-8=www\ttools\TEntryClass\EntryClass.css
-9=www\ttools\TEntryClass\EntryTable.php
-10=www\ttools\TEntryClass\InteractiveSpooky.php
-11=www\UpSiteCSS.php
-12=www\ttools\TEntryClass\CtrlEmailPass.php
-13=www\ttools\TKwinGallery\KwinGalleryClass.php
-14=www\getImgBase64.php
+6=www\ttools\TEntryClass\EntryClass.js
+7=www\ttools\TEntryClass\EntryClass.css
+8=www\ttools\TEntryClass\EntryTable.php
+9=www\ttools\TEntryClass\InteractiveSpooky.php
+10=www\UpSiteCSS.php
+11=www\ttools\TEntryClass\CtrlEmailPass.php
+12=www\ttools\TKwinGallery\KwinGalleryClass.php
+13=www\ttools\TTinyGallery\TinyGalleryClass.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryClass.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
 TopLine=129
 Caret=12,168
 [www\iniMem.php]
-TopLine=164
-Caret=3,177
+TopLine=138
+Caret=1,152
 [www\UpSite.php]
-TopLine=31
-Caret=128,70
+TopLine=49
+Caret=54,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=243
-Caret=7,267
+TopLine=236
+Caret=86,270
 [www\Common.php]
-TopLine=53
-Caret=1,74
+TopLine=15
+Caret=28,44
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=27
-Caret=1,57
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=404
-Caret=1,445
+TopLine=1
+Caret=6,1
 [www\ttools\TEntryClass\EntryClass.js]
 TopLine=426
 Caret=9,452
@@ -820,7 +821,7 @@ TopLine=288
 Caret=11,323
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=61
-Caret=53,81
+Caret=1,78
 [www\ttools\TEntryClass\InteractiveSpooky.php]
 TopLine=84
 Caret=1,98
@@ -833,6 +834,6 @@ Caret=1,68
 [www\ttools\TKwinGallery\KwinGalleryClass.php]
 TopLine=274
 Caret=44,297
-[www\getImgBase64.php]
-TopLine=44
-Caret=1,1
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=580
+Caret=55,396

@@ -41,6 +41,7 @@ define ('entZamenit',                    'zamenit');                         // 
 define ('entZaregistrirovatsya',         'zaregistrirovatsya');              //  Ввести регистрационные данные перед проверкой почты
 define ('entPodtverdit',                 'podtverdit');                      //  Подтвердить регистрацию, пропустить на сайт c email и паролем
 define ('entOtpravitPismo',              'otpravit-pismo');                  //  Отправить письмо для подтверждения регистрации
+define ('entPoSsylkeIzPisma',            'po-ssylke-iz-pisma');              //  По ссылке из письма пропустить на сайт c email и паролем
 
 define('tstEmailNeNajden',      'Адрес электронной почты не зарегистрирован'); 
 define('tstParolNevernyj',      'Пароль неверный');                   
@@ -182,6 +183,19 @@ function isNichost()
       $Result=true;
    }
    return $Result;
+}
+// ****************************************************************************
+// *                      Изменить и восстановить пароль                      *
+// ****************************************************************************
+define ('fimPassi','tve_openssl_random_pseudo_bytesx');
+function setModiPass($original,&$passiv,&$iv)
+{
+   $iv = openssl_random_pseudo_bytes(16);                                               
+   $passiv = openssl_encrypt($original,"aes-256-cbc",fimPassi,OPENSSL_RAW_DATA,$iv); 
+}
+function getModiPass(&$original,$passiv,$iv)
+{
+   $original = openssl_decrypt($passiv,"aes-256-cbc",fimPassi,OPENSSL_RAW_DATA,$iv);
 }
 // ****************************************************************************
 // *             Построить html-код меню и сделать выбор материала            *
