@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 IttveMe
-	-IttveMe
+	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
 			BpWin\Выполнить вход и регистрацию на сайте.bp1
@@ -155,7 +155,7 @@ IttveMe
 				IttvePW\Материалы\Элементы стиля программирования by Керниган Б., Плоджер Ф. (z-lib.org).djvu
 			IttvePW\var1.txt
 			IttvePW\var2.txt
-		-www
+		+www
 			-.well-known
 				-pki-validation
 					www\.well-known\pki-validation\gsdv.txt
@@ -299,6 +299,10 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
+			+src
+				www\src\Exception.php
+				www\src\PHPMailer.php
+				www\src\SMTP.php
 			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
@@ -790,23 +794,25 @@ IttveMe
 9=www\ttools\TEntryClass\InteractiveSpooky.php
 10=www\UpSiteCSS.php
 11=www\ttools\TEntryClass\CtrlEmailPass.php
-12=www\ttools\TKwinGallery\KwinGalleryClass.php
-13=www\ttools\TTinyGallery\TinyGalleryClass.php
+12=www\ttools\TTinyGallery\TinyGalleryClass.php
+13=www\Styles\Content.css
+14=www\src\PHPMailer.php
+15=www\src\SMTP.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
-TopLine=129
+TopLine=79
 Caret=12,168
 [www\iniMem.php]
 TopLine=138
-Caret=1,152
+Caret=1,151
 [www\UpSite.php]
 TopLine=49
 Caret=54,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=236
-Caret=86,270
+TopLine=8
+Caret=20,350
 [www\Common.php]
 TopLine=15
 Caret=28,44
@@ -831,9 +837,15 @@ Caret=1,1
 [www\ttools\TEntryClass\CtrlEmailPass.php]
 TopLine=35
 Caret=1,68
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=274
-Caret=44,297
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=580
-Caret=55,396
+TopLine=426
+Caret=7,520
+[www\Styles\Content.css]
+TopLine=137
+Caret=1,172
+[www\src\PHPMailer.php]
+TopLine=1
+Caret=30,22
+[www\src\SMTP.php]
+TopLine=1
+Caret=1,1

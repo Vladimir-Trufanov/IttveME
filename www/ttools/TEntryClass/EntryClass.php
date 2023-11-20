@@ -261,15 +261,104 @@ class Entrying
          <html>
          <head>
             <title>Подтвердите Email</title>
+            <style>
+
+            #letter
+            {   
+               align-items:right;
+               font-size:5rem;
+               background:yellow; 
+            }
+
+            #tbl
+            {
+               border:1px solid #ab4a16; 
+               border-radius:.8rem;
+            }
+            
+            #hrefi
+            {
+            }
+
+            
+
+            /*
+            @font-face 
+            {
+               font-family: Pacifico; 
+               src: url(ttools/TTuningClass/Pacifico-Regular.ttf); 
+            }
+            #letter
+            {   
+               position:absolute; 
+               top:0;
+               left:0;
+               border:0;
+               width:90%;
+               height:80%;
+               background:yellow; 
+               font-size:10px;
+            }
+            #img
+            {
+               position:absolute; 
+               top:10;
+               left:10;
+              
+              
+               width:30%;
+               float:left; 
+               background:red; 
+            }
+            #tbl
+            {
+               align-items:right;
+               float:right;
+               background:green; 
+            }
+            #hrefi
+            {
+               align-items:right;
+               font-size:5rem;
+            }
+            */
+            </style>
+
          </head>
          <body>
+         <div id="letter"
+
             <p>
-            <a href="'.$urlHome.
-            '?hash='  .$hash              .'&enMode='.entPoSsylkeIzPisma.
-            '&plain=' .$plaintext_password.'&pismo=' .$email.'">
-            Что бы подтвердить Email, перейдите по ссылке на сайт <b>www.ittve.me</b>
+            <a style="color:red;font-size:15px;" id="hrefi" href="'.$urlHome.
+               '?hash='  .$hash              .'&enMode='.entPoSsylkeIzPisma.
+               '&plain=' .$plaintext_password.'&pismo=' .$email.'">
+               Что бы подтвердить данные регистрации, перейдите по ссылке на сайт <b>www.ittve.me</b>
             </a>
             </p>
+
+
+            <div id="img">
+            <img src="https://ittve.me/ttools/TEntryClass/Kalinichenko-Dumy-y-pechki-1897.jpg" alt="Hotel">
+            </div>
+            
+            <div id="tbl" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px">
+            <table>
+            <tr>
+               <th>Кто</th><th>День</th><th>Месяц</th><th>Год</th>
+            </tr>
+            <tr>
+               <td style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px">Таня</td><td>1-го</td><td>января</td><td>1958</td>
+            </tr>
+            <tr>
+               <td>Лена</td><td>15-го</td><td>января</td><td>1981</td>
+            </tr>
+            <tr>
+               <td>Ксюша</td><td>20-го</td><td>января</td><td>1991</td>
+            </tr>
+            </table>
+            </div>
+               
+         </div>
          </body>
          </html>
       ';
