@@ -262,100 +262,104 @@ class Entrying
          <head>
             <title>Подтвердите Email</title>
             <style>
-
-            #letter
-            {   
-               align-items:right;
-               font-size:5rem;
-               background:yellow; 
-            }
-
-            #tbl
-            {
-               border:1px solid #ab4a16; 
-               border-radius:.8rem;
-            }
             
-            #hrefi
-            {
-            }
-
-            
-
-            /*
             @font-face 
             {
                font-family: Pacifico; 
-               src: url(ttools/TTuningClass/Pacifico-Regular.ttf); 
+               src: url(https://ittve.me/ttools/TTuningClass/Pacifico-Regular.ttf); 
             }
+
             #letter
-            {   
-               position:absolute; 
-               top:0;
-               left:0;
-               border:0;
-               width:90%;
-               height:80%;
+            { 
+               align-items:center;
+               font-size:5rem;
                background:yellow; 
-               font-size:10px;
+               padding:0;
+               margin:0;
+               border:0;
+            }
+
+            #tbl
+            {
+               align-items:center;
+               border:4px solid #ab4a16; 
+               border-radius:8px;
+               background:magenta;
+            }
+
+            #tbl table
+            {
+               width:90%;
+               background:green;
+            }
+            
+            #tbl th
+            {
+               width:40%;
+               font-size:30px;
+            }
+            
+            #hrefi
+            {
+               color:blue;
+               font-size:20px;
+               font-family:"Pacifico";
+               padding:0;
+               margin:0;
+            }
+            #hrefp
+            {
+               text-align:center;
+               margin-bottom:10px;
+               background:red;
+               padding:0;
+               margin:0;
+            }
+            
+            #imgd
+            {
+               text-align: center;
+               vertical-align: middle;
             }
             #img
             {
-               position:absolute; 
-               top:10;
-               left:10;
-              
-              
-               width:30%;
-               float:left; 
-               background:red; 
+               /*
+               width:100%;
+               width:50%;
+               height:50%;
+               */
             }
-            #tbl
-            {
-               align-items:right;
-               float:right;
-               background:green; 
-            }
-            #hrefi
-            {
-               align-items:right;
-               font-size:5rem;
-            }
-            */
+            
             </style>
 
          </head>
          <body>
          <div id="letter"
+            
+            <div id="tbl">
+            <table>
+            <tr>
+               <th>Данные регистрации</th>      <th>   День     </th>
+            </tr>
+            <tr>
+               <td>Адрес электронной почты</td> <td>'. $email. '</td>
+            </tr>
+            <tr>
+               <td>Пароль</td>                  <td>'. $login. '</td>
+            </tr>
+            </table>
+            </div>
 
-            <p>
-            <a style="color:red;font-size:15px;" id="hrefi" href="'.$urlHome.
+            <div id="hrefp">
+            <a id="hrefi" href="'.$urlHome.
                '?hash='  .$hash              .'&enMode='.entPoSsylkeIzPisma.
                '&plain=' .$plaintext_password.'&pismo=' .$email.'">
                Что бы подтвердить данные регистрации, перейдите по ссылке на сайт <b>www.ittve.me</b>
             </a>
-            </p>
-
-
-            <div id="img">
-            <img src="https://ittve.me/ttools/TEntryClass/Kalinichenko-Dumy-y-pechki-1897.jpg" alt="Hotel">
             </div>
-            
-            <div id="tbl" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px">
-            <table>
-            <tr>
-               <th>Кто</th><th>День</th><th>Месяц</th><th>Год</th>
-            </tr>
-            <tr>
-               <td style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px">Таня</td><td>1-го</td><td>января</td><td>1958</td>
-            </tr>
-            <tr>
-               <td>Лена</td><td>15-го</td><td>января</td><td>1981</td>
-            </tr>
-            <tr>
-               <td>Ксюша</td><td>20-го</td><td>января</td><td>1991</td>
-            </tr>
-            </table>
+
+            <div id="imgd">
+            <img id="img" src="https://ittve.me/ttools/TEntryClass/Kalinichenko-Dumy-y-pechki-1897.jpg" alt="Hotel">
             </div>
                
          </div>
