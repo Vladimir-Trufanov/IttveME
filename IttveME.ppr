@@ -299,7 +299,11 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Styles
+			+src
+				www\src\Exception.php
+				www\src\PHPMailer.php
+				www\src\SMTP.php
+			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
 					www\Styles\Anonymous_Pro\AnonymousPro-BoldItalic.ttf
@@ -550,7 +554,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -593,7 +597,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				+TEntryClass
+				-TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\DumyUPechki.php
 					www\ttools\TEntryClass\EmailRegistration.php
@@ -619,7 +623,7 @@ IttveMe
 						www\ttools\TGames\PairedCards\popup_bg.jpg
 						www\ttools\TGames\PairedCards\table.jpg
 					www\ttools\TGames\Dispatch_GAME.php
-				+TKwinGallery
+				-TKwinGallery
 					www\ttools\TKwinGallery\deleteImg.php
 					www\ttools\TKwinGallery\KwinGallery.js
 					www\ttools\TKwinGallery\KwinGalleryClass.php
@@ -688,7 +692,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -788,13 +792,12 @@ IttveMe
 7=www\ttools\TEntryClass\EntryClass.css
 8=www\ttools\TEntryClass\EntryTable.php
 9=www\ttools\TEntryClass\InteractiveSpooky.php
-10=www\UpSiteCSS.php
-11=www\ttools\TEntryClass\CtrlEmailPass.php
-12=www\Styles\Content.css
-13=www\ttools\TKwinGallery\KwinGalleryClass.php
+10=www\ttools\TTinyGallery\TinyGalleryClass.php
+11=..\MyMir\PHP\PHPMailer\TinyGalleryClass.php
+12=www\src\PHPMailer.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EntryClass.php
+Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
 [www\index.php]
 TopLine=129
 Caret=12,168
@@ -805,8 +808,8 @@ Caret=1,151
 TopLine=49
 Caret=54,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=265
-Caret=1,285
+TopLine=285
+Caret=40,324
 [www\Common.php]
 TopLine=15
 Caret=28,44
@@ -821,19 +824,16 @@ TopLine=75
 Caret=1,91
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=61
-Caret=1,78
+Caret=18,99
 [www\ttools\TEntryClass\InteractiveSpooky.php]
 TopLine=84
 Caret=1,98
-[www\UpSiteCSS.php]
+[www\ttools\TTinyGallery\TinyGalleryClass.php]
+TopLine=454
+Caret=7,463
+[..\MyMir\PHP\PHPMailer\TinyGalleryClass.php]
 TopLine=1
-Caret=1,1
-[www\ttools\TEntryClass\CtrlEmailPass.php]
-TopLine=34
-Caret=1,68
-[www\Styles\Content.css]
-TopLine=67
-Caret=1,92
-[www\ttools\TKwinGallery\KwinGalleryClass.php]
-TopLine=207
+Caret=1,13
+[www\src\PHPMailer.php]
+TopLine=7
 Caret=1,1
