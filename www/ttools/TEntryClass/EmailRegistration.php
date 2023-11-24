@@ -41,9 +41,9 @@ function otpravkaFinal($urlHome,$eby=tobyMail)
     
    // Для отправки HTML-письма устанавливаем заголовки
    $to = $email; //'tve58@inbox.ru';
-   $fromAddr='<tve@ittve.me>';
+   $fromAddr='tve@ittve.me';
    $fromComm='Регистрация на www.ittve.me';
-   $from = 'From: '.$fromComm.' '.$fromAddr."\r\n"; //'From: Регистрация на www.ittve.me <tve@ittve.me>'."\r\n" 
+   $from = 'From: '.$fromComm.' <'.$fromAddr.'>'."\r\n"; //'From: Регистрация на www.ittve.me <tve@ittve.me>'."\r\n" 
    // Тема письма
    $subject = "Подтвердите адрес электронной почты для сайта";
    // Текст письма
@@ -57,26 +57,17 @@ function otpravkaFinal($urlHome,$eby=tobyMail)
 // ****************************************************************************
 function otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm)
 {
-   echo 'Привет!<br>';
    // Подключаем библиотеку PHPMailer
-   require_once("src/PHPMailer.php"); 
+   require_once("Mailer/PHPMailer.php"); 
    // Создаем письмо
    $mail = new PHPMailer();
+   $mail->SMTPDebug = 2;
    $mail->CharSet = 'UTF-8';
-   $mail->setFrom('test@domain.ru', 'Иван Иванов');        // от кого (email и имя)
-   //$mail->setFrom($fromAddr,$fromComm);                      // от кого (email и имя)
-   $mail->addAddress('tve58@inbox.ru', 'tve58@inbox.ru');  // кому (email и имя)
-   //$mail->addAddress($to,$to);                               // кому (email и имя)
-   $mail->Subject = 'Тест для tve58@inbox.ru';             // тема письма
-   //$mail->Subject = $subject;                                // тема письма
+   $mail->setFrom($fromAddr,$fromComm);  // от кого (email и имя)
+   $mail->addAddress($to,$to);           // кому (email и имя)
+   $mail->Subject = $subject;            // тема письма
    // html текст письма
-   //$mail->msgHTML($message);
-   
-   $mail->msgHTML("<html><body>
-                <h1>Здравствуйте tve58@inbox.ru!</h1>
-                <p>Это тестовое письмо.</p>
-                </html></body>");
-   
+   $mail->msgHTML($message);
     // Отправляем
     if ($mail->send()) 
     {
@@ -108,6 +99,27 @@ function otpravkaByMail($to,$subject,$message,$from)
 // ****************************************************************************
 function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
 {
+   // Стили электронной почты HTML - это минное поле проблем, вам в основном 
+   // нужно вернуться к HTML версии 4.0 и оформить все с помощью встроенных 
+   // <font > тегов. Вам также нужно будет добавить шрифт в качестве 
+   // <style> body{ }</style> тега над <body> тегами вашего электронного письма. 
+   // В интернете есть много материалов для чтения по этому поводу, поскольку 
+   // создание кроссплатформенной и межсистемной поддержки - это настоящая 
+   // заноза в заднице. Он по-прежнему использует старые теги и сохраняет как 
+   // можно больше встроенных стилей. Не утруждайте себя вызовом внешних таблиц 
+   // стилей, они будут удалены программой mailreader.
+   /*
+   font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Arial Black', Gadget, sans-serif;
+   font-family: Georgia, serif;
+   font-family: 'MS Sans Serif', Geneva, sans-serif;
+   font-family: 'MS Serif', 'New York', sans-serif;
+   font-family: Tahoma, Geneva, sans-serif;
+   font-family: 'Times New Roman', Times, serif;
+   font-family: 'Trebuchet MS', Helvetica, sans-serif;
+   font-family: Verdana, Geneva, sans-serif;
+   */
+   
    return 
    '
    <html>
@@ -122,7 +134,7 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
          /* Общий див */
          #letter
          {
-            background:yellow;
+            background:transparent;
             width:100%;
             align-items:center;
             padding:0;
@@ -157,7 +169,7 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
          #hfirst 
          {
             font-size:24px;
-            /*font-family:"Pacifico";*/
+            font-family:"Pacifico";
          }
          /* Ячейки таблицы */
          th, td 
@@ -175,7 +187,18 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
             margin-bottom:16px;
             background:transparent;
             padding:0;
-            border:0;
+            /*border:0;*/
+            
+            border-style:solid;
+            border-width:2px;
+            border-color:blue;
+
+            
+            
+            
+            
+            
+            
          }
          /* Ссылка на сайт */  
          #hrefi

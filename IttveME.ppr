@@ -299,10 +299,10 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+src
-				www\src\Exception.php
-				www\src\PHPMailer.php
-				www\src\SMTP.php
+			+Mailer
+				www\Mailer\Exception.php
+				www\Mailer\PHPMailer.php
+				www\Mailer\SMTP.php
 			-Styles
 				-Anonymous_Pro
 					www\Styles\Anonymous_Pro\AnonymousPro-Bold.ttf
@@ -554,7 +554,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -597,7 +597,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				+TEntryClass
+				-TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\DumyUPechki.php
 					www\ttools\TEntryClass\EmailRegistration.php
@@ -734,7 +734,6 @@ IttveMe
 			www\ittve-log.txt
 			www\IttveMeDef.php
 			www\Kwinflatic.jpg
-			www\log.txt
 			www\manifest.json
 			www\photo-8i.jpg
 			www\putDescript.php
@@ -808,8 +807,8 @@ Caret=1,130
 TopLine=49
 Caret=54,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=232
-Caret=49,232
+TopLine=196
+Caret=1,234
 [www\Common.php]
 TopLine=15
 Caret=28,44
@@ -833,7 +832,7 @@ TopLine=386
 Caret=1,421
 [..\MyMir\PHP\PHPMailer\TinyGalleryClass.php]
 TopLine=7
-Caret=1,13
+Caret=1,21
 [www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=51
-Caret=4,79
+TopLine=96
+Caret=1,121
