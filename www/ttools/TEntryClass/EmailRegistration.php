@@ -1,100 +1,236 @@
 <?php 
+// PHP7/HTML5, EDGE/CHROME                        *** EmailRegistration.php ***
 
-// Подключаем коннект к БД
-//require_once 'db.php';
+// ****************************************************************************
+// * ittve.me                   Отправить письмо с сайта со ссылкой "обратно" * 
+// ****************************************************************************
+// *                                                                          *
+// * v1.0, 24.11.2023                              Автор:       Труфанов В.Е. *
+// * Copyright © 2023 tve                          Дата создания:  24.11.2023 *
+// ****************************************************************************
+use PHPMailer\PHPMailer\PHPMailer;
 
+define ("tobyMail",       'Отправить письмо функцией mail (по умолчанию');    
+define ("tobyPHPMailer",  'Отправить письмо c помощью PHPMailer');     
 
-$error='Ok';
-// Проверяем нажата ли кнопка отправки формы
-if (isset($_REQUEST['doGo'])) 
+// ****************************************************************************
+// *                    Отправить письмо со страницы сайта                    *
+// ****************************************************************************
+function otpravkaFinal($urlHome,$eby=tobyMail)
 {
-   // Все последующие проверки, проверяют форму и выводят ошибку
-   // Проверка на совпадение паролей
-   if ($_REQUEST['pass'] !== $_REQUEST['pass_rep']) 
-   {
-      $error = 'Пароль не совпадает';
-   }
-   // Проверка есть ли вообще повторный пароль
-   else if (!$_REQUEST['pass_rep']) 
-   {
-      $error = 'Введите повторный пароль';
-   }
-   // Проверка есть ли пароль
-   else if (!$_REQUEST['pass']) 
-   {
-      $error = 'Введите пароль';
-   }
-   // Проверка есть ли email
-   else if (!$_REQUEST['email']) 
-   {
-      $error = 'Введите email';
-   }
-   // Проверка есть ли логин
-   else if (!$_REQUEST['login']) 
-   {
-      $error = 'Введите login';
-   }
-   // Если ошибок нет, то происходит регистрация 
-   if ($error=='Ok') 
-   {
-      $login = $_REQUEST['login'];
-      $email = $_REQUEST['email'];
-      // Пароль хешируется
-      $pass = password_hash($_REQUEST['pass'],PASSWORD_DEFAULT);
-      // хешируем хеш, который состоит из логина и времени
-      $hash = md5($login.time());
-      
-      echo 'Проверки выполнены! Отправляем письмо.<br>';
-
-      // Для отправки HTML-письма устанавливаем заголовки
-      $headers  = 'MIME-Version:1.0'."\r\n";
-      $headers .= 'Content-type:text/html;charset=utf-8'."\r\n";
-      //$headers .= "To: <$email>\r\n";
-      //$headers .= "From: <tve58@inbox.ru>\r\n";
-      // Тема письма
-      $subject = "Подтвердите Email для сайта ittve.me";
-      // Текст письма
-      $message = '
-         <html>
-         <head>
-            <title>Подтвердите Email</title>
-         </head>
-         <body>
-            <p>Что бы подтвердить Email, перейдите по <a href="'.$this->urlHome.'?hash='.$hash.'">ссылке на ittve.me</a></p>
-         </body>
-         </html>
-      ';
-      
-      // Отправляем
-      $err=mail($email,$subject,$message,$headers);
-      if ($err) echo 'Письмо ушло!<br>';
-      else echo 'Ошибка при отправке письма<br>';
-      
-      /*  
-      // <p>Что бы подтвердить Email, перейдите по <a href="http://example.com/confirmed.php?hash='.$hash.'">ссылке на ittve.me</a></p>
-      // Добавление пользователя в БД
-      // mysqli_query($db, "INSERT INTO `user` (`login`, `email`, `password`, `hash`, `email_confirmed`) VALUES ('" . $login . "','" . $email . "','" . $pass . "', '" . $hash . "', 1)");
-      */
+   $login = $_REQUEST['password'];
+   $email = $_REQUEST['email'];
+   $PictureName='Калиниченко Е.Е. Думы у печки. 1897';
+   // По паролю в виде открытого текста, введенному пользователем формируем
+   // хэш пароля, который может храниться в базе данных
+   $hash = password_hash($login,PASSWORD_DEFAULT);
+   
+   // Эту проверку потом перенести на обработку подтверждения через почту
+ 
+   // Verify the hash against the password entered 
+   $verify = password_verify($login, $hash); 
+   // Print the result depending if they match 
+   if ($verify) 
+   { 
+      echo 'Password Verified!<br>'; 
    } 
    else 
-   {
-      // Если ошибка есть, то выводить её 
-      echo $error; 
+   { 
+     echo 'Incorrect Password!<br>'; 
    }
+    
+   // Для отправки HTML-письма устанавливаем заголовки
+   $to = $email; //'tve58@inbox.ru';
+   $fromAddr='<tve@ittve.me>';
+   $fromComm='Регистрация на www.ittve.me';
+   $from = 'From: '.$fromComm.' '.$fromAddr."\r\n"; //'From: Регистрация на www.ittve.me <tve@ittve.me>'."\r\n" 
+   // Тема письма
+   $subject = "Подтвердите адрес электронной почты для сайта";
+   // Текст письма
+   $message = LetterHTML($urlHome,$email,$login,$hash,$PictureName);
+   // Отправляем письмо функцией mail или c помощью PHPMailer 
+   if ($eby==tobyMail) otpravkaByMail($to,$subject,$message,$from);
+   else otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm);
+} 
+// ****************************************************************************
+// *            Отправить письмо со страницы сайта c помощью PHPMailer        *
+// ****************************************************************************
+function otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm)
+{
+   echo 'Привет!<br>';
+   // Подключаем библиотеку PHPMailer
+   require_once("src/PHPMailer.php"); 
+   // Создаем письмо
+   $mail = new PHPMailer();
+   $mail->CharSet = 'UTF-8';
+   $mail->setFrom('test@domain.ru', 'Иван Иванов');        // от кого (email и имя)
+   //$mail->setFrom($fromAddr,$fromComm);                      // от кого (email и имя)
+   $mail->addAddress('tve58@inbox.ru', 'tve58@inbox.ru');  // кому (email и имя)
+   //$mail->addAddress($to,$to);                               // кому (email и имя)
+   $mail->Subject = 'Тест для tve58@inbox.ru';             // тема письма
+   //$mail->Subject = $subject;                                // тема письма
+   // html текст письма
+   //$mail->msgHTML($message);
+   
+   $mail->msgHTML("<html><body>
+                <h1>Здравствуйте tve58@inbox.ru!</h1>
+                <p>Это тестовое письмо.</p>
+                </html></body>");
+   
+    // Отправляем
+    if ($mail->send()) 
+    {
+       echo 'Письмо отправлено PHPMailer!';
+    } 
+    else 
+    {
+       echo 'Ошибка: ' . $mail->ErrorInfo;
+    }  
+}   
+// ****************************************************************************
+// *              Отправить письмо со страницы сайта функцией mail()          *
+// ****************************************************************************
+function otpravkaByMail($to,$subject,$message,$from)
+{
+   $headers =
+      'MIME-Version:1.0'."\r\n".
+      'Content-type:text/html;charset=utf-8'."\r\n".$from. 
+      'Reply-To: tve@karelia.ru' . "\r\n" .
+      'X-Mailer: EntryClass/ittve-me';
+   // Отправляем
+   $err=mail($to,$subject,$message,$headers);
+   if ($err) echo 'Письмо ушло!<br>';
+   else echo 'Ошибка при отправке письма<br>';
+}
+// ****************************************************************************
+// *       Сформировать страницу с текстом для подтверждения регистрации      *
+// *                              в виде таблицы                              * 
+// ****************************************************************************
+function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
+{
+   return 
+   '
+   <html>
+   <head>
+      <title>Подтвердите Email</title>
+      <style>
+         @font-face 
+         {
+            font-family: Pacifico; 
+            src: url(https://ittve.me/ttools/TTuningClass/Pacifico-Regular.ttf); 
+         }
+         /* Общий див */
+         #letter
+         {
+            background:yellow;
+            width:100%;
+            align-items:center;
+            padding:0;
+            margin:0;
+            border:0;
+         }
+         /* Таблица данных по регистрации */          
+         #tbl 
+         {
+            font-family:"Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+            font-size:20px;
+            border-collapse:collapse;
+            text-align:center;
+            width:100%;
+            padding:0;
+            margin:0;
+            border:0;
+         }
+         /* Cтолбцы таблицы */
+         td 
+         {
+            background:#D8E6F3;
+         }
+         /* Левый столбец таблицы */
+         .tfirst 
+         {
+            background:#AFCDE7;
+            color:white;
+            padding:10px 20px;
+         }
+         /* Заголовок таблицы */
+         #hfirst 
+         {
+            font-size:24px;
+            /*font-family:"Pacifico";*/
+         }
+         /* Ячейки таблицы */
+         th, td 
+         {
+            width:50%;
+            border-style:solid;
+            border-width:0 1px 1px 0;
+            border-color:white;
+         }
+         /* Див ссылки */
+         #hrefp
+         {
+            text-align:center;
+            margin-top:10px;
+            margin-bottom:16px;
+            background:transparent;
+            padding:0;
+            border:0;
+         }
+         /* Ссылка на сайт */  
+         #hrefi
+         {
+            color:blue;
+            font-size:24px;
+            font-family:"Pacifico";
+            padding:0;
+            margin:0;
+            border:0;
+         }
+         /* Див картинки и картинка "Думы у печки" */   
+         #imgd
+         {
+            text-align:center;
+            vertical-align:middle;
+            background:transparent;
+         }
+         #img
+         {
+            width:100%;
+         }
+      </style>
+
+      </head>
+      <body>
+      
+      <div id="letter"
+
+      <table id="tbl">
+         <tr><th class="tfirst" colspan="2" id="hfirst">Данные регистрации<br></th></tr>
+         <tr><td class="tfirst">Логин авторизации на сайте</td>  <td>'. $email. '<br></td></tr>
+         <tr><td class="tfirst">Пароль</td>                      <td>'. $login. '<br></td></tr>
+      </table>
+
+      <div id="hrefp">
+         <a id="hrefi" href="'.$urlHome.
+            '?enMode=' .entPoSsylkeIzPisma. '&pismo=' .$email.
+            '&plain='  .$login.             'hash='   .$hash.'">
+            Что бы подтвердить данные регистрации, перейдите по ссылке на сайт <b>www.ittve.me</b>
+         </a>
+      </div>
+
+      <div id="imgd">
+         <img id="img" src="https://ittve.me/ttools/TEntryClass/Kalinichenko-Dumy-y-pechki-1897.jpg" '.
+         'title="'.$PictureName.'" alt="'.$PictureName.'">  
+      </div>
+               
+      </div>
+   </body>
+   </html>
+   ';
 }
 
-echo 'Заполняем форму ввода сведений!<br>';
 
-echo '<form method="get" action="'.$this->urlHome.'">';
-?> 
-        <p><input type="hidden"   name="Com" value="vojti"></p>
-        <p>Логин: <input type="text" name="login"> <samp style="color:red">*</samp></p>
-        <p>EMail: <input type="email" name="email"><samp style="color:red">*</samp></p>
-        <p>Пароль: <input type="text" name="pass"><samp style="color:red">*</samp></p>
-        
-        <p>Повторите пароль: 
-           <input type="text" name="pass_rep">  <samp style="color:red">*</samp></p>
-        <p><input type="submit"   name="doGo" value="Зарегистрироваться"></p>
-<?php
-echo '</form>';
+
+// ************************************************** EmailRegistration.php ***
 
