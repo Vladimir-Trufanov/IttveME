@@ -819,8 +819,8 @@ Caret=6,1
 TopLine=425
 Caret=9,452
 [www\ttools\TEntryClass\EntryClass.css]
-TopLine=75
-Caret=1,91
+TopLine=53
+Caret=1,70
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=61
 Caret=18,99
@@ -834,5 +834,5 @@ Caret=1,421
 TopLine=7
 Caret=1,21
 [www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=96
-Caret=1,121
+TopLine=187
+Caret=1,226

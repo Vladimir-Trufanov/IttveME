@@ -110,7 +110,7 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
    // стилей, они будут удалены программой mailreader.
    /*
    font-family: Arial, Helvetica, sans-serif;
-   font-family: 'Arial Black', Gadget, sans-serif;
+   font-family: "Arial Black", Gadget, sans-serif;
    font-family: Georgia, serif;
    font-family: 'MS Sans Serif', Geneva, sans-serif;
    font-family: 'MS Serif', 'New York', sans-serif;
@@ -120,20 +120,17 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
    font-family: Verdana, Geneva, sans-serif;
    */
    
+   $fontfamily='font-family: "Trebuchet MS", Helvetica, sans-serif;';
    return 
    '
    <html>
    <head>
       <title>Подтвердите Email</title>
       <style>
-         @font-face 
-         {
-            font-family: Pacifico; 
-            src: url(https://ittve.me/ttools/TTuningClass/Pacifico-Regular.ttf); 
-         }
          /* Общий див */
          #letter
          {
+            '.$fontfamily.'
             background:transparent;
             width:100%;
             align-items:center;
@@ -141,43 +138,29 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
             margin:0;
             border:0;
          }
-         /* Таблица данных по регистрации */          
          #tbl 
          {
-            font-family:"Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+            '.$fontfamily.'
             font-size:20px;
             border-collapse:collapse;
             text-align:center;
             width:100%;
-            padding:0;
-            margin:0;
-            border:0;
          }
-         /* Cтолбцы таблицы */
-         td 
-         {
-            background:#D8E6F3;
-         }
-         /* Левый столбец таблицы */
-         .tfirst 
-         {
-            background:#AFCDE7;
-            color:white;
-            padding:10px 20px;
-         }
-         /* Заголовок таблицы */
-         #hfirst 
-         {
-            font-size:24px;
-            font-family:"Pacifico";
-         }
-         /* Ячейки таблицы */
-         th, td 
+         th,td 
          {
             width:50%;
             border-style:solid;
-            border-width:0 1px 1px 0;
+            border-width:thin;
             border-color:white;
+         }
+         .tfirst
+         {
+            background:#AFCDE7;
+            color:white;
+         }
+         .tright
+         {
+            background:#D8E6F3;
          }
          /* Див ссылки */
          #hrefp
@@ -187,25 +170,13 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
             margin-bottom:16px;
             background:transparent;
             padding:0;
-            /*border:0;*/
-            
-            border-style:solid;
-            border-width:2px;
-            border-color:blue;
-
-            
-            
-            
-            
-            
-            
+            border:0;
          }
          /* Ссылка на сайт */  
          #hrefi
          {
             color:blue;
             font-size:24px;
-            font-family:"Pacifico";
             padding:0;
             margin:0;
             border:0;
@@ -226,19 +197,19 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
       </head>
       <body>
       
-      <div id="letter"
-
-      <table id="tbl">
+      <div id="letter">
+      
+      <table id="tbl" cellspacing="0" cellpadding="0" border="0">
          <tr><th class="tfirst" colspan="2" id="hfirst">Данные регистрации<br></th></tr>
-         <tr><td class="tfirst">Логин авторизации на сайте</td>  <td>'. $email. '<br></td></tr>
-         <tr><td class="tfirst">Пароль</td>                      <td>'. $login. '<br></td></tr>
+         <tr><td class="tfirst">Логин авторизации на сайте</td> <td class="tright">'.$email.'<br></td></tr>
+         <tr><td class="tfirst">Пароль</td><td class="tright">'.$login.'<br></td></tr>
       </table>
 
       <div id="hrefp">
          <a id="hrefi" href="'.$urlHome.
             '?enMode=' .entPoSsylkeIzPisma. '&pismo=' .$email.
             '&plain='  .$login.             'hash='   .$hash.'">
-            Что бы подтвердить данные регистрации, перейдите по ссылке на сайт <b>www.ittve.me</b>
+            <i>Чтобы подтвердить данные регистрации, перейдите по ссылке на сайт <b>www.ittve.me</b></i>
          </a>
       </div>
 
@@ -252,8 +223,6 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
    </html>
    ';
 }
-
-
 
 // ************************************************** EmailRegistration.php ***
 
