@@ -102,56 +102,13 @@ class Entrying
       // При поступлении команды 'Отправить письмо для подтверждения регистрации' 
       // отправляем письмо и перегружаем сайт
       else if (\prown\isComRequest(entOtpravitPismo,'enMode')) $this->enMode_entOtpravitPismo();  
+      // При поступлении команды 'По ссылке из письма пропустить на сайт c email
+      // и паролем' занести новые данные регистрации в базу данных и отметить 
+      // вход на сайт по зарегистрированным реквизитам
+      else if (\prown\isComRequest(entPoSsylkeIzPisma,'enMode')) $this->enMode_entPoSsylkeIzPisma();  
       // Внутренняя ошибка
       else echo('Ошибка Entrying->Body 2023-10-06');
 
-      
-      /*
-      // Вариант отправки HTML-письма для несколько получателей
-      echo 'Отправляем письмо.<br>';
-      $to  = 'tve58@inbox.ru' . ', '; // обратите внимание на запятую
-      $to .= 'tve@karelia.ru';
-      // тема письма
-      $subject = 'Здесь тема письма: Напоминания о днях рождениях';
-      // текст письма
-      $message = '
-      <html>
-      <head>
-         <title>Напоминания о днях рождениях</title>
-      </head>
-      <body>
-         <p>Напоминания о днях рождениях</p>
-         <table>
-         <tr>
-            <th>Кто</th><th>День</th><th>Месяц</th><th>Год</th>
-         </tr>
-         <tr>
-            <td>Таня</td><td>1-го</td><td>января</td><td>1958</td>
-         </tr>
-         <tr>
-            <td>Лена</td><td>15-го</td><td>января</td><td>1981</td>
-         </tr>
-         <tr>
-            <td>Ксюша</td><td>20-го</td><td>января</td><td>1991</td>
-         </tr>
-         </table>
-      </body>
-      </html>
-      ';
-      // Для отправки HTML-письма должен быть установлен заголовок Content-type
-      $headers  = 'MIME-Version: 1.0' . "\r\n";
-      $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-      // Дополнительные заголовки
-      // $headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-      $headers .= 'From: Дни Рождения <birthday@example.com>' . "\r\n";
-      //$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-      //$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
-      
-      // Отправляем
-      $err=mail($to, $subject, $message, $headers);
-      if ($err) echo 'Письмо ушло!';
-      else echo 'Ошибка при отправке письма';
-      */
    }
    // ---------------------------------------------- ВНУТРЕННИЕ body-МЕТОДЫ ---
    
@@ -227,8 +184,67 @@ class Entrying
    // *************************************************************************
    private function enMode_entOtpravitPismo() 
    {
+      define ("tobyMail",       'Отправить письмо функцией mail (по умолчанию');    
+      define ("tobyPHPMailer",  'Отправить письмо c помощью PHPMailer');     
+      define ("tobyErr",        'Ошибка при отправке письма!');     
+      define ("tobySuccess",    'Письмо успешно отправлено!');     
+
+      $enMode=\prown\getComRequest('enMode');
+      
+      echo '<div id="OtpravitPismo">';
       require_once "EmailRegistration.php"; 
-      otpravkaFinal($this->urlHome,tobyPHPMailer);
+      //$Result=otpravkaFinal($this->urlHome);
+      $Result=otpravkaFinal($this->urlHome,tobyPHPMailer);
+      echo $Result.'<br>';
+      echo '</div>';
+
+      /*
+      $this->urlHome=$urlHome;
+      $this->basename=$basename;
+      $this->username=$username;
+      $this->password=$password;
+      $this->note= $note; 
+      */
+      
+      if ($enMode==entOtpravitPismo)
+      {
+      ?>
+      <script>
+      $(document).ready(function()
+      {
+         $('#OtpravitPismo').css('background','green');
+      })
+      </script>
+      <?php
+      }
+   }
+   // *************************************************************************
+   // *   При поступлении команды 'По ссылке из письма пропустить на сайт c   *
+   // *   email и паролем' занести новые данные регистрации в базу данных и   *
+   // *        отметить вход на сайт по зарегистрированным реквизитам         *
+   // *************************************************************************
+   private function enMode_entPoSsylkeIzPisma() 
+   {
+      echo '*** enMode_entPoSsylkeIzPisma='.entPoSsylkeIzPisma.'***<br>';
+      /*
+      $login = $_REQUEST['password'];
+      $email = $_REQUEST['email'];
+      $PictureName='Калиниченко Е.Е. Думы у печки. 1897';
+      // По паролю в виде открытого текста, введенному пользователем формируем
+      // хэш пароля, который может храниться в базе данных
+      $hash = password_hash($login,PASSWORD_DEFAULT);
+      // Verify the hash against the password entered 
+      $verify = password_verify($login, $hash); 
+      // Print the result depending if they match 
+      if ($verify) 
+      { 
+         echo 'Password Verified!<br>'; 
+      } 
+      else 
+      { 
+         echo 'Incorrect Password!<br>'; 
+      }
+      */
    }
 }
 // ********************************************************* EntryClass.php ***

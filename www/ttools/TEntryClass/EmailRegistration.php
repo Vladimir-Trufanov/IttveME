@@ -8,10 +8,8 @@
 // * v1.0, 24.11.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2023 tve                          Дата создания:  24.11.2023 *
 // ****************************************************************************
-use PHPMailer\PHPMailer\PHPMailer;
 
-define ("tobyMail",       'Отправить письмо функцией mail (по умолчанию');    
-define ("tobyPHPMailer",  'Отправить письмо c помощью PHPMailer');     
+use PHPMailer\PHPMailer\PHPMailer;
 
 // ****************************************************************************
 // *                    Отправить письмо со страницы сайта                    *
@@ -24,9 +22,8 @@ function otpravkaFinal($urlHome,$eby=tobyMail)
    // По паролю в виде открытого текста, введенному пользователем формируем
    // хэш пароля, который может храниться в базе данных
    $hash = password_hash($login,PASSWORD_DEFAULT);
-   
+   /*
    // Эту проверку потом перенести на обработку подтверждения через почту
- 
    // Verify the hash against the password entered 
    $verify = password_verify($login, $hash); 
    // Print the result depending if they match 
@@ -38,7 +35,7 @@ function otpravkaFinal($urlHome,$eby=tobyMail)
    { 
      echo 'Incorrect Password!<br>'; 
    }
-    
+   */ 
    // Для отправки HTML-письма устанавливаем заголовки
    $to = $email; //'tve58@inbox.ru';
    $fromAddr='tve@ittve.me';
@@ -49,8 +46,9 @@ function otpravkaFinal($urlHome,$eby=tobyMail)
    // Текст письма
    $message = LetterHTML($urlHome,$email,$login,$hash,$PictureName);
    // Отправляем письмо функцией mail или c помощью PHPMailer 
-   if ($eby==tobyMail) otpravkaByMail($to,$subject,$message,$from);
-   else otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm);
+   if ($eby==tobyMail) $Result=otpravkaByMail($to,$subject,$message,$from);
+   else $Result=otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm);
+   return $Result;
 } 
 // ****************************************************************************
 // *            Отправить письмо со страницы сайта c помощью PHPMailer        *
@@ -61,22 +59,106 @@ function otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm)
    require_once("Mailer/PHPMailer.php"); 
    // Создаем письмо
    $mail = new PHPMailer();
-   $mail->SMTPDebug = 2;
+   $mail->SMTPDebug = 3;
    $mail->CharSet = 'UTF-8';
    $mail->setFrom($fromAddr,$fromComm);  // от кого (email и имя)
    $mail->addAddress($to,$to);           // кому (email и имя)
    $mail->Subject = $subject;            // тема письма
    // html текст письма
    $mail->msgHTML($message);
-    // Отправляем
-    if ($mail->send()) 
-    {
-       echo 'Письмо отправлено PHPMailer!';
-    } 
-    else 
-    {
-       echo 'Ошибка: ' . $mail->ErrorInfo;
-    }  
+   // Отправляем
+   if ($mail->send()) $Result=tobySuccess; else $Result=tobyErr;
+   return $Result;
+   
+   /*
+   https://mailtrapblog.hashnode.dev/phpmailer-guide
+   
+   Debugging
+   If you experience some troubles when sending emails through an SMTP server, the SMTPDebug command will help you explore those errors and find 
+   out what should be fixed.
+   Enable SMTP debugging and set the debug level in your script as follows:
+   
+   $mail->SMTPDebug = 2;
+
+   level 1 = client; will show you messages sent by the client
+   level 2 = client and server; will add server messages, it’s the recommended setting. 
+   level 3 = client, server, and connection; will add information about the initial information, might be useful for discovering STARTTLS
+   level 4 = low-level information.
+   
+   Use level 3 or level 4 if you are not able to connect at all. Setting level 0 will turn the debugging off, it is usually used for production.
+   Используйте уровень 3 или уровень 4, если вы вообще не можете подключиться. Установка уровня 0 отключит отладку, обычно он используется для производства.
+   
+   For a better understanding of how debugging in PHPMailer works, let’s review a couple of examples.
+   
+   Example1. Invalid SMTP hostname
+   
+   2018-12-12 14:51:32    Connection: opening to mailtrap.io:2525, timeout=10, options=array()
+   2018-12-12 14:51:42    Connection failed. Error #2: stream_socket_client(): unable to connect to mailtrap.io:2525 (Operation timed out) 
+      [/Users/xxxx/Downloads/PHPMailer/src/SMTP.php line 326]
+   2018-12-12 14:51:42    SMTP ERROR: Failed to connect to server: Operation timed out (60)
+   2018-12-12 14:51:42    SMTP connect() failed.
+   Mailer Error: SMTP connect() failed.
+ 
+   Example 2. Invalid credentials
+   
+   2018-12-12 14:49:26    Connection: opening to smtp.mailtrap.io:2525, timeout=300, options=array()
+   2018-12-12 14:49:26    Connection: opened
+   2018-12-12 14:49:26    SMTP INBOUND: "220 mailtrap.io ESMTP ready"
+   2018-12-12 14:49:26    SERVER -> CLIENT: 220 mailtrap.io ESMTP ready
+   ...
+   2018-12-12 14:49:30    SMTP INBOUND: "535 5.7.0 Invalid login or password"
+   2018-12-12 14:49:30    SERVER -> CLIENT: 535 5.7.0 Invalid login or password
+   2018-12-12 14:49:30    SMTP ERROR: Username command failed: 535 5.7.0 Invalid login or password
+   2018-12-12 14:49:30    SMTP Error: Could not authenticate.
+   2018-12-12 14:49:30    CLIENT -> SERVER: QUIT
+   2018-12-12 14:49:30    SMTP INBOUND: "221 2.0.0 Bye"
+   2018-12-12 14:49:30    SERVER -> CLIENT: 221 2.0.0 Bye
+   2018-12-12 14:49:30    Connection: closed
+   2018-12-12 14:49:30    SMTP connect() failed.
+   Mailer Error: SMTP connect() failed.
+
+   This example demonstrates where the error occurs: now the SMTP, its hostname, and port are valid but a combination of login and password was not found, 
+   so you should double-check and modify your credentials.
+   There are a couple of detailed articles on GitHub about debugging and troubleshooting, refer to them when you need to dive deeper into these topics.
+
+   В этом примере показано, где возникает ошибка: теперь SMTP, его имя хоста и порт действительны, но комбинация логина и пароля не найдена.
+   поэтому вам следует перепроверить и изменить свои учетные данные.
+   На GitHub есть пара подробных статей об отладке и устранении неполадок, обращайтесь к ним, когда вам нужно углубиться в эти темы:
+   
+   https://github.com/PHPMailer/PHPMailer/wiki/SMTP-Debugging
+   https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+   
+   // 26.11.2023 - так у меня при успешной отправке:
+
+   $mail->SMTPDebug = 2;
+   
+   Sending with mail()
+   Sendmail path: C:\PHP\php.exe C:\PHP\Sendmail\sendmail.php --dir C:\PHP\Sendmail\emails
+   Envelope sender: tve@ittve.me
+   To: "tve58@inbox.ru" <tve58@inbox.ru>
+   Subject: =?UTF-8?B?0J/QvtC00YLQstC10YDQtNC40YLQtSDQsNC00YDQtdGBING ... YDQvtC90L3QvtC5INC/0L7Rh9GC0Ysg0LTQu9GPINGB0LDQudGC0LA=?=
+   Headers: Date: Sun, 26 Nov 2023 09:03:22 +0300From: =?UTF-8?B?0KDQ ... 
+      @localhost>X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)MIME-Version: 1.0Content-Type: multipart/alternative; 
+      boundary="b1=_fiUcZJSWCMk6Ael8keHbBv2qfaREvPuDTMmYrSthg"Content-Transfer-Encoding: 8bit
+   Additional params: -ftve@ittve.me
+   Result: true
+   Письмо успешно отправлено!
+
+   $mail->SMTPDebug = 4;
+   
+   Sending with mail()
+   Sendmail path: C:\PHP\php.exe C:\PHP\Sendmail\sendmail.php --dir C:\PHP\Sendmail\emails
+   Envelope sender: tve@ittve.me
+   To: "tve58@inbox.ru" <tve58@inbox.ru>
+   Subject: =?UTF-8?B?0J/QvtC00YLQstC10YDQtNC40YLQtSDQsNC00YDQtdGBINGN0LvQtdC60YI=?= =?UTF-8?B?0YDQvtC90L3QvtC5INC/0L7Rh9GC0Ysg0LTQu9GPINGB0LDQudGC0LA=?=
+   Headers: Date: Sun, 26 Nov 2023 09:31:43 +0300From: =?UTF-8?B?0KDQtdCz0LjRgdGC0YDQsNGG0LjRjyDQvdCwIHd3dy5pdHR2ZS5tZQ==?= 
+      <tve@ittve.me>Message-ID: <cROwiSQDTmdMJkce6qRDdWf6BjnwG1ybX9hCWzoTRpw
+      @localhost>X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)MIME-Version: 1.0Content-Type: multipart/alternative; 
+      boundary="b1=_cROwiSQDTmdMJkce6qRDdWf6BjnwG1ybX9hCWzoTRpw"Content-Transfer-Encoding: 8bit
+   Additional params: -ftve@ittve.me
+   Result: true
+   Письмо успешно отправлено!   
+   */
 }   
 // ****************************************************************************
 // *              Отправить письмо со страницы сайта функцией mail()          *
@@ -90,8 +172,45 @@ function otpravkaByMail($to,$subject,$message,$from)
       'X-Mailer: EntryClass/ittve-me';
    // Отправляем
    $err=mail($to,$subject,$message,$headers);
-   if ($err) echo 'Письмо ушло!<br>';
-   else echo 'Ошибка при отправке письма<br>';
+   if ($err) $Result=tobySuccess; else $Result=tobyErr;
+   
+   /*
+   
+   https://stackoverflow.com/questions/3186725/how-can-i-get-the-error-message-for-the-mail-function
+   
+   If you are on Windows using SMTP, you can use error_get_last() when mail() 
+   returns false. Keep in mind this does not work with PHP's native mail() function.
+
+   $success = mail('example@example.com', 'My Subject', $message);
+   if (!$success) 
+   {
+      $errorMessage = error_get_last()['message'];
+   }
+   With print_r(error_get_last()), you get something like this:
+
+   [type] => 2
+   [message] => mail(): Failed to connect to mailserver at "x.x.x.x" port 25, 
+      verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set()
+   [file] => C:\www\X\X.php
+   [line] => 2
+   
+   !!!  Как говорят многие, для отправки почты нет отслеживания ошибок, функция
+   !!!  возвращает логический результат добавления почты в очередь исходящих 
+   !!! сообщений. Если вы хотите отследить истинный сбой при успешном выполнении, 
+   !!! попробуйте использовать SMTP с почтовой библиотекой, такой как Swift 
+   !!! Mailer, Zend_Mail или phpmailer.
+   
+   $e=error_get_last();
+   if($e['message']!=='')
+   {
+      // An error function
+   }
+   
+   !!! error_get_last(); - возвращает последнюю возникшую ошибку
+   
+   */
+   
+   return $Result;
 }
 // ****************************************************************************
 // *       Сформировать страницу с текстом для подтверждения регистрации      *

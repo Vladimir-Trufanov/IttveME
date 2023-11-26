@@ -554,7 +554,7 @@ IttveMe
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			-ttools
+			+ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -597,7 +597,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				-TEntryClass
+				+TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\DumyUPechki.php
 					www\ttools\TEntryClass\EmailRegistration.php
@@ -692,7 +692,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				-TTinyGallery
+				+TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -791,9 +791,7 @@ IttveMe
 7=www\ttools\TEntryClass\EntryClass.css
 8=www\ttools\TEntryClass\EntryTable.php
 9=www\ttools\TEntryClass\InteractiveSpooky.php
-10=www\ttools\TTinyGallery\TinyGalleryClass.php
-11=..\MyMir\PHP\PHPMailer\TinyGalleryClass.php
-12=www\ttools\TEntryClass\EmailRegistration.php
+10=www\ttools\TEntryClass\EmailRegistration.php
 [Selected Project Files]
 Main=
 Selected=www\ttools\TEntryClass\EmailRegistration.php
@@ -807,32 +805,26 @@ Caret=1,130
 TopLine=49
 Caret=54,79
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=196
-Caret=1,234
+TopLine=162
+Caret=1,195
 [www\Common.php]
-TopLine=15
-Caret=28,44
+TopLine=111
+Caret=1,135
 [www\ttools\TEntryClass\Proverit.php]
 TopLine=1
 Caret=6,1
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=425
-Caret=9,452
+TopLine=301
+Caret=14,309
 [www\ttools\TEntryClass\EntryClass.css]
 TopLine=53
-Caret=1,70
+Caret=13,58
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=61
 Caret=18,99
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=84
-Caret=1,98
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=386
-Caret=1,421
-[..\MyMir\PHP\PHPMailer\TinyGalleryClass.php]
 TopLine=7
-Caret=1,21
+Caret=40,12
 [www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=187
-Caret=1,226
+TopLine=62
+Caret=4,74

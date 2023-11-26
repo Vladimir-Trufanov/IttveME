@@ -11,8 +11,6 @@
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
-use PHPMailer\PHPMailer\PHPMailer;
-
 /**
  * Для взаимодействия с объектами класса должны быть определены переменные
  * и константы:
@@ -296,11 +294,11 @@ class TinyGallery
       // Подключаем кнопки управляющего меню
       $this->menu=new MenuLeader(ittveme,$this->urlHome,$this->uidEdit,$this->Arti);
       $this->menu->Init();
-      
+     
       // Настраиваем размеры частей рабочей области редактирования
       /*
       echo '
-    ÿ <s 狆翴 >
+      <style>
       #KwinGallery
       {
          width:'.$this->KwinGalleryWidth.$this->EdIzm.';'.'
@@ -322,7 +320,7 @@ class TinyGallery
       </style>
       ';
       */
-
+      
       // -------------------------------------------------------------------
       // это вставка на случай, пока используется игра DuckFly 
       // (для игры нужно убрать все полосы прокрутки)
@@ -395,30 +393,6 @@ class TinyGallery
    private function OtherGallery()
    {
       echo 'Привет!<br>';
-      
-      // Подключаем библиотеку PHPMailer
-      //require 'PHPMailer/PHPMailer.php';
-      require_once("src/PHPMailer.php"); 
-
- 
-      // Создаем письмо
-      $mail = new PHPMailer();
-      $mail->CharSet = 'UTF-8';
-      $mail->setFrom('test@domain.ru', 'Иван Иванов');        // от кого (email и имя)
-      $mail->addAddress('tve58@inbox.ru', 'tve58@inbox.ru');  // кому (email и имя)
-      $mail->Subject = 'Тест для tve58@inbox.ru';             // тема письма
-      // html текст письма
-      $mail->msgHTML("<html><body>
-                <h1>Здравствуйте tve58@inbox.ru!</h1>
-                <p>Это тестовое письмо.</p>
-                </html></body>");
-      // Отправляем
-      if ($mail->send()) {
-         echo 'Письмо отправлено!';
-       } else {
-       echo 'Ошибка: ' . $mail->ErrorInfo;
-       }  
-   
       /* 2 опыт          
       phpinfo();
       */
