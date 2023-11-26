@@ -3,15 +3,11 @@
 
 ## Содержание
 
-### [1. Тезисы по организации сайта](#tezisy-po-organizacii-sajta)
-### [2. Командные запросы сайта](#komandnyye-zaprosy-sayta)
-### [3. Реакции на возможные ошибки и непонятные ситуации](#3.+%D1%80%D0%B5%D0%B0%D0%BA%D1%86%D0%B8%D0%B8)
-(#3.+%D0%A0%D0%B5%D0%B0%D0%BA%D1%86%D0%B8%D0%B8+%D0%BD%D0%B0+%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5+%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B8+%D0%B8+%D0%BD%D0%B5%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%BD%D1%8B%D0%B5+%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D0%B8)
+### п1 [Тезисы по организации сайта](#%D1%82%D0%B5%D0%B7%D0%B8%D1%81%D1%8B-%D0%BF%D0%BE-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
+### п2 [Командные запросы сайта](#%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
+### п3 [Реакции на возможные ошибки и непонятные ситуации](#%D1%80%D0%B5%D0%B0%D0%BA%D1%86%D0%B8%D0%B8-%D0%BD%D0%B0-%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5-%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B8-%D0%B8-%D0%BD%D0%B5%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D0%B8)
 
-
-(#oshibki-i-neponyatnye-situacii)
-###### tezisy-po-organizacii-sajta
-### 1. Тезисы по организации сайта
+### Тезисы по организации сайта
 Представление материалов на странице сайта, может быть одноколоночным с галереей изображений (по умолчанию) и двухколоночным. Определены четыре режима представления материалов: двухколоночный с правосторонней галереей, двухколоночный с левосторонней галереей, одноколоночный с правосторонней галереей (по умолчанию), одноколоночный с левосторонней галереей.
 
 Как правило, в одной из колонок размещается активная (текущая) статья сайта, а в галерее показаны изображения, связанные со статьей (ближней к галерее изображений).
@@ -36,93 +32,49 @@ ittveNews - каталог сборной новостной статьи.
 
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
-###### komandnyye-zaprosy-sayta
-### 2. Командные запросы сайта
-***Com=Doorty***, вызов главной страницы;
+### Командные запросы сайта
+
+***Com=Doortry***, вызов главной страницы;
+
 ***Com=Parm***, вызов настройки параметров сайта;
+
 ***Com=NewsXXXX***, вызов колонки новостей;
+
 ***Com=StihXXXX***, вызов колонки штрихотворения;
+
 ***Com=SshuXXXX***, вызов софтшутки;
+
+#### [***enMode=otpravit-pismo***](#enmode-otpravit-pismo) - Отправить письмо для подтверждения   регистрации
+#### 
+ 
 
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
-###### oshibki-i-neponyatnye-situacii 
-### 3. Реакции на возможные ошибки и непонятные ситуации
+### Реакции на возможные ошибки и непонятные ситуации
 
-### 3. Реакции
+Как правило, очередная страница сайта вызывается по соответствующему ("командному") запросу к сайту.
 
-ntrcn
+В данном разделе рассматриваются, известные автору к указанной дате, возможные ошибки и непонятные ситуации.
 
+#### [enmode otpravit-pismo](#)
+#### Отправить письмо для подтверждения регистрации
 
-ntrcn
+На данной странице неявно отправляется письмо для подтверждения регистрации по адресу электронной почты, указанной пользователем.
 
+Так как ошибки не всегда ясны при отправке почты, то сайт отправляет протокол взаимодействия браузера и сервера в консоль браузера. Для того, чтобы посмотреть протокол нужно выбрать консоль для просмотра. Большинство браузеров предоставляют свою консоль по комбинации клавиш "Ctrl"+"Shift"+"I".
 
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-ntrcn
-
-ntrcn
-ntrcn
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-ntrcn
-
-
-
-
-**Array to string conversion**  
-**Должна была быть строковая переменная, а оказался массив**  
-
-    File: C:\TPhpPrown\ViewGlobal.php Line: 53  
-    E_NOTICE [HND]
-
+Например, при успешной отправке почты протокол может выглядеть следующим образом:
+```
+Sending with mail()<br>
+Sendmail path: C:\PHP\php.exe C:\PHP\Sendmail\sendmail.php --dir C:\PHP\Sendmail\emails<br>
+Envelope sender: tve@ittve.me<br>
+To: "tve58@inbox.ru" &lt;tve58@inbox.ru&gt;<br>
+Subject: =?UTF-8?B?0J/QvtC00YLQstC10YDQtNC40YLQtSDQsNC00YDQtdGBINGN0LvQtdC60YI=?= =?UTF-8?B?0YDQvtC90L3QvtC5INC/0L7Rh9GC0Ysg0LTQu9GPINGB0LDQudGC0LA=?=<br>
+Headers: Date: Sun, 26 Nov 2023 20:05:49 +0300From: =?UTF-8?B?0KDQtdCz0LjRgdGC0YDQsNGG0LjRjyDQvdCwIHd3dy5pdHR2ZS5tZQ==?= &lt;tve@ittve.me&gt;Message-ID: &lt;4b4GzyVAEI64t2p8cRwW9VtIBpCgdEE49Ffn2Y9Ms@localhost&gt;X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)MIME-Version: 1.0Content-Type: multipart/alternative; boundary="b1=_4b4GzyVAEI64t2p8cRwW9VtIBpCgdEE49Ffn2Y9Ms"Content-Transfer-Encoding: 8bit<br>
+Additional params: -ftve@ittve.me<br>
+Result: true<br>
+Письмо успешно отправлено!<br>
+```
 
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 

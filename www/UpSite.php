@@ -52,6 +52,13 @@ if ($BaseCreate<>'Yes')
    echo '</div>';
    echo '<div id="Life">'; 
       $Edit->ViewLifeSpace();
+      /* 
+      // Готовим текст используемый в ссылке
+      $text='enmode-=-otpravit-pismo';
+      echo $text.'<br>';
+      $text = urlencode($text);
+      echo '***'.$text.'***<br>';
+      */
    echo '</div>';
    echo '<div id="Gallery">';
       $Edit->ViewGallerySpace();
