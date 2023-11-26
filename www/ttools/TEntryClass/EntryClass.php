@@ -197,7 +197,7 @@ class Entrying
       $Result=otpravkaFinal($this->urlHome,tobyPHPMailer);
       echo $Result.'<br>';
       echo '</div>';
-
+      echo 'Привет!<br>';
       /*
       $this->urlHome=$urlHome;
       $this->basename=$basename;
@@ -212,7 +212,9 @@ class Entrying
       <script>
       $(document).ready(function()
       {
-         $('#OtpravitPismo').css('background','green');
+         let mailaction=$('#OtpravitPismo');
+         mailaction.css('display','none');
+         console.log(mailaction.html());
       })
       </script>
       <?php

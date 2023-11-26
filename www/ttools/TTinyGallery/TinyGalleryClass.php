@@ -7,7 +7,7 @@
 // *                 и галереи изображений, связанной с этим материалом (uid) *
 // *                                    из выбранной (указанной) группы (pid) *
 // *                                                                          *
-// * v3.1, 09.11.2023                              Автор:       Труфанов В.Е. *
+// * v3.2, .11.2023                              Автор:       Труфанов В.Е. *
 // * Copyright © 2022 tve                          Дата создания:  18.12.2019 *
 // ****************************************************************************
 
@@ -392,7 +392,19 @@ class TinyGallery
    // Для отладки развернуть в галерее некоторую информацию
    private function OtherGallery()
    {
-      echo 'Привет!<br>';
+      $text='3. реакции';
+      echo $text.'<br>';
+      //$text = mb_convert_encoding($text,'UTF-8');
+      //$text = htmlentities($text);
+      $text = urlencode($text);
+      echo $text.'<br>';
+      echo '%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5'.'<br>';
+      
+      $text='3. Реакции на возможные ошибки и непонятные ситуации';
+      echo $text.'<br>';
+      $text = urlencode($text);
+      echo $text;
+      
       /* 2 опыт          
       phpinfo();
       */
@@ -433,8 +445,8 @@ class TinyGallery
    
    public function ViewGallerySpace()
    {
-      //$this->OtherGallery();   
-      $this->ViewGallery();   
+      $this->OtherGallery();   
+      //$this->ViewGallery();   
    }
    // *************************************************************************
    // *              Развернуть область подвала (кнопок управления)           *
@@ -516,10 +528,15 @@ class TinyGallery
       // то пропускаем mmlVojti и отрабатываем вход на сайт
       elseif ((\prown\isComRequest(mmlVojti)) and !(\prown\isComRequest(entPodtverdit,'enMode')))
       {
-         if (\prown\isComRequest(entZaregistrirovatsya,'enMode'))
+         if (\prown\getComRequest('enMode')==NULL)
+            $Title=MakeTitle("Войти на сайт, как зарегистрированный пользователь<br>".
+               "' ввести данные для регистрации '".' &#128152;&#129315;',ttMessage);
+         else if (\prown\isComRequest(entProverit,'enMode'))
+            $Title=MakeTitle('Пройти на сайт как гость, или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+         else if (\prown\isComRequest(entZaregistrirovatsya,'enMode'))
             $Title=MakeTitle('Зарегистрироваться на сайте! '.'&#128152;&#129315;',ttMessage);
          else
-            $Title=MakeTitle('Войти или зарегистрироваться! '.'&#128152;&#129315;',ttMessage);
+            $Title=MakeTitle('Войти или зарегистрироваться!. Пока не понятно. '.'&#128152;&#129315;',ttMessage);
          $this->_ViewLifeSpace($Title,$this->Entry);
       }
       // 7-BODY этап ----------------- ?Com=prochitat-o-sajte-izmenit-nastrojki
