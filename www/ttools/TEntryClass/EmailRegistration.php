@@ -67,7 +67,8 @@ function otpravkaByPHPMailer($to,$subject,$message,$fromAddr,$fromComm)
    // html текст письма
    $mail->msgHTML($message);
    // Отправляем
-   if ($mail->send()) $Result=tobySuccess; else $Result=tobyErr;
+   if ($mail->send()) $Result=tobySuccess;
+   else $Result=tobyErr."\n".$mail->ErrorInfo;
    return $Result;
    
    /*

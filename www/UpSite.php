@@ -54,7 +54,7 @@ if ($BaseCreate<>'Yes')
       $Edit->ViewLifeSpace();
       /* 
       // Готовим текст используемый в ссылке
-      $text='enmode-=-otpravit-pismo';
+      $text='отправить-письмо-для-подтверждения-регистрации';
       echo $text.'<br>';
       $text = urlencode($text);
       echo '***'.$text.'***<br>';

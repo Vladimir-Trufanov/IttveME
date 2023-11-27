@@ -299,7 +299,7 @@ IttveMe
 				www\Jsx\CommonTools.js
 				www\Jsx\Notice.js
 				www\Jsx\WorkTiny.js
-			+Mailer
+			-Mailer
 				www\Mailer\Exception.php
 				www\Mailer\PHPMailer.php
 				www\Mailer\SMTP.php
@@ -692,7 +692,7 @@ IttveMe
 							www\ttools\TSaymeClass\Hextris\vendor\sweet-alert.min.js
 						www\ttools\TSaymeClass\Hextris\gameHextrisClass.php
 					www\ttools\TSaymeClass\SaymeClass.php
-				+TTinyGallery
+				-TTinyGallery
 					-WhipperSnapper
 						www\ttools\TTinyGallery\WhipperSnapper\gameWhipperSnapperClass.php
 						www\ttools\TTinyGallery\WhipperSnapper\index.html
@@ -793,9 +793,11 @@ IttveMe
 9=www\ttools\TEntryClass\InteractiveSpooky.php
 10=www\ttools\TEntryClass\EmailRegistration.php
 11=www\ttools\TTinyGallery\TinyGalleryClass.php
+12=IttvePW\backlight\template.php
+13=www\ttools\TArticlesMaker\ArticlesMaker.js
 [Selected Project Files]
 Main=
-Selected=www\ttools\TTinyGallery\TinyGalleryClass.php
+Selected=www\ttools\TEntryClass\EntryClass.php
 [www\index.php]
 TopLine=129
 Caret=12,168
@@ -806,29 +808,35 @@ Caret=1,130
 TopLine=33
 Caret=9,61
 [www\ttools\TEntryClass\EntryClass.php]
-TopLine=159
-Caret=30,183
+TopLine=223
+Caret=10,251
 [www\Common.php]
 TopLine=29
 Caret=26,43
 [www\ttools\TEntryClass\Proverit.php]
-TopLine=1
-Caret=6,1
+TopLine=39
+Caret=1,62
 [www\ttools\TEntryClass\EntryClass.js]
-TopLine=87
-Caret=1,91
+TopLine=97
+Caret=1,108
 [www\ttools\TEntryClass\EntryClass.css]
-TopLine=53
-Caret=13,58
+TopLine=19
+Caret=20,29
 [www\ttools\TEntryClass\EntryTable.php]
 TopLine=61
 Caret=18,99
 [www\ttools\TEntryClass\InteractiveSpooky.php]
-TopLine=7
-Caret=40,12
+TopLine=69
+Caret=1,107
 [www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=1
-Caret=4,74
+TopLine=81
+Caret=46,71
 [www\ttools\TTinyGallery\TinyGalleryClass.php]
 TopLine=503
 Caret=43,525
+[IttvePW\backlight\template.php]
+TopLine=1
+Caret=64,12
+[www\ttools\TArticlesMaker\ArticlesMaker.js]
+TopLine=1
+Caret=21,11

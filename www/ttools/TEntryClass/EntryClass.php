@@ -191,13 +191,38 @@ class Entrying
 
       $enMode=\prown\getComRequest('enMode');
       
+      // Формируем протокол отправки письма, как див,
+      // для отправки его в консоль браузера
       echo '<div id="OtpravitPismo">';
       require_once "EmailRegistration.php"; 
-      //$Result=otpravkaFinal($this->urlHome);
-      $Result=otpravkaFinal($this->urlHome,tobyPHPMailer);
-      echo $Result.'<br>';
+      //$PismoSend=otpravkaFinal($this->urlHome);
+      $PismoSend=otpravkaFinal($this->urlHome,tobyPHPMailer);
+      echo "\n".$PismoSend."\n";
       echo '</div>';
-      echo 'Привет!<br>';
+      
+      // Формируем див с submit-ом для перехода на начальную страницу в случае ошибки 
+      echo '<div id="Nepovezlo">';
+      echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'"><br><br>';
+      echo '<input type="submit" name="submit" id="submit" value="'."Ошибка отправки письма!\nК началу.".'"/>'; 
+      echo '</form>';
+      echo '</div>';
+      
+      // Делаем див для случая успешной передачи письма
+      echo '<div id="EntryClass">';
+      echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'">';
+      echo '
+         <div id="Horosho">
+         На указанный Вами адрес электронной почты <span> '.$_REQUEST['email'].
+         ' </span> отправлено письмо.<br><br>'.
+         'Подтвердите регистрационные данные по ссылке в этом письме.<br><br>'.
+         'До подтверждения останутся реквизиты текущего пользователя / "Гостя"<br><br>
+         </div>
+         ';
+      echo '<fieldset id="submit-field"><div>';
+      echo '<input type="submit" name="submit" id="submit" value="'.'Хорошо!'.'"/>'; 
+      echo '</div></fieldset>';
+      echo '</form>';
+      echo '</div>';
       /*
       $this->urlHome=$urlHome;
       $this->basename=$basename;
@@ -212,9 +237,18 @@ class Entrying
       <script>
       $(document).ready(function()
       {
-         let mailaction=$('#OtpravitPismo');
-         mailaction.css('display','none');
-         console.log(mailaction.html());
+         var PismoSend = "<?php echo $PismoSend; ?>";
+         var tobySuccess = "<?php echo tobySuccess; ?>";
+         console.log($('#OtpravitPismo').html());
+         if (PismoSend==tobySuccess)
+         {
+            $('#OtpravitPismo').css('display','none');
+            $('#Nepovezlo').css('display','none');
+         }
+         else
+         {
+            $('#EntryClass').css('display','none');
+         }
       })
       </script>
       <?php
