@@ -203,7 +203,7 @@ class Entrying
       // Формируем див с submit-ом для перехода на начальную страницу в случае ошибки 
       echo '<div id="Nepovezlo">';
       echo '<form id="EntryForm" method="get" action="'.$this->urlHome.'"><br><br>';
-      echo '<input type="submit" name="submit" id="submit" value="'."Ошибка отправки письма!\nК началу.".'"/>'; 
+      echo '<input type="submit" name="submit" id="submit" value="'."Ошибка отправки письма!\nВозвращаемся.".'"/>'; 
       echo '</form>';
       echo '</div>';
       
@@ -262,13 +262,14 @@ class Entrying
    private function enMode_entPoSsylkeIzPisma() 
    {
       echo '*** enMode_entPoSsylkeIzPisma='.entPoSsylkeIzPisma.'***<br>';
-      /*
-      $login = $_REQUEST['password'];
-      $email = $_REQUEST['email'];
-      $PictureName='Калиниченко Е.Е. Думы у печки. 1897';
-      // По паролю в виде открытого текста, введенному пользователем формируем
-      // хэш пароля, который может храниться в базе данных
-      $hash = password_hash($login,PASSWORD_DEFAULT);
+      $login = $_REQUEST['plain'];
+      $email = $_REQUEST['pismo'];
+      $hash = $_REQUEST['hash'];
+      
+      echo '$login='.$login.'<br>'; 
+      echo '$email='.$email.'<br>'; 
+      echo '$hash='.$hash.'<br>'; 
+
       // Verify the hash against the password entered 
       $verify = password_verify($login, $hash); 
       // Print the result depending if they match 
@@ -280,7 +281,6 @@ class Entrying
       { 
          echo 'Incorrect Password!<br>'; 
       }
-      */
    }
 }
 // ********************************************************* EntryClass.php ***

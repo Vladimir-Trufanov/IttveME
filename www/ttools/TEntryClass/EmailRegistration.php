@@ -241,6 +241,9 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
    */
    
    $fontfamily='font-family: "Trebuchet MS", Helvetica, sans-serif;';
+   $uadress=$urlHome.'?Com=vojti&enMode='.entPoSsylkeIzPisma.'&pismo='.$email.
+      '&plain='.$login.'&hash='.$hash; //urlencode($hash);
+   \prown\ConsoleLog($uadress);
    return 
    '
    <html>
@@ -326,9 +329,7 @@ function LetterHTML($urlHome,$email,$login,$hash,$PictureName)
       </table>
 
       <div id="hrefp">
-         <a id="hrefi" href="'.$urlHome.
-            '?enMode=' .entPoSsylkeIzPisma. '&pismo=' .$email.
-            '&plain='  .$login.             'hash='   .$hash.'">
+         <a id="hrefi" href="'.$uadress.'">
             <i>Чтобы подтвердить данные регистрации, перейдите по ссылке на сайт <b>www.ittve.me</b></i>
          </a>
       </div>
