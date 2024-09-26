@@ -16,7 +16,7 @@ ProjectFilesOnly=0
 HTServer=localhost
 Extensions=*.*
 [Project tree]
-IttveMe
+IttveME
 	+IttveMe
 		-BpWin
 			BpWin\IttveMe.bp1
@@ -40,6 +40,12 @@ IttveMe
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\О favicon.doc
+		+Hei2011
+			+www
+				Hei2011\www\ia.jpg
+				Hei2011\www\index.html
+				Hei2011\www\style.css
+				Hei2011\www\zve.PNG
 		-IttvePW
 			-backlight
 				IttvePW\backlight\c99-styles.css
@@ -597,7 +603,7 @@ IttveMe
 							www\ttools\TDelCue\g2048\style\main.css
 						www\ttools\TDelCue\g2048\game2048Class.php
 					www\ttools\TDelCue\DelCueClass.php
-				+TEntryClass
+				-TEntryClass
 					www\ttools\TEntryClass\CtrlEmailPass.php
 					www\ttools\TEntryClass\DumyUPechki.php
 					www\ttools\TEntryClass\EmailRegistration.php
@@ -734,6 +740,7 @@ IttveMe
 			www\ittve-log.txt
 			www\IttveMeDef.php
 			www\Kwinflatic.jpg
+			www\log.txt
 			www\manifest.json
 			www\photo-8i.jpg
 			www\putDescript.php
@@ -758,11 +765,6 @@ IttveMe
 				Материалы\Лабиринт\face.png
 				Материалы\Лабиринт\maze.png
 				Материалы\Лабиринт\Лабиринт.doc
-			-Работа с почтой - в том числе на локальном сервере
-				Материалы\Работа с почтой - в том числе на локальном сервере\EntryClass.php
-				Материалы\Работа с почтой - в том числе на локальном сервере\php.ini
-				Материалы\Работа с почтой - в том числе на локальном сервере\sendmail.php
-				Материалы\Работа с почтой - в том числе на локальном сервере\Как тестировать отправку писем в PHP на Windows.doc
 			Материалы\Как работать с кукисами на js.doc
 			Материалы\Как работать через PDO.doc
 			Материалы\Обёртка для работы с PDO.doc
@@ -780,51 +782,24 @@ IttveMe
 		IttveMe.rtf
 		IttveMe.xls
 		README.md
+		README.md.backup
 [Open project files]
 0=www\index.php
-1=www\iniMem.php
-2=www\UpSite.php
-3=www\ttools\TEntryClass\EntryClass.php
-4=www\Common.php
-5=www\ttools\TEntryClass\EntryClass.css
-6=www\ttools\TEntryClass\EntryTable.php
-7=www\ttools\TTinyGallery\TinyGalleryClass.php
-8=IttvePW\backlight\template.php
-9=www\ttools\TArticlesMaker\ArticlesMaker.js
-10=www\ttools\TEntryClass\EmailRegistration.php
+1=www\UpSite.php
+2=www\putDescript.php
+3=www\iniMem.php
 [Selected Project Files]
 Main=
-Selected=www\ttools\TEntryClass\EmailRegistration.php
+Selected=www\index.php
 [www\index.php]
-TopLine=129
-Caret=12,168
-[www\iniMem.php]
-TopLine=118
-Caret=1,130
+TopLine=86
+Caret=1,119
 [www\UpSite.php]
-TopLine=33
-Caret=33,59
-[www\ttools\TEntryClass\EntryClass.php]
-TopLine=248
-Caret=1,273
-[www\Common.php]
-TopLine=29
-Caret=43,39
-[www\ttools\TEntryClass\EntryClass.css]
-TopLine=109
-Caret=1,121
-[www\ttools\TEntryClass\EntryTable.php]
 TopLine=61
-Caret=18,99
-[www\ttools\TTinyGallery\TinyGalleryClass.php]
-TopLine=513
-Caret=58,522
-[IttvePW\backlight\template.php]
-TopLine=1
-Caret=64,12
-[www\ttools\TArticlesMaker\ArticlesMaker.js]
-TopLine=1
-Caret=21,11
-[www\ttools\TEntryClass\EmailRegistration.php]
-TopLine=217
-Caret=42,245
+Caret=73,86
+[www\putDescript.php]
+TopLine=3
+Caret=1,1
+[www\iniMem.php]
+TopLine=3
+Caret=1,1

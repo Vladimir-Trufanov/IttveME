@@ -1,0 +1,35 @@
+body, html {margin: 0px; padding: 0px;   text-align: center;   background-image :url(zve.png);background-attachment:fixed;}
+#container { 
+min-width: 802px;
+width: expression(
+(document.compatMode && document.compatMode == 'CSSICompat')
+?
+(
+document.documentElement.clientWidth<802
+?
+"802px"
+:
+"auto"
+)
+:
+(
+document.body.clientWidth<802
+?
+"802px"
+:
+"auto"
+)
+);
+margin 0 auto; 
+text-align:justify; text-indent:30px;}
+#header    {background-color:#63b9da; color:white;}
+#left      {background-color:#a9d28c; width:170px; float:left; text-align:center; text-indent:0;}
+#right     {background-color:#a9d28c; width:170px; float:right; text-align:center;text-indent:0;}
+#content   {background-color:#d5d7b5; margin-left:172px; margin-right: 172px;}
+#clear     {height:0; font-size:0px; line-height:0px; clear:both;}
+#footer    {background-color: #d292dc; color:white;}
+
+
+h1{color:red;font-size:26px}
+
+
