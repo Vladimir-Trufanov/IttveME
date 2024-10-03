@@ -289,12 +289,12 @@ function CreateTables($pdo,$aCharters)
       // Включаем действие внешних ключей
       $sql='PRAGMA foreign_keys=on;';
       $st = $pdo->query($sql);
-      // Создаём таблицу указателей типов статей   
+      // Создаём таблицу идентификаторов типов статей   
       $sql='CREATE TABLE cue ('.
          'IdCue          INTEGER PRIMARY KEY NOT NULL UNIQUE,'.
          'NameCue        VARCHAR )';
       $st = $pdo->query($sql);
-      // Заполняем таблицу указателей типов статей
+      // Заполняем таблицу идентификаторов типов статей
       // (для правильного формирования тегов, введено понятие раздела без материалов. 
       // Добавление нового раздела в базу данных сопровождается пометкой
       // 'раздел без материалов', при появлении статей в нем метка меняется на 
@@ -315,7 +315,7 @@ function CreateTables($pdo,$aCharters)
       // Создаём таблицу материалов (основу для построения меню)  
       $sql='CREATE TABLE stockpw ('.
          'uid         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'.  // идентификатор пункта меню (раздел или статья сайта)
-         'pid         INTEGER NOT NULL REFERENCES stockpw(uid),'.    // указатель элемента уровнем выше - uid родителя	
+         'pid         INTEGER NOT NULL REFERENCES stockpw(uid),'.    // идентификатор родителя - uid элемента уровнем выше 
          'IdCue       INTEGER NOT NULL REFERENCES cue(IdCue),'.      // указатель раздела статьи
          'NameArt     VARCHAR NOT NULL,'.                            // заголовок материала = статьи сайта
          'Translit    VARCHAR NOT NULL,'.                            // транслит заголовка

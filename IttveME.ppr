@@ -22,6 +22,9 @@ IttveME
 			BpWin\IttveMe.bp1
 			BpWin\Выполнить вход и регистрацию на сайте.bp1
 			BpWin\Концепция четвертой версии сайта.bp1
+		-ErWin
+			ErWin\ittve.BK1
+			ErWin\ittve.ER1
 		-Favicon
 			-favicon260x260
 				Favicon\favicon260x260\android-chrome-192x192.png
@@ -33,6 +36,39 @@ IttveME
 				Favicon\favicon260x260\favicon-32x32.png
 				Favicon\favicon260x260\mstile-150x150.png
 				Favicon\favicon260x260\safari-pinned-tab.svg
+			-Icons
+				-TinyMCE для IttveME
+					Favicon\Icons\TinyMCE для IttveME\TinyMCE.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny.svg
+					Favicon\Icons\TinyMCE для IttveME\tveTiny2.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny21.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny22.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny23.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny24.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny31.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny32.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny33.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny34.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny35.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny36.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny37.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny38.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny39.png
+					Favicon\Icons\TinyMCE для IttveME\tveTiny40.png
+				-tveMenu и favicon для IttveME
+					Favicon\Icons\tveMenu и favicon для IttveME\ex1-SegoePrint.png
+					Favicon\Icons\tveMenu и favicon для IttveME\fav.png
+					Favicon\Icons\tveMenu и favicon для IttveME\IconFav.png
+					Favicon\Icons\tveMenu и favicon для IttveME\Menu.svg
+					Favicon\Icons\tveMenu и favicon для IttveME\tve.psd
+					Favicon\Icons\tveMenu и favicon для IttveME\tveMenu.png
+					Favicon\Icons\tveMenu и favicon для IttveME\tveMenu.svg
+					Favicon\Icons\tveMenu и favicon для IttveME\tveMenuB.png
+					Favicon\Icons\tveMenu и favicon для IttveME\tveMenuC.png
+					Favicon\Icons\tveMenu и favicon для IttveME\tveMenuCicon.png
+					Favicon\Icons\tveMenu и favicon для IttveME\tveMenuD.png
+				Favicon\Icons\Icons.md
 			Favicon\favicon.ico
 			Favicon\favicon.png
 			Favicon\favicon_package_v0.16.zip
@@ -40,8 +76,8 @@ IttveME
 			Favicon\favicon260x260.png
 			Favicon\tveMenuD.png
 			Favicon\О favicon.doc
-		+Hei2011
-			+www
+		-Hei2011
+			-www
 				Hei2011\www\ia.jpg
 				Hei2011\www\index.html
 				Hei2011\www\style.css
@@ -560,7 +596,7 @@ IttveME
 				www\TinyMCE5-8-1\tinymce.d.ts
 				www\TinyMCE5-8-1\tinymce.js
 				www\TinyMCE5-8-1\tinymce.min.js
-			+ttools
+			-ttools
 				-TArticlesMaker
 					www\ttools\TArticlesMaker\ArticlesMaker.js
 					www\ttools\TArticlesMaker\ArticlesMakerClass.php
@@ -782,18 +818,19 @@ IttveME
 		IttveMe.rtf
 		IttveMe.xls
 		README.md
-		README.md.backup
 [Open project files]
 0=www\index.php
 1=www\UpSite.php
 2=www\putDescript.php
 3=www\iniMem.php
+4=www\UpSiteTTL.php
+5=www\UpSiteCSS.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\UpSiteCSS.php
 [www\index.php]
-TopLine=86
-Caret=1,119
+TopLine=73
+Caret=1,12
 [www\UpSite.php]
 TopLine=61
 Caret=73,86
@@ -801,5 +838,11 @@ Caret=73,86
 TopLine=3
 Caret=1,1
 [www\iniMem.php]
-TopLine=3
+TopLine=153
+Caret=36,158
+[www\UpSiteTTL.php]
+TopLine=7
 Caret=1,1
+[www\UpSiteCSS.php]
+TopLine=9
+Caret=1,40
