@@ -41,10 +41,10 @@ if ($SiteDevice==Mobile)
 // Подключаем font-awesome 4.7.0
 echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
 // Подключаем jQuery 
-echo '<script src="/jQuery/jquery-1.11.1.min.js"></script>';
+echo '<script src="/Jsx/jquery-1.11.1.min.js"></script>';
 echo '
-    <link rel="stylesheet" type="text/css" href="/jQuery/jquery-ui.min.css">
-    <script src="/jQuery/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Jsx/jquery-ui.min.css">
+    <script src="/Jsx/jquery-ui.min.js"></script>
 ';
 // Подключаем обнаружение ориентации устройства по завершению загрузки страницы
 ?> <script>

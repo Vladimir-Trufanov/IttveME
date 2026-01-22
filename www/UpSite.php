@@ -83,7 +83,7 @@ if ($BaseCreate<>'Yes')
          // echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"]; 
 
          // Выводим строку с контрольным транслитом
-         echo (prown\getTranslit('RCWL-0516-Доплеровский датчик движения'));
+         echo (prown\getTranslit('Программатор ESP32-CAM'));
          // При отладке выводим пароль
          echo(' '.$c_PersPass.'->'.$c_UserName);
 

@@ -7,6 +7,12 @@
 ## v2.1, 12.06.2023                                   Автор:      Труфанов В.Е.
 ## Copyright © 2023 tve                               Дата создания: 18.11.2022
 
+## Запрещаем просмотр файла php.ini
+<Files php.ini>  
+order allow,deny  
+deny from all  
+</Files>
+
 ## Устанавливаем кодировку сайта по умолчанию
 AddDefaultCharset utf-8
 
@@ -96,8 +102,12 @@ RewriteRule ^com-dobavit-novyj-razdel-materialov$        ?Com=dobavit-novyj-razd
 RewriteRule ^com-udalit-razdel-materialov$               ?Com=udalit-razdel-materialov [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+## RewriteCond %{ENV:HTTPS} !on
+## RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+## Уточненные настройки MASTERHOST http => https
+##RewriteCond %{HTTP:PORT} !^443$
+##RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
 
 ## Перенаправляем ошибки в файл e404.php
 ErrorDocument 400 /e404.php?err=400 
